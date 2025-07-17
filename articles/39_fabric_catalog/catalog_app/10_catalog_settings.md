@@ -1,6 +1,6 @@
 # Catalog Settings
 
-The purpose of the Settings tab in the Catalog application is to enable viewing and editing of various configurations. The Catalog includes product settings that can be updated to accommodate the Project's needs. The updates are saved in the project. 
+The purpose of the Settings tab in the Catalog application is to enable viewing and editing of various configurations. The Catalog includes product settings that can be updated to suite the project's needs. These updates are saved within the project. 
 
 The Settings tab includes the following sections:
 
@@ -11,7 +11,7 @@ The Settings tab includes the following sections:
 
 ## Classifier Regex Tab
 
-The **Classifier Regex** tab allows to view and update the Profiling regular expression rules that are used by the Profiling built-in plugins, *Data Regex Classifier* and *Metadata Regex Classifier*.
+The **Classifier Regex** tab enables viewing and updating of the regular expression rules used by the built-in Profiling plugins: *Data Regex Classifier* and *Metadata Regex Classifier*.
 
 ![](../images/settings_regex.png)
 
@@ -22,7 +22,7 @@ The columns of this tab are:
 * **Type** — can be either **Field Name** or **Field Value**:
   * Entries defined as **Field Name** type are used by the *Metadata Regex Classifier* plugin.
   * Entries defined as **Field Value** type are used by the *Data Regex Classifier* plugin.
-* **Regular Expression** — defines the expression applied on the field, either its name or its value, depending on the **Type**.
+* **Regular Expression** — specifies the expression applied to the field, either to its name or its value, depending on the **Type**.
 * **Score** — defines the confidence level that the current rule is true. 
 
 Each **Classification** can have several definitions, with either the same or different **Types**.
@@ -55,13 +55,13 @@ Note that the **Consistent using seed** value is only available when the selecte
 
 Click [here](/articles/41_masking/02_data_masking_flow.md) for more information about data consistency.
 
-In this tab, each classification can have only one definition (row). Note that you cannot create a sequence (via the Sequence Setup tab) with the same name as a classification listed in this tab, since both classifications and sequences are saved in the same MTable.
+In the **PII & Masking** tab, each classification can have only one definition (row). Note that you cannot create a sequence (via the Sequence Setup tab) with the same name as a classification listed in this tab, since both classifications and sequences are saved in the same MTable.
 
 #### Masking Setup Guidelines
 
-Click the <img src="../images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Generator and its parameters setup area (PII, Consistency Mode and other [Advanced](10_catalog_settings.md#advanced-masking-settings) parameters), that will be used for generating a value. The Generator can be any existing built-in actor, a custom actor, or a flow — created under **Shared Objects** in Fabric Studio.
+Click the <img src="../images/edit_masking.png" style="zoom: 80%;" /> icon to expand the Generator and its parameters setup area (which includes PII, Consistency Mode and other [Advanced](10_catalog_settings.md#advanced-masking-settings) parameters). The Generator can be any existing built-in actor, a custom actor, or a flow — created under **Shared Objects** in Fabric Studio.
 
-Upon invocation of a Catalog Masking actor — e.g., during table population — a generated value is populated in a field with a given Classification. For instance, if a field is classified as a Social Security Number, you should set up the Generator to mask it. The Generator can be the built-in RandomSSN.actor, a custom actor, or a flow.
+Upon invocation of a Catalog Masking actor — e.g., during table population — a generated value is populated in a field associated with a given Classification. For instance, if a field is classified as a Social Security Number, you should configure the Generator to mask it. The Generator can be the built-in RandomSSN.actor, a custom actor, or a flow.
 
 <img src="../images/settings_masking_edit.png"  />
 
@@ -71,9 +71,9 @@ Selecting an actor or a flow dynamically adds its corresponding input parameters
 
 The first input parameter of a masking flow (or a custom actor) — selected as a Generator — is regarded as the value that should be masked, and not as a masking configuration parameter. Hence, it is hidden (and not dynamically added) when a masking flow is selected in the above Masking setup screen. This is applicable only for an input parameter of Link or External type. 
 
-Therefore, when creating a masking flow, its first input should be named 'value', even if the flow does not require any input. This prevents the hiding of the first input from the Masking setup screen as explained above. 
+Therefore, when creating a masking flow, its first input should be named 'value', even if the flow does not require any input. This ensures that the first configuration parameter of the selected Generator is not hidden in the Masking setup screen, as explained above. 
 
-Below is a masking flow sample:
+Below is an example of a masking flow:
 
 <img src="../images/settings_masking_flow.png" style="zoom: 80%;" />
 
@@ -85,12 +85,12 @@ Click for more details about the [Catalog masking mechanism](11_catalog_masking.
 
 #### Advanced Masking Settings
 
-The purpose of the Advanced Masking Settings pop-up window is to allow the setting-up of additional masking parameters. The settings included in this window are as follows:
+The purpose of the Advanced Masking Settings pop-up window is to allow the configuration of additional masking parameters. The settings included in this window are as follows:
 
-* **Masking indicators** — determine the masking behavior during a flow run. They can be set either per population, via the Catalog Masking Actor's inputs, or per Classification, via the Advanced Masking Settings screen. The Catalog definition of masking indicators overrides the settings of these indicators on the Catalog Masking Actor — for all the fields with the same Classification.
+* **Masking Indicators** — determine the masking behavior during a flow run. They can be set either per population, via the Catalog Masking Actor's inputs, or per Classification, via the Advanced Masking Settings screen. The Catalog definition of masking indicators overrides the settings of these indicators on the Catalog Masking Actor — for all the fields with the same Classification.
 * **Formatter Name and Parameters** — these are set in order to enable the [format-preserving masking](/articles/41_masking/03_format_preserving_masking.md).
 * **Pre-Execution Logic** — an actor or a flow to be executed by the Catalog Masking Actor. 
-* **Property Alias Map** — establishes mapping between the Catalog's property and an input parameter of the attached Masking Actor. These mappings are created to override actor’s input parameters (Generator, Formatter or Pre-execution logic) with the values of Catalog’s field properties, by that to improve the quality of the generated value.
+* **Property Alias Map** — establishes mappings between a Catalog field property and an input parameter of the attached Masking Actor. Such mappings override the actor’s input parameters (Generator, Formatter or Pre-execution logic) with values from the Catalog field properties.
 
 <img src="../images/settings_masking_advanced.png" />
 
@@ -106,32 +106,34 @@ The **Sequences** tab allows to set up the sequences that can be generated in a 
 
 To create a sequence: 
 
-* Click the **Add Record +** button and populate a **Sequence Name**, **Generator** and its parameters (PII, Consistency Mode and the [Advanced](10_catalog_settings.md#advanced-sequence-settings) parameters, if needed), that will be used for generating a sequence value. 
-* Note that the **Generator** is pre-populated with [Sequence.actor](/articles/19_Broadway/actors/08_sequence_implementation_guide.md) though it can be updated to any existing built-in actor, a custom actor or a flow (the flow should be created under the project's **Shared Objects**).
-* The **sequenceId** parameter of the **Sequence.actor** is populated with the same value that is stated in the **Sequence Name**, when it is typed for the first time. Later, each one of them can be changed to a different value, if needed.
+* Click the **Add Record +** button and populate a **Sequence Name**, **Generator** and its parameters (PII, Consistency Mode and other [Advanced](10_catalog_settings.md#advanced-sequence-settings) parameters, if needed). 
+* Note that the **Generator** is pre-populated with [Sequence.actor](/articles/19_Broadway/actors/08_sequence_implementation_guide.md), but it can be changed to any existing built-in actor, a custom actor or a flow (the flow should be created under the project's **Shared Objects**).
+* The value of the **Sequence Name** field is replicated to the **sequenceId** parameter of the **Sequence.actor**. This takes place only in the first population of the **Sequence Name** field. Both values can later be changed independently, if needed.
 
 <img src="../images/settings_seq.png" />
 
-Each sequence can have only one definition (row). Note that you cannot create a classification (via the PII & Masking tab) with the same name as a sequence in this tab.
+Each sequence can have only one definition (row). Note that you cannot create a classification (via the **PII & Masking** tab) with the same name as a sequence listed in this tab.
 
-Currently, the Catalog doesn’t automatically identify the sequence fields. Thus, after a list of sequences has been set in the **Sequences** tab, the relevant Catalog fields should be manually marked as sequences, as follows:
+Currently, the Catalog does not automatically identify sequence fields. Therefore, after a list of sequences is set in the **Sequences** tab, the relevant Catalog fields should be manually marked as sequences, as follows:
 
 * Click **Actions > Edit Catalog**.
 * Navigate to the required field and click the <img src="../images/add.png" alt="plus" style="zoom:75%;" /> icon to add a new property. 
-  * Select or type *sequenceName* as the property name.
-  * In the property value, select the name of the sequence that was set up via the Sequences tab. 
+  * Select the *Sequence Name* value as the **Name** in the **Add Property** pop-up window.
+  * In the **Value** field, select the **Sequence Name** that was previously set up via the Sequences tab. 
+  * Click **Submit**.
+* Click **Save** to save the Catalog's manual changes as a new version.  
 
 <img src="../images/add_sequence_prop.png" />
 
 #### Advanced Sequence Settings
 
-The purpose of the Advanced Sequence Settings pop-up window is to set up additional sequence parameters; it is very similar to the Advanced Masking Settings pop-up window. 
+The purpose of the Advanced Sequence Settings pop-up window is to configure additional sequence parameters; it is very similar to the Advanced Masking Settings pop-up window. 
 
 <img src="../images/settings_seq_advanced.png" />
 
 Upon clicking the **Save** button in the **Classifier Sequence Setup** tab, the **pii_profiling** and **catalog_classification_generators** MTables are updated in Fabric's memory and in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable ```folder of the Project tree.
 
-The sequences are saved in the **catalog_classification_generators** MTable (same location as the masking classifications), with the following differences:
+The sequences are saved in the **catalog_classification_generators** MTable (the same location as the masking classifications), with the following differences:
 
 * The category of masking classifications is **enable_masking**.
 * The category of non-PII sequences is **enable_sequence**.

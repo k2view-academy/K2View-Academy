@@ -6,6 +6,10 @@ The purpose of the **Declarative Field Level Authorization** mechanism is to ena
 
 For example, the Customer Details WS retrieves an SSN, which is considered as sensitive data. Most user roles are not allowed to view a customer SSN, whereas some other user roles (such as admin) are. The Declarative Field Level Authorization mechanism enables to define a [security profile](05_security_profiles.md) that can redirect the WS to retrieve the masked SSN instead of the original one. The following section describes how to field setup the **Declarative Field Level Authorization** mechanism.
 
+On Fabric 8.3 a new feature was added to validate during the sync process if a user is authorized to view the LU instance data based on his role, security profile and defined view on the root table and throw an unauthorized exception accordingly. The Search command was enhanced to return only the iid in case a user is unauthorized. The Web-service/graphit functionality was enhanced to consider the security profile definition.
+
+For example, if there is a list of users that should not have access to VIP customers, it can be achieved by adding a new field to the root table called vip_ind and mark the VIP customers with 'Y', that means all other customers will stay with VIP_IND as null. Afterwards define a view called customers_vip that will run select * from root_table where vip_ind is null. The users with a role linked to a security profile contains this view will not have access to the VIP customers, as the sync activity will throw unauthorised exception.
+
 Known limitation: Field Level Authorization is not applied on GraphIt that is invoked directly as a Web Service. In order to enforce the authorization mechanism, you need to create a Web Service that will invoke a GraphIt file.  
 
 ### E2E Field Level Authorization Definition

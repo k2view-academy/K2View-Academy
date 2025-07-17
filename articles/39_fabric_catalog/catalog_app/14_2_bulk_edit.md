@@ -12,9 +12,9 @@ This article explains how to edit properties using the Bulk Edit capability. Cli
 
 ### How Can I Edit Entities in a Bulk Group?
 
-To enable the bulk-edit activity, it is required to switch the Catalog to an edit mode by clicking **Actions > Edit Catalog** in the menu bar.  
+To enable the bulk-edit activity, it is required to switch the Catalog to edit mode by selecting **Actions > Edit Catalog** in the menu bar.  
 
-Next, open the bulk group by clicking the <img src="../images/bulk_full.png" > icon located in the menu bar.
+Next, open the bulk group by clicking the <img src="../images/bulk_full.png" > icon in the menu bar.
 
 - An orange icon indicates that the bulk includes one or more entities.
 - If the icon is black, the bulk group is empty. Then the bulk should be first created, as explained [here](14_1_bulk_creation.md).
@@ -22,16 +22,16 @@ Next, open the bulk group by clicking the <img src="../images/bulk_full.png" > i
 The **Common properties list** displays the properties that are shared across all bulk-selected entities. Bulk-editing of properties is performed using this pane, as follows:
 
 1. To **add** a new property:
-   * Click the <img src="../images/add.png" alt="plus" style="zoom:85%;" /> icon and populate the **Name**, **Value** and **Notes** fields in the **Edit property** area. 
-   * Then click the <img src="../images/V_bulk.png" alt="plus" style="zoom:95%;" /> icon to add the new property to the **Common properties list**.
-2. To **delete** a property, click the <img src="../images/delete.png" alt="plus" style="zoom:95%;" /> icon.
+   * Click the <img src="../images/add.png" alt="plus" style="zoom:85%;" /> icon on the **Common Properties list** pane and populate the **Name** and **Value** fields in the **Edit property** sub-section that opens below. 
+   * Next, click the <img src="../images/V_bulk.png" alt="plus" style="zoom:95%;" /> icon. The **Edit property** sub-section closes, and the new property is added to the **Common properties list**.
+2. To **delete** a property from the **Common Properties list**, click the <img src="../images/delete.png" alt="plus" style="zoom:95%;" /> icon next to the property.
 3. To **edit** an existing property:
-   * Click the property in the Common properties list and update its **Value** and **Notes** fields. 
-   * Then click the <img src="../images/V_bulk.png" alt="plus" style="zoom:95%;" /> icon to add it to the **Common properties list**.
-4. Click **Submit** when bulk edit is completed.
+   * Click the property in the **Common properties list** and update its **Value** field in the **Edit property** sub-section. 
+   * Next, click the <img src="../images/V_bulk.png" alt="plus" style="zoom:95%;" /> icon. The **Edit property** sub-section closes, and the edited property is updated in the **Common properties list**.
+4. Click **Submit** to complete the bulk-edit activity.
 
-Note that clicking **Submit & Clear bulk** submits the bulk changes and clears the bulk in one action. This is useful when an additional bulk of entities needs to be created and bulk-edited. 
+Note that clicking **Submit & Clear bulk** applies the bulk changes and clears the bulk in a single action. This is useful when there is a need to create and edit another bulk of entities. 
 
-All updates are aggregated on the client side only. The **Save** button should be clicked in the menu bar to trigger saving of all the changes together and creation of a new version. The Catalog will then exit the edit mode.
+All updates are aggregated on the client side only. To save all changes and create a new version, click the **Save** button in the menu bar. The Catalog will then exit the edit mode.
 
 ![](../images/editBulk.gif)

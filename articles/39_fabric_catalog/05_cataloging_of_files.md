@@ -14,7 +14,7 @@ Starting from V8.3, Fabric enables running discovery on the following interface 
 * HTTP
 * Custom
 
-Discovery can be performed by either the metadata definition (such as JSON schema or AVRO schema files) or by sample data.
+Discovery can be performed by using either the metadata definition (such as JSON schema or Avro schema files) or sample data.
 
 The Crawler framework, used for file cataloging, employs a generic mechanism that is independent of a specific file format. The Crawler expects to get an input in a predefined format. Since files might have various structures (based on each project's business needs), the File Cataloging  solution requires creating Broadway flows and attaching them to an interface. Then, at run-time, these flows are invoked by the Crawler upon running Discovery on the given interface.
 
@@ -30,7 +30,7 @@ More details about the implementation steps can be learned further in this artic
 
 Once the Catalog is created based on files, a process can be defined to receive the files and mask them.
 
-To illustrate the E2E process, the *File Cataloging - Demo* extension is available, and can be found on the [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md)'s list of the extensions. This extension can be installed into your project, and it offers several comprehensive examples of file cataloging. The extension includes the flows examples for CSV, XML, JSON, AVRO and HTTP formats. Instructions on how to use the extension can be found in its README file.
+To illustrate the E2E process, the *File Cataloging - Demo* extension is available, and can be found on the [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md)'s list of the extensions. This extension can be installed into your project, and it offers several comprehensive examples of file cataloging. The extension includes the flows examples for CSV, XML, JSON, Avro and HTTP formats. Instructions on how to use the extension can be found in its README file.
 
 ## Creating Transformation Flows
 
