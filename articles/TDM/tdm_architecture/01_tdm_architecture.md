@@ -1,4 +1,4 @@
-# TDM Architecture
+# TDM Component Overview
 
 ## TDM Components
 
