@@ -11,6 +11,6 @@ We are happy to announce that Fabric 8.3.0 has just been released and it include
   * Presentation of the Document’s complex structures and arrays of primitives in Interface Explorer.
   * Creation of LU schema, including the nested hierarchy levels with a referential link to their respective parent level.
 
-To get the full list of features and fixes, refer to the [Release Notes](https://support.k2view.com/Academy/Release_Notes/V8.3/Fabric_Release_Notes_V8.3.0.pdf.html) and [Upgrade Procedure to 8.2](https://support.k2view.com/Academy/articles/98_installation_and_upgrade/Upgrade_Fabric/Fabric_Upgrade_Procedure_To_V8.3.pdf).
+To get the full list of features and fixes, refer to the [Release Notes](https://support.k2view.com/Academy/Release_Notes/V8.3/Fabric_Release_Notes_V8.3.0.pdf.html) and [Upgrade Procedure to 8.3](https://support.k2view.com/Academy/articles/98_installation_and_upgrade/Upgrade_Fabric/Fabric_Upgrade_Procedure_To_V8.3.pdf).
 
 <img src="images/img.png" alt="image" style="zoom: 70%;" />
