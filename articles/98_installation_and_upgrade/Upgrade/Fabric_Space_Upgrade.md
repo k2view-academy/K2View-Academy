@@ -18,25 +18,31 @@ Major upgrades may require additional steps, such as schema migrations, configur
 - Check that the code is correctly committed and pushed to the Git repository.
 - Verify the current state of the deployment and pods.
 
+**Deployment and Statefulset**
+
+You will observe two types of examples in this section. Please note that `deployment` is used for Fabric Web Studio, and `statefulset` is used for Fabric.
 
 #### Step 1: Check the Current Status of the Fabric Deployment/Statefulset
 
 1. Run the following command to list the `fabric-deployment`, including container versions and their state in the `space-k2view` namespace:
+   
    ```bash
    kubectl get deployment fabric-deployment -n space-k2view -o=custom-columns='NAME:.metadata.name,READY:.status.readyReplicas,AVAILABLE:.status.availableReplicas,IMAGE:.spec.template.spec.containers[0].image'
    ```
-or
+   or
+   
    ```bash
    kubectl get statefulset fabric-statefulset -n space-k2view -o=custom-columns='NAME:.metadata.name,READY:.status.readyReplicas,AVAILABLE:.status.availableReplicas,IMAGE:.spec.template.spec.containers[0].image'
    ```
    
    This command outputs the deployment's name, the number of ready and available replicas, and the current image version of the container.
 
-1. Identify the current running deployment/statefulset, pods, and replica sets based on the output.
+3. Identify the current running deployment/statefulset, pods, and replica sets based on the output.
 
 #### Step 2: Check the Current Version of the Deployment
 
-1. To check which version of the Fabric deployment is currently running, use the following command with a filter to display the image version:
+To check which version of the Fabric deployment is currently running, use the following command with a filter to display the image version:
+
    ```bash
    kubectl get deployment fabric-deployment -n space-k2view -o=jsonpath='{.spec.template.spec.containers[0].image}'
    ```
@@ -47,11 +53,12 @@ or
    kubectl get statefulset fabric-statefulset -n space-k2view -o=jsonpath='{.spec.template.spec.containers[0].image}'
    ```
    
-   This command will output the current image version used by the deployment.
+This command will output the current image version used by the deployment.
 
 #### Step 3: Update the Deployment Image
 
 1. Use the `kubectl set image` command to update the deployment with the new image version:
+   
    ```bash
    kubectl set image deployment/fabric-deployment fabric-container=<new-image>:<tag> -n space-k2view
    ```
@@ -65,6 +72,7 @@ or
    Replace the `<new-image>:<tag>` string with the specific image name and tag for the new version.
 
 2. Verify the image update by checking the rollout status:
+   
    ```bash
    kubectl rollout status deployment/fabric-deployment -n space-k2view
    ```
@@ -78,7 +86,8 @@ or
 
 #### Step 4: Verify the Upgrade
 
-1. Check the status of the new pods to ensure they are running correctly:
+Check the status of the new pods to ensure they are running correctly:
+
    ```bash
    kubectl get pods -n space-k2view
    ```
@@ -100,6 +109,7 @@ If the upgrade fails or any issues arise, please follow the steps below to roll 
 #### Step 1: Rollback to the Previous Version
 
 1. Use the following command to initiate a rollback to the previous deployment version:
+   
    ```bash
    kubectl rollout undo deployment/fabric-deployment -n space-k2view
    ```
@@ -110,7 +120,7 @@ If the upgrade fails or any issues arise, please follow the steps below to roll 
    kubectl rollout undo statefulset/fabric-statefulset -n space-k2view
    ```
 
-3. Verify the rollback status:
+2. Verify the rollback status:
    ```bash
    kubectl rollout status deployment/fabric-deployment -n space-k2view
    ```
@@ -118,12 +128,13 @@ If the upgrade fails or any issues arise, please follow the steps below to roll 
    or
 
    ```bash
-   kubectl rollout status staetfulset/fabric-statefulset -n space-k2view
+   kubectl rollout status statefulset/fabric-statefulset -n space-k2view
    ```
 
 #### Step 2: Verify the Rollback
 
 1. Check the status of the pods to ensure they are running the previous stable version:
+
    ```bash
    kubectl get pods -n space-k2view
    ```
@@ -142,6 +153,7 @@ If the upgrade fails or any issues arise, please follow the steps below to roll 
 If you encounter issues during the upgrade or the rollback process, consider the following general troubleshooting steps:
 
 1. **Check Logs:** Review the logs of the Fabric deployment for any error messages or warnings:
+
    ```bash
    kubectl logs deployment/fabric-deployment -n space-k2view
    ```
@@ -152,28 +164,31 @@ If you encounter issues during the upgrade or the rollback process, consider the
    kubectl logs statefulset/fabric-statefulset -n space-k2view
    ```
 
-3. **Inspect Events:** Use Kubernetes events to identify potential issues with pods, deployments, or other resources:
+2. **Inspect Events:** Use Kubernetes events to identify potential issues with pods, deployments, or other resources:
+
    ```bash
    kubectl get events -n space-k2view --sort-by=.metadata.creationTimestamp
    ```
 
-4. **Resource Status:** Validate the status of related resources such as services, config maps, and persistent volume claims, ensuring they are functioning correctly:
+3. **Resource Status:** Validate the status of related resources such as services, config maps, and persistent volume claims, ensuring they are functioning correctly:
+
    ```bash
    kubectl get svc,configmap,pvc -n space-k2view
    ```
 
-5. **Network Connectivity:** Ensure that there are no network issues or blocked connections affecting Fabric's ability to operate correctly. This can include checking network policies, service endpoints, and DNS resolutions within the cluster.
+4. **Network Connectivity:** Ensure that there are no network issues or blocked connections affecting Fabric's ability to operate correctly. This can include checking network policies, service endpoints, and DNS resolutions within the cluster.
 
-6. **Check Pod Health:** Use the `describe` command to get detailed information about pod failures or restarts:
+5. **Check Pod Health:** Use the `describe` command to get detailed information about pod failures or restarts:
+
    ```bash
    kubectl describe pod <pod-name> -n space-k2view
    ```
 
-7. **Resource Limits and Requests:** Review the resource limits and requests for Fabric pods to ensure they are not being throttled or evicted due to insufficient resources.
+6. **Resource Limits and Requests:** Review the resource limits and requests for Fabric pods to ensure they are not being throttled or evicted due to insufficient resources.
 
-8. **Cluster Health:** Ensure the overall health of the Kubernetes cluster is good, and there are no node issues, resource shortages, or other factors that could affect the deployment.
+7. **Cluster Health:** Ensure the overall health of the Kubernetes cluster is good, and there are no node issues, resource shortages, or other factors that could affect the deployment.
 
-9. **Contact Support:** If issues persist, please contact support with the relevant logs, steps taken, and any specific errors encountered.
+8. **Contact Support:** If issues persist, please contact the K2view Support team with the relevant logs, steps taken, and any specific errors encountered.
 
 
 ### Appendix: ClusterRole and ClusterRoleBinding Configuration
