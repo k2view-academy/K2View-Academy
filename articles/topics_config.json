@@ -123,10 +123,6 @@
 					"value": "02_fabric_architecture"
 				},
 				{
-					"display name": "K2cloud",
-					"value": "Cloud"
-				},
-				{
 					"display name": "Fabric Apps",
 					"sub-topics": [
 						{
