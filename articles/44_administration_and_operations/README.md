@@ -1,6 +1,6 @@
 <strong>Administration and Operations</strong>
 
-Documents covering installation, K2cloud space and configuration management, Kubernetes How-tos, K2cloud Identity Federation, and other topics. 
+Documents covering installation, K2cloud space and configuration management, Kubernetes how-tos, K2cloud identity federation, and other topics. 
 
 <ul>
 		<li><a href="/articles/44_administration_and_operations/Installation/README.md">Installation Options and Planning</a></li>
