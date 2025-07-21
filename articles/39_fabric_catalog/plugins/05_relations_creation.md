@@ -1,4 +1,4 @@
-# Creation of Reference Relation
+# Creation of 'Refers To' Relation
 
 The article describes plugins that create *refersTo* relations in the Catalog schema based on various types of analysis performed on the data source.
 

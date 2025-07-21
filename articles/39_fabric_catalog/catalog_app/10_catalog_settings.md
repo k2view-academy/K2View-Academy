@@ -51,9 +51,7 @@ Each **Classification** in this tab is unique and contains the following attribu
   * **Consistent using seed** (consistent with seed and not unique)
   * **Consistent and unique**
 
-Note that the **Consistent using seed** value is only available when the selected Generator supports seed.
-
-Click [here](/articles/41_masking/02_data_masking_flow.md) for more information about data consistency.
+Note that the **Consistent using seed** value is  only available when the data generation supports generating a consistent vale based on [seed](/articles/41_masking/02_data_masking_flow.md#data-consistency-using-seed).
 
 In the **PII & Masking** tab, each classification can have only one definition (row). Note that you cannot create a sequence (via the Sequence Setup tab) with the same name as a classification listed in this tab, since both classifications and sequences are saved in the same MTable.
 

@@ -71,7 +71,7 @@ This parameter allows to set up an override list of field names. These fields wi
 
 #### Max String Length
 
-This parameter defines a limit to STRING size, to prevent handling text files or complex structures inside a field. The default value is 512Kb.
+This parameter defines a limit to STRING size, to prevent handling text files or complex structures inside a field. The default value is 512 bytes.
 
 #### Min Sample Size
 
