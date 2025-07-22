@@ -1,6 +1,7 @@
 <strong>Upgrade Fabric<strong>
 
 <ul>      
+<li><a href="/articles/98_installation_and_upgrade/Upgrade_Fabric/Fabric_Upgrade_Procedure_To_V8.3.pdf">Fabric Upgrade Procedure to V8.3</a></li>
 <li><a href="/articles/98_installation_and_upgrade/Upgrade_Fabric/Fabric_Upgrade_Procedure_To_V8.2.pdf">Fabric Upgrade Procedure to V8.2</a></li>
 <li><a href="/articles/98_installation_and_upgrade/Upgrade_Fabric/Fabric_Upgrade_Procedure_To_V8.1.pdf">Fabric Upgrade Procedure to V8.1</a></li>
 <li><a href="/articles/98_installation_and_upgrade/Upgrade_Fabric/Fabric_Upgrade_Procedure_To_V8.0.pdf">Fabric Upgrade Procedure to V8.0</a></li>
