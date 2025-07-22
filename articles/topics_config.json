@@ -221,7 +221,7 @@
 					]
 				},
 				{
-					"display name": "Data Transformation & Processing",
+					"display name": "Data Transformation",
 					"sub-topics": [
 						{
 							"display name": "Broadway",
@@ -393,7 +393,7 @@
 					"sub-topics": [
 
 						{
-							"display name": "User and Access Management",
+							"display name": "User & Access Management",
 							"value": "26_fabric_security_iam"
 						},
 						{
