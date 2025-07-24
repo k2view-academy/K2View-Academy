@@ -32,7 +32,9 @@
 - If you have calculated parameters such as number of open cases or total open debt, add an LU table that contains these parameters. Add the new table with the calculated parameters to [TDMFilterOutTargetTables](11_tdm_implementation_using_generic_flows.md#step-1---define-tables-to-be-filtered-out)  actor in order to exclude these tables from the load, delete, and from the data generation flows creation.
 
 - Verify that all LU tables in the LuParamsMapping are linked to parent tables. This is required in order to add an FK to tables when they are exported to the TDM DB.
-- Note that the MDB export does not support multiple populations with different links to parent tables. The LU tables in LuParamsMapping must have one link to a parent LU table.
+- Notes:
+  - The MDB export does not support multiple populations with different links to parent tables. The LU tables in LuParamsMapping must have one link to a parent LU table.
+  - **Any update** of the LuParamsMapping (including the first update) requires at least one task execution with the *UPDATE_MDB_EXPORTED_SCHEMA* Global set to **true** (set in the Task variables). This is necessary to update the exported LU schema in the TDM database. 
 
 
 
