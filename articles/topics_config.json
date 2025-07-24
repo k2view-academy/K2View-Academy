@@ -88,7 +88,7 @@
 			]
 		},
 		{
-			"group display name": "Masking",
+			"group display name": "Enterprise Data Masking",
 			"group icon": "images/masking.png",
 			"visible in main": true,
 			"topics": [
@@ -99,7 +99,7 @@
 			]
 		},
 		{
-			"group display name": "AI Fusion",
+			"group display name": "GenAI Data Fusion",
 			"group icon": "images/ai-icon.png",
 			"visible in main": true,
 			"topics": [
