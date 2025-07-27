@@ -32,16 +32,25 @@ A description of the TDM Environment permission set (optional).
 
 - Write access can be granted on a target environment, i.e., the environment type is **Target** or **Both**.
 
-When an Environment Type is Both, it can have both accesses: read and write. Therefore, the TDM Environment permission sets in these environments can have one or both accesses.
+- When an Environment Type is Both, it can have both accesses: read and write. Therefore, the TDM Environment permission sets in these environments can have one or both accesses.
 
-  **Example:**
 
-  - ENV1 can be a source or target environment. The environment has 2 permission sets: 
-    - Set1, enables read-only access. Testers with this permission set can select this environment only as a source environment in a TDM task.
-    - Set2, enables write-only access. Testers with this permission set can select this environment only as a target environment in a TDM task.
-    - Set3, enables read and write accesses. Testers with this permission set can select this environment as a source and/or target environment in a TDM task.
+ 	 **Example:**
 
-- The **Max Number of Entities** field indicates the maximum number of entities processed by a task. This number must be set for each access type. The Number of Entities is set on both **Read** and **Write** access types. A different number of entities can be set for each access type.
+- ENV1 can be a source or target environment. The environment has 2 permission sets:
+
+  - Set1, enables read-only access. Testers with this permission set can select this environment only as a source environment in a TDM task.
+  - Set2, enables write-only access. Testers with this permission set can select this environment only as a target environment in a TDM task.
+
+  - Set3, enables read and write accesses. Testers with this permission set can select this environment as a source and/or target environment in a TDM task.
+
+#### Number of Entities
+
+- TDM V9.3.0 has added the option to grant the permission of **Unlimited entities**. This feature adds the option to grant the user permission to process all entities that match the selected criteria on a task.
+
+- The permission set can support either of the following: process unlimited number of entities in a task, or limit the user's permission to process a maximum number of entities in a task.
+
+- The **Maximum number of entities** field is populated if the Unlimited entities is cleared and indicates the maximum number of entities processed by a task. This number must be set for each access type. The Number of Entities is set on both **Read** and **Write** access types. A different number of entities can be set for each access type.
 
   **Example:**
   - Read Number of Entities = 1000. Write Number of Entities = 10. 
