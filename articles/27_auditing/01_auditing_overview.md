@@ -2,7 +2,381 @@
 
 <web>
 
-Currently the Web Studio does not support the Auditing mechanism.
+## K2Cloud Auditing Capability
+
+K2View’s auditing capability is now available to K2Cloud SaaS customers. This feature offers detailed visibility into user and system activity across Fabric.
+
+Note: Customers using self-hosted K2Cloud environments are not eligible for this capability.
+
+## When to Enable Auditing in Production
+
+Auditing is particularly useful in production environments, where system integrity, accountability, and regulatory compliance are essential. Enabling auditing ensures that user actions and system events are accurately recorded for analysis, compliance, and troubleshooting purposes.
+
+Here’s a list of common activities audited in production:
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Activity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Authentication</td>
+      <td>- User logins to Web Studio / Fabric CLI / Web Framework</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>- Failed login attempts (authentication errors)</td>
+    </tr>
+    <tr>
+      <td>User Management</td>
+      <td>- User creation, deletion, or modification</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>- Role assignment and revocation</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>- Changes to permissions or tokens</td>
+    </tr>
+    <tr>
+      <td>Configuration Changes</td>
+      <td>- Updates to environment configurations</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>- Changes to Fabric settings via config.ini or commands</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>- Feature enablement/disabling (e.g., turning audit ON/OFF)</td>
+    </tr>
+    <tr>
+      <td>Deployment Actions</td>
+      <td>- Deployment of Logical Units (LUs), flows, or configurations</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>- Script or service updates pushed to the Fabric runtime</td>
+    </tr>
+    <tr>
+      <td>Command Execution</td>
+      <td>- Executed Fabric commands (e.g., GET, LIST, ALTER, GRANT)</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>- Batch commands and automation jobs</td>
+    </tr>
+    <tr>
+      <td>Data Access</td>
+      <td>- Executed queries (read/write) on LU Tables or external DBs</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>- Use of SEARCH or CQL commands</td>
+    </tr>
+    <tr>
+      <td>Web Service Usage</td>
+      <td>- Web service calls via Fabric endpoints</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>- API access patterns and integration behaviors</td>
+    </tr>
+    <tr>
+      <td>Job Execution</td>
+      <td>- Scheduled job execution and lifecycle (start/stop/update)</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>- Execution of Broadway or background processes</td>
+    </tr>
+    <tr>
+      <td>System Operations</td>
+      <td>- System restart events</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>- Startup/shutdown logs and audit state transitions</td>
+    </tr>
+  </tbody>
+</table>
+
+
+## When Auditing Should Not Be Enabled
+
+Auditing is not recommended in development environments, particularly when using Fabric Web Studio.
+
+**Why?**
+
+In development environments, Fabric Web Studio often executes actions on behalf of the user. If auditing is enabled:
+
+- Both user-driven actions and system-initiated background tasks by Web Studio will be logged.
+- This results in misleading or noisy audit records that do not accurately reflect user behavior.
+- There is no operational benefit, as this environment is typically used for prototyping or testing—not production governance or compliance.
+
+**Recommendation:**  
+Do not enable auditing in development environments where Fabric Web Studio is employed. It provides no added value and may introduce confusion in interpreting activity logs.
+
+## Where to View Audit Logs
+
+When auditing is enabled, audit entries are integrated into the logs shown on the Monitoring page, under the Fabric Monitor Logs panel. These entries are interspersed with standard logs and can be filtered using the search feature.
+
+To view only audit records, enter `AUDIT` into the search bar (**case-sensitive**).
+
+## Downloading Audit Logs
+
+Audit data can be downloaded in either **CSV** or **plain text** formats using one of the following methods:
+
+1. **Using the UI’s Vertical 3-dot Menu (⋮):**  
+   - Click the vertical 3-dot menu (⋮) in the log panel.  
+   - Navigate to: `Inspect > Data`  
+   - Choose the desired format (CSV or text) for export.
+
+2. **Using a Keyboard Shortcut:**  
+   - Press the `i` key to access the same `Inspect > Data` option and initiate export.
+
+## What Gets Audited
+
+Fabric auditing tracks the following activity types:
+
+- System logins  
+- All executed Fabric commands  
+- Web-Service calls  
+- All executed data queries (read and write)
+
+## Auditing Reporting Structure
+
+When an activity is captured by the Fabric Auditing mechanism, it is logged with the following fields:
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Action</td>
+      <td>Type of activity performed in Fabric.</td>
+    </tr>
+    <tr>
+      <td>Date</td>
+      <td>Activity date.</td>
+    </tr>
+    <tr>
+      <td>User</td>
+      <td>Fabric User ID.</td>
+    </tr>
+    <tr>
+      <td>Written at</td>
+      <td>Full date and timestamp of the activity.</td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td>IP address of the node where the activity occurred. May include port.</td>
+    </tr>
+    <tr>
+      <td>Params</td>
+      <td>Parameters passed to Fabric commands.</td>
+    </tr>
+    <tr>
+      <td>Protocol</td>
+      <td>Protocol used for the activity.</td>
+    </tr>
+    <tr>
+      <td>Query</td>
+      <td>Activity details such as query, schema info, or auth provider.</td>
+    </tr>
+    <tr>
+      <td>Result</td>
+      <td>Outcome of the action (rows affected or status).</td>
+    </tr>
+    <tr>
+      <td>Session ID</td>
+      <td>Correlation ID for related actions within a session or request chain.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+## Auditing Reporting Examples
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Action</th>
+      <th>Query</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LOGIN</td>
+      <td>['null']</td>
+    </tr>
+    <tr>
+      <td>LOGOUT</td>
+      <td>['null']</td>
+    </tr>
+    <tr>
+      <td>Create Role Command</td>
+      <td>["create role 'audit'"]</td>
+    </tr>
+    <tr>
+      <td>Create Token Command</td>
+      <td>['create token audit_token']</td>
+    </tr>
+    <tr>
+      <td>Create User Command</td>
+      <td>['CREATE USER ksmith*** with PASSWORD ****']</td>
+    </tr>
+    <tr>
+      <td>Alter User Command</td>
+      <td>['ALTER USER ksmith*** with password ****']</td>
+    </tr>
+    <tr>
+      <td>Assign Role Command</td>
+      <td>['assign role audit to token audit_token', 'assign role audit to user ksmith***']</td>
+    </tr>
+    <tr>
+      <td>Deploy Command</td>
+      <td>["DEPLOY CustomerAudit WITH JAR '/tmp/fabric_upload_tmp_nura_nondev83_k2view_qa_0/ludb.jar' ZIP_FILE '/tmp/fabric_upload_tmp_nura_nondev83_k2view_qa_0/ludbXMLs.zip' WS_METHODS ''  SOFT_DEPLOY false"]</td>
+    </tr>
+    <tr>
+      <td>Deploy Environments Command</td>
+      <td>["DEPLOY ENVIRONMENTS FROM FILE '/tmp/fabric_upload_tmp_nura_nondev83_k2view_qa_1/Environments.k2fabEnv.xml'"]</td>
+    </tr>
+    <tr>
+      <td>Grant Command</td>
+      <td>['grant ALL on * to audit', 'grant ALL_WS on * to audit']</td>
+    </tr>
+    <tr>
+      <td>Batch In Process Command</td>
+      <td>["batch_in_process filter='(?i)sync_instance'"]</td>
+    </tr>
+    <tr>
+      <td>Batch Process Details Command</td>
+      <td>["BATCH_DETAILS '${batch_id}'", "BATCH_DETAILS ''", "BATCH_DETAILS '51905b7e-6c8d-4914-a3db-243252c07c80'"]</td>
+    </tr>
+    <tr>
+      <td>Batch Process List Command</td>
+      <td>['batch_list']</td>
+    </tr>
+    <tr>
+      <td>Batch Process Retry Command</td>
+      <td>["batch_retry  '07e05c7a-33ea-4da1-a0e7-27b6c13e5237' allow_cancelled=true"]</td>
+    </tr>
+    <tr>
+      <td>Batch Process Summary Command</td>
+      <td>["batch_summary  '51905b7e-6c8d-4914-a3db-243252c07c80'"]</td>
+    </tr>
+    <tr>
+      <td>Broadway Command</td>
+      <td>['broadway k2_ws.fabricRestart']</td>
+    </tr>
+    <tr>
+      <td>Cancel Command</td>
+      <td>["cancel batch'13b8d066-c523-4a2d-9be5-79c22e75c786'"]</td>
+    </tr>
+    <tr>
+      <td>Drop Command</td>
+      <td>['drop token audit_token', 'drop role audit', 'drop lutype CustomerAudit']</td>
+    </tr>
+    <tr>
+      <td>Get Command</td>
+      <td>['get OracleLu.2', 'use OracleLu.3', 'get LU3.1']</td>
+    </tr>
+    <tr>
+      <td>GetF Command</td>
+      <td>['getf CustomerAudit.insertRowToUsers(999999)']</td>
+    </tr>
+    <tr>
+      <td>Job Status Command</td>
+      <td>['jobstatus']</td>
+    </tr>
+    <tr>
+      <td>List Command</td>
+      <td>['list config_overrides', 'list config', 'list lut']</td>
+    </tr>
+    <tr>
+      <td>Migrate Command</td>
+      <td>['migrate CustomerAudit.(1;2;3;4;5) with async=true', "migrate CustomerAudit from fabric using ('select user_id from common.Users where user_id<=10000') with async=true", 'migrate CustomerAudit with async=true']</td>
+    </tr>
+    <tr>
+      <td>Migrate Details Command</td>
+      <td>["migrate_details '${batch_id}'", "migrate_details ''", "migrate_details '51905b7e-6c8d-4914-a3db-243252c07c80'"]</td>
+    </tr>
+    <tr>
+      <td>Migrate In Process Command</td>
+      <td>['migrate_in_process']</td>
+    </tr>
+    <tr>
+      <td>Migrate List Command</td>
+      <td>['migrate_list']</td>
+    </tr>
+    <tr>
+      <td>Migrate Resume Command</td>
+      <td>["migrate_resume '07e05c7a-33ea-4da1-a0e7-27b6c13e5237' allow_cancelled=true"]</td>
+    </tr>
+    <tr>
+      <td>Migrate Summary Command</td>
+      <td>["migrate_summary '51905b7e-6c8d-4914-a3db-243252c07c80'"]</td>
+    </tr>
+    <tr>
+      <td>PS Command</td>
+      <td>['ps all']</td>
+    </tr>
+    <tr>
+      <td>QUERY</td>
+      <td>['select * from table1 where COL1=123']</td>
+    </tr>
+    <tr>
+      <td>QUERY_DATA_CHANGE</td>
+      <td>['begin', 'INSERT into common.USERS (...)', 'delete from table1 where COL1=123']</td>
+    </tr>
+    <tr>
+      <td>Release Command</td>
+      <td>['release', 'release CustomerAudit', 'release CustomerAudit; LU3']</td>
+    </tr>
+    <tr>
+      <td>Revoke Command</td>
+      <td>["revoke ALL on * from 'audit'"]</td>
+    </tr>
+    <tr>
+      <td>Set Command</td>
+      <td>['set username', 'set default', "set environment='_dev'"]</td>
+    </tr>
+    <tr>
+      <td>Set Global Command</td>
+      <td>['set_global config_overrides_add=?;', "set_global global 'CustomerAudit.audit_test=10'"]</td>
+    </tr>
+    <tr>
+      <td>Test Connection Command</td>
+      <td>['test_connection interface=anthropic timeout=30', 'test_connection interface=bedrock timeout=30', 'test_connection interface=cassandraLoader timeout=30']</td>
+    </tr>
+    <tr>
+      <td>Delete Instance Command</td>
+      <td>['delete instance CustomerAudit.999999']</td>
+    </tr>
+    <tr>
+      <td>Time Command</td>
+      <td>['time']</td>
+    </tr>
+    <tr>
+      <td>Version Info Command</td>
+      <td>['version basic']</td>
+    </tr>
+    <tr>
+      <td>Help Command</td>
+      <td>['help', 'help set', 'help deploy']</td>
+    </tr>
+  </tbody>
+</table>
+
 
 </web>
 
