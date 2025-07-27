@@ -81,17 +81,25 @@ Populate the list of entities for the task. The populated entities should be sep
 
 ## Predefined Entity List
 
-Run the SQL query or the [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-6---optional---get-the-entity-list-for-an-extract-all-task-using-a-broadway-flow) defined in the [MigrateList MTable](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#migratelist) object for the task's Business Entity. This option is available only for Admin and Environment owner users.
+Run the SQL query or the [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-6---optional---get-the-entity-list-for-an-extract-all-task-using-a-broadway-flow) defined in the [MigrateList MTable](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#migratelist) object for the task's Business Entity. This option is available for admin users, environment owners, and tester with [unlimited entities permission set](10_environment_roles_tab.md#number-of-entities) on the task's environment.
 
 ## Predefined Custom Logic
 
-Select a predefined [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in order to extract an entity list for the task. Set the maximum number of entities to be retrieved by the flow. Populate the input parameters for the selected flow, if needed.
+Select a predefined [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in order to extract an entity list for the task. Set the maximum number of entities to limited the number of entities to be retrieved by the flow, or leave it empty to process of entities retrieved by the flow. Populate the input parameters for the selected flow, if needed.
+
+Note that you can leave the maximum number of entities empty if you are an admin user, environment owner, or a tester with [unlimited entities permission set](10_environment_roles_tab.md#number-of-entities) on the task's environment.
 
 ## Business Parameters
 
-Select one or several parameters. Additionally, you can add the same parameter multiple times with different values.
+Select one or several parameters. Additionally, you can add the same parameter multiple times with different values. An information icon is displayed next to each parameter with a description. 
 
 ![parameters](images/task_business_parameters_example.png)
+
+
+
+The parameter's description is displayed when overing the information icon to help the user to select the relevant business parameters in the task:
+
+![parameters](images/task_param_description.png)
 
 
 
@@ -99,6 +107,7 @@ Notes:
 
 - The list of parameters should be [predefined for each LU in the task BE](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md) within the Fabric project.
 - The parameters and their values must be populated in the TDM DB. It is recommended to run a task that extracts a large subset of entities from the source environment in order to populate the TDM DB parameters' tables and enable creating TDM tasks with business parameters. When there is no need to store the extracted subset in the TDM Test Data Store, the [Retention period](/articles/TDM/tdm_gui/16_task_test_data_store_component.md#retention-period) for the initial extract task can be set to **Do not retain**.
+- You can leave the maximum number of entities empty if you are an admin user, environment owner, or a tester with [unlimited entities permission set](10_environment_roles_tab.md#number-of-entities) on the task's environment.
 
 #### Use Parameters with Random Selection Checkbox
 
