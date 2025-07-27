@@ -105,7 +105,8 @@ The following activities in Fabric can be captured by the auditing mechanism:
 * Web-Service calls
 * Any executed queries on the data, covering both read and write.
 
-[Click for more information about the User Identification and Access Management Auditing](/articles/26_fabric_security/16_user_IAM_auditing.md).
+
+[Click for more information about the User Identification and Access Management Auditing](/articles/26_fabric_security_iam/16_user_IAM_auditing.md).
 
 ### Turning Auditing On/Off
 
