@@ -66,7 +66,27 @@ To create a Broadway Flow that runs on an SSH interface, do the following:
 
    ![images](images/10_ssh_2.png)
 
-   
+
+### SSH Actor Error Handling in Broadway Automation
+
+When using the SSH actor in Broadway automation to execute shell commands on remote systems, the following logic governs how output and errors are handled:
+
+**Command Completion and Exception Handling**
+
+* **Successful Completion**:
+If the executed command exits with code 0, the actor does not raise an exception, regardless of whether any output is present on STDERR.
+
+* **Failure Handling**:
+If the command exits with a non-zero exit code, the actor raises an exception. The exception message includes:
+
+   * The command’s exit code (e.g., Error code 4)
+   * The full contents of STDERR, to assist with diagnostics
+
+**Output Stream Behavior**
+* When the command completes successfully (exit code = 0), the contents of STDERR (if any) are merged into the STDOUT stream. This ensures that all command output, including non-critical diagnostics, is available for processing in subsequent steps.
+
+This behavior ensures reliable automation by distinguishing between actual failures and informational output, while preserving all relevant command output for review and processing.
+
 
    [![Previous](/articles/images/Previous.png)](09_redis_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](11_LDAP_interface.md)
 
