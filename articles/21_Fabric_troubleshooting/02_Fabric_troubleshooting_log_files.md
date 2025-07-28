@@ -225,4 +225,4 @@ K2View recommends the following for managing logs and cleanup:
 
 - To keep the log files history for a longer period, for example due to regulations, integrate Fabric with a central syslog system like ELK Stack (Elasticsearch, Logstash and Kibana), Splunk, or other. 
 
-[![Previous](/articles/images/Previous.png)](/articles/21_Fabric_troubleshooting/01_Fabric_troubleshooting_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/21_Fabric_troubleshooting/03_monitoring.md)
+[![Previous](/articles/images/Previous.png)](/articles/21_Fabric_troubleshooting/01_Fabric_troubleshooting_overview.md)
