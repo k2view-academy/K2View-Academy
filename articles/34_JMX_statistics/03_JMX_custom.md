@@ -6,7 +6,7 @@ Fabric provides developers with two Java methods to add customized JMX probes to
 
 #### statsCount
 
-This method can be invoked to count statistics such as events, bytes, counts etc. 
+This method can be invoked to count statistics, such as events, bytes, and counts. 
 
 ```java
 public static void statsCount(String entry, String key, long value)
@@ -18,7 +18,7 @@ public static void statsCount(String entry, String key, long value)
 
 `value` - the measure of the value for this statistic.
 
-The statistic method will use this value to calculate total, last and average values for this measure. In addition this function also counts the number of times the function has been called and will provide a timestamp for the last call.
+The statistical method will use this value to calculate the total, last, and average values for this measure. Additionally, this function also tracks the number of times it has been called and provides a timestamp for the most recent call.
 
 #### statsDuration
 
@@ -30,9 +30,9 @@ The purpose of this method is to measure the duration of the function's call bet
 
 `entry` -  designates the primary key for this statistic
 
-`key` - designates the sub key for this statistics
+`key` - designates the sub key for these statistics
 
-This method is returned by calling ```.close()``` on this object to indicate the end of the duration measurement
+This method is returned by calling ```.close()``` on this object to indicate the end of the duration measurement.
 
 
 ### Code Example:
@@ -76,3 +76,5 @@ This method is returned by calling ```.close()``` on this object to indicate the
 
 
 [![Previous](/articles/images/Previous.png)](/articles/34_JMX_statistics/02_JMX_format.md)
+
+[![Previous](/articles/images/Previous.png)](/articles/34_JMX_statistics/02_JMX_format.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/34_JMX_statistics/04_monitoring_dashboard_example.md)
