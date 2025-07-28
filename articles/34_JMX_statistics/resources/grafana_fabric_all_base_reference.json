@@ -1,0 +1,2819 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 5,
+  "links": [],
+  "liveNow": true,
+  "panels": [
+    {
+      "collapsed": false,
+      "datasource": {
+        "type": "loki",
+        "uid": "XCZHip44z"
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 22,
+      "panels": [],
+      "targets": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "XCZHip44z"
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "Fabric Health",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "Fabric Nodes Up\nEnter the proper variables on the top side of the dashboard.\nIf needed, Modify the query to return your fabric nodes.\nAlter the Threshold Green Value to the amount of nodes of Fabric.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 3
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 0,
+        "y": 1
+      },
+      "id": 2,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "exemplar": true,
+          "expr": "sum(up{instance=~\".*$FabricPort\", job=\"fabric\", env=\"$Environment\"})",
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Fabric Nodes Up",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "Average CPU Usage of the Fabric Nodes\nAlter the Threshold Red/Yellow Values to the desired thresholds.\nNode Exporter should be running in order for this metric to work.\nThe \"avg\" at the start of the query can be set to \"min\" or \"max\" to display different calculations of the values we are receiving.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 1,
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "yellow",
+                "value": 60
+              },
+              {
+                "color": "red",
+                "value": 75
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 6,
+        "y": 1
+      },
+      "id": 3,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "exemplar": true,
+          "expr": "avg(100-(avg by(node) (irate(node_cpu_seconds_total{mode=\"idle\", job=\"fabric\", env=\"$Environment\"}[5m]))*100))",
+          "hide": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Fabric Average CPU Usage",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "Average Memory(RAM) Usage of the Fabric Nodes\nAlter the Threshold Red/Yellow Values to the desired thresholds.\nNode Exporter should be running in order for this metric to work.\nThe \"avg\" at the start of the query can be set to \"min\" or \"max\" to display different calculations of the values we are receiving.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 1,
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "yellow",
+                "value": 78
+              },
+              {
+                "color": "red",
+                "value": 85
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 12,
+        "y": 1
+      },
+      "id": 4,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "exemplar": true,
+          "expr": "avg(100 - ((node_memory_MemAvailable_bytes{node=~\"fn_.*\", env=\"$Environment\"} * 100) / node_memory_MemTotal_bytes{node=~\"fn_.*\", env=\"$Environment\"}))",
+          "hide": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Fabric Average Memory Usage",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "Average Heap Memory Usage of the Fabric Nodes\nAlter the Threshold Red/Yellow Values to the desired thresholds.\nNode Exporter should be running in order for this metric to work.\nThe \"avg\" at the start of the query can be set to \"min\" or \"max\" to display different calculations of the values we are receiving.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 1,
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 75
+              },
+              {
+                "color": "red",
+                "value": 90
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "B"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "bits"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 18,
+        "y": 1
+      },
+      "id": 40,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "expr": "avg(jvm_memory_bytes_used{area=\"heap\", instance=~\".*$FabricPort\"}/jvm_memory_bytes_max{area=\"heap\", instance=~\".*$FabricPort\"}*100)",
+          "hide": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Fabric Average Heap Usage",
+      "type": "stat"
+    },
+    {
+      "collapsed": false,
+      "datasource": {
+        "type": "loki",
+        "uid": "XCZHip44z"
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 10
+      },
+      "id": 24,
+      "panels": [],
+      "targets": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "XCZHip44z"
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "Fabric Performance Data",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "Total Number of reads from all Fabric Nodes in last 5 minutes\nThresholds can be set. \nJMX should be running in order for this metric to work. If JMX is running and you get no data from those metrics, double check the JMX configuration blacklist, or load the default configuration.\nThe \"sum\" at the start of the query can be set to \"min\" or \"max\" or \"avg\" to display different calculations of the values we are receiving from each node.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 0,
+        "y": 11
+      },
+      "id": 6,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "expr": "sum((increase(com_k2view_fabric_stats_count{ category=\"mdb\", job=\"fabric\", stats=\"mdbFetchBytes\", key!=\"\", env=\"$Environment\"} [5m])))",
+          "hide": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Reads Count",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "Total Number of writes from all Fabric Nodes in last 5 minutes.\nAlter the Threshold Red/Yellow Values to the desired thresholds.\nJMX should be running in order for this metric to work. If JMX is running and you get no data from those metrics, double check the JMX configuration blacklist, or load the default configuration.\nThe \"sum\" at the start of the query can be set to \"min\" or \"max\" or \"avg\" to display different calculations of the values we are receiving from each node.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 6,
+        "y": 11
+      },
+      "id": 8,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "expr": "sum((increase(com_k2view_fabric_stats_count{ category=\"mdb\", job=\"fabric\", stats=\"mdbSaveDuration\", key!=\"\", env=\"$Environment\"} [5m])))",
+          "hide": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Writes Count",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "Average time of mdb Fetches from all Fabric Nodes\nAlter the Threshold Red/Yellow Values to the desired thresholds.\nJMX should be running in order for this metric to work. If JMX is running and you get no data from those metrics, double check the JMX configuration blacklist, or load the default configuration.\nThe \"avg\" at the start of the query can be set to \"min\" or \"max\" to display different calculations of the values we are receiving from each node.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "ms"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 12,
+        "y": 11
+      },
+      "id": 7,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "expr": "(avg (increase(com_k2view_fabric_stats_total{ category=\"mdb\", job=\"fabric\", stats=\"mdbFetchDuration\", key!=\"\", env=\"$Environment\"} [5m])))/(avg (increase(com_k2view_fabric_stats_count{ category=\"mdb\", job=\"fabric\", stats=\"mdbFetchDuration\", key!=\"\", env=\"$Environment\"} [5m])))",
+          "hide": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Average Fetch Time",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "Total size of all Fabric MDBs from all nodes.\nThresholds can be set.\nJMX should be running in order for this metric to work. If JMX is running and you get no data from those metrics, double check the JMX configuration blacklist, or load the default configuration.\nThe \"sum\" at the beginning can be set to either \"max\", \"min\" or \"avg\" in order to display different computations of the values.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "decbytes"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 18,
+        "y": 11
+      },
+      "id": 9,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "expr": "sum((com_k2view_fabric_stats_total{category=\"mdb\",stats=\"mdbSaveBytes\", env=\"$Environment\"}))",
+          "hide": false,
+          "legendFormat": "Total",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Total mDB Size",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "Number of Reads by L.U. in the last 5 minutes.\nJMX should be running in order for this metric to work. If JMX is running and you get no data from those metrics, double check the JMX configuration blacklist, or load the default configuration.\n\n",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "decimals": 0,
+          "mappings": [],
+          "min": 0,
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 9,
+        "x": 0,
+        "y": 20
+      },
+      "id": 17,
+      "options": {
+        "displayLabels": [],
+        "legend": {
+          "displayMode": "table",
+          "placement": "right",
+          "showLegend": true,
+          "values": [
+            "percent",
+            "value"
+          ]
+        },
+        "pieType": "pie",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "9.4.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "expr": "(sum by (key)(increase(com_k2view_fabric_stats_count{ category=\"mdb\", job=\"fabric\", stats=\"mdbFetchDuration\", key!=\"\", env=\"$Environment\"} [5m])))",
+          "hide": false,
+          "legendFormat": "{{key}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Reads Count by LU",
+      "type": "piechart"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "The average size of MDBs across all fabric nodes.\nJMX should be running in order for this metric to work. If JMX is running and you get no data from those metrics, double check the JMX configuration blacklist, or load the default configuration.\nThresholds can be set.\nThe \"avg\" at the beginning of the query can be deleted, or set to \"min\"/\"max\" in order to see\nThe average siez of MDBs for each node, or the min/max size across all nodes.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 1,
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "decbytes"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 5,
+        "x": 9,
+        "y": 20
+      },
+      "id": 13,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "expr": "avg((sum by (node)(((com_k2view_fabric_stats_total{category=\"mdb\",stats=\"mdbSaveBytes\", node=~\".*\", env=\"$Environment\"}))))/(sum by (node)((com_k2view_fabric_stats_count{category=\"mdb\", stats=\"mdbSaveBytes\", node=~\".*\", env=\"$Environment\"}))))",
+          "hide": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Average mDB Size",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "Number of Writes by LU in the last 5 minutes.\nJMX should be running in order for this metric to work. If JMX is running and you get no data from those metrics, double check the JMX configuration blacklist, or load the default configuration.\n\n",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "decimals": 0,
+          "mappings": [],
+          "min": 0,
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 10,
+        "x": 14,
+        "y": 20
+      },
+      "id": 18,
+      "options": {
+        "displayLabels": [],
+        "legend": {
+          "displayMode": "table",
+          "placement": "right",
+          "showLegend": true,
+          "values": [
+            "percent",
+            "value"
+          ]
+        },
+        "pieType": "pie",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "9.4.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "expr": "(sum by (key)(increase(com_k2view_fabric_stats_count{ category=\"mdb\", job=\"fabric\", stats=\"mdbSaveDuration\", key!=\"\", env=\"$Environment\"} [5m])))",
+          "hide": false,
+          "legendFormat": "{{key}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Writes Count by LU",
+      "type": "piechart"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "Total Number of Web Service Calls in the last 5 minutes.\nAlter the Threshold Red/Yellow Values to the desired thresholds.\nJMX should be running in order for this metric to work. If JMX is running and you get no data from those metrics, double check the JMX configuration blacklist, or load the default configuration.\n",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 0,
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 0,
+        "y": 29
+      },
+      "id": 14,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "expr": "sum((sum by (key) (increase(com_k2view_fabric_stats_count{category=\"transactions\",key=~\"[Kk]2.*\",job=\"fabric\",stats=\"webserviceCalls\", env=\"$Environment\"}[5m]))))",
+          "hide": false,
+          "legendFormat": "{{key}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Total API Calls Count",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "Number of Web Service Calls by API, in the last 5 minutes.\nJMX should be running in order for this metric to work. If JMX is running and you get no data from those metrics, double check the JMX configuration blacklist, or load the default configuration.\n",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "decimals": 0,
+          "mappings": [],
+          "min": 0,
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 6,
+        "y": 29
+      },
+      "id": 11,
+      "options": {
+        "displayLabels": [],
+        "legend": {
+          "displayMode": "table",
+          "placement": "right",
+          "showLegend": true,
+          "values": [
+            "percent"
+          ]
+        },
+        "pieType": "pie",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "9.4.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "expr": "((sum by (key) (increase(com_k2view_fabric_stats_count{category=\"transactions\",key=~\"[Kk]2.*\",job=\"fabric\",stats=\"webserviceCalls\", env=\"$Environment\"}[5m]))))",
+          "hide": false,
+          "legendFormat": "{{key}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "API Calls Distribution",
+      "type": "piechart"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "The number of Web Service Errors that occurred in the last 5 minutes.\nAlter the Threshold Red/Yellow Values to the desired thresholds.\nJMX should be running in order for this metric to work. If JMX is running and you get no data from those metrics, double check the JMX configuration blacklist, or load the default configuration.\n",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 0,
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 18,
+        "y": 29
+      },
+      "id": 15,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "expr": "sum(increase(com_k2view_fabric_stats_count{category=\"transactions\", stats=\"webserviceErrors\", key=~\"[Kk]2.*\", env=\"$Environment\"}[5m]))",
+          "hide": false,
+          "legendFormat": "{{key}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Failed API Calls Count",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "Number of Web Service Calls per API in the last 5 minutes.\nAlter the Threshold Red/Yellow Values to the desired thresholds.\nJMX should be running in order for this metric to work. If JMX is running and you get no data from those metrics, double check the JMX configuration blacklist, or load the default configuration.\nYou can set a larger time range from the top right of Grafana and the time series will expand.\n",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 15,
+        "w": 24,
+        "x": 0,
+        "y": 38
+      },
+      "id": 10,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "table",
+          "placement": "right",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "9.4.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "expr": "((sum by (key) (increase(com_k2view_fabric_stats_count{category=\"transactions\",key=~\"[Kk]2.*\",job=\"fabric\",stats=\"webserviceCalls\", env=\"$Environment\"}[5m]))))",
+          "hide": false,
+          "legendFormat": "{{key}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "API Calls",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "Response times of Web Services per API, in the last 5 minutes.\nJMX should be running in order for this metric to work. If JMX is running and you get no data from those metrics, double check the JMX configuration blacklist, or load the default configuration.\nThresholds can be set.\nYou can set a larger time range from the top right of Grafana and the time series will expand.\n",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 1,
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "ms"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 17,
+        "w": 24,
+        "x": 0,
+        "y": 53
+      },
+      "id": 12,
+      "options": {
+        "legend": {
+          "calcs": [
+            "last"
+          ],
+          "displayMode": "table",
+          "placement": "right",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "9.4.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "exemplar": true,
+          "expr": "(avg by (key) (increase(com_k2view_fabric_stats_total{category=\"transactions\",key=~\".*\",stats=\"webserviceCalls\",key!=\"\", env=\"$Environment\"}[5m])))  /(avg by (key) (increase(com_k2view_fabric_stats_count{category=\"transactions\",key=~\".*\",job=\"fabric\",stats=\"webserviceCalls\", key!=\"\", env=\"$Environment\"}[5m])))",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{key}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "API Calls Avg. Response Time",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "The number of Web Service Errors that occurred in the last 5 minutes for each api.\nAlter the Threshold Red/Yellow Values to the desired thresholds.\nJMX should be running in order for this metric to work. If JMX is running and you get no data from those metrics, double check the JMX configuration blacklist, or load the default configuration.\n",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 0,
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 24,
+        "x": 0,
+        "y": 70
+      },
+      "id": 16,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "table",
+          "placement": "right",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "9.4.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "expr": "sum by (key)(increase(com_k2view_fabric_stats_count{category=\"transactions\", stats=\"webserviceErrors\", key=~\"[Kk]2.*\", env=\"$Environment\"}[5m]))",
+          "hide": false,
+          "legendFormat": "{{key}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "API Calls Failures",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": true,
+      "datasource": {
+        "type": "loki",
+        "uid": "XCZHip44z"
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 84
+      },
+      "id": 28,
+      "panels": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "ee64a64b-4983-4b96-8269-6e31832ddee9"
+          },
+          "description": "Read the instructions below this metric to set it up correctly.\n",
+          "gridPos": {
+            "h": 17,
+            "w": 24,
+            "x": 0,
+            "y": 85
+          },
+          "id": 20,
+          "options": {
+            "dedupStrategy": "exact",
+            "enableLogDetails": true,
+            "prettifyLogMessage": true,
+            "showCommonLabels": false,
+            "showLabels": true,
+            "showTime": true,
+            "sortOrder": "Descending",
+            "wrapLogMessage": true
+          },
+          "pluginVersion": "8.3.4",
+          "targets": [
+            {
+              "datasource": {
+                "type": "loki",
+                "uid": "ee64a64b-4983-4b96-8269-6e31832ddee9"
+              },
+              "editorMode": "code",
+              "expr": "{filename=\"/opt/apps/k2view/logs/k2fabric.log\"}",
+              "hide": false,
+              "queryType": "range",
+              "refId": "A"
+            }
+          ],
+          "timeFrom": "now-8h",
+          "title": "Fabric Logs",
+          "transformations": [
+            {
+              "id": "organize",
+              "options": {
+                "excludeByName": {
+                  "Time ns": true,
+                  "id": false
+                },
+                "indexByName": {},
+                "renameByName": {
+                  "line {App=\"fabric\", filename=\"/opt/apps/fabric/logs/k2fabric.log\", host=\"fn_dtvvcp-eastus2-prod-fabric-vm2.az.3pc.att.com_11\", job=\"fabriclogs\"}": ""
+                }
+              }
+            }
+          ],
+          "type": "logs"
+        }
+      ],
+      "targets": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "XCZHip44z"
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "Fabric Logs",
+      "type": "row"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 85
+      },
+      "id": 42,
+      "panels": [],
+      "title": "Cassandra Health",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "Cassandra Nodes Up\nEnter the proper variables on the top side of the dashboard.\nIf needed, Modify the query to return your cassandra nodes.\nAlter the Threshold Green Value to the amount of nodes of Cassandra.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 3
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 0,
+        "y": 86
+      },
+      "id": 37,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "exemplar": true,
+          "expr": "sum(up{instance=~\".*$CassandraPort\", job=\"cassandra\", env=\"$Environment\"})",
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Cassandra Nodes Up",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "Average CPU Usage of the Cassandra Nodes\nAlter the Threshold Red/Yellow Values to the desired thresholds.\nNode Exporter should be running in order for this metric to work.\nThe \"avg\" at the start of the query can be set to \"min\" or \"max\" to display different calculations of the values we are receiving.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 1,
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "yellow",
+                "value": 60
+              },
+              {
+                "color": "red",
+                "value": 75
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 6,
+        "y": 86
+      },
+      "id": 39,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "exemplar": true,
+          "expr": "avg(100-(avg by(node) (irate(node_cpu_seconds_total{mode=\"idle\", job=\"cassandra\", env=\"$Environment\"}[5m]))*100))",
+          "hide": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Cassandra Average CPU Usage",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "Average Memory(RAM) Usage of the Cassandra Nodes\nAlter the Threshold Red/Yellow Values to the desired thresholds.\nNode Exporter should be running in order for this metric to work.\nThe \"avg\" at the start of the query can be set to \"min\" or \"max\" to display different calculations of the values we are receiving.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 1,
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "yellow",
+                "value": 78
+              },
+              {
+                "color": "red",
+                "value": 85
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 12,
+        "y": 86
+      },
+      "id": 38,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "exemplar": true,
+          "expr": "avg(100 - ((node_memory_MemAvailable_bytes{node=~\"cn_.*\", env=\"$Environment\"} * 100) / node_memory_MemTotal_bytes{node=~\"cn_.*\", env=\"$Environment\"}))",
+          "hide": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Cassandra Average Memory Usage",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "Average Heap Memory Usage of the Cassandra Nodes\nAlter the Threshold Red/Yellow Values to the desired thresholds.\nNode Exporter should be running in order for this metric to work.\nThe \"avg\" at the start of the query can be set to \"min\" or \"max\" to display different calculations of the values we are receiving.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 1,
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 75
+              },
+              {
+                "color": "red",
+                "value": 90
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "B"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "bits"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 18,
+        "y": 86
+      },
+      "id": 43,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "expr": "avg(jvm_memory_bytes_used{area=\"heap\", instance=~\".*$CassandraPort\", env=\"$Environment\"}/jvm_memory_bytes_max{area=\"heap\", instance=~\".*$CassandraPort\", env=\"$Environment\"}*100)",
+          "hide": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Cassandra Average Heap Usage",
+      "type": "stat"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 95
+      },
+      "id": 47,
+      "panels": [],
+      "title": "Cassandra Performance",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "This metric can't be made into a time-series.\nNode Exporter and JMX Exporter need to run on the Cassandra Machines in order to retrieve proper data.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 1,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 60
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 96
+      },
+      "id": 45,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "limit": 5,
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "topk(5,(100 - ((node_filesystem_avail_bytes{mountpoint=~\".*cassandra.*\", env=\"$Environment\"} * 100)/  node_filesystem_size_bytes{mountpoint=~\".*cassandra.*\", env=\"$Environment\"})))",
+          "instant": true,
+          "legendFormat": "{{node}}",
+          "range": false,
+          "refId": "A"
+        }
+      ],
+      "title": "Cassandra Disk Usage Top 5",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "This metric can't be made into a time-series.\nNode Exporter and JMX Exporter need to run on the Cassandra Machines in order to retrieve proper data.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 0,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 400
+              },
+              {
+                "color": "red",
+                "value": 800
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 96
+      },
+      "id": 48,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "limit": 5,
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "topk(5,(org_apache_cassandra_metrics_Compaction_Value{instance=~\".*:$CassandraPort\",name=\"PendingTasks\", env=\"$Environment\"}))",
+          "instant": true,
+          "legendFormat": "{{node}}",
+          "range": false,
+          "refId": "A"
+        }
+      ],
+      "title": "Cassandra Pending Top 5 Compactions ",
+      "type": "stat"
+    },
+    {
+      "collapsed": true,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 104
+      },
+      "id": 50,
+      "panels": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "ee64a64b-4983-4b96-8269-6e31832ddee9"
+          },
+          "description": "The Job inside Cassandra Logs should match the following regex: *cassandra*\nFor information on how to change this, consult the fabric logs instructions and extrapolate to the Cassandra Machines.\nTo set up this metric correctly, follow the fabric instructions, but apply them for cassandra. Name the job title for the cassandra machines using the same convention as for the fabric.\nThe query for the cassandra logs is different because cassandra directories tend to differ by project. This query uses more processing power, so you may want to change the query to this example, adjusted for your environment:\nfilename=\"/opt/apps/cassandra/logs/system.log\".",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green"
+                  },
+                  {
+                    "color": "#EAB839",
+                    "value": 25
+                  },
+                  {
+                    "color": "red",
+                    "value": 50
+                  }
+                ]
+              }
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 8,
+            "w": 24,
+            "x": 0,
+            "y": 89
+          },
+          "id": 52,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "area",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "textMode": "auto"
+          },
+          "pluginVersion": "10.0.3",
+          "targets": [
+            {
+              "datasource": {
+                "type": "loki",
+                "uid": "ee64a64b-4983-4b96-8269-6e31832ddee9"
+              },
+              "editorMode": "code",
+              "expr": "max((count_over_time({job=~\".*cassandra.*\"} |= \"ERROR\" [5m])))",
+              "legendFormat": "ERRORS",
+              "queryType": "range",
+              "refId": "A"
+            }
+          ],
+          "title": "Cassandra Errors",
+          "type": "stat"
+        },
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "ee64a64b-4983-4b96-8269-6e31832ddee9"
+          },
+          "description": "The Job inside Cassandra Logs should match the following regex: *cassandra*\nFor information on how to change this, consult the fabric logs instructions and extrapolate to the Cassandra Machines.\nTo set up this metric correctly, follow the fabric instructions, but apply them for cassandra. Name the job title for the cassandra machines using the same convention as for the fabric.\nThe query for the cassandra logs is different because cassandra directories tend to differ by project. This query uses more processing power, so you may want to change the query to this example, adjusted for your environment:\nfilename=\"/opt/apps/cassandra/logs/system.log\".",
+          "gridPos": {
+            "h": 17,
+            "w": 24,
+            "x": 0,
+            "y": 97
+          },
+          "id": 53,
+          "options": {
+            "dedupStrategy": "exact",
+            "enableLogDetails": true,
+            "prettifyLogMessage": true,
+            "showCommonLabels": false,
+            "showLabels": true,
+            "showTime": true,
+            "sortOrder": "Descending",
+            "wrapLogMessage": true
+          },
+          "pluginVersion": "8.3.4",
+          "targets": [
+            {
+              "datasource": {
+                "type": "loki",
+                "uid": "ee64a64b-4983-4b96-8269-6e31832ddee9"
+              },
+              "editorMode": "code",
+              "expr": "{job=~\".*cassandra.*\"}",
+              "hide": false,
+              "queryType": "range",
+              "refId": "A"
+            }
+          ],
+          "timeFrom": "now-8h",
+          "title": "Cassandra Logs",
+          "transformations": [
+            {
+              "id": "organize",
+              "options": {
+                "excludeByName": {
+                  "Time ns": true,
+                  "id": false
+                },
+                "indexByName": {},
+                "renameByName": {
+                  "line {App=\"fabric\", filename=\"/opt/apps/fabric/logs/k2fabric.log\", host=\"fn_dtvvcp-eastus2-prod-fabric-vm2.az.3pc.att.com_11\", job=\"fabriclogs\"}": ""
+                }
+              }
+            }
+          ],
+          "type": "logs"
+        }
+      ],
+      "title": "Cassandra Logs",
+      "type": "row"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 105
+      },
+      "id": 55,
+      "panels": [],
+      "title": "Kafka Health",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "Kafka Nodes Up\nEnter the proper variables on the top side of the dashboard.\nIf needed, Modify the query to return your kafka nodes.\nAlter the Threshold Green Value to the amount of nodes of Kafka.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 3
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 0,
+        "y": 106
+      },
+      "id": 56,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "exemplar": true,
+          "expr": "sum(up{instance=~\".*$KafkaPort\", job=\"kafka\", env=\"$Environment\"})",
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Kafka Nodes Up",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "Average CPU Usage of the Kafka Nodes\nAlter the Threshold Red/Yellow Values to the desired thresholds.\nNode Exporter should be running in order for this metric to work.\nThe \"avg\" at the start of the query can be set to \"min\" or \"max\" to display different calculations of the values we are receiving.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 1,
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "yellow",
+                "value": 60
+              },
+              {
+                "color": "red",
+                "value": 75
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 6,
+        "y": 106
+      },
+      "id": 57,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "exemplar": true,
+          "expr": "avg(100-(avg by(node) (irate(node_cpu_seconds_total{mode=\"idle\", job=\"kafka\", env=\"$Environment\"}[5m]))*100))",
+          "hide": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Kafka Average CPU Usage",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "Average Memory(RAM) Usage of the Kafka Nodes\nAlter the Threshold Red/Yellow Values to the desired thresholds.\nNode Exporter should be running in order for this metric to work.\nThe \"avg\" at the start of the query can be set to \"min\" or \"max\" to display different calculations of the values we are receiving.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 1,
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "yellow",
+                "value": 78
+              },
+              {
+                "color": "red",
+                "value": 85
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 12,
+        "y": 106
+      },
+      "id": 58,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "exemplar": true,
+          "expr": "avg(100 - ((node_memory_MemAvailable_bytes{node=~\"kn_.*\", env=\"$Environment\"} * 100) / node_memory_MemTotal_bytes{node=~\"kn_.*\", env=\"$Environment\"}))",
+          "hide": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Kafka Average Memory Usage",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "Average Heap Memory Usage of the Kafka Nodes\nAlter the Threshold Red/Yellow Values to the desired thresholds.\nNode Exporter should be running in order for this metric to work.\nThe \"avg\" at the start of the query can be set to \"min\" or \"max\" to display different calculations of the values we are receiving.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 1,
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 75
+              },
+              {
+                "color": "red",
+                "value": 90
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "B"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "bits"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 18,
+        "y": 106
+      },
+      "id": 59,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "expr": "avg(jvm_memory_bytes_used{area=\"heap\", instance=~\".*$KafkaPort\"}/jvm_memory_bytes_max{area=\"heap\", instance=~\".*$KafkaPort\"}*100)",
+          "hide": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Kafka Average Heap Usage",
+      "type": "stat"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 115
+      },
+      "id": 62,
+      "panels": [],
+      "title": "Kafka Performance ",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "This metric can't be made into a time-series.\nNode Exporter and JMX Exporter need to run on the Kafka Machines in order to retrieve proper data.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 1,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 60
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 116
+      },
+      "id": 60,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "limit": 5,
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "topk(5,(100 - ((node_filesystem_avail_bytes{mountpoint=~\".*kafka.*\", env=\"$Environment\"} * 100)/  node_filesystem_size_bytes{mountpoint=~\".*kafka.*\", env=\"$Environment\"})))",
+          "instant": true,
+          "legendFormat": "{{node}}",
+          "range": false,
+          "refId": "A"
+        }
+      ],
+      "title": "Kafka Disk Usage Top 5",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+      },
+      "description": "This metric can't be made into a time-series.\nNode Exporter and JMX Exporter need to run on the Kafka Machines in order to retrieve proper data. \nTo avoid clutter, only topics that receive messages are shown.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 0,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 116
+      },
+      "id": 63,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "limit": 5,
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "abdfb62e-e475-4eaf-b2da-132aba0a44ff"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "irate(kafka_server_messages_in_per_sec_per_topic{job=\"kafka\", env=\"$Environment\"}[10m]) > 1",
+          "instant": true,
+          "legendFormat": "{{topic}}",
+          "range": false,
+          "refId": "A"
+        }
+      ],
+      "title": "Kakfa Messages per Topic per Second in the last 5 minutes.",
+      "type": "stat"
+    },
+    {
+      "collapsed": true,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 124
+      },
+      "id": 67,
+      "panels": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "ee64a64b-4983-4b96-8269-6e31832ddee9"
+          },
+          "description": "The Job inside Kafka Logs should match the following regex: *kafka*\nFor information on how to change this, consult the fabric logs instructions and extrapolate to the Kafka Machines.\nTo set up this metric correctly, follow the fabric instructions, but apply them for kafka. Name the job title for the kafka machines using the same convention as for the fabric.\nThe query for the kafka logs is different because kafka directories tend to differ by project. This query uses more processing power, so you may want to change the query to this example, adjusted for your environment:\nfilename=\"/opt/apps/kafka/logs/system.log\".",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green"
+                  },
+                  {
+                    "color": "#EAB839",
+                    "value": 25
+                  },
+                  {
+                    "color": "red",
+                    "value": 50
+                  }
+                ]
+              }
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 8,
+            "w": 24,
+            "x": 0,
+            "y": 100
+          },
+          "id": 64,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "area",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "textMode": "auto"
+          },
+          "pluginVersion": "10.0.3",
+          "targets": [
+            {
+              "datasource": {
+                "type": "loki",
+                "uid": "ee64a64b-4983-4b96-8269-6e31832ddee9"
+              },
+              "editorMode": "code",
+              "expr": "max((count_over_time({job=~\".*kafka.*\"} |= \"ERROR\" [5m])))",
+              "legendFormat": "ERRORS",
+              "queryType": "range",
+              "refId": "A"
+            }
+          ],
+          "title": "Kafka Errors",
+          "type": "stat"
+        },
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "ee64a64b-4983-4b96-8269-6e31832ddee9"
+          },
+          "description": "The Job inside Kafka Logs should match the following regex: *kafka*\nFor information on how to change this, consult the fabric logs instructions and extrapolate to the Kafka Machines.\nTo set up this metric correctly, follow the fabric instructions, but apply them for kafka. Name the job title for the kafka machines using the same convention as for the fabric.\nThe query for the kafka logs is different because kafka directories tend to differ by project. This query uses more processing power, so you may want to change the query to this example, adjusted for your environment:\nfilename=\"/opt/apps/kafka/kafka/logs/server.log\".",
+          "gridPos": {
+            "h": 17,
+            "w": 24,
+            "x": 0,
+            "y": 108
+          },
+          "id": 65,
+          "options": {
+            "dedupStrategy": "exact",
+            "enableLogDetails": true,
+            "prettifyLogMessage": true,
+            "showCommonLabels": false,
+            "showLabels": true,
+            "showTime": true,
+            "sortOrder": "Descending",
+            "wrapLogMessage": true
+          },
+          "pluginVersion": "8.3.4",
+          "targets": [
+            {
+              "datasource": {
+                "type": "loki",
+                "uid": "ee64a64b-4983-4b96-8269-6e31832ddee9"
+              },
+              "editorMode": "code",
+              "expr": "{job=~\".*kafka.*\"}",
+              "hide": false,
+              "queryType": "range",
+              "refId": "A"
+            }
+          ],
+          "timeFrom": "now-8h",
+          "title": "Kakfa Logs",
+          "transformations": [
+            {
+              "id": "organize",
+              "options": {
+                "excludeByName": {
+                  "Time ns": true,
+                  "id": false
+                },
+                "indexByName": {},
+                "renameByName": {
+                  "line {App=\"fabric\", filename=\"/opt/apps/fabric/logs/k2fabric.log\", host=\"fn_dtvvcp-eastus2-prod-fabric-vm2.az.3pc.att.com_11\", job=\"fabriclogs\"}": ""
+                }
+              }
+            }
+          ],
+          "type": "logs"
+        }
+      ],
+      "title": "Kafka Logs",
+      "type": "row"
+    }
+  ],
+  "refresh": "",
+  "revision": 1,
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": "Prometheus",
+          "value": "Prometheus"
+        },
+        "description": "Select the Prometheus data source that you are using.",
+        "hide": 0,
+        "includeAll": false,
+        "label": "Prometheus Data Source",
+        "multi": false,
+        "name": "PrometheusDataSource",
+        "options": [],
+        "query": "prometheus",
+        "queryValue": "",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "type": "datasource"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": "",
+          "value": ""
+        },
+        "description": "Enter your environment name.",
+        "hide": 0,
+        "label": "Environment(optional)",
+        "name": "Environment",
+        "options": [
+          {
+            "selected": true,
+            "text": "",
+            "value": ""
+          }
+        ],
+        "query": "",
+        "skipUrlSync": false,
+        "type": "textbox"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": "7170",
+          "value": "7170"
+        },
+        "description": "Enter the port of your fabric nodes.\nDefault:7170",
+        "hide": 0,
+        "label": "FabricPort",
+        "name": "FabricPort",
+        "options": [
+          {
+            "selected": true,
+            "text": "7170",
+            "value": "7170"
+          }
+        ],
+        "query": "7170",
+        "skipUrlSync": false,
+        "type": "textbox"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "Loki",
+          "value": "Loki"
+        },
+        "description": "Select the Loki data source that you are using.",
+        "hide": 0,
+        "includeAll": false,
+        "label": "Loki Data Source",
+        "multi": false,
+        "name": "LokiDataSource",
+        "options": [],
+        "query": "loki",
+        "queryValue": "",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "type": "datasource"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "9090",
+          "value": "9090"
+        },
+        "description": "Enter the port of your Cassandra nodes.Default:9090",
+        "hide": 0,
+        "label": "CassandraPort",
+        "name": "CassandraPort",
+        "options": [
+          {
+            "selected": true,
+            "text": "9090",
+            "value": "9090"
+          }
+        ],
+        "query": "9090",
+        "skipUrlSync": false,
+        "type": "textbox"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "9100",
+          "value": "9100"
+        },
+        "description": "Enter the port of your Kakfa nodes.Default:9100",
+        "hide": 0,
+        "label": "KafkaPort",
+        "name": "KafkaPort",
+        "options": [
+          {
+            "selected": true,
+            "text": "9100",
+            "value": "9100"
+          }
+        ],
+        "query": "9100",
+        "skipUrlSync": false,
+        "type": "textbox"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-2d",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Grafana Fabric All Base Reference",
+  "uid": "fe9834cd-8be8-402f-a403-0bcc854ed51e",
+  "version": 9,
+  "weekStart": ""
+}
