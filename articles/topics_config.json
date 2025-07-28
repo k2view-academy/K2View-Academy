@@ -263,21 +263,8 @@
 					]
 				},
 				{
-					"display name": "Fabric Monitoring",
-					"sub-topics": [
-						{
-							"display name": "JMX Statistics",
-							"value": "34_JMX_statistics"
-						},
-						{
-							"display name": "Monitoring",
-							"value": "21_Fabric_troubleshooting/03_monitoring"
-						},
-						{
-							"display name": "Monitoring Dashboard Example",
-							"value": "21_Fabric_troubleshooting/04_monitoring_dashboard_example"
-						}
-					]
+					"display name": "Fabric Monitoring and JMX",
+					"value": "34_JMX_statistics"
 				},				
 				{
 					"display name": "Advanced Topics",
