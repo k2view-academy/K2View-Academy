@@ -263,10 +263,6 @@
 					]
 				},
 				{
-					"display name": "Fabric Monitoring and JMX",
-					"value": "34_JMX_statistics"
-				},				
-				{
 					"display name": "Advanced Topics",
 					"sub-topics": [
 						{
@@ -286,7 +282,11 @@
 							"value": "29_tracing"
 						}
 					]
-				}
+				},
+				{
+					"display name": "Fabric Monitoring and JMX",
+					"value": "34_JMX_statistics"
+				}				
 			]
 		},
 		{
