@@ -17,11 +17,11 @@ Starting from V8.3, Fabric can provide native E2E support for NoSQL Document Sto
   * ```_value``` is only added to LU tables that represent an array of primitives, to keep the element’s value.
   * ```_docHints``` is a field used internally by Fabric to manage the composition of the original Document.
 * Root table population is the only action that reads data from the source (the Document).
-* The populations created for such LU tables include a dedicated **DocumentQuery** actor that is responsible for generating unique IDs to maintain the relations between hierarchy levels of the Document. In addition, the actor takes the respective part of the original Document and breaks it into fields that are then populated in the LU table.
+* The populations created for such LU tables include a dedicated **DocumentQuery** Actor that is responsible for generating unique IDs to maintain the relations between hierarchy levels of the Document. In addition, the Actor takes the respective part of the original Document and breaks it into fields that are then populated in the LU table.
 
 ### Step 1: Running Discovery on Document DB
 
-Start from defining the interface for the Document DB, installing the required connector and running discovery on this interface. 
+Start by defining the interface for the Document DB, installing the required connector, and running discovery on this interface. 
 
 The below image illustrates the **employee** document in MongoDB which is represented by a **dataset** entity in the Catalog. The additional nesting levels of the document are presented by the **classes** and **fields** entities of the Catalog. 
 
