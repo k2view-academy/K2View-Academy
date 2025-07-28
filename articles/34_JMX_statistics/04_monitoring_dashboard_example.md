@@ -36,5 +36,5 @@ You can edit the dashboard content to hide variables (set them as constant/envir
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/34_JMX_statistics/03_monitoring.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/34_JMX_statistics/05_monitoring_dashboard_example_setup.md)
+[![Previous](/articles/images/Previous.png)](/articles/34_JMX_statistics/03_JMX_custom.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/34_JMX_statistics/05_monitoring_dashboard_example_setup.md)
 
