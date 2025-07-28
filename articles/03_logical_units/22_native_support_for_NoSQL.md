@@ -13,11 +13,11 @@ Starting from V8.3, Fabric can provide native E2E support for NoSQL Document Sto
 * LU tables are created with the following system-generated fields:
 
   * ```_docId``` is a unique ID added to each LU table. Its purpose is to uniquely identify the row of an instance, when splitting the document and composing it back.
-  * ```_parentDocId``` is added to all LU tables except for the root table, and it is used for creating the referential link from the nested structure to its parent structure.
+  * ```_parentDocId``` is added to all LU tables except the root table, and it is used for creating the referential link from the nested structure to its parent structure.
   * ```_value``` is only added to LU tables that represent an array of primitives, to keep the element’s value.
   * ```_docHints``` is a field used internally by Fabric to manage the composition of the original Document.
-* The root table population is the only population that reads data from the source (the Document).
-* The populations created for such LU tables include a dedicated **DocumentQuery** actor that is responsible for generating unique IDs to maintain the relations between hierarchy levels of the Document. In addition, the actor takes the respective part of the original Document and breaks it into the fields, populated in the LU table.
+* Root table population is the only action that reads data from the source (the Document).
+* The populations created for such LU tables include a dedicated **DocumentQuery** actor that is responsible for generating unique IDs to maintain the relations between hierarchy levels of the Document. In addition, the actor takes the respective part of the original Document and breaks it into fields that are then populated in the LU table.
 
 ### Step 1: Running Discovery on Document DB
 
