@@ -31,9 +31,9 @@ The below image illustrates the **employee** document in MongoDB, which is repre
 
 ### Step 2: Document DB Presentation in Interface Explorer
 
-Once the Discovery of the Document DB has been completed, the interface is displayed in the Studio's Interface Explorer. The dataset which represents an object shows graphically the nested levels of hierarchy, such as: embedded objects, arrays of objects and arrays of primitives. 
+Once the Discovery of the Document DB has been completed, the interface is displayed in the Studio's Interface Explorer. The dataset representing an object graphically displays the nested hierarchy levels, such as embedded objects, arrays of objects and arrays of primitives. 
 
-The below image illustrates the nested levels with their graphical indication.
+The below image illustrates the nested levels along with their graphical indication.
 
 ![](images/document_storage_in_studio.png)
 
