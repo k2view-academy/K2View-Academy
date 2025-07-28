@@ -33,7 +33,7 @@ The below image illustrates the **employee** document in MongoDB, which is repre
 
 Once the Discovery of the Document DB has been completed, the interface is displayed in the Studio's Interface Explorer. The dataset representing an object graphically displays the nested hierarchy levels, such as embedded objects, arrays of objects and arrays of primitives. 
 
-The below image illustrates the nested levels along with their graphical indication.
+The below image illustrates the nested levels along with their graphic indications:
 
 ![](images/document_storage_in_studio.png)
 
@@ -41,7 +41,7 @@ The below image illustrates the nested levels along with their graphical indicat
 
 The Logical Unit can be created based on the Document DB, using the metadata retrieved from the Catalog. The nested hierarchy levels are then created as LU tables.
 
-Start the LU creation by the right click on the dataset which represents the document and clicking 'Add Table to Schema with Descendants'.
+Start the LU creation by right-clicking the dataset that represents the document and selecting 'Add Table to Schema with Descendants'.
 
 ![](images/document_storage_create_lu.png)
 
