@@ -14,7 +14,7 @@ public static void statsCount(String entry, String key, long value)
 
 ```entry``` - designates the primary key for this statistic implementation
 
-`key` - designates the sub key for this statistics
+`key` - designates the sub key for these statistics
 
 `value` - the measure of the value for this statistic.
 
