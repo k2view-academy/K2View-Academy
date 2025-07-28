@@ -1,12 +1,10 @@
 # Monitoring Dashboard Example
 
-Below is a basic example of a Grafana dashboard, which can be used as a reference. In addition to changes in these metrics, it is highly recommended to add suitable metrics that can assist your project and business.
+The following example illustrates a basic Grafana dashboard configuration for monitoring K2view Fabric alongside supporting components such as Cassandra and Kafka. It is intended as a reference implementation that customers can extend and adapt to meet their specific operational and business requirements by adding relevant, project-specific metrics.
 
-The example refers to a case where Fabric/Cassandra/Kafka run on bare metal servers or virtual machines. Cloud/Kubernetes deployment typically differs in terms of metrics sourcing.
+This example assumes a deployment scenario where Fabric, Cassandra, and Kafka are running on bare-metal servers or virtual machines. In cloud-native or Kubernetes-based environments, the source and structure of monitoring data may differ.
 
-Learn [here](/articles/34_JMX_statistics/05_monitoring_dashboard_example_setup.md) how the dashboard example is set up.
-
-[Here](/articles/34_JMX_statistics/resources/grafana_fabric_all_base_reference.json), you can find the dashboard's JSON file, which can be imported into Grafana. Each panel (the basic visualization building block in Grafana) contains, in addition to its data source and query, also its description (which is also shown in the Grafana panels' tooltips). 
+You can learn how to set up the dashboard [here](/articles/34_JMX_statistics/05_monitoring_dashboard_example_setup.md), and download the [associated JSON](/articles/34_JMX_statistics/resources/grafana_fabric_all_base_reference.json) configuration for import into Grafana. Each panel in the dashboard includes not only its data source and query, but also descriptive metadata, which is displayed as tooltips in the Grafana UI.
 
 The dashboard is divided into several parts, with several panels that show data of the last 5 minutes (which you can edit):
 
@@ -21,16 +19,13 @@ The dashboard is divided into several parts, with several panels that show data 
 * **Kafka Logs**
 
 
-
-Below is an illustration of the Fabric parts (names may slightly vary from those stated in the export file):
+Here is an illustration (names may slightly vary from those stated in the export file):
 
 ![](images/grafana_fabric_dahbaord_example.png)
 
 ## Variables
 
-At the top of the dashboard resides a variables panel, which is useful when seeking to change values dynamically. Some values are mandatory and are prepopulated with some default values, while others are optional and can be used for filtering. For example, in the Environment field, you can mention which environment you wish to track (e.g., pre-production, production, or other) and switch between them on the same dashboard. This is available only if your collected metrics data contains such information that can be used for filtering metrics.
-
-You can edit the dashboard content to hide variables (set them as constant/environment variables). This can be done via Grafana UI (Settings > Variables) or in JSON ('templating' section).
+Additionally, a Variables section at the top of the dashboard allows for dynamic filtering—such as by environment (e.g., production, staging)—provided such metadata is present in the collected metrics. These variables can also be customized or hidden via the Grafana UI or JSON configuration. This can be achieved using the Grafana UI (Settings > Variables) or in JSON ('templating' section).
 
 
 
