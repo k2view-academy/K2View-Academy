@@ -15,5 +15,5 @@ K2view's customers typically adhere to their operational, DevOps, and IT standar
 
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/21_Fabric_troubleshooting/04_monitoring_dashboard_example.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/21_Fabric_troubleshooting/01_JMX_overview.md)
 
