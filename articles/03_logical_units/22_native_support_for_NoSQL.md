@@ -45,7 +45,7 @@ Start the LU creation by right-clicking the dataset that represents the document
 
 ![](images/document_storage_create_lu.png)
 
-The following message is then displayed. Click Yes to expand all the nested complex fields and create a relational LU schema.
+The following message is then displayed. Click 'Yes' to expand all nested complex fields and create a relational LU schema.
 
 ![](images/document_storage_expand_msg.png)
 
