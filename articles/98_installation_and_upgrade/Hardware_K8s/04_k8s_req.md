@@ -20,8 +20,6 @@ The K2cloud platform's Orchestrator handles the namespaces creation and the ongo
     - [Fabric Containers Registry](#fabric-containers-registry)
     - [Connectivity and Networking](#connectivity-and-networking)
     - [Managed Service Credentials](#managed-service-credentials)
-    - [Monitoring](#monitoring)
-
 
 
 ## Hardware Requirements
@@ -202,10 +200,4 @@ For a Fabric cluster namespace, like production, where massive data is handled, 
 * GCP: using service account. The GCP service account name and project ID shall be set in the k2-agent configuration.
 
  
-
-### Monitoring
-
-The K2cloud fully-managed solution includes a monitoring mechanism for collecting and showing the Fabric's metrics and logs.
-
-Assuming that you have your standards and regulations about monitoring, monitoring is out of the self-host guidelines' scope. Contact the K2view team when required for further explanations. Read [here](https://support.k2view.com/Academy/articles/21_Fabric_troubleshooting/03_monitoring.html) and [here](https://support.k2view.com/Academy/articles/21_Fabric_troubleshooting/05_monitoring_dashboard_example_setup.html) for more information on Fabric (non-cloud) monitoring setup examples.
 
