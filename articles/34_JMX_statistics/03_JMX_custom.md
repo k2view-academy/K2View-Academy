@@ -1,6 +1,9 @@
 # JMX Fabric Custom Statistics
 
-Fabric provides developers with two Java methods to add customized JMX probes to their implementation and to expose their values as JMX counters.  
+### Extending Monitoring with Custom JMX Statistics
+K2view Fabric allows customers and developers to enhance observability by implementing custom JMX monitors tailored to their operational needs. By using the provided statistics APIs, teams can define and expose business-specific or performance-related metrics directly into the JMX subsystem. These custom statistics are then available for external monitoring tools (e.g., Grafana, Prometheus) to ingest and visualize alongside system-level metrics.
+
+This capability is particularly useful for surfacing application-specific counters—such as the number of processed records by status, the frequency of specific business events, or the duration of key operations. Developers can integrate these probes into their logical unit (LU) code using the `statsCount` and `statsDuration` methods provided by the Fabric API.
 
 ### Fabric Statistics APIs
 
