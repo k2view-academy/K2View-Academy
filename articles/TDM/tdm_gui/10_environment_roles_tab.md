@@ -46,9 +46,9 @@ A description of the TDM Environment permission set (optional).
 
 #### Number of Entities
 
-- TDM V9.3.0 has added the option to grant the permission of **Unlimited entities**. This feature adds the option to grant the user permission to process all entities that match the selected criteria on a task.
+- TDM V9.3.0 introduces the option to grant **Unlimited entities** permission. This feature allows users to process all entities that match the selected criteria in a task.
 
-- The permission set can support either of the following: process unlimited number of entities in a task, or limit the user's permission to process a maximum number of entities in a task.
+- The permission set can support one of the following options: allow processing an unlimited number of entities in a task, or limit the user to a maximum number of entities per task.
 
 - The **Maximum number of entities** field is populated if the Unlimited entities is cleared and indicates the maximum number of entities processed by a task. This number must be set for each access type. The Number of Entities is set on both **Read** and **Write** access types. A different number of entities can be set for each access type.
 
