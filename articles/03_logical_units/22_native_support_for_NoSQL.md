@@ -21,9 +21,9 @@ Starting from V8.3, Fabric can provide native E2E support for NoSQL Document Sto
 
 ### Step 1: Running Discovery on Document DB
 
-Start by defining the interface for the Document DB, installing the required connector, and running discovery on this interface. 
+Start by defining the interface for the Document DB, installing the required connector, and running Discovery on this interface. 
 
-The below image illustrates the **employee** document in MongoDB which is represented by a **dataset** entity in the Catalog. The additional nesting levels of the document are presented by the **classes** and **fields** entities of the Catalog. 
+The below image illustrates the **employee** document in MongoDB, which is represented by a **dataset** entity in the Catalog. The additional nesting levels of the document are represented by the **classes** and **fields** entities of the Catalog. 
 
 ![](images/document_storage_in_catalog.png)
 
@@ -31,7 +31,7 @@ The below image illustrates the **employee** document in MongoDB which is repres
 
 ### Step 2: Document DB Presentation in Interface Explorer
 
-Once the discovery of the Document DB is completed, the interface is displayed in the Studio's Interface Explorer. The dataset which represents an object shows graphically the nested levels of hierarchy, such as: embedded objects, arrays of objects and arrays of primitives. 
+Once the Discovery of the Document DB has been completed, the interface is displayed in the Studio's Interface Explorer. The dataset which represents an object shows graphically the nested levels of hierarchy, such as: embedded objects, arrays of objects and arrays of primitives. 
 
 The below image illustrates the nested levels with their graphical indication.
 
