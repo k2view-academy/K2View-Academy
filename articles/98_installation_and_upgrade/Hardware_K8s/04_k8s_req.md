@@ -183,7 +183,7 @@ The non-Fabric images - Postgres, Cassandra, and Neo4j - are not provided by K2v
 
 The cluster interacts with external hosts, into which you shall open the outbound network, all in port 443:
 
-- https://cloud.k2view.com (used to get instructions via Mailbox from the K2cloud platform orchestrator)
+- https://cloud.k2view.com (used to get instructions via the Mailbox REST service from the K2cloud platform orchestrator)
 - https://nexus.share.cloud.k2view.com (used for fetching Fabric and k2-agent images)
 - https://github.com (used for fetching the deployments' Helm charts)
 - Cluster shall have access to your data platforms/DBs, as the project requires.
