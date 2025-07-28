@@ -2,19 +2,9 @@
 
 <ul>
   <li><a href="/articles/34_JMX_statistics/03_monitoring.md">Fabric Monitoring</a></li>
-
-  <li><b>JMX</b>
-    <ul>
-      <li><a href="/articles/34_JMX_statistics/01_JMX_overview.md">JMX Overview</a></li>
-      <li><a href="/articles/34_JMX_statistics/02_JMX_format.md">JMX Format</a></li>
-      <li><a href="/articles/34_JMX_statistics/03_JMX_custom.md">JMX Custom Statistics</a></li>
-    </ul>
-  </li>
-
-  <li><b>Monitoring Dashboard</b>
-    <ul>
-      <li><a href="/articles/34_JMX_statistics/04_monitoring_dashboard_example.md">Monitoring Dashboard Example</a></li>
-      <li><a href="/articles/34_JMX_statistics/05_monitoring_dashboard_example_setup.md">Monitoring Dashboard Example Setup</a></li>
-    </ul>
-  </li>
+  <li><a href="/articles/34_JMX_statistics/01_JMX_overview.md">JMX Overview</a></li>
+  <li><a href="/articles/34_JMX_statistics/02_JMX_format.md">JMX Format</a></li>
+  <li><a href="/articles/34_JMX_statistics/03_JMX_custom.md">JMX Custom Statistics</a></li>
+  <li><a href="/articles/34_JMX_statistics/04_monitoring_dashboard_example.md">Monitoring Dashboard Example</a></li>
+  <li><a href="/articles/34_JMX_statistics/05_monitoring_dashboard_example_setup.md">Monitoring Dashboard Example Setup</a></li>
 </ul>
