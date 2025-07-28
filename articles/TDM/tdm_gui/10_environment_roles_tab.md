@@ -16,11 +16,11 @@ The Permission Set window defines the TDM Environment permissions, and the list 
 
 ![permission set window](images/env_role_window.png)
 
-The Permission Set window has the following settings:
+The Permission Set window includes the following settings:
 
 ### Name
 
-The name of the TDM Environment permission set (mandatory). Note that each active permission set should be assigned with a specified name. An error is displayed when an attempt is made to create several permission sets with the same name.
+The name of the TDM Environment permission set (mandatory). Each active permission set should be assigned with a specified name. An error is displayed when an attempt is made to create multiple permission sets with the same name.
 
 ### **Description**
 
