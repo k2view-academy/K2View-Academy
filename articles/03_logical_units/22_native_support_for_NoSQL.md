@@ -4,13 +4,13 @@
 
 Starting from V8.3, Fabric can provide native E2E support for NoSQL Document Storage (such as MongoDB or CouchBase), including the following:
 
-* Discovery job can run on an interface of MongoDB or CouchBase instance, once the respective K2exchange connector has been installed in the project. Then the Catalog is created based on the discovered document hierarchy. (This feature is already supported prior to 8.3)
-* The Web Studio’s Interface explorer can now present the Document’s complex structures such as nested hierarchy levels and arrays of primitives.
-* The Logical Unit can now be created based on the Document’s metadata retrieved from the Catalog, after discovery has run on it.
+* Discovery job can run on interfaces such as MongoDB or CouchBase, once the respective K2exchange connector has been installed in the project. The Catalog is then created based on the discovered document hierarchy. (This feature was already supported prior to V8.3)
+* The Web Studio’s Interface explorer can now display complex document structures, such as nested hierarchy levels and arrays of primitives.
+* Logical Unit can now be created based on the Document’s metadata retrieved from the Catalog, after Discovery process has run on it.
 
-  * The nested hierarchy levels are then created as LU tables with a referential link to their respective parent level.
-  * When a complex structure on any level has a non-unique name, the names of the parent levels are concatenated to it, after 3 underscores. E.g. ```emailInfo___emergencyContacts```.
-* The LU tables are created with the following system-generated fields:
+  * Nested hierarchy levels are then created as LU tables, each with a referential link to its respective parent level.
+  * When a complex structure on any level has a non-unique name, the names of the parent levels are concatenated to it, after 3 underscores; e.g., ```emailInfo___emergencyContacts```.
+* LU tables are created with the following system-generated fields:
 
   * ```_docId``` is a unique ID added to each LU table. Its purpose is to uniquely identify the row of an instance, when splitting the document and composing it back.
   * ```_parentDocId``` is added to all LU tables except for the root table, and it is used for creating the referential link from the nested structure to its parent structure.
