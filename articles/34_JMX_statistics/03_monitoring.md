@@ -1,19 +1,16 @@
 # Fabric Monitoring
 
-Monitoring and dashboards are essential components for managing and maintaining production systems, such as Fabric. Ensuring the stability, performance, and availability of these systems is of utmost importance to support your business processes.
+Monitoring and dashboards play an important role in supporting the stability, performance, and availability of systems such as Fabric, particularly in production environments where reliability is critical to business operations.
 
-Monitoring a system can help in various aspects, such as early detection of issues, proactive problem resolution, performance optimization, resource management, and allocation optimization, as well as ensuring availability and reliability.
+Effective monitoring enables early detection of potential issues, supports incident resolution, and helps inform resource management decisions. It also aids in identifying trends related to system load, performance degradation, and service responsiveness.
 
-Thus, K2view recommends that its customers have dashboards that provide real-time insights via a visual representation of Fabric health, making it easy to track uptime and performance metrics. 
+Many K2view customers incorporate monitoring dashboards as part of their standard IT and DevOps practices. These dashboards typically visualize key health and performance metrics from Fabric, enabling operational teams to track uptime, monitor system load (CPU, memory, storage), and observe data access and service behavior over time.
 
-In addition to scaling out or scaling up activities that take place based on CPU, memory, or storage load data - shown on monitoring dashboards - read and write numbers may affect your financial agreements with storage providers, and web services response time metrics may point to an inaccurate query, which leads to an improper service to end users.
+Operational data such as read/write activity, web service response times, and error rates can help identify patterns or anomalies—for example, inefficient queries or potential violations of service-level expectations. In some environments, such metrics may also have implications for cost optimization or compliance with external SLAs.
 
-K2view's customers typically adhere to their operational, DevOps, and IT standards by utilizing monitoring tools, as they do throughout their organization. Fabric provides these tools with input data via enablers such as [JMX metrics and Statistics](/articles/34_JMX_statistics/README.md), [log files](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md), and [tracing files](/articles/29_tracing/README.md).
+K2view provides support for external monitoring through [JMX metrics, statistics](/articles/34_JMX_statistics/README.md), [log files](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md), and [tracing files](/articles/29_tracing/README.md). These outputs can be integrated with customers’ existing monitoring tools (e.g., Grafana, Prometheus) to align with their internal operational standards.
 
-
-[Here](/articles/34_JMX_statistics/04_monitoring_dashboard_example.md), you can find a basic example of the Fabric Monitoring Dashboard, which demonstrates how to use the monitoring enabler tools.
-
-
+An example Fabric Monitoring Dashboard [is available](/articles/34_JMX_statistics/04_monitoring_dashboard_example.md) to illustrate how this integration can be achieved and how Fabric observability data may be used in practice.
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/34_JMX_statistics/01_JMX_overview.md)
 
