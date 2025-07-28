@@ -32,7 +32,7 @@ A description of the TDM Environment permission set (optional).
 
 - Write access can be granted on a target environment, i.e., the environment type is **Target** or **Both**.
 
-- When an Environment Type is Both, it can have both accesses: read and write. Therefore, the TDM Environment permission sets in these environments can have one or both accesses.
+- When the Environment Type is set to 'Both', it can have both read and write accesses. Therefore, the TDM Environment permission sets in such environments can include read access, write access, or both.
 
 
  	 **Example:**
@@ -42,7 +42,7 @@ A description of the TDM Environment permission set (optional).
   - Set1, enables read-only access. Testers with this permission set can select this environment only as a source environment in a TDM task.
   - Set2, enables write-only access. Testers with this permission set can select this environment only as a target environment in a TDM task.
 
-  - Set3, enables read and write accesses. Testers with this permission set can select this environment as a source and/or target environment in a TDM task.
+  - Set3, enables read and write accesses. Testers with this permission set can select this environment as a source and/or target in a TDM task.
 
 #### Number of Entities
 
