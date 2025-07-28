@@ -2,9 +2,9 @@
 
 TDM Environment permission sets are set on the environment level and assigned to testers. Each permission set defines a list of permissions related to creating and executing TDM tasks within an environment. Testers can create and execute TDM tasks only if they are assigned to one of the environment's permission sets. 
 
-A TDM Environment permission set is an **optional setting** in an environment and it can be created, edited or deleted by either an Admin user or the [Environment Owner](08_environment_window_general_information.md#environment-owners). An environment without a permission set or without testers attached to a permission set, can only be used by Admin users or by Environment Owners.
+A TDM Environment permission set is an **optional setting** within an environment and can be created, edited or deleted by either an Admin user or the [Environment Owner](08_environment_window_general_information.md#environment-owners). An environment without a permission set, or without testers assigned to a permission set, can be used only by Admin users or Environment Owners.
 
-An environment's permission sets are displayed in the **Permission Sets tab** in the Environment window:
+An environment's permission sets are displayed in the **Permission Sets tab** of the Environment window:
 
 - To create a new permission set , click **New Permission Set**, populate the permission set's settings and then click **Add**.
 - To open a permission set, click the **Name** of the permission set and then click **Save Changes**. 
@@ -12,7 +12,7 @@ An environment's permission sets are displayed in the **Permission Sets tab** in
 
 ## Permission Set Window 
 
-The Permission Set window defines the TDM Environment permissions, and the list of testers assigned to it is displayed in the following example:
+The Permission Set window defines the TDM Environment permissions, and the list of testers assigned to the permission set, as shown in the following example:
 
 ![permission set window](images/env_role_window.png)
 
