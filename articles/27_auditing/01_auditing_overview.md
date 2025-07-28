@@ -138,6 +138,15 @@ Audit data can be downloaded in either **CSV** or **plain text** formats using o
 
 2. **Using a Keyboard Shortcut:**  
    - Press the `i` key to access the same `Inspect > Data` option and initiate export.
+  
+## Turning Auditing On/Off
+
+By default, Auditing is set to OFF. To enable Auditing in Fabric, set **AUDIT=ON** using K2admin's Configuration panel and set a configuration override for AUDIT. You then need to restart the K2cloud space.
+
+~~~
+AUDIT=ON
+~~~
+
 
 ## What Gets Audited
 
