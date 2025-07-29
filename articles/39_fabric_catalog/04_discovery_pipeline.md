@@ -47,7 +47,7 @@ For example, the percentage is 10%, min is 100 and max is 500. Hence, if a table
 
 Starting from V8.3, Row Count check box is defined as part of the sample size. When Row Count is set to false, the Data Snapshot step does not perform ```count(*)```. Instead, the sample size is equal to Max. This is recommended for the data sources that have difficulty performing ```count(*)```, such as Cassandra.
 
-### Global Shema Exclusion
+### Global Schema Exclusion
 
 By default, all the data platform's entities are scanned except for those that are in the global schema exclude list. 
 
