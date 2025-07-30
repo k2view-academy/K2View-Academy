@@ -28,9 +28,9 @@ This is the description of the TDM Environment permission set (optional).
 
 ### Read and Write and Number of Entities
 
-- Read access can be granted on a source environment, i.e., the [environment type](08_environment_window_general_information.md#environment-type) is **Source** or **Both**. 
+- Read access can be granted to a source environment, i.e., the [environment type](08_environment_window_general_information.md#environment-type) is **Source** or **Both**. 
 
-- Write access can be granted on a target environment, i.e., the environment type is **Target** or **Both**.
+- Write access can be granted to a target environment, i.e., the environment type is **Target** or **Both**.
 
 - When the Environment Type is set to 'Both', it can have both read and write accesses. Therefore, the TDM Environment permission sets in such environments can include read access, write access, or both.
 
@@ -46,9 +46,9 @@ This is the description of the TDM Environment permission set (optional).
 
 #### Number of Entities
 
-- TDM V9.3.0 introduces the option to grant **Unlimited entities** permission. This feature allows users to process all entities that match the selected criteria in a task.
+- TDM V9.3.0 introduces the option to grant permission for **Unlimited entities**. This feature allows users to process all entities that match the selected criteria in a task.
 
-- The permission set can support one of the following options: allow processing an unlimited number of entities in a task, or limit the user to a maximum number of entities per task.
+- The permission set can support one of the following options: allow processing an unlimited number of entities per task, or limit the user to a maximum number of entities per task.
 
 - The **Maximum number of entities** field is populated if the Unlimited entities is cleared and indicates the maximum number of entities processed by a task. This number must be set for each access type. The Number of Entities is set on both **Read** and **Write** access types. A different number of entities can be set for each access type.
 
