@@ -4,7 +4,7 @@ TDM Environment permission sets are set at an environment level and are assigned
 
 A TDM Environment permission set is an **optional setting** in an environment and it can be created, edited or deleted by either an Admin user or the [Environment Owner](08_environment_window_general_information.md#environment-owners). An environment without a permission set or without testers attached to a permission set, can only be used by Admin users or by Environment Owners.
 
-An environment's permission sets are displayed in the **Permission Sets tab** in the Environment window:
+The permission sets of an environment are displayed in the **Permission Sets tab** in the Environment window:
 
 - To create a new permission set , click **New Permission Set**, populate the permission set's settings and then click **Add**.
 - To open a permission set, click the **Name** of the permission set and then click **Save Changes**. 
