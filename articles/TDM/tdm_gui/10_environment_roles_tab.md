@@ -1,12 +1,12 @@
 # Environment Permission Sets Tab
 
-TDM Environment permission sets are set on the environment level and assigned to testers. Each permission set defines a list of permissions related to creating and executing TDM tasks within an environment. Testers can create and execute TDM tasks only if they are assigned to one of the environment's permission sets. 
+TDM Environment permission sets are set at the environment level and assigned to testers. Each permission set defines a list of permissions related to creating and executing TDM tasks within an environment. Testers can create and execute TDM tasks only if they are assigned to one of the environment's permission sets. 
 
-A TDM Environment permission set is an **optional setting** within an environment and can be created, edited or deleted by either an Admin user or the [Environment Owner](08_environment_window_general_information.md#environment-owners). An environment without a permission set, or without testers assigned to a permission set, can be used only by Admin users or Environment Owners.
+A TDM Environment permission set is an **optional setting** within an environment and can be created, edited or deleted by either an Admin user or the [Environment Owner](08_environment_window_general_information.md#environment-owners). An environment without a permission set, or without testers assigned to a permission set, can only be used by Admin users or Environment Owners.
 
-An environment's permission sets are displayed in the **Permission Sets tab** of the Environment window:
+The permission sets of an environment are displayed in the **Permission Sets tab** of the Environment window:
 
-- To create a new permission set , click **New Permission Set**, populate the permission set's settings and then click **Add**.
+- To create a new permission set, click **New Permission Set**, populate the permission set's settings and then click **Add**.
 - To open a permission set, click the **Name** of the permission set and then click **Save Changes**. 
 - To delete a permission set, click the ![be_Example](images/delete_icon.png) icon, located in the upper-right corner of the window.
 
@@ -20,11 +20,11 @@ The Permission Set window includes the following settings:
 
 ### Name
 
-The name of the TDM Environment permission set (mandatory). Each active permission set should be assigned with a specified name. An error is displayed when an attempt is made to create multiple permission sets with the same name.
+This is the name of the TDM Environment permission set (mandatory). Each active permission set should be assigned with a specified name. An error is displayed when an attempt is made to create multiple permission sets with the same name.
 
 ### **Description**
 
-A description of the TDM Environment permission set (optional).
+This is the description of the TDM Environment permission set (optional).
 
 ### Read and Write and Number of Entities
 
