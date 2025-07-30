@@ -20,11 +20,11 @@ The Permission Set window has the following settings:
 
 ### Name
 
-The name of the TDM Environment permission set (mandatory). Note that each active permission set should be assigned with a specified name. An error is displayed when an attempt is made to create several permission sets with the same name.
+This is the name of the TDM Environment permission set (mandatory). Each active permission set should be assigned with a specified name. An error is displayed when an attempt is made to create several permission sets with the same name.
 
 ### **Description**
 
-A description of the TDM Environment permission set (optional).
+This is a description of the TDM Environment permission set (optional).
 
 ### Read and Write and Number of Entities
 
