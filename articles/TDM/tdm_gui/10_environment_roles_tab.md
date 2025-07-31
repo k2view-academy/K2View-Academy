@@ -121,7 +121,7 @@ Enables the user to check the Delete [task action](17a_task_target_component_ent
 
 ##### Entity Clone 
 
-[Create replicas](17a_task_target_component_entities.md#generate-clones-for-an-entity) of a real entity in a testing environment using a TDM Load task. This permission applies only when the permission set has **Write** access.  
+Permission to [create replicas](17a_task_target_component_entities.md#generate-clones-for-an-entity) of a real entity in a testing environment using a TDM Load task. This permission applies only when the permission set has **Write** access.  
 
 ##### Random Entity Selection
 
