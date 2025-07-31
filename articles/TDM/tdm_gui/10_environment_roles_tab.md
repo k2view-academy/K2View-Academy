@@ -1,8 +1,8 @@
 # Environment Permission Sets Tab
 
-TDM environment permission sets are set at the environment level and assigned to testers. Each permission set defines a list of permissions related to creating and executing TDM tasks within an environment. Testers can create and execute TDM tasks only if they are assigned to one of the environment's permission sets. 
+TDM environment permission sets can be added at the environment level and assigned to users or Fabric roles (user groups). Each permission set defines a list of permissions related to creating and executing TDM tasks within an environment. Testers can create and execute TDM tasks only if they are assigned to one of the environment's permission sets. 
 
-A TDM environment permission set is an **optional setting** within an environment and can be created, edited or deleted by either an Admin user or the [Environment Owner](08_environment_window_general_information.md#environment-owners). An environment without a permission set, or without testers assigned to a permission set, can only be used by Admin users or Environment Owners.
+A TDM environment permission set is an **optional configuration** within an environment and can be created, edited or deleted by either an Admin user or the [Environment Owner](08_environment_window_general_information.md#environment-owners). An environment without a permission set, or without testers assigned to a permission set, can only be used by Admin users or Environment Owners.
 
 The permission sets of an environment are displayed in the **Permission Sets tab** of the Environment window:
 
@@ -26,7 +26,7 @@ This is the name of the TDM environment permission set (mandatory). Each active 
 
 This is the description of the TDM environment permission set (optional).
 
-### Read and Write and Number of Entities
+### Read and Write Permissions and Number of Entities
 
 - Read access can be granted to a source environment, i.e., the [environment type](08_environment_window_general_information.md#environment-type) is **Source** or **Both**. 
 
@@ -46,11 +46,11 @@ This is the description of the TDM environment permission set (optional).
 
 #### Number of Entities
 
-- This field needs to be set on eac h permission - read and write. TDM V9.3.0 introduces the option to grant permission for **Unlimited entities**. This feature allows users to process all entities that match the selected criteria in a task.
+- This field needs to be set on each permission — read and write. TDM V9.3.0 introduces the option to grant permission for **Unlimited entities**. This feature allows users to process all entities that match the selected criteria in a task.
 
 - The permission set can support one of the following options: allow processing an unlimited number of entities per task, or limit the user to a maximum number of entities per task.
 
-- The **Maximum number of entities** field is populated if the Unlimited entities is cleared and indicates the maximum number of entities processed by a task. This number must be set for each access type. The Number of Entities is set on both **Read** and **Write** access types. A different number of entities can be set for each access type.
+- The **Maximum number of entities** field is populated when the Unlimited entities checkbox is unchecked; it indicates the maximum number of entities that can be processed by a task. This number can be set for each access type (read or write). A different number of entities can be set for each access type.
 
   **Example:**
   - Read Number of Entities = 1000. Write Number of Entities = 10. 
@@ -64,7 +64,7 @@ This is the description of the TDM environment permission set (optional).
 
 - Attach testers to the TDM environment permission set. The connection of a tester to a testing environment is established by connecting the tester to the environment's permission set.  
 
-- A TDM environment permission set can be attached to selected testers, selected user groups (Fabric roles), or all TDM users.
+- A TDM environment permission set can be attached to selected testers, selected Fabric roles (user groups), or all TDM users.
 
 Note that although an environment's permission set without tester users is not usable, the **Testers** setting is optional and it enables creating permission sets and then adding them to testers at a later stage.
 
