@@ -4,7 +4,7 @@ The Fabric Catalog introduces a vocabulary that describes the Catalog entities a
 
 The below vocabulary serves as a model for describing a Catalog and assists with processes standardization across different interface types. 
 
-The data entities are represented by **nodes** and the referential links between the **nodes** are represented by **relations**. Nodes and relations have predefined properties that enrich the Catalog schema. 
+The data entities are represented by **nodes** and the referential links between the **nodes** are represented by **relations**. Nodes and relations have predefined **properties** that enrich the Catalog schema. 
 
 Additionally, due to differences between the data sources, some nodes' properties are generic, while others are relevant only for specific interface types.
 
@@ -58,7 +58,6 @@ The following 2 tables describe the **node and relation types**, and how they ar
 
 ### Relation Types
 
-<p>&nbsp;</p>
 <table style="width: 700px;">
 <tbody>
 <tr>
@@ -104,6 +103,68 @@ The following 2 tables describe the **node and relation types**, and how they ar
 </table>
 
 
+
+### Node Properties 
+
+Each Catalog node has properties that provide additional information about the node. 
+
+A **Dataset field** might have a variety of properties, whereas some of them are created by the Crawler and others are created by the plugins during the Discovery job.
+
+The **Defined By** property is a mandatory property for every Catalog field. It specifies the field's Catalog Type and can include one of the following:
+
+<table style="width: 700px;">
+<tbody>
+<tr>
+<td style="width: 100px;"><strong>Field Type</strong></td>
+<td style="width: 200px;"><strong>Property Definition</strong></td>
+<td style="width: 400px;"><strong>Description</strong></td>
+</tr>
+<tr>
+<td><strong>Primitive</strong></td>
+<td>
+<p>One of the following:</p>
+<ul>
+<li>STRING</li>
+<li>INTEGER</li>
+<li>REAL</li>
+<li>DATA</li>
+<li>TIME</li>
+<li>DATETIME</li>
+<li>BYTES</li>
+<li>BOOLEAN</li>
+<li>UNKNOWN</li>
+</ul>
+</td>
+<td>
+<p>These values of the <strong>definedBy</strong> property establish standartization of various primitive data types across different platforms and data sources.&nbsp;</p>
+<p>For example, a string value can be defined as VARCHAR, CHAR, string or other in different data sources. In Catalog, all of them are interpretend as a STRING.</p>
+</td>
+</tr>
+<tr>
+<td><strong>Object</strong></td>
+<td style="text-align: center;">&lt;name&gt;Class</td>
+<td>
+<p>When a field includes a complex structure (e.g. XML), it is defined in Catalog by a class.&nbsp;</p>
+<p>The class name is then established as concatination of the original field's name and the word 'Class'.</p>
+<p>For example, when a dataset field Resume is identified as a complex field, it is defined by <strong>ResumeClass</strong>.</p>
+</td>
+</tr>
+<tr>
+<td><strong>Array</strong></td>
+<td>
+<p>One of the following:</p>
+<ul>
+<li>Collection (primitive type)</li>
+<li>Collection(&lt;nameClass)</li>
+</ul>
+</td>
+<td>
+<p>When a field includes an array, the values of the array can be either primitives or obejcts.&nbsp;</p>
+<p>Array of arrays is supported as well.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 
 
