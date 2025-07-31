@@ -66,7 +66,7 @@ This is the description of the TDM environment permission set (optional).
 
 - A TDM environment permission set can be assigned to selected testers, selected Fabric roles (user groups), or all TDM users.
 
-Note that although an environment's permission set without tester users is not usable, the **Testers** setting is optional and it enables creating permission sets and then adding them to testers at a later stage.
+Note: Although an environment permission set without testers cannot be used, the **Testers** setting is optional — allowing permission sets to be created and assigned to testers at a later stage.
 
 #### Adding all TDM Users to the TDM Environment Permission Set
 
