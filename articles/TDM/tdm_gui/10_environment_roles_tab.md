@@ -97,7 +97,7 @@ Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon ne
 
 1. First priority: Assign a user ID to the TDM environment permission set.
 2. Second priority: Assign a user group to the TDM environment permission set. All users in the group can access the TDM environment according to the permissions defined in the TDM environment permission set assigned to their group.
-3. Third priority: Assign a generic permission set for all users as a default permission set. A user is assigned to the TDM environment with the **ALL** permission set only if the user or their group is not specifically attached to another TDM environment permission set of the environment.
+3. Third priority: Assign a generic permission set for all users to serve as the default permission set. A user will be assigned to the TDM environment with the **ALL** permission set only if neither the user nor their group is specifically attached to another TDM environment permission set for that environment.
 
 **Notes**
 
