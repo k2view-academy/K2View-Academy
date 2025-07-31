@@ -8,7 +8,6 @@ The data entities are represented by **nodes** and the referential links between
 
 Additionally, due to differences between the data sources, some nodes' properties are generic, while others are relevant only for specific interface types.
 
-The following 2 tables describe the **node and relation types**, and how they are defined in each interface type:
 
 ### Node Types
 
@@ -106,9 +105,7 @@ The following 2 tables describe the **node and relation types**, and how they ar
 
 ### Node Properties 
 
-Each Catalog node has properties that provide additional information about the node. 
-
-A **Dataset field** might have a variety of properties, whereas some of them are created by the Crawler and others are created by the plugins during the Discovery job.
+Each Catalog node has properties that provide additional information about the node. A **Dataset field** might have a variety of properties, whereas some of them are created by the Crawler and others are created by the plugins during the Discovery job.
 
 The **Defined By** property is a mandatory property for every Catalog field. It specifies the field's Catalog Type and can include one of the following:
 
@@ -155,7 +152,7 @@ The **Defined By** property is a mandatory property for every Catalog field. It 
 <p>One of the following:</p>
 <ul>
 <li>Collection (primitive type)</li>
-<li>Collection(&lt;nameClass)</li>
+<li>Collection(&lt;name&gt;Class)</li>
 </ul>
 </td>
 <td>
