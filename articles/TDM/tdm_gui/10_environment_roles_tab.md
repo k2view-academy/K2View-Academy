@@ -93,7 +93,7 @@ Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon ne
 2. Click the ADD button.
 3. Click again the ![plus icon](images/plus_icon_prod_version.png) icon next to the **Testers** field and select another user group in the same manner, if needed.
 
-#### TDM Environment Permission Set Assignment Priorities
+#### TDM Environment Permission Set — Assignment Priorities
 
 1. First priority: Assign a user ID to the TDM environment permission set.
 2. Second priority: Assign a user group to the TDM environment permission set. All users in the group can access the TDM environment according to the permissions defined in the TDM environment permission set assigned to their group.
@@ -386,15 +386,15 @@ This field presents the maximum number of entities that the user can [reserve on
 </table>
 
 
-## AI Environment - Permission Set
+## AI Environment — Permission Set
 
 The AI environment is a dummy environment set for AI-based synthetic entities generation. The AI environment is used as a target environment for the [AI training task](19_task_synthetic_data_generation.md#how-to-create-an-ai-training-task) and as a source environment for an [AI-based generation task](19_task_synthetic_data_generation.md#how-to-create-an-ai-based-generation-task). Therefore, the AI environment type must be **Both**.
 
-The **Read** permission on the AI environment grants a permission to generate new AI-based entities in the **AI-based entities generation** task.
+The **Read** permission on the AI environment allows users to generate new AI-based entities in the **AI-based entities generation** task.
 
-The **Write** permission on the AI environment grants a permission for an **AI training** task. 
+The **Write** permission on the AI environment allows users to create and execute an **AI training** task. 
 
-Note that even if a user does not have a permission set on the AI environment, the user can still [get pre-generated synthetic entities](19_task_synthetic_data_generation.md#loading-pre-generated-entities) from the Test Data Store and load them into the target environment (set in the Target component).
+Note: Even if a user does not have a permission set on the AI environment, they can still [retrieve pre-generated synthetic entities](19_task_synthetic_data_generation.md#loading-pre-generated-entities) from the Test Data Store and load them into the target environment.
 
 
 
