@@ -72,7 +72,7 @@ Note that although an environment's permission set without tester users is not u
 
 The **All** option is used to enable the permission set for all TDM users. To do so, click **Testers** and then select **ALL**.
 
-Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon next to the Testers setting. The **User Settings** pop-up window appears (image below). Check the **All Users** checkbox:
+Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon next to the Testers field. The **User Settings** pop-up window appears (image below). Check the **All Users** checkbox:
 
 ![user setting](images/env_role_user_settings.png)
 
@@ -80,16 +80,16 @@ Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon ne
 
 #### Adding Selected TDM Users to the TDM Environment Permission Set
 
-1. Click **Testers** and select one of the displayed user IDs.
-2. Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon to open the **User Settings** pop-up window. Select a user ID or manually type it. 
+1. Click the **Testers** field and select one of the displayed user IDs.
+2. Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon to open the **User Settings** pop-up window. Select a user ID from the drop-down list or manually type it. 
 3. Click the ADD button.
-4. Click **Testers** again and select another user, or manually type a user name, if needed.
+4. Click the **Testers** field again and add another user in the same manner, or manually type a user ID, if needed.
 
 
 
 #### Adding Selected TDM User Groups to the TDM Environment Permission Set
 
-1. Click the ![plus icon](images/plus_icon_prod_version.png) icon and to open the **User Settings** pop-up window. Select a user group from the list.
+1. Click the ![plus icon](images/plus_icon_prod_version.png) icon to open the **User Settings** pop-up window. Select a User Group from the drop-down list.
 2. Click the ADD button.
 3. Click again the ![plus icon](images/plus_icon_prod_version.png) icon next to the **Testers** and select another user group, if needed.
 
