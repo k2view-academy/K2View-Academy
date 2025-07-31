@@ -149,7 +149,7 @@ Permission to create a [snapshot (data Versioning)](15_data_flux_task.md) in the
 
 #### Max Number of Reserved Entities on Env
 
-This field presents the maximum number of entities that the user can [reserve on the environment](/articles/TDM/tdm_architecture/08_entity_reservation.md). Starting from TDM V8.1, it is possible to add a **Reserve only permission** to the user, i.e., the number of entities in the Write or Read permissions is zero, but the Max Number of Reserved Entities on Env is greater than zero. This permission set allows the user to reserve entities on the environment although they are not permitted to read or write on the environment.
+This field presents the maximum number of entities that the user can [reserve on the environment](/articles/TDM/tdm_architecture/08_entity_reservation.md). Starting from TDM V8.1, it is possible to add a **Reserve only permission** to the user, i.e., the number of entities in the Write or Read permissions is zero, but the Max Number of Reserved Entities on Env is greater than zero. When populated, the assigned users can reserve entities up to this number on the environment, regardless of whether they have read and/or write accesses.
 
 
 
