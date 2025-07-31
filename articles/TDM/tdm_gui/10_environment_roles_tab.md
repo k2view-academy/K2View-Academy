@@ -64,7 +64,7 @@ This is the description of the TDM Environment permission set (optional).
 
 - Attach testers to the TDM Environment permission set. The connection of a tester to a testing environment is established by connecting the tester to the environment's permission set.  
 
-- A TDM Environment's permission set can be attached to selected testers, selected user groups (Fabric roles), or all TDM users.
+- A TDM Environment permission set can be attached to selected testers, selected user groups (Fabric roles), or all TDM users.
 
 Note that although an environment's permission set without tester users is not usable, the **Testers** setting is optional and it enables creating permission sets and then adding them to testers at a later stage.
 
@@ -72,11 +72,11 @@ Note that although an environment's permission set without tester users is not u
 
 The **All** option is used to enable the permission set for all TDM users. To do so, click **Testers** and then select **ALL**.
 
-Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon next to the Testers setting. The following pop-up window displays:
+Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon next to the Testers setting. The **User Settings** pop-up window appears (image below). Check the **All Users** checkbox:
 
 ![user setting](images/env_role_user_settings.png)
 
-Check the **All Users** checkbox.
+
 
 #### Adding Selected TDM Users to the TDM Environment Permission Set
 
