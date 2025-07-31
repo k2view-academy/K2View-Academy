@@ -62,7 +62,7 @@ This is the description of the TDM environment permission set (optional).
 
 ### Testers
 
-- The **Testers** field is used for attaching users (testers) to a permission set. A tester is attached to a testing environment by being assigned to the environment permission set.  
+- The **Testers** field is used for assigning users (testers) to a permission set. A tester gains access to a testing environment by being included in the environment's permission set.  
 
 - A TDM environment permission set can be assigned to selected testers, selected Fabric roles (user groups), or all TDM users.
 
