@@ -10,7 +10,7 @@ The Discovery Pipeline screen enables performing the following actions, describe
 
 * Overriding the product's default [Baseline rule](13_discovery_pipeline_settings.md#baseline-rule).
 * Creating [project rules](13_discovery_pipeline_settings.md#project-rule) to set a crawler filter and/or override the crawler and/or plugins' settings.
-* [Adding new plugin](13_discovery_pipeline_settings.md#adding-new-plugin) to the pipeline.
+* [Adding new plugins](13_discovery_pipeline_settings.md#adding-new-plugins) to the pipeline.
 
 
 The overrides are saved into the project **pluginsOverride.discovery** file, which is created in the Project's ```Implementation/SharedObjects/Interfaces/Discovery/``` folder.
@@ -25,7 +25,7 @@ The Baseline rule is always enabled. It can be edited by checking the **Override
 
 * Updating the Crawler-related settings, e.g., a sample size. 
 * Updating the parameters of the product built-in plugins. 
-* [Adding a new plugin](13_discovery_pipeline_settings.md#adding-new-plugin) - described further in this article. 
+* [Adding a new plugins](13_discovery_pipeline_settings.md#adding-new-plugins) - described further in this article. 
 
 Note that the Baseline rule overrides are automatically propagated to the project-level rules. For example, when a plugin is updated from 'active' to 'inactive' in the baseline, it becomes 'inactive' in all project-level rules. The rule, however, can override the baseline.
 
