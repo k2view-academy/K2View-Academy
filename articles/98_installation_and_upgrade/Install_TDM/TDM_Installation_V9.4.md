@@ -7,11 +7,13 @@ This document outlines the installation guidelines and initial configuration act
 - [TDM Development Environment Installation](#tdm-development-environment-installation)
     - [TDM On-Prem Installation - Desktop Studio](#tdm-on-prem-installation---desktop-studio)
     - [TDM On-Prem Installation - Web Studio](#tdm-on-prem-installation---web-studio)
-    - [TDM K2view Cloud Installation](#tdm-cloud-development-environment-installation)     
+    - [TDM K2view Cloud Installation](#k2view-cloud-development-environment-installation)     
 - [TDM Non-Development Environment Installation](#tdm-non-development-environment-installation)
-    - On-Prem VM Installation 
-    - K2view Cloud Installation
+    - [On-Prem VM Installation](#on-prem-vm-installation) 
+    - [K2view Cloud Installation](#k2view-cloud-installation)
 
+- [TDM Initial setup](#tdm-initial-setup)
+- [Optional-TDM AI Installation](#tdm-ai-installation)
 
 ## TDM Development Environment Installation
 
