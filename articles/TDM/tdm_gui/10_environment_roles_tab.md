@@ -1,8 +1,8 @@
 # Environment Permission Sets Tab
 
-TDM Environment permission sets are set at the environment level and assigned to testers. Each permission set defines a list of permissions related to creating and executing TDM tasks within an environment. Testers can create and execute TDM tasks only if they are assigned to one of the environment's permission sets. 
+TDM environment permission sets are set at the environment level and assigned to testers. Each permission set defines a list of permissions related to creating and executing TDM tasks within an environment. Testers can create and execute TDM tasks only if they are assigned to one of the environment's permission sets. 
 
-A TDM Environment permission set is an **optional setting** within an environment and can be created, edited or deleted by either an Admin user or the [Environment Owner](08_environment_window_general_information.md#environment-owners). An environment without a permission set, or without testers assigned to a permission set, can only be used by Admin users or Environment Owners.
+A TDM environment permission set is an **optional setting** within an environment and can be created, edited or deleted by either an Admin user or the [Environment Owner](08_environment_window_general_information.md#environment-owners). An environment without a permission set, or without testers assigned to a permission set, can only be used by Admin users or Environment Owners.
 
 The permission sets of an environment are displayed in the **Permission Sets tab** of the Environment window:
 
@@ -20,11 +20,11 @@ The Permission Set window includes the following settings:
 
 ### Name
 
-This is the name of the TDM Environment permission set (mandatory). Each active permission set should be assigned with a specified name. An error is displayed when an attempt is made to create multiple permission sets with the same name.
+This is the name of the TDM environment permission set (mandatory). Each active permission set should be assigned with a specified name. An error is displayed when an attempt is made to create multiple permission sets with the same name.
 
 ### **Description**
 
-This is the description of the TDM Environment permission set (optional).
+This is the description of the TDM environment permission set (optional).
 
 ### Read and Write and Number of Entities
 
@@ -32,7 +32,7 @@ This is the description of the TDM Environment permission set (optional).
 
 - Write access can be granted to a target environment, i.e., the environment type is **Target** or **Both**.
 
-- When the Environment Type is set to 'Both', it can have both read and write accesses. Therefore, the TDM Environment permission sets in such environments can include read access, write access, or both.
+- When the Environment Type is set to 'Both', it can have both read and write accesses. Therefore, the TDM environment permission sets in such environments can include read access, write access, or both.
 
 
  	 **Example:**
@@ -62,9 +62,9 @@ This is the description of the TDM Environment permission set (optional).
 
 ### Testers
 
-- Attach testers to the TDM Environment permission set. The connection of a tester to a testing environment is established by connecting the tester to the environment's permission set.  
+- Attach testers to the TDM environment permission set. The connection of a tester to a testing environment is established by connecting the tester to the environment's permission set.  
 
-- A TDM Environment permission set can be attached to selected testers, selected user groups (Fabric roles), or all TDM users.
+- A TDM environment permission set can be attached to selected testers, selected user groups (Fabric roles), or all TDM users.
 
 Note that although an environment's permission set without tester users is not usable, the **Testers** setting is optional and it enables creating permission sets and then adding them to testers at a later stage.
 
@@ -101,7 +101,7 @@ Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon ne
 
 **Notes**
 
-- A tester user can be attached to only one TDM Environment permission set per environment and cannot be attached to different TDM Environment permission sets in the same environment.
+- A tester user can be attached to only one TDM environment permission set per environment and cannot be attached to different TDM environment permission sets in the same environment.
 
 - An owner user or group can be attached to either the Environment Owners or the TDM environment permission sets. In other words, an owner tester can be attached to a TDM environment as either an owner user or a tester user.
 
