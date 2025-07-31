@@ -46,7 +46,7 @@ This is the description of the TDM environment permission set (optional).
 
 #### Number of Entities
 
-- TDM V9.3.0 introduces the option to grant permission for **Unlimited entities**. This feature allows users to process all entities that match the selected criteria in a task.
+- This field needs to be set on eac h permission - read and write. TDM V9.3.0 introduces the option to grant permission for **Unlimited entities**. This feature allows users to process all entities that match the selected criteria in a task.
 
 - The permission set can support one of the following options: allow processing an unlimited number of entities per task, or limit the user to a maximum number of entities per task.
 
