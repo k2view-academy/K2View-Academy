@@ -13,7 +13,7 @@ This document outlines the installation guidelines and initial configuration act
     - [K2view Cloud Installation](#k2view-cloud-installation)
 
 - [TDM Initial setup](#tdm-initial-setup)
-- [Optional-TDM AI Installation](#tdm-ai-installation)
+- [Optional-TDM AI Installation](#optional---tdm-ai-installation)
 
 ## TDM Development Environment Installation
 
@@ -110,7 +110,7 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 
 #### Git Clone
 
-- It is recommended to use separate Git branches for Dev, Testing (SIT) and Production environments. Dev changes are merged to the Testing branch and tested changes are merged from the Testing branch to Production branch.
+- It is recommended to use separate Git branches for Dev, Testing (SIT), and Production environments. Dev changes are merged to the Testing branch, and tested changes are merged from the Testing branch to the Production branch.
 - Edit the following Globals in the relevant branch **before** the clone in order to create the TDM DB and k2masking schema in the first TDM LU deployment:
   - **CREATE_TDMDB** TDM LU's Global must be set to **true**
   - Optional - edit the **TDMDB_SCHEMA** shared Global if you wish to create a different schema than **public** for the TDM DB. 
@@ -158,12 +158,12 @@ The following activities must be performed after deploying the TDM project to Fa
 
   - [Systems creation](/articles/TDM/tdm_gui/05_tdm_gui_product_window.md).
 
-  - [Environments creation and setup](/articles/TDM/tdm_gui/07_tdm_gui_environment_overview.md) - create all environments in TDM self-service application. Optional - add permission sets to the environments to assign testers into these environments and define their TDM permissions.
+  - [Environments creation and setup](/articles/TDM/tdm_gui/07_tdm_gui_environment_overview.md) - create all environments in TDM self-service application. Optional - add permission sets to the environments to assign testers to these environments and define their TDM permissions.
     Note that the environments must be deployed to Fabric before creating the environments in the TDM self-service application.
 
     
 
-## TDM AI Installation
+## Optional - TDM AI Installation
 
 The TDM equips your QA and development teams with cutting-edge AI-driven synthetic data generation, transforming test data creation from manual rule-based scripts into intelligent automation:
 
