@@ -20,11 +20,11 @@ The Permission Set window includes the following settings:
 
 ### Name
 
-This is the name of the TDM environment permission set (mandatory). Each active permission set should be assigned with a specified name. An error is displayed when an attempt is made to create multiple permission sets with the same name.
+The name of the TDM environment permission set should be entered in this field (mandatory). Each active permission set should be assigned with a specified name. An error is displayed when an attempt is made to create multiple permission sets with the same name.
 
 ### **Description**
 
-This is the description of the TDM environment permission set (optional).
+The description of the TDM environment permission set should be entered in this field (optional).
 
 ### Read and Write Permissions and Number of Entities
 
@@ -101,15 +101,15 @@ Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon ne
 
 **Notes**
 
-- A tester user can be assigned to only one TDM environment permission set per environment and cannot be assigned to different TDM environment permission sets in the same environment.
+- A tester user can be assigned to only one TDM environment permission set per environment and cannot be assigned to different TDM environment permission sets within the same environment.
 
-- An owner user or group can be assigned to either the Environment Owners or the TDM environment permission sets. In other words, an owner tester can be assigned to a TDM environment as either an owner user or a tester user.
+- An owner user or group can be assigned to either the Environment Owners or a TDM environment permission set. In other words, an owner tester can be assigned to a TDM environment as either an owner user or a tester user.
 
   
 
 ### Permissions
 
-A list of permissions that can be assigned to a permission set. Check to grant one or more permissions to a permission set, as follows:
+A list of permissions that can be assigned to a permission set. Check the checkbox to grant one or more permissions to the permission set, as follows:
 
 ##### **Ignore Test Connection**  
 
