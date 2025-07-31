@@ -4,6 +4,10 @@ This document outlines the installation guidelines and initial configuration act
 
 ## Table of Contents
 
+- [TDM Development Environment Installation](#tdm-development-environment-installation)
+    - [TDM On-Prem Installation - Desktop Studio](#tdm-on-prem-installation---desktop-studio)
+    - [TDM On-Prem Installation - Web Studio](#tdm-on-prem-installation---web-studio)
+    - [TDM Cloud Installation](#tdm-cloud-installation)     
 - TDM On-Prem Installation - Desktop Studio
 -  TDM On-Prem Installation - Web Studio
 - TDM Cloud Installation
@@ -124,7 +128,7 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 
   
 
-### K2view Cloud Installation
+### TDM Cloud Installation
 
 - Create a Project with Fabric 8.3.x and PostgreSQL DB.
 - Attach the relevant GitHub branch to this project. 
