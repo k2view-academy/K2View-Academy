@@ -125,31 +125,31 @@ Permission to [create replicas](17a_task_target_component_entities.md#generate-c
 
 ##### Random Entity Selection
 
-[Randomly select entities](15a_entity_subset.md#random) for TDM load task. This permission applies only when the permission set has **Write** access.
+Permission to [randomly select entities](15a_entity_subset.md#random) for a TDM load task. This permission applies only when the permission set has **Write** access.
 
 ##### Refresh All Data from Source
 
-Ask to sync the entities from the source to get fresh data in the task. 
+Permission to sync entities from the source in order to refresh data in the task. 
 
 ##### Process Tables
 
-Create TDM tasks to extract or load [tables](14c_task_source_component_tables.md).
+Permission to create TDM tasks on [tables](14c_task_source_component_tables.md).
 
 #####  Task Scheduling 
 
-Add [scheduling settings](22_task_execution_timing_tab.md) in the TDM task to run an automatic periodic execution of the task based on the scheduling parameters.
+Permission to add [scheduling settings](22_task_execution_timing_tab.md) to a TDM task for automatic periodic execution.
 
 ##### Replace Sequences
 
-[Replace the sequences (IDs)](17a_task_target_component_entities.md#replace-ids-for-the-copied-entities) of the entities when loading them to the target environment. This permission applies only when the permission set has **Write** access.
+Permission to [replace the sequences (IDs)](17a_task_target_component_entities.md#replace-ids-for-the-copied-entities) of entities when loading them into the target environment. This permission applies only when the permission set has **Write** access.
 
 ##### Data Versioning 
 
-Create a [snapshot (data Versioning)](15_data_flux_task.md) in the task.
+Permission to create a [snapshot (data Versioning)](15_data_flux_task.md) in the task.
 
 #### Max Number of Reserved Entities on Env
 
-The maximum number of entities that the user can [reserve on the environment](/articles/TDM/tdm_architecture/08_entity_reservation.md). From TDM 8.1 and onwards, it is possible to add a **Reserve only permission** to the user, i.e., the number of entities in the Write or Read permissions is zero, but the Max Number of Reserved Entities on Env is greater than zero. This permission set allows the user to reserve entities on the environment although they are not permitted to read or write on the environment.
+This field presents the maximum number of entities that the user can [reserve on the environment](/articles/TDM/tdm_architecture/08_entity_reservation.md). Starting from TDM V8.1, it is possible to add a **Reserve only permission** to the user, i.e., the number of entities in the Write or Read permissions is zero, but the Max Number of Reserved Entities on Env is greater than zero. This permission set allows the user to reserve entities on the environment although they are not permitted to read or write on the environment.
 
 
 
