@@ -54,7 +54,7 @@ This is the description of the TDM environment permission set (optional).
 
   **Example:**
   - Read Number of Entities = 1000. Write Number of Entities = 10. 
-  - The user attached to this permission set can run the following tasks on this environment:
+  - The user assigned to this permission set can run the following tasks on this environment:
     - Select the environment as a source environment and create a task for up to 1000 entities.
     - Select the environment as a target environment and create a task for up to 10 entities.
 
@@ -64,7 +64,7 @@ This is the description of the TDM environment permission set (optional).
 
 - The **Testers** field is used for attaching users (testers) to a permission set. A tester is attached to a testing environment by being assigned to the environment permission set.  
 
-- A TDM environment permission set can be attached to selected testers, selected Fabric roles (user groups), or all TDM users.
+- A TDM environment permission set can be assigned to selected testers, selected Fabric roles (user groups), or all TDM users.
 
 Note that although an environment's permission set without tester users is not usable, the **Testers** setting is optional and it enables creating permission sets and then adding them to testers at a later stage.
 
@@ -97,13 +97,13 @@ Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon ne
 
 1. First priority: Assign a user ID to the TDM environment permission set.
 2. Second priority: Assign a user group to the TDM environment permission set. All users in the group can access the TDM environment according to the permissions defined in the TDM environment permission set assigned to their group.
-3. Third priority: Assign a generic permission set for all users to serve as the default permission set. A user will be assigned to the TDM environment with the **ALL** permission set only if neither the user nor their group is specifically attached to another TDM environment permission set for that environment.
+3. Third priority: Assign a generic permission set for all users to serve as the default permission set. A user will be assigned to the TDM environment with the **ALL** permission set only if neither the user nor their group is specifically assigned to another TDM environment permission set for that environment.
 
 **Notes**
 
 - A tester user can be attached to only one TDM environment permission set per environment and cannot be attached to different TDM environment permission sets in the same environment.
 
-- An owner user or group can be attached to either the Environment Owners or the TDM environment permission sets. In other words, an owner tester can be attached to a TDM environment as either an owner user or a tester user.
+- An owner user or group can be assigned to either the Environment Owners or the TDM environment permission sets. In other words, an owner tester can be assigned to a TDM environment as either an owner user or a tester user.
 
   
 
