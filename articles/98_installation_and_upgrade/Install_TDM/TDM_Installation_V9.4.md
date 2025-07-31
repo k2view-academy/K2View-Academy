@@ -7,8 +7,8 @@ This document outlines the installation guidelines and initial configuration act
 - [TDM Development Environment Installation](#tdm-development-environment-installation)
     - [TDM On-Prem Installation - Desktop Studio](#tdm-on-prem-installation---desktop-studio)
     - [TDM On-Prem Installation - Web Studio](#tdm-on-prem-installation---web-studio)
-    - [TDM Cloud Installation](#tdm-cloud-installation)     
-- TDM On-Prem Installation - Desktop Studio
+    - [TDM Cloud Installation](#tdm-cloud-development-environment-installation)     
+- [TDM Non-Development Environment Installation](#tdm-non-development-environment-installation)
 -  TDM On-Prem Installation - Web Studio
 - TDM Cloud Installation
 
@@ -77,15 +77,15 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 - Deploy the TDM LU. The TDM LU deployment create the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by the **masking-create-cache-table.flow** execution (taken from the Broadway examples).
 - After the TDM DB is created, set the **CREATE_TDMDB** TDM LU's Global back to **false**. 
 
-### K2view Cloud Installation
+### TDM Cloud Development Environment Installation
 
 - Create a new space on K2view cloud. Select the **TDM Dev** Project and **TDM-9.4** Profile.
 - Set the **CREATE_TDMDB** TDM LU's Global to be **true**.
 - Optional - edit the **TDMDB_SCHEMA** shared Global if you wish to create a different schema than **public** for the TDM DB. Restart Fabric after updating this Global.
-- Deploy the TDM LU. The TDM LU deployment create the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by the **masking-create-cache-table.flow** execution (taken from the Broadway examples).
+- Deploy the TDM LU. The TDM LU deployment creates the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by the **masking-create-cache-table.flow** execution (taken from the Broadway examples).
 - After the TDM DB is created, set the **CREATE_TDMDB** TDM LU's Global back to **false**.
 
-## TDM Non-Development Installation
+## TDM Non-Development Environment Installation
 
 ### On-Prem Installation
 
