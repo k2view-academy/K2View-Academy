@@ -115,9 +115,9 @@ The **Defined By** property is a mandatory property for every Catalog field. It 
 <table style="width: 700px;">
 <tbody>
 <tr>
-<td style="width: 100px;"><strong>Field Type</strong></td>
+<td style="width: 150px;"><strong>Field Type</strong></td>
 <td style="width: 200px;"><strong>Property Definition</strong></td>
-<td style="width: 400px;"><strong>Description</strong></td>
+<td style="width: 350px;"><strong>Description</strong></td>
 </tr>
 <tr>
 <td><strong>Primitive</strong></td>
