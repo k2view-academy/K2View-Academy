@@ -55,8 +55,8 @@ This is the description of the TDM Environment permission set (optional).
   **Example:**
   - Read Number of Entities = 1000. Write Number of Entities = 10. 
   - The user attached to this permission set can run the following tasks on this environment:
-    - Select the environment as a source environment and create a task on up to 1000 entities.
-    - Select the environment as a target environment and create a task on up to 10 entities.
+    - Select the environment as a source environment and create a task for up to 1000 entities.
+    - Select the environment as a target environment and create a task for up to 10 entities.
 
   Click for more information about [setting the number of entities on a TDM load task](15a_entity_subset.md). 
 
@@ -91,12 +91,12 @@ Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon ne
 
 1. Click the ![plus icon](images/plus_icon_prod_version.png) icon to open the **User Settings** pop-up window. Select a User Group from the drop-down list.
 2. Click the ADD button.
-3. Click again the ![plus icon](images/plus_icon_prod_version.png) icon next to the **Testers** and select another user group, if needed.
+3. Click again the ![plus icon](images/plus_icon_prod_version.png) icon next to the **Testers** field and select another user group in the same manner, if needed.
 
-#### TDM Environment Permission Set Assignments Priorities
+#### TDM Environment Permission Set Assignment Priorities
 
 1. First priority: Assign a user ID to the TDM environment permission set.
-2. Second priority: Assign a user group to the TDM environment permission set. All the group's users can work with the TDM environment based on the permissions of the TDM environment permission set assigned to their group.
+2. Second priority: Assign a user group to the TDM environment permission set. All users in the group can access the TDM environment according to the permissions defined in the TDM environment permission set assigned to their group.
 3. Third priority: Assign a generic permission set for all users as a default permission set. A user is assigned to the TDM environment with the **ALL** permission set only if the user or their group is not specifically attached to another TDM environment permission set of the environment.
 
 **Notes**
