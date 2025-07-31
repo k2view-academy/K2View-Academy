@@ -101,7 +101,7 @@ Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon ne
 
 **Notes**
 
-- A tester user can be assigned to only one TDM environment permission set per environment and cannot be assigned to different TDM environment permission sets within the same environment.
+- A tester user can be assigned to only one TDM environment permission set per environment and cannot be assigned to multiple TDM environment permission sets within the same environment.
 
 - An owner user or group can be assigned to either the Environment Owners or a TDM environment permission set. In other words, an owner tester can be assigned to a TDM environment as either an owner user or a tester user.
 
@@ -109,11 +109,11 @@ Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon ne
 
 ### Permissions
 
-A list of permissions that can be assigned to a permission set. Check the checkbox to grant one or more permissions to the permission set, as follows:
+A list of permissions that can be assigned to a permission set. Check the checkbox to grant one or more permissions to the permission set. The permissions are:
 
 ##### **Ignore Test Connection**  
 
-TDM tests the connections of the source and target environments at the beginning of the task's execution. If the connection fails, the user is asked whether he/she wishes to ignore the failure and continue the execution or to stop the execution. When unchecked, the task's execution stops when the connection fails without an option to ignore the failure and to continue the execution.
+TDM tests the connections to the source and target environments at the start of task execution. If the connection fails, the user is asked whether they wish to ignore the failure and continue or stop the execution. When this permission checkbox is unchecked, the task execution stops upon connection failure, with no option to ignore the failure and continue.
 
 ##### **Delete Entity from Target** 
 
