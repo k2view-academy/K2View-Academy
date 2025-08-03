@@ -87,17 +87,17 @@ Run the SQL query or the [Broadway flow](/articles/TDM/tdm_implementation/11_tdm
 
 Select a predefined [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in order to extract an entity list for the task. Set the **Maximum number of entities** field by entering a number to limit the number of entities retrieved by the flow, or leave it empty to process all retrieved entities. Populate the input parameters for the selected flow, if required.
 
-Note that you can leave the **Maximum number of entities** field empty if you are an admin user, the environment owner, or a tester with the [**Unlimited entities** permission set](10_environment_roles_tab.md#number-of-entities) on the task's environment.
+Note that you can leave the **Maximum number of entities** field empty if you are an admin user, the environment owner, or a tester user with the [**Unlimited entities** permission set](10_environment_roles_tab.md#number-of-entities) on the task's environment.
 
 ## Business Parameters
 
-Select one or several parameters. You can also add the same parameter multiple times with different values. An information icon next to each parameter provides a description. 
+Select one or more parameters. The same parameter can be added multiple times with different values. An information icon next to each parameter provides a description. 
 
 ![parameters](images/task_business_parameters_example.png)
 
 
 
-The parameter's description is displayed when overing the information icon to help the user to select the relevant business parameters in the task:
+Hovering over the information icon displays the parameter description, helping to identify the relevant business parameters for the task:
 
 ![parameters](images/task_param_description.png)
 
@@ -106,24 +106,26 @@ The parameter's description is displayed when overing the information icon to he
 Notes:
 
 - The list of parameters should be [predefined for each LU in the task BE](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md) within the Fabric project.
-- The parameters and their values must be populated in the TDM DB. It is recommended to run a task that extracts a large subset of entities from the source environment in order to populate the TDM DB parameters' tables and enable creating TDM tasks with business parameters. When there is no need to store the extracted subset in the TDM Test Data Store, the [Retention period](/articles/TDM/tdm_gui/16_task_test_data_store_component.md#retention-period) for the initial extract task can be set to **Do not retain**.
-- You can leave the maximum number of entities empty if you are an admin user, environment owner, or a tester with [unlimited entities permission set](10_environment_roles_tab.md#number-of-entities) on the task's environment.
+- The parameters and their values must be populated in the TDM DB. It is recommended to run a task that extracts a large subset of entities from the source environment in order to populate the TDM DB parameter tables and enable the creation of TDM tasks based on business parameters. When there is no need to store the extracted subset in the TDM Test Data Store, the [retention period](/articles/TDM/tdm_gui/16_task_test_data_store_component.md#retention-period) for the initial extract task can be set to **Do not retain**.
+- You can leave the **Maximum number of entities** field empty if you are an admin user, the environment owner, or a tester user with [**Unlimited entities** permission set](10_environment_roles_tab.md#number-of-entities) on the task's environment.
 
-#### Use Parameters with Random Selection Checkbox
+#### 'Use Parameters with Random Selection' Checkbox
 
-The Parameters selection has 2 modes:
+Note that the parameter selection is relevant only when the **Maximum number of entities** field is populated.
 
-- When checked (default), TDM randomly selects - from the list of all entities - entities that match the selected parameters. Each task execution gets different lists of entities that match the selected parameters. The **Selection Method** displayed in the Tasks List window is **Parameters - selection based on parameters with random selection**.
+The parameter selection has two modes:
 
-  Example:
-
-  - Creating a task to load 5 customers using selected parameters. There are 800 customers that match the selected parameters. The task execution gets a random list of 5 customers from the list of 800 customers that match the selected parameters.
-
-- When unchecked, it gets the first entities that match the selected parameters. Each task execution gets the same list of entities that match the selected parameters. The **Selection Method** displayed in the Tasks List window is **Parameters - selection based only on Parameters**.
+- When the **Use parameters with random selection** checkbox is checked (default), TDM randomly selects entities from the full list, filtering only those that match the specified parameters. Each task execution retrieves a different list of entities that match the selected parameters. The **Selection Method** displayed in the Tasks List window is **Parameters - selection based on parameters with random selection**.
 
   Example:
 
-  - Create a task to load 5 customers with selected parameters. There are 800 customers that match the selected parameters. The task execution gets the first 5 customers that match the selected parameters.
+  - Creating a task to load 5 customers using selected parameters. There are 800 customers that match the selected parameters. The task execution randomly retrieves a list of 5 customers from the 800 that match the selected parameters.
+
+- When this checkbox is unchecked, the task execution retrieves the first entities that match the selected parameters. Each task execution retrieves the same list of entities that match the selected parameters. The **Selection Method** displayed in the Tasks List window is **Parameters - selection based only on Parameters**.
+
+  Example:
+
+  - Create a task to load 5 customers with selected parameters. There are 800 customers that match the selected parameters. The task execution retrieves the first 5 customers that match the selected parameters.
 
 #### How Do I Add a Condition?
 
