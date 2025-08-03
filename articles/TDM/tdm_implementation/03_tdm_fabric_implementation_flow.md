@@ -12,11 +12,11 @@ The implementation of TDM in Fabric involves several steps. The following illust
 
 Click [here](04_fabric_tdm_library.md) for more information about the TDM Library and its content.
 
-## 2. Creating [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) for data sources
+## 2. [Creating interfaces for data sources](/articles/05_DB_interfaces/01_interfaces_overview.md) 
 
 - Note - creating an interface for non-JDBC source may require an installation of the respective [K2exchange connector](/articles/04_fabric_studio/28_web_k2exchange.html)
 
-### 3. Optional - [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md)  
+## 3. Optional - [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md)  
 
 - [Running a Discovery on the project interfaces](/articles/39_fabric_catalog/04a_catalog_integration_with_fabric.md) - the Discovery process analyzes the requested interfaces, and among others, creates the schema with the identified relations between the datasets,  and classifies fields as PIIs. The Catalog can also create artifacts in a CSV-format file which enables to create Logical Units (LUs) based on the discovered and enriched data model. 
 - [PII settings](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#pii--masking-tab)
