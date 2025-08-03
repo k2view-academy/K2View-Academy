@@ -129,26 +129,26 @@ The parameter selection has two modes:
 
 #### How Do I Add a Condition?
 
-To add a parameter:
+Adding a parameter:
 
 - Click **Add Condition**.
-- Select the parameter and the operator from the drop-down lists and populate their values. Note that from TDM 8.1 onwards it is possible to select the IN or NOT IN operators on combo parameters and on text parameters.
-- Set the value on the parameter. You can set multiple values on a parameter if the selected operator is either IN or NOT IN:
-  - Combo parameters - click on the value field to select a required value from the drop-down list; this can be done multiple times as more than one value can be selected in this field.
-  - Free text parameters - populate the values with a separating comma. For example: NY, CA.
+- Select the parameter and the operator from the drop-down lists and populate their values. Note that starting from TDM V8.1, it is possible to select the **IN** or **NOT IN** operators on combo parameters and on text parameters.
+- Set the value on the parameter. Multiple values can be set on a parameter if the selected operator is either **IN** or **NOT IN**:
+  - Combo parameters — click on the value field to select a required value from the drop-down list; this can be done multiple times as more than one value can be selected in this field.
+  - Free text parameters — populate the values with a separating comma. For example: NY, CA.
 - Add the **AND/OR** operator to connect the parameter to the previous parameters or group. The TDM Portal displays the SQL query, which is built based on the selected parameters.
 
 #### How Do I Populate a Parameter's Value?
 
 There are several types of parameters:
 
-- **Combo** - parameters with a limited number of values. The Task window displays a drop-down list of the parameters' values; select one of them.
+- **Combo** — parameters with a limited number of values. The Task window displays a drop-down list of the parameters' values; select one of them.
 
   Click for more information about [setting a parameter as a combo parameter](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameters-implementation-guidelines).
 
-- **Number** - the TDM Portal displays the minimum and maximum values of this parameter. If the populated values exceed a parameter's range, an error message is displayed.
+- **Number** — the TDM Portal displays the minimum and maximum values of this parameter. If the populated values exceed a parameter's range, an error message is displayed.
 
-- **Date** - populate the value using the following format: **YYYY-MM-DD**.
+- **Date** — populate the value using the following format: **YYYY-MM-DD**.
 
   - Notes:
 
@@ -163,7 +163,7 @@ There are several types of parameters:
 
     - The date value is set without quotation marks.
 
-- **Text** - populate the value using a free text.
+- **Text** — populate the value using a free text.
 
   
 
