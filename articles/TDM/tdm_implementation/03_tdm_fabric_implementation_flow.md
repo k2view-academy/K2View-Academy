@@ -22,7 +22,7 @@ Click [here](04_fabric_tdm_library.md) for more information about the TDM Librar
 - [PII settings](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#pii--masking-tab)
 - [Sequence settings](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#sequences-tab)
 
-## 4. [Logical units (LUs) creation](05_tdm_lu_implementation_general.md)
+## 4. [Logical units (LUs) creation and TDM Setup](05_tdm_lu_implementation_general.md)
 
 ## 5. LUs - Special Handling
 
