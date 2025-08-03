@@ -91,7 +91,7 @@ Note that you can leave the **Maximum number of entities** field empty if you ar
 
 ## Business Parameters
 
-Select one or several parameters. Additionally, you can add the same parameter multiple times with different values. An information icon is displayed next to each parameter with a description. 
+Select one or several parameters. You can also add the same parameter multiple times with different values. An information icon next to each parameter provides a description. 
 
 ![parameters](images/task_business_parameters_example.png)
 
