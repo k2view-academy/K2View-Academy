@@ -61,7 +61,7 @@
 	],
 	"Groups": [
 		{
-			"group display name": "Test Data Management (TDM)",
+			"group display name": "Test Data Management",
 			"group icon": "images/tdm-icon.png",
 			"visible in main": true,
 			"topics": [
