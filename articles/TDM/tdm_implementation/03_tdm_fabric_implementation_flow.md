@@ -24,11 +24,11 @@ Click [here](04_fabric_tdm_library.md) for more information about the TDM Librar
 
 ## 4. [Logical units (LUs) creation](05_tdm_lu_implementation_general.md)
 
-## 5. Adding a TDM setup to the LUs
+## 5. LUs - Special Handling
 
-- [TDM tables and flows](05_tdm_lu_implementation_general.md)
 - Masking handling
 - Sequence handling
+- LU hierarchy implementation
 - Business parameters implementation
 - Error and statistics handling
 
