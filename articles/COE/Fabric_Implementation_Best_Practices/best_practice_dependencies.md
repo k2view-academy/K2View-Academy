@@ -24,10 +24,6 @@ If a child class loader tries to load a class:
 
 
 
-> **NOTE:** While the filtering mechanism helps prevent class conflicts, it also introduces important constraints. A lower-level class loader may fail to load a class, even if that class is included in its own JAR, because its parent has already loaded the same class (even from another JAR version). This can lead to runtime only that are often non-deterministic, depending on class loading order. Such cases will be demonstrated later on in this article.
-
-
-
 ## Fabric Class Loaders and Packaging Structure
 
 Fabric class loaders separation is between its core system, plugins, project's LUs, and interfaces. As explained, this design supports dependency isolation and flexible packaging, while still enabling controlled sharing of core APIs via filtered delegation.
@@ -85,18 +81,9 @@ These examples illustrate how the filter-based model behaves in practice:
 
 - Fabric has Jackson 2.9 in `fabric/lib`
 - LU needs Jackson 2.14, included in its `lib/`
-- Fabric hasn’t yet loaded Jackson
-
-LU loads **its own** version successfully.
-
-#### Conflict: Fabric Already Loaded the JAR
-
-- Fabric has Jackson 2.9 in `fabric/lib`
-- Project bundles Jackson 2.14 in its `lib/`
 - Jackson is **not** exposed in `PACKAGE_NAMES_CLASS_LOADING_FILTER`.
-- Fabric already loaded Jackson
 
-LU will fail to load Jackson because it is forced to reuse the parent’s version, but because it is filtered out, it cannot.
+LU loads **its own** version successfully. The filter ensures that delegation does not occur, so the LU’s loader handles Jackson independently
 
 #### LU and Plugin Use Different Versions
 
