@@ -80,6 +80,8 @@ Notes:
 
 By default, the separator between the Source Environment and the Entity ID (IID) is an underscore. This can be set to a different separator in the [TDM_GENERAL_PARAMETERS TDM DB](/articles/TDM/tdm_architecture/02_tdm_database.md#tdm_general_parameters) table. Populate the **param_name** using the **iid_separator** and the **param_value** with the separator's value.   
 
+Note that you must restart Fabric after adding the IID separator to the TDM_GENERAL_PARAMETERS in order for the new separators to be stored in cache.
+
 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_tdm_implementation_flow.md)

@@ -16,172 +16,122 @@ Each LU in a TDM project has the following structure:
 
   - **Source branch** - LU tables that extract an entity's source data. Source LU tables are populated when a TDM task needs to load (insert) entities into a target environment and they therefore must extract the source data of these entities.
 
-  - **Target branch** - LU tables that extract the target keys of an entity. The keys are extracted from the target environment in order to enable deleting an entity from the target environment if required by the TDM task.
+  - **Target branch** - LU tables that extract the target keys of an entity. The keys are extracted from the target environment in order to enable deleting an entity from the target environment if required by the TDM task. By default these tables has the 'TAR_' prefix in the table name.
 
-    Click for more information about [Fabric implementation and deleting entities from the target environment](08_tdm_implement_delete_of_entities.md).
+    
 
-## Add the TDM LU Tables to the New LU
+## LU Implementation Steps 
 
-Use either one of the following methods to add the TDM LU tables to the new LU:
+### I. Creating a New LU
 
-### I. Duplicate the TDM_LIBRARY LU into the New LU
+- Create a [new LU](/articles/03_logical_units/05_create_a_new_LU_object.md) on the Studio. It is recommended to run a discovery before creating the LU as the Web Studio gets the relations between the tables from the Catalog's artifacts.
+- Deploy it to Fabric.
 
-This method adds the TDM tables to the LU schema **in advance, before adding the source LU tables** to the LU.
+### II. Adding the TDM Setup to the LU
 
-Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#tdm_library-lu) from the **TDM Library** to your project and duplicate it to the newly created LU (right-click -> Duplicate Logical Unit). Now you have **a template of the new LU** with the TDM tables, including FABRIC_TDM_ROOT table as a root LU table.
+- Run the **TDMLUInitBasedOnFabric** flow in order to add the TDM setup to the LU. This flow add the following:
 
-Note that **the LU_PARAMS table must be added to the LU schema although it is not required for defining LU parameters**.
+  - It adds the TDM tables to the LU schema.
 
-### II. Run the TDMLUInit Flow
+  - It sets the FABRIC_TDM_ROOT LU table to be the root LU table and links it to the main source LU table.
 
-After building the LU schema with the source LU tables, the **TDMLUInit** flow runs on the LU **one time** in order to add the TDM tables to this LU schema as well. The flow edits the LU as follows:
 
-- It adds the TDM tables to the LU schema.
+  - It sets the ROOT_TABLE_NAME and ROOT_COLUMN_NAME Globals on the LU. 
 
-- It sets the FABRIC_TDM_ROOT LU table to be the root LU table and links it to the main source LU table.
 
-- It sets the ROOT_TABLE_NAME and ROOT_COLUMN_NAME Globals on the LU. 
+  - It recreates the LU population of the main source LU table.
 
-- It recreates the LU population of the main source LU table.
+    Click [here](05a_main_source_lu_table_population_logic.md) for more information about the main source LU table's population's logic.
 
-  Click [here](05a_main_source_lu_table_population_logic.md) for more information about the main source LU table's population's logic.
 
-- It creates the [sequence Actors](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences) for the load and data generation flows.
-- It creates the delete and load flows.
-- **Optional updates**:
-  - Creating and adding the target tables to the LU to support the [delete entities implementation](08_tdm_implement_delete_of_entities.md).
-  - Creating the [data generation flows](16_tdm_data_generation_implementation.md) to support [Generate tasks](/articles/TDM/tdm_gui/16a_generate_task.md).  
+  - It creates the [sequence Actors](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences) for the load and data generation flows.
 
-#### Flow Execution:
+  - It creates the delete and load flows.
+
+  - **Optional updates**:
+    - Creating and adding the target tables to the LU to support the entities deletion.
+    - Creating the [data generation flows](16_tdm_data_generation_implementation.md) to support [Generate tasks](/articles/TDM/tdm_gui/16a_generate_task.md).  
+
+
+<web>
+
+- Previous TDM versions automated the TDM implementation for JDBC data sources. TDM V9.4.0 has now been enhanced to automate implementation for NoSQL data sources as well. The relevant templates are included in the data source connector’s extension. The **TDMLUInitBasedOnFabric** flow now supports adding the TDM setup to LUs that are based on NoSQL data sources.
+
+</web>
+
+#### TDMLUInitBasedOnFabric Flow Execution
 
 1. Verify that the LU schema does not have [grouped tables](/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md), and deploy the LU to Fabric debug server before running the flow. 
-
 2. Set the flow's input parameters before executing it:
 
    - **LU_NAME**
-
-   - **ROOT_TABLE_NAME**  - populated with the current root LU table (the main source LU table). For example: customer.
-
-   - **ROOT_COLUMN_NAME** - populated with the current instance ID field. For example: customer_id.
-
    - **SOURCE_INTERFACE** - populated with the source DB interface name.
-
    - **SOURCE_SCHEMA** - populated with the source DB schema name.
-     
+   - **OVERRIDE_EXISTING_FLOWS** - true/false. It indicates if the execution recreates existing flows. 
    - **TARGET_SCHEMA** - populated with the target DB schema name.
-     
    - **TARGET_INTERFACE** - populated with the target DB interface name.
-     
-   - **TARGET_ENVIRONMENT** - populated with one of the target environments' names. 
+   - **TARGET_ENVIRONMENT** - populated with one of the target environments' names. Can be populated with '_dev' if the Environments are not defined yet.
 
 
 3. Additional **flow input parameters**:
 
    - Set the  **CREATE_DELETE_TABLES** input parameter to **true** in order to create and add the target tables to the LU.
 
-   - Set the **CREATE_GENERATE_FLOWS** input parameter to **true** in order to create data generation flows for the LU.
+   - Set the **CREATE_GENERATE_FLOWS** input parameter to **true** in order to create rule-based data generation flows for the LU.
 
-   Below is an example of the TDMLUInit flow's input parameters:
+   Below is an example of the TDMLUInitBasedOnFabric flow's input parameters:
 
   ![TDMLUInit](images/TDMLUInit_input_parameters.png)
 
 4. Run the flow in Fabric Studio.
 
-### III. Run the TDMLUInitBasedOnFabric Flow
-TDM 9.0.2 has added a new flow: TDMLUInitBasedOnFabric. This flow is identical to the TDMLUInit flow except for the way it gets the schema structure: the TDMLUInit gets the schema structure from the source and target interfaces, but the **TDMLUInitBasedOnFabric gets the schema structure from the LU**. The new flow can be used instead of the TDMLUInit flow for a better performance under the following conditions:
-  - If the target DB’s structure is similar to the source DB’s structure.
-  - If the tables' and fields' names are **case-insensitive**.  
 
-Note that this flow requires setting the source and target interfaces and schemas as they need to be added to the main table population and to the load and delete flows. 
-
-## Add the Source LU Tables to the LU Schema
-
-
-1. Link the main source LU tables to the FABRIC_TDM_ROOT table if you duplicate the TDM_LIBRARY to a new LU. The main source tables represent the main (root) tables in the data source. For example, the Customer table is the main source LU table of the Customer LU.
-2. Verify that the main source LU tables are also populated in [ROOT_TABLE_NAME and ROOT_COLUMN_NAME Globals](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#globals).
-
-### Create the Source LU Tables' Populations
-
-The population of the LU table needs to be based on a Broadway flow.
 
 <web>
 
-#### Catalog Masking Integration
+## Catalog Masking Integration
 
-- Fabric 7.2 introduces [Fabric Discovery and Catalog solution]((/articles/39_fabric_catalog/01_catalog_overview.md)), which provides an insight into the Fabric interfaces, starting with the RDBMS interface types in the MVP version. Fabric Catalog supports a [Catalog-based masking](/articles/39_fabric_catalog/09_build_artifacts.md) of PII fields.
-- TDM 8.1 adds new templates to integrate the TDM with the Catalog masking. These templates add the **CatalogMaskingMapper** Actor to the LU population flows in order to run the Catalog-based masking on the identified PII fields before loading them into the LU table. Note that it is not mandatory to implement the Fabric Catalog: if the Catalog is not implemented, the CatalogMaskingMapper Actor returns an empty output.
+- Fabric introduces [Fabric Discovery and Catalog solution]((/articles/39_fabric_catalog/01_catalog_overview.md)), which provides an insight into the Fabric interfaces including non-JDBC interfaces.
+- From TDM V8.1 onwards, the TDM adds new templates to integrate the TDM with the Catalog masking. These templates add the **CatalogMaskingMapper** Actor to the LU population flows in order to run the Catalog-based masking on the identified PII fields before loading them into the LU table. Note that it is not mandatory to implement the Fabric Catalog: if the Catalog is not implemented, the CatalogMaskingMapper Actor returns an empty output.
 
 - Optional: Edit the population flows to override the Catalog masking for some of the PII fields: add [Masking Actors](articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
 
 </web>
 
-#### Create the population of the main source LU tables
+<web>
 
-The main source LU tables have their own logic and are generated by a dedicated TDM template: **populationRootTable.pop.flow**.
+# Native Support for NoSQL Document Storage
 
- Use either one of the following methods to generate the LU population for the main source LU tables:
+### Support for Complex Documents
 
-1. Implement all source LU tables with the default population template. Then run the **TDMLUInit flow** to add the TDM tables to the LU schema and to regenerate the LU population for the main source LU table.
-2. Generate the population flow based on **populationRootTable.pop.flow**:
+- **TDM V9.4.0**, which is based on **Fabric V8.3.0**, now offers native E2E support for **NoSQL Document Storage** (such as MongoDB or CouchBase). This support includes **Catalog discovery**, **Catalog masking and sequence handling**, **parsing a complex document into an LU**, and **load and delete capabilities** for these documents: 
 
-    <studio>
-   
-      - Right-click the table name > **New Table Population Flow From Template > populationRootTable.pop.flow**. A pop-up window opens.
-  
-     - Populate the pop-up window's settings as follows:
-  
-       - **File Name** - populate the file name by [LU Table Name].[flow name]
-       - **Parameters** -
-         - **TABLE_NAME** - populate it by the LU table name. Note that the LU table name should be identical to the data source table name.
-         - **KEY** - populate the key to delete the LU table before populating it.
-         - **SOURCE_INTERFACE** - the interface name for the source DB query.
-  
-     - Example:
-  
-       ![template](images/create_main_source_lu_flow_by_template.png)
-  
-    </studio>
-  
-    <web>
-  
-     - Right-click the table name > **New Population**. A pop-up window opens. Set the new population name and click Enter. Then, select the **populationRootTable.pop.flow** template and populate its parameters:
-        - **TABLE_NAME** - populate it by the LU table name. Note that the LU table name should be identical to the data source table name.
-        - **KEY** - populate the key to delete the LU table before populating it.
-        - **SOURCE_INTERFACE** - the interface name for the source DB query.
-  
-    </web>  
-  
-  <studio>
+####  Discovery
 
-Click [here](05a_main_source_lu_table_population_logic.md) for more information about the main source LU table's population's logic.
+- A Discovery job can run on interfaces such as MongoDB or CouchBase, once the corresponding K2exchange connector has been installed in the project. The Catalog is then created based on the discovered document hierarchy. (This feature was already supported prior to V8.3).
 
-#### Source LU Tables Populations - Mask Sensitive Data 
+#### Logical Unit implementation
 
-Mask sensitive data in the LU tables by adding  [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to the population flows. 
+- The Web Studio’s Interface explorer can now display  complex document structures, such as nested hierarchy levels and arrays of primitives.
 
-Click for more information about [TDM Masking](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-5---mask-the-sensitive-data).
+- Logical Units can now be created based on the Document’s metadata retrieved from the Catalog, after Discovery process has run on it. Nested hierarchy levels are then created as LU tables, each with a referential link to its respective parent level. 
 
-</studio>
+- Root table population is the only action that reads data from the source (the Document). The remaining populations receive the related data, extracted by the root table population, and use it to populate the child LU tables. 
 
-### Source LU Tables - Additional Steps
+ Click [here](/articles/03_logical_units/22_native_support_for_NoSQL.md) for more information about how Fabric handle complex documents. 
 
-- Link the remaining source LU tables to the main LU tables, in a way that if the main source LU table is not populated, the remaining source LU tables remain empty as well.
+#### TDM Setup
 
-- Edit **LuParams** MTable in order to enable a subset of entities from selected parameters for this LU. 
+- TDM V9.4.0 has been enhanced to support LUs that are generated based on NoSQL documents and enable loading masked documents into the target environment. The **TDMLuInitBasedOnFabric** flow now supports various interface types, including NoSQL connectors, and adds the TDM setup to LUs that are created based on complex documents. The following enhancements have been added for complex documents: 
 
-   Click for more information about [Handling TDM Parameters](07_tdm_implementation_parameters_handling.md).
+  - Adding a TDM setup to the LUs.
 
-## Add the Target LU Tables to the LU Schema
+  - Updating the generated load flows for complex documents — a single load flow now assembles the complex document structure based on the LU tables and loads the entire document.
+  - Updating the generated delete flows for complex documents — a single delete flow now deletes the document from the target environment. 
 
-Use either one of the following methods to create and add the target tables to the LU:
+Click [here] for more information about the load and delete flows for complex documents.
 
-1. Run the [TDMLUInit](#ii-run-the-tdmluinit-flow) flow.
-2. Run the **createAllFromTemplates** flow to add the TAR_  tables, data generation flows, and the load and delete flows to the LU. 
-3. Run the **createDeleteTablesAndPopulations** flow to add the TAR_  tables to the LU. 
-
-Click for more information about the [deleting entities implementation](/articles/TDM/tdm_implementation/08_tdm_implement_delete_of_entities.md).
-
-Click for more information about [deleting entities](/articles/TDM/tdm_gui/14_task_overview.md#task-types) from a target environment, using a TDM task.
+ </web>
 
 ## LU Debug
 

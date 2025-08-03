@@ -14,15 +14,13 @@ The TDM Library must be imported to the Fabric project created for TDM.
 
 ### TDM Web Services
 
-Import and deploy all TDM Web Services (APIs) to the Fabric project. These Web Services are invoked by the TDM Portal application, and they constitute of the back-end layer of the TDM Portal application.
+Deploy all TDM Web Services (APIs) to the Fabric project. These Web Services are invoked by the TDM Portal application, and they constitute of the back-end layer of the TDM Portal application.
 
 As the TDM categories contain the product's Web Services, it is recommended to add the project's Web Services into separate categories, which would simplify the TDM version upgrading.
 
 ### Generic TDM Interfaces
 
 Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) into the project's **Shared Objects**:
-- **DB_CASSANDRA** - this is the connection to the Cassandra DB. Edit the IP address according to the environment if you use the DB_CASSANDRA as the Fabric system DB.
-
 - **POSTGRESQL_ADMIN** - this is the admin connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). This interface is used by the **TDMDB flow** in the **TDM LU** to create the TDM DB in the PostgreSQL DB. 
 
 - **TDM** - this is the connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Edit the IP address according to the environment. 
@@ -39,7 +37,12 @@ Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_inter
 
 ### Shared Globals
 
-Import the list of shared [global variables](/articles/08_globals/01_globals_overview.md) required for utilizing TDM in your project. TDM 9.0 locates the TDM library shared Globals under Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/TDM/SharedGlobals.java. The project's shared Globals should be populated in a separate SharedGlobals file (Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/SharedGlobals.java) in order to simplify the TDM version upgrading and to prevent overriding the project's globals by the TDM version upgrade process.
+From TDM 9.4 onwards, the TDM shared Globals are split into two files: 
+
+- Core Globals (Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/TDM/CoreGlobals/SharedGlobals.java) - this file includes internal TDM Globals that should **not** be overridden by the implementation; the file is overridden by the TDM upgrade.
+- Shared Globals (Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/TDM/SharedGlobals.java) that can be edited by implementation (for example, TDMDB_SCHEMA Global). The TDM upgrade merges the new Globals (if exist) into this file but does not override the existing values.
+
+
 
 #### SEQ_CACHE_INTERFACE Global
 A new Global has been added in TDM 8.1 - SEQ_CACHE_INTERFACE. This Global is populated with the DB interface of the k2masking DB (PostgreSQL or Cassandra), and it must be aligned with Fabric’s system DB. TDM 9 sets the POSTGRESQL_ADMIN as a default value in this Global:
@@ -47,6 +50,10 @@ A new Global has been added in TDM 8.1 - SEQ_CACHE_INTERFACE. This Global is pop
 - If you wish to use the PostgreSQL DB as Fabric's system DB, do the following:
     - Open the Fabric’s config.ini file and edit the [system_db] section’s attributes including the SYSTEM_DB_DATABASE attribute to be aligned with the POSTGRESQL_ADMIN DB interface. 
 
+#### TDMB_SCHEMA Global
+
+- This Global hold the TDM DB schema name. By default it is populated with **public**. Edit it if you wish to create a different schema than 'public' for the TDM DB. 
+- Always restart Fabric after updating this Global.
 
 ### Shared Functions
 
@@ -205,13 +212,9 @@ The following MTables have been added to the **References** in the TDM library. 
 
 
 
-
-
 ### Broadway Generic Flows and Templates
 
-The Fabric TDM library includes a set of built-in generic Broadway flows, defined for an easy adaptation of a generic TDM implementation for a specific data model. 
-
-Click for more information about [Generic TDM Broadway Flows](10_tdm_generic_broadway_flows.md).
+The Fabric TDM library includes a set of built-in generic Broadway flows and templates, defined for an easy addition on the TDN setup to the LU. 
 
 ## TDM LU
 
