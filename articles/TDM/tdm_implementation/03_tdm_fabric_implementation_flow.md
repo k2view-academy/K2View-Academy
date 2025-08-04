@@ -26,26 +26,30 @@ Click [here](04_fabric_tdm_library.md) for more information about the TDM Librar
 
 ## 5. LUs - Special Handling
 
-- Masking handling
-- Sequence handling
-- LU hierarchy implementation
-- Business parameters implementation
-- Error and statistics handling
+- Masking implementation
+- Sequence implementation
+- [LU hierarchy implementation](06_tdm_implementation_support_hierarchy.md)
+- [Error and statistics handling](12_tdm_error_handling_and_statistics.md)
 
-## 6. Optional - Synthetic data implementation
+## 6. Optional - Implementation for Entity Sub setting
 
-- Rule-based generation
-- AI-based generation
+- [Business parameters implementation](07_tdm_implementation_parameters_handling.md)
+- Custom logic flows implementation
+
+## 7. Optional - Synthetic data implementation
+
+- [Rule-based generation](16_tdm_data_generation_implementation.md)
+- [AI-based generation](17_tdm_ai_generation_implementation.md)
 
 ## 7. Environment setup
 
 ## 8. Additional Optional setting 
 
-- Table level tasks' implementation
+- [Table level tasks' implementation](09_tdm_reference_implementation.md)
 
 - Pre and post execution processes implementation
 
-- Custom logic flows implementation
+  
 
   
 
