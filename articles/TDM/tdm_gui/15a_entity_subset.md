@@ -179,7 +179,7 @@ There are several types of parameters:
 
 #### How Do I Remove a Parameter or a Group of Parameters?
 
-1. Click the trash icon next to the parameter in order to delete it.
+1. Click the trash icon next to the parameter to delete it.
 
 2. Click **Remove group** to remove a group of parameters.
 
