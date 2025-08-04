@@ -142,11 +142,11 @@ Adding a parameter:
 
 There are several types of parameters:
 
-- **Combo** — parameters with a limited number of values. The Task window displays a drop-down list of the parameters' values; select one of them.
+- **Combo** — parameters that offer a limited set of possible values. The Task window displays a drop-down list of values for each parameter; select one of them.
 
   Click for more information about [setting a parameter as a combo parameter](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameters-implementation-guidelines).
 
-- **Number** — the TDM Portal displays the minimum and maximum values of this parameter. If the populated values exceed a parameter's range, an error message is displayed.
+- **Number** — the TDM Portal displays the minimum and maximum values (i.e., the range) of the parameter. If the populated values exceed this range, an error message is displayed.
 
 - **Date** — populate the value using the following format: **YYYY-MM-DD**.
 
@@ -154,7 +154,7 @@ There are several types of parameters:
 
     - The date format is defined in **DATETIME_FORMAT** parameter of the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) Fabric file. The default format is 'yyyy-MM-dd HH:mm:ss.SSS'.
 
-    - The parameter's search may be based on either a Date (removing the time from the Date format) or a Datetime.
+    - The parameter's search criteria can be based on either a Date (with the time value removed) or a Datetime.
 
       Examples:
 
