@@ -131,7 +131,7 @@ There are two modes for parameter selection:
 
 Adding a parameter:
 
-- Click **Add Condition**.
+- Click **Add condition**.
 - Select the parameter and operator from the drop-down lists and populate their values. Note that starting from TDM V8.1, it is possible to select the **IN** or **NOT IN** operators on combo parameters and on text parameters.
 - Set the value on the parameter. Multiple values can be set on a parameter if the selected operator is either **IN** or **NOT IN**:
   - Combo parameters — click on the value field to select a required value from the drop-down list; this can be done multiple times as more than one value can be selected in this field.
@@ -169,7 +169,7 @@ There are several types of parameters:
 
 #### How Do I Add a Group of Parameters?
 
-- Click **Add Group**.
+- Click **Add group**.
 
 - Note that nested groups of parameters can be added, for example, in order to define an inner group inside an outer group:
 
