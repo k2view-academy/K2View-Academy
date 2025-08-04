@@ -62,7 +62,7 @@ Each LU in a TDM project has the following structure:
 #### TDMLUInitBasedOnFabric Flow Execution
 
 1. Verify that the LU schema does not have [grouped tables](/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md), and deploy the LU to Fabric debug server before running the flow. 
-2. Optional - [Filter out LU tables from the Broadway flows'](5b_filter_out_lu_tables.md) (delete, load, and data generation flows). 
+2. Optional - [Filter out LU tables from the Broadway flows'](05b_filter_out_lu_tables.md) (delete, load, and data generation flows). 
 3. Set the flow's input parameters before executing it:
 
    - **LU_NAME**
