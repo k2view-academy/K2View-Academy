@@ -2,15 +2,15 @@
 
 **Tables** is a data selection option that allows the creation of TDM tasks on **tables** only, **without any association to a Business Entity**. Users can select all or specific tables that are included in the DB interfaces of the chosen **source environment**.
 
-The following information needs to be set for Tables: 
+The following information needs to be set for the **Tables** data selection option: 
 
-- **Source environment** — select one TDM environment from the drop-down list. The drop-down list displays a list of available source environments for the user. If the source environment is defined as containing sensitive data in the [Environment window](08_environment_window_general_information.md#mask-sensitive-data), the TDM task window display the PII icon to indicate to the user that the source sensitive data is masked. 
+- **Source environment** — select one TDM environment from the drop-down list. The drop-down list shows the source environments available to the user. If the source environment is defined as containing sensitive data in the [Environment window](08_environment_window_general_information.md#mask-sensitive-data), the TDM task window display the PII icon to indicate that the source's sensitive data is masked. 
 
-- **Policy for fetching data** — this setting defines whether the data needs to be extracted from the source environment or whether it can be retrieved from the Test Data Store (Fabric). The following options are available:
+- **Policy for fetching data** — this setting defines whether the data needs to be extracted from the source environment or can be retrieved from the Test Data Store (Fabric). The following options are available:
 
   1. **All data from [source environment name]** — extract the tables from the source environment. 
 
-  2. **Selected snapshot (version)** — get a selected [data snapshot (version)](15_data_flux_task.md) created in the Test Data Store by previous task executions. The task execution does not access the source environment directly.  
+  2. **Selected snapshot (version)** — retrieve a selected [data snapshot (version)](15_data_flux_task.md) created in the Test Data Store by previous task executions. The task execution does not access the source environment directly.  
 
   			Note that option 1 is not available if the source environment is set with [Do not Sync](08_environment_window_general_information.md#do-not-sync) option.
 
