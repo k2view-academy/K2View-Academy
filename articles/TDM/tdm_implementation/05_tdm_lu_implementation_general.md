@@ -43,9 +43,6 @@ Each LU in a TDM project has the following structure:
 
     Click [here](05a_main_source_lu_table_population_logic.md) for more information about the main source LU table's population's logic.
 
-
-  - It creates the [sequence Actors](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences) for the load and data generation flows.
-
   - It creates the delete and load flows.
 
   - **Optional updates**:
@@ -91,7 +88,7 @@ Each LU in a TDM project has the following structure:
 
 ## Catalog Masking Integration
 
-- Fabric introduces [Fabric Discovery and Catalog solution]((/articles/39_fabric_catalog/01_catalog_overview.md)), which provides an insight into the Fabric interfaces including non-JDBC interfaces.
+- Fabric introduces [Fabric Discovery and Catalog solution](/articles/39_fabric_catalog/01_catalog_overview.md), which provides an insight into the Fabric interfaces including non-JDBC interfaces.
 - From TDM V8.1 onwards, the TDM adds new templates to integrate the TDM with the Catalog masking. These templates add the **CatalogMaskingMapper** Actor to the LU population flows in order to run the Catalog-based masking on the identified PII fields before loading them into the LU table. Note that it is not mandatory to implement the Fabric Catalog: if the Catalog is not implemented, the CatalogMaskingMapper Actor returns an empty output.
 
 - Optional: Edit the population flows to override the Catalog masking for some of the PII fields: add [Masking Actors](articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
@@ -108,7 +105,7 @@ Each LU in a TDM project has the following structure:
 
 ####  Discovery
 
-- A Discovery job can run on interfaces such as MongoDB or CouchBase, once the corresponding K2exchange connector has been installed in the project. The Catalog is then created based on the discovered document hierarchy. (This feature was already supported prior to V8.3).
+- A Discovery job can run on interfaces such as MongoDB or CouchBase, once the corresponding K2exchange connector has been installed in the project. The Catalog is then created based on the discovered document hierarchy. (This feature was already supported priorto V8.3).
 
 #### Logical Unit implementation
 
@@ -118,7 +115,7 @@ Each LU in a TDM project has the following structure:
 
 - Root table population is the only action that reads data from the source (the Document). The remaining populations receive the related data, extracted by the root table population, and use it to populate the child LU tables. 
 
- Click [here](/articles/03_logical_units/22_native_support_for_NoSQL.md) for more information about how Fabric handle complex documents. 
+ Click [here](/articles/03_logical_units/22_native_support_for_NoSQL.md) for more information about how Fabric handles complex documents. 
 
 #### TDM Setup
 
