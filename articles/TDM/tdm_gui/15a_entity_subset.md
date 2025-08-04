@@ -152,7 +152,7 @@ There are several types of parameters:
 
   - Notes:
 
-    - The date format is defined in **DATETIME_FORMAT** parameter of the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) Fabric file. The default format is 'yyyy-MM-dd HH:mm:ss.SSS'.
+    - The date format is defined in the **DATETIME_FORMAT** parameter of the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) Fabric file. The default format is 'yyyy-MM-dd HH:mm:ss.SSS'.
 
     - The parameter's search criteria can be based on either a Date (with the time value removed) or a Datetime.
 
@@ -171,17 +171,17 @@ There are several types of parameters:
 
 - Click **Add group**.
 
-- Note that nested groups of parameters can be added, for example, in order to define an inner group inside an outer group:
+- Note that nested groups of parameters can be added, for example, to define an inner group within an outer group:
 
   ![task parameters grouping](images/task_parameters_grouping.png)
 
   
 
-#### How Do I Remove a Parameter or a Parameters' Group?
+#### How Do I Remove a Parameter or a Group of Parameters?
 
 1. Click the trash icon next to the parameter in order to delete it.
 
-2. Click **Remove Group** to remove a parameters' group.
+2. Click **Remove group** to remove a group of parameters.
 
    
 
