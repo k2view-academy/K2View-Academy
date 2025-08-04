@@ -233,7 +233,7 @@ Testers can select this option only if they are permitted to do so in the task's
 
 ## Synthetic Entities - Load all Generated Entities of a Selected Data Generation Execution
 
-The Subset form displays all available rule-based/AI-based data generation executions. Select an execution to load its generated entities to the target environment: 
+The Subset form (below) displays all available rule-based/AI-based data generation executions. Select an execution to load its generated entities into the target environment: 
 
 ![load generation](images/task_load_generation_execution.png)
 
