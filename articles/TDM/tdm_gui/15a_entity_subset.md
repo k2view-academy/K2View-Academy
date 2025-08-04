@@ -227,7 +227,7 @@ Testers can select this option only if they are permitted to do so in the task's
 
     - Creating an [AI-based Training task](19_task_synthetic_data_generation.md#how-to-create-an-ai-training-task), i.e., the **Destination of test data** in the Target component is set to **AI training**.
       
-    - The task's selection method is **Predefined entity list**.
+    - The entity selection method is **Predefined entity list**.
 
       
 
@@ -239,7 +239,7 @@ The Subset form displays all available rule-based/AI-based data generation execu
 
 ## Select and Load Data Snapshot (version) Task
 
-When the **Policy for Fetching data** in the [Source component](14b_task_source_component_entities.md) is set to **Selected snapshot (version)**, you need to select a data snapshot (version) to be loaded to the target environment. The Subset form (below) displays a list of available data snapshots (versions) that can be selected and reloaded to the target environment. By default, the TDM Portal displays a list of the data versions created during the last month. To set a different period, edit the **From date** and **To date** settings.
+When the **Policy for Fetching data** in the [Source component](14b_task_source_component_entities.md) is set to **Selected snapshot (version)**, a data snapshot (version) must be selected to be loaded into the target environment. The Subset form (below) displays a list of available data snapshots (versions) that can be selected and reloaded into the target environment. By default, the TDM Portal displays a list of the data versions created during the last month. To set a different period, edit the **From date** and **To date** settings.
 
 The following options are available:
 
