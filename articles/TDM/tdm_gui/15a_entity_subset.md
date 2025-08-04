@@ -1,6 +1,6 @@
 # Task — Entity Subset
 
-The **subset** component specifies how entities are selected for task processing — that is, it defines the **entities selection method**. Therefore, an entity subset must be defined for any task that either extracts entities from the source environment or retrieves the pre-extracted or pre-generated entities from the Test Data Store. 
+The **subset** component specifies how entities are selected for task processing — that is, it defines the **method for selecting entities**. Therefore, an entity subset must be set for any task that either extracts entities from the source environment or retrieves the pre-extracted or pre-generated entities from the Test Data Store. 
 
 The following selection methods are available:
 
