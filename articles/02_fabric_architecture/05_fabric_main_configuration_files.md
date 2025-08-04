@@ -390,7 +390,7 @@ Fabric does allow changing this default behavior and changing the process time z
 
 <!-- drop 4- add a link to trace -->
 
-- To change how data is saved to Fabric, open the **config.ini** file in the **config folder** and change the **DATETIME_FORMAT_LOCAL_TIMEZONE** parameter as follows:
+- To change how the date is saved to Fabric, open the **config.ini** file in the **config folder** and modify the **DATETIME_FORMAT_LOCAL_TIMEZONE** parameter as follows:
 
    **DATETIME_FORMAT_LOCAL_TIMEZONE=true**
 
