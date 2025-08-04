@@ -191,13 +191,13 @@ Click Refresh next to the **Number of entities matched** in order to calculate t
 
 - Click [![refesh](/articles/TDM/tdm_gui/images/parameters_refresh_icon.png)](/articles/TDM/tdm_gui/images/parameters_refresh_icon.png) to display the number of matching entities according to the parameters’ conditions.
 
-Click for more information about the [TDM parameters' tables and View](/articles/TDM/tdm_architecture/07_tdm_parameters_handling.md) - created by TDM in the TDM DB - that display a hierarchical view of TDM parameters.
+Click for more information about the [TDM parameter tables](/articles/TDM/tdm_architecture/07_tdm_parameters_handling.md) — created by TDM in the TDM DB — that display a hierarchical view of TDM parameters.
 
 
 
 ## Random
 
-Get a random list of entities from the parameters' tables created in the TDM DB for the root LU of the task's BE. 
+Get a random list of entities from the parameter tables created in the TDM DB for the root LU of the task's BE. 
 
 Testers can select this option only if they are permitted to do so in the task's source environment.
 
@@ -205,15 +205,15 @@ Testers can select this option only if they are permitted to do so in the task's
 
 ## Filter out Reserved Entities 
 
-- The **Filter out Reserved Entities** options enable the user to decide which reserved entities will be excluded from the task execution: 
+- The **Filter out reserved entities** options allow the user to decide which reserved entities will be excluded from task execution: 
 
-  - **Reserved by others** (default option) - excludes entities that are currently reserved by users other than the task creator/executor and allows task execution on entities reserved by the task creator/executor.
+  - **Reserved by others** (default option) — excludes entities that are currently reserved by users other than the task creator or executor, while allowing task execution on entities reserved by the task creator or executor.
 
-  - **All reserved entities** - excludes all reserved entities, including those reserved by the task creator/executor. This option ensures there is no overlapping with any of the reserved entities, regardless of who has reserved them.
+  - **All reserved entities** — excludes all reserved entities, including those reserved by the task creator or executor. This option ensures that no overlap occurs with any of the reserved entities, regardless of who reserved them.
 
 - The reserved entities are excluded when running the following tasks:
 
-  - [Load tasks](17a_task_target_component_entities.md#load) when both the **Replace IDs for the copied entities** and the **Generate clones for an entity** checkboxes are cleared, i.e., the task loads the entities with their source IDs.
+  - [Load tasks](17a_task_target_component_entities.md#load) when both the **Replace IDs for the copied entities** and the **Generate clones for an entity** checkboxes are unchecked, i.e., the task loads the entities with their source IDs.
   - [Delete tasks](17a_task_target_component_entities.md#delete)
   - [Reserve tasks](17a_task_target_component_entities.md#reserve)
 
