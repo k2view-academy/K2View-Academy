@@ -14,7 +14,7 @@ The following information needs to be set for the **Tables** data selection opti
 
      Note that option 1 is not available if the source environment is set with [Do not Sync](08_environment_window_general_information.md#do-not-sync) option.
 
-- **Tables** — the task displays the source environment's active interfaces. Click the required interface to view its schemas. If needed, click a schema to view its tables. Tables can be selected using either of the following methods:
+- **Tables** — the task displays the source environment's active interfaces. Click the required interface to view its schemas. If needed, click a schema to view its tables. You can select tables in the task using one of the following methods:
 
   1. Check the checkbox next to the schema to select all of its tables, and click the blue arrow icon to move these tables to the *Table name* area:
 
@@ -32,7 +32,7 @@ The following information needs to be set for the **Tables** data selection opti
 
   
 
-  - Removing selected tables: Click the trash icon next to the *Table name* to remove all selected tables from the task, or the trash icon next to a table to remove it from the task:
+  - Removing selected tables: Click the trash icon next to *Table name* to remove all selected tables from the task, or click the trash icon next to a specific table to remove only that table from the task:
 
     ![tables3](images/task_remove_tables.png)
 
