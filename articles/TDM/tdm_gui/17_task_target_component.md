@@ -1,4 +1,4 @@
-# Task - Target Component
+# Task — Target Component
 
 The Target component contains the target environment settings. The Target environment must be set for the following tasks: 
 
