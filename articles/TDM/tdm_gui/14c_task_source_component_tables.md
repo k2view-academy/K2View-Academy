@@ -38,13 +38,13 @@ The following information needs to be set for the **Tables** data selection opti
 
   
 
-  - Loading pre-extracted tables: If the **Policy for fetching data** is set to **Select snapshot (version)**, each selected table displays its latest data version:
+  - Loading pre-extracted tables: If the **Policy for fetching data** field is set to **Select snapshot (version)**, each selected table displays its latest data version:
 
   ![source-tables with versions](images/task_source_tables_only_snapshot.png)
 
   ​		
 
-  The **Table version** (shown in the above image) is the name of the task that extracted the table's snapshot. When clicking on it, a pop-up window opens with the list of all available versions (below image), allowing the user to select a different table's version, if needed:
+  The **Table version** (shown in the above image) is the name of the task that extracted the table's snapshot. Upon clicking, a pop-up window appears showing all available versions (see image below), enabling the user to select an alternative table version if required:
 
   ![table versions](images/task_source_table_versions_list.png)
 
