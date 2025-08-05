@@ -16,19 +16,19 @@ The following information needs to be set for the **Tables** data selection opti
 
 - **Tables** — the task displays the source environment's active interfaces. Click the required interface to view its schemas. If needed, click a schema to view its tables. Tables can be selected using either of the following methods:
 
-  1. Check the checkbox next to the schema to select all the schema's tables and click the blue arrow icon to move its tables to the selected tables area:
+  1. Check the checkbox next to the schema to select all of its tables, and click the blue arrow icon to move these tables to the *Table name* area:
 
   ![tables1](images/task_select_all_schema_tables.png)
 
   
 
-  2. Click the schema to view its tables, check the required tables, and click the blue arrow icon to move its tables to the selected tables area:
+  2. Click the schema to view its tables, check the checkboxes of the required tables, and click the blue arrow icon to move these tables to the *Table name* area:
 
   ![tables2](images/task_select_tables.png)
 
   
 
-  Note that the Source component defines the tables list. However, a filter on the extracted records for each selected table can be added in the [Subset](15_task_subset_component.md) component.
+  Note that the Source component defines the table list. However, a filter on the extracted records for each selected table can be added in the [Subset](15_task_subset_component.md) component.
 
   
 
