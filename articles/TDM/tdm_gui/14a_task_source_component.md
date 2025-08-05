@@ -1,4 +1,4 @@
-# Task - Source Component
+# Task — Source Component
 
 The Source component contains the data source settings, namely, from where the entities and/or tables are taken.
 
