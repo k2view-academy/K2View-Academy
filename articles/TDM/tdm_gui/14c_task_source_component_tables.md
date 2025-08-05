@@ -4,7 +4,7 @@
 
 The following information needs to be set for the **Tables** data selection option: 
 
-- **Source environment** — select one TDM environment from the drop-down list. The drop-down list shows the source environments available to the user. If the source environment is defined as containing sensitive data in the [Environment window](08_environment_window_general_information.md#mask-sensitive-data), the TDM task window display the PII icon to indicate that the source's sensitive data is masked. 
+- **Source environment** — select a TDM environment from the drop-down list that displays available source environments. If the selected source environment is defined as containing sensitive data in the [Environment window's settings](08_environment_window_general_information.md#mask-sensitive-data), a PII icon will appear next to the selected source environment, indicating that its 'Sensitive data is masked'. 
 
 - **Policy for fetching data** — this setting defines whether the data needs to be extracted from the source environment or can be retrieved from the Test Data Store (Fabric). The following options are available:
 
