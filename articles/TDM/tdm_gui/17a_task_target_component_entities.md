@@ -1,4 +1,4 @@
-# Task - Target Component - Entities 
+# Task — Target Component — Entities 
 
 The following information needs to be **set** when the task's data type is Business entities (with or without referential tables):
 
