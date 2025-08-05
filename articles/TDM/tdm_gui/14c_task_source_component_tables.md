@@ -32,13 +32,13 @@ The following information needs to be set for the **Tables** data selection opti
 
   
 
-  - Removing selected tables: click the trash icon next to the *Table name* to remove all selected tables from the task, or the trash icon next to a table to remove it from the task:
+  - Removing selected tables: Click the trash icon next to the *Table name* to remove all selected tables from the task, or the trash icon next to a table to remove it from the task:
 
     ![tables3](images/task_remove_tables.png)
 
   
 
-  - Loading pre-extracted tables: if the **Policy for fetching data** is set to **Select snapshot (version)**, each selected table displays its latest data version:
+  - Loading pre-extracted tables: If the **Policy for fetching data** is set to **Select snapshot (version)**, each selected table displays its latest data version:
 
   ![source-tables with versions](images/task_source_tables_only_snapshot.png)
 
