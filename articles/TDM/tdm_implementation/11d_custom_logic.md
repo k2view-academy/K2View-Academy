@@ -1,5 +1,6 @@
-#  [Custom Logic ](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#custom-logic) Implementation
+#  Custom Logic Implementation
 
+The following article guides how to implement Custom Logic flow in order to enable an entity subset based on [Custom Logic](/articles/TDM/tdm_gui/15a_entity_subset.md#predefined-custom-logic) in a task.
 You can build one or multiple Broadway flows to get a list of entities for a task execution. These Broadway flows are executed by the TDM task execution process, building the entity list for the task. 
 
 TDM enables **2 execution modes** for the Custom Logic flows:
