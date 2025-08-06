@@ -34,20 +34,21 @@ Click [here](04_fabric_tdm_library.md) for more information about the TDM Librar
 ## 6. Optional - Implementation for Entity Sub setting
 
 - [Business parameters implementation](07_tdm_implementation_parameters_handling.md)
-- Custom logic flows implementation
+- [Custom logic flows implementation](11d_custom_logic.md)
+- [Predefined entity list implementation](11c_predefined_entity_list.md)
 
 ## 7. Optional - Synthetic data implementation
 
 - [Rule-based generation](16_tdm_data_generation_implementation.md)
 - [AI-based generation](17_tdm_ai_generation_implementation.md)
 
-## 7. Environment setup
+## 7. [Environment setup](tdm_fabric_implementation_environments_setup.md)
 
 ## 8. Additional Optional setting 
 
 - [Table level tasks' implementation](09_tdm_reference_implementation.md)
 
-- Pre and post execution processes implementation
+- Pre and post execution processes implementation (including the execution note population)
 
   
 
