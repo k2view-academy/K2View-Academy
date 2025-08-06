@@ -6,7 +6,7 @@ The sequence replacement must be implemented in advance.
 
 The sequence implementation is required for the [rule-based data generation implementation](16_tdm_data_generation_implementation.md) as well in order to keep the referential integrity of the synthetic entity's IDs.
 
-TDM 9.3 and onwards supports the following two sequence methods: 
+TDM 9.3 and onwards support the following two sequence methods: 
 
 I. [Sequence handling based on Catalog](11a_tdm_sequence_implementation_based_on_catalog.md).
 
@@ -19,7 +19,7 @@ A new shared Global has been introduced in TDM 9.3, named **TDM_USING_CATALOG_SE
 Example:
 
 - The TDM project has the CRM, Billing, and Ordering LUs.
-- By default, the sequences are handled without the Catalog, except the Billing LU for which sequences are Catalog-based.
+- By default, the sequences are handled without the Catalog, except for the Billing LU for which sequences are Catalog-based.
 - The TDM_USING_CATALOG_SEQUENCES Global must be set as follows:
   - Shared Global – set to false.
   - Billing LU – set to true.
