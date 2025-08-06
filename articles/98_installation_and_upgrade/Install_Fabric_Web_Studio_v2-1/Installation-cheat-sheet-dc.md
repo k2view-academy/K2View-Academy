@@ -43,7 +43,7 @@ cd ~/K2view
 ### 3. Download the Studio Package
 
 ```bash
-# Download and extract
+# Download and extract to ~/K2view
 wget https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Studio-Docker-latest.zip
 unzip Studio-Docker-latest.zip
 mv Studio-Docker Studio
@@ -51,7 +51,7 @@ mv Studio-Docker Studio
 
 ### 4. Configure Git & TLS (Optional)
 
-Edit `Studio/.env` to include:
+Edit `~/K2view/Studio/.env` to include:
 ```env
 GIT_REPO=<your_repo>
 GIT_BRANCH=main
