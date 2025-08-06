@@ -4,24 +4,11 @@ The TDM library contains sets of generic flows that allow you to create a standa
 
 ## How Do I Create the TDM Broadway Flows?
 
-## Step 1 - Define Tables to be Filtered Out
-
-Before starting to create Broadway flows, define the tables that should be filtered out by the Broadway flow, which generates the **delete** and **load** flows. The **TDMFilterOutTargetTables** Actor contains a list of LU tables that do not require the creation of load and delete flows. By default, is it populated by both the TDM tables and the [target LU tables](/articles/TDM/tdm_implementation/08_tdm_implement_delete_of_entities.md#lu-structure---target-tables) added to the LU for enabling a delete of the entity:
-
-![image](images/11_tdm_impl_actor_1.PNG)
-
-To filter out additional tables, open the **TDMFilterOutTargetTables** Actor and edit its **table** object. The **lu_name** column should be populated as follows:
-
-* ALL_LUS - when a filtered-out table is relevant for all TDM LUs.
-* LU name - when a table belongs to a specific LU. In some cases, you may need to add tables to the LU schema in order to get the child IDs and to populate the TDM_LU_TYPE_RELATION_EID TDM DB table. For example, the addition of the Orders table to the Customer LU generates a list of customer orders.
-
- If a [data generation flow](16_tdm_data_generation_implementation.md) should not be generated for the table, the **generator_filterout** column checkbox needs to be checked (true).
-
-These tables should be added to the **TDMFilterOutTargetTables** Actor as it would prevent the load/delete flows creation for the tables; these tables are already loaded/deleted by the child LUs. 
-
-Following completion of the Actor's update, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button (top of the Project tree). This act applies the changes in the **TDMFilterOutTargetTables** Actor and deploys the LU. 
+.
 
 ## Step 2 - Create Sequences
+
+[Add an explanation about the new inner flow in the load. Rerun of the TDMLuInitBasedOnFabric requires to override exsisting flows in order to generate the missing sequence flows]
 
 It may be required to replace the loaded IDs (sequences) when populating a target database as a way to avoid collision with existing IDs. Setting and initiating sequences is mandatory in order to enable the [IDs' replacement](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#replace-ids-for-the-copied-entities) in TDM tasks.
 
@@ -131,127 +118,7 @@ TDM 8.1 added the **TDMOrchestrator.flow** to the Shared Objects, thus avoiding 
 
 The **TDMReserveOrchestrator** runs the [reserve only tasks](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.1/articles/TDM/tdm_gui/17a_task_target_component_entities.md#reserve). Import the flow from the TDM library into the Shared Objects and redeploy the TDM LU. 
 
-## Step 5 - Mask the Sensitive Data
 
-TDM systems often handle sensitive data. Complying with data privacy laws and regulations, Fabric enables [masking sensitive fields](/articles/26_fabric_security/06_data_masking.md) such as SSN, credit card numbers, and email addresses before they are loaded either to Fabric or into the target database.
-
-* **LU population flows** - in order to mask a sensitive field, before loading it to Fabric, add the masking logic to the LU population flow using **Masking** Actors. 
-
-  ![image](images/11_tdm_impl_05.PNG)
-
-  If the masked field is used as an [input argument](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md) that is linked to another LU table, add the masking population that masks the fields in all LU tables to the last executed LU table in order to have the original value when populating the LU tables. 
-
-   <web>
-  
-  ### Catalog Masking Integration
-  
-  Fabric 7.2 introduced the [Fabric's Discovery and Catalog solution](/articles/39_fabric_catalog/01_catalog_overview.md), which provides an insight into the Fabric interfaces, starting with the RDBMS interface types in the MVP version. The Fabric Catalog supports a [catalog-based masking](/articles/39_fabric_catalog/09_build_artifacts.md) of PII fields. 
-  
-  TDM 8.1 adds new templates to integrate with the Catalog masking. These templates add the **CatalogMaskingMapper** Actor to the LU population flows to run the Catalog-based masking on the identified PII fields before loading them into the LU table. 
-  
-  Perform the following acts in order to use the new TDM templates for the Catalog masking:
-  
-  - Create the population flows for the source LU tables based on the new templates. Verify that the **CatalogMaskingMapper** Actor is added to the population flows.
-  - Optional: Edit the population flows to override the Catalog’s masking for some of the PII fields: add [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
-     - Note: If you need to send the original (source) values for the Masking Actors in the LU population, move the Query result to an ArrayBuilder and connect the ArrayBuilder output to the CatalogMaskingMapper Actor instead of connecting the Query result to it. This is needed in order to invoke the Query output twice – sending it to the CatalogMaskingMapper Actor and to the Masking Actor.
-  
-  </web> 
-
-* **Load flows** - to mask a sensitive field as part of a load to the target DB, add a masking Actor to the relevant **load_[Table Name].flow**. The TDM infrastructure controls masking enablement/disablement based on the settings of the global variables. 
-
-  ### TDM - Masking Categories
-
-  One of the masking Actors' input parameters is named **category**. This parameter indicates *when* the masking Actor needs to generate a new value, e.g., when masking sensitive data or replacing the ID (sequence). The following values can be set in the category:
-
-  - **enable_sequences**, which generates a new ID value
-  - **enable_masking**, which masks sensitive data
-  - Any custom string value
-
-  A new custom value has been added by TDM 8.1:  **enable_masking_uniqueness**. This category is set to true if the **enable_sequences** or the **enable_masking** categories are set to true by the TDM task execution process.
-
-  By default, the category is set to **enable_masking** on all masking Actors except for the **MaskingSequence** Actor, in which case the default category is set to **enable_sequences**. The main use of the  **enable_masking_uniqueness** category is for PII fields that must have unique values, such as SSN. For these fields, it is recommended to set the **category** of the masking Actor to **enable_masking_uniqueness**.
-
-  #### Setting the Mask Categories by the TDM Task Execution Processes
-
-  The TDM execution processes sets the masking categories to true/false based on the TDM task execution settings:
-
-  
-
-  <table width="900pxl">
-  <tbody>
-  <tr>
-  <td width="250pxl">
-  <p><strong>Category</strong></p>
-  </td>
-  <td width="300pxl">
-  <p><strong>LU Population (extract part)</strong></p>
-  </td>
-  <td width="350pxl">
-  <p><strong>Load Process</strong></p>
-  </td>
-  </tr>
-  <tr>
-  <td width="250pxl">
-  <p>enable_masking</p>
-  </td>
-  <td width="300pxl">
-   <p>This attribute is set based on the  <a ref="/articles/TDM/tdm_gui/08_environment_window_general_information.md#mask-sensitive-data">source environment's setting</a>. 
-  </td>
-  <td width="350pxl">
-  <p>Will be set to true for the following tasks:</p>    
-  <ul>
-  <li>The task's selection method = Entity clone</li>
-  </ul>
-  <p>&nbsp;</p>
-  </td>
-  </tr>
-  <tr>
-  <td width="250pxl">
-  <p>enable_sequences</p>
-  </td>
-  <td width="300pxl">
-  <p>N/A</p>
-  </td>
-  <td width="350pxl">
-  <p>Will be set to true for the following tasks:</p>    
-  <ul>
-  <li>The task's selection method = Entity clone.</li>
-  <li>The task replaces the entities' sequences (IDs).</li>
-  <li>Load synthetically generated entities (the source environment is Synthetic).</li>
-  </ul>
-  </td>
-  </tr>
-  <tr>
-  <td width="250pxl">
-  <p>enable_masking_uniqueness</p>
-  </td>
-  <td width="300pxl">
-     Set to true if the enable_masking or enable_sequences are true.</p>
-  </td>
-  <td width="350pxl">
-  <p>Will be set to true for the following tasks:</p>    
-  <ul>
-  <li>The task's selection method = Entity clone.</li>
-  <li>The task replaces the entities' sequences (IDs).</li>
-  <li>Load synthetically generated entities (the source environment is Synthetic).</li>
-  </ul>
-  </td>
-  </tr>
-  </tbody>
-  </table>
-  
-  
-* Notes:
-
-  *  From TDM 7.3 onwards, the task that clones an entity creates only **one LUI instance for all clones**. Therefore, you must add masking on both processes (LUI Sync and load flows) in order to get different data in the masked fields on each clone. The clone_id is included in the [masking caching key](/articles/26_fabric_security/06_data_masking.md#masking-flow).
-
-  * TDM 8.0 added the **root_iid** to the caching key in order to maintain the **referential integrity on PII fields across different LUs of the task’s BE**.
-
-    For example, CRM and Billing LUs keep the Customer's data. The customer name needs to be identical in both LUs for a given customer. Setting the root_iid with the customer ID enables keeping the referential integrity between the CRM and Billing LUs. It is recommended to set the **useInstanceId** input argument of the masking Actors to **true** for keeping the PII fields' referential integrity within the Business Entity LUs.
-
-[Click here to learn how to use masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md).
-
-[Click here to learn how the TDM task execution process builds the entity list](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md).
 
 ## Step 6 - Optional - Get the Entity List for a 'Select a predefined entity list' Task’s Selection Method
 

@@ -27,7 +27,7 @@ Click [here](04_fabric_tdm_library.md) for more information about the TDM Librar
 ## 5. LUs - Special Handling
 
 - [Masking implementation](05c_tdm_masking.md)
-- Sequence implementation
+- [Sequence implementation](05d_tdm_sequence.md)
 - [LU hierarchy implementation](06_tdm_implementation_support_hierarchy.md)
 - [Error and statistics handling](12_tdm_error_handling_and_statistics.md)
 

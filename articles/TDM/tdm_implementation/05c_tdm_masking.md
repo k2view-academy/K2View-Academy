@@ -19,8 +19,7 @@ The TDM infrastructure controls masking enablement/disablement based on the sett
 * **LU population flows** - the TDM templates add the **CatalogMaskingMapper** Actor to the LU population flows to run the Catalog-based masking on the identified PII fields before loading them into the LU table.  It is possible edit the population flows in order to override the Catalog’s masking for some of the PII fields: add [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
   * If the masked field is used as an [input argument](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md) that is linked to another LU table, add the masking population that masks the fields in all LU tables to the last executed LU table in order to have the original value when populating the LU tables. 
 
-* **Load flows** - the TDM templates add the **CatalogMaskingMapper** Actor to the load flows as well. It is possible edit the population flows in order to override the Catalog’s masking for some of the PII fields: add [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.  
-* [Explain about the new inner flow added for TDM 9.4. Add link to the article that explains when it is needed to override the catalog]
+* **Load flows** - the TDM templates adds the **HandleMaskAndSeqFields** flow to the load flows. The  **HandleMaskAndSeqFields** flow is invoked for each record to mask its PII fields and replace its sequences if needed. The masking is done using the **CatalogMaskingRecord** Actor.
 * **Table-level flows** - the TDM table-level extract flow uses the **CatalogMaskingMapper** Actor to mask the sensitive data.
 
 ## Overriding the Catalog Masking 
@@ -36,7 +35,7 @@ The TDM infrastructure controls masking enablement/disablement based on the sett
   - Email - the masked email contains the masked first and last name values. 
 
 - **LU populations**: add the [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) **after** the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor in order to override the Catalog masking.
-- **Load flows**: add the [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) **after** the **HandleMaskAndSeqFields** flow.
+- **Load flows**: add the [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) **after** the **HandleMaskAndSeqFields** flow and link them to the relevant fields in the **DbLoad** Actor in order to override the Catalog masking.
 - If you need to send the original (source) values for the Masking Actors in the LU population or load flows, move the Query result to an **ArrayBuilder** Actor and connect the **ArrayBuilder** output to the **CatalogMaskingMapper** Actor (for LU population flow), or to the **HandleMaskAndSeqFields** flow (for load flow), instead of connecting the Query result to it. This is needed in order to invoke the Query output twice – sending it to the CatalogMaskingMapper/HandleMaskAndSeqFields and to the Masking Actor.
 - If your flows mask a PII field using the Masking actors (overriding the Catalog masking),  it is recommended to remove the PII classification in the Catalog for this field to prevent unnecessary double masking of this field. 
 
