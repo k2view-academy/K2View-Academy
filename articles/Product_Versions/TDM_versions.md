@@ -16,7 +16,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
     </thead>
     <tbody>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.4/TDM_Release_Notes_V9.4.0.pdf">9.4.0</a></td>
+            <td align="left"><a href="/Release_Notes/TDM-V9.4/TDM_Release_Notes_V9.4.0.pdf">9.4.0</a></td>
             <td>Aug 6, 2025</td>
             <td></td>
             <td>8.3.0</td>
@@ -25,7 +25,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>17.5</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.3/TDM_Release_Notes_V9.3.1.pdf">9.3.1</a></td>
+            <td align="left"><a href="/Release_Notes/TDM-V9.3/TDM_Release_Notes_V9.3.1.pdf">9.3.1</a></td>
             <td>Apr 10, 2025</td>
             <td></td>
             <td>8.2.1 HF2, 8.2.x</td>
@@ -35,7 +35,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
         </tr>
         <tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.3/TDM_Release_Notes_V9.3.pdf">9.3.0</a></td>
+            <td align="left"><a href="/Release_Notes/TDM-V9.3/TDM_Release_Notes_V9.3.pdf">9.3.0</a></td>
             <td>Mar 23, 2025</td>
             <td></td>
             <td>8.2.1 HF1</td>
@@ -44,7 +44,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>17.0</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.2/TDM_Release_Notes_V9.2.2.pdf">9.2.2</a></td>
+            <td align="left"><a href="/Release_Notes/TDM-V9.2/TDM_Release_Notes_V9.2.2.pdf">9.2.2</a></td>
             <td>Jan 23, 2025</td>
             <td></td>
             <td>8.1.7 and 8.2.0</td>
@@ -53,7 +53,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>17.0</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.2/TDM_Release_Notes_V9.2.1.pdf">9.2.1</a></td>
+            <td align="left"><a href="/Release_Notes/TDM-V9.2/TDM_Release_Notes_V9.2.1.pdf">9.2.1</a></td>
             <td>Dec 24, 2024</td>
             <td></td>
             <td>8.1.6</td>
@@ -62,7 +62,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>17.0</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.2/TDM_Release_Notes_V9.2.pdf">9.2.0</a></td>
+            <td align="left"><a href="/Release_Notes/TDM-V9.2/TDM_Release_Notes_V9.2.pdf">9.2.0</a></td>
             <td>Dec 4, 2024</td>
             <td></td>
             <td>8.1.5</td>
@@ -71,7 +71,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>17.0</td>
         </tr>
          <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.1/TDM_Release_Notes_V9.1.7.pdf">9.1.7</a></td>
+            <td align="left"><a href="/Release_Notes/TDM-V9.1/TDM_Release_Notes_V9.1.7.pdf">9.1.7</a></td>
             <td>Apr 16, 2025</td>
             <td></td>
             <td>8.1.9</td>
@@ -80,7 +80,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>17.0</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.1/TDM_Release_Notes_V9.1.6.pdf">9.1.6</a></td>
+            <td align="left"><a href="/Release_Notes/TDM-V9.1/TDM_Release_Notes_V9.1.6.pdf">9.1.6</a></td>
             <td>February 27, 2025</td>
             <td></td>
             <td>8.1.8</td>
@@ -89,7 +89,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>17.0</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.1/TDM_Release_Notes_V9.1.5.pdf">9.1.5</a></td>
+            <td align="left"><a href="/Release_Notes/TDM-V9.1/TDM_Release_Notes_V9.1.5.pdf">9.1.5</a></td>
             <td>January 9, 2025</td>
             <td></td>
             <td>8.1.6</td>
@@ -98,7 +98,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>17.0</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.1/TDM_Release_Notes_V9.1.4.pdf">9.1.4</a></td>
+            <td align="left"><a href="/Release_Notes/TDM-V9.1/TDM_Release_Notes_V9.1.4.pdf">9.1.4</a></td>
             <td>January 2, 2025</td>
             <td></td>
             <td>8.1.6</td>
@@ -107,7 +107,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>17.0</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.1/TDM_Release_Notes_V9.1.3.pdf">9.1.3</a></td>
+            <td align="left"><a href="/Release_Notes/TDM-V9.1/TDM_Release_Notes_V9.1.3.pdf">9.1.3</a></td>
             <td>November 5, 2024</td>
             <td></td>
             <td>8.1.2</td>
@@ -116,7 +116,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>15.8</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.1/TDM_Release_Notes_V9.1.2.pdf">9.1.2</a></td>
+            <td align="left"><a href="/Release_Notes/TDM-V9.1/TDM_Release_Notes_V9.1.2.pdf">9.1.2</a></td>
             <td>October 8, 2024</td>
             <td></td>
             <td>8.1.0</td>
@@ -125,7 +125,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>15</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.1/TDM_Release_Notes_V9.1.1.pdf">9.1.1</a></td>
+            <td align="left"><a href="/Release_Notes/TDM-V9.1/TDM_Release_Notes_V9.1.1.pdf">9.1.1</a></td>
             <td>September 23, 2024</td>
             <td></td>
             <td>8.1.0</td>
@@ -134,7 +134,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>15</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.1/TDM_Release_Notes_V9.1.pdf">9.1.0</a></td>
+            <td align="left"><a href="/Release_Notes/TDM-V9.1/TDM_Release_Notes_V9.1.pdf">9.1.0</a></td>
             <td>September 15, 2024</td>
             <td></td>
             <td>8.1.0</td>
@@ -143,7 +143,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>15</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.0/TDM_Release_Notes_V9.0.6.pdf">9.0.6</a></td>
+            <td align="left"><a href="/Release_Notes/TDM-V9.0/TDM_Release_Notes_V9.0.6.pdf">9.0.6</a></td>
             <td>October 15, 2024</td>
             <td></td>
             <td>8.0 HF4</td>
@@ -152,7 +152,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>15</td>
         </tr>
            <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.0/TDM_Release_Notes_V9.0.5.pdf">9.0.5</a></td>
+            <td align="left"><a href="/Release_Notes/TDM-V9.0/TDM_Release_Notes_V9.0.5.pdf">9.0.5</a></td>
             <td>October 10, 2024</td>
             <td></td>
             <td>8.0 HF4</td>
@@ -161,7 +161,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>15</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.0/TDM_Release_Notes_V9.0.4.pdf">9.0.4</a></td>
+            <td align="left"><a href="/Release_Notes/TDM-V9.0/TDM_Release_Notes_V9.0.4.pdf">9.0.4</a></td>
             <td>August 20, 2024</td>
             <td></td>
             <td>8.0 HF2</td>
@@ -170,7 +170,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>15</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.0/TDM_Release_Notes_V9.0.3.pdf">9.0.3</a></td>
+            <td align="left"><a href="/Release_Notes/TDM-V9.0/TDM_Release_Notes_V9.0.3.pdf">9.0.3</a></td>
             <td>August 08, 2024</td>
             <td></td>
             <td>8.0 HF2</td>
@@ -179,7 +179,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>15</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.0/TDM_Release_Notes_V9.0.2.pdf">9.0.2</a></td>
+            <td align="left"><a href="/Release_Notes/TDM-V9.0/TDM_Release_Notes_V9.0.2.pdf">9.0.2</a></td>
             <td>July 30, 2024</td>
             <td></td>
             <td>8.0 HF1</td>
@@ -188,7 +188,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>15</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.0/TDM_Release_Notes_V9.0.1.pdf">9.0.1</a></td>
+            <td align="left"><a href="/Release_Notes/TDM-V9.0/TDM_Release_Notes_V9.0.1.pdf">9.0.1</a></td>
             <td>July 02, 2024</td>
             <td></td>
             <td>8.0 HF1</td>
@@ -197,7 +197,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>15</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.0/TDM_Release_Notes_V9.0.pdf">9.0</a></td>
+            <td align="left"><a href="/Release_Notes/TDM-V9.0/TDM_Release_Notes_V9.0.pdf">9.0</a></td>
             <td>June 09, 2024</td>
             <td></td>
             <td>8.0</td>
@@ -206,7 +206,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>15</td>
         </tr>
          <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V8.1/TDM_Release_Notes_V8.1.pdf">8.1.0</a></td>
+            <td align="left"><a href="/Archived%20TDM%20Versions/TDM_Release_Notes_V8.1.pdf">8.1.0</a></td>
             <td>October 24, 2023</td>
             <td></td>
             <td>7.2.0, 7.2.1 and 7.2.2</td>
@@ -215,7 +215,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>15</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V8.1/TDM_Release_Notes_V8.0.pdf">8.0.0</a></td>
+            <td align="left"><a href="/Archived%20TDM%20Versions/TDM_Release_Notes_V8.0.pdf">8.0.0</a></td>
             <td>May 25, 2023</td>
             <td></td>
             <td>7.1.0</td>
@@ -224,7 +224,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>13</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V8.1/TDM_Release_Notes_V7.6.pdf">7.6.0</a></td>
+            <td align="left"><a href="/Archived%20TDM%20Versions/TDM_Release_Notes_V7.6.pdf">7.6.0</a></td>
             <td>January 1, 2023</td>
             <td></td>
             <td>7.0</td>
@@ -233,7 +233,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>13</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V8.1/TDM_Release_Notes_V7.5.2.pdf">7.5.2</a></td>
+            <td align="left"><a href="/Archived%20TDM%20Versions/TDM_Release_Notes_V7.5.2.pdf">7.5.2</a></td>
             <td>October 6, 2022</td>
             <td></td>
             <td>6.5.9</td>
@@ -242,7 +242,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>13</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V8.1/TDM_Release_Notes_V7.5.1.pdf">7.5.1</a></td>
+            <td align="left"><a href="/Archived%20TDM%20Versions/TDM_Release_Notes_V7.5.1.pdf">7.5.1</a></td>
             <td>July 6, 2022</td>
             <td></td>
             <td>6.5.8</td>
@@ -251,7 +251,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>13</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V8.1/TDM_Release_Notes_V7.5.pdf">7.5.0</a></td>
+            <td align="left"><a href="/Archived%20TDM%20Versions/TDM_Release_Notes_V7.5.pdf">7.5.0</a></td>
             <td>May 4, 2022</td>
             <td></td>
             <td>6.5.7</td>
@@ -260,7 +260,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>13</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V8.1/TDM_Release_Notes_V7.4.pdf">7.4.0</a></td>
+            <td align="left"><a href="/Archived%20TDM%20Versions/TDM_Release_Notes_V7.4.pdf">7.4.0</a></td>
             <td>March 31, 2022</td>
             <td></td>
             <td>6.5.6</td>
@@ -269,7 +269,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>13</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V8.1/TDM_Release_Notes_V7.3.pdf">7.3.0</a></td>
+            <td align="left"><a href="/Archived%20TDM%20Versions/TDM_Release_Notes_V7.3.pdf">7.3.0</a></td>
             <td>November 8, 2021</td>
             <td></td>
             <td>6.5.3</td>
@@ -278,7 +278,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>9.6</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V8.1/TDM_Release_Notes_V7.2.pdf">7.2.0</a></td>
+            <td align="left"><a href="/Archived%20TDM%20Versions/TDM_Release_Notes_V7.2.pdf">7.2.0</a></td>
             <td>August 10, 2021</td>
             <td></td>
             <td>6.5.1</td>
@@ -287,7 +287,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>9.6</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V8.1/TDM_Release_Notes_V7.1.pdf">7.1.0</a></td>
+            <td align="left"><a href="/Archived%20TDM%20Versions/TDM_Release_Notes_V7.1.pdf">7.1.0</a></td>
             <td>May 31, 2021</td>
             <td></td>
             <td>6.5.0</td>
@@ -296,7 +296,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>9.6</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/Older%20versions/Fabric_Release%20Notes%20V6.2.1.pdf">6.2.1</a></td>
+            <td align="left"><a href="/Release_Notes/Older%20versions/Fabric_Release%20Notes%20V6.2.1.pdf">6.2.1</a></td>
             <td>October 15, 2020</td>
             <td>Dec 30, 2024</td>
             <td>6.2.0</td>
@@ -305,7 +305,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>9.6</td>
         </tr>
         <tr>
-            <td align="left"><a href="/Release_Notes_And_Upgrade/Older%20versions/Fabric_Release%20Notes%20V6.2.0.pdf">6.2.0</a></td>
+            <td align="left"><a href="/Release_Notes/Older%20versions/Fabric_Release%20Notes%20V6.2.0.pdf">6.2.0</a></td>
             <td>September 7, 2020</td>
             <td>Dec 30, 2024</td>
             <td>6.2.0</td>
