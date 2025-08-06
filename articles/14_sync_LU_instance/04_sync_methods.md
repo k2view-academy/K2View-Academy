@@ -21,7 +21,7 @@ Sync properties can be defined on an [LU schema](/articles/03_logical_units/03_L
 <p><strong>Sync Method<strong></p>
 </td>
 <td width="500">
-<p>None, Time Interval, Inherited and Decision function.</p>
+<p>None, Time Interval, Inherited, and Decision function.</p>
 </td>
 </tr>
 <tr>
@@ -29,7 +29,7 @@ Sync properties can be defined on an [LU schema](/articles/03_logical_units/03_L
 <p><strong>Parameters<strong></p>
 </td>
 <td width="500">
-<p>Settings of the selected sync method. For more details see the <a href="/articles/14_sync_LU_instance/04_sync_methods.md#sync-methods-1">Sync Methods section below. &nbsp;</a></p>
+<p>Settings of the selected sync method. For more details, see the <a href="/articles/14_sync_LU_instance/04_sync_methods.md#sync-methods-1">Sync Methods section below. &nbsp;</a></p>
 </td>
 </tr>
 <tr>
@@ -160,7 +160,7 @@ Sync properties can be defined on an [LU schema](/articles/03_logical_units/03_L
 <p><strong>Description</strong></p>
 </td>
 <td width="500">
-<p>Synchronization of each level inherits the sync rule of its direct parent branch according to the following hierarchy:</p>
+<p>Inherits the sync method according to the following hierarchy:</p>
 <p>&middot;&nbsp;&nbsp;&nbsp; LU table inherits from the LU schema.</p>
 <p>&middot;&nbsp;&nbsp;&nbsp; Table Population inherits from the LU table.</p>
 </td>
