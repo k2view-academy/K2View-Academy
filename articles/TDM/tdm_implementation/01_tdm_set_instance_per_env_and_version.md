@@ -9,7 +9,7 @@ TDM allows users to create [tasks](/articles/TDM/tdm_overview/02_tdm_glossary.md
 - Customer 1 exists in both the Production and UAT environments, with different data stored in each. TDM must create separate instances of Customer 1 — one for Production and one for UAT.
 - [Data Versioning task](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux): A task is created to save a data version (snapshot) of a specific entity — e.g., Customer 1 — in a testing environment. The task can be scheduled to run periodically, such as every few hours, to back up the data. Each saved version of Customer 1 is stored as a separate Logical Unit Instance (LUI).
 
-Additionally, TDM enables synthetic entity generation. Each generated entity must get a unique LUI.
+Additionally, TDM enables synthetic entity generation. Each generated entity must receive a unique LUI.
 
 ## TDM — LUI Format
 
