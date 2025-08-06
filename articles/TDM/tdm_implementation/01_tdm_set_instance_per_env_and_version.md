@@ -4,7 +4,7 @@
 
 TDM allows users to create [tasks](/articles/TDM/tdm_overview/02_tdm_glossary.md#task) that extract entities from a selected source environment. In addition, it enables capturing and storing different versions of the same extracted entity’s data, allowing the maintenance and reuse of various snapshots when needed.
 
-**Examples**
+**Examples**:
 
 - Customer 1 exists in both the Production and UAT environments, with different data stored in each. TDM must create separate instances of Customer 1 — one for Production and one for UAT.
 - [Data Versioning task](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux): A task is created to save a data version (snapshot) of a specific entity — e.g., Customer 1 — in a testing environment. The task can be scheduled to run periodically, such as every few hours, to back up the data. Each saved version of Customer 1 is stored as a separate Logical Unit Instance (LUI).
@@ -17,7 +17,7 @@ Additionally, TDM enables synthetic entity generation. Each generated entity mus
 
 ### Default LUI
 
-When an entity is extracted from the source environment, and the *Create data snapshot (version)* checkbox is checked, i.e., there is no need to create a separate entity snapshot upon each task execution, the LUI format is as follows: 
+When an entity is extracted from the source environment, and the *Create data snapshot (version)* checkbox is checked — meaning a separate entity snapshot is not required for each task execution — the LUI format is as follows: 
 
 ```
 <Source Env><separator><entity id>
@@ -31,7 +31,7 @@ When an entity is extracted from the source environment, and the *Create data sn
 
 ### Delete Only and Reserve Only Tasks
 
-When the TDM task is set to either only **Delete** an entity from the target environment, or only **Reserve** an entity in the target environment, the **target environment is concatenated to the LUI**, since the source environment is not set in these tasks.
+When a TDM task is set to perform either only a **Delete** (of an entity from the target environment) or only a **Reserve** (of an entity in the target environment) action, the **target environment is concatenated to the LUI**, since the source environment is not set in these task types.
 
  **Example**:
 
