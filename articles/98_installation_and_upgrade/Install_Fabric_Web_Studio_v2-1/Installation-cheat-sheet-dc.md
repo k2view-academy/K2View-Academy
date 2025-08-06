@@ -2,8 +2,9 @@
 # Cheat Sheet - Fabric Web Studio – Docker Compose Installation
 
 ## Prerequisites
-- Install Docker & Docker Compose plugin (not the deprecated `docker-compose` binary).
-- On Windows, use **WSL2** and install under a **Linux distribution** (not under `/mnt/c`).
+- Obtain an login account for https://docker.share.cloud.k2view.com
+- <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Docker-Compose.md">Install Docker & Docker Compose plugin</a> (not the deprecated `docker-compose` binary).
+- If installing on Windows, use **WSL2** and install under a **Linux distribution** (not under `/mnt/c`).
 - Internet access required to pull images from K2view Nexus unless using offline image loading.
 
 ## Package Contents
@@ -21,6 +22,7 @@
 ## Important Notes
 - **Default credentials**: `admin` / `admin`
 - **Persistent data** is stored under `persistent-data/<space-name>`
+- **In doubt?** Consult the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.html">installation instructions.</a>
 
 ## Installation Steps
 
@@ -49,7 +51,7 @@ mv Studio-Docker Studio
 
 ### 4. Configure Git & TLS (Optional)
 
-Edit `.env` to include:
+Edit `Studio/.env` to include:
 ```env
 GIT_REPO=<your_repo>
 GIT_BRANCH=main
@@ -59,7 +61,7 @@ GIT_USERNAME=<your_user>
 
 TLS: Replace `ssl-certs/cert.cer` and `ssl-certs/cert.key` with your own PEM-formatted certs.
 
-### 5. Select a Fabric Profile
+### 5. Select a Fabric Web Studio Profile
 Available profiles:
 - `studio` *(default, SQLite)*
 - `studio_pg` *(PostgreSQL)*
@@ -99,10 +101,10 @@ Password: admin
 ```
 
 ## Offline Docker Image Download (If No Internet)
-Instructions: <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.html#docker-image-offline-package-download">Offline Package Download</a>
+<a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.html#docker-image-offline-package-download">Offline Package Download Instructions</a>
 
 ## Operating
-Instructions: <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Operating.md">Operating</a>
+<a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Operating.md">Operating Instructions.</a>
 
 ## Troubleshooting
-Instructions: <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Troubleshooting.md">Troubleshooting</a>
+<a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Troubleshooting.md">Troubleshooting Instructions.</a>
