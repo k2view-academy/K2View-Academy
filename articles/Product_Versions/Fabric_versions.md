@@ -5,12 +5,12 @@ The below table displays the list of Fabric versions with their release informat
 <table>
     <tbody>
         <tr>
-            <td width="130pxl"><p><strong>Fabric Version</strong></p></td>
-            <td width="190pxl"><p><strong>Version Release Date</strong></p></td>
-            <td width="150pxl"><p><strong>Latest Hot Fix</strong></p></td>
-            <td width="150pxl"><p><strong>HF Release Date</strong></p></td>
-            <td width="130pxl"><p><strong>Release Num</strong></p></td>
-            <td width="150pxl"><p><strong>End of Life</strong></p></td>
+            <td width="100pxl"><p><strong>Fabric Version</strong></p></td>
+            <td width="150pxl"><p><strong>Version Release Date</strong></p></td>
+            <td width="100pxl"><p><strong>Latest Hot Fix</strong></p></td>
+            <td width="125pxl"><p><strong>HF Release Date</strong></p></td>
+            <td width="100pxl"><p><strong>Release Num</strong></p></td>
+            <td width="125pxl"><p><strong>End of Life</strong></p></td>
         </tr>
         <tr>
             <td align="left"><a href="/Release_Notes_And_Upgrade/V8.2/Fabric_Release_Notes_V8.3.0.pdf">8.3.0</a></td>
