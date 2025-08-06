@@ -22,7 +22,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>8.3.0</td>
             <td>3.11.14, 4.0.3, or 4.1.3</td>
             <td>N/A</td>
-            <td>17.0</td>
+            <td>17.5</td>
         </tr>
         <tr>
             <td align="left"><a href="/Release_Notes_And_Upgrade/TDM-V9.3/TDM_Release_Notes_V9.3.1.pdf">9.3.1</a></td>
