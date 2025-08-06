@@ -2,10 +2,10 @@
 # Cheat Sheet - Fabric Web Studio – Docker Compose Installation
 
 ## Prerequisites
-- Obtain an login account for https://docker.share.cloud.k2view.com
+- Obtain a login account for docker.share.cloud.k2view.com
 - <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Docker-Compose.md">Install Docker & Docker Compose plugin</a> (not the deprecated `docker-compose` binary).
 - If installing on Windows, use **WSL2** and install under a **Linux distribution** (not under `/mnt/c`).
-- Internet access required to pull images from K2view Nexus unless using offline image loading.
+- Internet access is required to pull images from K2view Nexus unless using offline image loading.
 
 ## Package Contents
 - `README.html` – Documentation
