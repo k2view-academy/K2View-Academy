@@ -12,103 +12,116 @@ The TDM infrastructure controls masking enablement/disablement based on the sett
 
 - From TDM 8.1 onwards, the TDM templates add the **CatalogMaskingMapper** Actor to the LU population flows in order to integrate with the Catalog masking. This Actor runs the Catalog-based masking on the identified PII fields before loading them into the LU table. 
 
-- It is possible edit the population flows in order to override the Catalog’s masking for some of the PII fields: add [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
-- If you need to send the original (source) values for the Masking Actors in the LU population, move the Query result to an **ArrayBuilder** Actor and connect the **ArrayBuilder** output to the **CatalogMaskingMapper** Actor instead of connecting the Query result to it. This is needed in order to invoke the Query output twice – sending it to the CatalogMaskingMapper Actor and to the Masking Actor.
-
 </web> 
 
-## TDM Processes that run Masking
+## TDM Processes that Mask Sensitive Data
 
 * **LU population flows** - the TDM templates add the **CatalogMaskingMapper** Actor to the LU population flows to run the Catalog-based masking on the identified PII fields before loading them into the LU table.  It is possible edit the population flows in order to override the Catalog’s masking for some of the PII fields: add [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
-
   * If the masked field is used as an [input argument](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md) that is linked to another LU table, add the masking population that masks the fields in all LU tables to the last executed LU table in order to have the original value when populating the LU tables. 
 
 * **Load flows** - the TDM templates add the **CatalogMaskingMapper** Actor to the load flows as well. It is possible edit the population flows in order to override the Catalog’s masking for some of the PII fields: add [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.  
-
+* [Explain about the new inner flow added for TDM 9.4. Add link to the article that explains when it is needed to override the catalog]
 * **Table-level flows** - the TDM table-level extract flow uses the **CatalogMaskingMapper** Actor to mask the sensitive data.
 
-  ## TDM - Masking Categories
+## Overriding the Catalog Masking 
 
-  One of the masking Actors' input parameters is named **category**. This parameter indicates *when* the masking Actor needs to generate a new value, e.g., when masking sensitive data or replacing the ID (sequence). The following values can be set in the category:
+- Overriding the Catalog masking may be required when there is a dependency between the PII fields. The Catalog masking handles each field separately.
 
-  - **enable_sequences**, which generates a new ID value
-  - **enable_masking**, which masks sensitive data
-  - Any custom string value
+- If you need to have a dependency between PII fields, you can override the Catalog masking for these fields. 
 
-  A new custom value has been added by TDM 8.1:  **enable_masking_uniqueness**. This category is set to true if the **enable_sequences** or the **enable_masking** categories are set to true by the TDM task execution process.
+- Examples:
 
-  By default, the category is set to **enable_masking** on all masking Actors except for the **MaskingSequence** Actor, in which case the default category is set to **enable_sequences**. The main use of the  **enable_masking_uniqueness** category is for PII fields that must have unique values, such as SSN. For these fields, it is recommended to set the **category** of the masking Actor to **enable_masking_uniqueness**.
+  - Address - the masked  city, street name, and zip code values must be related.
 
-  ### Setting the Mask Categories by the TDM Task Execution Processes
+  - Email - the masked email contains the masked first and last name values. 
 
-  The TDM execution processes sets the masking categories to true/false based on the TDM task execution settings:
+- **LU populations**: add the [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) **after** the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor in order to override the Catalog masking.
+- **Load flows**: add the [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) **after** the **HandleMaskAndSeqFields** flow.
+- If you need to send the original (source) values for the Masking Actors in the LU population or load flows, move the Query result to an **ArrayBuilder** Actor and connect the **ArrayBuilder** output to the **CatalogMaskingMapper** Actor (for LU population flow), or to the **HandleMaskAndSeqFields** flow (for load flow), instead of connecting the Query result to it. This is needed in order to invoke the Query output twice – sending it to the CatalogMaskingMapper/HandleMaskAndSeqFields and to the Masking Actor.
+- If your flows mask a PII field using the Masking actors (overriding the Catalog masking),  it is recommended to remove the PII classification in the Catalog for this field to prevent unnecessary double masking of this field. 
 
-  
+## TDM - Masking Categories
 
-  <table width="900pxl">
-  <tbody>
-  <tr>
-  <td width="250pxl">
-  <p><strong>Category</strong></p>
-  </td>
-  <td width="300pxl">
-  <p><strong>LU Population (extract part)</strong></p>
-  </td>
-  <td width="350pxl">
-  <p><strong>Load Process</strong></p>
-  </td>
-  </tr>
-  <tr>
-  <td width="250pxl">
-  <p>enable_masking</p>
-  </td>
-  <td width="300pxl">
-   <p>This attribute is set based on the  <a ref="/articles/TDM/tdm_gui/08_environment_window_general_information.md#mask-sensitive-data">source environment's setting</a>. 
-  </td>
-  <td width="350pxl">
-  <p>Will be set to true for the following tasks:</p>    
-  <ul>
-  <li>The task's selection method = Entity clone</li>
-  </ul>
-  <p>&nbsp;</p>
-  </td>
-  </tr>
-  <tr>
-  <td width="250pxl">
-  <p>enable_sequences</p>
-  </td>
-  <td width="300pxl">
-  <p>N/A</p>
-  </td>
-  <td width="350pxl">
-  <p>Will be set to true for the following tasks:</p>    
-  <ul>
-  <li>The task's selection method = Entity clone.</li>
-  <li>The task replaces the entities' sequences (IDs).</li>
-  <li>Load synthetically generated entities (the source environment is Synthetic).</li>
-  </ul>
-  </td>
-  </tr>
-  <tr>
-  <td width="250pxl">
-  <p>enable_masking_uniqueness</p>
-  </td>
-  <td width="300pxl">
-     Set to true if the enable_masking or enable_sequences are true.</p>
-  </td>
-  <td width="350pxl">
-  <p>Will be set to true for the following tasks:</p>    
-  <ul>
-  <li>The task's selection method = Entity clone.</li>
-  <li>The task replaces the entities' sequences (IDs).</li>
-  <li>Load synthetically generated entities (the source environment is Synthetic).</li>
-  </ul>
-  </td>
-  </tr>
-  </tbody>
-  </table>
+One of the masking Actors' input parameters is named **category**. This parameter indicates *when* the masking Actor needs to generate a new value, e.g., when masking sensitive data or replacing the ID (sequence). The following values can be set in the category:
 
-  
+- **enable_sequences**, which generates a new ID value
+- **enable_masking**, which masks sensitive data
+- Any custom string value
+
+A new custom value has been added by TDM 8.1:  **enable_masking_uniqueness**. This category is set to true if the **enable_sequences** or the **enable_masking** categories are set to true by the TDM task execution process.
+
+By default, the category is set to **enable_masking** on all masking Actors except for the **MaskingSequence** Actor, in which case the default category is set to **enable_sequences**. The main use of the  **enable_masking_uniqueness** category is for PII fields that must have unique values, such as SSN. For these fields, it is recommended to set the **category** of the masking Actor to **enable_masking_uniqueness**.
+
+### Setting the Mask Categories by the TDM Task Execution Processes
+
+The TDM execution processes sets the masking categories to true/false based on the TDM task execution settings:
+
+
+
+<table width="900pxl">
+<tbody>
+<tr>
+<td width="250pxl">
+<p><strong>Category</strong></p>
+</td>
+<td width="300pxl">
+<p><strong>LU Population (extract part)</strong></p>
+</td>
+<td width="350pxl">
+<p><strong>Load Process</strong></p>
+</td>
+</tr>
+<tr>
+<td width="250pxl">
+<p>enable_masking</p>
+</td>
+<td width="300pxl">
+ <p>This attribute is set based on the  <a ref="/articles/TDM/tdm_gui/08_environment_window_general_information.md#mask-sensitive-data">source environment's setting</a>. 
+</td>
+<td width="350pxl">
+<p>Will be set to true for the following tasks:</p>    
+<ul>
+<li>The task's selection method = Entity clone</li>
+</ul>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="250pxl">
+<p>enable_sequences</p>
+</td>
+<td width="300pxl">
+<p>N/A</p>
+</td>
+<td width="350pxl">
+<p>Will be set to true for the following tasks:</p>    
+<ul>
+<li>The task's selection method = Entity clone.</li>
+<li>The task replaces the entities' sequences (IDs).</li>
+<li>Load synthetically generated entities (the source environment is Synthetic).</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td width="250pxl">
+<p>enable_masking_uniqueness</p>
+</td>
+<td width="300pxl">
+   Set to true if the enable_masking or enable_sequences are true.</p>
+</td>
+<td width="350pxl">
+<p>Will be set to true for the following tasks:</p>    
+<ul>
+<li>The task's selection method = Entity clone.</li>
+<li>The task replaces the entities' sequences (IDs).</li>
+<li>Load synthetically generated entities (the source environment is Synthetic).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+
+
 
 * Notes:
 
