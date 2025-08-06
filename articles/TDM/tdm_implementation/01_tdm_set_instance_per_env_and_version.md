@@ -1,17 +1,17 @@
-# Set LU Instance Per Source Environment and Version
+# Set LU Instance per Source Environment and Version
 
 ## Overview
 
-TDM enables users to create a [TDM task](/articles/TDM/tdm_overview/02_tdm_glossary.md#task) and select the source environment from which the entity is extracted. Tasks can also be created to extract and save different versions of the data in selected entities.
+TDM allows users to create a [TDM task](/articles/TDM/tdm_overview/02_tdm_glossary.md#task) and select the source environment from which the entity will be extracted. Tasks can also be created to extract and save different versions of the data in selected entities.
 
 **Examples**
 
-- Customer 1 exists in both the Production and UAT environments where different data is saved in each environment. TDM must create separate instances of Customer 1, one for Production and another for UAT.
+- Customer 1 exists in both the Production and UAT environments, with different data stored in each. TDM must create separate instances of Customer 1 — one for Production and one for UAT.
 - [Data Versioning task](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux): A task is created to save a data version (snapshot) of Customer 1 in a testing environment and to run the task every couple of hours for backing up the data. Each version of Customer 1 must create a separate LU instance (LUI).
 
 Additionally, TDM enables a synthetic entity generation. Each generated entity must get a unique LUI.
 
-## TDM - LUI Format
+## TDM — LUI Format
 
 
 
