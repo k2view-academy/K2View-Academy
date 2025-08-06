@@ -87,7 +87,7 @@ The following MTables have been added to the **References** in the TDM library. 
 <p>Defines the interface name and the SQL query, or alternatively the Broadway flow, to generate the entity list when running a task with a Predefined entity list selection method for the entity's subset; one record per LU and environment name. The environment can be empty.</p>
 </td>
 <td valign="top" width="400pxl">
-<p>Populate this table for each Logical Unit. A separate record must be created for each Logical Unit in the Fabric project apart from TDM, TDM_LIBRARY and the dummy LU of the post-execution processes. &nbsp;</p>
+<p>Populate this table for each Logical Unit. A separate record must be created for each Logical Unit in the Fabric project, apart from TDM, TDM_LIBRARY, and the dummy LU of the post-execution processes. &nbsp;</p>
 <p>If there is a need to define a query per source environment, populate the source environment name and create a separate record for each Logical Unit and source_env_name combination. Otherwise, leave the source environment empty.</p>
         <p>Click <a href="14_tdm_implementation_supporting_non_jdbc_data_source.md">here</a> for more information on how to implement a Broadway flow to get the entities (populated in external_table_flow field of MigrateList table).</p>   
    <p><strong>Example 1:</strong></p>
