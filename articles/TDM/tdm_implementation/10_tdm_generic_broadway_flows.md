@@ -88,7 +88,7 @@ New templates, flows and Actors have been added in TDM 8.0 to support a syntheti
 
 Click [here](16_tdm_data_generation_implementation.md) to learn more about TDM data generation implementation.
 
-### 
+
 
 [![Previous](/articles/images/Previous.png)](09_tdm_reference_implementation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](11_tdm_implementation_using_generic_flows.md)
 
