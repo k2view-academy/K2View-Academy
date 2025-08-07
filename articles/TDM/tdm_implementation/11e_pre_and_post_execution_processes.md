@@ -1,4 +1,4 @@
-# Implementation of pre and post execution processes
+# Implementation of Pre and Post Execution Processes
 
 The TDM task enables adding **Pre-execution process** and **Post-execution process** processes in the task's [Advanced settings](/articles/TDM/tdm_gui/21_task_pre_and_post_execution_processes.md). The pre-execution processes run in the beginning of the task's execution, before all the related LUs have been executed. The post-execution processes run at the end of the task's execution, after all the related LUs have been executed.
 
@@ -12,7 +12,7 @@ Examples:
 
 ### 1. Create the Pre or Post Execution Flow
 
-The pre or post execution are Broadway flows. These flows can have external parameters that can be overridden by the task's creator. 
+The pre or post execution processes are Broadway flows. These flows can have external parameters that can be overridden by the task's creator. 
 
 #### Adding an Execution Note to the Task's Entities
 
