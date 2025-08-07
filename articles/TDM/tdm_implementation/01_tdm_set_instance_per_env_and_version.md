@@ -61,7 +61,7 @@ The LUI format of each generated entity is identical to the default format. The 
 
 #### AI-based Generation
 
-The AI process generates entities with numeric IDs. The TDM process, which imports the generated entities into Fabric, creates a unique LUI on each generated entity using the following format:
+The AI process generates entities with numeric IDs. The TDM process, which imports the generated entities into Fabric, creates a unique LUI for each generated entity using the following format:
 
 ```
 <AI env name><separator><new seq value for the entity id><separator><task execution id>
@@ -78,9 +78,9 @@ Notes:
 
 ### TDM Separator
 
-By default, the separator between the Source Environment and the Entity ID (IID) is an underscore. This can be set to a different separator in the [TDM_GENERAL_PARAMETERS TDM DB](/articles/TDM/tdm_architecture/02_tdm_database.md#tdm_general_parameters) table. Populate the **param_name** using the **iid_separator** and the **param_value** with the separator's value.   
+By default, an underscore is used as the separator between the Source Environment and the Entity ID (IID). A different separator can be configured in the [TDM_GENERAL_PARAMETERS TDM DB](/articles/TDM/tdm_architecture/02_tdm_database.md#tdm_general_parameters) table. Populate the **param_name** using the **iid_separator** and the **param_value** with the separator's value.   
 
-Note that you must restart Fabric after adding the IID separator to the TDM_GENERAL_PARAMETERS in order for the new separators to be stored in cache.
+Note that you must restart Fabric after adding the IID separator to the TDM_GENERAL_PARAMETERS table in order for the new separators to be stored in cache.
 
 
 
