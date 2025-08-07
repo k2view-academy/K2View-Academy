@@ -14,11 +14,11 @@ Click [here](04_fabric_tdm_library.md) for more information about the TDM Librar
 
 ## 2. [Creating Interfaces for Data Sources](/articles/05_DB_interfaces/01_interfaces_overview.md) 
 
-- Note — creating an interface for non-JDBC source may require an installation of the respective [K2exchange connector](/articles/04_fabric_studio/28_web_k2exchange.html)
+- Note: Creating an interface for a non-JDBC source may require installing the respective [K2exchange connector](/articles/04_fabric_studio/28_web_k2exchange.html).
 
 ## 3. Optional — [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md)  
 
-- [Running a Discovery on the project interfaces](/articles/39_fabric_catalog/04a_catalog_integration_with_fabric.md) — the Discovery process analyzes the requested interfaces, and among others, creates the schema with the identified relations between the datasets, and classifies fields as PIIs. The Catalog can also create artifacts in a CSV-format file which enables to create Logical Units (LUs) based on the discovered and enriched data model. 
+- [Running Discovery on project interfaces](/articles/39_fabric_catalog/04a_catalog_integration_with_fabric.md) — the Discovery process analyzes the requested interfaces, and among others, creates the schema with  identified relations between datasets, and classifies fields as PIIs. The Catalog can also create artifacts in a CSV-format file, enabling the creation of Logical Units (LUs) based on the discovered and enriched data model. 
 - [PII settings](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#pii--masking-tab)
 - [Sequence settings](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#sequences-tab)
 
