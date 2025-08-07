@@ -25,7 +25,7 @@ When an entity is extracted from the source environment, and the *Create data sn
 
  **Example:**
 
-- Extract Customer 1 from the PROD source environment. The LUI is PROD_1.
+- Extract Customer 1 from the PROD source environment. The LUI will be PROD_1.
 
 
 
@@ -35,7 +35,7 @@ When a TDM task is set to perform either only a **Delete** (of an entity from th
 
  **Example:**
 
-- Delete Customer 22 from UAT environment. The LUI is UAT_22.
+- Delete Customer 22 from UAT environment. The LUI will be UAT_22.
 
 ### Data Versioning Tasks
 
@@ -47,7 +47,7 @@ When the *Create data snapshot (version)* checkbox is checked in the task — in
 
 **Example:**
 
-Task execution IDs 11 and 15 extract and create a data snapshot of customer 1 from the PROD source environment. The LUIs will be PROD_1_11 and  PROD_1_15.  
+Task execution IDs 11 and 15 extract and create a data snapshot of Customer 1 from the PROD source environment. The LUIs will be PROD_1_11 and PROD_1_15.  
 
 ### Synthetic Data Generation
 
@@ -61,7 +61,7 @@ The LUI format of each generated entity is identical to the default format. The 
 
 #### AI-based Generation
 
-The AI process generates entities with numeric IDs. The TDM process, which imports the generated entities to Fabric, creates a unique LUI on each generated entity with the following format:
+The AI process generates entities with numeric IDs. The TDM process, which imports the generated entities into Fabric, creates a unique LUI on each generated entity using the following format:
 
 ```
 <AI env name><separator><new seq value for the entity id><separator><task execution id>
@@ -69,7 +69,7 @@ The AI process generates entities with numeric IDs. The TDM process, which impor
 
 **Example:**
 
-- Task execution id 102818 generates a new entity. The LUI is AI_3_102818.
+- Task execution ID 102818 generates a new entity. The LUI will be AI_3_102818.
 
 Notes:
 
