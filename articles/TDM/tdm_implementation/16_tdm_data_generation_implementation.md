@@ -93,12 +93,15 @@ From TDM 8.1 onwards, data generation flows are integrated with the [Fabric Cata
 
 #### 1. Sequence Handling 
 
-The **tdmSeqList** and **TDMSeqSrc2TrgMapping** [sequence](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences) tables must be populated before generating data generation flows. 
+Map the relevant Sequence names to the related fields in the tables before generating data generation flows. This is required in order to include sequence generation within data generation flows. 
+The TDM templates can get the sequence mapping either from the TDMSeqSrc2TrgMapping Actor or the Catalog. 
 
-This is required in order to include sequence generation within data generation flows for fields that are defined as sequences in the **TDMSeqSrc2TrgMapping** table. The generated flow sets the **sequenceId** input argument, which is created in the TDM DB for the generated ID with the following naming convention:
+Click [here](05d_tdm_sequence.md) for Sequence implementation guidelines. 
+
+The generated flow sets the **sequenceId** input argument, which is created in the TDM DB for the generated ID with the following naming convention:
 
 ```
-Gen_[the sequence name in TDMSeqSrc2TrgMapping]
+Gen_[the sequence name in TDMSeqSrc2TrgMapping or the Catalog's Sequence name]
 ```
 
 **Example:**
