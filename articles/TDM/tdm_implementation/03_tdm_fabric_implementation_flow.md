@@ -8,11 +8,11 @@ A TDM Fabric project includes the following:
 
 Implementing a TDM project in Fabric Studio involves several steps. The following illustration highlights the main ones. All steps are implemented in Fabric Studio except for the Fabric Catalog step: 
 
-## 1. [TDM Library installation](/articles/98_installation_and_upgrade/Install_TDM/TDM_Installation_V9.4.md#tdm-development-environment-installation)  
+## 1. [TDM Library Installation](/articles/98_installation_and_upgrade/Install_TDM/TDM_Installation_V9.4.md#tdm-development-environment-installation)  
 
 Click [here](04_fabric_tdm_library.md) for more information about the TDM Library and its content.
 
-## 2. [Creating interfaces for data sources](/articles/05_DB_interfaces/01_interfaces_overview.md) 
+## 2. [Creating Interfaces for Data Sources](/articles/05_DB_interfaces/01_interfaces_overview.md) 
 
 - Note — creating an interface for non-JDBC source may require an installation of the respective [K2exchange connector](/articles/04_fabric_studio/28_web_k2exchange.html)
 
@@ -22,7 +22,7 @@ Click [here](04_fabric_tdm_library.md) for more information about the TDM Librar
 - [PII settings](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#pii--masking-tab)
 - [Sequence settings](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#sequences-tab)
 
-## 4. [Logical units (LUs) creation and TDM Setup](05_tdm_lu_implementation_general.md)
+## 4. [Creation of Logical Units (LUs) and TDM Setup](05_tdm_lu_implementation_general.md)
 
 ## 5. LUs — Special Handling
 
@@ -37,16 +37,16 @@ Click [here](04_fabric_tdm_library.md) for more information about the TDM Librar
 - [Custom logic flows implementation](11d_custom_logic.md)
 - [Predefined entity list implementation](11c_predefined_entity_list.md)
 
-## 7. Optional — Synthetic data implementation
+## 7. Optional — Synthetic Data Implementation
 
 - [Rule-based generation](16_tdm_data_generation_implementation.md)
 - [AI-based generation](17_tdm_ai_generation_implementation.md)
 
-## 7. [Environment setup](tdm_fabric_implementation_environments_setup.md)
+## 7. [Environment Setup](tdm_fabric_implementation_environments_setup.md)
 
-## 8. Additional Optional setting 
+## 8. Additional Optional Setting 
 
-- [Table level tasks' implementation](09_tdm_reference_implementation.md)
+- [Implementation of table-level tasks](09_tdm_reference_implementation.md)
 
 - Pre and post execution processes implementation (including the execution note population)
 
