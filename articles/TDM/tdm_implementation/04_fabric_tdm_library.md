@@ -1,6 +1,6 @@
-# Fabric TDM Library
+# TDM Library
 
-The TDM Library has all the utilities required for implementing a TDM project and for running TDM execution processes. It holds the following:
+The TDM Library includes all the utilities required to implement a TDM project and run TDM execution processes. It holds the following:
 
 - [Shared Objects](#tdm-library---shared-objects)
 - [TDM MTables](#tdm-library---MTables)
@@ -8,9 +8,9 @@ The TDM Library has all the utilities required for implementing a TDM project an
 - [TDM_LIBRARY LU](#tdm_library-lu)
 - [TDM_Table level LU](09_tdm_reference_implementation.md) 
 
-The TDM Library must be imported to the Fabric project created for TDM. 
+The TDM Library must be imported into the Fabric project created for TDM. 
 
-## TDM Library - Shared Objects
+## TDM Library — Shared Objects
 
 ### TDM Web Services
 
@@ -21,9 +21,9 @@ As the TDM categories contain the product's Web Services, it is recommended to a
 ### Generic TDM Interfaces
 
 Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) into the project's **Shared Objects**:
-- **POSTGRESQL_ADMIN** - this is the admin connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). This interface is used by the **TDMDB flow** in the **TDM LU** to create the TDM DB in the PostgreSQL DB. 
+- **POSTGRESQL_ADMIN** — this is the admin connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). This interface is used by the **TDMDB flow** in the **TDM LU** to create the TDM DB in the PostgreSQL DB. 
 
-- **TDM** - this is the connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Edit the IP address according to the environment. 
+- **TDM** — this is the connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Edit the IP address according to the environment. 
 
     Note that if you work on a PostgreSQL with an SSL connection, you must edit the custom connection string of the POSTGRESQL_ADMIN and the TDM interfaces as follows:
 
@@ -33,11 +33,11 @@ Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_inter
 
     
 
-- [AI interfaces](17_tdm_ai_generation_implementation.md) - AI DB and Kubernetes interfaces. TDM 9.0 has added an integrated AI solution for generating synthetic data. The AI-related interfaces must be disabled in case the AI machine is not installed and the AI data generation is not in use.
+- [AI interfaces](17_tdm_ai_generation_implementation.md) — AI DB and Kubernetes interfaces. TDM 9.0 has added an integrated AI solution for generating synthetic data. The AI-related interfaces must be disabled in case the AI machine is not installed and the AI data generation is not in use.
 
 ### Shared Globals
 
-From TDM 9.4 onwards, the TDM shared Globals are split into two files: 
+From TDM V9.4 onwards, the TDM shared Globals are split into two files: 
 
 - Core Globals (Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/TDM/CoreGlobals/SharedGlobals.java) - this file includes internal TDM Globals that should **not** be overridden by the implementation; the file is overridden by the TDM upgrade.
 - Shared Globals (Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/TDM/SharedGlobals.java) that can be edited by implementation (for example, TDMDB_SCHEMA Global). The TDM upgrade merges the new Globals (if exist) into this file but does not override the existing values.
@@ -63,7 +63,7 @@ Import the TDM shared functions to your project. Note that as the TDM category c
 
 ## TDM Library - MTables
 
-TDM 8.1 replaces the previous TDM translation with [MTables](/articles/09_translations/06_mtables_overview.md) to support the development of the TDM on both Fabric Studios: Desktop-Studio and Web-Studio.
+TDM V8.1 replaces the previous TDM translation with [MTables](/articles/09_translations/06_mtables_overview.md) to support the development of the TDM on both Fabric Studios: Desktop-Studio and Web-Studio.
 
 The following MTables have been added to the **References** in the TDM library. Note that you **must deploy the Reference to Fabric** after updating the MTables:
 
