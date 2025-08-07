@@ -14,7 +14,7 @@ Click [here](04_fabric_tdm_library.md) for more information about the TDM Librar
 
 ## 2. [Creating Interfaces for Data Sources](/articles/05_DB_interfaces/01_interfaces_overview.md) 
 
-- Note: Creating an interface for a non-JDBC source may require installing the corresponding [K2exchange connector](/articles/04_fabric_studio/28_web_k2exchange.html).
+- Note: Creating an interface for a non-JDBC source may require installing the corresponding [K2exchange connector](/articles/04_fabric_studio/28_web_k2exchange.md).
 
 ## 3. Optional — [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md)  
 
