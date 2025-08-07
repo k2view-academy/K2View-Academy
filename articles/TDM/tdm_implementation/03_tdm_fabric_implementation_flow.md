@@ -48,7 +48,7 @@ Click [here](04_fabric_tdm_library.md) for more information about the TDM Librar
 
 - [Implementation of table-level tasks](09_tdm_reference_implementation.md)
 
-- Pre and post execution processes implementation (including the execution note population)
+- Implementation of pre and post execution processes
 
   
 
