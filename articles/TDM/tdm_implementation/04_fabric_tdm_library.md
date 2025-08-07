@@ -14,9 +14,9 @@ The TDM Library must be imported into the Fabric project created for TDM.
 
 ### TDM Web Services
 
-Deploy all TDM Web Services (APIs) to the Fabric project. These Web Services are invoked by the TDM Portal application, and they constitute of the back-end layer of the TDM Portal application.
+Deploy all TDM Web Services (APIs) to the Fabric project. These Web Services are invoked by the TDM self-service application and form its back-end layer.
 
-As the TDM categories contain the product's Web Services, it is recommended to add the project's Web Services into separate categories, which would simplify the TDM version upgrading.
+Since TDM categories contain the product's Web Services, it is recommended to add the project's Web Services into separate categories, which would simplify TDM version upgrading.
 
 ### Generic TDM Interfaces
 
