@@ -1,12 +1,12 @@
-# TDM — Fabric Implementation Overview
+# TDM — Project Implementation Overview
 
 A TDM Fabric project includes the following:
 
 - [TDM Library](04_fabric_tdm_library.md). The TDM Library must be included in the TDM Fabric project. 
-- Logical Units — business-driven entities and their related data are modeled into LUs like CRM, Billing, Ordering, etc. Each LU contains Broadway flows to delete or load entities from/to the target environment. In addition and LU contains data generation generation Broadway flows to generate rule-based synthetic entities
-- An environment setup — a process in which the source and target environments of the TDM are defined, and the connection details of interfaces and the Globals in each environment are set.
+- Logical Units — business-driven entities and their related data are modeled into LUs such as CRM, Billing, Ordering, etc. Each LU contains Broadway flows to delete or load entities from/to the target environment. In addition, an LU contains data generation Broadway flows to generate rule-based synthetic entities.
+- An environment setup — a process in which the source and target environments of TDM are defined, and the connection details of interfaces and Globals in each environment are configured.
 
-The implementation of TDM in Fabric involves several steps. The following illustration displays the main ones. All the steps are implemented in Fabric Studio except the Fabric Catalog step: 
+Implementing a TDM project in Fabric Studio involves several steps. The following illustration highlights the main ones. All steps are implemented in Fabric Studio except for the Fabric Catalog step: 
 
 ## 1. [TDM Library installation](/articles/98_installation_and_upgrade/Install_TDM/TDM_Installation_V9.4.md#tdm-development-environment-installation)  
 
@@ -18,7 +18,7 @@ Click [here](04_fabric_tdm_library.md) for more information about the TDM Librar
 
 ## 3. Optional — [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md)  
 
-- [Running a Discovery on the project interfaces](/articles/39_fabric_catalog/04a_catalog_integration_with_fabric.md) - the Discovery process analyzes the requested interfaces, and among others, creates the schema with the identified relations between the datasets,  and classifies fields as PIIs. The Catalog can also create artifacts in a CSV-format file which enables to create Logical Units (LUs) based on the discovered and enriched data model. 
+- [Running a Discovery on the project interfaces](/articles/39_fabric_catalog/04a_catalog_integration_with_fabric.md) — the Discovery process analyzes the requested interfaces, and among others, creates the schema with the identified relations between the datasets, and classifies fields as PIIs. The Catalog can also create artifacts in a CSV-format file which enables to create Logical Units (LUs) based on the discovered and enriched data model. 
 - [PII settings](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#pii--masking-tab)
 - [Sequence settings](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#sequences-tab)
 
