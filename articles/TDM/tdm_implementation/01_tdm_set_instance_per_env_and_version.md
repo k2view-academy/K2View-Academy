@@ -1,4 +1,4 @@
-# Set LU Instance per Source Environment and Version
+# Setting LU Instances per Source Environment and Version
 
 ## Overview
 
