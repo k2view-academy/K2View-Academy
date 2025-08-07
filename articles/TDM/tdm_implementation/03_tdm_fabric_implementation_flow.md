@@ -18,7 +18,7 @@ Click [here](04_fabric_tdm_library.md) for more information about the TDM Librar
 
 ## 3. Optional — [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md)  
 
-- [Running Discovery on project interfaces](/articles/39_fabric_catalog/04a_catalog_integration_with_fabric.md) — the Discovery process analyzes the requested interfaces, and among others, creates the schema with  identified relations between datasets, and classifies fields as PIIs. The Catalog can also create artifacts in a CSV-format file, enabling the creation of Logical Units (LUs) based on the discovered and enriched data model. 
+- [Running Discovery on project interfaces](/articles/39_fabric_catalog/04a_catalog_integration_with_fabric.md) — the Discovery process analyzes the requested interfaces and, among others activities, creates the schema with  identified relations between datasets, and classifies fields as PIIs. The Catalog can also create artifacts in a CSV-format file, enabling the creation of Logical Units (LUs) based on the discovered and enriched data model. 
 - [PII settings](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#pii--masking-tab)
 - [Sequence settings](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#sequences-tab)
 
@@ -31,7 +31,7 @@ Click [here](04_fabric_tdm_library.md) for more information about the TDM Librar
 - [LU hierarchy implementation](06_tdm_implementation_support_hierarchy.md)
 - [Error and statistics handling](12_tdm_error_handling_and_statistics.md)
 
-## 6. Optional — Implementation for Entity Sub Setting
+## 6. Optional — Implementation for Entity Subset Setting
 
 - [Business parameters implementation](07_tdm_implementation_parameters_handling.md)
 - [Custom logic flows implementation](11d_custom_logic.md)
