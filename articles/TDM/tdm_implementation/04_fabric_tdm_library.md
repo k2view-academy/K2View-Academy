@@ -33,7 +33,7 @@ Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_inter
 
     
 
-- [AI interfaces](17_tdm_ai_generation_implementation.md) — AI DB and Kubernetes interfaces. TDM 9.0 has added an integrated AI solution for generating synthetic data. The AI-related interfaces must be disabled in case the AI machine is not installed and the AI data generation is not in use.
+- [AI interfaces](17_tdm_ai_generation_implementation.md) — AI DB and Kubernetes interfaces. TDM V9.0 has added an integrated AI solution for generating synthetic data. The AI-related interfaces must be disabled in case the AI machine is not installed and the AI data generation is not in use.
 
 ### Shared Globals
 
@@ -45,7 +45,7 @@ From TDM V9.4 onwards, the TDM shared Globals are split into two files:
 
 
 #### SEQ_CACHE_INTERFACE Global
-A new Global has been added in TDM 8.1 - SEQ_CACHE_INTERFACE. This Global is populated with the DB interface of the k2masking DB (PostgreSQL or Cassandra), and it must be aligned with Fabric’s system DB. TDM 9 sets the POSTGRESQL_ADMIN as a default value in this Global:
+A new Global has been added in TDM 8.1 - SEQ_CACHE_INTERFACE. This Global is populated with the DB interface of the k2masking DB (PostgreSQL or Cassandra), and it must be aligned with Fabric’s system DB. From TDM V9.0 onwards, TDM setsthe POSTGRESQL_ADMIN as a default value in this Global:
 - If you use Cassandra as Fabric’s system DB, you must edit the SEQ_CACHE_INTERFACE Global and update its value to DB_CASSANDRA.
 - If you wish to use the PostgreSQL DB as Fabric's system DB, do the following:
     - Open the Fabric’s config.ini file and edit the [system_db] section’s attributes including the SYSTEM_DB_DATABASE attribute to be aligned with the POSTGRESQL_ADMIN DB interface. 
@@ -400,7 +400,7 @@ It is recommended to duplicate the TDM_Library LU and use it as a template when 
 
 ## TDM_TableLevel LU
 
-TDM 9.0 and onwards stores the extracted tables in a new LU - TDM_TableLevel. Each table is stored as a separate LUI. For more information, read [Tables Implementation](09_tdm_reference_implementation.md).
+TDM V9.0 and onwards stores the extracted tables in a new LU - TDM_TableLevel. Each table is stored as a separate LUI. For more information, read [Tables Implementation](09_tdm_reference_implementation.md).
 
 
 [![Previous](/articles/images/Previous.png)](03_tdm_fabric_implementation_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_tdm_lu_implementation_general.md)
