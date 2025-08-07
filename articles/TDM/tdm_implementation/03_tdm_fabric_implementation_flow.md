@@ -1,9 +1,9 @@
 # TDM — Fabric Implementation Overview
 
-A Fabric TDM project includes the following:
+A TDM Fabric project includes the following:
 
 - [TDM Library](04_fabric_tdm_library.md). The TDM Library must be included in the TDM Fabric project. 
-- Logical Units — business driven entities and their related data are modeled into LUs like CRM, Billing, Ordering, etc. Each LU contains Broadway flows to delete or load entities from/to the target environment. In addition and LU contains data generation generation Broadway flows to generate rule-based synthetic entities
+- Logical Units — business-driven entities and their related data are modeled into LUs like CRM, Billing, Ordering, etc. Each LU contains Broadway flows to delete or load entities from/to the target environment. In addition and LU contains data generation generation Broadway flows to generate rule-based synthetic entities
 - An environment setup — a process in which the source and target environments of the TDM are defined, and the connection details of interfaces and the Globals in each environment are set.
 
 The implementation of TDM in Fabric involves several steps. The following illustration displays the main ones. All the steps are implemented in Fabric Studio except the Fabric Catalog step: 
