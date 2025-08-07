@@ -31,7 +31,7 @@ Click [here](04_fabric_tdm_library.md) for more information about the TDM Librar
 - [LU hierarchy implementation](06_tdm_implementation_support_hierarchy.md)
 - [Error and statistics handling](12_tdm_error_handling_and_statistics.md)
 
-## 6. Optional — Implementation for Entity Sub setting
+## 6. Optional — Implementation for Entity Sub Setting
 
 - [Business parameters implementation](07_tdm_implementation_parameters_handling.md)
 - [Custom logic flows implementation](11d_custom_logic.md)
