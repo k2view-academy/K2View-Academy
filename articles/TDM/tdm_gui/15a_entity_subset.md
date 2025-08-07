@@ -125,7 +125,7 @@ To add a parameter:
 - Set the value on the parameter. You can set multiple values on a parameter if the selected operator is either IN or NOT IN:
   - Combo parameters - click on the value field to select a required value from the drop-down list; this can be done multiple times as more than one value can be selected in this field.
   - Free text parameters - populate the values with a separating comma. For example: NY, CA.
-- Add the **AND/OR** operator to connect the parameter to the previous parameters or group. The TDM Portal displays the SQL query, which is built based on the selected parameters.
+- Add the **AND/OR** operator to connect the parameter to the previous parameters or group. The TDM Self-Service application displays the SQL query, which is built based on the selected parameters.
 
 #### How Do I Populate a Parameter's Value?
 
@@ -135,7 +135,7 @@ There are several types of parameters:
 
   Click for more information about [setting a parameter as a combo parameter](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameters-implementation-guidelines).
 
-- **Number** - the TDM Portal displays the minimum and maximum values of this parameter. If the populated values exceed a parameter's range, an error message is displayed.
+- **Number** - the TDM Self-Service application displays the minimum and maximum values of this parameter. If the populated values exceed a parameter's range, an error message is displayed.
 
 - **Date** - populate the value using the following format: **YYYY-MM-DD**.
 
