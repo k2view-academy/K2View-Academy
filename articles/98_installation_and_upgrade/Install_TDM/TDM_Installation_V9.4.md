@@ -45,11 +45,11 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 - Perform the following step in order to use the **PostgreSQL** DB as the Fabric system DB:
   - Open Fabric’s **config.ini** file and edit the **[system_db]** section’s attributes, including the SYSTEM_DB_DATABASE attribute, to be aligned with the **POSTGRESQL_ADMIN** DB interface. 
 
-- Set the **POSTGRESQL_ADMIN interface** to be **active**.
+- Set the **POSTGRESQL_ADMIN interface** to **active**.
 - Edit the **TDM** and **POSTGRESQL_ADMIN** interfaces with the installed PostgreSQL connection details.
 - Set the **CREATE_TDMDB** Global in the TDM LU to **true**.
 - Optional: Edit the **TDMDB_SCHEMA** shared Global if you wish to create a schema other than **public** for the TDM DB. Restart Fabric after updating this Global.
-- Deploy the TDM LU. This deployment creates the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by running the **masking-create-cache-table.flow** execution from the Broadway Examples (found in the Broadway Flow window, Main Menu > Actions > Examples and select this flow).
+- Deploy the TDM LU. This deployment creates the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by running the **masking-create-cache-table.flow** from the Broadway Examples (found in the Broadway Flow window, Main Menu > Actions > Examples and select this flow).
 - After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false**.
 
 ### TDM On-Prem Installation — Web Studio
@@ -82,22 +82,22 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 
 #### TDM Deployment
 
-- Set the **POSTGRESQL_ADMIN interface** to be **active**.
+- Set the **POSTGRESQL_ADMIN interface** to **active**.
 - Edit the **TDM** and **POSTGRESQL_ADMIN** interfaces with the installed PostgreSQL connection details.
-- Do the following in order to use the **PostgreSQL** DB as the Fabric system DB:
+- Perform the following step in order to use the **PostgreSQL** DB as the Fabric system DB:
   - Open Fabric’s **config.ini** file and edit the **[system_db]** section’s attributes, including the SYSTEM_DB_DATABASE attribute, to be aligned with the **POSTGRESQL_ADMIN** DB interface. 
-- Set the **CREATE_TDMDB** TDM LU's Global to be **true**.
-- Optional - edit the **TDMDB_SCHEMA** shared Global if you wish to create a different schema than **public** for the TDM DB. Restart Fabric after updating this Global.
-- Deploy the TDM LU. The TDM LU deployment create the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by the **masking-create-cache-table.flow** execution (taken from the Broadway examples).
-- After the TDM DB is created, set the **CREATE_TDMDB** TDM LU's Global back to **false**. 
+- Set the **CREATE_TDMDB** Global in the TDM LU to **true**.
+- Optional: Edit the **TDMDB_SCHEMA** shared Global if you wish to create a schema other than **public** for the TDM DB. Restart Fabric after updating this Global.
+- Deploy the TDM LU. This deployment creates the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by running the **masking-create-cache-table.flow** from the Broadway examples.
+- After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false**. 
 
 ### K2view Cloud Development Environment Installation
 
-- Create a new space on K2view cloud. Select the **TDM Dev** Project and **TDM-9.4** Profile.
-- Set the **CREATE_TDMDB** TDM LU's Global to be **true**.
-- Optional - edit the **TDMDB_SCHEMA** shared Global if you wish to create a different schema than **public** for the TDM DB. Restart Fabric after updating this Global.
-- Deploy the TDM LU. The TDM LU deployment creates the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by the **masking-create-cache-table.flow** execution (taken from the Broadway examples).
-- After the TDM DB is created, set the **CREATE_TDMDB** TDM LU's Global back to **false**.
+- Create a new space on K2cloud. Select the **TDM Dev** Project and **TDM-9.4** Profile.
+- Set the **CREATE_TDMDB** Global in the TDM LU to **true**.
+- Optional: Edit the **TDMDB_SCHEMA** shared Global if you wish to create a schema other than **public** for the TDM DB. Restart Fabric after updating this Global.
+- Deploy the TDM LU. This deployment creates the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by running the **masking-create-cache-table.flow** from the Broadway examples.
+- After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false**.
 
 ## TDM Non-Development Environment Installation
 
@@ -105,9 +105,9 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 
 #### Prerequisites
 
-- Install VMs (virtual machines) for Fabric server and the PostgreSQL DB. The PostgreSQL DB is required for Fabric System (operational) DB and TDM operational DB.
+- Install VMs (virtual machines) for the Fabric server and the PostgreSQL DB. The PostgreSQL DB is required for Fabric System (operational) DB and TDM operational DB.
 
-- Install Fabric 8.3.x and PostgreSQL DB (TDM 9.4 was certified based on V17).
+- Install Fabric V8.3.X and PostgreSQL DB (TDM V9.4 was certified based on PG V17).
 
 - Note that Kafka installation is not required for a TDM project.
 
