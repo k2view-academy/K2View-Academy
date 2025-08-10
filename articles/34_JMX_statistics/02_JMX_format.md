@@ -6,11 +6,21 @@ JMX statistics is presented as a single web page that displays each of the relev
 
 ## Access JMX Statistics
 
+<studio>
+
 To access the Admin panel, click the **Globe** icon on the top left corner of the **Fabric Studio**. 
 
 <img src="images/JMX-pic2.png" style="zoom:80%;" >
 
 Enter your Admin credentials in the Admin panel home page and then click **Statistics** in the left panel.
+
+</studio>
+
+<web>
+
+To access JMX Statistics, Click <img src="images/30_02_icon.PNG" alt="image" style="zoom:67%;" /> to open the list of applications and click **Statistics**:
+
+</web>
 
 <img src="images/JMX-pic1.PNG" style="zoom:80%;" >
 
@@ -21,7 +31,7 @@ The following statistics sections can be viewed:
 The information provided will feature statistics about the **Loading phase** of each of the components running in the current sessions:
 
 ``` Fabric Launch Sequence ```
-    
+​    
 
     since		56:38:23.041					Time in miliseconds since the event last occured
     timestamp	2020-12-10 12:34:39.733 UTC		The time, in miliseconds since 1970-1-1 00:00 UTC, this event last occured
