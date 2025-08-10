@@ -62,7 +62,7 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 
 #### TDM Library Installation
 
-**An internet access is available**: open the Fabric Web Studio, click the [Extensions](/articles/04_fabric_studio/28_web_k2exchange.md) icon, and select the **TDM** to install the TDM library.
+**An internet access is available**: open the Fabric Web Studio, click the [Extensions](/articles/04_fabric_studio/28_web_k2exchange.md) icon, and select **TDM** to install the TDM library.
 
 **An internet access is unavailable**:  
 
