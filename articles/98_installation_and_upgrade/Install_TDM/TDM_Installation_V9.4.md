@@ -1,29 +1,29 @@
 # TDM Installation and Initial Configuration
 
-This document outlines the installation guidelines and initial configuration activities required for a new TDM installation or an upgrade to the current TDM version.
+This document outlines installation guidelines and initial configuration procedures required for a new TDM installation or an upgrade to the current TDM version.
 
 ## Table of Contents
 
 - [TDM Development Environment Installation](#tdm-development-environment-installation)
-    - [TDM On-Prem Installation - Desktop Studio](#tdm-on-prem-installation---desktop-studio)
-    - [TDM On-Prem Installation - Web Studio](#tdm-on-prem-installation---web-studio)
+    - [TDM On-Prem Installation — Desktop Studio](#tdm-on-prem-installation---desktop-studio)
+    - [TDM On-Prem Installation — Web Studio](#tdm-on-prem-installation---web-studio)
     - [TDM K2view Cloud Installation](#k2view-cloud-development-environment-installation)     
 - [TDM Non-Development Environment Installation](#tdm-non-development-environment-installation)
     - [On-Prem VM Installation](#on-prem-vm-installation) 
     - [K2view Cloud Installation](#k2view-cloud-installation)
 
-- [TDM Initial setup](#tdm-initial-setup)
-- [Optional-TDM AI Installation](#optional---tdm-ai-installation)
+- [TDM Initial Setup](#tdm-initial-setup)
+- [Optional — TDM AI Installation](#optional---tdm-ai-installation)
 
 ## TDM Development Environment Installation
 
-### TDM On-Prem Installation - Desktop Studio
+### TDM On-Prem Installation — Desktop Studio
 
 #### Prerequisites
 
-- Download and install Fabric 8.3.x studio.
-- Create a project in the Fabric studio for the TDM. It is recommended to maintain this project in a pre-configured GitHub repository.
-- Create a PostgreSQL DB - a  PostgreSQL DB is required for Fabric System (operational) DB and TDM operational DB (TDM 9.4 was certified based on V17). Note that you can download a PG image  from k2view download page. For more details, read [here](/articles/98_maintenance_and_operational/Installations/Linux/PGSQL_setup.md).
+- Download and install Fabric V8.3.X studio.
+- Create a project in the Fabric studio for TDM. It is recommended to maintain this project in a pre-configured GitHub repository.
+- Create a PostgreSQL DB — a PostgreSQL DB is required for Fabric System (operational) DB and TDM operational DB (TDM V9.4 was certified based on PG V17). Note that you can download a PG image from k2view download page. For more details, read [here](/articles/98_maintenance_and_operational/Installations/Linux/PGSQL_setup.md).
 
 #### TDM Library Installation
 
@@ -33,7 +33,7 @@ This document outlines the installation guidelines and initial configuration act
     <li><a href="https://k2view.sharepoint.com/:f:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v9.x/V9.4?csf=1&web=1&e=jANmIa">Download Links for K2view Representatives</a></li>
 </ul>
 
-- Once downloaded, import the TDM Library export file using the **Import All** option — right-click on the root of the Project Tree, click on Import, and then choose Import All to open the File Browser and select the export file to be imported — to import the TDM LU export file. The following LUs would then be imported into your project: TDM, TDM_LIBRARY, and the TDM_TableLevel.
+- Once downloaded, import the TDM Library export file using the **Import All** option: Right-click on the root of the Project Tree, click on **Import**, and select **Import All**, then in the File Browser, choose the export file to be imported. The following LUs would then be imported into your project: TDM, TDM_LIBRARY, and the TDM_TableLevel.
 
 Click [here](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) for more information about the TDM Library.
 
