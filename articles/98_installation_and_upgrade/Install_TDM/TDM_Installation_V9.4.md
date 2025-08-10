@@ -183,9 +183,9 @@ TDM equips your QA and development teams with cutting-edge AI-driven synthetic d
 - **One-Click AI Workflows**: Select a Business Entity, choose your training model, specify the data volume, and launch a “generate new data” task. The system handles model selection, data ingestion into Fabric, and optionally loads the data directly into test environments. 
 - **Robust Implementation Controls**: Easily configure AI endpoints using global settings — such as AI_DB_INTERFACE, AI_ENVIRONMENT and AI_EXECUTION — allowing teams to customize connectivity, environments, and cleanup protocols. 
 - **Hybrid, Business-Ready Approach**: Choose between rule-based or AI-based generation for each scenario, which is an ideal approach for use cases ranging from edge-case testing to large-scale synthetic data population. 
-- **Seamless Integration & Compliance**: Generated entities come with built-in handling for sequence IDs, LUI mapping, and referential integrity. All data is cataloged in Fabric and masked as needed. 
+- **Seamless Integration & Compliance**: Generated entities include built-in support for sequence IDs, LUI mapping, and referential integrity. All data is cataloged in Fabric and masked as required. 
 
-The [TDM AI installation guide](TDM_AI_Installation_V9.x.md) outlines the key infrastructure and application setup steps required to integrate K2View TDM with AI-powered capabilities, covering everything from GPU-enabled environment provisioning to project configuration, cleanup processes, and performance testing.
+The [TDM AI installation guide](TDM_AI_Installation_V9.x.md) outlines the essential infrastructure and application setup steps needed to integrate K2view's TDM with AI-powered capabilities. It covers everything from provisioning GPU-enabled environments to project configuration, cleanup processes, and performance testing.
 
 
 
