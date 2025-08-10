@@ -13,7 +13,7 @@ This document outlines installation guidelines and initial configuration procedu
     - [K2view Cloud Installation](#k2view-cloud-installation)
 
 - [TDM Initial Setup](#tdm-initial-setup)
-- [Optional — TDM AI Installation](#optional---tdm-ai-installation)
+- [Optional — TDM AI Installation](#optional--tdm-ai-installation)
 
 ## TDM Development Environment Installation
 
