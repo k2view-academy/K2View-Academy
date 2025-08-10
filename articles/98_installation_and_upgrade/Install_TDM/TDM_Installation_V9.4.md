@@ -111,7 +111,7 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 
 - Note that Kafka installation is not required for a TDM project.
 
-- For more information see:
+- For more information, see the following articles:
 
   [Fabric 8 Setup Guide](/articles/98_maintenance_and_operational/Installations/Linux/02_Fabric_8.x.x_Setup.md) 
 
@@ -123,8 +123,8 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 
 - It is recommended to use separate Git branches for Dev, Testing (SIT), and Production environments. Dev changes are merged to the Testing branch, and tested changes are merged from the Testing branch to the Production branch.
 - Edit the following Globals in the relevant branch **before** the clone in order to create the TDM DB and k2masking schema in the first TDM LU deployment:
-  - **CREATE_TDMDB** TDM LU's Global must be set to **true**
-  - Optional - edit the **TDMDB_SCHEMA** shared Global if you wish to create a different schema than **public** for the TDM DB. 
+  - The **CREATE_TDMDB** Global in the TDM LU must be set to **true**.
+  - Optional: Edit the **TDMDB_SCHEMA** shared Global if you wish to create a schema other than **public** for the TDM DB. 
 - Clone the relevant GitHub branch. 
 
 #### Build and Deploy the Environments to Fabric
