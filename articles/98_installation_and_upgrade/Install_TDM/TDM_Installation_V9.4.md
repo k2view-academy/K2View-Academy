@@ -48,7 +48,7 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 - Set the **POSTGRESQL_ADMIN interface** to be **active**.
 - Edit the **TDM** and **POSTGRESQL_ADMIN** interfaces with the installed PostgreSQL connection details.
 - Set the **CREATE_TDMDB** TDM LU's Global to be **true**.
-- Optional - edit the **TDMDB_SCHEMA** shared Global if you wish to create a different schema than **public** for the TDM DB. Restart Fabric after updating this Global.
+- Optional: Edit the **TDMDB_SCHEMA** shared Global if you wish to create a schema other than **public** for the TDM DB. Restart Fabric after updating this Global.
 - Deploy the TDM LU. The TDM LU deployment create the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by the **masking-create-cache-table.flow** execution (taken from the Broadway examples).
 - After the TDM DB is created, set the **CREATE_TDMDB** TDM LU's Global back to **false**.
 
