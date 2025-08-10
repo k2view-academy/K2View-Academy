@@ -173,7 +173,7 @@ The following MTables have been added to the **References** in the TDM library. 
 <li><strong>child_lu_eid_sql = </strong>select order_id from subscriber</li>
 <li><strong>child_lu_tar_eid_sql = </strong>select order_id from tar_subscriber</li>    
 </ul>
-<p>The parameters - tables, subscriber and tar_subscriber - must all be defined in the CRM LU schema.</p>  
+<p>The parameters — tables, subscriber and tar_subscriber — must all be defined in the CRM LU schema.</p>  
 </td>
 </tr>
 <tr>
