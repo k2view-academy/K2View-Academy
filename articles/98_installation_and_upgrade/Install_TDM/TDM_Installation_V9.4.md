@@ -115,9 +115,11 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 
   [Fabric 8 Setup Guide](/articles/98_installation_and_upgrade/Install_on_Linux/02_Fabric_8.x.x_Setup.md)
   
-  [Installation Requirements for Kubernetes, Linux, and Docker Fabric & TDM](/articles/98_maintenance_and_operational/Hardware/2_All_Environments/README.md)
+  [Kubernetes System Requirements](/articles/98_installation_and_upgrade/Hardware_K8s/README.md)
 
-  [PostgreSQL Setup](/articles/98_maintenance_and_operational/Installations/Linux/02.2_Fabric_8.x.x_PG_setup.md)
+  [Linux / Docker Requirements](/articles/98_installation_and_upgrade/Hardware_Linux_Docker/README.md)
+
+  [PostgreSQL Setup](/articles/98_installation_and_upgrade/Install_on_Linux/02.2_Fabric_8.x.x_PG_setup.md)
 
 #### Git Clone
 
