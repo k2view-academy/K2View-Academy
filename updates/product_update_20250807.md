@@ -11,6 +11,6 @@ Below is a partial list of the key highlights in this release:
 * **Manual override of the relations** has been enhanced to allow the creation of cross-schema / cross-data platform relations. In addition, a relation can now be created from any field of the parent table, and not necessarily from the primary key.
 * Fabric V8.3.0, coupled with TDM V9.4.0, can now provide a **native end-to-end solution for NoSQL Document Storage**  (such as MongoDB or CouchBase), which covers the process from Discovery to LU creation, masking of sensitive PII data, and data provisioning into the target system.
 
-To get the full list of features and fixes, refer to the [Release Notes](https://support.k2view.com/Academy/Release_Notes/V8.3/Fabric_Release_Notes_V8.3.0.pdf.html) and [Upgrade Procedure to 8.3](https://support.k2view.com/Academy/articles/98_installation_and_upgrade/Upgrade_Fabric/Fabric_Upgrade_Procedure_To_V8.3.pdf).
+Refer to the [Release Notes](https://support.k2view.com/Academy/Release_Notes/V8.3/Fabric_Release_Notes_V8.3.0.pdf.html) and [Upgrade Procedure to 8.3](https://support.k2view.com/Academy/articles/98_installation_and_upgrade/Upgrade_Fabric/Fabric_Upgrade_Procedure_To_V8.3.pdf) for the full list of features and fixes.
 
 <img src="images/img.png" alt="image" style="zoom: 70%;" />
