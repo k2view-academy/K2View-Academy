@@ -62,12 +62,23 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 
 #### TDM Library Installation
 
-**An internet access is available**: open the Fabric Web Studio, click the [Extensions](/articles/04_fabric_studio/28_web_k2exchange.md) icon, and select **TDM** to install the TDM library.
+**If internet access is available**: 
 
-**An internet access is unavailable**:  
+- Open the Fabric Web Studio.
+- Click the [Extensions](/articles/04_fabric_studio/28_web_k2exchange.md) icon.
+- Select **TDM** to install the TDM library.
 
-- Download the VSIX file from the download page and upload it to the TDM project: Right-click on project-resources from the Project Tree > Upload Files… > select the downloaded TDM VSIX file. - 
-- Click the Extensions icon, then click the three-horizontal-dots menu (top-right of the pane) and select the *Install from VSIX…* option. A pop-up window opens. Select the uploaded TDM VSIX file, then click *Install from VSIX*. 
+**If internet access is unavailable**:  
+
+- Download the VSIX file from the download page.
+- Upload the file to the TDM project: 
+  -  Right-click on **project-resources** from the Project Tree.
+  -  Select **Upload Files…** and choose the downloaded TDM VSIX file. 
+- Click the **Extensions** icon.
+- Click the three-horizontal-dots menu (top-right of the pane).
+- Select *Install from VSIX…*.
+- In the pop-up window, select the uploaded TDM VSIX file.
+- Click *Install from VSIX*. 
 
 #### TDM Deployment
 
