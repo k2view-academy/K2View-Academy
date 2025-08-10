@@ -1,6 +1,6 @@
 # TDM Installation and Initial Configuration
 
-This document outlines installation guidelines and initial configuration procedures required for a new TDM installation or an upgrade to the current TDM version.
+This document outlines installation guidelines and initial configuration procedures required for a new TDM installation. The upgrade to TDM V9.4 is described in the [TDM upgrade document](/articles/98_installation_and_upgrade/Upgrade_TDM/TDM_Upgrade_Procedure_to_V9.4.pdf).
 
 ## Table of Contents
 
