@@ -67,7 +67,7 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 **An internet access is unavailable**:  
 
 - Download the VSIX file from the download page and upload it to the TDM project: Right-click on project-resources from the Project Tree > Upload Files… > select the downloaded TDM VSIX file. - 
-- Click the Extension icon then click the three dots icon (top-right of the pane) and select the *Install from VSIX…* option. A pop-up window opens: select the uploaded TDM VSIX file and click the *Install from VSIX* button. 
+- Click the Extensions icon, then click the three-horizontal-dots menu (top-right of the pane) and select the *Install from VSIX…* option. A pop-up window opens. Select the uploaded TDM VSIX file, then click *Install from VSIX*. 
 
 #### TDM Deployment
 
