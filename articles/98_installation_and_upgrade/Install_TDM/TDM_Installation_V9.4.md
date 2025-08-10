@@ -37,7 +37,7 @@ This document outlines installation guidelines and initial configuration procedu
 
 Click [here](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) for more information about the TDM Library.
 
-Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md#how-can-i-import-a-k2export-file-into-my-project) for more information about the import options.
+Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md#how-can-i-import-a-k2export-file-into-my-project) for more information about ***Import* options**.
 
 #### TDM Deployment
 
@@ -66,7 +66,7 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 
 **An internet access is unavailable**:  
 
-- Download the VSIX file from the download page and upload it to the TDM project: Right-click the project-resources from the Project Tree > Upload Files… > select the downloaded TDM VSIX file. - 
+- Download the VSIX file from the download page and upload it to the TDM project: Right-click on project-resources from the Project Tree > Upload Files… > select the downloaded TDM VSIX file. - 
 - Click the Extension icon then click the three dots icon (top-right of the pane) and select the *Install from VSIX…* option. A pop-up window opens: select the uploaded TDM VSIX file and click the *Install from VSIX* button. 
 
 #### TDM Deployment
