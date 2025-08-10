@@ -58,11 +58,11 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 
 - [Install **Docker Compose** container](https://github.com/k2view/blueprints/blob/main/Studio/Docker/README.md) to host the Web Studio.
 
-  [Install the Fabric V8.3.X Web Studio](/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/README.md). Use the **studio_pg** profile: a Web Studio with PostgreSQL for use with its System DB and TDM.
+  [Install Fabric V8.3.X Web Studio](/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/README.md). Use the **studio_pg** profile: a Web Studio with PostgreSQL for use with its System DB and TDM.
 
 #### TDM Library Installation
 
-**An internet access is available**: open the Fabric Web studio, click the [Extensions](/articles/04_fabric_studio/28_web_k2exchange.md) icon, and select the **TDM** to install the TDM library.
+**An internet access is available**: open the Fabric Web Studio, click the [Extensions](/articles/04_fabric_studio/28_web_k2exchange.md) icon, and select the **TDM** to install the TDM library.
 
 **An internet access is unavailable**:  
 
