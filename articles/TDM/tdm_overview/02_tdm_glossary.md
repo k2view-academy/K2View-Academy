@@ -25,7 +25,7 @@
 <h4>Fabric</h4>
 </td>
 <td valign="top" width="600pxl">
-<p>K2view,ד Fabric is a data management platform that provides access to data where and when you need it. Acting as a new data layer above existing data sources, Fabric controls data using a patented business driven entity approach offering multiple and diverse built-in integrated data management capabilities for an end-to-end management of the data life cycle. For more details, read <a href="/articles/01_fabric_overview/01_what%20is%20fabric.md">Fabric Overview</a>.</p>
+<p>K2view's Fabric is a data management platform that provides access to data where and when you need it. Acting as a new data layer above existing data sources, Fabric controls data using a patented business driven entity approach offering multiple and diverse built-in integrated data management capabilities for an end-to-end management of the data life cycle. For more details, read <a href="/articles/01_fabric_overview/01_what%20is%20fabric.md">Fabric Overview</a>.</p>
 </td>
 </tr>
 <tr>
