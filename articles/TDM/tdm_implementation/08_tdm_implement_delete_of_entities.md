@@ -17,7 +17,7 @@ The task execution needs to sync only the target tables and keep the source tabl
 
 Set the [Sync method](/articles/14_sync_LU_instance/04_sync_methods.md) on the [LU schema level](/articles/14_sync_LU_instance/07_sync_levels.md) to **None** in order to support these scenarios. This way, the source LU tables will be synced only once, apart from when the task's Policy of fetching data is set to **All data from [source environment name]**. The target LU tables, however, will be synced whenever the task needs to delete the entities, as the target LU tables have a [decision function](#adding-a-decision-function-to-the-target-lu-tables) that runs their population for such case.
 
-Click [here](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.0_TDM_9.0/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution) for more information about the task's execution sync modes.
+Click [here](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution) for more information about the task's execution sync modes.
 
 ## LU Structure - Target Tables
 
