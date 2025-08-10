@@ -81,11 +81,11 @@ Populate the list of entities for the task. The populated entities should be sep
 
 ## Predefined Entity List
 
-Run the SQL query or the [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-6---optional---get-the-entity-list-for-an-extract-all-task-using-a-broadway-flow) defined in the [MigrateList MTable](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#migratelist) object for the task's Business Entity. This option is available for admin users, environment owners, and tester with [unlimited entities permission set](10_environment_roles_tab.md#number-of-entities) on the task's environment.
+Run the SQL query or the [Broadway flow](/articles/TDM/tdm_implementation/11c_predefined_entity_list.md) defined in the [MigrateList MTable](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#migratelist) object for the task's Business Entity. This option is available for admin users, environment owners, and testers with [unlimited entities permission set](10_environment_roles_tab.md#number-of-entities) on the task's environment.
 
 ## Predefined Custom Logic
 
-Select a predefined [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in order to extract an entity list for the task. Set the **Max number of entities** field by entering a number to limit the number of entities retrieved by the flow, or leave it empty to process all retrieved entities. Populate the input parameters for the selected flow, if required.
+Select a predefined [Broadway flow](/articles/TDM/tdm_implementation/11d_custom_logic.md) in order to extract an entity list for the task. Set the **Max number of entities** field by entering a number to limit the number of entities retrieved by the flow, or leave it empty to process all retrieved entities. Populate the input parameters for the selected flow, if required.
 
 Note that you can leave the **Max number of entities** field empty if you are an admin user, the environment owner, or a tester user with the [**Unlimited entities** permission set](10_environment_roles_tab.md#number-of-entities) on the task's environment.
 
