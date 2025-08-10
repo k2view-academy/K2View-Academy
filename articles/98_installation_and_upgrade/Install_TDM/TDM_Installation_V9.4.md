@@ -134,7 +134,7 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 
 #### Build and Deploy the TDM Project to Fabric
 
-- Deploy the TDM LU. The TDM LU deployment create the TDM DB and the k2masking schema. After the TDM DB is created, set the **CREATE_TDMDB** TDM LU's Global back to **false**.
+- Deploy the TDM LU. This deployment creates the TDM DB and the k2masking schema. After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false**.
 
 - Build and deploy the remaining TDM project to Fabric.
 
@@ -144,11 +144,11 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 
 ### K2view Cloud Installation
 
-- Create a Project with Fabric 8.3.x and PostgreSQL DB.
+- Create a Project with Fabric V8.3.X and PostgreSQL DB.
 - Attach the relevant GitHub branch to this project. 
-- Edit the following Globals in the relevant branch before the clone in order to create the TDM DB and k2masking schema in the first TDM LU deployment:
-  - **CREATE_TDMDB** TDM LU's Global must be set to **true**
-  - Optional - edit the **TDMDB_SCHEMA** shared Global if you wish to create a different schema than **public** for the TDM DB. 
+- Edit the following Globals in the relevant branch before cloning in order to create the TDM DB and k2masking schema during the first TDM LU deployment:
+  - The **CREATE_TDMDB** Global in the TDM LU must be set to **true**
+  - Optional: Edit the **TDMDB_SCHEMA** shared Global if you wish to create a schema other than **public** for the TDM DB. 
 - Create a space based on this Project. Deploy the project to Fabric.
 
 
@@ -157,31 +157,32 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 
 The following activities must be performed after deploying the TDM project to Fabric:
 
-- [Define Fabric roles](/articles/TDM/tdm_configuration/03_tdm_fabric_credentials.md) - a role for each user group as set in the external IDP. Grant permissions to each role.
+- [Define Fabric roles](/articles/TDM/tdm_configuration/03_tdm_fabric_credentials.md) — one for each user group as defined in the external IDP, and grant permissions to each role.
 
 - [TDM DB - General Parameters setup](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md).
 
 - TDM self-service application setup:
 
-  - [Permission group mapping](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md) - map the Fabric roles related to the TDM users to the TDM permission group (admin/owner/user).
+  - [Permission group mapping](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md) — map the Fabric roles related to the corresponding TDM users to the TDM permission group (admin/owner/user).
 
-  - [Business entities creation](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md). Note that all LUs must be deployed to Fabric before creating Business Entities (Bes).
+  - [Business Entities creation](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md). Note that all LUs must be deployed to Fabric before creating Business Entities (BEs).
 
   - [Systems creation](/articles/TDM/tdm_gui/05_tdm_gui_product_window.md).
 
-  - [Environments creation and setup](/articles/TDM/tdm_gui/07_tdm_gui_environment_overview.md) - create all environments in TDM self-service application. Optional - add permission sets to the environments to assign testers to these environments and define their TDM permissions.
-    Note that the environments must be deployed to Fabric before creating the environments in the TDM self-service application.
+  - [Environment creation and setup](/articles/TDM/tdm_gui/07_tdm_gui_environment_overview.md) — create all environments in the TDM self-service application.
+      - Optional: Add permission sets to the environments to assign testers to these environments and define their TDM permissions.
+      - Note that the environments must be deployed to Fabric before creating the environments in the TDM self-service application.
 
     
 
-## Optional - TDM AI Installation
+## Optional — TDM AI Installation
 
-The TDM equips your QA and development teams with cutting-edge AI-driven synthetic data generation, transforming test data creation from manual rule-based scripts into intelligent automation:
+TDM equips your QA and development teams with cutting-edge AI-driven synthetic data generation, transforming test data creation from manual rule-based scripts into intelligent automation:
 
-- **AI-First Data Synthesis**: TDM seamlessly integrates with AI models to train on your existing data schema and generate realistic, production-grade synthetic entities—all within the platform.
-- **One-Click AI Workflows**: Select a business entity, choose your training model, specify volume, and launch a “generate new data” task. The system handles model selection, data ingestion into Fabric, and optional direct loading into test environments 
-- **Robust Implementation Controls**: Easily configure AI endpoints using global settings—like AI_DB_INTERFACE, AI_ENVIRONMENT, and AI_EXECUTION—so teams can tailor connectivity, environments, and cleanup protocols 
-- **Hybrid, Business-Ready Approach**: Choose between rule-based or AI-based generation per scenario—ideal for use cases ranging from edge-case testing to large-scale synthetic population 
+- **AI-First Data Synthesis**: TDM seamlessly integrates with AI models to train on your existing data schema and generate realistic, production-grade synthetic entities — all within the platform.
+- **One-Click AI Workflows**: Select a Business Entity, choose your training model, specify the data volume, and launch a “generate new data” task. The system handles model selection, data ingestion into Fabric, and optionally loads the data directly into test environments. 
+- **Robust Implementation Controls**: Easily configure AI endpoints using global settings — such as AI_DB_INTERFACE, AI_ENVIRONMENT and AI_EXECUTION — allowing teams to customize connectivity, environments, and cleanup protocols. 
+- **Hybrid, Business-Ready Approach**: Choose between rule-based or AI-based generation for each scenario, which is an ideal approach for use cases ranging from edge-case testing to large-scale synthetic data population. 
 - **Seamless Integration & Compliance**: Generated entities come with built-in handling for sequence IDs, LUI mapping, and referential integrity. All data is cataloged in Fabric and masked as needed. 
 
 The [TDM AI installation guide](TDM_AI_Installation_V9.x.md) outlines the key infrastructure and application setup steps required to integrate K2View TDM with AI-powered capabilities, covering everything from GPU-enabled environment provisioning to project configuration, cleanup processes, and performance testing.
