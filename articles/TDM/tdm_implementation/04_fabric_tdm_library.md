@@ -230,8 +230,8 @@ The TDM Logical Unit must be deployed to the Fabric project. It has the followin
 
 TDM enables setting TTL (Time To Live) on the TDM LUIs. The default TTL period is 10 days. The TDM LUI's TTL depends on the following **shared Globals** (imported from the TDM Library):
 
-- **TDM_LU_RETENTION_PERIOD_TYPE** - by default, it is populated by 'Days'. This Global can have one of the following values: Minutes, Hours, Days, Weeks or Years.
-- **TDM_LU_RETENTION_PERIOD_VALUE** - by default, it is populated with the value 10. **Populate this Global with either a zero or an empty value to avoid setting TTL on the TDM LUIs**.
+- **TDM_LU_RETENTION_PERIOD_TYPE** — by default, it is populated by 'Days'. This Global can have one of the following values: Minutes, Hours, Days, Weeks or Years.
+- **TDM_LU_RETENTION_PERIOD_VALUE** — by default, it is populated with the value 10. **Populate this Global with either zero or an empty value to avoid setting a TTL on the TDM LUIs**.
 
 ### TDM Cleanup Process
 
@@ -295,7 +295,7 @@ It is recommended to duplicate the TDM_Library LU and use it as a template when 
 
 #### LU level [Globals](/articles/08_globals/01_globals_overview.md) 
 
-- Populate the **ROOT_TABLE_NAME** Global using the main source table/s. You can populate several tables, separated by a comma. 
+- Populate the **ROOT_TABLE_NAME** Global using the main source table(s). You can populate several tables, separated by a comma. 
 
   Examples: 
 
@@ -327,13 +327,13 @@ It is recommended to duplicate the TDM_Library LU and use it as a template when 
 
 ### LU Tables
 
-- **FABRIC_TDM_ROOT** - the Root table of each LU. This table contains the following columns:
+- **FABRIC_TDM_ROOT** — the Root table of each LU. This table contains the following columns:
 
-  - K2_TDM_EID - populated by the LU instance ID. 
-  - IID - populated by the entity ID without the concatenation of the source environment, version name and version datetime.
-  - SOURCE_ENV - populated by the source environment name of the TDM task.
-  - TASK_NAME - version name, populated with a task name for a [Data Versioning](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-versioning) task.
-  - TIMESTAMP - version datetime, populated by a [Data Versioning](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-versioning) task. 
+  - K2_TDM_EID — populated by the LU instance ID. 
+  - IID — populated by the entity ID without the concatenation of the source environment, version name and version datetime.
+  - SOURCE_ENV — populated by the source environment name of the TDM task.
+  - TASK_NAME — version name, populated with a task name for a [Data Versioning](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-versioning) task.
+  - TIMESTAMP — version datetime, populated by a [Data Versioning](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-versioning) task. 
 
   **Example:** 
 
@@ -392,7 +392,7 @@ It is recommended to duplicate the TDM_Library LU and use it as a template when 
   </tr>
   </table>
 
-- **LU_PARAMS** - parameters table. It must be added to each LU schema even when it is not required for defining parameters in the LU. The LU_PARAM table holds only the ENTITY_ID and SOURCE_ENVIRONMENT fields.
+- **LU_PARAMS** — parameters table. It must be added to each LU schema even when it is not required for defining parameters in the LU. The LU_PARAM table holds only the ENTITY_ID and SOURCE_ENVIRONMENT fields.
 
   Click for more information about [TDM parameters handling](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md).
 
