@@ -272,12 +272,12 @@ The **deploy.flow** process runs the following activities upon the TDM LU deploy
 - Creating the k2masking keyspace in Cassandra, if it does not already exist.
 - TDM 7.6 has added creation of the TDM PostgreSQL DB: The TDM deploy flow creates the TDM DB tables, sequences, views and functions.
 - Note:
-    - TDM 8.0 has added the environment's deployment if the **TDM_DEPLOY_ENVIRONMENTS** Global is set to **true**. This Global is set to **false**, by **default**. The environment's file is taken from the project directory. If you wish to deploy the environments to Fabric, set the TDM_DEPLOY_ENVIRONMENTS to true. 
+    - TDM V8.0 has added the environment's deployment if the **TDM_DEPLOY_ENVIRONMENTS** Global is set to **true**. This Global is set to **false**, by **default**. The environment's file is taken from the project directory. If you wish to deploy the environments to Fabric, set the TDM_DEPLOY_ENVIRONMENTS to true. 
 
 
 ### TDM LU Deployment
 
-Deploy the TDM LU to Fabric. **From TDM 7.6 onwards, the deployment of the TDM LU deploys the TDM Portal as well into the TDM web applications**. 
+Deploy the TDM LU to Fabric. **From TDM 7.6 onwards, deploying the TDM LU also deploys the TDM Portal into the Web applications**. 
 
 Notes:
 
