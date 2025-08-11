@@ -2,7 +2,7 @@
 
 <ul>
   <li>
-    <a href="/articles/98_installation_and_upgrade/Installations/TDM/TDM_Installation_V9.4.md">
+    <a href="/articles/98_installation_and_upgrade/Install_TDM/TDM_Installation_V9.4.md">
       TDM Installation
     </a>
   </li>
