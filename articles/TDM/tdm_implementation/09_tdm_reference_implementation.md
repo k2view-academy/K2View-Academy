@@ -225,7 +225,7 @@ Fabric 8.3 has added [file level catalog discovery and masking capabilities](/ar
 
 These capabilities enable running TDM table-level tasks in order to process and mask files and require using custom flows (TableLevelDefinitions MTable).
 
-Click [here] for more information how to implement the file-level masking flows in the TDM project.
+Click [here](09a_file_level_masking_implementation.md) for more information on how to implement the file-level masking flows in the TDM project.
 
 
 
