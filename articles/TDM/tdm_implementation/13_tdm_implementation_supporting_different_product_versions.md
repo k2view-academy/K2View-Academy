@@ -158,4 +158,4 @@ Example:
 
 
 
-[![Previous](/articles/images/Previous.png)](12_tdm_error_handling_and_statistics.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](14_tdm_implementation_supporting_non_jdbc_data_source.md)
+[![Previous](/articles/images/Previous.png)](09_tdm_reference_implementation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md)

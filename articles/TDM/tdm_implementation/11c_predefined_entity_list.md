@@ -31,3 +31,6 @@ From TDM 8.1 onwards, the entity table is created in the TDM DB.
 1. Run the **createLuExternalEntityListTable** TDM flow (imported from the TDM library) and populate the input **taskExecutionId** parameter to create the entity table in the TDM DB.
 2. Populate the input parameters and run the customized Broadway flow. 
 
+
+
+[![Previous](/articles/images/Previous.png)](12_tdm_error_handling_and_statistics.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](11d_custom_logic.md)

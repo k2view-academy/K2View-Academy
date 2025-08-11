@@ -36,3 +36,5 @@ See an example below:
 - Click [here](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md#pre-and-post-execution-processes-tabs) for instructions.
 
 ###  
+
+[![Previous](/articles/images/Previous.png)](07_tdm_implementation_parameters_handling.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](09_tdm_reference_implementation.md)

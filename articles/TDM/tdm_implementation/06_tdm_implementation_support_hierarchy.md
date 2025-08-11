@@ -15,5 +15,5 @@ TDM 9.3 onwards supports the hierarchy using the TASK_EXECUTION_ENTITIES TDM DB 
 
 
 
-[![Previous](/articles/images/Previous.png)](05_tdm_lu_implementation_general.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_tdm_implementation_parameters_handling.md)
+[![Previous](/articles/images/Previous.png)](05d_tdm_sequence.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_tdm_implement_delete_of_entities.md)
 

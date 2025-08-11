@@ -176,3 +176,7 @@ View the below example:
 Check the **DIRECT_FLOW** checkbox to enable a [direct call](#custom-logic---tdm-81-improvements) of the Custom Logic flow.
 
 Redeploy the Web Services.
+
+
+
+[![Previous](/articles/images/Previous.png)](11c_predefined_entity_list.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_tdm_implementation_parameters_handling.md)
