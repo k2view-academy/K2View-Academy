@@ -161,15 +161,15 @@ The following activities must be performed after deploying the TDM project to Fa
 
 - [Define Fabric roles](/articles/TDM/tdm_configuration/03_tdm_fabric_credentials.md) — one for each user group as defined in the external IDP, and grant permissions to each role.
 
-- [TDM DB - General Parameters setup](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md).
+- [TDM DB — General Parameters setup](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md).
 
 - TDM self-service application setup:
 
   - [Permission group mapping](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md) — map the Fabric roles related to the corresponding TDM users to the TDM permission group (admin/owner/user).
 
-  - [Business Entities creation](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md). Note that all LUs must be deployed to Fabric before creating Business Entities (BEs).
+  - [Creating Business Entities](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md). Note that all LUs must be deployed to Fabric before creating Business Entities (BEs).
 
-  - [Systems creation](/articles/TDM/tdm_gui/05_tdm_gui_product_window.md).
+  - [Creating Systems](/articles/TDM/tdm_gui/05_tdm_gui_product_window.md).
 
   - [Environment creation and setup](/articles/TDM/tdm_gui/07_tdm_gui_environment_overview.md) — create all environments in the TDM self-service application.
       - Optional: Add permission sets to the environments to assign testers to these environments and define their TDM permissions.
@@ -182,7 +182,7 @@ The following activities must be performed after deploying the TDM project to Fa
 TDM equips your QA and development teams with cutting-edge AI-driven synthetic data generation, transforming test data creation from manual rule-based scripts into intelligent automation:
 
 - **SDG (Synthetic Data Generation) based on AI**: TDM seamlessly integrates with AI models to train on the existing data schema and generate realistic, production-grade synthetic entities — all within the platform.
-- **AI Workflows with One Click**: Select a Business Entity, choose your training model, specify the data volume, and launch a “generate new data” task. The system handles model selection, data ingestion into Fabric, and optionally loads the data directly into test environments. 
+- **AI Workflows with One Click**: Select a Business Entity, choose your training model, specify the data volume, and launch a 'generate new data' task. The system handles model selection, data ingestion into Fabric, and optionally loads the data directly into test environments. 
 - **Robust Implementation Controls**: Easily configure AI endpoints using global settings — such as AI_DB_INTERFACE, AI_ENVIRONMENT and AI_EXECUTION — allowing teams to customize connectivity, environments, and cleanup protocols. 
 - **Hybrid, Business-Ready Approach**: Choose between rule-based or AI-based generation for each scenario, which is an ideal approach for use cases ranging from edge-case testing to large-scale synthetic data population. 
 - **Seamless Integration & Compliance**: Generated entities include built-in support for sequence IDs, LUI mapping, and referential integrity. All data is cataloged in Fabric and masked as required. 
