@@ -45,8 +45,8 @@ From TDM V9.4 onwards, the TDM shared Globals are split into two files:
 
 
 #### SEQ_CACHE_INTERFACE Global
-A new Global, SEQ_CACHE_INTERFACE, was introduced in TDM V8.1. This Global is populated with the DB interface of the k2masking DB (PostgreSQL or Cassandra) and must be aligned with Fabric’s system DB. From TDM V9.0 onwards, TDM sets the POSTGRESQL_ADMIN as a default value for this Global:
-- If you use Cassandra as Fabric’s system DB, you must edit the SEQ_CACHE_INTERFACE Global and update its value to DB_CASSANDRA.
+A new Global, SEQ_CACHE_INTERFACE, was introduced in TDM V8.1. This Global is populated with the DB interface of the k2masking DB (PostgreSQL or Cassandra) and must be aligned with the Fabric System DB. From TDM V9.0 onwards, TDM sets the POSTGRESQL_ADMIN as a default value for this Global:
+- If you use Cassandra as the Fabric System DB, you must edit the SEQ_CACHE_INTERFACE Global and update its value to DB_CASSANDRA.
 - If you wish to use the PostgreSQL DB as Fabric's system DB, do the following:
     - Open Fabric’s config.ini file and edit the [system_db] section’s attributes including the SYSTEM_DB_DATABASE attribute to be aligned with the POSTGRESQL_ADMIN DB interface. 
 
@@ -59,11 +59,11 @@ A new Global, SEQ_CACHE_INTERFACE, was introduced in TDM V8.1. This Global is po
 
 The TDM shared functions are saved in the **TDM** [Logic file](/articles/04_fabric_studio/09_logic_files_and_categories.md). 
 
-Import the TDM shared functions into your project. Note that as the TDM category contains the product's functions, it is recommended to add the project's shared functions to a separate category (Logic file) in order to simplify the TDM version upgrading.
+Import the TDM shared functions into your project. Note that since the TDM category contains the product's functions, it is recommended to add the project's shared functions to a separate category (Logic file) in order to simplify the TDM version upgrade process.
 
-## TDM Library - MTables
+## TDM Library — MTables
 
-TDM V8.1 replaces the previous TDM translation with [MTables](/articles/09_translations/06_mtables_overview.md) to support the development of the TDM on both Fabric Studios: Desktop-Studio and Web-Studio.
+In TDM V8.1, the previous TDM translation has been replaced with [MTables](/articles/09_translations/06_mtables_overview.md) to support development on both Fabric Studios: Desktop-Studio and Web-Studio.
 
 The following MTables have been added to the **References** in the TDM library. Note that you **must deploy the Reference to Fabric** after updating the MTables:
 
