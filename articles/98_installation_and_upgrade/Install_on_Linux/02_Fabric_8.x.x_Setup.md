@@ -70,7 +70,7 @@ Before installing Fabric, verify that your hardware meets the recommended specif
 
 Detailed hardware requirements can be found in the following document:
 
-[Hardware Requirements Guide](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Hardware/2_All_Environments/README.html)
+[Hardware Requirements Guide](/articles/98_installation_and_upgrade/Hardware/README.md)
 
 > It is  recommended to review these guidelines to ensure proper resource allocation based on your workload and deployment model.
 
