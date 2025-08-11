@@ -18,7 +18,7 @@ Enter your Admin credentials in the Admin panel home page and then click **Stati
 
 <web>
 
-To access JMX Statistics, Click <img src="images/30_02_icon.PNG" alt="image" style="zoom:67%;" /> to open the list of applications and click **Statistics**:
+To access JMX Statistics, click <img src="images/30_02_icon.PNG" alt="image" style="zoom:67%;" /> and then click **Statistics**:
 
 </web>
 
@@ -26,7 +26,7 @@ To access JMX Statistics, Click <img src="images/30_02_icon.PNG" alt="image" sty
 
 The following statistics sections can be viewed:
 
-### Processes
+### Process
 
 The information provided will feature statistics about the **Loading phase** of each of the components running in the current sessions:
 
