@@ -161,7 +161,7 @@ The following MTables have been added to the **References** in the TDM library. 
 </td>
 <td valign="top" width="300pxl">
 <p>Mapping parent and child IDs.&nbsp;</p>
-<p>Click for more information about <a href="/articles/TDM/tdm_overview/03_business_entity_overview.md">TDM business entities</a> and how to <a href="/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md">support a hierarchy</a> when implementing the LUs.</p>
+<p>Click for more information about <a href="/articles/TDM/tdm_overview/03_business_entity_overview.md">TDM Business Entities</a> and how to <a href="/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md">support a hierarchy</a> when implementing the LUs.</p>
 </td>
 <td valign="top" width="400pxl">
 <p>A record must be added to this table for each parent-child relationship. The parent_lu field must be populated with the name of the parent LU and the child_lu field must be populated with the name of the child LU.</p>
