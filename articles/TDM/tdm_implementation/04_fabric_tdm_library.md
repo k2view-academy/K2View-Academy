@@ -16,7 +16,7 @@ The TDM Library must be imported into the Fabric project created for TDM.
 
 Deploy all TDM Web Services (APIs) to the Fabric project. These Web Services are invoked by the TDM self-service application and form its back-end layer.
 
-Since TDM categories contain the product's Web Services, it is recommended to add the project's Web Services into separate categories, which would simplify TDM version upgrading.
+Since TDM categories contain the product's Web Services, it is recommended to add the project's Web Services into separate categories, which would simplify the TDM version upgrade process.
 
 ### Generic TDM Interfaces
 
@@ -45,21 +45,21 @@ From TDM V9.4 onwards, the TDM shared Globals are split into two files:
 
 
 #### SEQ_CACHE_INTERFACE Global
-A new Global has been added in TDM V8.1 - SEQ_CACHE_INTERFACE. This Global is populated with the DB interface of the k2masking DB (PostgreSQL or Cassandra), and it must be aligned with Fabric’s system DB. From TDM V9.0 onwards, TDM setsthe POSTGRESQL_ADMIN as a default value in this Global:
+A new Global, SEQ_CACHE_INTERFACE, was introduced in TDM V8.1. This Global is populated with the DB interface of the k2masking DB (PostgreSQL or Cassandra) and must be aligned with Fabric’s system DB. From TDM V9.0 onwards, TDM sets the POSTGRESQL_ADMIN as a default value for this Global:
 - If you use Cassandra as Fabric’s system DB, you must edit the SEQ_CACHE_INTERFACE Global and update its value to DB_CASSANDRA.
 - If you wish to use the PostgreSQL DB as Fabric's system DB, do the following:
-    - Open the Fabric’s config.ini file and edit the [system_db] section’s attributes including the SYSTEM_DB_DATABASE attribute to be aligned with the POSTGRESQL_ADMIN DB interface. 
+    - Open Fabric’s config.ini file and edit the [system_db] section’s attributes including the SYSTEM_DB_DATABASE attribute to be aligned with the POSTGRESQL_ADMIN DB interface. 
 
 #### TDMB_SCHEMA Global
 
-- This Global hold the TDM DB schema name. By default it is populated with **public**. Edit it if you wish to create a different schema than 'public' for the TDM DB. 
+- This Global holds the TDM DB schema name. By default, it is populated with **public**. Edit it if you wish to create a schema other than 'public' for the TDM DB. 
 - Always restart Fabric after updating this Global.
 
 ### Shared Functions
 
 The TDM shared functions are saved in the **TDM** [Logic file](/articles/04_fabric_studio/09_logic_files_and_categories.md). 
 
-Import the TDM shared functions to your project. Note that as the TDM category contains the product's functions, it is recommended to add the project's shared functions to a separate category (Logic file) in order to simplify the TDM version upgrading.
+Import the TDM shared functions into your project. Note that as the TDM category contains the product's functions, it is recommended to add the project's shared functions to a separate category (Logic file) in order to simplify the TDM version upgrading.
 
 ## TDM Library - MTables
 
