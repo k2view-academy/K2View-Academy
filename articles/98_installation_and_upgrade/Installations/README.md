@@ -12,22 +12,22 @@
     </a>
   </li>
   <li>
-    <a href="/articles/98_installation_and_upgrade/Installations/Kubernetes/01_K2cloud_Self-hosted_K8s_Installation.md">
+    <a href="/articles/98_installation_and_upgrade/Install_on_Kubernetes/01_K2cloud_Self-hosted_K8s_Installation.md">
       Fabric Installation on Cloud Self-hosted Kubernetes Cluster
     </a>
   </li>
   <li>
-    <a href="/articles/98_installation_and_upgrade/Installations/Kubernetes/02_K2cloud_on-prem_K8s_Installation.md">
+    <a href="/articles/98_installation_and_upgrade/Install_on_Kubernetes/02_K2cloud_on-prem_K8s_Installation.md">
       Fabric Installation on On-premises Kubernetes Cluster
     </a>
   </li>
   <li>
-    <a href="/articles/98_installation_and_upgrade/Installations/Linux/README.md">
+    <a href="/articles/98_installation_and_upgrade/Install_on_Linux/README.md">
       Fabric Installation on Linux
     </a>
   </li>
   <li>
-    <a href="/articles/98_installation_and_upgrade/Installations/Docker/Fabric/README.md">
+    <a href="/articles/98_installation_and_upgrade/Install_Fabric_on_Docker/README.md">
       Fabric and TDM Installation on Docker
     </a>
   </li>
