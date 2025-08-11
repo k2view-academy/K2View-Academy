@@ -7,7 +7,7 @@
     </a>
   </li>
   <li>
-    <a href="/articles/98_installation_and_upgrade/Installations/Fabric_Web_Studio/README.md">
+    <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/README.md">
      Fabric Web Studio Installation on Docker / Podman
     </a>
   </li>
