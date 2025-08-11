@@ -151,7 +151,7 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 - Edit the following Globals in the relevant branch before cloning in order to create the TDM DB and k2masking schema during the first TDM LU deployment:
   - The **CREATE_TDMDB** Global in the TDM LU must be set to **true**
   - Optional: Edit the **TDMDB_SCHEMA** shared Global if you wish to create a schema other than **public** for the TDM DB. 
-- Create a space based on this Project. Deploy the project to Fabric.
+- Create a Space based on this Project. Deploy the project to Fabric.
 
 
 
