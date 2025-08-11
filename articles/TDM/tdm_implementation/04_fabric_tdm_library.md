@@ -65,7 +65,7 @@ Import the TDM shared functions into your project. Note that since the TDM categ
 
 In TDM V8.1, the previous TDM translation has been replaced with [MTables](/articles/09_translations/06_mtables_overview.md) to support development on both Fabric Studios: Desktop-Studio and Web-Studio.
 
-The following MTables have been added to the **References** in the TDM library. Note that you **must deploy the Reference to Fabric** after updating the MTables:
+The following MTables have been added to the **References** by the TDM Library. Note that you **must deploy the Reference to Fabric** after updating the MTables:
 
 <table width="900pxl">
 <tbody>
@@ -214,7 +214,7 @@ The following MTables have been added to the **References** in the TDM library. 
 
 ### Broadway Generic Flows and Templates
 
-The Fabric TDM library includes a set of built-in generic Broadway flows and templates, designed to easily add the TDM setup to the LU. 
+The Fabric TDM Library includes a set of built-in generic Broadway flows and templates, designed to easily add the TDM setup to the LU. 
 
 ## TDM LU
 
