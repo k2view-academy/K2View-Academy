@@ -91,12 +91,12 @@ The following MTables have been added to the **References** in the TDM library. 
 <p>If there is a need to define a query per source environment, populate the source environment name and create a separate record for each Logical Unit and source_env_name combination. Otherwise, leave the source environment empty.</p>
         
    <p><strong>Example 1:</strong></p>
-  <ul><li>lu_name= CUSTOMER</li>
+  <ul><li>lu_name = CUSTOMER</li>
     <li>source_env_name is empty</li>
     <li>interface_name = CRM_DB</li>
     <li>ig_sql = Select customer_id from customer limit 1000;</li></ul>
     <p><strong>Example 2:</strong></p>
-  	<ul><li>lu_name= CUSTOMER</li>
+  	<ul><li>lu_name = CUSTOMER</li>
     <li>source_env_name is empty</li>
     <li>external_table_flow = getEntityListFlow</li>   
 </td>
