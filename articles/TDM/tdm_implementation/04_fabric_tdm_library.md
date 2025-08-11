@@ -39,13 +39,13 @@ Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_inter
 
 From TDM V9.4 onwards, the TDM shared Globals are split into two files: 
 
-- Core Globals (Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/TDM/CoreGlobals/SharedGlobals.java) — this file includes internal TDM Globals that should **not** be overridden by the implementation; the file is overridden by the TDM upgrade.
-- Shared Globals (Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/TDM/SharedGlobals.java) that can be edited by implementation (for example, TDMDB_SCHEMA Global). The TDM upgrade merges the new Globals (if exist) into this file but does not override the existing values.
+- **Core Globals** (Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/TDM/CoreGlobals/SharedGlobals.java) — this file contains internal TDM Globals that should **not** be overridden by the implementation; the file is overridden by the TDM upgrade.
+- **Shared Globals** (Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/TDM/SharedGlobals.java) that can be edited by implementation (e.g., TDMDB_SCHEMA Global). The TDM upgrade merges any new Globals (if present) into this file but does not override the existing values.
 
 
 
 #### SEQ_CACHE_INTERFACE Global
-A new Global has been added in TDM 8.1 - SEQ_CACHE_INTERFACE. This Global is populated with the DB interface of the k2masking DB (PostgreSQL or Cassandra), and it must be aligned with Fabric’s system DB. From TDM V9.0 onwards, TDM setsthe POSTGRESQL_ADMIN as a default value in this Global:
+A new Global has been added in TDM V8.1 - SEQ_CACHE_INTERFACE. This Global is populated with the DB interface of the k2masking DB (PostgreSQL or Cassandra), and it must be aligned with Fabric’s system DB. From TDM V9.0 onwards, TDM setsthe POSTGRESQL_ADMIN as a default value in this Global:
 - If you use Cassandra as Fabric’s system DB, you must edit the SEQ_CACHE_INTERFACE Global and update its value to DB_CASSANDRA.
 - If you wish to use the PostgreSQL DB as Fabric's system DB, do the following:
     - Open the Fabric’s config.ini file and edit the [system_db] section’s attributes including the SYSTEM_DB_DATABASE attribute to be aligned with the POSTGRESQL_ADMIN DB interface. 
