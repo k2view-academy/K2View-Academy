@@ -23,4 +23,3 @@
 <li><a href="17_tdm_ai_generation_implementation.md">AI-driven Synthetic Data Generation</a></li>  
 <li><a href="tdm_fabric_implementation_environments_setup.md">Environments Setup</a></li>
 </ul>
-
