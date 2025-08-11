@@ -392,7 +392,7 @@ It is recommended to duplicate the TDM_Library LU and use it as a template when 
   </tr>
   </table>
 
-- **LU_PARAMS** — parameters table. It must be added to each LU schema even when it is not required for defining parameters in the LU. The LU_PARAM table holds only the ENTITY_ID and SOURCE_ENVIRONMENT fields.
+- **LU_PARAMS** — parameters table. This table must be added to each LU schema even when it is not required for defining parameters in the LU. The LU_PARAM table holds only the ENTITY_ID and SOURCE_ENVIRONMENT fields.
 
   Click for more information about [TDM parameters handling](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md).
 
@@ -400,7 +400,7 @@ It is recommended to duplicate the TDM_Library LU and use it as a template when 
 
 ## TDM_TableLevel LU
 
-TDM V9.0 and onwards stores the extracted tables in a new LU - TDM_TableLevel. Each table is stored as a separate LUI. For more information, read [Tables Implementation](09_tdm_reference_implementation.md).
+Starting from TDM V9.0, extracted tables are stores in a new LU — TDM_TableLevel. Each table is stored as a separate LUI. For more information, read [Tables Implementation](09_tdm_reference_implementation.md).
 
 
 [![Previous](/articles/images/Previous.png)](03_tdm_fabric_implementation_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_tdm_lu_implementation_general.md)
