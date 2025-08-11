@@ -394,7 +394,7 @@ It is recommended to duplicate the TDM_Library LU and use it as a template when 
 
 - **LU_PARAMS** — parameters table. This table must be added to each LU schema even when it is not required for defining parameters in the LU. The LU_PARAM table holds only the ENTITY_ID and SOURCE_ENVIRONMENT fields.
 
-  Click for more information about [TDM parameters handling](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md).
+  Click for more information about [TDM parameter handling](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md).
 
   
 
