@@ -40,7 +40,7 @@ Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_inter
 From TDM V9.4 onwards, the TDM shared Globals are split into two files: 
 
 - **Core Globals** (Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/TDM/CoreGlobals/SharedGlobals.java) — this file contains internal TDM Globals that should **not** be overridden by the implementation; the file is overridden by the TDM upgrade.
-- **Shared Globals** (Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/TDM/SharedGlobals.java) that can be edited by implementation (e.g., TDMDB_SCHEMA Global). The TDM upgrade merges any new Globals (if present) into this file but does not override the existing values.
+- **Shared Globals** (Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/TDM/SharedGlobals.java) — this file contains TDM Globals that can be edited by implementation (e.g., TDMDB_SCHEMA Global). The TDM upgrade merges any new Globals (if present) into this file but does not override the existing values.
 
 
 
