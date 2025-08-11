@@ -138,7 +138,7 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 
 - Deploy the TDM LU. This deployment creates the TDM DB and the k2masking schema. After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false**.
 
-- Build and deploy the remaining TDM project to Fabric.
+- Build and deploy the remaining TDM project components to Fabric.
 
 - Click [here](/articles/16_deploy_fabric/03_offline_deploy.md) for more information about offline deployment.
 
@@ -181,8 +181,8 @@ The following activities must be performed after deploying the TDM project to Fa
 
 TDM equips your QA and development teams with cutting-edge AI-driven synthetic data generation, transforming test data creation from manual rule-based scripts into intelligent automation:
 
-- **AI-First Data Synthesis**: TDM seamlessly integrates with AI models to train on your existing data schema and generate realistic, production-grade synthetic entities — all within the platform.
-- **One-Click AI Workflows**: Select a Business Entity, choose your training model, specify the data volume, and launch a “generate new data” task. The system handles model selection, data ingestion into Fabric, and optionally loads the data directly into test environments. 
+- **SDG (Synthetic Data Generation) based on AI**: TDM seamlessly integrates with AI models to train on the existing data schema and generate realistic, production-grade synthetic entities — all within the platform.
+- **AI Workflows with One Click**: Select a Business Entity, choose your training model, specify the data volume, and launch a “generate new data” task. The system handles model selection, data ingestion into Fabric, and optionally loads the data directly into test environments. 
 - **Robust Implementation Controls**: Easily configure AI endpoints using global settings — such as AI_DB_INTERFACE, AI_ENVIRONMENT and AI_EXECUTION — allowing teams to customize connectivity, environments, and cleanup protocols. 
 - **Hybrid, Business-Ready Approach**: Choose between rule-based or AI-based generation for each scenario, which is an ideal approach for use cases ranging from edge-case testing to large-scale synthetic data population. 
 - **Seamless Integration & Compliance**: Generated entities include built-in support for sequence IDs, LUI mapping, and referential integrity. All data is cataloged in Fabric and masked as required. 
