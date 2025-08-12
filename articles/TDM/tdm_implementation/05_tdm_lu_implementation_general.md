@@ -139,7 +139,7 @@ Click [here](10_tdm_generic_broadway_flows.md#delete-and-load-flows-for-complex-
 The LUI should include the source environment, which should be set as the [active environment](/articles/25_environments/01_environments_overview.md) in Fabric. When running a [Data Viewer](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) on the LU to debug its implementation, do either:
 
 - Populate the source environment of the LUI using `_dev_`.  For example, **_dev_1**.
-- Create and deploy the Environments to the Fabric Debug server. Set the source environment as the active environment in the Fabric Debug server and populate the deployed source environment name in the LUI, e.g., **UAT_1**. However, note that the main target LU table sets the **target environment** to be the **active environment**.
+- Create and deploy the environments to the Fabric Debug server. Set the source environment as the active environment in the Fabric Debug server and populate the deployed source environment name in the LUI, e.g., **UAT_1**. However, note that the main target LU table sets the **target environment** to be the **active environment**.
 
 
 
