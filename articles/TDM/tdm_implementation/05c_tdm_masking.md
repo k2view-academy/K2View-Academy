@@ -16,7 +16,7 @@ The TDM infrastructure controls masking enablement/disablement based on the sett
 
 ## TDM Processes that Mask Sensitive Data
 
-* **LU population flows** - the TDM templates add the **CatalogMaskingMapper** Actor to the LU population flows to run the Catalog-based masking on the identified PII fields before loading them into the LU table.  It is possible edit the population flows in order to override the Catalog’s masking for some of the PII fields: add [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
+* **LU population flows** - the TDM templates add the **CatalogMaskingMapper** Actor to the LU population flows to run the Catalog-based masking on the identified PII fields before loading them into the LU table.  It is possible to edit the population flows in order to override the Catalog’s masking for some of the PII fields: add [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
   * If the masked field is used as an [input argument](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md) that is linked to another LU table, add the masking population that masks the fields in all LU tables to the last executed LU table in order to have the original value when populating the LU tables. 
 
 * **Load flows** - the TDM templates adds the **HandleMaskAndSeqFields** flow to the load flows. The  **HandleMaskAndSeqFields** flow is invoked for each record to mask its PII fields and replace its sequences if needed. The masking is done using the **CatalogMaskingRecord** Actor.
