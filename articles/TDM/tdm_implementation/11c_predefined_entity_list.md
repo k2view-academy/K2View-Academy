@@ -18,7 +18,7 @@ Populate the Broadway flow in the [MigrateList MTable](/articles/TDM/tdm_impleme
 
 Redeploy the related LUs and the TDM LU.
 
-## How does the Broadway Flow Generate an Entity List for the Task Execution? 
+## How does the Broadway Flow generate an Entity List for the Task Execution? 
 
 The TDM library provides a list of Broadway Actors and flows to support generating an entity list by a project's Broadway flow. The project's Broadway flow gets the entity list and calls the TDM library Actors to insert them into a dedicated table in the TDM DB. A separate entity table is created upon a task execution and has the following naming convention: `entity_list_<task exe_id>`. 
 
