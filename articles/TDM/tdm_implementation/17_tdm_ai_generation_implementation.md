@@ -55,6 +55,11 @@ Add the AI environment to:
 - [Fabric environments](tdm_fabric_implementation_environments_setup.md)
 - [TDM portal](/articles/TDM/tdm_gui/10_environment_roles_tab.md#ai-environment---permission-set). Add the related [Systems](/articles/TDM/tdm_gui/11_environment_products_tab.md) to the AI environment in the TDM portal.
 
+### AI Configuration Table
+A new constTable Actor has been added in TDM 9.4: **AIConfigParams**. This Actor is located in *Implementation/SharedObjects/Broadway/TDM/TDMImplementorActors/* folder. This table holds the infrastructure configuration parameters, such as cloud provider(GCP, AWS, Azure), AI training/generation/evaluation images, for the AI processes.
+Open the AIConfigParams and click the Input's description to view the detailed description of the table's fields. 
+Edit the required parameters in this table.
+
 ### AI MTables 
 
 #### AISpecialAndCategoricalFields

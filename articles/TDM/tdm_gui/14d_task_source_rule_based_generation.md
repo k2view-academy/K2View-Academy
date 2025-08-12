@@ -1,4 +1,4 @@
-# Task - Source Component - Rule-Based Generation
+# Task — Source Component — Rule-Based Generation
 
 K2view's TDM supports 2 modes of synthetic entities' generation:
 

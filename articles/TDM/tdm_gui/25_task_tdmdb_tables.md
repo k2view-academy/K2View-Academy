@@ -1,4 +1,4 @@
-# Task - TDM DB Tables
+# Task — TDM DB Tables
 
 TDM settings are saved in the [TDM PostgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). 
 

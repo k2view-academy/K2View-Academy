@@ -1,4 +1,4 @@
-# Task - Scheduler Tab 
+# Task — Scheduler Tab 
 
 The **Scheduler** tab in the task's **Advanced settings** enables setting a **scheduled execution**: 
 

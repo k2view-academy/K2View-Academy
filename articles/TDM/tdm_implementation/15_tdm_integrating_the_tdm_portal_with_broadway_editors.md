@@ -1,6 +1,6 @@
 # Integrating the TDM Portal with Broadway Web Editors
 
-TDM 8.0 added integration of Broadway editors into the TDM portal when populating either the [rule-based generation parameters](/articles/TDM/tdm_gui/14d_task_source_rule_based_generation.md) or the [Custom logic parameters](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in the task’s tabs.
+TDM 8.0 added integration of Broadway editors into the TDM portal when populating either the [rule-based generation parameters](/articles/TDM/tdm_gui/14d_task_source_rule_based_generation.md) or the [Custom logic parameters](/articles/TDM/tdm_implementation/11d_custom_logic.md) in the task’s tabs.
 
 This integration enables the user to select a valid value from a list, to set dates and to set distributed parameters. 
 
@@ -75,4 +75,4 @@ Click [here](/articles/19_Broadway/actors/07a_data_generators_actors.md#randomdi
 
 
 
-[![Previous](/articles/images/Previous.png)](14_tdm_implementation_supporting_non_jdbc_data_source.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](16_tdm_data_generation_implementation.md)
+[![Previous](/articles/images/Previous.png)](13_tdm_implementation_supporting_different_product_versions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](16_tdm_data_generation_implementation.md)

@@ -1,4 +1,4 @@
-# Task - Subset Component
+# Task — Subset Component
 
 The Subset component is displayed by the following icon ![subset](images/task_subset_icon.png) and contains either of the following:
 

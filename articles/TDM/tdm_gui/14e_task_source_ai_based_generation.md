@@ -1,4 +1,4 @@
-# Task - Source Component - AI-Based Generation
+# Task — Source Component — AI-Based Generation
 
 K2view's TDM supports 2 modes of synthetic entities' generation:
 
@@ -30,7 +30,7 @@ The following attributes need to be set in order to generate new entities:
 
   ![training warning](images/ai_generation_warning_no_training.png)
 
-  
+- **Evaluate generated data** checkbox - when checked, the task execution generates an evaluation report on the generated data. 
 
 
 

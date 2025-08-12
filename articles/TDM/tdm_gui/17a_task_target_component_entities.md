@@ -1,4 +1,4 @@
-# Task - Target Component - Entities 
+# Task — Target Component — Entities 
 
 The following information needs to be **set** when the task's data type is Business entities (with or without referential tables):
 
@@ -53,7 +53,7 @@ The Load-related checkboxes are disabled in the following scenarios:
 
 #### Replace IDs for the copied entities 
 
-When checked, the task execution process replaces the IDs of all selected entities before loading them into the target. This option is required in order to avoid key duplications if the testing environment is not empty and contains entities. The Replace Sequence must be implemented in the [Fabric implementation](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-2---create-sequences).
+When checked, the task execution process replaces the IDs of all selected entities before loading them into the target. This option is required in order to avoid key duplications if the testing environment is not empty and contains entities. The Replace Sequence must be implemented in the [Fabric implementation](/articles/TDM/tdm_implementation/05d_tdm_sequence.md).
 
 #### Generate clones for an entity
 

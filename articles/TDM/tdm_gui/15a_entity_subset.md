@@ -1,6 +1,6 @@
-# Task - Entity Subset
+# Task — Entity Subset
 
-The entity subset must be defined for any task that either extracts entities from the source environment or gets the pre-extracted/pre-generated entities from the Test Data Store. The subset defines the **entities selection method**.
+The **subset** component specifies how entities are selected for task processing — that is, it defines the **method for selecting entities**. Therefore, an entity subset must be set for any task that either extracts entities from the source environment or retrieves the pre-extracted or pre-generated entities from the Test Data Store. 
 
 The following selection methods are available:
 
@@ -77,73 +77,84 @@ The following selection methods are available:
 
 ## Entity List
 
-Populate the list of entities for the task. The populated entities should be separated with a comma.
+Populate the list of entities for the task. The populated entities should be separated by a comma.
 
 ## Predefined Entity List
 
-Run the SQL query or the [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-6---optional---get-the-entity-list-for-an-extract-all-task-using-a-broadway-flow) defined in the [MigrateList MTable](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#migratelist) object for the task's Business Entity. This option is available only for Admin and Environment owner users.
+Run the SQL query or the [Broadway flow](/articles/TDM/tdm_implementation/11c_predefined_entity_list.md) defined in the [MigrateList MTable](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#migratelist) object for the task's Business Entity. This option is available for admin users, environment owners, and testers with [unlimited entities permission set](10_environment_roles_tab.md#number-of-entities) on the task's environment.
 
 ## Predefined Custom Logic
 
-Select a predefined [Broadway flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-7---optional---build-broadway-flows-for-the-custom-logic--selection-method) in order to extract an entity list for the task. Set the maximum number of entities to be retrieved by the flow. Populate the input parameters for the selected flow, if needed.
+Select a predefined [Broadway flow](/articles/TDM/tdm_implementation/11d_custom_logic.md) in order to extract an entity list for the task. Set the **Max number of entities** field by entering a number to limit the number of entities retrieved by the flow, or leave it empty to process all retrieved entities. Populate the input parameters for the selected flow, if required.
+
+Note that you can leave the **Max number of entities** field empty if you are an admin user, the environment owner, or a tester user with the [**Unlimited entities** permission set](10_environment_roles_tab.md#number-of-entities) on the task's environment.
 
 ## Business Parameters
 
-Select one or several parameters. Additionally, you can add the same parameter multiple times with different values.
+Select one or more parameters. The same parameter can be added multiple times with different values. An information icon next to each parameter provides a description. 
 
 ![parameters](images/task_business_parameters_example.png)
+
+
+
+Hovering over the information icon displays the parameter description, helping to identify the relevant business parameters for the task:
+
+![parameters](images/task_param_description.png)
 
 
 
 Notes:
 
 - The list of parameters should be [predefined for each LU in the task BE](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md) within the Fabric project.
-- The parameters and their values must be populated in the TDM DB. It is recommended to run a task that extracts a large subset of entities from the source environment in order to populate the TDM DB parameters' tables and enable creating TDM tasks with business parameters. When there is no need to store the extracted subset in the TDM Test Data Store, the [Retention period](/articles/TDM/tdm_gui/16_task_test_data_store_component.md#retention-period) for the initial extract task can be set to **Do not retain**.
+- The parameters and their values must be populated in the TDM DB. It is recommended to run a task that extracts a large subset of entities from the source environment in order to populate the TDM DB parameter tables and enable the creation of TDM tasks based on business parameters. When there is no need to store the extracted subset in the TDM Test Data Store, the [retention period](/articles/TDM/tdm_gui/16_task_test_data_store_component.md#retention-period) for the initial extract task can be set to **Do not retain**.
+- You can leave the **Max number of entities** field empty if you are an admin user, the environment owner, or a tester user with [**Unlimited entities** permission set](10_environment_roles_tab.md#number-of-entities) on the task's environment.
 
-#### Use Parameters with Random Selection Checkbox
+#### 'Use Parameters with Random Selection' Checkbox
 
-The Parameters selection has 2 modes:
+Note that the parameter selection is relevant only when the **Max number of entities** field is populated.
 
-- When checked (default), TDM randomly selects - from the list of all entities - entities that match the selected parameters. Each task execution gets different lists of entities that match the selected parameters. The **Selection Method** displayed in the Tasks List window is **Parameters - selection based on parameters with random selection**.
+There are two modes for parameter selection:
 
-  Example:
-
-  - Creating a task to load 5 customers using selected parameters. There are 800 customers that match the selected parameters. The task execution gets a random list of 5 customers from the list of 800 customers that match the selected parameters.
-
-- When unchecked, it gets the first entities that match the selected parameters. Each task execution gets the same list of entities that match the selected parameters. The **Selection Method** displayed in the Tasks List window is **Parameters - selection based only on Parameters**.
+- When the **Use parameters with random selection** checkbox is checked (default), TDM randomly selects entities from the full list, filtering only those that match the specified parameters. Each task execution retrieves a different list of entities that match the selected parameters. The **Selection Method** displayed in the Tasks List window is **Parameters - selection based on parameters with random selection**.
 
   Example:
 
-  - Create a task to load 5 customers with selected parameters. There are 800 customers that match the selected parameters. The task execution gets the first 5 customers that match the selected parameters.
+  - Creating a task to load 5 customers using selected parameters. There are 800 customers that match the selected parameters. The task execution randomly retrieves a list of 5 customers from the 800 that match the selected parameters.
+
+- When this checkbox is unchecked, the task execution retrieves the first entities that match the selected parameters. Each task execution retrieves the same list of entities that match the selected parameters. The **Selection Method** displayed in the Tasks List window is **Parameters - selection based only on Parameters**.
+
+  Example:
+
+  - Create a task to load 5 customers with selected parameters. There are 800 customers that match the selected parameters. The task execution retrieves the first 5 customers that match the selected parameters.
 
 #### How Do I Add a Condition?
 
-To add a parameter:
+Adding a parameter:
 
-- Click **Add Condition**.
-- Select the parameter and the operator from the drop-down lists and populate their values. Note that from TDM 8.1 onwards it is possible to select the IN or NOT IN operators on combo parameters and on text parameters.
-- Set the value on the parameter. You can set multiple values on a parameter if the selected operator is either IN or NOT IN:
-  - Combo parameters - click on the value field to select a required value from the drop-down list; this can be done multiple times as more than one value can be selected in this field.
-  - Free text parameters - populate the values with a separating comma. For example: NY, CA.
-- Add the **AND/OR** operator to connect the parameter to the previous parameters or group. The TDM self-service application displays the SQL query, which is built based on the selected parameters.
+- Click **Add condition**.
+- Select the parameter and operator from the drop-down lists and populate their values. Note that starting from TDM V8.1, it is possible to select the **IN** or **NOT IN** operators on combo parameters and on text parameters.
+- Set the value on the parameter. Multiple values can be set on a parameter if the selected operator is either **IN** or **NOT IN**:
+  - Combo parameters — click on the value field to select a required value from the drop-down list; this can be done multiple times as more than one value can be selected in this field.
+  - Free text parameters — populate the values with a separating comma. For example: NY, CA.
+- Add the **AND/OR** operator to connect the parameter to the previous parameters or group. The TDM Portal displays the SQL query, which is built based on the selected parameters.
 
 #### How Do I Populate a Parameter's Value?
 
 There are several types of parameters:
 
-- **Combo** - parameters with a limited number of values. The Task window displays a drop-down list of the parameters' values; select one of them.
+- **Combo** — parameters that offer a limited set of possible values. The Task window displays a drop-down list of values for each parameter; select one of them.
 
   Click for more information about [setting a parameter as a combo parameter](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameters-implementation-guidelines).
 
-- **Number** - the TDM self-service application displays the minimum and maximum values of this parameter. If the populated values exceed a parameter's range, an error message is displayed.
+- **Number** — the TDM Portal displays the minimum and maximum values (i.e., the range) of the parameter. If the populated values exceed this range, an error message is displayed.
 
-- **Date** - populate the value using the following format: **YYYY-MM-DD**.
+- **Date** — populate the value using the following format: **YYYY-MM-DD**.
 
   - Notes:
 
-    - The date format is defined in **DATETIME_FORMAT** parameter of the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) Fabric file. The default format is 'yyyy-MM-dd HH:mm:ss.SSS'.
+    - The date format is defined in the **DATETIME_FORMAT** parameter of the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) Fabric file. The default format is 'yyyy-MM-dd HH:mm:ss.SSS'.
 
-    - The parameter's search may be based on either a Date (removing the time from the Date format) or a Datetime.
+    - The parameter's search criteria can be based on either a Date (with the time value removed) or a Datetime.
 
       Examples:
 
@@ -152,25 +163,25 @@ There are several types of parameters:
 
     - The date value is set without quotation marks.
 
-- **Text** - populate the value using a free text.
+- **Text** — populate the value using a free text.
 
   
 
 #### How Do I Add a Group of Parameters?
 
-- Click **Add Group**.
+- Click **Add group**.
 
-- Note that nested groups of parameters can be added, for example, in order to define an inner group inside an outer group:
+- Note that nested groups of parameters can be added, for example, to define an inner group within an outer group:
 
   ![task parameters grouping](images/task_parameters_grouping.png)
 
   
 
-#### How Do I Remove a Parameter or a Parameters' Group?
+#### How Do I Remove a Parameter or a Group of Parameters?
 
-1. Click the trash icon next to the parameter in order to delete it.
+1. Click the trash icon next to the parameter to delete it.
 
-2. Click **Remove Group** to remove a parameters' group.
+2. Click **Remove group** to remove a group of parameters.
 
    
 
@@ -180,13 +191,13 @@ Click Refresh next to the **Number of entities matched** in order to calculate t
 
 - Click [![refesh](/articles/TDM/tdm_gui/images/parameters_refresh_icon.png)](/articles/TDM/tdm_gui/images/parameters_refresh_icon.png) to display the number of matching entities according to the parameters’ conditions.
 
-Click for more information about the [TDM parameters' tables and View](/articles/TDM/tdm_architecture/07_tdm_parameters_handling.md) - created by TDM in the TDM DB - that display a hierarchical view of TDM parameters.
+Click for more information about the [TDM parameter tables](/articles/TDM/tdm_architecture/07_tdm_parameters_handling.md) — created by TDM in the TDM DB — that display a hierarchical view of TDM parameters.
 
 
 
 ## Random
 
-Get a random list of entities from the parameters' tables created in the TDM DB for the root LU of the task's BE. 
+Get a random list of entities from the parameter tables created in the TDM DB for the root LU of the task's BE. 
 
 Testers can select this option only if they are permitted to do so in the task's source environment.
 
@@ -194,15 +205,15 @@ Testers can select this option only if they are permitted to do so in the task's
 
 ## Filter out Reserved Entities 
 
-- The **Filter out Reserved Entities** options enable the user to decide which reserved entities will be excluded from the task execution: 
+- The **Filter out reserved entities** options allow the user to decide which reserved entities will be excluded from task execution: 
 
-  - **Reserved by others** (default option) - excludes entities that are currently reserved by users other than the task creator/executor and allows task execution on entities reserved by the task creator/executor.
+  - **Reserved by others** (default option) — excludes entities that are currently reserved by users other than the task creator or executor, while allowing task execution on entities reserved by the task creator or executor.
 
-  - **All reserved entities** - excludes all reserved entities, including those reserved by the task creator/executor. This option ensures there is no overlapping with any of the reserved entities, regardless of who has reserved them.
+  - **All reserved entities** — excludes all reserved entities, including those reserved by the task creator or executor. This option ensures that no overlap occurs with any of the reserved entities, regardless of who reserved them.
 
 - The reserved entities are excluded when running the following tasks:
 
-  - [Load tasks](17a_task_target_component_entities.md#load) when both the **Replace IDs for the copied entities** and the **Generate clones for an entity** checkboxes are cleared, i.e., the task loads the entities with their source IDs.
+  - [Load tasks](17a_task_target_component_entities.md#load) when both the **Replace IDs for the copied entities** and the **Generate clones for an entity** checkboxes are unchecked, i.e., the task loads the entities with their source IDs.
   - [Delete tasks](17a_task_target_component_entities.md#delete)
   - [Reserve tasks](17a_task_target_component_entities.md#reserve)
 
@@ -216,19 +227,19 @@ Testers can select this option only if they are permitted to do so in the task's
 
     - Creating an [AI-based Training task](19_task_synthetic_data_generation.md#how-to-create-an-ai-training-task), i.e., the **Destination of test data** in the Target component is set to **AI training**.
       
-    - The task's selection method is **Predefined entity list**.
+    - The entity selection method is **Predefined entity list**.
 
       
 
 ## Synthetic Entities - Load all Generated Entities of a Selected Data Generation Execution
 
-The Subset form displays all available rule-based/AI-based data generation executions. Select an execution to load its generated entities to the target environment: 
+The Subset form (below) displays all available rule-based/AI-based data generation executions. Select an execution to load its generated entities into the target environment: 
 
 ![load generation](images/task_load_generation_execution.png)
 
 ## Select and Load Data Snapshot (version) Task
 
-When the **Policy for Fetching data** in the [Source component](14b_task_source_component_entities.md) is set to **Selected snapshot (version)**, you need to select a data snapshot (version) to be loaded to the target environment. The Subset form (below) displays a list of available data snapshots (versions) that can be selected and reloaded to the target environment. By default, the TDM Portal displays a list of the data versions created during the last month. To set a different period, edit the **From date** and **To date** settings.
+When the **Policy for Fetching data** in the [Source component](14b_task_source_component_entities.md) is set to **Selected snapshot (version)**, a data snapshot (version) must be selected to be loaded into the target environment. The Subset form (below) displays a list of available data snapshots (versions) that can be selected and reloaded into the target environment. By default, the TDM Portal displays a list of the data versions created during the last month. To set a different period, edit the **From date** and **To date** settings.
 
 The following options are available:
 

@@ -1,4 +1,4 @@
-# Task - Test Data Store Component
+# Task — Test Data Store Component
 
 The **Test Data Store** component is the [Fabric](/articles/TDM/tdm_architecture/01_tdm_architecture.md#fabric) ETL and storage layer, and it is mandatory on each task. It has 2 attributes:
 

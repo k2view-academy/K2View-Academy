@@ -37,4 +37,4 @@ Each mode requires its own implementation. Read the implementation guidelines fo
 
 
 
-[![Previous](/articles/images/Previous.png)](06_tdm_implementation_support_hierarchy.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_tdm_implement_delete_of_entities.md)
+[![Previous](/articles/images/Previous.png)](11d_custom_logic.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](11e_pre_and_post_execution_processes.md)

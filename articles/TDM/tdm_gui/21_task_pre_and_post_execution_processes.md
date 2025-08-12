@@ -1,4 +1,4 @@
-# Task - Pre and Post Execution Processes
+# Task — Pre and Post Execution Processes
 
 The **Pre-execution process** and **Post-execution process** tabs in the task's **Advanced settings** enable adding pre and post execution processes to the task. The pre-execution processes run in the beginning of the task's execution, before all the related LUs have been executed. The post-execution processes run at the end of the task's execution, after all the related LUs have been executed. 
 
@@ -7,7 +7,7 @@ The **Pre-execution process** and **Post-execution process** tabs in the task's 
 Examples:
 
 - Running a cleanup flow before executing the task's LUs.
-- Sending an email to the tester to notify that the execution of a task has ended.
+- Sending an email to the tester to notify them that the execution of a task has ended.
 
 The pre and post execution processes are **optional**. A task can be created and executed without any post-execution processes.
 

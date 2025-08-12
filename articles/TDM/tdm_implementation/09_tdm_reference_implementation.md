@@ -159,13 +159,15 @@ The following settings should be populated for each record:
 
 ### Supporting Table-Level Tasks Using Connectors - Update TableLevelDefinitions MTable 
 
-- Add a new record to the TableLevelDefinitions MTable after installing a connector extension, e.g. **BigQuery**, in order to support table-level tasks based on the connector:
-  - **interface_name** - populate this field with the connector's interface name.
-  - **extract_flow** - populate this field with the connector's extract flow. 
-  - **delete_flow** - populate  this field with the connector's delete flow.
-  - **load_flow** - populate this field with the connector's load flow.
+The installment of a K2exchange connector adds a dedicated TableLevelDefinitions file for the connector. 
 
-For more information about each connector, read the connector's Readme file. 
+**Example -  TableLevelDefinitions___mongodb** :
+
+![mongo example](images/mongo_tableleveldefinitions.png) 
+
+
+
+Note that you must set the task's retention period to *Do not retain* in order to load the tables directly to the target environment without saving them to Fabric when the data source is based on a connector. 
 
 ### Customized Table Flows - Implementation Guidelines
 
@@ -217,7 +219,17 @@ See the loop on the selected address records:
 
 
 
-[![Previous](/articles/images/Previous.png)](08_tdm_implement_delete_of_entities.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](10_tdm_generic_broadway_flows.md)
+## File Level Masking Implementation
+
+Fabric 8.3 has added [file level catalog discovery and masking capabilities](/articles/39_fabric_catalog/05_cataloging_of_files.html).
+
+These capabilities enable running TDM table-level tasks in order to process and mask files and require using custom flows (TableLevelDefinitions MTable).
+
+Click [here](09a_file_level_masking_implementation.md) for more information on how to implement the file-level masking flows in the TDM project.
+
+
+
+[![Previous](/articles/images/Previous.png)](11e_pre_and_post_execution_processes.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](13_tdm_implementation_supporting_different_product_versions.md)
 
 
 

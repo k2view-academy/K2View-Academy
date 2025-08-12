@@ -35,24 +35,7 @@ The TDM library includes a **TDMSeqList** Actor that holds a list of sequences. 
 
 
 
-The table values are used by the **createSeqFlowsOnlyFromTemplates** flow that generates the sequence Actors. 
-
 Following completion of the Actor's update, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button (top of the Project tree). This act applies the changes in the **TDMSeqList** Actor and deploys the **TDM LU**.
-
-**B.** Run either one of the following flows to create the sequence Actors based on the populated **TDMSeqList** Actor:
-
-I. Run the **createSeqFlowsOnlyFromTemplates** flow to generate the sequence Actors.
-
-II. Run the [TDMLUInit](05_tdm_lu_implementation_general.md#ii-run-the-tdmluinit-flow) flow to generate the sequence Actors, and add the TDM setup to the input LU.
-
-III. Run the **createAllFromTemplates** flow. Populate the **LU_NAME** input parameter with one of the project's LUs and set the **CREATE_SEQUENCES** input parameter to **true**. Set the **OVERRIDE_EXISTING_FLOWS** input parameter to **false** to avoid overriding the existing sequence Actor. 
-
-Each generated sequence Actor includes a flow that invokes the [MaskingSequence Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to get the new sequence value and populate the source and target IDs in the TDM_SEQ_MAPPING TDM DB table.
-
-Notes:  
-
-- The sequence creation should run once per TDM implementation and not per each LU, as the sequences are used across several LUs in the TDM project.
-- The sequence flows and Actors are created under **Shared Objects**, enabling several LUs to use a sequence Actor.
 
 
 
@@ -70,9 +53,8 @@ This table serves 2 purposes:
 
 1. Adding the sequence Actors to the load flows. Populate **TDMSeqSrc2TrgMapping** table to map between the generated sequence Actors and the target tables' columns. A sequence Actor can be mapped into a different table and a different LU.
 
-2. Adding the sequence Actors to the data generation flow that generates synthetic data for the LU table.
+2. Adding the sequence Actors to the data generation flow that generates synthetic data for the LU table. 
 
-     
 
 Click [here](16_tdm_data_generation_implementation.md) for more information about the rule-based synthetic data generation implementation.
 

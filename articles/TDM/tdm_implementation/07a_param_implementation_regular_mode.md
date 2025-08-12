@@ -13,6 +13,7 @@ Prerequisite: Verify that the LU_PARAMS table is attached to the LU Schema.
    - lu_name
    - column_name - populated with the parameter name. The parameter name can be different from the LU table's field name. 
    - sql
+   - description - this field is optional.  It enables to add a short description to the business parameters.  The description will be displayed in the task when hovering over a parameter, which would help the user to select business parameters for entity sub-setting in the task. 
 
 3. LuParams example:
 
@@ -22,16 +23,19 @@ Prerequisite: Verify that the LU_PARAMS table is attached to the LU Schema.
    <td width="150pxl"><strong>lu_name</strong></td>
    <td width="150pxl"><strong>column_name</strong></td>
    <td width="600pxl"><strong>sql</strong></td>
+   <td width="600pxl"><strong>description</strong></td>    
    </tr>
    <tr>
    <td width="150pxl">CRM</td>
    <td width="150pxl">first_name</td>
    <td width="600pxl">Select first_name<br />&nbsp;From customer</td>
+   <td width="600pxl">Customer's first name.<br />&nbsp;From customer</td>    
    </tr>
    <tr>
    <td width="150pxl">CRM</td>
    <td width="150pxl">last_name</td>
    <td width="600pxl">Select last_name<br />&nbsp;From customer</td>
+   <td width="600pxl">Customer's last name.<br />&nbsp;From customer</td>        
    </tr>
    <tr>
    <td width="150pxl">CRM</td>
@@ -62,6 +66,7 @@ Prerequisite: Verify that the LU_PARAMS table is attached to the LU Schema.
    <td width="150pxl">Billing</td>
    <td width="150pxl">total_balance_amount</td>
    <td width="600pxl">Select Sum(ifNull(Billing.balance.available_amount, 0)) As total_balance_amount<br />From Billing.balance</td>
+   <td width="600pxl">Subscriber's open debt (balance) amount.</td>    
    </tr>
    <tr>
    <td width="150pxl">Billing</td>
@@ -77,21 +82,12 @@ Prerequisite: Verify that the LU_PARAMS table is attached to the LU Schema.
    <td width="150pxl">Billing</td>
    <td width="150pxl">vip_status</td>
    <td width="600pxl">Select Distinct vip_status <br />From Billing.subscriber</td>
+   <td width="600pxl">VIP classification status of the subscriber.</td>
    </tr>
    <tr>
    <td width="150pxl">Billing</td>
    <td width="150pxl">subscriber_type</td>
    <td width="600pxl">Select Distinct subscriber_type From Billing.subscriber</td>
-   </tr>
-   <tr>
-   <td width="150pxl">Asset</td>
-   <td width="150pxl">transaction_duartion</td>
-   <td width="600pxl">Select Distinct duration From Asset.asset_transaction</td>
-   </tr>
-   <tr>
-   <td width="150pxl">Asset</td>
-   <td width="150pxl">transaction_city</td>
-   <td width="600pxl">Select Distinct transactioncity From Asset.asset_transaction</td>
    </tr>
    </tbody>
    </table>

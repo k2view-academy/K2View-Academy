@@ -1,4 +1,4 @@
-# Task - Source Component - Entities and Referential Data
+# Task — Source Component — Entities and Referential Data
 
 The Business Entities & referential data option enables to extract Business Entities from a source environment. This is the default option. It also enables the user to add selected tables to the Business Entities.
 
