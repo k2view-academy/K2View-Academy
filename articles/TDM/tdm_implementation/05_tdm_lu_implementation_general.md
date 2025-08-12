@@ -2,21 +2,21 @@
 
 A TDM task copies a [Business Entity](/articles/TDM/tdm_overview/03_business_entity_overview.md) (BE) from a source environment to a target environment. A BE can have multiple [LUs](/articles/03_logical_units/01_LU_overview.md) with either a flat or a hierarchical structure. For instance, a Customer BE consists of Customer Care, Billing, Ordering and Usage LUs. The ability to break up a BE into several LUs provides maximum flexibility and prevents duplication of development. Additionally, defining a hierarchical structure of parent-child LUs allows creating LUs based on the natural root entity of the related data sources, rather than forcefully setting a unified root entity on all LUs within a given BE.
 
-Each LU in a TDM project should have additional components in order to support TDM functionalities, as described below:   
+To support TDM functionalities, each LU in a TDM project should include additional components, as described below:   
 
 ## Basic LU Structure
 
-Each LU in a TDM project has the following structure:
+In a TDM project, each LU is structured as follows:
 
-- Dummy root table - FABRIC_TDM_ROOT. 
+- Dummy root table — FABRIC_TDM_ROOT. 
 
 - Generic TDM LU tables that are linked to the root table. 
 
-- 2 main branches that are linked to the root table:
+- Two main branches that are linked to the root table:
 
-  - **Source branch** — LU tables that extract an entity's source data. Source LU tables are populated when a TDM task needs to load (insert) entities into a target environment and they therefore must extract the source data of these entities.
+  - **Source branch** — LU tables that extract an entity's source data. Source LU tables are populated when a TDM task needs to load (insert) entities into a target environment. In this case, the source data of these entities must first be extracted.
 
-  - **Target branch** — LU tables that extract the target keys of an entity. The keys are extracted from the target environment in order to enable deleting an entity from the target environment if required by the TDM task. By default these tables has the 'TAR_' prefix in the table name.
+  - **Target branch** — LU tables that extract an entity’s target keys from the target environment. This allows TDM tasks to delete the entity from the target environment when necessary. By default, the names of these tables begin with the 'TAR_' prefix.
 
     
 
@@ -24,7 +24,7 @@ Each LU in a TDM project has the following structure:
 
 ### I. Creating a New LU
 
-- Create a [new LU](/articles/03_logical_units/05_create_a_new_LU_object.md) on the Studio. It is recommended to run a discovery before creating the LU as the Web Studio gets the relations between the tables from the Catalog's artifacts.
+- Create a [new LU](/articles/03_logical_units/05_create_a_new_LU_object.md) on the Studio. It is recommended to run Discovery before creating the LU as the Web Studio gets the relations between the tables from the Catalog's artifacts.
 - Deploy it to Fabric.
 
 ### II. Adding the TDM Setup to the LU
