@@ -105,7 +105,7 @@ In a TDM project, each LU is structured as follows:
 
 ### Support for Complex Documents
 
-- **TDM V9.4.0**, which is based on **Fabric V8.3.0**, now offers native E2E support for **NoSQL Document Storage** (such as MongoDB or CouchBase). This support includes **Catalog discovery**, **Catalog masking and sequence handling**, **parsing a complex document into an LU**, and **load and delete capabilities** for these documents: 
+- **TDM V9.4.0**, which is based on **Fabric V8.3.0**, now offers native E2E support for **NoSQL Document Storage** (such as MongoDB or CouchBase). This support includes **Catalog discovery**, **Catalog masking and sequence handling**, **parsing a complex document into an LU**, and **load and delete capabilities**: 
 
 ####  Discovery
 
