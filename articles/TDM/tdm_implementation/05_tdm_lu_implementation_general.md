@@ -29,7 +29,7 @@ In a TDM project, each LU is structured as follows:
 
 ### II. Adding the TDM Setup to the LU
 
-- Run the **TDMLUInitBasedOnFabric** flow in order to add the TDM setup to the LU. This flow adds the following:
+- Run the **TDMLUInitBasedOnFabric** flow in order to add the TDM setup to the LU. This flow performs the following actions:
 
   - It adds the TDM tables to the LU schema.
 
@@ -48,14 +48,14 @@ In a TDM project, each LU is structured as follows:
 
   - It creates the delete and load flows.
 
-  - **Optional updates**:
+  - **Optional actions**:
     - Creating and adding the target tables to the LU to support the entity deletion.
     - Creating the [data generation flows](16_tdm_data_generation_implementation.md) to support [Generate tasks](/articles/TDM/tdm_gui/16a_generate_task.md).  
 
 
 <web>
 
-- Previous TDM versions automated the TDM implementation for JDBC data sources. TDM V9.4.0 has now been enhanced to automate implementation for NoSQL data sources as well. The relevant templates are included in the data source connector’s extension. The **TDMLUInitBasedOnFabric** flow now supports adding the TDM setup to LUs that are based on NoSQL data sources.
+- Previous TDM versions automated the TDM implementation process for JDBC data sources. With TDM V9.4.0, this automation has been extended to include NoSQL data sources as well. The relevant templates are included in the data source connector’s extension. The **TDMLUInitBasedOnFabric** flow now supports adding the TDM setup to LUs that are based on NoSQL data sources.
 
 </web>
 
