@@ -1,15 +1,15 @@
 # File Level Masking Implementation
 
-Running TDM table-level tasks on files require an creation of the file's interface and a customization of the TDM flows (extract, delete, and load flows).
+Running TDM table-level tasks on files requires the creation of the file's interface and a customization of the TDM flows (extract, delete, and load flows).
 
 The [Catalog configuration](/articles/39_fabric_catalog/05_cataloging_of_files.md) supports both methods:
 
 -  A dataset (table) represents a physical file (1:1 relation between the files and datasets).
 - A dataset (table) represents a folder that can have multiple files with the same format. 
 
-Each methods requires a different TDM customization.
+Each method requires a different TDM customization.
 
-To illustrate the E2E process, the *File Cataloging - Demo* extension is available, and can be found on the [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md)'s list of the extensions. This extension can be installed into your project, and it offers several comprehensive examples of file cataloging. The extension includes the flows examples for CSV, XML, JSON, Avro and HTTP formats. Instructions on how to use the extension can be found in its README file.
+To illustrate the E2E process, the *File Cataloging - Demo* extension is available, and can be found on the [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md)'s list of extensions. This extension can be installed into your project, and it offers several comprehensive examples of file cataloging. The extension includes the flow examples for CSV, XML, JSON, Avro, and HTTP formats. Instructions on how to use the extension can be found in its README file.
 
 ## A Dataset (table) Represents a Physical File
 
@@ -17,7 +17,7 @@ To illustrate the E2E process, the *File Cataloging - Demo* extension is availab
 
 - The customized flows extract flows must be based on **GetSourceDataByQuery**  flow (extract) and **LoadTableByQuery**  flow (load). 
 
-  Click [here](09_tdm_reference_implementation.md#customized-table-flows---implementation-guidelines) for more information how to build customized flows for table-level tasks. 
+  Click [here](09_tdm_reference_implementation.md#customized-table-flows---implementation-guidelines) for more information on how to build customized flows for table-level tasks. 
 
 ### Extract Customized Flow - 1:1 Relation of Dataset and File
 
@@ -47,9 +47,9 @@ To illustrate the E2E process, the *File Cataloging - Demo* extension is availab
 
 
 
-### TableLeveDefinitions MTable - 1:1 Relation of Dataset and File	
+### TableLevelDefinitions MTable - 1:1 Relation of Dataset and File	
 
-- Add the interface, tables, and custom flows the the TableLeveDefinitions MTable.
+- Add the interface, tables, and custom flows to the TableLevelDefinitions MTable.
 
 - Set the execution order to 9 for all files if they can be processed in parallel. 
 
