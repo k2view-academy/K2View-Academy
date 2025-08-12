@@ -55,28 +55,28 @@ In a TDM project, each LU is structured as follows:
 
 <web>
 
-- Previous TDM versions automated the TDM implementation process for JDBC data sources. With TDM V9.4.0, this automation has been extended to include NoSQL data sources as well. The relevant templates are included in the data source connector’s extension. The **TDMLUInitBasedOnFabric** flow now supports adding the TDM setup to LUs that are based on NoSQL data sources.
+- Previous TDM versions automated the TDM implementation process for JDBC data sources. With TDM V9.4.0, this automation has been extended to include NoSQL data sources as well. The relevant templates are included in the data source connector extension. The **TDMLUInitBasedOnFabric** flow now supports adding the TDM setup to LUs that are based on NoSQL data sources.
 
 </web>
 
 #### TDMLUInitBasedOnFabric Flow Execution
 
-1. Verify that the LU schema does not have [grouped tables](/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md), and deploy the LU to Fabric debug server before running the flow. 
-2. Optional - [Filter out LU tables from the Broadway flows](05b_filter_out_lu_tables.md) (delete, load, and data generation flows). 
-3. Set the flow's input parameters before executing it:
+1. Verify that the LU schema does not contain [grouped tables](/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md), and deploy the LU to the Fabric debug server before running the flow. 
+2. Optional — [filter out LU tables from the Broadway flows](05b_filter_out_lu_tables.md) (delete, load, and data generation flows). 
+3. Set the flow input parameters before executing it:
 
    - **LU_NAME**
-   - **SOURCE_INTERFACE** - populated with the source DB interface name.
-   - **SOURCE_SCHEMA** - populated with the source DB schema name.
-   - **OVERRIDE_EXISTING_FLOWS** - true/false. It indicates if the execution recreates existing flows. 
-   - **TARGET_SCHEMA** - populated with the target DB schema name.
-   - **TARGET_INTERFACE** - populated with the target DB interface name.
-   - **TARGET_ENVIRONMENT** - populated with one of the target environments' names. Can be populated with '_dev' if the Environments are not defined yet.
+   - **SOURCE_INTERFACE** — populated with the source DB interface name.
+   - **SOURCE_SCHEMA** — populated with the source DB schema name.
+   - **OVERRIDE_EXISTING_FLOWS** — true/false. It indicates if the execution recreates existing flows. 
+   - **TARGET_SCHEMA** — populated with the target DB schema name.
+   - **TARGET_INTERFACE** — populated with the target DB interface name.
+   - **TARGET_ENVIRONMENT** — populated with one of the target environment names. Can be populated with '_dev' in case the Environments are not yet defined.
 
 
-3. Additional **flow input parameters**:
+4. Additional **flow input parameters**:
 
-   - Set the  **CREATE_DELETE_TABLES** input parameter to **true** in order to create and add the target tables to the LU.
+   - Set the **CREATE_DELETE_TABLES** input parameter to **true** in order to create and add the target tables to the LU.
 
    - Set the **CREATE_GENERATE_FLOWS** input parameter to **true** in order to create rule-based data generation flows for the LU.
 
@@ -84,7 +84,7 @@ In a TDM project, each LU is structured as follows:
 
   ![TDMLUInitBasedOnFabric](images/TDMLUInit_input_parameters.png)
 
-4. Run the flow in Fabric Studio.
+5. Run the flow in Fabric Studio.
 
 
 
