@@ -50,7 +50,7 @@ In a TDM project, each LU is structured as follows:
 
   - **Optional actions**:
     - Creating and adding the target tables to the LU to support the entity deletion.
-    - Creating the [data generation flows](16_tdm_data_generation_implementation.md) to support [Generate tasks](/articles/TDM/tdm_gui/16a_generate_task.md).  
+    - Creating the [data generation flows](16_tdm_data_generation_implementation.md) to support [rule-based generation tasks](/articles/TDM/tdm_gui/14d_task_source_rule_based_generation.md).  
 
 
 <web>
