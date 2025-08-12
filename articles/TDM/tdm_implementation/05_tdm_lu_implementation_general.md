@@ -93,7 +93,7 @@ In a TDM project, each LU is structured as follows:
 ## Catalog Masking Integration
 
 - Fabric introduces [Fabric Discovery and Catalog solution](/articles/39_fabric_catalog/01_catalog_overview.md), which provides an insight into the Fabric interfaces, including non-JDBC interfaces.
-- Starting with TDM V8.1, new templates have been added to integrate TDM with Catalog masking. These templates incorporate the **CatalogMaskingMapper** Actor into LU population flows in order to apply Catalog-based masking on detected PII fields before loading them into the LU table. Note that implementing the Fabric Catalog is not mandatory; if the Catalog is not implemented, the CatalogMaskingMapper Actor will return an empty output.
+- Starting with TDM V8.1, new templates have been added to integrate TDM with Catalog masking. These templates incorporate the **CatalogMaskingMapper** Actor into LU population flows in order to apply Catalog-based masking on detected PII fields before loading them into the LU table. Note that integrating the Fabric Catalog is not mandatory; if the Catalog is not integrated, the CatalogMaskingMapper Actor will return an empty output.
 
 - Optional: Edit the population flows to override Catalog masking for certain PII fields by adding [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and linking them to the relevant fields in the **DbLoad** Actor.
 
@@ -109,11 +109,11 @@ In a TDM project, each LU is structured as follows:
 
 ####  Discovery
 
-- A Discovery job can run on interfaces such as MongoDB or CouchBase, once the corresponding K2exchange connector has been installed in the project. The Catalog is then created based on the discovered document hierarchy. (This feature was already supported before V8.3).
+- A Discovery job can run on interfaces such as MongoDB or CouchBase, once the corresponding K2exchange connector has been installed in the project. The Catalog is then created based on the discovered document hierarchy. (This feature was already supported prior to V8.3).
 
-#### Logical Unit implementation
+#### Logical Unit Implementation
 
-- The Web Studio’s Interface explorer can now display  complex document structures, such as nested hierarchy levels and arrays of primitives.
+- The Web Studio’s Interface explorer can now display complex document structures, such as nested hierarchy levels and arrays of primitives.
 
 - Logical Units can now be created based on the Document’s metadata retrieved from the Catalog, after the Discovery process has run on it. Nested hierarchy levels are then created as LU tables, each with a referential link to its respective parent level. 
 
