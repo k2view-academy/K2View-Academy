@@ -73,7 +73,7 @@ Import and deploy the TDM_TableLevel LU.
 
 - **table_pk_list** - an optional setting. Populated by the list of the target's PK fields in the RefList object. These fields can be used later for customizing the load flow to run an Upsert on the target table.
 
-- **truncate_indicator** - by default, the TDM runs a delete on the table in the target environment before loading it. If you have a permission to run a truncate on the target table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to **true**.
+- **truncate_indicator** - by default, the TDM runs a delete on the table in the target environment before loading it. If you have permission to run a truncate on the target table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to **true**.
 
 - **count_indicator** - this setting is set to **true**, by default, for counting the number of records in the source or target, in order to monitor the task execution. Set the indicator to **false**, if required, in order to avoid counting the records in the target.
 
@@ -185,7 +185,7 @@ Setting customized masking logic on tables:
 - If you need to set customized logic on specific fields, edit the Catalog and remove the PII property from these fields in the Catalog in order to prevent double masking them.
 - Sometimes, the customized masking logic is based on the Catalog masking output, e.g., building the masked email address based on the masked first and last names. If you need to call the Catalog masking actor in the extract flow, proceed as follows: 
   - Add the **CatalogMaskingMapper** actor to the extract flow. 
-  - Add the customized masking actors to the extract flow to be envoked after the CatalogMaskingMapper actor.
+  - Add the customized masking actors to the extract flow to be invoked after the CatalogMaskingMapper actor.
   - Set the **enable_masking** parameter to **false** at the end of the extract flow as a way to prevent double masking of the table's record by the TDM execution processes.
 
 ##### Customized Extract Flow - Example
