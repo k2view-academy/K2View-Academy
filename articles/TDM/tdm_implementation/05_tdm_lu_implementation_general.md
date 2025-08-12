@@ -41,7 +41,7 @@ In a TDM project, each LU is structured as follows:
 
   - It recreates the LU population of the main source LU table.
 
-    Click [here](05a_main_source_lu_table_population_logic.md) for more information about the main source LU table's population logic.
+    Click [here](05a_main_source_lu_table_population_logic.md) for more information about the population logic of the main source LU table.
 
 
   - It creates the [sequence Actors](05d_tdm_sequence.md#generating-sequence-actor-and-flows) for the load and data generation flows.
