@@ -1,12 +1,12 @@
-# Masking a Sensitive Data
+# Masking Sensitive Data
 
-TDM systems often handle sensitive data. Complying with data privacy laws and regulations, Fabric enables [masking sensitive fields](/articles/26_fabric_security/06_data_masking.md) such as SSN, credit card numbers, and email addresses before they are loaded either to Fabric or into the target database.
+TDM systems often handle sensitive data. To comply with data privacy laws and regulations, Fabric can [mask sensitive fields](/articles/26_fabric_security/06_data_masking.md) — such as SSN, credit card numbers, and email addresses — before they are loaded either to Fabric or into the target database.
 
-The TDM infrastructure controls masking enablement/disablement based on the settings of the global variables.
+The TDM infrastructure controls whether masking is enabled or disabled based on the settings of global variables.
 
  <web>
 
-## Catalog Masking Integration
+## Integrating Catalog Masking 
 
 - [Fabric's Discovery and Catalog solution](/articles/39_fabric_catalog/01_catalog_overview.md) provides an insight into the Fabric interfaces, starting with the RDBMS interface types in the MVP version. The Fabric Catalog supports a [catalog-based masking](/articles/39_fabric_catalog/09_build_artifacts.md) of PII fields. 
 
