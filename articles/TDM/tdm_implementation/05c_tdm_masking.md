@@ -22,17 +22,17 @@ The TDM infrastructure controls whether masking is enabled or disabled based on 
 * **Load flows** — the TDM templates add the **HandleMaskAndSeqFields** flow to the load flows. This flow is invoked for each record to mask its PII fields and replace its sequences if needed. Masking is performed using the **CatalogMaskingRecord** Actor.
 * **Table-level flows** — the TDM table-level extract flow uses the **CatalogMaskingMapper** Actor to mask sensitive data.
 
-## Overriding the Catalog Masking 
+## Overriding Catalog Masking 
 
-- Overriding the Catalog masking may be required when there is a dependency between the PII fields. The Catalog masking handles each field separately.
+- Overriding Catalog masking may be necessary when PII fields are dependent on each other, as Catalog masking handles each field separately.
 
-- If you need to have a dependency between PII fields, you can override the Catalog masking for these fields. 
+- If a dependency between PII fields is required (as in the following examples), you can override Catalog masking for those fields. 
 
 - Examples:
 
-  - Address — the masked  city, street name, and zip code values must be related.
+  - Address — the masked city, street name, and zip code values must be related.
 
-  - Email — the masked email contains the masked first and last name values. 
+  - Email — the masked email address contains the masked first and last name values. 
 
 - **LU populations**: add the [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) **after** the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor in order to override the Catalog masking.
 - **Load flows**: add the [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) **after** the **HandleMaskAndSeqFields** flow and link them to the relevant fields in the **DbLoad** Actor in order to override the Catalog masking.
