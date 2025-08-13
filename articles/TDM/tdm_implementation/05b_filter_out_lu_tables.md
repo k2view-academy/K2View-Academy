@@ -1,6 +1,6 @@
 # Exclude LU Tables from Broadway Flow Creation 
 
-The **TDMFilterOutTargetTables** Actor contains a list of LU tables that do not require the creation of load and delete flows. By default, it is populated by both the TDM tables and the [target LU tables](08_tdm_implement_delete_of_entities.md#lu-structure---target-tables) added to the LU for enabling a delete of the entity:
+The **TDMFilterOutTargetTables** Actor contains a list of LU tables that do not require the creation of load and delete flows. By default, it is populated by both TDM tables and [target LU tables](08_tdm_implement_delete_of_entities.md#lu-structure---target-tables) that were added to the LU for enabling entity deletion:
 
 ![example](images/TDMFilterOutTargetTables_example.png)
 
