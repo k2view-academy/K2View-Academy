@@ -6,7 +6,7 @@ The **TDMFilterOutTargetTables** Actor contains a list of LU tables that do not 
 
 To filter out additional tables, open the **TDMFilterOutTargetTables** Actor and edit its **table** object. The **lu_name** column should be populated as follows:
 
-* ALL_LUS - when a filtered-out table is relevant for all TDM LUs.
+* ALL_LUS - when a filtered-out table applies to all TDM LUs.
 * LU name - when a table belongs to a specific LU. In some cases, you may need to add tables to the LU schema in order to get the child IDs and to populate the TDM_LU_TYPE_RELATION_EID TDM DB table. For example, the addition of the Orders table to the Customer LU generates a list of customer orders.
 
  If a [data generation flow](16_tdm_data_generation_implementation.md) should not be generated for the table, the **generator_filterout** column checkbox needs to be checked (true).
