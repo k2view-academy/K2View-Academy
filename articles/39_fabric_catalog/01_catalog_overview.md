@@ -8,7 +8,7 @@ Data Discovery is a process that can help companies cope with the above-mentione
 * Uncover and investigate hidden yet potentially useful data insights.
 * Find and flag sensitive information, enabling a better protection of it.
 
-Fabric's Discovery and Catalog solution provides an insight into the Fabric interfaces, starting with the RDBMS interface type. The Discovery process includes the following steps:
+Fabric's Discovery and Catalog solution provides an insight into the Fabric interfaces. The Discovery process includes the following steps:
 
 - Auto-discovery of the data source's elements (schemas, tables, fields) and the existing PK-FK relations between them, while modeling the data source in the Neo4j Graph DB. 
 - Enrichment of the data model by creating additional relations between the data source elements when the PK-FK relations don’t exist. 
