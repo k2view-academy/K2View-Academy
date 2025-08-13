@@ -7,10 +7,11 @@ The **TDMFilterOutTargetTables** Actor contains a list of LU tables that do not 
 To filter out additional tables, open the **TDMFilterOutTargetTables** Actor and edit its **table** object. Use the following attributes to populate the **lu_name** column:
 
 * ALL_LUS — when a filtered-out table applies to all TDM LUs.
-* LU name — when a table belongs to a specific LU. In some cases, tables may need to be added to the LU schema in order to retrieve child IDs and support the [BE hierarchy](06_tdm_implementation_support_hierarchy.md). For example, the addition of the Orders table to the Customer LU generates a list of the customer's order IDs.
+* LU name — when a table belongs to a specific LU.
 
- If a [data generation flow](16_tdm_data_generation_implementation.md) should not be generated for the table, the **generator_filterout** column checkbox needs to be checked (i.e., set to **true**).
+## Generator Filterout Checkbox 
+In some cases, tables may need to be added to the LU schema to retrieve child IDs and support the [BE hierarchy](06_tdm_implementation_support_hierarchy.md). For example, the addition of the Orders table to the Customer LU generates a list of the customer's order IDs. For these tables, the TDM needs to create data generation flows, and therefore the **generation_filterout** checkbox is cleared.  These tables still need to be added to the **TDMFilterOutTargetTables** Actor, as it would prevent the load and delete flows creation for the tables; these tables are already loaded/deleted by the child LUs. 
+In other scenarios, the [data generation flows](16_tdm_data_generation_implementation.md) should not be created for the LU tables, for example, TDM tables in the LU. For these scenarios, the **generator_filterout** column checkbox needs to be checked (i.e., set to **true**).
 
-These tables should be added to the **TDMFilterOutTargetTables** Actor as it would prevent the load/delete flows creation for the tables; these tables are already loaded/deleted by the child LUs. 
-
+## TDMFilterOutTargetTables Actor Update
 Following completion of the Actor's update, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button (top of the Project tree). This act applies the changes in the **TDMFilterOutTargetTables** Actor and deploys the LU.  
