@@ -36,18 +36,18 @@ The TDM infrastructure controls whether masking is enabled or disabled based on 
 
 - **LU populations**: Add the [masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) **after** the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor in order to override Catalog masking.
 - **Load flows**: Add the [masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) **after** the **HandleMaskAndSeqFields** flow and link them to the relevant fields in the **DbLoad** Actor in order to override Catalog masking.
-- If you need to send the original (source) values to the Masking Actors in LU population or load flows, first move the Query result to an **ArrayBuilder** Actor. Then, connect the **ArrayBuilder** output to the **CatalogMaskingMapper** Actor (for LU population flows), or to the **HandleMaskAndSeqFields** flow (for load flows), instead of connecting the Query result directly. This is needed in order to invoke the Query output twice – sending it to the CatalogMaskingMapper/HandleMaskAndSeqFields and to the Masking Actor.
-- If your flows mask a PII field using the masking Actors (overriding the Catalog masking), it is recommended to remove the PII classification in the Catalog for this field to prevent unnecessary double masking of this field. 
+- If you need to send the original (source) values to the Masking Actors in LU population or load flows, first move the Query result to an **ArrayBuilder** Actor. Then, connect the **ArrayBuilder** output to the **CatalogMaskingMapper** Actor (for LU population flows), or to the **HandleMaskAndSeqFields** flow (for load flows), instead of connecting the Query result directly. This setup allows the Query output to be used twice: once by the CatalogMaskingMapper/HandleMaskAndSeqFields and once by the Masking Actors.
+- If your flows mask a PII field using the masking Actors (overriding Catalog masking), it is recommended to remove the PII classification in the Catalog for that field in order to prevent unnecessary double masking. 
 
-## TDM - Masking Categories
+## TDM — Masking Categories
 
-One of the masking Actors' input parameters is named **category**. This parameter indicates *when* the masking Actor needs to generate a new value, e.g., when masking sensitive data or replacing the ID (sequence). The following values can be set in the category:
+One of the masking Actors' input parameters is named **category**. This parameter specifies *when* the masking Actor should generate a new value, for example, when masking sensitive data or replacing an ID (sequence). The following values can be set for the **category** parameter:
 
 - **enable_sequences**, which generates a new ID value
 - **enable_masking**, which masks sensitive data
 - Any custom string value
 
-A new custom value has been added by TDM 8.1:  **enable_masking_uniqueness**. This category is set to true if the **enable_sequences** or the **enable_masking** categories are set to true by the TDM task execution process.
+A new custom value has been added by TDM 8.1: **enable_masking_uniqueness**. This category is set to true if the **enable_sequences** or the **enable_masking** categories are set to true by the TDM task execution process.
 
 By default, the category is set to **enable_masking** on all masking Actors except for the **MaskingSequence** Actor, in which case the default category is set to **enable_sequences**. The main use of the  **enable_masking_uniqueness** category is for PII fields that must have unique values, such as SSN. For these fields, it is recommended to set the **category** of the masking Actor to **enable_masking_uniqueness**.
 
