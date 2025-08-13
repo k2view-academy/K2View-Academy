@@ -10,17 +10,17 @@ The TDM infrastructure controls whether masking is enabled or disabled based on 
 
 - [Fabric's Discovery and Catalog solution](/articles/39_fabric_catalog/01_catalog_overview.md) provides an insight into the Fabric interfaces. The Fabric Catalog supports a [Catalog-based masking](/articles/39_fabric_catalog/catalog_app/11_catalog_masking.md) of PII fields. 
 
-- From TDM V8.1 onwards, the TDM templates add the **CatalogMaskingMapper** Actor to the LU population flows in order to integrate with the Catalog masking. This Actor runs the Catalog-based masking on the identified PII fields before loading them into the LU table. 
+- From TDM V8.1 onwards, the TDM templates add the **CatalogMaskingMapper** Actor to LU population flows in order to integrate with Catalog masking. This Actor runs the Catalog-based masking on the detected PII fields before loading them into the LU table. 
 
 </web> 
 
 ## TDM Processes that Mask Sensitive Data
 
-* **LU population flows** - the TDM templates add the **CatalogMaskingMapper** Actor to the LU population flows to run the Catalog-based masking on the identified PII fields before loading them into the LU table.  It is possible to edit the population flows in order to override the Catalog’s masking for some of the PII fields: add [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
+* **LU population flows** — the TDM templates add the **CatalogMaskingMapper** Actor to the LU population flows to run the Catalog-based masking on the detected PII fields before loading them into the LU table. It is possible to edit the population flows to override the Catalog’s masking for certain PII fields. To do this, add [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) after the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor.
   * If the masked field is used as an [input argument](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md) that is linked to another LU table, add the masking population that masks the fields in all LU tables to the last executed LU table in order to have the original value when populating the LU tables. 
 
-* **Load flows** - the TDM templates adds the **HandleMaskAndSeqFields** flow to the load flows. The  **HandleMaskAndSeqFields** flow is invoked for each record to mask its PII fields and replace its sequences if needed. The masking is done using the **CatalogMaskingRecord** Actor.
-* **Table-level flows** - the TDM table-level extract flow uses the **CatalogMaskingMapper** Actor to mask the sensitive data.
+* **Load flows** — the TDM templates adds the **HandleMaskAndSeqFields** flow to the load flows. The  **HandleMaskAndSeqFields** flow is invoked for each record to mask its PII fields and replace its sequences if needed. The masking is done using the **CatalogMaskingRecord** Actor.
+* **Table-level flows** — the TDM table-level extract flow uses the **CatalogMaskingMapper** Actor to mask the sensitive data.
 
 ## Overriding the Catalog Masking 
 
@@ -30,9 +30,9 @@ The TDM infrastructure controls whether masking is enabled or disabled based on 
 
 - Examples:
 
-  - Address - the masked  city, street name, and zip code values must be related.
+  - Address — the masked  city, street name, and zip code values must be related.
 
-  - Email - the masked email contains the masked first and last name values. 
+  - Email — the masked email contains the masked first and last name values. 
 
 - **LU populations**: add the [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) **after** the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor in order to override the Catalog masking.
 - **Load flows**: add the [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) **after** the **HandleMaskAndSeqFields** flow and link them to the relevant fields in the **DbLoad** Actor in order to override the Catalog masking.
