@@ -51,7 +51,7 @@ TDM supports the creation of **additional external parameters** in the flow, ena
 
 The [direct call](#custom-logic---tdm-81-improvements) Custom Logic flow must have the following structure:
 
-![direct call structure](C:\Users\TaliEinhorn\OneDrive - K2View\Documents\K2View-Academy\articles\TDM\tdm_implementation\images\direct_call_custom_logic_structure.png)
+![direct call structure](/images/direct_call_custom_logic_structure.png)
 
 1. Init - calls the **TDMSetSessionGlobals** Actor to run the initial setting for the custom logic flow execution. The SESSION_GLOBALS input parameter must be defined as an external parameter. The external parameter name must be SESSION_GLOBALS.
 
@@ -72,7 +72,7 @@ The [direct call](#custom-logic---tdm-81-improvements) Custom Logic flow must ha
   - Initialize the entities' number counter for execution - add the **InitRecordCount** TDM Actor (imported from the TDM library).
   - Notes: 
     - If the flow needs to get an array of parameters, it is recommended to define the external input parameter as a String and add a **Split** Actor to the flow in order to split the values by the delimiter and populate them into a String's array.
-    - It is recommended to add a limit to the SQL query if you do not need to filter out reserved entities when running this flow. This way the query returns a limited size of records.
+    - It is recommended to add a limit to the SQL query if you do not need to filter out reserved entities when running this flow. This way, the query returns a limited number of records.
 
 - **Stages 2-4**: **Loop on the selected entities** - set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop in order to have one commit for all iterations: 
 
@@ -98,23 +98,23 @@ Below are examples of a Custom Logic flow:
 
 **Example 1 - get the Contract Status as an input parameter and build the Select statement accordingly:** 
 
-![custom logic](C:\Users\TaliEinhorn\OneDrive - K2View\Documents\K2View-Academy\articles\TDM\tdm_implementation\images\custom_logic_example.png)
+![custom logic](/images/custom_logic_example.png)
 
 
 
 **Example 2 - get an input String of States, separated by a comma. Split the input String into an array and send it to the SQL query**:
 
-An example of US states input: 
+An example of the US states' input: 
 
 - NY,CA
 
-![custom logic](C:\Users\TaliEinhorn\OneDrive - K2View\Documents\K2View-Academy\articles\TDM\tdm_implementation\images\custom_logic_example_2.png)
+![custom logic](/images/custom_logic_example_2.png)
 
 
 
 **Example 3 - get an input Select statement with parameters for the Select statement:**
 
-![custom logic](C:\Users\TaliEinhorn\OneDrive - K2View\Documents\K2View-Academy\articles\TDM\tdm_implementation\images\custom_logic_example_3.png)
+![custom logic](/images/custom_logic_example_3.png)
 
 Note: When exposing the SQL statement as an external parameter for the user, verify that it runs on a read-only DB connection; this would prevent a DB update.
 
@@ -128,12 +128,12 @@ Edit the flow in order to use it in the TDM tasks:
  - Add the CustomLogicSql flow to the **CustomLogicFlows** Actor. Populate the new record as follows:
    -  LU_NAME: optional. Can be left empty.
    -  FLOW_NAME: CustomLogicSql
-   -  DESCRIPTION: populated with a free text.
+   -  DESCRIPTION: populated with free text.
    -  DIRECT_FLOW: true
   - Redeploy the Web Services to Fabric.
   - If the LU_NAME field is populated with an LU name, redeploy the LU name to Fabric. Else (if the LU_NAME field is empty), redeploy the TDM LU to Fabric.
 
-The following parameters can be set by the user that creates the task:
+The following parameters can be set by the user who creates the task:
 
 - **sql** - mandatory parameter defining the Select query to run on the TDM DB and to get the task's entity list.
 - **sqlParams** - optional parameter to set parameters for the Select query. You can set multiple parameters separated by a comma.
@@ -167,9 +167,9 @@ The customLogicSql flow runs in a **direct call** mode.
 
 Add the LU name and Custom Logic flow name to the **CustomLogicFlows** constTable TDM Actor (imported from the TDM library).
 
-View the below example:
+View the example below:
 
-![custom logic](C:\Users\TaliEinhorn\OneDrive - K2View\Documents\K2View-Academy\articles\TDM\tdm_implementation\images\custom_logic_table_example.png)
+![custom logic](/images/custom_logic_table_example.png)
 
 
 
