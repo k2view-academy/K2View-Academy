@@ -60,7 +60,7 @@
 </tr>
 <tr>
 <td style="width: 218.016px;">
-<p><a title="Non-source Schema tables &amp; MDB JMX Stats" href="Non_Source_Schema_tables.pdf">Non-source Schema tables &amp; MDB JMX Stats</a></p>
+<p><a title="Non-source Schema tables &amp; MDB JMX Stats" href="Non_Source_Schema_tables.pdf">Non-source Schema Tables &amp; MDB JMX Stats</a></p>
 </td>
 <td style="width: 216.984px;">
 <p> <a title="Fabric Batch" href="Fabric_Batch.pdf">Fabric Batch</a></p>
@@ -77,7 +77,7 @@
 <p><a title="Big LUIs &amp; MDB Built-in functions" href="Big_LUIs_&amp;_MDB_Built-in_functions.pdf">Big LUIs &amp; MDB Built-in functions</a></p>
 </td>
 <td style="width: 216.984px;">
-<p>BW Advanced actors</p>
+<p><a title="Graphit" href="Graphit.pdf">Graphit</a></p>
 </td>
 <td style="width: 217.75px;">
 <p>Security &amp; Permissions</p>
@@ -91,7 +91,7 @@
 <p><a title="LU Schema functions" href="LU_Schema_functions.pdf">LU Schema functions</a></p>
 </td>
 <td style="width: 216.984px;">
-<p><a title="Graphit" href="Graphit.pdf">Graphit</a></p>
+<p>BW Advanced Actors</p>
 </td>
 <td style="width: 217.75px;">
 <p>Catalog</p>
