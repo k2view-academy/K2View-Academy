@@ -49,7 +49,7 @@
 <p><a title="LU Table population" href="LU_Table_population.pdf">LU Table population</a></p>
 </td>
 <td style="width: 216.984px;">
-<p><a title="Jobs" href="Jobs.pdf">Jobs</a> &amp; <a title="Fabric Batch" href="Fabric_Batch.pdf">Fabric Batch</a></p>
+<p><a title="Jobs" href="Jobs.pdf">Jobs</a></p>
 </td>
 <td style="width: 217.75px;">
 <p>CDC</p>
@@ -63,7 +63,7 @@
 <p><a title="Non-source Schema tables &amp; MDB JMX Stats" href="Non_Source_Schema_tables.pdf">Non-source Schema tables &amp; MDB JMX Stats</a></p>
 </td>
 <td style="width: 216.984px;">
-<p>BW Advanced actors</p>
+<p> <a title="Fabric Batch" href="Fabric_Batch.pdf">Fabric Batch</a></p>
 </td>
 <td style="width: 217.75px;">
 <p>Cassandra &amp; Keyspaces</p>
@@ -77,7 +77,7 @@
 <p><a title="Big LUIs &amp; MDB Built-in functions" href="Big_LUIs_&amp;_MDB_Built-in_functions.pdf">Big LUIs &amp; MDB Built-in functions</a></p>
 </td>
 <td style="width: 216.984px;">
-<p>BW Actors for files/APIs</p>
+<p>BW Advanced actors</p>
 </td>
 <td style="width: 217.75px;">
 <p>Security &amp; Permissions</p>
