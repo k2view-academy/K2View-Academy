@@ -34,10 +34,10 @@ The TDM infrastructure controls whether masking is enabled or disabled based on 
 
   - Email — the masked email address contains the masked first and last name values. 
 
-- **LU populations**: add the [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) **after** the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor in order to override the Catalog masking.
-- **Load flows**: add the [Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) **after** the **HandleMaskAndSeqFields** flow and link them to the relevant fields in the **DbLoad** Actor in order to override the Catalog masking.
-- If you need to send the original (source) values for the Masking Actors in the LU population or load flows, move the Query result to an **ArrayBuilder** Actor and connect the **ArrayBuilder** output to the **CatalogMaskingMapper** Actor (for LU population flow), or to the **HandleMaskAndSeqFields** flow (for load flow), instead of connecting the Query result to it. This is needed in order to invoke the Query output twice – sending it to the CatalogMaskingMapper/HandleMaskAndSeqFields and to the Masking Actor.
-- If your flows mask a PII field using the Masking actors (overriding the Catalog masking),  it is recommended to remove the PII classification in the Catalog for this field to prevent unnecessary double masking of this field. 
+- **LU populations**: Add the [masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) **after** the **CatalogMaskingMapper** Actor and link them to the relevant fields in the **DbLoad** Actor in order to override Catalog masking.
+- **Load flows**: Add the [masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) **after** the **HandleMaskAndSeqFields** flow and link them to the relevant fields in the **DbLoad** Actor in order to override Catalog masking.
+- If you need to send the original (source) values to the Masking Actors in LU population or load flows, first move the Query result to an **ArrayBuilder** Actor. Then, connect the **ArrayBuilder** output to the **CatalogMaskingMapper** Actor (for LU population flows), or to the **HandleMaskAndSeqFields** flow (for load flows), instead of connecting the Query result directly. This is needed in order to invoke the Query output twice – sending it to the CatalogMaskingMapper/HandleMaskAndSeqFields and to the Masking Actor.
+- If your flows mask a PII field using the masking Actors (overriding the Catalog masking), it is recommended to remove the PII classification in the Catalog for this field to prevent unnecessary double masking of this field. 
 
 ## TDM - Masking Categories
 
