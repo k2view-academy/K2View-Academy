@@ -91,7 +91,7 @@
 <p><a title="LU Schema functions" href="LU_Schema_functions.pdf">LU Schema functions</a></p>
 </td>
 <td style="width: 216.984px;">
-<p>Graphit</p>
+<p><a title="Graphit" href="Graphit.pdf">Graphit</a></p>
 </td>
 <td style="width: 217.75px;">
 <p>Catalog</p>
