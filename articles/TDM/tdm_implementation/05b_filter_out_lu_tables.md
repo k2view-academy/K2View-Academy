@@ -14,4 +14,4 @@ In some cases, tables may need to be added to the LU schema to retrieve child ID
 In other scenarios, [data generation flows](16_tdm_data_generation_implementation.md) should not be created for LU tables, such as TDM tables in the LU. In these cases, the **generator_filterout** column checkbox must be checked (i.e., set to **true**).
 
 ## TDMFilterOutTargetTables Actor Update
-Following completion of the Actor's update, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button (top of the Project tree). This act applies the changes in the **TDMFilterOutTargetTables** Actor and deploys the LU.  
+After updating the Actor, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button at the top of the Project tree. This action applies the changes in the **TDMFilterOutTargetTables** Actor and deploys the LU.  
