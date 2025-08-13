@@ -51,7 +51,7 @@ TDM supports the creation of **additional external parameters** in the flow, ena
 
 The [direct call](#custom-logic---tdm-81-improvements) Custom Logic flow must have the following structure:
 
-![direct call structure](/images/direct_call_custom_logic_structure.png)
+![direct call structure](images/direct_call_custom_logic_structure.png)
 
 1. Init - calls the **TDMSetSessionGlobals** Actor to run the initial setting for the custom logic flow execution. The SESSION_GLOBALS input parameter must be defined as an external parameter. The external parameter name must be SESSION_GLOBALS.
 
@@ -98,7 +98,7 @@ Below are examples of a Custom Logic flow:
 
 **Example 1 - get the Contract Status as an input parameter and build the Select statement accordingly:** 
 
-![custom logic](/images/custom_logic_example.png)
+![custom logic](images/custom_logic_example.png)
 
 
 
@@ -108,13 +108,13 @@ An example of the US states' input:
 
 - NY,CA
 
-![custom logic](/images/custom_logic_example_2.png)
+![custom logic](images/custom_logic_example_2.png)
 
 
 
 **Example 3 - get an input Select statement with parameters for the Select statement:**
 
-![custom logic](/images/custom_logic_example_3.png)
+![custom logic](images/custom_logic_example_3.png)
 
 Note: When exposing the SQL statement as an external parameter for the user, verify that it runs on a read-only DB connection; this would prevent a DB update.
 
@@ -169,7 +169,7 @@ Add the LU name and Custom Logic flow name to the **CustomLogicFlows** constTabl
 
 View the example below:
 
-![custom logic](/images/custom_logic_table_example.png)
+![custom logic](images/custom_logic_table_example.png)
 
 
 
