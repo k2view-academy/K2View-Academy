@@ -1,13 +1,13 @@
 # Exclude LU Tables from Broadway Flow Creation 
 
-The **TDMFilterOutTargetTables** Actor contains a list of LU tables that do not require the creation of load and delete flows. By default, it is populated by both TDM tables and [target LU tables](08_tdm_implement_delete_of_entities.md#lu-structure---target-tables) that were added to the LU for enabling entity deletion:
+The **TDMFilterOutTargetTables** Actor contains a list of LU tables that do not require the creation of load and delete flows. By default, this Actor is populated by both TDM tables and [target LU tables](08_tdm_implement_delete_of_entities.md#lu-structure---target-tables) that were added to the LU for enabling entity deletion:
 
 ![example](images/TDMFilterOutTargetTables_example.png)
 
 To filter out additional tables, open the **TDMFilterOutTargetTables** Actor and edit its **table** object. The **lu_name** column should be populated as follows:
 
 * ALL_LUS — when a filtered-out table applies to all TDM LUs.
-* LU name — when a table belongs to a specific LU. In some cases, you may need to add tables to the LU schema in order to get the child IDs and to populate the TDM_LU_TYPE_RELATION_EID TDM DB table. For example, the addition of the Orders table to the Customer LU generates a list of customer orders.
+* LU name — when a table belongs to a specific LU. In some cases, tables may need to be added to the LU schema in order to retrieve child IDs and populate the TDM_LU_TYPE_RELATION_EID TDM DB table. For example, the addition of the Orders table to the Customer LU generates a list of customer orders.
 
  If a [data generation flow](16_tdm_data_generation_implementation.md) should not be generated for the table, the **generator_filterout** column checkbox needs to be checked (true).
 
