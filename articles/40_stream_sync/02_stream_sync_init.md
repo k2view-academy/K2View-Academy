@@ -4,7 +4,7 @@
 
 Stream Sync is a solution for Fabric DB synchronization with the source system changes which is applicable for the Business Entity over PostgreSQL only. 
 
-Prior to starting the Logica Unit setup, make sure your Fabric is configured as explained [here](/articles/32_LU_storage/04_business_entity_on_pg.md#configuration).
+Prior to starting the Logical Unit setup, make sure your Fabric is configured as explained [here](/articles/32_LU_storage/04_business_entity_on_pg.md#configuration).
 
 ### Logical Unit Setup for Stream Sync
 
