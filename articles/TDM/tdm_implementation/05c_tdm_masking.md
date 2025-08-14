@@ -53,7 +53,7 @@ By default, the category parameter is set to **enable_masking** for all masking 
 
 ### Setting the Mask Categories by the TDM Task Execution Processes
 
-The TDM execution processes sets the masking categories to true/false based on the TDM task execution settings:
+TDM execution processes set the masking categories to true or false according to the task execution settings:
 
 
 
