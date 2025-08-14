@@ -78,7 +78,7 @@ TDM execution processes set the masking categories to **true** or **false** acco
  <p>This attribute is set based on the  <a ref="/articles/TDM/tdm_gui/08_environment_window_general_information.md#mask-sensitive-data">source environment's setting</a>. 
 </td>
 <td width="350pxl">
-<p>Will be set to **true** for the following tasks:</p>    
+<p>Will be set to true for the following tasks:</p>    
 <ul>
 <li>The task's selection method = Entity clone</li>
 </ul>
@@ -93,7 +93,7 @@ TDM execution processes set the masking categories to **true** or **false** acco
 <p>N/A</p>
 </td>
 <td width="350pxl">
-<p>Will be set to **true** for the following tasks:</p>    
+<p>Will be set to true for the following tasks:</p>    
 <ul>
 <li>The task's selection method = Entity clone.</li>
 <li>The task replaces the entities' sequences (IDs).</li>
@@ -106,10 +106,10 @@ TDM execution processes set the masking categories to **true** or **false** acco
 <p>enable_masking_uniqueness</p>
 </td>
 <td width="300pxl">
-   Set to **true** if the enable_masking or enable_sequences are **true**.</p>
+   Set to true if the enable_masking or enable_sequences are true.</p>
 </td>
 <td width="350pxl">
-<p>Will be set to **true** for the following tasks:</p>    
+<p>Will be set to true for the following tasks:</p>    
 <ul>
 <li>The task's selection method = Entity clone.</li>
 <li>The task replaces the entities' sequences (IDs).</li>
@@ -124,9 +124,9 @@ TDM execution processes set the masking categories to **true** or **false** acco
 
 * Notes:
 
-  * From TDM V7.3 onwards, the task that clones an entity creates only **one LUI instance for all clones**. Therefore, you must add masking on both processes (LUI Sync and load flows) in order to get different data in the masked fields on each clone. The clone_id is included in the [masking caching key](/articles/26_fabric_security/06_data_masking.md#masking-flow).
+  * From TDM V7.3 onwards, the entity cloning task creates **a single LUI instance for all clones**. Therefore, masking must be applied to both processes (LUI Sync and load flows) in order to get different data in the masked fields on each clone. The clone_id is included in the [masking caching key](/articles/26_fabric_security/06_data_masking.md#masking-flow).
 
-  * TDM V8.0 added the **root_iid** to the caching key in order to maintain the **referential integrity on PII fields across different LUs of the task’s BE**.
+  * TDM V8.0 added **root_iid** to the caching key to maintain **referential integrity on PII fields across different LUs of the task’s BE**.
 
     For example, CRM and Billing LUs keep the Customer's data. The customer name needs to be identical in both LUs for a given customer. Setting the root_iid with the customer ID enables keeping the referential integrity between the CRM and Billing LUs. It is recommended to set the **useInstanceId** input argument of the masking Actors to **true** for keeping the PII fields' referential integrity within the Business Entity LUs.
 
