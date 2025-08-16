@@ -203,6 +203,8 @@ When creating a Space named, for example, `dcr210`, the following behavior appli
 - The base `.env` file is always loaded first.
 - If a file named `.env-dcr210` exists (where `dcr210` is the Space name), its values will be **appended to or override** those defined in the base `.env`.
 - You can use this to set environment-specific parameters such as `MAX_HEAP`, `GIT_REPO`, or other custom variables.
+- To specify a later version of Fabric to use with Fabric Web Studio, edit the `.env` file's `FABRIC_VERSION` parameter. Please contact your K2view representative if you'd like to use a later version of Fabric.
+
 
 #### `compose.yaml` Customization
 
