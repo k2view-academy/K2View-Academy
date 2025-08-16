@@ -22,7 +22,7 @@
 ## Important Notes
 - **Default credentials**: `admin` / `admin`
 - **Persistent data** is stored under `persistent-data/<space-name>`
-- **In doubt?** Consult the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.html">installation instructions.</a>
+- **In doubt?** Consult the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md">installation instructions.</a>
 
 ## Installation Steps
 
@@ -101,7 +101,7 @@ Password: admin
 ```
 
 ## Offline Docker Image Download (If No Internet)
-<a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.html#docker-image-offline-package-download">Offline Package Download Instructions</a>
+<a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md#docker-image-offline-package-download">Offline Package Download Instructions</a>
 
 ## Operating
 <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Operating.md">Operating Instructions.</a>
