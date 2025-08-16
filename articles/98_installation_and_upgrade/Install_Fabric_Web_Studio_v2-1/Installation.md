@@ -295,10 +295,14 @@ You will be asked to enter your password.
 > By following this procedure, when the `k2space.sh` script runs, the expected file will already be loaded on the local machine and will not need to be downloaded from the Internet. 
 
 
-**Specifying an Alternate Fabric Version**
-To specify a different or later version of Fabric to use with Fabric Web Studio, edit the `.env` file's `FABRIC_VERSION` parameter. Please contact your K2view representative if you'd like to use a later version of Fabric to learn which versions you can use.
-
 ### **Step 7**: Create and Launch a Fabric Space
+
+#### Specifying an Alternate Fabric Version
+
+To specify a different or later version of Fabric to use with Fabric Web Studio, edit the `.env` file's `FABRIC_VERSION` parameter. 
+
+Please contact your K2view representative to determine which versions of Fabric you can use.
+
 
 #### **Space Naming**
 
