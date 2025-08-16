@@ -305,3 +305,5 @@ Either path will require that you obtain an account for K2view's Nexus Container
 
 Fabric Web Studio 2.1 packages are validated and certified against Fabric version `8.2.4_3`. Please contact your K2view representative if you'd like to use a later version of Fabric and TDM.
 
+To specify a later version of Fabric to use with Fabric Web Studio, edit the `.env` file's `FABRIC_VERSION` parameter. 
+
