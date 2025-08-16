@@ -2,9 +2,9 @@
 
 This document describes how to use **Podman Compose** to host K2view Fabric Web Studio. It outlines the setup, components, installation options, and features relevant to Podman-based container environments.
 
-**Podman Compose Setup**: Fabric Web Studio can be deployed using **Podman Compose**, which allows users to run Compose YAML files with Podman’s container engine. Podman Compose orchestrates the Web Studio environment—including a selected Fabric profile, an embedded Fabric engine, and a Traefik reverse proxy—enabling the creation of multiple, isolated Fabric Spaces. This setup offers a lightweight and daemonless alternative to Docker-based runtimes, fully aligned with Enterprise Linux practices
+**Podman Compose Setup**: Fabric Web Studio can be deployed using **Podman Compose**, which allows users to run Compose YAML files with Podman’s container engine. Podman Compose orchestrates the Web Studio environment—including a selected Fabric profile, an embedded Fabric engine, and a Traefik reverse proxy—enabling the creation of multiple, isolated Fabric Spaces. This setup offers a lightweight and daemonless alternative to Docker-based runtimes, fully aligned with Enterprise Linux practices.
 
-Version 2.1 introduces minor enhancements to Fabric Web Studio including updated Fabric runtime, increased heap size defaults, improved healthcheck, simplified runtime overrides, and additional `k2space.sh` options.
+Version 2.1 introduces minor enhancements to Fabric Web Studio, including an updated Fabric runtime, increased heap size defaults, an improved health check, simplified runtime overrides, and additional `k2space.sh` options.
 
 ## Content
 
@@ -16,7 +16,7 @@ Version 2.1 introduces minor enhancements to Fabric Web Studio including updated
 
 
 ## Prerequisites
-Please review the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/About.html#Prerequisites">Prerequisites</a> topic first. There are essential steps for installing and configuring Docker described in the prerequisites section. Please review these and the prerequisites.
+Please review the <a href="https://support.k2view.com/Academy/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/About.html#Prerequisites">Prerequisites</a> topic first. There are essential steps for installing and configuring Docker described in the prerequisites section. Please review these and the prerequisites.
 
 The Podman Compose setup for Fabric Web Studio requires the following system prerequisites.
 
@@ -80,8 +80,8 @@ Internet access is required to perform this installation. You will need access t
 
 
 ## Things to Configure
-1. Git Configuration - this is described in <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a> of the Installation section below.
-2. TLS Certificate and Private Key Configuration - optional, as Traefik uses its own self-signed TLS certificate for HTTPS connections by default. The Certificate is created for you by default for the machine. To provide your own, please refer to <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a>. 
+1. Git Configuration - this is described in <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation-podman.md#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a> of the Installation section below.
+2. TLS Certificate and Private Key Configuration - optional, as Traefik uses its own self-signed TLS certificate for HTTPS connections by default. The Certificate is created for you by default for the machine. To provide your own, please refer to <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation-podman.md#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a>. 
 
 
 ## Things to Know
@@ -122,11 +122,11 @@ You need to obtain credentials to access the K2view Nexus. Your K2view account r
 
 ### **Step 1**: Install and Validate the Podman Runtime
 
-If Podman is not already installed on your machine, refer to the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Podman.html">Podman and Podman Compose Installation</a> topic. 
+If Podman is not already installed on your machine, refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Podman.md">Podman and Podman Compose Installation</a> topic. 
 
 The recommended approach is to install **Podman** using your Linux distribution's package manager. This will install the Podman engine and CLI tools. You must also install **Podman Compose**, which provides Compose YAML support for Podman-based environments.
 
-Please follow the steps in the **Podman and Podman Compose Installation** guide to complete the installation and validate your setup. Please refer to the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Podman.html">Podman and Podman Compose Installation</a> topic.
+Please follow the steps in the **Podman and Podman Compose Installation** guide to complete the installation and validate your setup. Please refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Podman.md">Podman and Podman Compose Installation</a> topic.
 
 
 ### **Step 2**: Setup
@@ -202,7 +202,7 @@ From the K2view directory
 ```bash
 cp -r blueprints/Studio/ Studio
 ```
-The Studio directory contains the configuration, YAML, and the `k2Space.sh` script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/Installation.html#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
+The Studio directory contains the configuration, YAML, and the `k2Space.sh` script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation-podman.md#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
 
 ### **Step 4**: Configure Git and TLS
 
