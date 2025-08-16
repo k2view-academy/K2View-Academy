@@ -82,7 +82,7 @@ You need to obtain credentials to access the K2view Nexus. Your K2view account r
 
 ### **Step 1**: Install and Validate Docker and Docker Compose Runtime
 
-If Docker has not already been installed on your machine, please refer to the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Docker-Compose.md">Docker and Docker Compose Installation</a> topic. 
+If Docker has not already been installed on your machine, please refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Docker-Compose.md">Docker and Docker Compose Installation</a> topic. 
 
 The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop includes Docker Compose, Docker Engine, and Docker CLI, and all prerequisites for Compose. Please also refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Docker-Compose.md">Docker and Docker Compose Installation</a> topic.
 
