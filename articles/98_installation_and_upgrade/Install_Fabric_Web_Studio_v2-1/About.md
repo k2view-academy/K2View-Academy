@@ -75,7 +75,7 @@ See: [Docker Compose Installation Instructions](https://support.k2view.com/Acade
 
 Podman Compose introduces daemonless, enterprise-grade containerization ideal for Red Hat Enterprise Linux (RHEL), AlmaLinux, Rocky Linux, and CentOS Stream distributions. It delivers native Linux orchestration fully compatible with Fabric Web Studio’s Compose YAML deployment model.
 
-See: [Podman Installation Instructions](https://support.k2view.com/Academy/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation-podman.html)
+See: [Podman Installation Instructions](https://support.k2view.com/Academy/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation-podman.html)
 
 > Both runtimes provide equivalent capabilities. Selection depends on enterprise standards and operational preferences.
 
@@ -142,7 +142,7 @@ At deployment, administrators select one of the following runtime profiles depen
 
 ## Prerequisites
 
-Before installing Fabric Web Studio 2.1, please review the following system prerequisites. Some requirements are common, while others depend on whether you deploy using Docker Compose or Podman Compose.
+Before you install Fabric Web Studio 2.1, please have a look at the following system prerequisites. Some requirements are standard, while others depend on whether you deploy using Docker Compose or Podman Compose.
 
 ### Host Machine Requirements
 
@@ -207,7 +207,7 @@ Before installing Fabric Web Studio 2.1, please review the following system prer
   - Docker Desktop includes the Docker Compose plugin by default.
   - Use the native Docker Compose plugin (not the legacy `docker-compose` Python utility).
 
-> Please refer to the installation instructions provided in the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Docker-Compose.html">Installing Docker and Docker Compose </a> topic.
+> Please refer to the installation instructions provided in the <a href="https://support.k2view.com/Academy/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Docker-Compose.html">Installing Docker and Docker Compose </a> topic.
 
 - **WSL2 (Windows Subsystem for Linux 2)** *(Windows only)*  
   - Recommended for Windows users.
