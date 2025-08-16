@@ -265,10 +265,10 @@ podman login -u [YourAccount] https://docker.share.cloud.k2view.com
 
 You will be prompted to enter your password.
 
+
 Depending on your environment and user permissions, you may need to prepend `sudo` to the command on some Linux systems.
 
 > Tip: You can verify a successful login by running `podman info` and confirming registry authentication.
-
 
 
 To ensure the **Podman socket** is active in **rootless mode**, follow these steps:
@@ -352,6 +352,13 @@ This will make the image available to the local Podman image store.
 > **Important**: Ensure that the image version matches the value in your `.env` file before executing `k2space.sh`. This ensures proper image resolution and prevents unnecessary fetch attempts.
 
 ### **Step 7**: Create and Launch a Fabric Space
+
+#### Specifying an Alternate Fabric Version
+
+To specify a different or later version of Fabric to use with Fabric Web Studio, edit the `.env` file's `FABRIC_VERSION` parameter. 
+
+Please contact your K2view representative to determine which versions of Fabric you can use.
+
 
 #### **Space Name**
 
