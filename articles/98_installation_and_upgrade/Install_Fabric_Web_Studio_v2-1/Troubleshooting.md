@@ -18,14 +18,14 @@ This topic summarizes common errors that can be encountered.
 
 Fabric Web Studio and the `k2space.sh` command each require that Docker and Docker Compose are running. If it is not running, commands like `docker login` or `k2space.sh` will fail. If you install Docker Desktop to run your installation, it must be running.
 
-Starting Docker and its Docker Compose plugin depends on the operating system you use. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/6-Docker-Compose.html#install-docker-and-docker-compose-on-linux-macos-or-microsoft-windows">Docker and Docker Compose Installation</a> topic.
+Starting Docker and its Docker Compose plugin depends on the operating system you use. Please refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Docker-Compose.md#install-docker-and-docker-compose-on-linux-macos-or-microsoft-windows">Docker and Docker Compose Installation</a> topic.
 
 
 ## Slow Performance Using WSL
 
 When using Microsoft Windows, you must run Docker inside the WSL file system in conjunction with a Linux distribution. Otherwise, the installation will not perform adequately and will exhibit slow performance. 
 
-When installing Fabric Web Studio, you must not use the Windows file system, such as installing it within the `/mnt/c` directory mounted by WSL. Rather, you should use the WSL file system (e.g., `/home/username/K2view/Studio`) for your installation. Please refer to the [installation instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/dcr_web_studio/version2.1/Installation.html#Installation) for this.
+When installing Fabric Web Studio, you must not use the Windows file system, such as installing it within the `/mnt/c` directory mounted by WSL. Rather, you should use the WSL file system (e.g., `/home/username/K2view/Studio`) for your installation. Please refer to the [installation instructions](https://support.k2view.com/Academy/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.html#installation) for this.
 
 
 ## System cannot find the file specified
