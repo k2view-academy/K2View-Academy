@@ -68,14 +68,14 @@ Fabric Web Studio supports deployment across two container orchestration environ
 
 Docker Compose provides a widely adopted container orchestration layer to run Web Studio, an embedded Fabric engine, and Traefik reverse proxy. Docker Compose allows full multi-space development on Docker-based platforms across Linux, macOS, or Windows (using WSL).
 
-See: [Docker Compose Installation Instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Docker-Compose.html)
+See: [Docker Compose Installation Instructions](https://support.k2view.com/Academy/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.html)
 
 
 ### Podman Compose Runtime
 
 Podman Compose introduces daemonless, enterprise-grade containerization ideal for Red Hat Enterprise Linux (RHEL), AlmaLinux, Rocky Linux, and CentOS Stream distributions. It delivers native Linux orchestration fully compatible with Fabric Web Studio’s Compose YAML deployment model.
 
-See: [Podman Installation Instructions](https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Podman.html)
+See: [Podman Installation Instructions](https://support.k2view.com/Academy/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation-podman.html)
 
 > Both runtimes provide equivalent capabilities. Selection depends on enterprise standards and operational preferences.
 
@@ -213,7 +213,7 @@ Before installing Fabric Web Studio 2.1, please review the following system prer
   - Recommended for Windows users.
   - Install WSL2 and a supported Linux distribution (e.g., Ubuntu) to ensure full compatibility.
 
-To install Docker Compose Runtime for K2view Fabric Web Studio on Microsoft Windows, you will need to use Windows Subsystem for Linux (WSL) in conjunction with a Linux distribution. When installing on Microsoft Windows with WSL, you need to install a Linux distribution instead of using the default distribution bundled by Microsoft's WSL. Using the Microsoft-provided Linux distribution will cause the Docker Compose Runtime for Fabric Services to fail to run correctly. Instructions are provided in the <a href="https://support.k2view.com/Academy/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Docker-Compose.html">Installing Docker and Docker Compose </a> topic. 
+To install Docker Compose Runtime for K2view Fabric Web Studio on Microsoft Windows, you will need to use Windows Subsystem for Linux (WSL) in conjunction with a Linux distribution. When installing on Microsoft Windows with WSL, you need to install a Linux distribution instead of using the default distribution bundled by Microsoft's WSL. Using the Microsoft-provided Linux distribution will cause the Docker Compose Runtime for Fabric Services to fail to run correctly. Instructions are provided in the <a href="https://support.k2view.com/Academy/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Docker-Compose.html">Installing Docker and Docker Compose </a> topic. 
 
 ---
 
@@ -279,7 +279,7 @@ Ensure the following external services are reachable from the host machine:
 
 ## Installation Package
 
-The installation package is available for download via K2view's Nexus Container Registry or can be obtained via [K2view's GitHub Studio Blueprint]([url](https://github.com/k2view/blueprints/tree/main/Studio)). We recommend downloading the installation package from K2view's Nexus Container Registry
+The installation package is available for download via K2view's Nexus Container Registry or can be obtained via [K2view's GitHub Studio Blueprint]([url](https://github.com/k2view/blueprints/tree/main/Studio)). We recommend downloading the installation package from K2view's Nexus Container Registry.
 
   - Docker distribution: `Studio-Docker-latest.zip` at [https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Podman-Studio-latest.zip](https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Docker-Studio-latest.zip)
   - Podman distribution: `Studio-Podman-latest.zip` at [https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Podman-Studio-latest.zip](https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Podman-Studio-latest.zip)
