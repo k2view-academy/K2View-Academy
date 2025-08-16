@@ -44,9 +44,8 @@
      pip3 install --user podman-compose
      ```
 
-> **Note**:  Podman Compose provides native compatibility for Compose YAML files with Podman pods.
 
----
+> **Note**:  Podman Compose provides native compatibility for Compose YAML files with Podman pods.
 
 
 ## Podman Command Reference for Enterprise Linux Environments
