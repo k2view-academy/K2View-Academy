@@ -15,13 +15,14 @@ Version 2.1 introduces minor enhancements to Fabric Web Studio including updated
 
 
 ## Prerequisites
-Please review the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/About.html#Prerequisites">Prerequisites</a> topic first. There are essential steps for installing and configuring Docker described in the prerequisites section. Please review these and the prerequisites.
+Please review the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/About.html#prerequisites">Prerequisites</a> topic first. There are essential steps for installing and configuring Docker described in the prerequisites section. Please review these and the prerequisites.
 
-A crucial step is to ensure that Docker and the Docker Compose plugin are properly installed. These are described in the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/About.html#3rd-party-software">3rd Party Software</a> topic, and the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Docker-Compose.html#install-docker-and-docker-compose-on-linux-macos-or-microsoft-windows">Docker and Docker Compose Installation</a> topic. 
+A crucial step is to ensure that Docker and the Docker Compose plugin are properly installed. These are described in the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/About.html#required-3rd-party-software">3rd Party Software</a> topic, and the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Docker-Compose.html">Docker and Docker Compose Installation</a> topic. 
 
 > Please use the native Docker Compose plugin and not the deprecated Python-based docker-compose utility.
 
-If installing Docker on Microsoft Windows, it is essential to review the instructions for <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Docker-Compose.html#using-the-windows-subsystem-for-linux-wsl">installing and using WSL</a>. If running Docker Desktop on Microsoft Windows, you also need to  <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Docker-Compose.html#running-docker-desktop"> enable the WSL Linux distribution</a>.
+If installing Docker on Microsoft Windows, it is essential to review the instructions for <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Docker-Compose.html#using-the-windows-subsystem-for-linux-wsl">installing and using WSL</a>. If running Docker Desktop on Microsoft Windows, you also need to  <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Docker-Compose.html#running-docker-desktop"> enable the WSL Linux distribution</a>.
+
 
 > Docker Desktop includes the Docker Compose plugin by default. WSL2 is strongly recommended when using Docker Desktop on Windows.
 
@@ -36,10 +37,9 @@ If installing Docker on Microsoft Windows, it is essential to review the instruc
 7. `compose.yaml` — base Docker Compose configuration.
 8. `tls-config.yaml` — TLS configuration for Traefik.
 
-
 ## Things to Configure
-1. Git Configuration - this is described in <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a> of the Installation section below.
-2. TLS Certificate and Private Key Configuration - optional, as Traefik uses its own self-signed TLS certificate for HTTPS connections by default. The Certificate is created for you by default for the machine. To provide your own, please refer to <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a>. 
+1. Git Configuration - this is described in <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a> of the Installation section below.
+2. TLS Certificate and Private Key Configuration - optional, as Traefik uses its own self-signed TLS certificate for HTTPS connections by default. The Certificate is created for you by default for the machine. To provide your own, please refer to <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a>. 
 
 
 ## Things to Know
@@ -60,8 +60,7 @@ If installing Docker on Microsoft Windows, it is essential to review the instruc
    - The location of the persistent data directory is configured in the `.env` file and set by default to be in the Fabric Web Studio installation directory.
 
 4. Running on Microsoft Windows
-   - You need to use a Windows Subsystem for Linux (WSL) and a Linux distribution-mounted file system for the installation to avoid slow performance issues. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Docker-Compose.html">Docker and Docker Compose Installation</a> topic.
-
+   - You need to use a Windows Subsystem for Linux (WSL) and a Linux distribution-mounted file system for the installation to avoid slow performance issues. Please refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Docker-Compose.html">Docker and Docker Compose Installation</a> topic.
 
 ## Installation
 
@@ -85,7 +84,7 @@ You need to obtain credentials to access the K2view Nexus. Your K2view account r
 
 If Docker has not already been installed on your machine, please refer to the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Docker-Compose.html">Docker and Docker Compose Installation</a> topic. 
 
-The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop includes Docker Compose, Docker Engine, and Docker CLI, and all prerequisites for Compose. Please also refer to the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Docker-Compose.html">Docker and Docker Compose Installation</a> topic.
+The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop includes Docker Compose, Docker Engine, and Docker CLI, and all prerequisites for Compose. Please also refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Docker-Compose.html">Docker and Docker Compose Installation</a> topic.
 
 > Docker Desktop includes Docker Compose plugin by default starting with version 2.x. Please ensure you're using the plugin-based Compose implementation and not the deprecated Python-based docker-compose utility.
 
@@ -115,7 +114,7 @@ The location of this installation directory depends on your needs. On a Linux sy
 
  > Keep in mind that persistent files created by Fabric Web Studio and the database instance you install will host their data in your installation directory's "persistent-data" folder (e.g., `K2view/Studio/persistent-data`). Your Fabric Space's data is stored in the persistent-data/spacename directory. The respective space's directory will contain data if you create multiple spaces.
 
-Using a shell, create a `K2view` directory to download K2view's Blueprints. You can also use the K2view directory to hold the K2view Fabric Web Studio Installation directory. We recommend using K2view for this directory.
+Using a shell, create a `K2view` directory to download K2view's Blueprints. You can also use the K2view directory to hold the K2view Fabric Web Studio Installation directory. We would recommend that you use K2view for this directory.
 
 ```bash
 mkdir K2view
@@ -123,7 +122,7 @@ mkdir K2view
 
 #### Using Microsoft Windows
 
-Using a Linux file system is highly recommended when installing on Microsoft Windows. It can be installed with the Windows Subsystem for Linux (WSL) and a Linux distribution such as Ubuntu. Doing so avoids performance problems using Docker on a native Windows file system. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Docker-Compose.html">Docker and Docker Compose Installation</a> topic for instructions on how to install WSL and a Linux distribution.
+Using a Linux file system is highly recommended when installing on Microsoft Windows. It can be installed with the Windows Subsystem for Linux (WSL) and a Linux distribution such as Ubuntu. Doing so avoids performance problems using Docker on a native Windows file system. Please refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Docker-Compose.html">Docker and Docker Compose Installation</a> topic for instructions on how to install WSL and a Linux distribution.
 > 
 > Not only should you avoid using the Windows file system, but you should also avoid using WSL's `/mnt/c` mounted Windows file system. Instead, use the file system of the Linux distribution you installed, e.g., `/home/username/K2view`, to download and install the configuration files and store the workspace data created by Fabric Web Studio. 
 
@@ -131,7 +130,7 @@ Using a Linux file system is highly recommended when installing on Microsoft Win
 
 *Identify the Name of your WSL Linux Distribution*
 
-First, find the path to your Linux distribution's location (e.g., Ubuntu used in these examples) by running `wsl --list` to obtain its name and then changing to its directory. If you enabled Windows Explorer navigation when you installed WSL, you can navigate directly to it under Explorer's "Linux" sidebar icon.
+First, find the path to your Linux distribution's location (e.g., Ubuntu used in these examples) by running `wsl --list` to obtain its name and then changing to its directory. If you enabled Windows Explorer navigation during WSL installation, you can navigate directly to it under Explorer's "Linux" sidebar icon.
 
 ```bash
 wsl --list
@@ -162,7 +161,7 @@ cd \\wsl$\Ubuntu\home\[username]
 
 *Create your Download and Installation Directory Locations*
 
-Using a shell, create a `K2view` directory to download K2view's Blueprints. You can also use the K2view directory to hold the K2view Fabric Web Studio Installation directory. We recommend using K2view for this directory.
+Using a shell, create a `K2view` directory to download K2view's Blueprints. You can also use the K2view directory to hold the K2view Fabric Web Studio Installation directory. We would recommend that you use K2view for this directory.
 
 ```bash
 mkdir K2view
@@ -189,9 +188,9 @@ cd K2view
 # rename Studio-Docker as Studio
 ```
 
-The Studio directory contains the configuration, YAML, and the `k2Space.sh` script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/Installation.html#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
+The Studio directory contains the configuration, YAML, and the `k2Space.sh` script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.html#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
 
-You can now skip to <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a>.
+You can now skip to <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a>.
 
 #### Option: Clone the K2view Blueprints 
 
@@ -220,13 +219,13 @@ cp -r blueprints/Studio/ Studio
 
 *Using the Microsoft Windows PowerShell*
 
-You must use the Linux file system to store the Studio directory if you are using Microsoft Windows. Please review <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/Installation.html#step-2-download-the-k2view-blueprints">Step 2's</a> "Using Microsoft Windows" section for details.  
+You must use the Linux file system to store the Studio directory if you are using Microsoft Windows. Please review <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.html#step-2-setup">Step 2's</a> "Using Microsoft Windows" section for details.  
 
 ```bash
 cp -r blueprints\Studio\ Studio
 ```
 
-The Studio directory contains the configuration, YAML, and the `k2Space.sh` script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/Installation.html#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
+The Studio directory contains the configuration, YAML, and the `k2Space.sh` script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.html#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
 
 ### **Step 4**: Configure Git and TLS
 
@@ -291,7 +290,7 @@ You will be asked to enter your password.
 
 **Note**: The Docker login command and the `k2space.sh` bash shell script require Internet access to log in and pull K2view Fabric images from the K2view Nexus Container Registry at docker.share.cloud.k2view.com. 
 
-> Should you not have Internet connectivity, you can use the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/Installation.html#docker-image-offline-package-download">Docker Image Offline Package Download</a> procedure to download the file on a separate machine and copy it to the local installation directory. The file, a Docker Image, is approximately 1.9 GB in size. The version of the image depends on what is configured in the `.env` file. You will need to download the same version.
+> Should you not have Internet connectivity, you can use the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.html#docker-image-offline-package-download">Docker Image Offline Package Download</a> procedure to download the file on a separate machine and copy it to the local installation directory. The file, a Docker Image, is approximately 1.9 GB in size. The version of the image depends on what is configured in the `.env` file. You will need to download the same version.
 >
 > By following this procedure, when the `k2space.sh` script runs, the expected file will already be loaded on the local machine and will not need to be downloaded from the Internet. 
 
