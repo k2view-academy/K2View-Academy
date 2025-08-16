@@ -3,7 +3,7 @@
 
 ## Prerequisites
 - Obtain a login account for docker.share.cloud.k2view.com
-- <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Docker-Compose.md">Install Docker & Docker Compose plugin</a> (not the deprecated `docker-compose` binary).
+- <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Docker-Compose.md">Install Docker & Docker Compose plugin</a> (not the deprecated `docker-compose` binary).
 - If installing on Windows, use **WSL2** and install under a **Linux distribution** (not under `/mnt/c`).
 - Internet access is required to pull images from K2view Nexus unless using offline image loading.
 
@@ -29,7 +29,7 @@
 ### 1. Install Docker and Docker Compose
 Use [Docker Desktop](https://www.docker.com/products/docker-desktop) (includes Compose) or install via your package manager.
 
-See: <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-1/6-Docker-Compose.md">Docker and Docker Compose Installation</a>
+See: <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Docker-Compose.md">Docker and Docker Compose Installation</a>
 
 ### 2. Set Up Environment
 Create a base directory (e.g., `~/K2view` or `/opt/K2view`).  
@@ -59,7 +59,7 @@ GIT_TOKEN=<your_token>
 GIT_USERNAME=<your_user>
 ```
 
-TLS: Replace `ssl-certs/cert.cer` and `ssl-certs/cert.key` with your own PEM-formatted certs.
+TLS: Replace `ssl-certs/cert.cer` and `ssl-certs/cert.key` with your PEM-formatted certs.
 
 ### 5. Select a Fabric Web Studio Profile
 Available profiles:
@@ -92,7 +92,7 @@ Create a space:
 - Local: `http://localhost/<space_name>`
 - Remote: `https://<host>/<space_name>`
 
-For remote access you need to configure TLS. See Step 4.
+For remote access, you need to configure TLS. See Step 4.
 
 Login with:
 ```text
