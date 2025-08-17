@@ -12,25 +12,25 @@ I. [Sequence handling based on Catalog](11a_tdm_sequence_implementation_based_on
 
 II. [Sequence handling without Catalog](11b_tdm_sequence_implementation_without_catalog.md). 
 
-## How to Set the Sequence Method per LU
+## How to Set the Sequence Method for Each LU
 
-A new shared Global has been introduced in TDM 9.3, named **TDM_USING_CATALOG_SEQUENCES**. Its purpose is to set the default **sequence handling behavior** of TDM to either Catalog-based sequence or sequence handling without Catalog. This Global (which uses true/false setting) can be **added to an LU** for establishing the **LU's behavior**.
+A new shared Global — **TDM_USING_CATALOG_SEQUENCES** — was introduced in TDM V9.3. It sets the default **sequence handling behavior** of TDM to either Catalog-based sequence or sequence handling without Catalog. This Global (set to either true or false) can be **added to an LU** for defining the **LU's behavior**.
 
 Example:
 
-- The TDM project has the CRM, Billing, and Ordering LUs.
-- By default, the sequences are handled without the Catalog, except for the Billing LU for which sequences are Catalog-based.
+- A TDM project contains CRM, Billing and Ordering LUs.
+- By default, the sequences are handled without Catalog, except for the Billing LU, in which they are Catalog-based.
 - The TDM_USING_CATALOG_SEQUENCES Global must be set as follows:
-  - Shared Global – set to false.
-  - Billing LU – set to true.
+  - Shared Global — set to false.
+  - Billing LU — set to true.
 
 ## Generating Sequence Actor and Flows
 
-Both methods of sequence handling require the execution of [TDMLuInitBasedOnFabric flow](05_tdm_lu_implementation_general.md#ii-adding-the-tdm-setup-to-the-lu) in order to create:
+Both sequence handling methods require execution of the [TDMLuInitBasedOnFabric flow](05_tdm_lu_implementation_general.md#ii-adding-the-tdm-setup-to-the-lu) to create:
 
-- Sequence flows and Actors - a pair of sequence flow and Actor is created under the Shared Broadway flows for each record in the [TDMSeqList Actor](11b_tdm_sequence_implementation_without_catalog.md#generate-the-sequence-actors).
+- Sequence flows and Actors — a pair of sequence flow and Actor is created under the Shared Broadway flows for each record in the [TDMSeqList Actor](11b_tdm_sequence_implementation_without_catalog.md#generate-the-sequence-actors).
 
-- Load flows - 
+- Load flows — 
 
   - Each load flow invokes the **HandleMaskAndSeqFields** flow to handle the masking and sequence replacements on each record before loading it to the target environment.  The sequence handling supports either of the sequence methods. The selected sequence method is defined by the **TDM_USING_CATALOG_SEQUENCES** Global.
 
@@ -40,7 +40,7 @@ Both methods of sequence handling require the execution of [TDMLuInitBasedOnFabr
 
      
 
-- [Rule-based data generation flows](16_tdm_data_generation_implementation.md) - adding the relevant sequence IDs to the generated entities in order to keep their referential integrity.
+- [Rule-based data generation flows](16_tdm_data_generation_implementation.md) — adding the relevant sequence IDs to the generated entities in order to keep their referential integrity.
 
   
 
@@ -56,7 +56,7 @@ Both methods of sequence handling require the execution of [TDMLuInitBasedOnFabr
 
 ## Set the Sequence Report Global
 
-A new Global - **TDM_SEQ_REPORT** - has been added to the Shared Globals in TDM 8.1. When set to **true** (the default value), the task execution populates the **TDM_SEQ_MAPPING** table and adds the **Replace Sequence Summary Report** to the [task execution report](/articles/TDM/tdm_gui/27_task_execution_history.md#generating-a-task-execution-summary-report).
+A new Global - **TDM_SEQ_REPORT** — has been added to the Shared Globals in TDM 8.1. When set to **true** (the default value), the task execution populates the **TDM_SEQ_MAPPING** table and adds the **Replace Sequence Summary Report** to the [task execution report](/articles/TDM/tdm_gui/27_task_execution_history.md#generating-a-task-execution-summary-report).
 
 For better performance, set the **TDM_SEQ_REPORT** Global to **false** to prevent populating the TDM_SEQ_MAPPING table and generating the **Replace Sequence Summary Report**. Note that the Replace Sequence Summary Report would not be available for a task that is executed with the TDM_SEQ_REPORT Global set as **false**.
 
