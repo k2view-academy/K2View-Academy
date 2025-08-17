@@ -126,9 +126,9 @@ TDM execution processes set the masking categories to **true** or **false** acco
 
   * From TDM V7.3 onwards, the entity cloning task creates **a single LUI instance for all clones**. Therefore, masking must be applied to both processes (LUI Sync and load flows) in order to get different data in the masked fields on each clone. The clone_id is included in the [masking caching key](/articles/26_fabric_security/06_data_masking.md#masking-flow).
 
-  * TDM V8.0 added **root_iid** to the caching key to maintain **referential integrity on PII fields across different LUs of the task’s BE**.
+  * TDM V8.0 added **root_iid** to the caching key to maintain **referential integrity on PII fields across different LUs within a task’s BE**.
 
-    For example, CRM and Billing LUs keep the Customer's data. The customer name needs to be identical in both LUs for a given customer. Setting the root_iid with the customer ID enables keeping the referential integrity between the CRM and Billing LUs. It is recommended to set the **useInstanceId** input argument of the masking Actors to **true** for keeping the PII fields' referential integrity within the Business Entity LUs.
+    For example, CRM and Billing LUs keep the Customer data. To ensure the customer name is identical in both LUs for a given customer, the root_iid can be set using the customer ID. This preserves referential integrity between the CRM and Billing LUs. It is recommended to set the **useInstanceId** input argument of the masking Actors to **true** to maintain referential integrity of PII fields within Business Entity LUs.
 
 [Click here to learn how to use masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md).
 
