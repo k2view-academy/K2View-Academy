@@ -41,7 +41,7 @@ Both sequence handling methods require execution of the [TDMLuInitBasedOnFabric 
 
      
 
-- [Rule-based data generation flows](16_tdm_data_generation_implementation.md) — adding the relevant sequence IDs to the generated entities in order to maintain their referential integrity.
+- [Rule-based data generation flows](16_tdm_data_generation_implementation.md) — data generation flows with sequence generation added for ensuring consistency and referential integrity.
 
   
 
@@ -49,7 +49,7 @@ Both sequence handling methods require execution of the [TDMLuInitBasedOnFabric 
 
 ## Data Consistency of Generated Sequences
 
-- A sequence can be shared between tables and multiple LUs. For example, the subscriber_id is shared between the CRM and Billing LUs. In order to ensure referential integrity, all shared LUs must have the same sequence name regardless of their sequence handling method.
+- A sequence can be shared across tables and multiple LUs. For example, the subscriber_id sequence is shared between the CRM and Billing LUs. To maintain referential integrity, the same sequence name must be used across all shared LUs, regardless of the applied sequence handling method.
 
 - Both of the above-mentioned sequence methods require the creation of the **k2masking** schema. The k2masking schema is created by the TDM deploy flow. Alternatively, creating the k2masking schema can be done by running the **masking-create-cache-table.flow** from the Broadway Examples (found in the Broadway Flow window, Main Menu > Actions > Examples and select this flow). Before deploying the TDM LU, verify that the **SEQ_CACHE_INTREFACE** Shared Global is set with the proper interface name.
 
