@@ -2,9 +2,10 @@
 
 The [TDM task](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#load) provides an option to replace the sequences (IDs) of all selected entities before loading them into the target environment. This is required in order to prevent key duplication when the testing environment is not empty (i.e., already contains entities). In addition, the task execution replaces an entity's sequences when generating clones to ensure uniqueness in the target environment.
 
-Sequence replacement must be set up in advance.
+Notes:
 
-Sequence implementation is also required for [rule-based data generation](16_tdm_data_generation_implementation.md) flows to maintain referential integrity of synthetic entity IDs.
+- Sequence replacement must be set up in advance.
+- Sequence implementation is also required for [rule-based data generation flows](16_tdm_data_generation_implementation.md) to maintain referential integrity of synthetic entity IDs.
 
 Starting with TDM V9.3, the following **two sequence handling methods** are supported: 
 
@@ -34,13 +35,13 @@ Both sequence handling methods require execution of the [TDMLuInitBasedOnFabric 
 
   - Each load flow invokes the **HandleMaskAndSeqFields** flow, which applies masking and sequence replacements to every record prior to loading it into the target environment. The **TDM_USING_CATALOG_SEQUENCES** Global specifies which of the two sequence handling methods is used.
 
-  - If the table has records in the [TDMSeqSrc2TrgMapping Actor](11b_tdm_sequence_implementation_without_catalog.md#populate-the-sequence-mapping-table) , a new sequence flow is created for the table with the following naming convention: [table name]_sequences. The sequence flows are created in the **Broadway/SequencesFlows** directory for each LU. The sequence flow invokes the sequence Actors for the table's sequence fields. See an example below:
+  - For tables with records in the [TDMSeqSrc2TrgMapping Actor](11b_tdm_sequence_implementation_without_catalog.md#populate-the-sequence-mapping-table), a new sequence flow, [table name]_sequences, is created under the **Broadway/SequencesFlows** directory for each LU. This flow invokes the sequence Actors for the table's sequence fields. Example:
 
     ![seq flow example](images/sequence_flow_example.png)
 
      
 
-- [Rule-based data generation flows](16_tdm_data_generation_implementation.md) — adding the relevant sequence IDs to the generated entities in order to keep their referential integrity.
+- [Rule-based data generation flows](16_tdm_data_generation_implementation.md) — adding the relevant sequence IDs to the generated entities in order to maintain their referential integrity.
 
   
 
