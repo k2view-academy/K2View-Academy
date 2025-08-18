@@ -35,7 +35,7 @@ Both sequence handling methods require execution of the [TDMLuInitBasedOnFabric 
 
   - Each load flow invokes the **HandleMaskAndSeqFields** flow, which applies masking and sequence replacements to every record prior to loading it into the target environment. The **TDM_USING_CATALOG_SEQUENCES** Global specifies which of the two sequence handling methods is used.
 
-  - For tables with records in the [TDMSeqSrc2TrgMapping Actor](11b_tdm_sequence_implementation_without_catalog.md#populate-the-sequence-mapping-table), a new sequence flow, [table name]_sequences, is created under the **Broadway/SequencesFlows** directory for each LU. This flow invokes the sequence Actors for the table's sequence fields. Example:
+  - For tables with records in the [TDMSeqSrc2TrgMapping Actor](11b_tdm_sequence_implementation_without_catalog.md#populate-the-sequence-mapping-table), a new sequence flow, [table name]_sequences, is created under the **Broadway/SequencesFlows** directory of each LU. This flow invokes the sequence Actors for the table's sequence fields. Example:
 
     ![seq flow example](images/sequence_flow_example.png)
 
