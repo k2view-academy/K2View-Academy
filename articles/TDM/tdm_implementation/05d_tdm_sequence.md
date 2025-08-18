@@ -24,7 +24,7 @@ Example:
   - Shared Global — set to false.
   - Billing LU — set to true.
 
-## Generating Sequence Actor and Flows
+## Generating Sequence Flows and Actors
 
 Both sequence handling methods require execution of the [TDMLuInitBasedOnFabric flow](05_tdm_lu_implementation_general.md#ii-adding-the-tdm-setup-to-the-lu) to create:
 
