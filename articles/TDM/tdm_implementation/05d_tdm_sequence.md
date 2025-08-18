@@ -15,15 +15,15 @@ II. [Sequence handling without Catalog](11b_tdm_sequence_implementation_without_
 
 ## How to Set the Sequence Method for Each LU
 
-A new shared Global — **TDM_USING_CATALOG_SEQUENCES** — was introduced in TDM V9.3. It sets the default **sequence handling behavior** of TDM to either Catalog-based sequence or sequence handling without Catalog. This Global (set to either true or false) can be **added to an LU** for defining the **LU's behavior**.
+A new shared Global — **TDM_USING_CATALOG_SEQUENCES** — was introduced in TDM V9.3. It sets the default **sequence handling behavior** of TDM to either Catalog-based sequence or sequence handling without Catalog. This Global (set to either **true** or **false**) can be **added to an LU** for defining the **LU's behavior**.
 
 Example:
 
 - A TDM project contains CRM, Billing and Ordering LUs.
 - By default, the sequences are handled without Catalog, except for the Billing LU, in which they are Catalog-based.
 - The TDM_USING_CATALOG_SEQUENCES Global must be set as follows:
-  - Shared Global — set to false.
-  - Billing LU — set to true.
+  - Shared Global — set to **false**.
+  - Billing LU — set to **true**.
 
 ## Generating Sequence Flows and Actors
 
