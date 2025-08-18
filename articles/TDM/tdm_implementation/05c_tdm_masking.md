@@ -124,7 +124,7 @@ TDM execution processes set the masking categories to **true** or **false** acco
 
 * Notes:
 
-  * From TDM V7.3 onwards, the entity cloning task creates X clones for **a single LU Instance (LUI)**. To allow both data protection and uniqueness, masking must be applied during both the extract and load processes: extract masking secures sensitive data when the LUI syncs, while load masking assigns different masked values to each cloned LUI, ensuring different masked values across all clones. The clone_id can be found in the [masking caching key](/articles/41_masking/02_data_masking_flow.md#caching-key---caching-level-parameters).
+  * TDM's entity cloning task creates X clones for **a single LU Instance (LUI)**. To allow both data protection and uniqueness, masking must be applied during both the extract and load processes: extract masking secures sensitive data when the LUI syncs, while load masking assigns different masked values to each cloned LUI, ensuring different masked values across all clones. The clone_id can be found in the [masking caching key](/articles/41_masking/02_data_masking_flow.md#caching-key---caching-level-parameters).
 
   * TDM V8.0 added **root_iid** to the caching key to maintain **referential integrity on PII fields across different LUs within a task’s BE**.
 
