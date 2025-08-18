@@ -2,34 +2,48 @@
 
 ## Fabric API/WS Hardening 
 
-### Step 1 - Keys Generation
+### Step 1 - Import or Generate TLS Certificate
 
-Run the Web Server self-signed script on one of the Fabric nodes. The script’s purpose is to create a key in the key store. 
+**Option 1: Import your existing TLS certificate into the keystore (recommended).**
+If you already have a TLS certificate, import it to the keystore:
+~~~bash
+${FABRIC_HOME}/fabric/scripts/certificates.sh addkey webserver ~/.keystore changeit
+~~~
 
-* Usage: ```certificates.sh genkey <ALIAS> [CNAME] [PASSWORD]```
+**Option 2: Generate a self-signed certificate**
+To create one, run the following command on one of your Fabric nodes:
+~~~bash
+${FABRIC_HOME}/fabric/scripts/certificates.sh genkey webserver ~/.keystore changeit
+~~~
+
+>Note: When using IP-based access, a Subject Alternative Name (SAN) may be required. Use the following command instead:
+>~~~bash
+>keytool -genkey -keyalg RSA -keysize 4096 -sigalg SHA256WithRSA -alias webserver -keystore ~/.keystore -noprompt -storepass changeit -dname "CN=YOUR_IP, OU=K2View, O=K2View, L=City, ST=State, C=US" -ext "SAN=ip:YOUR_IP" -storetype PKCS12 -validity 760
+>~~~
+
+>Note: When using self-signed certificates, it may be necessary to export the certificate and add it to your browser’s truststore. Use the following command to export the certificate from the keystore and save it as a PEM file, which can then be imported into a browser truststore:
+>~~~bash
+>keytool -export -alias webserver -keystore ~/.keystore -storepass changeit -rfc -file webserver.pem
+>~~~
+
 
 ### Step 2 - Copy the Key to All Fabric Nodes
 
-In case of multiple Fabric nodes, if you want all nodes to have the same certificate, copy the `${user.home}/.keystore` that was created in the first step, to each of the nodes in the same path/location.
+If you have multiple Fabric nodes and want all nodes to use the same certificate, copy the ${user.home}/.keystore created in the first step to the same path on each node.
 
-In case Fabric is running in a Docker container, the user may be different. In such case you need to change the file owner by running the following command:
+If Fabric is running in a Docker container, the user may differ. In that case, change the file owner by running the following command:
 
 ~~~bash
-chown root.root ~/.keystore
+chown fabric fabric ~/.keystore
 ~~~
 
 ### Step 3 - Configure Fabric 
 
-Uncomment the following in the config.ini file:
+Uncomment the following lines in the fabric section of the config.ini file:
 
 ~~~
 #WEB_SERVICE_SECURE_PORT=8443
-~~~
-
-Note that the password of the certification file should be defined here:
-
-~~~
-#WEB_SERVICE_CERT_PASSPHRASE=
+#WEB_SERVICE_KEY_ALIAS=webserver
 ~~~
 
 
@@ -37,12 +51,11 @@ Note that the password of the certification file should be defined here:
 
 - Restart each one of the Fabric nodes.
 - Use the following access points to check whether the **https** access has been properly granted: 
-  - Admin Panel: ``` https://10.10.10.10:8443/ ```
-  - Fabric Web Service will be available in: ``` https://10.10.10.10:8443/deploy ```
+  - Admin Panel: ``` https://10.0.0.0:8443/app/admin ```
 
 ## Fabric JDBC Driver Hardening
 
-In order to securely access Fabric Data via its JDBC driver, the TLS option is set to true by default in the **[jdbc-server]** section of the **config.ini** file:
+To securely access Fabric data via its JDBC driver, the TLS option is enabled (true) by default in the [jdbc-server] section of the config.ini file:
 
 ```
 ## Turn on TLS for the Fabric driver protocol
