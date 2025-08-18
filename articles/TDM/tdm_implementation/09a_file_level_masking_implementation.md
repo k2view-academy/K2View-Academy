@@ -4,12 +4,17 @@ Running TDM table-level tasks on files requires the creation of the file's inter
 
 The [Catalog configuration](/articles/39_fabric_catalog/05_cataloging_of_files.md) supports both methods:
 
--  A dataset (table) represents a physical file (1:1 relation between the files and datasets).
+- A dataset (table) represents a physical file (1:1 relation between the files and datasets).
 - A dataset (table) represents a folder that can have multiple files with the same format. 
 
-Each method requires a different TDM customization.
+Both methods require the following implementation steps:
+- Create a file-level interface.
+- Open the Environments, edit the interface in the Environments if needed, save the changes, and redeploy the Environments.
+- Run discovery on the file-level interface.
+    
+However, each method requires a different TDM customization. 
 
-To illustrate the E2E process, the *File Cataloging - Demo* extension is available, and can be found on the [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md)'s list of extensions. This extension can be installed into your project, and it offers several comprehensive examples of file cataloging. The extension includes the flow examples for CSV, XML, JSON, Avro, and HTTP formats. Instructions on how to use the extension can be found in its README file.
+To illustrate the E2E process, the *File Cataloging - Demo* extension is available and can be found on the [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md)'s list of extensions. This extension can be installed into your project, and it offers several comprehensive examples of file cataloging. The extension includes the flow examples for CSV, XML, JSON, Avro, and HTTP formats. Instructions on how to use the extension can be found in its README file.
 
 ## A Dataset (table) Represents a Physical File
 
