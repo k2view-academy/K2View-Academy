@@ -55,7 +55,7 @@ Both sequence handling methods require execution of the [TDMLuInitBasedOnFabric 
 
   Click [here](/articles/98_installation_and_upgrade/Install_TDM/TDM_Installation_V9.4.md) for more information about the TDM installation and the k2masking schema creation.
 
-## Set the Sequence Report Global
+## Setting the Sequence Report Global
 
 A new Global — **TDM_SEQ_REPORT** — has been added to the Shared Globals in TDM V8.1. When set to **true** (the default value), the task execution populates the **TDM_SEQ_MAPPING** table and adds the **Replace Sequence Summary Report** to the [task execution report](/articles/TDM/tdm_gui/27_task_execution_history.md#generating-a-task-execution-summary-report).
 
