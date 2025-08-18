@@ -6,7 +6,7 @@ Sequence replacement must be set up implemented in advance.
 
 Sequence implementation is also required for [rule-based data generation implementation](16_tdm_data_generation_implementation.md) to maintain referential integrity of synthetic entity IDs.
 
-Starting with TDM V9.3, the following two sequence methods are supported: 
+Starting with TDM V9.3, the following **two sequence handling methods** are supported: 
 
 I. [Sequence handling based on Catalog](11a_tdm_sequence_implementation_based_on_catalog.md).
 
