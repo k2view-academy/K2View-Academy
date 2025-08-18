@@ -28,7 +28,7 @@ Example:
 
 Both sequence handling methods require execution of the [TDMLuInitBasedOnFabric flow](05_tdm_lu_implementation_general.md#ii-adding-the-tdm-setup-to-the-lu) to create:
 
-- Sequence flows and Actors — a pair of sequence flow and Actor is created under the Shared Broadway flows for each record in the [TDMSeqList Actor](11b_tdm_sequence_implementation_without_catalog.md#generate-the-sequence-actors).
+- Sequence flows and Actors — for each record in the [TDMSeqList Actor](11b_tdm_sequence_implementation_without_catalog.md#generate-the-sequence-actors), a pair consisting of sequence flow and an Actor is created under the Shared Broadway flows.
 
 - Load flows — 
 
