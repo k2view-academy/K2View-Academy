@@ -26,7 +26,7 @@ To illustrate the E2E process, the *File Cataloging - Demo* extension is availab
 
 ### Extract Customized Flow - 1:1 Relation of Dataset and File
 
-- The extract flow must be based on **GetSourceDataByQuery**  flow, but the flow needs to read from the file instead of using the DbCommand Actor.
+- The extract flow must be based on **GetSourceDataByQuery**  flow, but this flow needs to read from the file instead of using the DbCommand Actor.
 - See an example of a CSV extract flow - **getDataCSV** flow.
 
   ![csv ext example](images/table_level_csv_extract_example.png)
@@ -41,20 +41,22 @@ To illustrate the E2E process, the *File Cataloging - Demo* extension is availab
 
 ### Load Customized Flow - 1:1 Relation of Dataset and File	
 
-- The extract flow must be based on the **LoadTableByQuery**  flow, but the flow needs to write the file instead of using the DbLoad Actor.
-- See an example of a CSV load flow - **writeDataCSV** flow. Note that it contains the *DbCommand* Actor as well with a dummy query to set the target environment as the active one based on the *__active_environment* input parameter:
+- The extract flow must be based on the **LoadTableByQuery**  flow, but this flow needs to write the file instead of using the *DbLoad* Actor.
+- See an example of a CSV load flow - **writeDataCSV** flow. Note that it contains the *DbCommand* Actor as well, with a dummy query to set the target environment as the active one based on the *__active_environment* input parameter:
 
 ![csv_load](images/table_level_csv_load_example.png)
 
 
+### Delete Customized Flow - 1:1 Relation of Dataset and File	
+- The delete flow must be based on the **DeleteTableByDBCommand** flow, but this flow needs to remove the file (using the *rm* Actor) instead of using the *DbCommand* Actor.    
 
 ### TableLevelDefinitions MTable - 1:1 Relation of Dataset and File	
 
 - Add the interface, tables, and custom flows to the TableLevelDefinitions MTable.
 
-- Set the execution order to 9 for all files if they can be processed in parallel. 
+- Set the execution order to 0 for all files if they can be processed in parallel. 
 
-- See an example:
+- See an example. In this example, the delete flow is empty to create and run load table-level tasks (the Delete checkbox is cleared):
 
   ![csv MTable](images/table_level_definitions_csv_example.png)
 
