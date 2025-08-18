@@ -2,7 +2,7 @@
 
 The [TDM task](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#load) allows the user to replace the sequences (IDs) of all selected entities before loading them into the target environment. This option is required in order to avoid key duplication if the testing environment is not empty and already contains entities. The task execution also replaces an entity's sequences (IDs) when generating clones, for an entity: the task execution replaces the sequences (IDs) of each replica in order to avoid duplicated sequences in the target environment.
 
-Sequence replacement must be set up implemented in advance.
+Sequence replacement must be set up in advance.
 
 Sequence implementation is also required for [rule-based data generation implementation](16_tdm_data_generation_implementation.md) to maintain referential integrity of synthetic entity IDs.
 
