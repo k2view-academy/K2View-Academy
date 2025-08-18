@@ -30,7 +30,7 @@ To illustrate the E2E process, the *File Cataloging - Demo* extension is availab
 
 - You can get an example of the custom flows from the **File Cataloging - Demo** extension.
 
-- See an example of a CSV extract flow - **getDataCSV** flow (taken from the File Cataloging - Demo extension) :
+- See an example of a CSV extract flow - **getDataCSV** flow:
 
   ![csv ext example](images/table_level_csv_extract_example.png)
 
@@ -46,7 +46,7 @@ To illustrate the E2E process, the *File Cataloging - Demo* extension is availab
 
 - The extract flow must be based on **LoadTableByQuery**  flow, but the flow needs to write the file instead of using the DbLoad Actor.
 - You can get an example of the custom flows from the **File Cataloging - Demo** extension.
-- See an example of a CSV load flow - **writeDataCSV** flow (taken from the File Cataloging - Demo extension):
+- See an example of a CSV load flow - **writeDataCSV** flow:
 
 ![csv_load](images/table_level_csv_load_example.png)
 
@@ -66,7 +66,7 @@ To illustrate the E2E process, the *File Cataloging - Demo* extension is availab
 
 ## A Dataset (table) Represents a Folder with Multiple Files
 
-- Data selected Table (dataset) in the task may contain multiple files to be processed.
+- Each selected table (dataset) in the task may contain multiple files to be processed.
 
 - The extract custom flow must get all the files for each table. Each file must be read, masked, and written to the target. See an example of a JSON processing flow - **readJsonAndMask** (taken from the File Cataloging - Demo extension):
 
