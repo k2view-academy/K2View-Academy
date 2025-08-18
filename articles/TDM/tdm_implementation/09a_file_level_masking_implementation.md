@@ -27,10 +27,7 @@ To illustrate the E2E process, the *File Cataloging - Demo* extension is availab
 ### Extract Customized Flow - 1:1 Relation of Dataset and File
 
 - The extract flow must be based on **GetSourceDataByQuery**  flow, but the flow needs to read from the file instead of using the DbCommand Actor.
-
-- You can get an example of the custom flows from the **File Cataloging - Demo** extension.
-
-- See an example of a CSV extract flow - **getDataCSV** flow:
+- See an example of a CSV extract flow - **getDataCSV** flow.
 
   ![csv ext example](images/table_level_csv_extract_example.png)
 
@@ -44,9 +41,8 @@ To illustrate the E2E process, the *File Cataloging - Demo* extension is availab
 
 ### Load Customized Flow - 1:1 Relation of Dataset and File	
 
-- The extract flow must be based on **LoadTableByQuery**  flow, but the flow needs to write the file instead of using the DbLoad Actor.
-- You can get an example of the custom flows from the **File Cataloging - Demo** extension.
-- See an example of a CSV load flow - **writeDataCSV** flow:
+- The extract flow must be based on the **LoadTableByQuery**  flow, but the flow needs to write the file instead of using the DbLoad Actor.
+- See an example of a CSV load flow - **writeDataCSV** flow. Note that it contains the *DbCommand* Actor as well with a dummy query to set the target environment as the active one based on the *__active_environment* input parameter:
 
 ![csv_load](images/table_level_csv_load_example.png)
 
