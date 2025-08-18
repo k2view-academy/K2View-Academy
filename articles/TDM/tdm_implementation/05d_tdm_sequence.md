@@ -45,7 +45,7 @@ Both sequence handling methods require execution of the [TDMLuInitBasedOnFabric 
 
   
 
-  Note that you must set the **OVERRIDING_EXISTING_FLOWS** [TDMLuInitBasedOnFabric flow's](05_tdm_lu_implementation_general.md#ii-adding-the-tdm-setup-to-the-lu) input parameter to **true** in order to generate properly all the sequence flows and actors.
+  Note that the input parameter **OVERRIDING_EXISTING_FLOWS** of the [TDMLuInitBasedOnFabric flow](05_tdm_lu_implementation_general.md#ii-adding-the-tdm-setup-to-the-lu) must be set to **true** as a way to properly generate all sequence flows and Actors.
 
 ## Data Consistency of Generated Sequences
 
