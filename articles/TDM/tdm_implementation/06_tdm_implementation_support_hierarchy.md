@@ -1,6 +1,6 @@
 # TDM LU Implementation — Hierarchy Support 
 
-The [TDM task](/articles/TDM/tdm_gui/14_task_overview.md) can process Business Entities (BEs) and/or tables. A [Business Entity (BE)](/articles/TDM/tdm_overview/03_business_entity_overview.md) represents the main entity of the selected data to be provisioned by TDM. A BE can have multiple [LUs](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.3_TDM_9.4/articles/03_logical_units/01_LU_overview.md) with either a flat or a hierarchical structure. For example, a Customer BE can have CRM, Billing, Ordering and Usage LUs.
+The [TDM task](/articles/TDM/tdm_gui/14_task_overview.md) can process Business Entities (BEs) and/or tables. A [Business Entity (BE)](/articles/TDM/tdm_overview/03_business_entity_overview.md) represents the main entity of the data selected for provisioning in TDM. Each BE can include multiple [LUs](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.3_TDM_9.4/articles/03_logical_units/01_LU_overview.md), organized in either a flat or a hierarchical structure. For example, a Customer BE may include CRM, Billing, Ordering and Usage LUs.
 
 ## Parent LU — Implementation Guidelines 
 
