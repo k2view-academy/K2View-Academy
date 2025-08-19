@@ -219,16 +219,6 @@ See the loop on the selected address records:
 
 
 
-## File Level Masking Implementation
-
-Fabric 8.3 has added [file level catalog discovery and masking capabilities](/articles/39_fabric_catalog/05_cataloging_of_files.html).
-
-These capabilities enable running TDM table-level tasks in order to process and mask files and require using custom flows (TableLevelDefinitions MTable).
-
-Click [here](09a_file_level_masking_implementation.md) for more information on how to implement the file-level masking flows in the TDM project.
-
-
-
 [![Previous](/articles/images/Previous.png)](11e_pre_and_post_execution_processes.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](13_tdm_implementation_supporting_different_product_versions.md)
 
 
