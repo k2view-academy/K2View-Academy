@@ -6,12 +6,12 @@ The [TDM task](/articles/TDM/tdm_gui/14_task_overview.md) can process Business E
 
 [BEs are defined in the TDM self-service application](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md). In addition, the following guidelines must be implemented to support parent-child LU hierarchy:
 
-- Populate the [ChildLink](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#childlink) MTable object. Note that a parent LU can have several child LUs. Populate a separate record for each child LU with the SQL queries to select the source and the target child IDs.
+- Populate the [ChildLink](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#childlink) MTable object. Note that a parent LU can have multiple child LUs. For each child LU, add a separate record that includes the SQL queries to select the source and target child IDs.
 
 
 ## TDM Relationship Tables
 
-TDM 9.3 onwards supports the hierarchy using the TASK_EXECUTION_ENTITIES TDM DB table. The task execution populates the parent LU name, parent entity, root LU name, and root entity for each executed entity. 
+Starting from TDM V9.3, hierarchy is supported through the TASK_EXECUTION_ENTITIES table in the TDM database. During task execution, this table is populated with the parent LU name, parent entity, root LU name, and root entity for each executed entity. 
 
 
 
