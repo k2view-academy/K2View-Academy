@@ -2,20 +2,20 @@
 
 Every LU must include the capability to **delete entities** from the target environment in order to support the following tasks:
 
-- [Delete and load task](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#delete) — the entities are deleted and reloaded to the target environment.
-- [Delete task](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#delete) — the entities are deleted (cleaned) from the task's environment.
-- [Load data snapshot (version) task](/articles/TDM/tdm_gui/15_data_flux_task.md#how-do-i-load-a-data-snapshot) — the entities are deleted and reloaded to the target environment.
+- [Delete and load task](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#delete) — the entities are deleted from and then reloaded into the target environment.
+- [Delete task](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#delete) — the entities are deleted (cleaned) from the task's environment (i.e., the target).
+- [Load data snapshot (version) task](/articles/TDM/tdm_gui/15_data_flux_task.md#how-do-i-load-a-data-snapshot) — the entities are deleted from and then reloaded into the target environment.
 
 Note that if there is no need to support entity deletion or Data Versioning load tasks, the target tables do not have to be added to the LUs.
 
 ## LU Schema — Sync Mode
 
-In the following scenarios, task execution is required to synchronize only the target tables, while preserving the source tables as they are:
+In the following **scenarios**, task execution is required to synchronize only the target tables, while preserving the source tables as they are:
 
-- Load data snapshot (version) task — the task needs to delete the entities from the target environment and reload the pre-created data snapshot (version) to the environment.
+- Load data snapshot (version) task — the task needs to delete the entities from the target environment and then reload the pre-created data snapshot (version) into the same environment.
 - Delete and load task whose [Policy for fetching data](/articles/TDM/tdm_gui/14b_task_source_component_entities.md#policy-for-fetching-data) is set to **Available [source environment name] data in the Test data store**. 
 
-Set the [Sync method](/articles/14_sync_LU_instance/04_sync_methods.md) on the [LU schema level](/articles/14_sync_LU_instance/07_sync_levels.md) to **None** in order to support these scenarios. This way, the source LU tables will be synced only once, apart from when the task's Policy of fetching data is set to **All data from [source environment name]**. The target LU tables, however, will be synced whenever the task needs to delete the entities, as the target LU tables have a [decision function](#adding-a-decision-function-to-the-target-lu-tables) that runs their population for such case.
+Set the [Sync method](/articles/14_sync_LU_instance/04_sync_methods.md) at the [LU schema level](/articles/14_sync_LU_instance/07_sync_levels.md) to **None** in order to support these scenarios. This way, the source LU tables will be synced only once, apart from when the task's Policy of fetching data is set to **All data from [source environment name]**. The target LU tables, however, will be synced whenever the task needs to delete the entities, as the target LU tables have a [decision function](#adding-a-decision-function-to-the-target-lu-tables) that runs their population for such case.
 
 Click [here](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution) for more information about the task's execution sync modes.
 
