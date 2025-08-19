@@ -36,9 +36,9 @@ Note that the **TDM_DELETE_TABLES_PREFIX** shared Global defines the prefix of t
 
 ### Adding a Decision Function to Target LU Tables
 
-The target LU tables must be populated when running a TDM task that deletes entities from the target environment. The target keys must be extracted from the target environment in order to enable the deletion of entities and their related data.
+The target LU tables must be populated when running a TDM task that deletes entities from the target environment. The target keys are extracted from the target environment in order to enable the deletion of entities and their related data.
 
-If the task does not delete the entities from the target environment, the target keys do not need to be extracted from the target environment.
+If the task does not delete entities from the target environment, the target keys do not need to be extracted from it.
 
 The Broadway [InitiateTDMLoad](10_tdm_generic_broadway_flows.md#initialization) flow sets the **TDM_DELETE_BEFORE_LOAD** Global to **true** if the task must **delete the entities** from the target. Otherwise, this Global is set to **false**.   
 
