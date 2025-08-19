@@ -4,7 +4,7 @@ The [TDM task](/articles/TDM/tdm_gui/14_task_overview.md) can process Business E
 
 ## Parent LU — Implementation Guidelines 
 
-BEs are defined in the [TDM self-service application](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md). In addition, the following guidelines must be implemented to support parent-child LU hierarchy:
+[BEs are defined in the TDM self-service application](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md). In addition, the following guidelines must be implemented to support parent-child LU hierarchy:
 
 - Populate the [ChildLink](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#childlink) MTable object. Note that a parent LU can have several child LUs. Populate a separate record for each child LU with the SQL queries to select the source and the target child IDs.
 
