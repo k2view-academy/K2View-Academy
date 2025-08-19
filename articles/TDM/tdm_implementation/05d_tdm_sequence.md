@@ -51,7 +51,7 @@ Both sequence handling methods require execution of the [TDMLuInitBasedOnFabric 
 
 - A sequence can be shared across tables and multiple LUs. For example, the subscriber_id sequence is shared between the CRM and Billing LUs. To maintain consistenct and referential integrity, the same sequence name must be used across all shared LUs, regardless of the applied sequence handling method.
 
-- The two sequence handling methods — Catalog-based or without Catalog — require creation of the **k2masking** schema, which is done by the TDM deploy flow. Alternatively, creating the k2masking schema can be done by running the **masking-create-cache-table.flow** from the Broadway Examples (found in the Broadway Flow window, Main Menu > Actions > Examples... and select this flow). Before deploying the TDM LU, verify that the **SEQ_CACHE_INTREFACE** Shared Global is set with the correct interface name.
+- The two sequence handling methods — Catalog-based or without Catalog — require creation of the **k2masking** schema, which is done by the TDM deploy flow. Alternatively, creating the k2masking schema can be done by running the **masking-create-cache-table.flow** from the Broadway Examples (found in the Broadway Flow window, Main Menu > Actions > Examples... and select this flow). Before deploying the TDM LU, verify that the **SEQ_CACHE_INTREFACE** shared Global is set with the correct interface name.
 
   Click [here](/articles/98_installation_and_upgrade/Install_TDM/TDM_Installation_V9.4.md) for more information about the TDM installation and the k2masking schema creation.
 
