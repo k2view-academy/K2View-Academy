@@ -35,7 +35,7 @@ Both sequence handling methods require execution of the [TDMLuInitBasedOnFabric 
 
   - Each load flow invokes the **HandleMaskAndSeqFields** flow, which applies masking and sequence replacements to every record prior to loading it into the target environment. The **TDM_USING_CATALOG_SEQUENCES** Global specifies which of the two sequence handling methods is used.
 
-  - For tables with records in the [TDMSeqSrc2TrgMapping Actor](11b_tdm_sequence_implementation_without_catalog.md#populate-the-sequence-mapping-table), a new sequence flow, [table name]_sequences, is created under the **Broadway/SequencesFlows** directory of each LU. This flow invokes the sequence Actors for the table's sequence fields. Example:
+  - For tables with records in the [TDMSeqSrc2TrgMapping Actor](11b_tdm_sequence_implementation_without_catalog.md#populate-the-sequence-mapping-table), a new sequence flow, **[table name]_sequences**, is created under the **Broadway/SequencesFlows** directory of each LU. This flow invokes the sequence Actors for the table's sequence fields. Example:
 
     ![seq flow example](images/sequence_flow_example.png)
 
@@ -59,7 +59,7 @@ Both sequence handling methods require execution of the [TDMLuInitBasedOnFabric 
 
 A new Global — **TDM_SEQ_REPORT** — has been added to the Shared Globals in TDM V8.1. When set to **true** (the default value), the task execution populates the **TDM_SEQ_MAPPING** table and adds the **Replace Sequence Summary Report** to the [task execution report](/articles/TDM/tdm_gui/27_task_execution_history.md#generating-a-task-execution-summary-report).
 
-For better performance, set the **TDM_SEQ_REPORT** Global to **false** to prevent populating the TDM_SEQ_MAPPING table and generating the **Replace Sequence Summary Report**. Note that the Replace Sequence Summary Report would not be available for a task that is executed with the TDM_SEQ_REPORT Global set as **false**.
+For better performance, set the **TDM_SEQ_REPORT** Global to **false** to prevent populating the TDM_SEQ_MAPPING table and generating the **Replace Sequence Summary Report**. Note that the Replace Sequence Summary Report would not be available for tasks that are executed with the TDM_SEQ_REPORT Global set to **false**.
 
 
 
