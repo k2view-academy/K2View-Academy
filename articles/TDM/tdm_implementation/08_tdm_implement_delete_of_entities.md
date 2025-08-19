@@ -6,11 +6,11 @@ Every LU must include the capability to **delete entities** from the target envi
 - [Delete task](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#delete) — the entities are deleted (cleaned) from the task's environment.
 - [Load data snapshot (version) task](/articles/TDM/tdm_gui/15_data_flux_task.md#how-do-i-load-a-data-snapshot) — the entities are deleted and reloaded to the target environment.
 
-Note that if there is no need to support the deletion of entities or Data Versioning load tasks, the target tables do not need to be added to the LUs.
+Note that if there is no need to support entity deletion or Data Versioning load tasks, the target tables do not have to be added to the LUs.
 
 ## LU Schema — Sync Mode
 
-The task execution needs to sync only the target tables and keep the source tables as they are in the following scenarios:
+In the following scenarios, task execution is required to synchronize only the target tables, while preserving the source tables as they are:
 
 - Load data snapshot (version) task — the task needs to delete the entities from the target environment and reload the pre-created data snapshot (version) to the environment.
 - Delete and load task whose [Policy for fetching data](/articles/TDM/tdm_gui/14b_task_source_component_entities.md#policy-for-fetching-data) is set to **Available [source environment name] data in the Test data store**. 
