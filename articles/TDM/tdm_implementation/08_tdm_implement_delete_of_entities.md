@@ -1,30 +1,30 @@
-# TDM - Deleting Entities
+# TDM — Deleting Entities
 
-Every LU must include the ability to Delete Entities from a target environment in order to support the following tasks:
+Every LU must include the capability to **delete entities** from the target environment in order to support the following tasks:
 
-- [Delete and load task](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#delete) - the entities are deleted and reloaded to the target environment.
-- [Delete task](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#delete) - the entities are deleted (cleaned) from the task's environment.
-- [Load data snapshot (version) task](/articles/TDM/tdm_gui/15_data_flux_task.md#how-do-i-load-a-data-snapshot) - the entities are deleted and reloaded to the target environment.
+- [Delete and load task](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#delete) — the entities are deleted and reloaded to the target environment.
+- [Delete task](/articles/TDM/tdm_gui/17a_task_target_component_entities.md#delete) — the entities are deleted (cleaned) from the task's environment.
+- [Load data snapshot (version) task](/articles/TDM/tdm_gui/15_data_flux_task.md#how-do-i-load-a-data-snapshot) — the entities are deleted and reloaded to the target environment.
 
 Note that if there is no need to support the deletion of entities or Data Versioning load tasks, the target tables do not need to be added to the LUs.
 
-## LU Schema - Sync Mode
+## LU Schema — Sync Mode
 
 The task execution needs to sync only the target tables and keep the source tables as they are in the following scenarios:
 
-- Load data snapshot (version) task - the task needs to delete the entities from the target environment and reload the pre-created data snapshot (version) to the environment.
+- Load data snapshot (version) task — the task needs to delete the entities from the target environment and reload the pre-created data snapshot (version) to the environment.
 - Delete and load task whose [Policy for fetching data](/articles/TDM/tdm_gui/14b_task_source_component_entities.md#policy-for-fetching-data) is set to **Available [source environment name] data in the Test data store**. 
 
 Set the [Sync method](/articles/14_sync_LU_instance/04_sync_methods.md) on the [LU schema level](/articles/14_sync_LU_instance/07_sync_levels.md) to **None** in order to support these scenarios. This way, the source LU tables will be synced only once, apart from when the task's Policy of fetching data is set to **All data from [source environment name]**. The target LU tables, however, will be synced whenever the task needs to delete the entities, as the target LU tables have a [decision function](#adding-a-decision-function-to-the-target-lu-tables) that runs their population for such case.
 
 Click [here](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution) for more information about the task's execution sync modes.
 
-## LU Structure - Target Tables
+## LU Structure — Target Tables
 
 Each LU has 2 main branches that are linked to the **FABRIC_TDM_ROOT** root table:
 
-- **Source branch** - LU tables that extract an entity's source data. Source LU tables are populated except for [delete only tasks](/articles/TDM/tdm_gui/19_delete_only_task.md), where no data is extracted from the data sources.
-- **Target branch** - LU tables that extract the target keys of an entity. The keys are extracted from the **target environment** when the task needs to delete the entities from the target environment.
+- **Source branch** — LU tables that extract an entity's source data. Source LU tables are populated except for [delete only tasks](/articles/TDM/tdm_gui/19_delete_only_task.md), where no data is extracted from the data sources.
+- **Target branch** — LU tables that extract the target keys of an entity. The keys are extracted from the **target environment** when the task needs to delete the entities from the target environment.
 
 The target table contains the list of target IDs (keys) required for deleting the data of the selected entities from the target environment and for populating the [TDM_LU_TYPE_REL_TAR_EID](06_tdm_implementation_support_hierarchy.md#tdm_lu_type_rel_tar_eid) table with the target children IDs. It is recommended to add the **TAR_** prefix to each target table. 
 
