@@ -28,20 +28,20 @@ Each LU has two main branches linked to the **FABRIC_TDM_ROOT** table:
 
 The target table contains the list of target IDs required for both deleting the data of selected entities from the target environment and populating the [TDM_LU_TYPE_REL_TAR_EID](06_tdm_implementation_support_hierarchy.md#tdm_lu_type_rel_tar_eid) table with the target children IDs. It is recommended to use the **TAR_** prefix for each target table, as per the target table naming convention. 
 
-### Target Tables Generation
+### Generating Target Tables
 
 Generating target LU tables and delete flows is done automatically by the [**TDMLuInitBasedOnFabric flow**](05_tdm_lu_implementation_general.md#ii-adding-the-tdm-setup-to-the-lu) when its **CREATE_DELETE_TABLES** input parameter is set to **true**. The names of these LU tables are controlled by the **TDM_DELETE_TABLES_PREFIX** shared Global, which uses **TAR_** prefix by default. To change the prefix, update this shared Global and redeploy the LU **before** running the flow.
 
 
 ### Adding a Decision Function to Target LU Tables
 
-The target LU tables must be populated when running a TDM task that deletes entities from the target environment. The target keys are extracted from the target environment in order to enable the deletion of entities and their related data.
+Target LU tables must be populated when running a TDM task that deletes entities from the target environment. The target keys are extracted from the target environment in order to enable the deletion of entities and their related data.
 
 If the task does not delete entities from the target environment, the target keys do not need to be extracted from it.
 
-The Broadway [InitiateTDMLoad](10_tdm_generic_broadway_flows.md#initialization) flow sets the **TDM_DELETE_BEFORE_LOAD** Global to **true** when the task must **delete the entities** from the target; otherwise, this Global is set to **false**.   
+The Broadway [InitiateTDMLoad](10_tdm_generic_broadway_flows.md#initialization) flow sets the **TDM_DELETE_BEFORE_LOAD** Global to **true** when the task must **delete entities** from the target; otherwise, this Global is set to **false**.   
 
-The **fnDecisionDeleteFromTarget** [Decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md) (imported from the [TDM Library](04_fabric_tdm_library.md)) is **automatically added to all target tables** by the target tables generation flow. 
+The **fnDecisionDeleteFromTarget** [decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md) (imported from the [TDM Library](04_fabric_tdm_library.md)) is **automatically added to all target tables** by the target tables generation flow. 
 
 ### Populating Target Tables with the Target Environment
 
