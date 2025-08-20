@@ -30,9 +30,8 @@ The target table contains the list of target IDs required for both deleting the 
 
 ### Target Tables Generation
 
-Generating target LU tables and delete flows is done automatically by the [TDMLuInitBasedOnFabric flow](05_tdm_lu_implementation_general.md#ii-adding-the-tdm-setup-to-the-lu) when its **CREATE_DELETE_TABLES** input parameter is set to **true**.
+Generating target LU tables and delete flows is done automatically by the [**TDMLuInitBasedOnFabric flow**](05_tdm_lu_implementation_general.md#ii-adding-the-tdm-setup-to-the-lu) when its **CREATE_DELETE_TABLES** input parameter is set to **true**. The names of these LU tables are controlled by the **TDM_DELETE_TABLES_PREFIX** shared Global, which uses **TAR_** prefix by default. To change the prefix, update this shared Global and redeploy the LU **before** running the flow.
 
-Note that the **TDM_DELETE_TABLES_PREFIX** shared Global defines the prefix of the LU table name. By default the prefix is **TAR_**. To use a different prefix, edit this shared Global and redeploy the LU **before** running the TDMLuInitBasedOnFabric flow. 
 
 ### Adding a Decision Function to Target LU Tables
 
