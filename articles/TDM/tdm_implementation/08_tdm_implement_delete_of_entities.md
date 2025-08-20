@@ -40,7 +40,7 @@ The target LU tables must be populated when running a TDM task that deletes enti
 
 If the task does not delete entities from the target environment, the target keys do not need to be extracted from it.
 
-The Broadway [InitiateTDMLoad](10_tdm_generic_broadway_flows.md#initialization) flow sets the **TDM_DELETE_BEFORE_LOAD** Global to **true** if the task must **delete the entities** from the target. Otherwise, this Global is set to **false**.   
+The Broadway [InitiateTDMLoad](10_tdm_generic_broadway_flows.md#initialization) flow sets the **TDM_DELETE_BEFORE_LOAD** Global to **true** when the task must **delete the entities** from the target; otherwise, this Global is set to **false**.   
 
 The **fnDecisionDeleteFromTarget** [Decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md) (imported from the [TDM Library](04_fabric_tdm_library.md)) is **automatically added to all target tables** by the target tables generation flow. 
 
