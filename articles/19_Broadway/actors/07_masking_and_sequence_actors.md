@@ -46,7 +46,7 @@ Common input arguments of masking Actors are:
 * **hashedInputValue** - indicates whether to store the original value or to hash the original value and store the hashed value. By default, the hashed value is stored. When set to **false**, this input argument disables the caching and stores the original value.
 * **interface** - this is the interface to be used for caching the masked values. It can be populated with either any SQL DB interface defined in Fabric, Fabric server memory, or **SEED**.
   * When the interface input argument is populated with **SEED**, the masking Actor uses the [Data Consistency Using Seed](/articles/26_fabric_security/06_data_masking.md#data-consistency-using-seed) method for data consistency, namely, it populates the caching key into the seed parameter and sends it to the data generation Actor. 
-  * When the SQL DB interface is set, the **masking_cache** table under the [k2masking schema](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) is used to cache the masked values. The data kept in this table reflect the settings of the Actor's input arguments.
+  * When the SQL DB interface is set, the **masking_cache** table under the [k2masking schema](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) is used to cache the masked values. The data kept in this table reflects the settings of the Actor's input arguments.
   * If the **k2masking** schema does not exist, create it by using either the **masking-create-cache-table.flow** example flow.
   * IN-MEMORY interface is useful for testing as it can only be used in a single-node configuration.
   * Set the interface to **NONE** in order to avoid caching the masked values.
