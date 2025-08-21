@@ -57,7 +57,7 @@ For example:
 
  ![Broadway population](images/broadway_tar_table_population_example.png)
 
-Note that the population of the target tables can be based on **the same interfaces as those of the source LU tables**. It is not necessary to define separate target interfaces for the reason that the population of the main target LU table sets the target environment to be the active environment. As a result, the population of the target tables uses the target connection details.
+Note that target tables can be populated using **the same interfaces as the source LU tables**. Defining separate target interfaces is not required, since populating of the main target LU table sets the target environment as the active environment. As a result, the population of the target tables uses the target connection details.
 
 
 
