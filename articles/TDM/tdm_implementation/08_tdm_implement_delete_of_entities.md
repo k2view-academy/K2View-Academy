@@ -37,11 +37,11 @@ Generating target LU tables and delete flows is done automatically by the [**TDM
 
 Target LU tables must be populated when running a TDM task that deletes entities from the target environment. The target keys are extracted from the target environment in order to enable the deletion of entities and their related data.
 
-If the task does not delete entities from the target environment, the target keys do not need to be extracted from it.
+If the task does not delete entities from the target environment, extracting the target keys is not required.
 
-The Broadway [InitiateTDMLoad](10_tdm_generic_broadway_flows.md#initialization) flow sets the **TDM_DELETE_BEFORE_LOAD** Global to **true** when the task must **delete entities** from the target; otherwise, this Global is set to **false**.   
+The **fnDecisionDeleteFromTarget** [decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md) **checks** whether the task needs to delete entities from the target. When the task needs to delete entities from the target, the **TDM_DELETE_BEFORE_LOAD** Global is set to **true** by the Broadway [InitiateTDMLoad](10_tdm_generic_broadway_flows.md#initialization) flow (and to **false** otherwise). If the task needs to delete entities, the LUI sync process must repopulate all target IDs in the target LU tables for the entity deletion to occur. 
 
-The **fnDecisionDeleteFromTarget** [decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md) (imported from the [TDM Library](04_fabric_tdm_library.md)) is **automatically added to all target tables** by the flow that generates target tables (TDMLuInitBasedOnFabric). 
+For this reason, the **fnDecisionDeleteFromTarget** decision function (imported from the [TDM Library](04_fabric_tdm_library.md)) is **automatically added to all target tables** by the flow that generates them (the TDMLuInitBasedOnFabric flow). 
 
 ### Populating Target Tables with the Target Environment
 
