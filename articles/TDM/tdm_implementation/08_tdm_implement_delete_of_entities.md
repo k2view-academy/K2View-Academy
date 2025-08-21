@@ -45,9 +45,9 @@ For this reason, the **fnDecisionDeleteFromTarget** decision function (imported 
 
 ### Populating Target Tables with the Target Environment
 
-The LUI sync can populate the branches, source environment and target environment when running a load task that requires both delete and load entity operations. 
+The LUI sync process can populate the branches, source environment and target environment when running a load task that requires both entity deletion and loading operations. 
 
-The **source LU tables** must extract the data from the **source environment**, where the **target LU tables** must extract the data from the **target environment**.
+The **source LU tables** must extract data from the **source environment**, whereas the **target LU tables** must extract  data from the **target environment**.
 
 The Broadway [InitiateTDMLoad](10_tdm_generic_broadway_flows.md#initialization) flow sets the active environment to the source environment before syncing the LUI into Fabric.
 
