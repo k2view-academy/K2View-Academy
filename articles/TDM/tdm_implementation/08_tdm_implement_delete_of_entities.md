@@ -49,9 +49,8 @@ The LUI sync process can populate the branches, source environment and target en
 
 The **source LU tables** must extract data from the **source environment**, whereas the **target LU tables** must extract  data from the **target environment**.
 
-The Broadway [InitiateTDMLoad](10_tdm_generic_broadway_flows.md#initialization) flow sets the active environment as the source environment before syncing the LUI into Fabric. The active environment must change to the target environment before starting the population of the LU table tables. Therefore, the **setTargetEnv_Actor** is added to the populated flow of the main target LU table to replace the active environment to the task's target environment (set in the **TDM_TARGET_NEV_NAME** key).
+The Broadway [InitiateTDMLoad](10_tdm_generic_broadway_flows.md#initialization) flow sets the active environment as the source environment before syncing the LUI into Fabric. The active environment must be changed to the target environment before starting the population of the LU table tables. Therefore, the **setTargetEnv_Actor** is added to the populated flow of the main target LU table to replace the active environment with the task's target environment (set in the **TDM_TARGET_NEV_NAME** key).
 
-The **setTargetEnv_Actor** is **automatically added to the generated population flow of the main target LU table**. This Actor sets the active environment based on the **TDM_TARGET_ENV_NAME** key, which the **InitiateTDMLoad** flow assigns to the task's target environment.
 
 For example:
 
