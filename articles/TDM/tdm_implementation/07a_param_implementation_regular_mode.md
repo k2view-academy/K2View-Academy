@@ -104,7 +104,7 @@ Prerequisite: Verify that the LU_PARAMS table has been attached to the LU Schema
 
 When [synced](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), the LUIs create and update the `<LU>_params` table in the TDM database. A separate `<LU>_params` table is created for each LU. The naming convention of the parameter table is `<LU Name>_params`, e.g., customer_params. 
 
-Moreover, the TDM task execution populates the [tdm_params_distinct_values](/articles/TDM/tdm_architecture/02_tdm_database.md#tdm_params_distinct_values) table in the TDM DB with the list of parameters and the valid values for [combo parameters].
+Moreover, the TDM task execution populates the [tdm_params_distinct_values](/articles/TDM/tdm_architecture/02_tdm_database.md#tdm_params_distinct_values) table in the TDM DB with the list of parameters and the valid values for [combo parameters](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#optional---update-the-maximum-number-of-values-for-combo-parameters).
 
 Parameter tables are used for:
 
