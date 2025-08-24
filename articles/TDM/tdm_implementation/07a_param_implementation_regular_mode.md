@@ -8,14 +8,14 @@ Prerequisite: Verify that the LU_PARAMS table has been attached to the LU Schema
 
    Note that starting from TDM V8.1, the previous translation object, **trnLuParams**, has been replaced with the **LuParams** MTable. Deploy all LUs to the debug server and run the **RunTDMDBUpgradeScripts** flow. This flow executes the **convertLuTranslations** flow to convert old TDM translations into the corresponding TDM MTables. Each execution of the convertLuTranslations flow deletes the related MTables and repopulates them.
 
-2. The LuParams has the following fields:
+2. The **LuParams** has the following fields:
 
    - lu_name
    - column_name — populated with the parameter name. Note that the parameter name may differ from the corresponding LU table field name. 
    - sql
    - description — this optional field allows adding a short description to the business parameters. The description is displayed in the task when hovering over a parameter, which helps users select business parameters for entity sub-setting. 
 
-3. LuParams example:
+3. **LuParams** example:
 
    <table width="900pxl">
    <tbody>
@@ -110,8 +110,8 @@ Parameter tables are used for:
 
 - Retrieving the list of available parameters for each task.
 - Checking the number of matching entities for the selected parameters of the task.
-- Creating the entity list for the task if the task's selection method is based on parameters.
-- Creating the entity list for the task if a random selection of entities is used whereby the entities are randomly selected from the `<LU>_params` table of the task's root LU.  
+- Creating the entity list when the task's selection method is based on parameters.
+- Creating the entity list when entities are randomly selected from the `<LU>_params` table of the task's root LU.  
 
 ### AI-based Generation
 
