@@ -2,7 +2,7 @@
 
 Prerequisite: Verify that the LU_PARAMS table has been attached to the LU Schema.
 
-## Optional — Adding Parameters for Logical Unit
+## Optional — Adding Parameters to Logical Units
 
 1. Add the LU parameters to the **LuParams** MTable (located under *References* in the Project tree).
 
@@ -66,7 +66,7 @@ Prerequisite: Verify that the LU_PARAMS table has been attached to the LU Schema
    <td width="150pxl">Billing</td>
    <td width="150pxl">total_balance_amount</td>
    <td width="600pxl">Select Sum(ifNull(Billing.balance.available_amount, 0)) As total_balance_amount<br />From Billing.balance</td>
-   <td width="600pxl">Subscriber's open debt (balance) amount.</td>    
+   <td width="600pxl">Subscriber's debt balance.</td>    
    </tr>
    <tr>
    <td width="150pxl">Billing</td>
@@ -82,7 +82,7 @@ Prerequisite: Verify that the LU_PARAMS table has been attached to the LU Schema
    <td width="150pxl">Billing</td>
    <td width="150pxl">vip_status</td>
    <td width="600pxl">Select Distinct vip_status <br />From Billing.subscriber</td>
-   <td width="600pxl">VIP classification status of the subscriber.</td>
+   <td width="600pxl">Subscriber's VIP status.</td>
    </tr>
    <tr>
    <td width="150pxl">Billing</td>
@@ -109,7 +109,7 @@ Moreover, the TDM task execution populates the [tdm_params_distinct_values](/art
 Parameter tables are used for:
 
 - Retrieving the list of available parameters for each task.
-- Getting the number of matching entities for the selected parameters of the task.
+- Checking the number of matching entities for the selected parameters of the task.
 - Creating the entity list for the task if the task's selection method is based on parameters.
 - Creating the entity list for the task if a random selection of entities is used whereby the entities are randomly selected from the `<LU>_params` table of the task's root LU.  
 
