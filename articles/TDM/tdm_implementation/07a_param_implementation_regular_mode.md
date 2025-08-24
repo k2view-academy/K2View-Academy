@@ -1,19 +1,19 @@
-# TDM Parameters - Regular Mode - Implementation Guidelines
+# TDM Parameters — Regular Mode — Implementation Guidelines
 
-Prerequisite: Verify that the LU_PARAMS table is attached to the LU Schema.
+Prerequisite: Verify that the LU_PARAMS table has been attached to the LU Schema.
 
-## Optional - Adding Parameters for Logical Unit
+## Optional — Adding Parameters for Logical Unit
 
-1. Add the LU's parameters to the **LuParams** MTable (located under References in the Project tree).
+1. Add the LU parameters to the **LuParams** MTable (located under *References* in the Project tree).
 
-   Note that from TDM 8.1 onwards, the previous translation object - trnLuParams - is replaced with the **LuParams** MTable. Deploy all LUs to the debug server and run the **RunTDMDBUpgradeScripts** flow. This flow runs the **convertLuTranslations** flow to convert old TDM translations to the equivalent TDM MTables. Each execution of the convertLuTranslations flow deletes and re-populates the related MTables.
+   Note that starting from TDM V8.1, the previous translation object, **trnLuParams**, has been replaced with the **LuParams** MTable. Deploy all LUs to the debug server and run the **RunTDMDBUpgradeScripts** flow. This flow executes the **convertLuTranslations** flow to convert old TDM translations into the corresponding TDM MTables. Each execution of the convertLuTranslations flow deletes and repopulates the related MTables.
 
 2. The LuParams has the following fields:
 
    - lu_name
-   - column_name - populated with the parameter name. The parameter name can be different from the LU table's field name. 
+   - column_name — populated with the parameter name. Note that the parameter name may differ from the corresponding LU table field name. 
    - sql
-   - description - this field is optional.  It enables to add a short description to the business parameters.  The description will be displayed in the task when hovering over a parameter, which would help the user to select business parameters for entity sub-setting in the task. 
+   - description — this optional field allows adding a short description to the business parameters. The description is displayed in the task when hovering over a parameter, which helps users select business parameters for entity sub-setting. 
 
 3. LuParams example:
 
