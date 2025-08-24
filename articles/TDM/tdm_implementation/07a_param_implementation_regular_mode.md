@@ -106,7 +106,7 @@ When [synced](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), the LUIs c
 
 In addition, the TDM task execution process populates the [tdm_params_distinct_values](/articles/TDM/tdm_architecture/02_tdm_database.md#tdm_params_distinct_values) TDM DB table with the parameters list and the valid values for [combo parameters].
 
-Parameter tables are used for the following:
+Parameter tables are used for:
 
 - Getting the list of available parameters per task.
 - Getting the number of matching entities for the selected parameters of the task.
