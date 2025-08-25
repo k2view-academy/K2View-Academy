@@ -127,4 +127,4 @@ Click [here](/articles/TDM/tdm_gui/14e_task_source_ai_based_generation.md) for m
 - Parameter names must not contain spaces or special characters in parameter names.
 - Even if parameters do not need to be defined for an LU, the LU_PARAMS table must be added to the LU Schema to create the `<LU Name>_params` table in the TDM DB. The `<LU Name>_params` table is required for both entities selection methods in a TDM task: [Business parameters](/articles/TDM/tdm_gui/15a_entity_subset.md#business-parameters) and [Random Selection](/articles/TDM/tdm_gui/15a_entity_subset.md#random).
 - The PARAMS_JSON field of the LU_PARAMS table contains the list of LU parameters and their values that can be used for debugging a given entity.
-- Click [here](/articles/TDM/tdm_architecture/07_tdm_parameters_handling.md) for more information about parameters handling.
+- Click [here](/articles/TDM/tdm_architecture/07_tdm_parameters_handling.md) for more information about parameter handling.
