@@ -163,6 +163,10 @@ Here are the command options for `k2space.sh`:
       <td><code>--project=</code></td>
       <td>Allows you to specify the Project's name</td>
     </tr>
+    <tr>
+      <td><code>--git-authorship=</code></td>
+      <td>Allows you to the Git AUTHOR and COMMITTER name and email. The value is to be passed in as "name:email".</td>
+    </tr>  
   </tbody>
 </table>
 
