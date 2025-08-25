@@ -115,7 +115,7 @@ Parameter tables are used for:
 
 ### AI-based Generation
 
-The AI-based generated entities are not 'synced' from a data source. The AI process generates entities, and TDM imports the generated entities to Fabric. A post TDM process updates the parameter tables for the imported entities to enable a selection of these entities based on parameters.
+The AI-based generated entities are not synchronized from a data source. Instead, the AI process generates entities, which TDM then imports into Fabric. Afterwards, a post-TDM process updates the parameter tables for these imported entities, enabling their selection based on parameters.
 
 Click [here](/articles/TDM/tdm_gui/14e_task_source_ai_based_generation.md) for more information about the AI-based generation.
 
