@@ -4,7 +4,7 @@ Prerequisite: Verify that the LU_PARAMS table has been attached to the LU Schema
 
 ## Optional — Adding Parameters to Logical Units
 
-1. Add the LU parameters to the **LuParams** MTable (located under *References* in the Project tree).
+1. Add the LU parameters to the **LuParams** MTable (located under the *References* section of the Project tree).
 
    Note that starting from TDM V8.1, the previous translation object, **trnLuParams**, has been replaced with the **LuParams** MTable. Deploy all LUs to the debug server and run the **RunTDMDBUpgradeScripts** flow. This flow executes the **convertLuTranslations** flow to convert old TDM translations into the corresponding TDM MTables. Each execution of the convertLuTranslations flow deletes the related MTables and repopulates them.
 
