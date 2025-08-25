@@ -101,6 +101,8 @@ Internet access is required to perform this installation. You will need access t
    Please note that persistent files created by Fabric Web Studio and the database instance you install will store their data in the "persistent-data" folder of your installation directory (e.g., K2view/Studio/persistent-data). Your Fabric Space's data is stored in the persistent-data/spacename directory. The respective space's directory will contain data if you create multiple spaces.
    - The location of the persistent data directory is configured in the `.env` file and set by default to be in the Fabric Web Studio installation directory.
 
+4. Command Line Options
+   Please refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Operating.md">k2space.sh command options</a> topic to learn about overrides and settings. 
 
 ## Installation
 
