@@ -102,7 +102,7 @@ Prerequisite: Verify that the LU_PARAMS table has been attached to the LU Schema
 
    
 
-4. The LU_PARAMS' population flow runs the **fnEnrichmentLuParams** function. This function executes the LU's SQL queries in the **LuParams**, creates the `<LU>_params` table in the TDM DB if needed, and populates the `<LU>_params` table in the TDM DB. Each parameter's column holds a JSON file that contains the values of the parameter. Each parameter can hold several values that are separated by a comma. For example:
+4. The LU_PARAMS population flow runs the **fnEnrichmentLuParams** function. This function executes the LU's SQL queries defined in the **LuParams** MTable, creates the `<LU>_params` table in the TDM DB if it does not already exist, and populates it with data. Each parameter column stores the parameter’s values in JSON format. A parameter may contain multiple values, in which case they are separated by a comma. For example:
 
    - Line number = {"(722) 404-4222","+1 (372) 682-2450,"+1 (799) 979-1233","883-486-7523","1394031132"}
 
@@ -131,8 +131,7 @@ Click [here](/articles/TDM/tdm_gui/14e_task_source_ai_based_generation.md) for m
 
 **Notes:**
 
-- The LU_PARAMS' population runs the SQL queries to retrieve the LU tables' data. Therefore, it has an execution order 999 to run after the remaining LU tables' population. 
-- Parameter names must not contain spaces or special characters in parameter names.
+- The LU_PARAMS population flow runs SQL queries to retrieve data from the LU tables. This flow is therefore assigned execution order 999 to ensure that it runs *after* all other LU tables have been populated, allowing all required data to be fetched.
 - Even if parameters do not need to be defined for an LU, the LU_PARAMS table must be added to the LU Schema to create the `<LU Name>_params` table in the TDM DB. The `<LU Name>_params` table is required for both entities selection methods in a TDM task: [Business parameters](/articles/TDM/tdm_gui/15a_entity_subset.md#business-parameters) and [Random Selection](/articles/TDM/tdm_gui/15a_entity_subset.md#random).
 - The PARAMS_JSON field of the LU_PARAMS table contains the list of LU parameters and their values that can be used for debugging a given entity.
 - Click [here](/articles/TDM/tdm_architecture/07_tdm_parameters_handling.md) for more information about parameter handling.
