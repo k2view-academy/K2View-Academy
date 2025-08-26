@@ -10,7 +10,7 @@
 ### FK Creation in the TDM DB
   - By default, the TDM process runs the MDB_EXPORT command in a mode that creates physical FKs on child tables in the TDM DB. For example, the Subscriber table is linked to the Customer table via the customer_id field. The MDB_EXPORT command creates an FK on the Subscriber.customer_id field. Verify that linked fields in the parent LU table are defined as either PKs or unique indexes, and ensure **all
  parent PK/unique index fields** are linked to the child LU table as a way to enable FK creation on the child table.
- -  However, sometimes the parent-child tables are not linked via a parent's unique field. As an example, the Subscriber table has a PK on the combination of subscriber_id and contact_id fields, but only the latter is linked to the Contact table. To handle such cases, TDM V9.3.1 introduces a new mode to support schema export without FK creations:
+ -  Occasionally, the parent-child tables are not linked via a parent's unique field. As an example, the Subscriber table has a PK on the combination of subscriber_id and contact_id fields, but only the latter is linked to the Contact table. To handle such cases, TDM V9.3.1 introduces a new mode to support schema export without FK creations:
     - A new Global, **CREATE_PHYSICAL_FK_IN_MDB_EXPORT_SCHEMA**, has been added. When set to **false** (the default is **true**), it prevents FK creation on the exported LU schema in the TDM DB.    
 
 ## Optional — Adding Parameters to a Logical Unit
