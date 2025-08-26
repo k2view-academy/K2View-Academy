@@ -36,7 +36,7 @@
 - Verify that all LU tables in **LuParamsMapping** are linked to their parent tables. This is required as a means to add FKs to tables when the latter are exported to the TDM DB.
 - Notes:
   - The MDB export command does not support multiple populations with different links to parent tables. Each LU table in **LuParamsMapping** must have a single link to a parent LU table.
-  - **Any update** to the **LuParamsMapping** MTable (including the initial update) requires at least one task execution with the *UPDATE_MDB_EXPORTED_SCHEMA* Global set to **true** (set in the Task variables). This is required for updating the exported LU schema in the TDM database. 
+  - **Any update** to the **LuParamsMapping** MTable (including the initial update) requires at least one task execution with the *UPDATE_MDB_EXPORTED_SCHEMA* Global set to **true** (set in the Task variables). This is essential for updating the exported LU schema in the TDM database. 
 
 
 
