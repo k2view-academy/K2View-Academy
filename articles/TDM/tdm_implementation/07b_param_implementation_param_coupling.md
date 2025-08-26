@@ -31,7 +31,7 @@
 
 - Each parameter must be mapped to a field in an LU table. The parameter name does not need to match the lu_table_field name.
 
-- If you have calculated parameters such as the number of open cases or total open debt, add an LU table that contains these parameters. Add the new table with the calculated parameters to [TDMFilterOutTargetTables](05b_filter_out_lu_tables.md) Actor in order to exclude these tables from the load, delete, and from the data generation flows creation.
+- If you have calculated parameters, such as the number of open cases or an outstanding debt, you can create an LU table that contains these parameters. If created, these tables should be added to the [TDMFilterOutTargetTables](05b_filter_out_lu_tables.md) Actor in order to exclude them from the load and delete actions, as well as from the data generation flows.
 
 - Verify that all LU tables in the LuParamsMapping are linked to parent tables. This is required in order to add an FK to tables when they are exported to the TDM DB.
 - Notes:
