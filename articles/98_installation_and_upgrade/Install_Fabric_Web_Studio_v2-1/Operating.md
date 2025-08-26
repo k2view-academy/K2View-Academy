@@ -149,7 +149,7 @@ Here are the command options for `k2space.sh`:
     </tr>
     <tr>
       <td><code>--fabric-version=</code></td>
-      <td>Allows you to override the Fabric version specified in the .env file</td>
+      <td>Allows you to override the Fabric version specified in the .env file using the desired image tag. E.g., 8.2.1_46 </td>
     </tr>
     <tr>
       <td><code>--compose=</code></td>
@@ -170,8 +170,6 @@ Here are the command options for `k2space.sh`:
   </tbody>
 </table>
 
-
-The Fabric version is specified using the desired image tag. E.g., 8.2.1_46 
 
 ### .config File Format
 These configuration files contain required or custom settings used by Fabric. Configure  parameters as if you were editing any "ini" file to update config.ini
