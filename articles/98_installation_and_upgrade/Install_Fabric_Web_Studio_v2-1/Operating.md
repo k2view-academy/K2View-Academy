@@ -165,7 +165,7 @@ Here are the command options for `k2space.sh`:
     </tr>
     <tr>
       <td><code>--git-authorship=</code></td>
-      <td>Allows you to the Git AUTHOR and COMMITTER name and email. The value is to be passed in as "name:email".</td>
+      <td>Allows you to set the Git AUTHOR and COMMITTER name and email. The value is to be passed in as "name:email".</td>
     </tr>  
   </tbody>
 </table>
