@@ -29,7 +29,7 @@
 
   - description — this optional field allows adding a short description to the business parameters. The description is displayed in the task when hovering over a parameter, which helps users select business parameters for entity sub-setting. 
 
-- Each parameter must be mapped to an LU table's field. The parameter name does not have to be identical to the lu_table_field.
+- Each parameter must be mapped to a field in an LU table. The parameter name does not need to match the lu_table_field name.
 
 - If you have calculated parameters such as the number of open cases or total open debt, add an LU table that contains these parameters. Add the new table with the calculated parameters to [TDMFilterOutTargetTables](05b_filter_out_lu_tables.md) Actor in order to exclude these tables from the load, delete, and from the data generation flows creation.
 
