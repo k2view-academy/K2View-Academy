@@ -7,9 +7,9 @@
 - Verify that the **FABRIC_TDM_ROOT** table has a PK on the **iid** field. This PK is required in order to export the LU schema tables into the TDM DB. The parameters selection query runs on the exported tables.
 - Verify that the **linked fields** in the LU tables have **identical data types**. This is required for supporting the [MDB export](/articles/02_fabric_architecture/04_fabric_commands.md#mdb-export--import) of the LU schema into the TDM DB.
 
-### FK Creation on the TDM DB
-  - By default, the TDM process runs the MDB_EXPORT command in a mode that creates physical FKs in the TDM DB for the child tables. For example, the Subscriber table is linked to the Customer table by the customer_id field. The MDB_EXPORT command creates an FK on the Subscriber.customer_id field. Verify that the linked fields are defined as either PKs or unique indexes in the parent LU table, and that **all
- parent** LU table's **PK/unique index fields** are linked to the child LU table as a way to enable the creation of an FK in the child table.
+### FK Creation in the TDM DB
+  - By default, the TDM process runs the MDB_EXPORT command in a mode that creates physical FKs on child tables in the TDM DB. For example, the Subscriber table is linked to the Customer table via the customer_id field. The MDB_EXPORT command creates an FK on the Subscriber.customer_id field. Verify that linked fields in the parent LU table are defined as either PKs or unique indexes, and ensure **all
+ parent PK/unique index fields** are linked to the child LU table as a way to enable FK creation on the child table.
  -  However, sometimes the parent-child tables are not linked by a parent's unique field. As an example, the Subscriber table has a PK on the combination of subscriber_id and contact_id fields, but only the latter is linked to the Contact table. Accordingly, to facilitate such cases, TDM 9.3.1 has added a new mode to support schema export without FK creations:
     - A new **CREATE_PHYSICAL_FK_IN_MDB_EXPORT_SCHEMA** Global has been added. When set to **false** (the default is **true**), it prevents FK creations on the LU's export.    
 
