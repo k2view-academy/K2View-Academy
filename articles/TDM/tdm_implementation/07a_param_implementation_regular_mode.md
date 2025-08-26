@@ -41,26 +41,31 @@ Prerequisite: Verify that the LU_PARAMS table has been attached to the LU Schema
    <td width="150pxl">CRM</td>
    <td width="150pxl">line_number</td>
    <td width="600pxl">Select contract.associated_line As line_number From contract</td>
+   <td></td>   
    </tr>
    <tr>
    <td width="150pxl">CRM</td>
    <td width="150pxl">num_of_open_cases</td>
    <td width="600pxl">Select Count(*) As num_of_open_cases<br />From cases<br />Where Upper(cases.status) != 'CLOSED'</td>
+   <td></td>   
    </tr>
    <tr>
    <td width="150pxl">CRM</td>
    <td width="150pxl">open_case_date</td>
    <td width="600pxl">Select case_date As open_case_date<br />From cases<br />Where Upper(cases.status) != 'CLOSED'</td>
+   <td></td>  
    </tr>
    <tr>
    <td width="150pxl">CRM</td>
    <td width="150pxl">num_of_subscribers</td>
    <td width="600pxl">Select Count(*) As num_of_subscribers From contract</td>
+   <td></td>   
    </tr>
    <tr>
    <td width="150pxl">CRM</td>
    <td width="150pxl">state</td>
    <td width="600pxl">Select state From address</td>
+   <td></td>   
    </tr>
    <tr>
    <td width="150pxl">Billing</td>
@@ -72,11 +77,13 @@ Prerequisite: Verify that the LU_PARAMS table has been attached to the LU Schema
    <td width="150pxl">Billing</td>
    <td width="150pxl">num_of_open_invoices</td>
    <td width="600pxl">Select Count(*) As num_of_open_invoices<br />From Billing.invoice<br />Where Upper(Billing.invoice.status) = 'OPEN'</td>
+   <td></td>   
    </tr>
    <tr>
    <td width="150pxl">Billing</td>
    <td width="150pxl">total_payment_amount</td>
    <td width="600pxl">Select Sum(ifNull(Billing.payment.amount, 0)) As total_payment_amount<br />From Billing.payment</td>
+   <td></td>   
    </tr>
    <tr>
    <td width="150pxl">Billing</td>
@@ -88,6 +95,7 @@ Prerequisite: Verify that the LU_PARAMS table has been attached to the LU Schema
    <td width="150pxl">Billing</td>
    <td width="150pxl">subscriber_type</td>
    <td width="600pxl">Select Distinct subscriber_type From Billing.subscriber</td>
+   <td></td>   
    </tr>
    </tbody>
    </table>
