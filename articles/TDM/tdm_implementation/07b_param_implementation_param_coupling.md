@@ -10,12 +10,12 @@
 ### FK Creation in the TDM DB
   - By default, the TDM process runs the MDB_EXPORT command in a mode that creates physical FKs on child tables in the TDM DB. For example, the Subscriber table is linked to the Customer table via the customer_id field. The MDB_EXPORT command creates an FK on the Subscriber.customer_id field. Verify that linked fields in the parent LU table are defined as either PKs or unique indexes, and ensure **all
  parent PK/unique index fields** are linked to the child LU table as a way to enable FK creation on the child table.
- -  However, sometimes the parent-child tables are not linked by a parent's unique field. As an example, the Subscriber table has a PK on the combination of subscriber_id and contact_id fields, but only the latter is linked to the Contact table. Accordingly, to facilitate such cases, TDM 9.3.1 has added a new mode to support schema export without FK creations:
-    - A new **CREATE_PHYSICAL_FK_IN_MDB_EXPORT_SCHEMA** Global has been added. When set to **false** (the default is **true**), it prevents FK creations on the LU's export.    
+ -  However, sometimes the parent-child tables are not linked via a parent's unique field. As an example, the Subscriber table has a PK on the combination of subscriber_id and contact_id fields, but only the latter is linked to the Contact table. To handle such cases, TDM V9.3.1 introduces a new mode to support schema export without FK creations:
+    - A new Global, **CREATE_PHYSICAL_FK_IN_MDB_EXPORT_SCHEMA**, has been added. When set to **false** (the default is **true**), it prevents FK creation on the exported LU schema in the TDM DB.    
 
 ## Optional — Adding Parameters to a Logical Unit
 
-- Add the LU's parameters to the **LuParamsMapping** MTable (located under References in the Project tree).
+- Add the LU parameters to the **LuParamsMapping** MTable (located under the *References* section of the Project tree).
 
 - The **LuParamsMapping** has the following fields:
 
@@ -27,7 +27,7 @@
 
   - lu_table_field
 
-  - description — this field is optional.  It enables to add a short description to the business parameters.  The description will be displayed in the task when hovering over a parameter, which would help the user to select business parameters for entity sub-setting in the task. 
+  - description — this optional field allows adding a short description to the business parameters. The description is displayed in the task when hovering over a parameter, which helps users select business parameters for entity sub-setting. 
 
 - Each parameter must be mapped to an LU table's field. The parameter name does not have to be identical to the lu_table_field.
 
