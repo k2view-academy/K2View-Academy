@@ -10,7 +10,7 @@
 ### FK Creation on the TDM DB
   - By default, the TDM process runs the MDB_EXPORT command in a mode that creates physical FKs in the TDM DB for the child tables. For example, the Subscriber table is linked to the Customer table by the customer_id field. The MDB_EXPORT command creates an FK on the Subscriber.customer_id field. Verify that the linked fields are defined as either PKs or unique indexes in the parent LU table, and that **all
  parent** LU table's **PK/unique index fields** are linked to the child LU table as a way to enable the creation of an FK in the child table.
- -  However, sometimes the parent-child tables are not linked by a parent's unique field. As an example, the Subscriber table has a PK on the combination of subscriber_id and contact_id fields, but only the latter is linked to the Contact table. Accordingly, to facilitates such cases, TDM 9.3.1 has added a new mode to support schema export without FK creations:
+ -  However, sometimes the parent-child tables are not linked by a parent's unique field. As an example, the Subscriber table has a PK on the combination of subscriber_id and contact_id fields, but only the latter is linked to the Contact table. Accordingly, to facilitate such cases, TDM 9.3.1 has added a new mode to support schema export without FK creations:
     - A new **CREATE_PHYSICAL_FK_IN_MDB_EXPORT_SCHEMA** Global has been added. When set to **false** (the default is **true**), it prevents FK creations on the LU's export.    
 
 ## Optional - Adding Parameters to a Logical Unit
@@ -31,7 +31,7 @@
 
 - Each parameter must be mapped to an LU table's field. The parameter name does not have to be identical to the lu_table_field.
 
-- If you have calculated parameters such as number of open cases or total open debt, add an LU table that contains these parameters. Add the new table with the calculated parameters to [TDMFilterOutTargetTables](11_tdm_implementation_using_generic_flows.md#step-1---define-tables-to-be-filtered-out) Actor in order to exclude these tables from the load, delete, and from the data generation flows creation.
+- If you have calculated parameters such as the number of open cases or total open debt, add an LU table that contains these parameters. Add the new table with the calculated parameters to [TDMFilterOutTargetTables](05b_filter_out_lu_tables.md) Actor in order to exclude these tables from the load, delete, and from the data generation flows creation.
 
 - Verify that all LU tables in the LuParamsMapping are linked to parent tables. This is required in order to add an FK to tables when they are exported to the TDM DB.
 - Notes:
@@ -80,7 +80,7 @@ Click [here](/articles/TDM/tdm_gui/14e_task_source_ai_based_generation.md) for m
 
 **Notes:**
 
-- Despite the fact that parameters do not need to be defined for an LU, the LU_PARAMS table must be added to the LU Schema for creating the `<LU Name>_params` table in the TDM DB. The `<LU Name>_params` table is required by both methods of entity selection in a TDM task: [Parameters](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#parameters) and [Random Selection](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#random-selection).
+- Despite the fact that parameters do not need to be defined for an LU, the LU_PARAMS table must be added to the LU Schema for creating the `<LU Name>_params` table in the TDM DB. The `<LU Name>_params` table is required by both methods of entity selection in a TDM task: [Business parameters](/articles/TDM/tdm_gui/15a_entity_subset.md#business-parameters) and [Random Selection](/articles/TDM/tdm_gui/15a_entity_subset.md#random).
 - Do not include spaces or special characters in parameter names.
 - The PARAMS_JSON field of the LU_PARAMS table contains the list of LU parameters and their values to enable the debugging of a given entity.
 - Click [here](/articles/TDM/tdm_architecture/07_tdm_parameters_handling.md) for more information about handling of parameters.
