@@ -1,4 +1,4 @@
-# TDM Parameters - Parameters Coupling - Implementation Guidelines
+# TDM Parameters — Parameters Coupling — Implementation Guidelines
 
 ## LU Schema
 
@@ -13,7 +13,7 @@
  -  However, sometimes the parent-child tables are not linked by a parent's unique field. As an example, the Subscriber table has a PK on the combination of subscriber_id and contact_id fields, but only the latter is linked to the Contact table. Accordingly, to facilitate such cases, TDM 9.3.1 has added a new mode to support schema export without FK creations:
     - A new **CREATE_PHYSICAL_FK_IN_MDB_EXPORT_SCHEMA** Global has been added. When set to **false** (the default is **true**), it prevents FK creations on the LU's export.    
 
-## Optional - Adding Parameters to a Logical Unit
+## Optional — Adding Parameters to a Logical Unit
 
 - Add the LU's parameters to the **LuParamsMapping** MTable (located under References in the Project tree).
 
@@ -27,7 +27,7 @@
 
   - lu_table_field
 
-  - description -  this field is optional.  It enables to add a short description to the business parameters.  The description will be displayed in the task when hovering over a parameter, which would help the user to select business parameters for entity sub-setting in the task. 
+  - description — this field is optional.  It enables to add a short description to the business parameters.  The description will be displayed in the task when hovering over a parameter, which would help the user to select business parameters for entity sub-setting in the task. 
 
 - Each parameter must be mapped to an LU table's field. The parameter name does not have to be identical to the lu_table_field.
 
@@ -46,9 +46,9 @@
 
 The TDM extract task execution exports LU tables to the TDM DB. A dedicated schema is created for each LU. An FK is created for each parent/child link between tables. The following tables are exported into the TDM DB:
 
-- FABRIC_TDM_ROOT - the entire table is exported.
-- TDM_BE_IIDS - the entire table is exported.
-- The LU tables in LuParamsMapping MTable - only the parameter fields and the linked fields to the parent or child LU tables are exported.
+- FABRIC_TDM_ROOT — the entire table is exported.
+- TDM_BE_IIDS — the entire table is exported.
+- The LU tables in LuParamsMapping MTable — only the parameter fields and the linked fields to the parent or child LU tables are exported.
 - PK and FK fields are exported.  
   - Example:
     - FABRIC_TDM_ROOT -> Customer -> Address
@@ -56,8 +56,8 @@ The TDM extract task execution exports LU tables to the TDM DB. A dedicated sche
     - Address is linked to Customer via the customer_id,
     - Address.state is mapped as a parameter. 
     - All 3 tables are exported. 
-    - Customer table - the customer_id is exported.
-    - Address table - the customer_id, address_id, and state fields are exported.
+    - Customer table — the customer_id is exported.
+    - Address table — the customer_id, address_id, and state fields are exported.
 
 - The exported tables are used for the following:
   - Getting the number of matching entities for the selected parameters of the task.
@@ -72,9 +72,9 @@ This table is used for getting the list of available parameters and their valid 
 
 ### AI-based Generation
 
-The AI-based generated entities are not 'synced' from a data source. The AI process generates entities, and TDM imports the generated entities to Fabric. A post TDM process exports the parameter tables of the imported entities, enabling a selection of these entities based on parameters.
+The AI-based generated entities are not synchronized from a data source. Instead, the AI process generates entities, which TDM then imports into Fabric. Afterwards, a post-TDM process updates the parameter tables for these imported entities, enabling their selection based on parameters.
 
-Click [here](/articles/TDM/tdm_gui/14e_task_source_ai_based_generation.md) for more information about the AI-based generation.
+Click [here](/articles/TDM/tdm_gui/14e_task_source_ai_based_generation.md) for more information about AI-based generation.
 
 
 
