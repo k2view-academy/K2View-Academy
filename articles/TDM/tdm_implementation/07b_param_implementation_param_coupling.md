@@ -5,7 +5,7 @@
 - Verify that the LU_PARAMS table is attached to the LU schema.
 - Verify that the TDM_BE_IIDS table is attached to the LU Schema. This table is mandatory for the parameters coupling mode and is used for joining multiple LU schemas when a task contains parameters of multiple LUs.
 - Verify that the **FABRIC_TDM_ROOT** table has a PK on the **iid** field. This PK is required in order to export the LU schema tables into the TDM DB. The parameters selection query runs on the exported tables.
-- Verify that the **linked fields** in the LU tables have **identical data types**. This is required in order to support the [MDB export](/articles/02_fabric_architecture/04_fabric_commands.md#mdb-export--import) of the LU schema into the TDM DB.
+- Verify that the **linked fields** in the LU tables have **identical data types**. This is required for supporting the [MDB export](/articles/02_fabric_architecture/04_fabric_commands.md#mdb-export--import) of the LU schema into the TDM DB.
 
 ### FK Creation on the TDM DB
   - By default, the TDM process runs the MDB_EXPORT command in a mode that creates physical FKs in the TDM DB for the child tables. For example, the Subscriber table is linked to the Customer table by the customer_id field. The MDB_EXPORT command creates an FK on the Subscriber.customer_id field. Verify that the linked fields are defined as either PKs or unique indexes in the parent LU table, and that **all
