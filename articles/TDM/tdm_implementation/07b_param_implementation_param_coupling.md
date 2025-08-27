@@ -70,7 +70,7 @@ Moreover, the TDM task execution process populates the [tdm_params_distinct_valu
 
 This table is used for getting the list of available parameters and their valid values in the task.
 
-### AI-based Generation
+### AI-based Entity Generation
 
 The AI-based generated entities are not synchronized from a data source. Instead, the AI process generates entities, which TDM then imports into Fabric. Afterwards, a post-TDM process updates the parameter tables for these imported entities, enabling their selection based on parameters.
 
