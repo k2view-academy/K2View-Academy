@@ -7,13 +7,13 @@ The **TDM** subfolder in the Broadway Shared Objects folder includes generic flo
 
 ## TDM Templates
 
-The TDM library contains templates and generic flows that can be used for creating a TDM implementation based on a project's data model. The templates are built using the Fabric [Templates](/articles/35_templates/01_templates_overview.md) functionality, which enables creating different project objects based on a predefined structure. The **Templates** folder holds the flows used for creating delete, load, Sequence,  and data generation flows. 
+The TDM library contains templates and generic flows that can be used for creating a TDM implementation based on a project's data model. These templates are built using the Fabric [Templates](/articles/35_templates/01_templates_overview.md) functionality, which enables the creation of different project objects according to a predefined structure. The templates are used for creating delete, load, Sequence, and data generation flows. 
 
 ### K2exchange Connectors
 
-A [k2exchange connector](/articles/04_fabric_studio/28_web_k2exchange.md) can have its own TDM templates. The connector's installation also imports the related TDM templates into the TDM project.  The connector's templates are imported into a sub-folder under the *Implementation/SharedObjects/Templates* folder. For example: the MongoDB connector's templates are imported into *Implementation/SharedObjects/Templates/MongoDB* folder.
+A [k2exchange connector](/articles/04_fabric_studio/28_web_k2exchange.md) can have its own TDM templates. The connector installation also imports the related TDM templates into the TDM project. The connector's templates are imported into a subfolder under the *Implementation/SharedObjects/Templates* folder. For example, the MongoDB connector's templates are imported into the *Implementation/SharedObjects/Templates/MongoDB* folder.
 
-The [TDMLuInitBasedOnFabric flow](05_tdm_lu_implementation_general.md#ii-adding-the-tdm-setup-to-the-lu) checks the LU schema's source interface, and uses the connector's templates if exist.  
+The [TDMLuInitBasedOnFabric flow](05_tdm_lu_implementation_general.md#ii-adding-the-tdm-setup-to-the-lu) checks the LU schema's source interface and uses the connector's templates if they exist.  
 
 ## TDM Entity Orchestration Flows
 
