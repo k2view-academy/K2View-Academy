@@ -44,11 +44,11 @@
 
 ### Exporting LU Tables into the TDM DB
 
-The TDM extract task execution exports LU tables into the TDM DB. A dedicated schema is created for each LU and an FK is created for each parent/child link between tables. The following tables are exported into the TDM DB:
+The TDM extract task execution exports LU tables into the TDM DB. A dedicated schema is created for each LU and an FK is created for each parent-child link between tables. The following tables are exported into the TDM DB:
 
 - FABRIC_TDM_ROOT — the entire table is exported.
 - TDM_BE_IIDS — the entire table is exported.
-- The LU tables in LuParamsMapping MTable — only the parameter fields and the linked fields to the parent or child LU tables are exported.
+- LU tables in LuParamsMapping MTable — only the parameter fields and the fields linked to the parent or child LU tables are exported.
 - PK and FK fields are exported.  
   - Example:
     - FABRIC_TDM_ROOT -> Customer -> Address
