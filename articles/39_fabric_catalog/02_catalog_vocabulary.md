@@ -139,11 +139,9 @@ The **Defined By** property is a mandatory property for every Catalog field. It 
 </tr>
 <tr>
 <td><strong>Object</strong></td>
-<td style="text-align: center;">&lt;name&gt;Class</td>
+<td style="text-align: center;">&lt;name&gt;</td>
 <td>
 <p>When a field includes a complex structure (e.g. XML), it is defined in Catalog by a class.&nbsp;</p>
-<p>The class name is then established as concatination of the original field's name and the word 'Class'.</p>
-<p>For example, when a dataset field Resume is identified as a complex field, it is defined by <strong>ResumeClass</strong>.</p>
 </td>
 </tr>
 <tr>
