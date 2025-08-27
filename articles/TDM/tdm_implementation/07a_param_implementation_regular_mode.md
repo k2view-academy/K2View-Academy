@@ -121,7 +121,7 @@ Parameter tables are used for:
 - Creating the entity list when the task's selection method is based on parameters.
 - Creating the entity list when entities are randomly selected from the `<LU>_params` table of the task's root LU.  
 
-### AI-based Generation
+### AI-based Entity Generation
 
 The AI-based generated entities are not synchronized from a data source. Instead, the AI process generates entities, which TDM then imports into Fabric. Afterwards, a post-TDM process updates the parameter tables for these imported entities, enabling their selection based on parameters.
 
