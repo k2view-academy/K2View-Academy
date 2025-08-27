@@ -59,10 +59,10 @@ The TDM extract task execution exports LU tables into the TDM DB. A dedicated sc
     - Customer table — the customer_id is exported.
     - Address table — the customer_id, address_id, and state fields are exported.
 
-- The exported tables are used for the following:
+- The exported tables are used for:
   - Getting the number of matching entities for the selected parameters of the task.
-  - Creating the entity list for the task if the task's selection method is based on parameters.
-  - Creating the entity list for the task if a random selection of entities is used.  
+  - Creating the entity list for the task when the task's selection method is based on parameters.
+  - Creating the entity list for the task when entities are randomly selected.  
 
 ### TDM_PARAMS_DISTINCT_VALUES
 
