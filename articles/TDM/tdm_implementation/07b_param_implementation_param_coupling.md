@@ -50,17 +50,17 @@ The TDM extract task execution exports LU tables into the TDM DB. A dedicated sc
 - TDM_BE_IIDS — the entire table is exported.
 - LU tables in LuParamsMapping MTable — only the parameter fields and the fields linked to the parent or child LU tables are exported.
 - PK and FK fields are exported.  
-  - Example:
+  - Example scenario:
     - FABRIC_TDM_ROOT -> Customer -> Address
     - Customer is linked to FABRIC_TDM_ROOT via the customer_id.
-    - Address is linked to Customer via the customer_id,
+    - Address is linked to Customer via the customer_id.
     - Address.state is mapped as a parameter. 
     - All 3 tables are exported. 
     - Customer table — the customer_id is exported.
     - Address table — the customer_id, address_id, and state fields are exported.
 
 - The exported tables are used for:
-  - Getting the number of matching entities for the selected parameters of the task.
+  - Checking the number of matching entities for the selected parameters of the task.
   - Creating the entity list for the task when the task's selection method is based on parameters.
   - Creating the entity list for the task when entities are randomly selected.  
 
@@ -80,7 +80,7 @@ Click [here](/articles/TDM/tdm_gui/14e_task_source_ai_based_generation.md) for m
 
 **Notes:**
 
-- Despite the fact that parameters do not need to be defined for an LU, the LU_PARAMS table must be added to the LU Schema for creating the `<LU Name>_params` table in the TDM DB. The `<LU Name>_params` table is required by both methods of entity selection in a TDM task: [Business parameters](/articles/TDM/tdm_gui/15a_entity_subset.md#business-parameters) and [Random Selection](/articles/TDM/tdm_gui/15a_entity_subset.md#random).
+- Even if parameters do not need to be defined for an LU, the LU_PARAMS table must be added to the LU Schema to create the `<LU Name>_params` table in the TDM DB. The `<LU Name>_params` table is required for both entity selection methods in a TDM task: [Business parameters](/articles/TDM/tdm_gui/15a_entity_subset.md#business-parameters) and [Random selection](/articles/TDM/tdm_gui/15a_entity_subset.md#random).
 - Do not include spaces or special characters in parameter names.
-- The PARAMS_JSON field of the LU_PARAMS table contains the list of LU parameters and their values to enable the debugging of a given entity.
-- Click [here](/articles/TDM/tdm_architecture/07_tdm_parameters_handling.md) for more information about handling of parameters.
+- The PARAMS_JSON field of the LU_PARAMS table contains the list of LU parameters and their values that can be used for debugging a given entity.
+- Click [here](/articles/TDM/tdm_architecture/07_tdm_parameters_handling.md) for more information about parameter handling.
