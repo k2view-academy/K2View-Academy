@@ -139,7 +139,7 @@ The **Defined By** property is a mandatory property for every Catalog field. It 
 </tr>
 <tr>
 <td><strong>Object</strong></td>
-<td style="text-align: center;">&lt;name&gt;</td>
+<td>&lt;name&gt;</td>
 <td>
 <p>When a field includes a complex structure (e.g. XML), it is defined in Catalog by a class.&nbsp;</p>
 </td>
