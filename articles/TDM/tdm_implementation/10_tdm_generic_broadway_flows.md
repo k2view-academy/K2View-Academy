@@ -17,7 +17,7 @@ The [TDMLuInitBasedOnFabric flow](05_tdm_lu_implementation_general.md#ii-adding-
 
 ## TDM Entity Orchestration Flows
 
-The TDM orchestration flows manage the execution on each task's entity. The following orchestration flows are executed by the [TDM execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md#main-tdm-task-execution-process-tdmexecutetask-job) on each task's entity:
+TDM orchestration flows manage the execution on each task's entity. The following orchestration flows are executed by the [TDM execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md#main-tdm-task-execution-process-tdmexecutetask-job) on each task's entity:
 
 - **TDMOrchestrator** — this flow runs on every LU instance of a [load and/or delete task](/articles/TDM/tdm_gui/14_task_overview.md#task-types)  execution. It encapsulates all Broadway flows of the TDM task into a single flow. It includes the invocation of all steps such as initiation activities, running the delete and/or load flows, [error handling and statistics gathering](12_tdm_error_handling_and_statistics.md). All the activities on the LUI are included one transaction, except the *get LUI* from Fabric. The get LUI in excluded from the transaction to support an entity clone, as all replicas work on **one** single LUI. Fabric cannot open parallel transactions on the same LUI and therefore needs to be excluded from the delete and load Broadway transaction in order to have better parallelism when processing the entity’s replicas.
 
