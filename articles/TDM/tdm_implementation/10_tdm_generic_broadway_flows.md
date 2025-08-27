@@ -7,7 +7,7 @@ The **TDM** folder in the Broadway Shared Objects folder includes generic flows 
 
 ## TDM Templates
 
-The TDM library holds templates and generic flows that can be used to create a TDM implementation based on a project's data model. The templates are built using the Fabric [Templates](/articles/35_templates/01_templates_overview.md) functionality, which enables creating different project objects based on a predefined structure. The **Templates** folder holds the flows used for creating delete, load, Sequence,  and data generation flows. 
+The TDM library contains templates and generic flows that can be used for creating a TDM implementation based on a project's data model. The templates are built using the Fabric [Templates](/articles/35_templates/01_templates_overview.md) functionality, which enables creating different project objects based on a predefined structure. The **Templates** folder holds the flows used for creating delete, load, Sequence,  and data generation flows. 
 
 ### K2exchange Connectors
 
