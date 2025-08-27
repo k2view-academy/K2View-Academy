@@ -150,7 +150,7 @@ The **Defined By** property is a mandatory property for every Catalog field. It 
 <p>One of the following:</p>
 <ul>
 <li>Collection (primitive type)</li>
-<li>Collection(&lt;name&gt;Class)</li>
+<li>Collection(&lt;name&gt;)</li>
 </ul>
 </td>
 <td>
