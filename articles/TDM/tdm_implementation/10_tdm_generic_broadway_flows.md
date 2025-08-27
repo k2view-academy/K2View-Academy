@@ -1,7 +1,7 @@
 # TDM — Generic Broadway Flows and Templates
 
 
-The Fabric TDM library includes built-in generic Broadway flows that can easily be adapted for the TDM of each specific data model. This article describes the generic flows available in a project following the import of the [TDM Library](04_fabric_tdm_library.md). 
+The Fabric TDM library includes built-in generic Broadway flows that can easily be adapted for the TDM of each specific data model. This article describes the generic flows available in a project after importing the [TDM Library](04_fabric_tdm_library.md). 
 
 The **TDM** folder in the Broadway Shared Objects folder includes generic flows and templates for the task execution activities. These flows run as they are and they do not require a manual update by the implementor.
 
