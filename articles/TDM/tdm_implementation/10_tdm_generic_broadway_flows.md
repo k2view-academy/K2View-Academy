@@ -44,17 +44,17 @@ The **InitiateTDMLoad.flow** is performed as the first step of the **TDMOrchestr
 
 The TDM library includes a set of flows that handle tables.
 
-[Click here to learn more about TDM Tables Implementation](09_tdm_reference_implementation.md).
+[Click here to learn more about TDM — Table Implementation](09_tdm_reference_implementation.md).
 
 ## LU — Load and Delete Flows
 
-The load and delete flows are created for each LU by the [TDMLuInitBasedOnFabric flow](05_tdm_lu_implementation_general.md#ii-adding-the-tdm-setup-to-the-lu) execution based on the TDM templates and the LU structure.
+The load and delete flows are created for each LU by the [TDMLuInitBasedOnFabric flow](05_tdm_lu_implementation_general.md#ii-adding-the-tdm-setup-to-the-lu) execution, based on the TDM templates and the LU structure.
 
 By default, the following flows are created:
 
 - DeleteFromTarget — runs all the delete flows. The execution order is defined based on the LU structure.
 - LoadToTarget — runs all the load flows. The execution order is defined based on the LU structure.
-- A separate delete and load flows are created for each LU table except the ones that are [excluded (filtered out)](05b_filter_out_lu_tables.md) from the load and delete flows' creation.
+- Separate delete and load flows are created for each LU table, except the ones that are [excluded (filtered out)](05b_filter_out_lu_tables.md) from the load and delete flows' creation.
 
 ### Delete and Load Flows for Complex Documents
 
