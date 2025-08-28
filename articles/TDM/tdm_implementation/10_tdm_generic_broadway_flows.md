@@ -65,7 +65,7 @@ By default, the following flows are created:
 - **Load flow**: a single load flow runs the following activities:
 
   - Assembles the complex document structure based on the LU tables, using the **DocumentAssemble** Actor. 
-  - Runs the **CatalogMaskingMapper** Actor to execute the Catalog-based masking and sequence replacement on the assembled document.  
+  - Runs the **CatalogMaskingMapper** Actor to apply Catalog-based masking and sequence replacement on the assembled document.  
   - Loads the entire masked document into the target environment.
 
   See an example of a load flow for an LU based on MongoDB connector:
@@ -78,7 +78,7 @@ Click [here](/articles/03_logical_units/22_native_support_for_NoSQL.md) for more
 
 ## Error Handling and Statistics
 
-The TDM library offers a generic error handling and statistics gathering mechanism based on Broadway capabilities that are tailored for TDM business requirements. 
+The TDM library offers a generic error handling and statistics gathering mechanism, which uses Broadway capabilities that are tailored for TDM business requirements. 
 
 [Click here to learn more about TDM error handling and statistics flows](12_tdm_error_handling_and_statistics.md).
 
