@@ -34,11 +34,11 @@ TDM orchestration flows manage the execution on each task's entity. The followin
 TDM task initialization is performed using the **InitiateTDMLoad** flow, which includes several steps such as:
 
 * Setting the values of global variables on a session level and setting a sync mode.
-* Setting the source environment based on the task's source before getting the LUI.
+* Setting the source environment based on the task's source prior to getting the LUI.
 * Getting the LUI from Fabric.
-* Setting the target environment as a preparation step for Delete and Load.
+* Setting the target environment as a preparation step for delete and load activities.
 
-The **InitiateTDMLoad.flow** is performed as the 1st step of the **TDMOrchestrator** task's flow.
+The **InitiateTDMLoad.flow** is performed as the first step of the **TDMOrchestrator** flow.
 
 ## Table-level Flows
 
@@ -62,7 +62,7 @@ By default, the following flows are created:
 
   ![mongo-delete](images/mongodb_delete_flow.png)
 
-- **Load flow**:  a single load flow runs the following activities:
+- **Load flow**: a single load flow runs the following activities:
 
   - Assembles the complex document structure based on the LU tables. The assemblement is done using the **DocumentAssemble** Actor. 
   - Runs the **CatalogMaskingMapper** Actor to execute the Catalog-based masking and sequence replacement on the assembled document.  
