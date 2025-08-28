@@ -1,4 +1,4 @@
-# TDM - Tables Implementation
+# TDM - Table Implementation
 
 TDM enables the user to provision tables in a TDM task. To do that, the user can select 1 of the following 2 options:
 
