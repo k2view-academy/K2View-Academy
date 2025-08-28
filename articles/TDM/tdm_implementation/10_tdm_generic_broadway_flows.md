@@ -86,7 +86,7 @@ The TDM library offers a generic error handling and statistics gathering mechani
 
 New templates, flows and Actors have been added in TDM V8.0 to support synthetic data generation of entities.
 
-Click [here](16_tdm_data_generation_implementation.md) to learn more about TDM data generation implementation.
+Click [here](16_tdm_data_generation_implementation.md) to learn more about implementing TDM data generation.
 
 
 
