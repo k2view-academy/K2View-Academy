@@ -11,7 +11,7 @@ The TDM library contains templates and generic flows that can be used for creati
 
 ### K2exchange Connectors
 
-A [k2exchange connector](/articles/04_fabric_studio/28_web_k2exchange.md) can have its own TDM templates. The connector installation also imports the related TDM templates into the TDM project. The connector's templates are imported into a subfolder under the *Implementation/SharedObjects/Templates* folder. For example, the MongoDB connector's templates are imported into the *Implementation/SharedObjects/Templates/MongoDB* folder.
+A [K2exchange connector](/articles/04_fabric_studio/28_web_k2exchange.md) can have its own TDM templates. The connector installation also imports the related TDM templates into the TDM project. The connector's templates are imported into a subfolder under the *Implementation/SharedObjects/Templates* folder. For example, the MongoDB connector's templates are imported into the *Implementation/SharedObjects/Templates/MongoDB* folder.
 
 The [TDMLuInitBasedOnFabric flow](05_tdm_lu_implementation_general.md#ii-adding-the-tdm-setup-to-the-lu) checks the LU schema's source interface and uses the connector's templates if they exist.  
 
