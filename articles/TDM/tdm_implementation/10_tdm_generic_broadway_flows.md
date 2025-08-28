@@ -74,7 +74,7 @@ By default, the following flows are created:
 
   
 
-Click [here](/articles/03_logical_units/22_native_support_for_NoSQL.md) for more information about how Fabric handle complex documents. 
+Click [here](/articles/03_logical_units/22_native_support_for_NoSQL.md) for more information about how Fabric handles complex documents. 
 
 ## Error Handling and Statistics
 
@@ -84,7 +84,7 @@ The TDM library offers a generic error handling and statistics gathering mechani
 
 ## Data Generation Flow
 
-New templates, flows and Actors have been added in TDM 8.0 to support a synthetic data generation of entities.
+New templates, flows and Actors have been added in TDM V8.0 to support a synthetic data generation of entities.
 
 Click [here](16_tdm_data_generation_implementation.md) to learn more about TDM data generation implementation.
 
