@@ -58,15 +58,15 @@ By default, the following flows are created:
 
 ### Delete and Load Flows for Complex Documents
 
-- **Delete flow**:  a single delete flow now deletes the document from the target environment. See an example of a delete flow for an LU based on MongoDB connector:
+- **Delete flow**: a single delete flow now deletes the document from the target environment. See an example of a delete flow for an LU based on MongoDB connector:
 
   ![mongo-delete](images/mongodb_delete_flow.png)
 
 - **Load flow**: a single load flow runs the following activities:
 
-  - Assembles the complex document structure based on the LU tables. The assemblement is done using the **DocumentAssemble** Actor. 
+  - Assembles the complex document structure based on the LU tables, using the **DocumentAssemble** Actor. 
   - Runs the **CatalogMaskingMapper** Actor to execute the Catalog-based masking and sequence replacement on the assembled document.  
-  - Loads the entire masked document to the target environment.
+  - Loads the entire masked document into the target environment.
 
   See an example of a load flow for an LU based on MongoDB connector:
 
