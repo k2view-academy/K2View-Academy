@@ -146,6 +146,8 @@ Before you install Fabric Web Studio 2.1, please have a look at the following sy
 
 ### Host Machine Requirements
 
+Please refer to the [Installation System Requirements topic.](/articles/98_installation_and_upgrade/Hardware_Linux_Docker/04_hardware_req_for_studio.md#fabric-web-studio-requirements)
+
 - **Architecture**: AMD64 (x86-64) architecture is required.  
   > ARM-based processors are not directly supported. Certain operating systems provide AMD64 emulation capabilities for their ARM-based processors.
 
