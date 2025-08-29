@@ -4,7 +4,7 @@
 
 1. [About K2view Fabric Web Studio 2.1](#about-k2view-fabric-web-studio-21)
 2. [Previous Versions](#previous-versions)
-2. [What’s New in Version 2.1](#whats-new-in-version-21)
+2. [What’s New in Version 2.1](#whats-new-in-fabric-web-studio-for-docker-compose-or-podman-version-21)   
 3. [Supported Deployment Runtimes](#supported-deployment-runtimes)
     - [Docker Compose Runtime](#docker-compose-runtime)
     - [Podman Compose Runtime](#podman-compose-runtime)
