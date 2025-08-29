@@ -4,7 +4,7 @@
 
   - [Introduction](#introduction)
   - [Execution Server Specifications](#execution-server-specifications)
-  - [Minimum System Configuration for a Single-node Server](#minimum-system-configuration-for-a-single-node-server)
+  - [Recommended System Configuration for a Single-node Server](recommended-system-configuration-for-a-single-node-server)
     - [Software Requirements](#software-requirements)
       - [Operating system](#operating-system)
     - [Hardware Requirements](#hardware-requirements)
@@ -25,12 +25,14 @@ The Fabric server installation is a Linux-based solution.
 
 For proof-of-concept installations, we recommend single-node configurations with physical memory requirements varying based on the anticipated use of the node - either for Fabric or Fabric Studio. For system requirements for Fabric Studio, please refer to <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/04_hardware_req_for_studio.md">Fabric Studio - Web and .Net Studio - Installation System Requirements</a>. 
 
-### Operating system: 
+### Software Requirements 
+
+#### Operating system: 
 
 * RedHat (version 7 or higher) based distribution (for example: Centos, Oracle, Linux).   
 * Ubuntu Server, version 18.04 or higher. 
 
-### Hardware Requirements:
+### Hardware Requirements
 
 <table>
 <tbody>
