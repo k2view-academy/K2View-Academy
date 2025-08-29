@@ -5,7 +5,7 @@
 
   - [About Fabric Studio](#about-fabric-studio)
   - [Fabric Web Studio Requirements](#fabric-web-studio-requirements)
-    - [Recommended Environment Sizinn](#recommended-environment-sizing)
+    - [Recommended Environment Sizing](#recommended-environment-sizing)
     - [Installation Options](#installation-options)
   - [Fabric .Net Studio Requirements](#fabric-net-studio-requirements)
     - [Minimum System Configuration](#minimum-system-configuration)
@@ -40,18 +40,40 @@ Fabric .Net Studio is the earlier version of Studio, designed primarily for Wind
 
 Fabric Web Studio is designed for flexible deployment across Windows, macOS, and Linux using Docker Compose or Podman, and is also available natively in K2cloud. To ensure a smooth experience, we recommend starting with the <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/00_hardware_requirements_for_POV.md">Proof of Value (POV) environment sizing</a>. This configuration is optimized for evaluation, development, and smaller-scale projects, while still providing the resources needed to explore Fabric’s full capabilities.
 
+
 Fabric Web Studio supports the creation of multiple spaces, allowing multiple users to share a single environment for dedicated purposes. The number of concurrent running spaces will dictate the amount of RAM required on the host. You should allocate 4-8 MB of RAM per space, depending on your project needs. A K2view representative can help you with the sizing. 
+
 
 ### Recommended Environment Sizing
 
 The following baseline resources are recommended for deploying Fabric Web Studio in a POV environment:
 
-  - CPU: 8 cores
-  - Memory: 32 GB RAM
-  - Storage: 200 GB SSD or NVMe (high IOPS recommended)
-  - Host OS: Windows, macOS, or Linux
-  - Container Runtime: Docker Compose v2.x or Podman
-  - Browser: Any modern browser (Chrome, Edge, or Firefox)
+<table>
+  <tr>
+    <td>CPU</td>
+    <td>8 cores</td>
+  </tr>
+  <tr>
+    <td>Memory</td>
+    <td>32 GB RAM</td>
+  </tr>
+  <tr>
+    <td>Storage</td>
+    <td>200 GB SSD or NVMe (high IOPS recommended)</td>
+  </tr>
+  <tr>
+    <td>Host OS</td>
+    <td>Windows, macOS, or Linux</td>
+  </tr>
+  <tr>
+    <td>Container Runtime</td>
+    <td>Docker Compose or Podman</td>
+  </tr>
+  <tr>
+    <td>Browser</td>
+    <td>Any modern browser (Chrome, Edge, or Firefox)</td>
+  </tr>
+</table>
 
 Tip: This sizing is intended for POV and initial development environments. For production-scale deployments, resource allocation should be adjusted based on workload size, number of Spaces, and concurrency requirements.
 
