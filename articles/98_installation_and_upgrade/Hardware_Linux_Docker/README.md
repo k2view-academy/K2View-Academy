@@ -18,7 +18,7 @@
   </li>
   <li>
     <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/04_hardware_req_for_studio.md">
-      Fabric Studio - Web and .Net Studio - Installation System Requirements
+      Fabric Studio Installation System Requirements
     </a>
   </li>
 </ul>
