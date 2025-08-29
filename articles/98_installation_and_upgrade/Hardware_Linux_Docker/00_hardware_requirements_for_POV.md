@@ -9,34 +9,26 @@
       - [Operating system](#operating-system)
     - [Hardware Requirements](#hardware-requirements)
     - [Running on Cloud Environment - Recommendations](#running-on-cloud-environment---recommendations)
-  - [Fabric Studio Requirements](#fabric-studio-requirements)
-    - [Minimum System Configuration](#minimum-system-configuration)
-    - [Windows Ports](#windows-ports)
-    - [Windows Permissions](#windows-permissions)
-    - [Recommended Software](#recommended-software)
-    - [Linux Servers Ports](#linux-servers-ports)
-    - [Connectivity](#connectivity)
+
 
 ## Introduction
  
-* This document provides information regarding the hardware, software and the operating system requirements for Fabric and TDM proof-of-concept installations.
-* TDM installation is based on Fabric with the additions of TDM library and PostgreSQL installation.
+This document provides information regarding the hardware, software, and operating system requirements for Fabric and TDM proof-of-concept installations.
+
+TDM installation is based on Fabric with the additions of the TDM library and PostgreSQL installation.
 
 ## Execution Server Specifications 
 
-The Fabric server installation is a Linux-based Solution.
-We Provide installation guide for both native Linux and Docker Environment (based on Docker Compose).
+The Fabric server installation is a Linux-based solution. 
 
-## Minimum System Configuration for a Single-node Server
+## Recommended System Configuration for a Single-node Server
 
-### Software Requirements:
+For proof-of-concept installations, we recommend single-node configurations with physical memory requirements varying based on the anticipated use of the node - either for Fabric or Fabric Studio. For system requirements for Fabric Studio, please refer to <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/04_hardware_req_for_studio.md">Fabric Studio - .Net and Web Studio</a>. 
 
 ### Operating system: 
 
 * RedHat (version 7 or higher) based distribution (for example: Centos, Oracle, Linux).   
 * Ubuntu Server, version 18.04 or higher. 
-
-For docker installation, the latest **Docker Engine** and **Docker Compose** installations are recommended.
 
 ### Hardware Requirements:
 
@@ -94,8 +86,6 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 ### Running on Cloud Environment - Recommendations
 
 
-
-
 <table style="width: 900px; border-style: solid;" border="1">
 <tbody>
 <tr style="height: 46px;">
@@ -132,206 +122,3 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 </tr>
 </tbody>
 </table>
-
-
-## Fabric Studio Requirements:
-
-Fabric Studio is used to configure, manage and control the Fabric server operation and its installation is Windows-based.
-The application can be installed locally on either a workstation or a server with Terminal Services for RDP connection.
-
-### Minimum System Configuration
-
-<table>
-<tbody>
-<tr>
-<td style="width: 255.078px;">
-<p><strong>Operation System</strong></p>
-</td>
-<td style="width: 628.922px;">
-<p>Workstation: Windows 10 Professional 64 Bit or higher.</p>
-<p>Server: Windows server standard 2012 64 bit or higher.</p>
-</td>
-</tr>
-<tr>
-<td style="width: 255.078px;">
-<p><strong>Processors </strong></p>
-</td>
-<td style="width: 628.922px;">
-<p>Intel I3 quad-core 5<sup>th</sup> Gen or equivalent.</p>
-</td>
-</tr>
-<tr>
-<td style="width: 255.078px;">
-<p><strong>Physical Memory </strong><strong>(RAM)</strong></p>
-</td>
-<td style="width: 628.922px;">
-<p>16 GB RAM</p>
-</td>
-</tr>
-<tr>
-<td style="width: 255.078px;">
-<p><strong>Disk Space</strong></p>
-</td>
-<td style="width: 628.922px;">
-<p>100 GB available disk space.</p>
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-### Windows Ports
-
-The following ports should be open on the Windows server:
-* 3389 - used for RDP
-
-### Windows Permissions
-
-Local administrator privileges are needed for the Fabric Studio installation.
-
-### Recommended Software
-
-<table>
-<tbody>
-<tr>
-<td style="width: 179.391px;">
-<p><strong>Text/Code editor</strong></p>
-</td>
-<td style="width: 237.688px;">
-<p>Visual Studio Code / notepad++</p>
-</td>
-<td style="width: 460.922px;">
-<p><a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
-<p><a href="https://notepad-plus-plus.org/downloads/">https://notepad-plus-plus.org/downloads/</a></p>
-</td>
-</tr>
-<tr>
-<td style="width: 179.391px;">
-<p><strong>file archiver</strong></p>
-</td>
-<td style="width: 237.688px;">
-<p>7zip</p>
-</td>
-<td style="width: 460.922px;">
-<p><a href="https://7-zip.org/">https://7-zip.org/</a></p>
-</td>
-</tr>
-<tr>
-<td style="width: 179.391px;">
-<p><strong>FTP/SCP client</strong></p>
-</td>
-<td style="width: 237.688px;">
-<p>winSCP</p>
-</td>
-<td style="width: 460.922px;">
-<p><a href="https://winscp.net/eng/download.php">https://winscp.net/eng/download.php</a></p>
-</td>
-</tr>
-<tr>
-<td style="width: 179.391px;">
-<p><strong>SSH client</strong></p>
-</td>
-<td style="width: 237.688px;">
-<p>Putty</p>
-</td>
-<td style="width: 460.922px;">
-<p><a href="https://www.putty.org/">https://www.putty.org/</a></p>
-</td>
-</tr>
-<tr>
-<td style="width: 179.391px;">
-<p><strong>Git Shell</strong></p>
-</td>
-<td style="width: 237.688px;">
-<p>TortoiseGit</p>
-</td>
-<td style="width: 460.922px;">
-<p>https://tortoisegit.org/</p>
-</td>
-</tr>
-<tr>
-<td style="width: 179.391px;">
-<p><strong>Java IDE</strong></p>
-</td>
-<td style="width: 237.688px;">
-<p>Intellij IDE (community edition):</p>
-</td>
-<td style="width: 460.922px;">
-<p><a href="https://www.jetbrains.com/idea/download/#section=windows">https://www.jetbrains.com/idea/download/#section=windows</a></p>
-</td>
-</tr>
-</tbody>
-</table>
-
-### Linux Servers Ports
-
-Open the following ports on the Linux server and make sure they are accessible from Management stations.
-
-Depending on your setup, not all ports are required:
-
-<table>
-<tbody>
-<tr>
-<td style="width: 161.109px;">
-<p><strong>Ports Number</strong></p>
-</td>
-<td style="width: 249.891px;">
-<p><strong>Role</strong></p>
-</td>
-</tr>
-<tr>
-<td style="width: 161.109px;">
-<p>22</p>
-</td>
-<td style="width: 249.891px;">
-<p>SSH, SCP</p>
-</td>
-</tr>
-<tr>
-<td style="width: 161.109px;">
-<p>3213, 9443, 5124, 6379</p>
-</td>
-<td style="width: 249.891px;">
-<p>Fabric</p>
-</td>
-</tr>
-<tr>
-<td style="width: 161.109px;">
-<p>9042, 9142</p>
-</td>
-<td style="width: 249.891px;">
-<p>Cassandra</p>
-</td>
-</tr>
-<tr>
-<td style="width: 161.109px;">
-<p>9093, 7270</p>
-</td>
-<td style="width: 249.891px;">
-<p>Kafka</p>
-</td>
-</tr>
-<tr>
-<td style="width: 161.109px;">
-<p>3000, 9090</p>
-</td>
-<td style="width: 249.891px;">
-<p>Grafana stack</p>
-</td>
-</tr>
-<tr>
-<td style="width: 161.109px;">
-<p>5432</p>
-</td>
-<td style="width: 249.891px;">
-<p>PostgreSQL</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-
-
-### Connectivity
-
-Fabric server and Fabric Studio should have access (permissions) and connectivity (network) to all source & target systems.
