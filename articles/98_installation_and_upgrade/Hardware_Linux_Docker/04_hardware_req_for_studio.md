@@ -5,6 +5,8 @@
 
   - [About Fabric Studio](#about-fabric-studio)
   - [Fabric Web Studio Requirements](#fabric-web-studio-requirements)
+    - [Recommended Environment Sizinn](#recommended-environment-sizing)
+    - [Installation Options](#installation-options)
   - [Fabric .Net Studio Requirements](#fabric-net-studio-requirements)
     - [Minimum System Configuration](#minimum-system-configuration)
     - [Windows Ports](#windows-ports)
@@ -36,11 +38,11 @@ Fabric .Net Studio is the earlier version of Studio, designed primarily for Wind
 
 ## Fabric Web Studio Requirements:
 
-Fabric Web Studio is designed for flexible deployment across Windows, macOS, and Linux using Docker Compose or Podman, and is also available natively in K2cloud. To ensure a smooth experience, we recommend starting with the Proof of Value (POV) environment sizing. This configuration is optimized for evaluation, development, and smaller-scale projects, while still providing the resources needed to explore Fabric’s full capabilities.
+Fabric Web Studio is designed for flexible deployment across Windows, macOS, and Linux using Docker Compose or Podman, and is also available natively in K2cloud. To ensure a smooth experience, we recommend starting with the <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/00_hardware_requirements_for_POV.md">Proof of Value (POV) environment sizing</a>. This configuration is optimized for evaluation, development, and smaller-scale projects, while still providing the resources needed to explore Fabric’s full capabilities.
 
 Fabric Web Studio supports the creation of multiple spaces, allowing multiple users to share a single environment for dedicated purposes. The number of concurrent running spaces will dictate the amount of RAM required on the host. You should allocate 4-8 MB of RAM per space, depending on your project needs. A K2view representative can help you with the sizing. 
 
-### Recommended POV Environment Sizing
+### Recommended Environment Sizing
 
 The following baseline resources are recommended for deploying Fabric Web Studio in a POV environment:
 
