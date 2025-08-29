@@ -36,7 +36,7 @@ With Web Studio, organizations gain a more modern, flexible, and collaborative d
 Fabric .Net Studio is the earlier version of Studio, designed primarily for Windows environments. It provides a powerful IDE experience for Fabric developers, with system requirements detailed later in this topic. While it remains supported for customers with existing Windows-based workflows, new projects are encouraged to adopt Fabric Web Studio for its modern, containerized, and cloud-ready capabilities.
 
 
-## Fabric Web Studio Requirements:
+## Fabric Web Studio Requirements
 
 Fabric Web Studio is designed for flexible deployment across Windows, macOS, and Linux using Docker Compose or Podman, and is also available natively in K2cloud. To ensure a smooth experience, we recommend starting with the <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/00_hardware_requirements_for_POV.md">Proof of Value (POV) environment sizing</a>. This configuration is optimized for evaluation, development, and smaller-scale projects, while still providing the resources needed to explore Fabric’s full capabilities.
 
@@ -84,7 +84,7 @@ Tip: This sizing is intended for POV and initial development environments. For p
 
 
 
-## Fabric .Net Studio Requirements:
+## Fabric .Net Studio Requirements
 
 Fabric .Net Studio is used for configuring, managing, and controlling the Fabric server operation, and its installation is Windows-based.
 
