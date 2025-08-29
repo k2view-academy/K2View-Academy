@@ -4,7 +4,7 @@
 
   - [Introduction](#introduction)
   - [Execution Server Specifications](#execution-server-specifications)
-  - [Recommended System Configuration for a Single-node Server](recommended-system-configuration-for-a-single-node-server)
+  - [Recommended System Configuration for a Single-node Server](#recommended-system-configuration-for-a-single-node-server)
     - [Software Requirements](#software-requirements)
       - [Operating system](#operating-system)
     - [Hardware Requirements](#hardware-requirements)
