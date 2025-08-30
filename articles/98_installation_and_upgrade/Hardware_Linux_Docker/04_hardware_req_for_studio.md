@@ -29,7 +29,7 @@ There are two generations of Fabric Studio: *Fabric Web Studio* and *Fabric .Net
   - Containerized agility – lightweight and scalable deployment with support for enterprise DevOps practices.
   - Cloud-ready architecture – built to integrate with hybrid and multi-cloud strategies.
 
-With Web Studio, organizations gain a more modern, flexible, and collaborative development experience that accelerates project delivery.
+With Fabric Web Studio, organizations gain a more modern, flexible, and collaborative development experience that accelerates project delivery.
 
 ### Fabric .Net Studio – The Previous Generation
 
