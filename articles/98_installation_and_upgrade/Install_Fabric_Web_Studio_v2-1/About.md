@@ -4,7 +4,7 @@
 
 1. [About K2view Fabric Web Studio 2.1](#about-k2view-fabric-web-studio)
 2. [Previous Versions](#previous-versions)
-2. [What’s New in Version 2.1](#whats-new)   
+2. [What’s New in Version 2.1](#what-is-new)   
 3. [Supported Deployment Runtimes](#supported-deployment-runtimes)
     - [Docker Compose Runtime](#docker-compose-runtime)
     - [Podman Compose Runtime](#podman-compose-runtime)
@@ -45,7 +45,7 @@ With **multi-space development**, Fabric Web Studio enables multiple developers 
 <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/About.md">Previous Version: 2.0</a></li>
 </ul>
 
-## What’s New
+## What is New
 
 Version 2.1 introduces several important enhancements, most notably:
 
