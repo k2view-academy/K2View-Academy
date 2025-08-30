@@ -138,6 +138,10 @@
 							"value": "38_reports"
 						}
 					]
+				},
+				{
+					"display name": "Infrastructure Components",
+					"value": "45_infrastructure_components"
 				}
 			]
 		},
