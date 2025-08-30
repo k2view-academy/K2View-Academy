@@ -6,17 +6,36 @@ Follow the setup script for a proper configuration, depending on your environmen
 
 The script should be run separately on each node, in the order of designated node numbers. It should not be run simultaneously as this might cause configurational and operational issues.
 
+## Version Considerations
+
+Ensure the correct Python version is installed on Fabric nodes where Cassandra tools are invoked.
+
+ - Cassandra 3.11.14 requires **Python 2.7** for utilities like `cqlsh`.  
+ - Cassandra 4.0.3 and 4.1.3 require **Python 3.6 or higher**.  
+
+Users deploying Cassandra 4.x (4.0.3 or 4.1.3) need Python 3.6+ for running cqlsh and other tools.
+
+> *Note:* On systems such as RHEL 7 that default to Python 2.7, be sure to explicitly install and use a Python 3 interpreter (e.g., `python3`) when invoking Cassandra utilities.
+
+> **Version-Specific Behavior**  
+> The provided setup script is compatible with Cassandra 3.11.14, 4.0.3, and 4.1.3. However, ensure that the Python interpreter you use corresponds to the Cassandra version:
+> - Use `python` (pointing to Python 2.7) for Cassandra 3.11.14.  
+> - Use `python3` (Python 3.6+) for Cassandra 4.x.  
+> All other package setup steps (download, unpacking, script execution) remain identical across supported versions.
+
 
 ## Pre-Installation Steps
 
 1. Make sure all Cassandra-related activities were performed; click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activities.
 
-2. Verify that Python version 2.7 is being used for the provided Cassandra package link stated below
+2. Verify that the correct Python version is being used for the provided Cassandra package link stated below
 
     ~~~bash
     python --version
     ~~~
 
+> **For Cassandra 4.x Configurations**  
+> After setup, please review your `cassandra.yaml` for deprecated options (such as `allocate_tokens_for_keyspace`) and update Java/TLS settings in line with Cassandra 4.x performance and security guidelines.
 
 ### Load the Package on all Nodes
 
