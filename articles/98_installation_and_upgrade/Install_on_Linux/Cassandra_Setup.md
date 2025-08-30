@@ -26,7 +26,7 @@ Users deploying Cassandra 4.x (4.0.3 or 4.1.3) need Python 3.6+ for running cq
 
 ## Pre-Installation Steps
 
-1. Make sure all Cassandra-related activities were performed; click [here](01_Fabric_7.xx_Installation_intro.md) to get the full list of activities.
+1. Make sure all Cassandra-related activities were performed; click [here](01_Fabric_8.xx_Installation_intro.md) to get the full list of activities.
 
 2. Verify that the correct Python version is being used for the provided Cassandra package link stated below
 
