@@ -26,7 +26,10 @@ Five authenticators come as part of the Fabric platform and are considered as re
    Notes:
      * The concrete values need to be reconfirmed with the owner of the environment.
      * Cassandra can be the authenticator even if Fabric uses SQLite as system_db.
-     * When AWS Keyspaces is being used, Fabric does not have permission to create users. Hence, it is recommended to use fabric as a server authenticator, where Fabric manages the users.
+     * When AWS Keyspaces is being used, Fabric does not have permission to create users. Hence, it is recommended to use Fabric as a server authenticator, where Fabric manages the users.
+ 
+> **Note:** Fabric supports Cassandra versions **3.11.14**, **4.0.3**, and **4.1.3** as System DBs.  
+> When using Cassandra as the `server_authenticator`, configuring `authenticator = PasswordAuthenticator` and `authorizer = CassandraAuthorizer` in `cassandra.yaml` applies uniformly across all supported versions.
 
 - **ldap** - connect to the LDAP server. For this option, the LDAP server connection details are required and should be defined in the section named `ldap_auth`. 
 - **adldap** - connect to the AD/LDAP server. For this option, the AD/LDAP server connection details are required and should be defined in the section named `adldap_auth`.
