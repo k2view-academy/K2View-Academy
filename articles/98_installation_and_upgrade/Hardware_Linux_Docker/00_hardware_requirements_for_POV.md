@@ -23,7 +23,9 @@ The Fabric server installation is a Linux-based solution.
 
 ## Recommended System Configuration for a Single-node Server
 
-For proof-of-concept installations, we recommend single-node configurations with physical memory requirements varying based on the anticipated use of the node - either for Fabric or Fabric Studio. For system requirements for Fabric Studio, please refer to <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/04_hardware_req_for_studio.md">Fabric Studio - Web and .Net Studio - Installation System Requirements</a>. 
+For proof-of-concept installations, we recommend single-node configurations with physical memory requirements varying based on the anticipated use of the node - either for Fabric or Fabric Studio. 
+
+For system requirements for Fabric Studio, please refer to <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/04_hardware_req_for_studio.md">Fabric Studio Installation System Requirements</a>. 
 
 ### Software Requirements 
 
