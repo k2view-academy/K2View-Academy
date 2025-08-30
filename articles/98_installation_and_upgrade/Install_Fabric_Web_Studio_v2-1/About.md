@@ -2,9 +2,9 @@
 
 ## Table of Contents
 
-1. [About K2view Fabric Web Studio 2.1](#about-k2view-fabric-web-studio-21)
+1. [About K2view Fabric Web Studio 2.1](#about-k2view-fabric-web-studio)
 2. [Previous Versions](#previous-versions)
-2. [What’s New in Version 2.1](#whats-new-in-fabric-web-studio-for-docker-compose-or-podman-version-21)   
+2. [What’s New in Version 2.1](#whats-new)   
 3. [Supported Deployment Runtimes](#supported-deployment-runtimes)
     - [Docker Compose Runtime](#docker-compose-runtime)
     - [Podman Compose Runtime](#podman-compose-runtime)
@@ -26,7 +26,7 @@
 
 ---
 
-## About K2view Fabric Web Studio for Docker Compose or Podman, version 2.1
+## About K2view Fabric Web Studio
 
 K2view Fabric Web Studio provides developers, architects, and data teams with a unified environment for designing, building, managing, and deploying data-driven solutions across various integration, data product, orchestration, and transformation use cases.
 
@@ -38,14 +38,14 @@ Fabric Web Studio enables:
 - Visual creation and management of APIs, flows, business logic, and transformations.
 - Rapid creation of reusable data products for internal and external consumption.
 
-With **multi-space development**, Fabric Web Studio allows multiple developers or teams to work concurrently within isolated, independently configurable Spaces — supporting collaborative workflows, faster iterations, and simplified testing environments.
+With **multi-space development**, Fabric Web Studio enables multiple developers or teams to work concurrently within isolated, independently configurable Spaces, supporting collaborative workflows, faster iterations, and simplified testing environments.
 
 ## Previous Versions
 <ul>
 <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/About.md">Previous Version: 2.0</a></li>
 </ul>
 
-## What’s New in Fabric Web Studio for Docker Compose or Podman, Version 2.1
+## What’s New
 
 Version 2.1 introduces several important enhancements, most notably:
 
@@ -54,7 +54,7 @@ Version 2.1 introduces several important enhancements, most notably:
 - **Heap size increased to 4GB by default**, configurable per Space.
 - **PROJECT_NAME parameter introduced** to decouple project name from Space name.
 - **Per-space configuration files** (`.env`, `compose.yaml`, `.config`) enable easier customization.
-- **JDBC access via port 5124** is exposed for optional direct database integration.
+- **JDBC access via port 5124** is exposed for optional direct database integration. Fabric needs to enable this port. 
 - **Improved healthcheck behavior** for better runtime monitoring.
 - **New release packaging**:
   - Docker distribution: `Studio-Docker-latest.zip` 
