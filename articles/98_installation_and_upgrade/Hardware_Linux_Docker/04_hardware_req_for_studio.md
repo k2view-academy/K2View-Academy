@@ -1,4 +1,4 @@
-# Fabric Studio - Web and .Net Studio - Installation System Requirements
+# Fabric Studio Installation System Requirements
 
 ## Table of Contents
 
@@ -17,6 +17,8 @@
 ## About Fabric Studio
 
 K2view Fabric Studio is the development environment for building, managing, and testing K2view Fabric projects. It provides data engineers and developers with the tools to design and deploy Logical Units (LUs), business workflows, data pipelines, and other Fabric components with speed and precision.
+
+There are two generations of Fabric Studio: Fabric Web and Fabric .Net Studio.
 
 ### Fabric Web Studio – The Next Generation
 
