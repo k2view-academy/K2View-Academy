@@ -388,7 +388,17 @@ A dedicated server for each Cassandra instance is preferred. Following a sizing 
 
 * RedHat (version 7 or higher) based distribution with the latest patches (for example: CentOS, Oracle Linux).   
 * Ubuntu Server, version 18.04 or higher, with the latest patches.
-* Python version 2.7 (this is a Cassandra limit; until Cassandra version 4.0.x - Python version 2.7 is the latest supported; newer versions of Cassandra are not yet certified by K2view for Fabric).
+
+
+#### Cassandra Versions Supported
+
+The matrix of Cassandra versions supported, along with their associated TDM and Fabric versions, is available at https://support.k2view.com/Academy/articles/Product_Versions/TDM_versions.html.
+
+#### Python version requirement
+Please ensure the matching Python version is available on all nodes where cqlsh or Cassandra tools are used.
+
+- Cassandra 3.11.14 requires Python 2.7.
+- Cassandra 4.0.3 and 4.1.3 require Python 3.6 or higher.
 
 
 ### Hardware Requirements:
