@@ -2,13 +2,26 @@
 
 Fabric uses the Cassandra DB as a storage layer. CQL commands can be run to check Cassandra tables on [Fabric keyspaces](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md).
 
+
 ### Login to Cassandra DB
 
-Use the following command to connect to the Cassandra DB from the Cassandra server:
+Use the following command to connect to Cassandra from the Cassandra server:
 
-<p><strong>cqlsh -u &lt;username&gt; -p &lt;password&gt; &lt;ip_address&gt;</strong>;</p>
+- For **Cassandra 3.11.14** (Python 2.7):
 
-Note that if the **ip_address** is not populated, the login command connects to the local host of the Fabric server.
+    ```bash
+    cqlsh -u <username> -p <password> <ip_address>
+    ```
+
+- For **Cassandra 4.0.3 / 4.1.3** (Python 3.x):
+
+    ```bash
+    python3 -m cqlsh <ip_address> -u <username> -p <password>
+    ```
+
+> **Note:**  
+> On systems like RHEL 7 where `python` points to Python 2.7 by default, you **must** use `python3` to launch `cqlsh` when working with Cassandra 4.x, otherwise you'll encounter compatibility errors.
+
 
 ### Useful Cassandra Commands
 
