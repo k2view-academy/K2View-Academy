@@ -18,11 +18,11 @@
 
 K2view Fabric Studio is the development environment for building, managing, and testing K2view Fabric projects. It provides data engineers and developers with the tools to design and deploy Logical Units (LUs), business workflows, data pipelines, and other Fabric components with speed and precision.
 
-There are two generations of Fabric Studio: Fabric Web and Fabric .Net Studio.
+There are two generations of Fabric Studio: *Fabric Web Studio* and *Fabric .Net Studio*.
 
 ### Fabric Web Studio – The Next Generation
 
-Fabric Web Studio is the latest version of Studio, designed for today’s containerized and cloud-first enterprise environments. It runs seamlessly on Docker Compose, Podman, and Cloud deployments, offering:
+**Fabric Web Studio** is the latest version of Studio, designed for today’s containerized and cloud-first enterprise environments. It runs seamlessly on Docker Compose, Podman, and Cloud deployments, offering:
 
   - Cross-platform flexibility – accessible from any modern browser, independent of local operating system constraints.
   - Isolated development Spaces – enabling secure, parallel workstreams for multiple teams.
@@ -33,7 +33,7 @@ With Web Studio, organizations gain a more modern, flexible, and collaborative d
 
 ### Fabric .Net Studio – The Previous Generation
 
-Fabric .Net Studio is the earlier version of Studio, designed primarily for Windows environments. It provides a powerful IDE experience for Fabric developers, with system requirements detailed later in this topic. While it remains supported for customers with existing Windows-based workflows, new projects are encouraged to adopt Fabric Web Studio for its modern, containerized, and cloud-ready capabilities.
+**Fabric .Net Studio** is the earlier version of Studio, designed primarily for Windows environments. It provides a powerful IDE experience for Fabric developers, with system requirements detailed later in this topic. While it remains supported for customers with existing Windows-based workflows, new projects are encouraged to adopt Fabric Web Studio for its modern, containerized, and cloud-ready capabilities.
 
 
 ## Fabric Web Studio Requirements
