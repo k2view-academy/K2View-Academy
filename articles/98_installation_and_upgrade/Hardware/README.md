@@ -25,7 +25,7 @@ Different components and deployment options require different system setups. Use
   </thead>
   <tbody>
     <tr>
-      <td>1. Fabric Web Studio (On-Premises)</td>
+      <td>Fabric Web Studio (On-Premises)</td>
       <td>
         Install Fabric Web Studio on dedicated Linux servers.
         Refer to
@@ -38,7 +38,7 @@ Different components and deployment options require different system setups. Use
       </td>
     </tr>
     <tr>
-      <td>2. Fabric and TDM (On-Premises or Cloud VMs)</td>
+      <td>Fabric and TDM (On-Premises or Cloud VMs)</td>
       <td>
         Deploy Fabric and TDM directly on Linux servers,
         either on-premises or on cloud provider instances sized to match the same hardware requirements.
@@ -55,7 +55,7 @@ Different components and deployment options require different system setups. Use
       </td>
     </tr>
     <tr>
-      <td>3. Fabric, TDM, and Fabric Web Studio (Kubernetes)</td>
+      <td>Fabric, TDM, and Fabric Web Studio (Kubernetes)</td>
       <td>
         Run Fabric, TDM, and Fabric Web Studio as self-managed Kubernetes deployments,
         orchestrated via K2Cloud Orchestrator. Refer to
@@ -73,7 +73,10 @@ Different components and deployment options require different system setups. Use
 
 **How to Use This Section**
 
-1. Identify your deployment scenario (on-premises server, cloud VM, or Kubernetes cluster).
-2. Review the corresponding hardware requirements in this section to ensure adequate resources.
-3. Follow the installation guides for your chosen deployment type.
-4. Consult the upgrade procedures to keep your environment current, stable, and secure.
+*Identify your deployment scenario* (on-premises server, cloud VM, or Kubernetes cluster).
+
+*Review the corresponding hardware requirements* in this section to ensure adequate resources.
+
+*Follow the installation guides* for your chosen deployment type.
+
+*Consult the upgrade procedures* to keep your environment current, stable, and secure.
