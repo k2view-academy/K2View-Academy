@@ -1,15 +1,15 @@
-# Dev and QA Environment Installation System Requirements
+# Dev and QA Environment System Requirements
 
 ## Table of Contents
 
   - [Introduction](#introduction)
-  - [Fabric Execution Servers - Node Specifications](#fabric-execution-servers---node-specifications)
+  - [Fabric Servers - Node Specifications](#fabric-servers---node-specifications)
   - [Minimum System Configuration for Each Fabric Node Server](#minimum-system-configuration-for-each-fabric-node-server)
     - [Software Requirements](#software-requirements)
       - [Operating system](#operating-system)
     - [Hardware Requirements](#hardware-requirements)
     - [Examples of Cloud-supported Instance Types](#examples-of-cloud-supported-instance-types)
-    - [For all installations, the FS configuration must be as follows](#for-all-installations-the-fs-configuration-must-be-as-follows)
+    - [For all installations, the file system configuration must be as follows](#for-all-installations-the-file-system-configuration-must-be-as-follows)
   - [PostgreSQL Server Node Specifications](#postgresql-server-node-specifications)
     - [Suggested System Configuration for PostgreSQL Server](#suggested-system-configuration-for-postgresql-server)
       - [Software Requirements](#software-requirements-3)
@@ -23,23 +23,22 @@
         - [Operating system](#operating-system-1)
       - [Hardware Requirements](#hardware-requirements-1)
       - [Examples of Cloud-supported Instance Types](#examples-of-cloud-supported-instance-types-1)
-      - [For all installations, the FS configuration must be as follows](#for-all-installations-the-fs-configuration-must-be-as-follows-1)
+      - [For all installations, the file system configuration must be as follows](#for-all-installations-the-file-system-configuration-must-be-as-follows-1)
   - [Cassandra Server Node Specifications](#cassandra-server-node-specifications)
     - [Minimum System Configuration for Each Cassandra Node Server](#minimum-system-configuration-for-each-cassandra-node-server)
       - [Software Requirements](#software-requirements-2)
         - [Operating system](#operating-system-2)
       - [Hardware Requirements](#hardware-requirements-2)
       - [Examples of Cloud-supported Instance Types](#examples-of-cloud-supported-instance-types-2)
-      - [For all installations, the FS configuration should be as follows](#for-all-installations-the-fs-configuration-should-be-as-follows)
+      - [For all installations, the file system configuration should be as follows](#for-all-installations-the-file-system-configuration-should-be-as-follows)
 
 
 
 ## Introduction
 
-* This document provides information regarding the hardware, software, and operating system requirements for Fabric installations.
-* TDM installation is based on Fabric with the additions of the TDM library and PostgreSQL installation.
+The Dev and QA environments are intended for development, functional testing, and validation prior to production rollout. These environments typically require less capacity than production systems but must still provide stability and representative performance to ensure reliable testing. This topic outlines the baseline requirements for each component (Fabric, PostgreSQL, Kafka, Cassandra) to help size and configure your Dev/QA clusters consistently across on-premises and cloud deployments.
 
-## Fabric Execution Servers - Node Specifications 
+## Fabric Servers - Node Specifications 
 
 The Fabric server installation is a Linux-based solution.
 A dedicated server is preferred for each Fabric instance. Following a sizing process, the exact number of nodes for each environment needs to be determined. 
@@ -56,6 +55,10 @@ A dedicated server is preferred for each Fabric instance. Following a sizing pro
 
 #### Hardware Requirements:
 
+The following specifications outline the baseline hardware and software requirements for on-premises installations of a Fabric node in a development or quality assurance (Dev/QA) environment. These requirements ensure stable operation and representative performance during development and testing. 
+
+For organizations deploying in the cloud, the listed cloud-supported instance types (AWS, GCP, Azure) map to equivalent resource profiles and are provided as reference points to simplify environment sizing.
+
 <table>
 <tbody>
 <tr>
@@ -64,7 +67,7 @@ A dedicated server is preferred for each Fabric instance. Following a sizing pro
 </td>
 <td style="width: 446px;">
 <p>For simple scenarios: Intel Xeon Quad-core or equivalent.</p>
-<p>For high-load or complex scenarios: Octa-cores are&nbsp;recommended.</p>
+<p>For high-load or complex scenarios: 8 cores are recommended.</p>
 </td>
 </tr>
 <tr>
@@ -105,9 +108,9 @@ A dedicated server is preferred for each Fabric instance. Following a sizing pro
 </table>
 
 
-
-
 ### Examples of Cloud-supported Instance Types:
+
+Here are equivalent resource profiles for cloud-supported instance types (AWS, GCP, Azure).
 
 <table>
 <tbody>
@@ -147,7 +150,7 @@ A dedicated server is preferred for each Fabric instance. Following a sizing pro
 </table>
 
 
-### For all installations, the FS configuration must be as follows:
+### For all installations, the file system configuration must be as follows:
 
 * Volume of 150G /opt/apps/fabric/ - will also be used as the home directory for a Fabric user.
 
@@ -176,6 +179,11 @@ Cassandra and Kafka servers should be accessible from Fabric servers’ nodes.
 * Ubuntu Server, version 18.04 or higher, with the latest patches.
 
 ### Hardware Requirements:
+
+The following specifications outline the baseline hardware and software requirements for PostgreSQL when used in TDM projects, deployed on-premises as dedicated or virtual servers. These requirements provide stable performance for metadata and TDM workloads. 
+
+For cloud deployments, the cloud-supported instance types and SaaS offerings (AWS RDS, GCP Cloud SQL, Azure Database for PostgreSQL) reflect equivalent resource profiles and can be used as sizing references.
+
 <table>
 <tbody>
 <tr>
@@ -224,7 +232,9 @@ Cassandra and Kafka servers should be accessible from Fabric servers’ nodes.
 </tbody>
 </table>
 
-### Examples of Cloud-supported Instance Types:
+### Examples of Cloud-supported Instance Types
+
+Here are equivalent resource profiles for cloud-supported instance types (AWS, GCP, Azure).
 
 <table>
 <tbody>
@@ -284,6 +294,11 @@ A dedicated server is preferred for each Kafka instance. Following a sizing proc
 * Ubuntu Server, version 18.04 or higher, with the latest patches.
 
 #### Hardware Requirements:
+
+The following specifications outline the baseline hardware and software requirements for on-premises Kafka nodes in development and quality assurance (Dev/QA) environments. These requirements ensure reliable messaging throughput and integration with Fabric and Cassandra. 
+
+For cloud deployments, the cloud-supported instance types (AWS, GCP, Azure) map to comparable resources and are provided as reference options.
+
 <table>
 <tbody>
 <tr>
@@ -334,6 +349,8 @@ A dedicated server is preferred for each Kafka instance. Following a sizing proc
 
 ### Examples of Cloud-supported Instance Types:
 
+Here are equivalent resource profiles for cloud-supported instance types (AWS, GCP, Azure).
+
 <table>
 <tbody>
 <tr style="height: 46px;">
@@ -371,7 +388,7 @@ A dedicated server is preferred for each Kafka instance. Following a sizing proc
 </tbody>
 </table>
 
-### For all installations, the FS configuration must be as follows:
+### For all installations, the file system configuration must be as follows:
 Volume of 50G /opt/apps/kafka/ - will also be used as the home directory for a Kafka user.
 
 
@@ -402,6 +419,11 @@ Please ensure the matching Python version is available on all nodes where cqlsh 
 
 
 ### Hardware Requirements:
+
+The following specifications outline the baseline hardware and software requirements for on-premises Cassandra nodes in a development and quality assurance (Dev/QA) environment. These requirements support stable performance for distributed storage and query workloads. 
+
+For cloud deployments, the cloud-supported instance types (AWS, GCP, Azure) offer equivalent resource sizing to align with these recommendations.
+
 <table>
 <tbody>
 <tr>
@@ -451,6 +473,8 @@ Please ensure the matching Python version is available on all nodes where cqlsh 
 
 ### Examples of Cloud-supported Instance Types:
 
+Here are equivalent resource profiles for cloud-supported instance types (AWS, GCP, Azure).
+
 <table>
 <tbody>
 <tr style="height: 46px;">
@@ -489,6 +513,6 @@ Please ensure the matching Python version is available on all nodes where cqlsh 
 </table>
 
 
-### For all installations, the FS configuration should be as follows:
+### For all installations, the file system configuration should be as follows:
 * Volume of 200G /opt/apps/cassandra/
 
