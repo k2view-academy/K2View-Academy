@@ -27,7 +27,7 @@ For system requirements for Fabric Studio, please refer to <a href="/articles/98
 
 ### Software Requirements 
 
-#### Operating system: 
+#### Operating System: 
 
 * RedHat (version 7 or higher) based distribution (for example: Centos, Oracle, Linux).   
 * Ubuntu Server, version 18.04 or higher. 
@@ -67,8 +67,8 @@ For system requirements for Fabric Studio, please refer to <a href="/articles/98
 <p><strong>Disk Space</strong></p>
 </td>
 <td style="width: 446px;">
-<p>For application data, at least 200 GB free disk space is recommended.</p>
-<p>Depends on the project scope and retention requirements. Disk space should be increased.</p>
+<p>A minimum of 200 GB of free disk space is recommended for application data.</p>
+<p>Additional storage should be allocated based on project scope and retention requirements.</p>
 </td>
 </tr>
 <tr>
@@ -88,6 +88,8 @@ For system requirements for Fabric Studio, please refer to <a href="/articles/98
 To accommodate the flexibility and scalability of cloud deployments, this section outlines the recommended virtual machine configurations across major cloud platforms—AWS, GCP, and Azure—for setting up a Fabric POV installation. These recommendations are designed to mirror the characteristics of on‑premise hardware by aligning the key cloud instance types with the system requirements for Fabric deployments.
 
 Here are preferred instance families and sizes tailored to meet the recommended hardware criteria for running Fabric in a cloud ecosystem, including CPU, memory, networking, and storage characteristics that align with the single-node, high-performance Proof-of-Value setups. 
+
+These instance types provide a baseline for POV use cases. Larger or specialized instance families may be required if your evaluation involves high-volume data processing, GPU acceleration, or multi-node topologies.
 
 <table style="width: 900px; border-style: solid;" border="1">
 <tbody>
