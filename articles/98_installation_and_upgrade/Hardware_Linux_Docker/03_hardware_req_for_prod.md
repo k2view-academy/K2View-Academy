@@ -8,7 +8,7 @@
     - [Operating system](#operating-system)
     - [Hardware Requirements](#hardware-requirements)
     - [Examples of Cloud-supported Instance Types](#examples-of-cloud-supported-instance-types)
-    - [For all installations, the FS configuration must be as follows](#for-all-installations-the-fs-configuration-must-be-as-follows)
+    - [For all installations, the file system configuration must be as follows](#for-all-installations-the-file-system-configuration-must-be-as-follows)
   - [PostgreSQL Server Node Specifications](#postgresql-server-node-specifications)
     - [Suggested System Configuration for a PostgreSQL Server](#suggested-system-configuration-for-a-postgresql-server)
       - [Operating system](#operating-system-3)
@@ -20,21 +20,22 @@
       - [Operating system](#operating-system-1)
       - [Hardware Requirements](#hardware-requirements-1)
       - [Examples of Cloud-supported Instance Types](#examples-of-cloud-supported-instance-types-1)
-      - [For all installations, the FS configuration must be as follows](#for-all-installations-the-fs-configuration-must-be-as-follows-1)
+      - [For all installations, the file system configuration must be as follows](#for-all-installations-the-file-system-configuration-must-be-as-follows-1)
   - [Cassandra Server Node Specifications](#cassandra-server-node-specifications)
     - [Minimum System Configuration for Each Cassandra Node Server](#minimum-system-configuration-for-each-cassandra-node-server)
       - [Operating system](#operating-system-2)
       - [Hardware Requirements](#hardware-requirements-2)
       - [Examples of Cloud-supported Instance Types](#examples-of-cloud-supported-instance-types-2)
-      - [For all installations, the FS configuration should be as follows](#for-all-installations-the-fs-configuration-should-be-as-follows)
+      - [For all installations, the file system configuration should be as follows](#for-all-installations-the-file-system-configuration-should-be-as-follows)
 
 
 
 
 ## Introduction
 
-* This document provides information regarding the hardware, software and the operating system requirements for Fabric installations.
-* TDM installation is based on Fabric with the additions of a TDM library and a PostgreSQL installation.
+This document provides the hardware, software, and operating system requirements for deploying Fabric in a production environment. Unlike Proof-of-Value or Dev/QA installations, production systems must be sized for sustained workloads, high availability, and fault tolerance.
+
+TDM installations build on these requirements by adding the TDM library and PostgreSQL. Each component—Fabric, PostgreSQL, Kafka, and Cassandra — has its own node specifications, which can be deployed on-premises or mapped to equivalent cloud instance types.
 
 ## Fabric Execution Servers - Node Specifications 
 
@@ -62,8 +63,8 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 <p><strong>Processor</strong></p>
 </td>
 <td style="width: 446px;">
-<p>For simple scenarios: Intel Xeon Octa-core or equivalent.</p>
-<p>For high-load or complex scenarios: 16 cores are&nbsp;recommended.</p>
+<p>For simple scenarios: Intel Xeon 8 core or equivalent.</p>
+<p>For high-load or complex scenarios: 16 cores are recommended.</p>
 </td>
 </tr>
 <tr>
@@ -109,6 +110,8 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 
 ### Examples of Cloud-supported Instance Types:
 
+The following specifications define the on-premises baseline hardware requirements. Equivalent instance types across AWS, GCP, and Azure are provided for reference to simplify cloud sizing.
+
 <table>
 <tbody>
 <tr style="height: 46px;">
@@ -147,13 +150,13 @@ For docker installation, the latest **Docker Engine** and **Docker Compose** ins
 </table>
 
 
-### For all installations, the FS configuration must be as follows:
+### For all installations, the file system configuration must be as follows:
 
-* Volume of 50GB/opt/apps/fabric/ - will be used also as the home directory for a Fabric user.
+* Volume of 50GB/opt/apps/fabric/ - will also be used as the home directory for a Fabric user.
 * Volume of 100GB /opt/apps/fabric/storage
 
 ### Note:
-* The FS must provide IOPS of at least 30K read and 10K write on each node. 
+* The file system must provide IOPS of at least 30K read and 10K write on each node. 
 * The above volume values should be modified in accordance with the project scope and data retention requirements.
 
 
@@ -185,7 +188,7 @@ Cassandra and Kafka servers should be accessible from Fabric servers’ nodes.
 <p><strong>Processor</strong></p>
 </td>
 <td style="width: 446px;">
-<p>Intel Xeon quad-core or equivalent.</p>
+<p>Intel Xeon 4 core or equivalent.</p>
 </td>
 </tr>
 <tr>
@@ -227,6 +230,8 @@ Cassandra and Kafka servers should be accessible from Fabric servers’ nodes.
 </table>
 
 ### Examples of Cloud-supported Instance Types:
+
+The following specifications define the on-premises baseline hardware requirements. Equivalent instance types across AWS, GCP, and Azure are provided for reference to simplify cloud sizing.
 
 <table>
 <tbody>
@@ -271,8 +276,6 @@ Cassandra and Kafka servers should be accessible from Fabric servers’ nodes.
 * Azure Database for PostgreSQL - read more [here](https://azure.microsoft.com/en-us/products/postgresql/?ef_id=_k_Cj0KCQjwmtGjBhDhARIsAEqfDEdFvRBFcGSocBebegdYAH-KKrEjh3YxAuG0vKhGbQ0djHuzAPbdhMsaAolmEALw_wcB_k_&OCID=AIDcmm81syc84i_SEM__k_Cj0KCQjwmtGjBhDhARIsAEqfDEdFvRBFcGSocBebegdYAH-KKrEjh3YxAuG0vKhGbQ0djHuzAPbdhMsaAolmEALw_wcB_k_&gclid=Cj0KCQjwmtGjBhDhARIsAEqfDEdFvRBFcGSocBebegdYAH-KKrEjh3YxAuG0vKhGbQ0djHuzAPbdhMsaAolmEALw_wcB)
 
 
-
-
 ## Kafka Server Node Specifications 
 
 The Kafka server installation is a Linux-based solution.
@@ -293,7 +296,7 @@ Use dedicated servers for Kafka instances. Following a sizing process, the exact
 <p><strong>Processor</strong></p>
 </td>
 <td style="width: 446px;">
-<p>For simple scenarios: Intel Xeon Octa-core or equivalent.</p>
+<p>For simple scenarios: Intel Xeon 8 core or equivalent.</p>
 <p>For high-load or complex scenarios: 16 cores are&nbsp; recommended.</p>
 </td>
 </tr>
@@ -337,6 +340,8 @@ Use dedicated servers for Kafka instances. Following a sizing process, the exact
 
 ### Examples of Cloud-supported Instance Types:
 
+The following specifications define the on-premises baseline hardware requirements. Equivalent instance types across AWS, GCP, and Azure are provided for reference to simplify cloud sizing.
+
 <table>
 <tbody>
 <tr style="height: 46px;">
@@ -374,11 +379,11 @@ Use dedicated servers for Kafka instances. Following a sizing process, the exact
 </tbody>
 </table>
 
-### For all installations, the FS configuration must be as follows:
+### For all installations, the file system configuration must be as follows:
 Volume of 150GB /opt/apps/kafka/ - will be used also as the home directory for a Kafka user.
 
 ### Note:
-* The FS must provide IOPS of at least 30K read and 10K write on each node.
+* The file system must provide IOPS of at least 30K read and 10K write on each node.
 * The above volume values should be modified in accordance with the project scope and data retention requirements.
 
 
@@ -456,6 +461,8 @@ Please ensure the matching Python version is available on all nodes where cqlsh 
 
 ### Examples of Cloud-supported Instance Types:
 
+The following specifications define the on-premises baseline hardware requirements. Equivalent instance types across AWS, GCP, and Azure are provided for reference to simplify cloud sizing.
+
 <table>
 <tbody>
 <tr style="height: 46px;">
@@ -505,12 +512,12 @@ Further details are found below:
 [GCP](https://cloud.google.com/compute/docs/disks/performance)
 
 
-### For all installations, the FS configuration should be as follows:
+### For all installations, the file system configuration should be as follows:
 * Volume of 50GB /opt/apps/cassandra/
 * Volume of 450GB /opt/apps/cassandra/storage
 
 
 ### Note:
-* The FS must provide IOPS of at least 30K read and 10K write on each node.
+* The file system must provide IOPS of at least 30K read and 10K write on each node.
 * The above volume values should be modified in accordance with the project scope and data retention requirements.
 
