@@ -4,21 +4,17 @@ The Installation & Upgrade section provides the foundation for installing and up
 
 This section connects system requirements directly to the installation and upgrade guides, helping you plan, size, and maintain your environments consistently across all deployment models.
 
-**What This Section Covers**
+**System Requirements**: Baseline specifications (CPU, memory, disk, network) for on-premises servers and equivalent cloud instance types. Separate recommendations are provided for <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/04_hardware_req_for_studio.md">Fabric Web Studio</a>, <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/02_hardware_req_for_dev_qa.md">Development/QA</a>, <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/00_hardware_requirements_for_POV.md">Proof-of-Value (POV)</a>, and <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/03_hardware_req_for_prod.md">Production environments</a>.
 
- * **System Requirements**: Baseline specifications (CPU, memory, disk, network) for on-premises servers and equivalent cloud instance types. Separate recommendations are provided for Fabric Studio, Development/QA, Proof-of-Value (POV), and Production environments.
+**Installation Guidance**: Step-by-step procedures for deploying Fabric, TDM, GenAI Data Fusion, and Fabric Web Studio on <a href="/articles/98_installation_and_upgrade/Install_on_Linux/README.md">Fabric, TDM, or GenAI Data Fusion on Linux servers</a>, <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/README.md">Fabric Web Studio within Docker/Podman containers</a>, or <a href="/articles/98_installation_and_upgrade/Install_on_Kubernetes/README.md">Fabric, TDM, or GenAI Data Fusion on Kubernetes clusters</a>.
 
- * **Installation Guidance**: Step-by-step procedures for deploying Fabric, TDM, and Fabric Web Studio on Linux servers, Docker/Podman containers, or Kubernetes clusters.
-
- * **Upgrade Procedures**: Recommended approaches for upgrading Fabric and TDM, including database backup, storage considerations, binary replacement, and validation steps. Kubernetes-specific upgrade strategies are also provided for self-managed clusters orchestrated by K2Cloud.
+**Upgrade Procedures**: Recommended approaches for upgrading Fabric and TDM, including database backup, storage considerations, binary replacement, and validation steps. Kubernetes-specific upgrade strategies are also provided for self-managed clusters orchestrated by K2Cloud.
 
 **Installation Scenarios**
 
 Different components and deployment options require different system setups. Use the table below to navigate to the correct requirements:
 
 **Installation Scenarios**
-
-
 
 <table>
   <thead>
@@ -47,7 +43,7 @@ Different components and deployment options require different system setups. Use
         Deploy Fabric and TDM directly on Linux servers,
         either on-premises or on cloud provider instances sized to match the same hardware requirements.
         See
-        <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/">
+        <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/README.md">
           Linux/Docker Hardware Requirements
         </a>, 
         <a href="/articles/98_installation_and_upgrade/Install_on_Linux/README.md">
@@ -63,10 +59,10 @@ Different components and deployment options require different system setups. Use
       <td>
         Run Fabric, TDM, and Fabric Web Studio as self-managed Kubernetes deployments,
         orchestrated via K2Cloud Orchestrator. Refer to
-        <a href="/articles/98_installation_and_upgrade/Hardware_K8s/">
+        <a href="/articles/98_installation_and_upgrade/Hardware_K8s/README.md">
           Kubernetes Requirements
         </a>, and 
-        <a href="/articles/98_installation_and_upgrade/Install_on_Kubernetes/README.md/">
+        <a href="/articles/98_installation_and_upgrade/Install_on_Kubernetes/README.md">
           Fabric Installation on Kubernetes
         </a>.        
       </td>
