@@ -57,11 +57,11 @@ Different components and deployment options require different system setups. Use
         either on-premises or on cloud provider instances sized to match the same hardware requirements.
         See
         <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/README.md">
-          Linux System Requirements
-        </a>, 
+          Linux System Requirements,
+        </a> 
         <a href="/articles/98_installation_and_upgrade/Install_on_Linux/README.md">
-          Fabric Installation on Linux
-        </a>, and
+          Fabric Installation on Linux,
+        </a> and
         <a href="/articles/98_installation_and_upgrade/Install_TDM/README.md">
           TDM Installation.
         </a>
@@ -74,7 +74,7 @@ Different components and deployment options require different system setups. Use
         orchestrated via K2Cloud Orchestrator. Refer to
         <a href="/articles/98_installation_and_upgrade/Hardware_K8s/README.md">
           Kubernetes Requirements
-        </a>, and 
+        </a> and 
         <a href="/articles/98_installation_and_upgrade/Install_on_Kubernetes/README.md">
           Fabric Installation on Kubernetes.
         </a>       
@@ -84,21 +84,21 @@ Different components and deployment options require different system setups. Use
       <td>Fabric and GenAI Data Fusion</td>
       <td>
         Run Fabric and GenAI Data Fusion on a Linux VM or Kubernetes. GenAI Data Fusion extends Fabric’s data exposure capabilities to support retrieval-augmented workflows for large language models. The Fabric platform is responsible for retrieving structured and unstructured data, applying masking and enrichment, and preparing the context that is ultimately provided to an LLM. 
-        <br><br>Please refer to the Refer to
+        <br><br>Please refer to the
         <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/00_hardware_requirements_for_POV.md">
-          Proof of Value Environment System Requirements
-        </a>, and either the
+          Proof of Value Environment System Requirements,
+        </a> and either the
         <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/04_hardware_req_for_studio.md">
           Linux System Requirements
         </a> or <a href="/articles/98_installation_and_upgrade/Hardware_K8s/README.md">
-          Kubernetes Requirements
-        </a>. 
+          Kubernetes Requirements.
+        </a> 
         <br><br> Please follow the respective installation instructions for the installation on a 
         <a href="/articles/98_installation_and_upgrade/Install_on_Linux/README.md">
           Linux VM
         </a> or <a href="/articles/98_installation_and_upgrade/Install_on_Kubernetes/README.md">
-          on Kubernetes
-        </a>.  
+          on Kubernetes.
+        </a> 
       </td>
     </tr>
   </tbody>
