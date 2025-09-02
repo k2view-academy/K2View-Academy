@@ -35,7 +35,7 @@ The TDM library includes a **TDMSeqList** Actor that holds a list of sequences. 
 
 
 
-Following completion of the Actor's update, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button (top of the Project tree). This act applies the changes in the **TDMSeqList** Actor and deploys the **TDM LU**.
+Following completion of the Actor's update, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button (top of the Project tree). This action applies the changes in the **TDMSeqList** Actor and deploys the **TDM LU**.
 
 
 
