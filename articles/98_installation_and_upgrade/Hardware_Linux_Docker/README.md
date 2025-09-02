@@ -1,4 +1,4 @@
-<strong>Linux Requirements</strong>
+<strong>Linux System Requirements</strong>
   
 <ul>
   <li>
