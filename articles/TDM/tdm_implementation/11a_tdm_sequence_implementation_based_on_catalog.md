@@ -28,15 +28,15 @@ The Catalog feature of [Bulk Edit](/articles/39_fabric_catalog/catalog_app/14_1_
 
   ![bulk example2](images/seq_bulk_edit_cust_id_example2.png)
 
-- Close the Search window (click the X on the Search box) and edit the bulk: add the CUSTOMER_ID Sequence to this bulk and click the *Submit & Clear bulk* button. 
+- Close the Search window (click the X on the Search box) and edit the bulk: Add the CUSTOMER_ID Sequence to this bulk and click the *Submit & Clear bulk* button. 
 
   ![bulk](images/seq_bulk_edit_cust_id_example3.png)
 
 - The CUSTOMER_ID Sequence is added to all the bulk's fields and the bulk is cleared. 
 
-- Now you can repeat these steps for additional Sequences (CONRTACT_ID for example).
+- You can now repeat these steps for additional Sequences (such as CONRTACT_ID).
 
-Click [here](/articles/39_fabric_catalog/catalog_app/14_2_bulk_edit.md) for additional instructions on how to edit a bulk in the Catalog.
+Click [here](/articles/39_fabric_catalog/catalog_app/14_2_bulk_edit.md) for additional instructions on how to edit a bulk of entities in the Catalog.
 
 ### III. TDM Implementation Changes
 
