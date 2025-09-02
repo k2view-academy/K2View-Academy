@@ -1,4 +1,4 @@
-<strong>Linux / Docker Requirements</strong>
+<strong>Linux Requirements</strong>
   
 <ul>
   <li>
