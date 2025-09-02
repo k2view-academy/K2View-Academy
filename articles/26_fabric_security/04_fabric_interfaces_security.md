@@ -49,7 +49,6 @@ Fabric enables you to define several source [environments](/articles/25_environm
 
 </web>
 
-https://github.com/k2view-academy/K2View-Academy/edit/Academy_8.3/articles/26_fabric_security_sm/04_fabric_interfaces_security.md#:~:text=04_fabric_interfaces_security.md-,04a_secret_manager,-.md
 
 ## Securing File Systems Settings
 
