@@ -16,7 +16,7 @@ Currently, the Catalog does not automatically identify the sequence fields. Ther
 
 Click [here](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#sequences-tab) for instructions.
 
-The Catalog feature of [Bulk edit](/articles/39_fabric_catalog/catalog_app/14_1_bulk_creation.md) is supported from Fabric V8.3 onwards. This feature simplifies adding Sequence classification to the tables, since you can create a bulk for each Sequence and update the tables accordingly. A separate bulk needs to be created on each Sequence.
+The Catalog feature of [Bulk Edit](/articles/39_fabric_catalog/catalog_app/14_1_bulk_creation.md) is supported from Fabric V8.3 onwards. This feature simplifies adding Sequence classification to the tables, since you can create a bulk for each Sequence and update the tables accordingly. A separate bulk needs to be created on each Sequence.
 
 **Example: Adding the CUSTOMER_ID Sequence to all fields named 'CUSTOMER_ID' in the CRM DB**:
 
