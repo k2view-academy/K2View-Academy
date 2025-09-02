@@ -1,6 +1,6 @@
 # TDM — Sequence Implementation Without Catalog
 
-Take the following steps in order to create the sequences for your TDM implementation:
+To create the sequences for your TDM implementation, follow these steps:
 
 ## Generate Sequence Actors
 
