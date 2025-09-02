@@ -6,7 +6,7 @@ Fabric has added the [Sequences tab](/articles/39_fabric_catalog/catalog_app/10_
 
 ### I. Catalog — Populating the Sequences Tab
 
-This includes adding the Sequence classification to the Sequences tab and setting the data generator for each sequence. 
+Populating the Sequences tab involves adding the Sequence Classification and setting the data Generator for each sequence. 
 
 Click [here](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#sequences-tab) for instructions.
 
