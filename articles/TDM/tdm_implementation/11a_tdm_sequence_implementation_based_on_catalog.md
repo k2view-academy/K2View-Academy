@@ -40,7 +40,7 @@ Click [here](/articles/39_fabric_catalog/catalog_app/14_2_bulk_edit.md) for addi
 
 ### III. TDM Implementation Changes
 
-- Run the [TDMLUInitBasedOnFabric  flow](05_tdm_lu_implementation_general.md#ii-adding-the-tdm-setup-to-the-lu) flow to regenerate the load and rule-based data generation flows.
+- Run the [TDMLUInitBasedOnFabric](05_tdm_lu_implementation_general.md#ii-adding-the-tdm-setup-to-the-lu) flow to regenerate the load and rule-based data generation flows.
 
 - Add the **TDM_USING_CATALOG_SEQUENCES** Global on each LU for which the sequences should be populated by the Catalog. Set this Global to **true**. 
 
