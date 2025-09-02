@@ -1,4 +1,4 @@
-<strong>Kubernetes Installations of Fabric</strong>
+<strong>Fabric Installation on Kubernetes</strong>
          
 <ul>
   <li>
