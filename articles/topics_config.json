@@ -322,10 +322,6 @@
 					"value": "98_installation_and_upgrade/Hardware"
 				},
 				{
-					"display name": "Sizing Considerations",
-					"value": "98_installation_and_upgrade/Hardware/02_sizing_considerations.md"
-				},
-				{
 					"display name": "System Requirements",
 					"sub-topics": [
 						{
@@ -337,6 +333,10 @@
 							"value": "98_installation_and_upgrade/Hardware_Linux_Docker"
 						}
 					]
+				},
+				{
+					"display name": "Sizing Considerations",
+					"value": "98_installation_and_upgrade/Sizing"
 				},
 				{
 					"display name": "Installation",
