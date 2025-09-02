@@ -16,7 +16,7 @@ It is also important to account for orchestration overhead. Deployments on Kuber
 
 Fabric is the runtime engine that powers real-time data products, and its sizing depends heavily on workload type.  
 
-When Fabric is used for **data exposure**, the main concern is API throughput. Payload size, caching strategy, and the number of concurrent threads directly influence how many calls a cluster can sustain. Sizing is a matter of balancing those factors and adding nodes to meet expected transaction volumes.  
+When Fabric is used for *data exposure*, the main concern is API throughput. Payload size, caching strategy, and the number of concurrent threads directly influence how many calls a cluster can sustain. Sizing is a matter of balancing those factors and adding nodes to meet expected transaction volumes.  
 
 In *change data capture (CDC)* scenarios, Fabric must keep pace with the rate of change from source systems. The volume and velocity of CDC messages, along with the way Kafka consumer threads are tuned, define the necessary cluster capacity.  
 
@@ -56,9 +56,12 @@ In other words, sizing for GenAI Data Fusion is about ensuring Fabric can orches
 
 In every case, the answer to sizing begins with “it depends.”  
 
-- Fabric Web Studio environments depend on the number of concurrent developers.  
-- Fabric runtime environments depend on the type of workload—API exposure, CDC, SOR, or pipelines.  
-- TDM environments depend on the balance of extract, load, cloning, and synthetic data generation tasks.  
-- GenAI Data Fusion environments depend on exposure-like throughput requirements and the added cost of enrichment, while offloading AI execution to external services.  
+*Fabric Web Studio environments* depend on the number of concurrent developers.  
+
+*Fabric runtime environments* depend on the type of workload—API exposure, CDC, SOR, or pipelines.  
+
+*TDM environments* depend on the balance of extract, load, cloning, and synthetic data generation tasks.  
+
+*GenAI Data Fusion environments* depend on exposure-like throughput requirements and the added cost of enrichment, while offloading AI execution to external services.  
 
 K2view’s architecture supports linear scalability: workloads can be expanded by adding nodes as demand grows. The challenge is not deciding whether the system can scale, but understanding which factor—transaction volume, change velocity, workload mix, or enrichment complexity—will dominate in your environment.  
