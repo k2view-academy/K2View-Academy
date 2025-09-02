@@ -10,13 +10,13 @@ This includes adding the Sequence classification to the Sequences tab and settin
 
 Click [here](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#sequences-tab) for instructions.
 
-### II. Catalog — Adding the Sequence Classification to the Tables
+### II. Catalog — Adding Sequence Classification to Tables
 
 Currently, the Catalog does not automatically identify the sequence fields. Thus, after a list of sequences has been set in the **Sequences** tab, the relevant Catalog fields should be manually marked as sequences. Build the Catalog artifacts when completing the manual updates.
 
 Click [here](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#sequences-tab) for instructions.
 
-Fabric 8.3 onwards supports a [bulk edit](/articles/39_fabric_catalog/catalog_app/14_1_bulk_creation.md) in the Catalog. This feature simplifies adding Sequence classification to the tables, since you can create a bulk for each Sequence and update the tables accordingly. A separate bulk needs to be created on each Sequence.
+[Bulk editing](/articles/39_fabric_catalog/catalog_app/14_1_bulk_creation.md) in the Catalog is supported from Fabric V8.3 onwards. This feature simplifies adding Sequence classification to the tables, since you can create a bulk for each Sequence and update the tables accordingly. A separate bulk needs to be created on each Sequence.
 
 **Example: Adding the CUSTOMER_ID Sequence to all fields named 'CUSTOMER_ID' in the CRM DB**:
 
