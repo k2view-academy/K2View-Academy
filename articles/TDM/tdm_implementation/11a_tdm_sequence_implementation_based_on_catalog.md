@@ -12,7 +12,7 @@ Click [here](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#sequ
 
 ### II. Catalog — Adding Sequence Classification to Tables
 
-Currently, the Catalog does not automatically identify the sequence fields. Thus, after a list of sequences has been set in the **Sequences** tab, the relevant Catalog fields should be manually marked as sequences. Build the Catalog artifacts when completing the manual updates.
+Currently, the Catalog does not automatically identify the sequence fields. Therefore, after a list of sequences is set in the **Sequences** tab, the relevant Catalog fields should be manually marked as sequences. Build the Catalog artifacts when completing the manual updates.
 
 Click [here](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#sequences-tab) for instructions.
 
