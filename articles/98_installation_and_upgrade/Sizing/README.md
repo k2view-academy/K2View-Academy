@@ -4,7 +4,7 @@ When sizing the K2view platform, there is no universal prescription. The right c
 
 ---
 
-## Fabric Web Studio Sizing Considerations  
+**Fabric Web Studio Sizing Considerations**
 
 Fabric Web Studio is the environment where developers design and maintain data products. The dominant sizing factor here is not the data itself, but the number of concurrent users and the complexity of their work. Each Studio space requires a dedicated share of memory and CPU, with around 8 GB RAM per space being a practical guideline. Larger teams or multiple active projects will drive the need for additional Studio spaces and, consequently, more worker nodes.  
 
@@ -12,23 +12,23 @@ It is also important to account for orchestration overhead. Deployments on Kuber
 
 ---
 
-## Fabric Sizing Considerations  
+**Fabric Sizing Considerations**
 
 Fabric is the runtime engine that powers real-time data products, and its sizing depends heavily on workload type.  
 
 When Fabric is used for **data exposure**, the main concern is API throughput. Payload size, caching strategy, and the number of concurrent threads directly influence how many calls a cluster can sustain. Sizing is a matter of balancing those factors and adding nodes to meet expected transaction volumes.  
 
-In **change data capture (CDC)** scenarios, Fabric must keep pace with the rate of change from source systems. The volume and velocity of CDC messages, along with the way Kafka consumer threads are tuned, define the necessary cluster capacity.  
+In *change data capture (CDC)* scenarios, Fabric must keep pace with the rate of change from source systems. The volume and velocity of CDC messages, along with the way Kafka consumer threads are tuned, define the necessary cluster capacity.  
 
-As a **system of record (SOR)**, Fabric assumes responsibility for inserts, updates, and reads. The workload profile—whether dominated by reads, writes, or a balance of both—determines the CPU and I/O requirements.  
+As a *system of record (SOR)*, Fabric assumes responsibility for inserts, updates, and reads. The workload profile—whether dominated by reads, writes, or a balance of both—determines the CPU and I/O requirements.  
 
-For **data pipelines and masking**, performance depends on the complexity of the transformations applied and the throughput of the source and target systems. Masking operations, particularly when handling personally identifiable information, can be CPU-intensive. Network performance also becomes a key factor when data is streamed across environments.  
+For *data pipelines and masking*, performance depends on the complexity of the transformations applied and the throughput of the source and target systems. Masking operations, particularly when handling personally identifiable information, can be CPU-intensive. Network performance also becomes a key factor when data is streamed across environments.  
 
 The common thread across all Fabric use cases is that scaling is linear. More nodes provide more throughput. What differs is the factor that dominates—transaction volume, change velocity, workload balance, or transformation complexity.  
 
 ---
 
-## TDM Sizing Considerations  
+**TDM Sizing Considerations**
 
 Test Data Management (TDM) builds on Fabric to extract, load, clone, and generate synthetic data. Here, performance is best measured in terms of business entities processed per second.  
 
@@ -42,7 +42,7 @@ In practice, TDM sizing is a balancing act. It reflects not just entity volumes,
 
 ---
 
-## GenAI Data Fusion  
+**GenAI Data Fusion**
 
 GenAI Data Fusion extends Fabric’s data exposure capabilities to support retrieval-augmented workflows for large language models. The Fabric platform is responsible for retrieving structured and unstructured data, applying masking and enrichment, and preparing the context that is ultimately provided to an LLM.  
 
@@ -52,7 +52,7 @@ In other words, sizing for GenAI Data Fusion is about ensuring Fabric can orches
 
 ---
 
-## Conclusion  
+**Conclusion**
 
 In every case, the answer to sizing begins with “it depends.”  
 
