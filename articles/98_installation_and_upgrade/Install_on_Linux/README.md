@@ -1,5 +1,5 @@
 
-<strong>Fabric 8 Setup Guide for Linux VM Installations</strong>
+<strong>Fabric Installation on a Linux VM</strong>
 
 <ul>
   <li><a href="/articles/98_installation_and_upgrade/Install_on_Linux/02_Fabric_8.x.x_Setup.md">Fabric 8.x Setup (Main Installation Guide)</a></li>
