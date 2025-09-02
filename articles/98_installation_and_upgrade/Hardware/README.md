@@ -43,10 +43,10 @@ Different components and deployment options require different system setups. Use
         Install Fabric Web Studio on dedicated Linux servers.
         Refer to
         <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/04_hardware_req_for_studio.md">
-          Linux/Docker Hardware Requirements
+          Linux System Requirements
         </a> and 
         <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/README.md">
-          Fabric Web Studio Installation
+          Fabric Web Studio Installation.
         </a> 
       </td>
     </tr>
@@ -57,14 +57,14 @@ Different components and deployment options require different system setups. Use
         either on-premises or on cloud provider instances sized to match the same hardware requirements.
         See
         <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/README.md">
-          Linux/Docker Hardware Requirements
+          Linux System Requirements
         </a>, 
         <a href="/articles/98_installation_and_upgrade/Install_on_Linux/README.md">
           Fabric Installation on Linux
         </a>, and
         <a href="/articles/98_installation_and_upgrade/Install_TDM/README.md">
-          TDM Installation
-        </a>.
+          TDM Installation.
+        </a>
       </td>
     </tr>
     <tr>
@@ -76,8 +76,29 @@ Different components and deployment options require different system setups. Use
           Kubernetes Requirements
         </a>, and 
         <a href="/articles/98_installation_and_upgrade/Install_on_Kubernetes/README.md">
-          Fabric Installation on Kubernetes
-        </a>.        
+          Fabric Installation on Kubernetes.
+        </a>       
+      </td>
+    </tr>
+    <tr>
+      <td>Fabric and GenAI Data Fusion</td>
+      <td>
+        Run Fabric and GenAI Data Fusion on a Linux VM or Kubernetes. GenAI Data Fusion extends Fabric’s data exposure capabilities to support retrieval-augmented workflows for large language models. The Fabric platform is responsible for retrieving structured and unstructured data, applying masking and enrichment, and preparing the context that is ultimately provided to an LLM. 
+        <br><br>Please refer to the Refer to
+        <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/00_hardware_requirements_for_POV.md">
+          Proof of Value Environment System Requirements
+        </a>, and either the
+        <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/04_hardware_req_for_studio.md">
+          Linux System Requirements
+        </a> or <a href="/articles/98_installation_and_upgrade/Hardware_K8s/README.md">
+          Kubernetes Requirements
+        </a>. 
+        <br><br> Please follow the respective installation instructions for the installation on a 
+        <a href="/articles/98_installation_and_upgrade/Install_on_Linux/README.md">
+          Linux VM
+        </a> or <a href="/articles/98_installation_and_upgrade/Install_on_Kubernetes/README.md">
+          on Kubernetes
+        </a>.  
       </td>
     </tr>
   </tbody>
