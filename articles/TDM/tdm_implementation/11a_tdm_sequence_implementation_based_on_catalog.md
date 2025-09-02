@@ -1,6 +1,6 @@
 # TDM — Catalog-based Sequence Implementation
 
-Fabric V8.2 has added the [Sequences tab](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#sequences-tab) to the Catalog. This tab allows to set up the sequences that can be generated in a project as part of a population or any other flow. 
+Fabric has added the [Sequences tab](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#sequences-tab) to the Catalog. This tab allows to set up the sequences that can be generated in a project as part of a population or any other flow. 
 
 ## Steps for Catalog-based Sequence Implementation
 
