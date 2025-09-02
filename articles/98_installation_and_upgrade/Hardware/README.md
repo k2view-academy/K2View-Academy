@@ -22,6 +22,9 @@ Step-by-step procedures for deploying Fabric, <a href="/articles/98_installation
 
 Recommended approaches for upgrading Fabric and TDM, including database backup, storage considerations, binary replacement, and validation steps. Kubernetes-specific upgrade strategies are also provided for self-managed clusters orchestrated by K2Cloud.
 
+
+---
+
 **Installation Scenarios**
 
 Different components and deployment options require different system setups. Use the table below to navigate to the correct requirements:
