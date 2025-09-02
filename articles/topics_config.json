@@ -325,12 +325,12 @@
 					"display name": "System Requirements",
 					"sub-topics": [
 						{
-							"display name": "Kubernetes Requirements",
-							"value": "98_installation_and_upgrade/Hardware_K8s"
-						},
-						{
 							"display name": "Linux / Docker Requirements",
 							"value": "98_installation_and_upgrade/Hardware_Linux_Docker"
+						},
+						{
+							"display name": "Kubernetes Requirements",
+							"value": "98_installation_and_upgrade/Hardware_K8s"
 						}
 					]
 				},
