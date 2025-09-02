@@ -1,6 +1,6 @@
 # K2view Platform Sizing Considerations: “It Depends”  
 
-When sizing the K2view platform, there is no universal prescription. The right configuration always depends on the use case, workload profile, and performance expectations. Different scenarios stress different resources — memory, CPU, I/O, network, or external services. The number of environments, the allocation of worker nodes, the configuration of Fabric workers, and even the size of connection pools are all influenced by these considerations.  
+When sizing the K2view platform, there is no universal prescription. The right configuration always depends on the use case, workload profile, and performance expectations. Different scenarios stress different resources — memory, CPU, I/O, network, or external services. The allocation of worker nodes, the configuration of Fabric workers, and even the size of connection pools are all influenced by these considerations.  
 
 ---
 
@@ -34,7 +34,7 @@ Test Data Management (TDM) builds on Fabric to extract, load, clone, and generat
 
 Extract operations depend on the throughput of the source database and the degree of parallelism configured in the system. Load operations, in turn, depend on the capacity of the target database to ingest data and on the number of loader threads allocated.  
 
-Cloning workloads are shaped by the complexity of entity synthesis, which can increase CPU demand. Rules-based synthetic data generation depends on the intricacy of the rules applied and tends to be CPU-bound, benefiting from additional worker threads. AI-based synthetic data generation introduces another variable: the use of machine learning models. In this case, batch size, worker allocation, and available acceleration (CPU or GPU, depending on implementation) all play a role in throughput.  
+Cloning workloads are shaped by the complexity of entity synthesis, which can increase CPU demand. Rules-based synthetic data generation depends on the intricacy of the rules applied and tends to be CPU-bound, benefiting from additional worker threads. For AI-based synthetic data generation, batch size, worker allocation, and CPU/GPU memory all play a role in throughput.  
 
 Full-table extract, mask, and load scenarios are influenced by the number of masked columns, the complexity of the masking logic, and the performance of both source and target systems.  
 
@@ -46,7 +46,7 @@ In practice, TDM sizing is a balancing act. It reflects not just entity volumes,
 
 GenAI Data Fusion extends Fabric’s data exposure capabilities to support retrieval-augmented workflows for large language models. The Fabric platform is responsible for retrieving structured and unstructured data, applying masking and enrichment, and preparing the context that is ultimately provided to an LLM.  
 
-The sizing considerations here mirror those of data exposure. API concurrency and latency expectations set the baseline for capacity. Additional overhead comes from enrichment steps and vector database lookups, which must be planned for in terms of CPU and memory allocation. Importantly, GPUs are not required within the Fabric environment itself. GPU acceleration, if needed, is handled by the external LLM service (such as AWS Bedrock or Azure OpenAI).  
+The sizing considerations here mirror those of data exposure. API concurrency and latency expectations set the baseline for capacity. Additional overhead arises from enrichment steps and vector database lookups, which must be factored into CPU and memory allocation plans. Importantly, GPUs are not required within the Fabric environment itself. GPU acceleration is handled by the external LLM service (such as AWS Bedrock or Azure OpenAI).  
 
 In other words, sizing for GenAI Data Fusion is about ensuring Fabric can orchestrate queries, apply transformations, and manage context delivery efficiently, while leaving AI model execution to the LLM provider.  
 
