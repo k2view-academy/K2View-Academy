@@ -52,7 +52,6 @@ Use dedicated servers for Fabric instances. Following a sizing process, the exac
 * RedHat (version 7 or higher) based distribution (for example: CentOS, Oracle Linux).   
 * Ubuntu Server, version 18.04 or higher. 
 
-For docker installation, the latest **Docker Engine** and **Docker Compose** installations are recommended.
 
 ### Hardware Requirements:
 
