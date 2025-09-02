@@ -2,9 +2,9 @@
 
 Fabric V8.2 has added the [Sequences tab](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#sequences-tab) to the Catalog. This tab allows to set up the sequences that can be generated in a project as part of a population or any other flow. 
 
-## Catalog-based Sequence Implementation Steps
+## Steps for Catalog-based Sequence Implementation
 
-### I. Catalog - Populating the Sequences Tab
+### I. Catalog — Populating the Sequences Tab
 
 This includes adding the Sequence classification to the Sequences tab and setting the data generator for each sequence. 
 
