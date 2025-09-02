@@ -4,18 +4,27 @@ The Installation & Upgrade section provides the foundation for installing and up
 
 This section connects system requirements directly to the installation and upgrade guides, helping you plan, size, and maintain your environments consistently across all deployment models.
 
-**System Requirements**: Baseline specifications (CPU, memory, disk, network) for on-premises servers and equivalent cloud instance types. Separate recommendations are provided for <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/04_hardware_req_for_studio.md">Fabric Web Studio</a>, <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/00_hardware_requirements_for_POV.md">Proof-of-Value (POV)</a>, <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/02_hardware_req_for_dev_qa.md">Development/QA</a>, and <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/03_hardware_req_for_prod.md">Production environments</a>.
+---
 
-**Installation Guidance**: Step-by-step procedures for deploying Fabric, <a href="/articles/98_installation_and_upgrade/Install_TDM/README.md">TDM</a>, <a href="/articles/AI_fusion/01_overview.md">GenAI Data Fusion</a>, and <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/README.md">Fabric Web Studio</a> within <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/README.md">Docker/Podman containers (Fabric Web Studio)</a>, on <a href="/articles/98_installation_and_upgrade/Install_on_Linux/README.md">Linux servers (Fabric, TDM, or GenAI Data Fusion)</a>, and on <a href="/articles/98_installation_and_upgrade/Install_on_Kubernetes/README.md">Kubernetes clusters (Fabric, TDM, or GenAI Data Fusion)</a>.
+**System Requirements**
 
+Baseline specifications (CPU, memory, disk, network) for on-premises servers and equivalent cloud instance types. Separate recommendations are provided for <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/04_hardware_req_for_studio.md">Fabric Web Studio</a>, <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/00_hardware_requirements_for_POV.md">Proof-of-Value (POV)</a>, <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/02_hardware_req_for_dev_qa.md">Development/QA</a>, and <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/03_hardware_req_for_prod.md">Production environments</a>.
 
-**Upgrade Procedures**: Recommended approaches for upgrading Fabric and TDM, including database backup, storage considerations, binary replacement, and validation steps. Kubernetes-specific upgrade strategies are also provided for self-managed clusters orchestrated by K2Cloud.
+---
+
+**Installation Guidance**
+
+Step-by-step procedures for deploying Fabric, <a href="/articles/98_installation_and_upgrade/Install_TDM/README.md">TDM</a>, <a href="/articles/AI_fusion/01_overview.md">GenAI Data Fusion</a>, and <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/README.md">Fabric Web Studio</a> within <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/README.md">Docker/Podman containers (Fabric Web Studio)</a>, on <a href="/articles/98_installation_and_upgrade/Install_on_Linux/README.md">Linux servers (Fabric, TDM, or GenAI Data Fusion)</a>, and on <a href="/articles/98_installation_and_upgrade/Install_on_Kubernetes/README.md">Kubernetes clusters (Fabric, TDM, or GenAI Data Fusion)</a>.
+
+---
+
+**Upgrade Procedures**
+
+Recommended approaches for upgrading Fabric and TDM, including database backup, storage considerations, binary replacement, and validation steps. Kubernetes-specific upgrade strategies are also provided for self-managed clusters orchestrated by K2Cloud.
 
 **Installation Scenarios**
 
 Different components and deployment options require different system setups. Use the table below to navigate to the correct requirements:
-
-**Installation Scenarios**
 
 <table>
   <thead>
@@ -71,6 +80,7 @@ Different components and deployment options require different system setups. Use
   </tbody>
 </table>
 
+---
 
 **How to Use This Section**
 
