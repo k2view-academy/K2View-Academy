@@ -249,7 +249,7 @@ The below table displays the list of Fabric versions with their release informat
             <td>September 2, 2022</td>
             <td>HF32</td>
             <td>September 1, 2025</td>
-            <td>280</td>
+            <td>294</td>
             <td></td>
         </tr>
         <tr>
