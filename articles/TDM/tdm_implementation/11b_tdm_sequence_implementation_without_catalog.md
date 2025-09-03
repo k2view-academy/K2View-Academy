@@ -35,13 +35,13 @@ The TDM library includes a **TDMSeqList** Actor that holds a list of sequences. 
 
 
 
-Following completion of the Actor's update, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button (top of the Project tree). This action applies the changes in the **TDMSeqList** Actor and deploys the **TDM LU**.
+Update the Actor’s **table** parameter and then refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button (top of the Project tree). This action applies the changes in the **TDMSeqList** Actor and deploys the **TDM LU**.
 
 
 
 ## Populate the Sequence Mapping Table
 
-The **TDMSeqSrc2TrgMapping** table maps between the generated sequence Actors and the target table columns. A sequence Actor can be mapped into multiple tables and LUs.
+The **TDMSeqSrc2TrgMapping** table maps between the generated sequence Actors and the target table columns. A sequence Actor can be mapped to multiple tables and LUs.
 
 View the below example:
 
@@ -49,7 +49,7 @@ View the below example:
 
 
 
-This table serves 2 purposes: 
+This table serves two purposes: 
 
 1. Adding the sequence Actors to the load flows. Populate **TDMSeqSrc2TrgMapping** table to map between the generated sequence Actors and the target tables' columns. A sequence Actor can be mapped into a different table and a different LU.
 
