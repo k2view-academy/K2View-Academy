@@ -4,7 +4,7 @@ To create the sequences for your TDM implementation, follow these steps:
 
 ## Generate Sequence Actors
 
-The TDM library includes a **TDMSeqList** Actor that holds a list of sequences. Open this Actor and populate it with the relevant information for your TDM implementation as follows:
+The TDM library includes a **TDMSeqList** Actor that holds a list of sequences. Open this Actor and populate the **table** parameter with the relevant information for your TDM implementation as follows:
 
    - **SEQUENCE_NAME** — the sequence name must be identical to the DB sequence name if the next value is taken from the DB.
 
@@ -25,7 +25,7 @@ The TDM library includes a **TDMSeqList** Actor that holds a list of sequences. 
 
    Click [here](/articles/19_Broadway/actors/08_sequence_implementation_guide.md) for more information about the sequence Actors.
 
-   An example of the **TDMSeqList** Actor:
+   An example of the **TDMSeqList** Actor's **table** parameter:
 
    ![image](images/tdmSeqListExample.png)
 
@@ -41,7 +41,7 @@ Following completion of the Actor's update, refresh the project by clicking the 
 
 ## Populate the Sequence Mapping Table
 
-The **TDMSeqSrc2TrgMapping** table maps between the generated sequence Actors and the target tables' columns. A sequence Actor can be mapped into multiple tables and LUs.
+The **TDMSeqSrc2TrgMapping** table maps between the generated sequence Actors and the target table columns. A sequence Actor can be mapped into multiple tables and LUs.
 
 View the below example:
 
