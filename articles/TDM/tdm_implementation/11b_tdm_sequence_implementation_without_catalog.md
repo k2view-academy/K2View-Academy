@@ -41,7 +41,7 @@ Update the Actor’s **table** parameter and then refresh the project by clickin
 
 ## Populate the Sequence Mapping Table
 
-The **TDMSeqSrc2TrgMapping** table maps between the generated sequence Actors and the target table columns. A sequence Actor can be mapped to multiple tables and LUs.
+The **TDMSeqSrc2TrgMapping** table maps between the generated sequence Actors and columns of the target tables. A sequence Actor can be mapped to multiple tables and LUs.
 
 View the below example:
 
@@ -51,20 +51,20 @@ View the below example:
 
 This table serves two purposes: 
 
-1. Adding the sequence Actors to the load flows. Populate **TDMSeqSrc2TrgMapping** table to map between the generated sequence Actors and the target tables' columns. A sequence Actor can be mapped into a different table and a different LU.
+1. Adding the sequence Actors to the load flows. Populate the **TDMSeqSrc2TrgMapping** table to map between the generated sequence Actors and the columns of the target tables. A sequence Actor can be mapped to a different table and a different LU.
 
 2. Adding the sequence Actors to the data generation flow that generates synthetic data for the LU table. 
 
 
-Click [here](16_tdm_data_generation_implementation.md) for more information about the rule-based synthetic data generation implementation.
+Click [here](16_tdm_data_generation_implementation.md) for more information about implementing rule-based synthetic data generation.
 
 ## Custom Sequence Logic
 
-By default, the generated sequence Actors and flows use the [MaskingSequence](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) Actor. Fabric enables you to create your own function or Broadway flow in order to generate a new ID using either **MaskingLuFunction** Actor or **Masking** Actor instead of the default MaskingSequence Actor. 
+By default, the generated sequence Actors and flows use the [MaskingSequence](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) Actor. Fabric enables creating your own function or Broadway flow in order to generate a new ID using either **MaskingLuFunction** or **Masking** Actors instead of the default MaskingSequence Actor. 
 
 Follow these steps for setting custom logic for a given sequence:
 
-- Open the generated sequence flow and replace the MaskingSequence Actor with **MaskingLuFunction** Actor or **Masking** Actor. 
+- Open the generated sequence flow and replace the MaskingSequence Actor with either **MaskingLuFunction** or **Masking** Actors. 
 - Set the **category** input parameter of the Masking or MaskingLuFunction to **enable_sequences** in order to use the Actor for sequence (ID) replacement.  
 
 Click for more information about [customizing the replace sequence logic](/articles/19_Broadway/actors/08_sequence_implementation_guide.md).
