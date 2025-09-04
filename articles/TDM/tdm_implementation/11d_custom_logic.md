@@ -24,7 +24,7 @@ TDM enables **two execution modes** for the Custom Logic flows:
 
 The Custom Logic Broadway flow can be created in either the **Shared Objects** or **a given LU**.
 
-The Custom Logic Broadway flow always has **two external input parameters** and it gets their values from the task execution process:
+The Custom Logic Broadway flow always includes **two external input parameters** and it gets their values from the task execution process:
 
 - LU_NAME
 - NUM_OF_ENTITIES — the maximum number of entities to be processed by the task execution. The number is set in either the task or the task's [overridden parameters](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-additional-task-execution-parameters).
