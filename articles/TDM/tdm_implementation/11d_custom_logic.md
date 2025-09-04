@@ -7,7 +7,7 @@ TDM enables **two execution modes** for the Custom Logic flows:
 
 1. **Direct Call** — a newly added mode in which the batch process calls the Custom Logic flow directly **to obtain the entity list, without pre-populating the entities in a dedicated table**. This approach is **available only when the flow is based on a single DbCommand** — that is, when it runs one SELECT query to get the required entities — and the **Business entity contains only one root LU**.
 
-   The Direct Call mode performs rather better: It does not need to complete the population of all entities in a predefined table before starting the task execution. The task execution consumes the output cursor of the SELECT statement and executes the task on any chunk of consumed entities. Due to this behavior, **the Direct Call mode does not fit a Business Entity with multiple root LUs that must run on the same entity list**.
+   The Direct Call mode performs rather better: It does not need to complete the population of all entities in a predefined table before starting the task execution. The task execution consumes the output cursor of the SELECT statement and executes the task on any chunk of consumed entities. Due to this behavior, **the Direct Call mode is not suitable for Business Entities with multiple root LUs that must run on the same entity list**.
 
 2. **Indirect call** — the indirect call **creates and populates a dedicated table in the TDM DB**. The table is created for each execution using the naming convention: `entity_list_<task exe_id>`. The task execution's batch process runs a SELECT query from the newly created table to get the task's entities. Once the task execution is completed, the table is dropped from the DB.  
 
