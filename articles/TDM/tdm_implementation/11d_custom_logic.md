@@ -59,7 +59,7 @@ A [Direct Call](#custom-logic---tdm-81-improvements) Custom Logic flow should ha
 
 1. Init — calls the **TDMSetSessionGlobals** Actor to run the initial setting for the custom logic flow execution. The SESSION_GLOBALS input parameter must be defined as an external parameter. The external parameter name must be SESSION_GLOBALS.
 
-2. **DbCommand** — defines the SELECT statement to select the task's entities. The SELECT statement must return only the entity IDs. 
+2. **DbCommand** — defines the SELECT statement to select the task entities. The SELECT statement must return only the entity IDs. 
 
 3. **customLogicDirectFlowUtil** — filters out the reserved entities if needed, and formats the entity IDs for the task execution:
    - Set the **NUMBER_OF_ENTITIES** input parameter to be external.
@@ -72,7 +72,7 @@ A [Direct Call](#custom-logic---tdm-81-improvements) Custom Logic flow should ha
 
 - **Stage 1**: 
 
-  - Add logic, requiring the entities - for example, a DbCommand Actor that runs a Select statement on the CRM DB. The Actor needs to return the list of the selected entity IDs. 
+  - Add logic, requiring the entities - for example, a DbCommand Actor that runs a SELECT statement on the CRM DB. The Actor needs to return the list of the selected entity IDs. 
   - Initialize the entities' number counter for execution - add the **InitRecordCount** TDM Actor (imported from the TDM library).
   - Notes: 
     - If the flow needs to get an array of parameters, it is recommended to define the external input parameter as a String and add a **Split** Actor to the flow in order to split the values by the delimiter and populate them into a String's array.
@@ -80,7 +80,7 @@ A [Direct Call](#custom-logic---tdm-81-improvements) Custom Logic flow should ha
 
 - **Stages 2-4**: **Loop on the selected entities** — set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop in order to have one commit for all iterations: 
 
-  1. Stage 2: Set the selected entity ID - returned by the Actor of Stage 1 - to a String using the **ToString** Actor.
+  1. Stage 2: Set the selected entity ID — returned by the Actor of Stage 1 — to a String using the **ToString** Actor.
 
   2. Stage 3: Call **CheckReserveAndLoadToEntityList** TDM Broadway flow (imported from the TDM library):
 
@@ -95,12 +95,12 @@ A [Direct Call](#custom-logic---tdm-81-improvements) Custom Logic flow should ha
 
      **Example**:
 
-     The task needs to get 5 entities. The Select statement gets 20 entities. The first 2 selected entities are reserved for another user. The 3rd, 4th, 5th, 6th, and 7th entities are available and are populated in the entity table; the entity loop then stops.
+     The task needs to get 5 entities. The SELECT statement gets 20 entities. The first 2 selected entities are reserved for another user. The 3rd, 4th, 5th, 6th, and 7th entities are available and are populated in the entity table; the entity loop then stops.
 
 
 Below are examples of a Custom Logic flow:
 
-**Example 1 — get the Contract Status as an input parameter and build the Select statement accordingly:** 
+**Example 1 — get the Contract Status as an input parameter and build the SELECT statement accordingly:** 
 
 ![custom logic](images/custom_logic_example.png)
 
@@ -116,7 +116,7 @@ An example of the US states' input:
 
 
 
-**Example 3 — get an input Select statement with parameters for the Select statement:**
+**Example 3 — get an input SELECT statement with parameters for the SELECT statement:**
 
 ![custom logic](images/custom_logic_example_3.png)
 
