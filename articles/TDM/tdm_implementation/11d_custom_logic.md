@@ -5,7 +5,7 @@ One or more Broadway flows can be designed to define the logic, which ultimately
 
 TDM enables **two execution modes** for the Custom Logic flows:
 
-1. **Direct Call** — a newly added mode, where the batch process calls the Custom Logic flow directly, **getting the entity list without pre-populating the entities in a dedicated table**. This approach is **available only when the flow is based on one single DbCommand**, i.e., runs one Select query to get the required entities, and the **Business entity has only one root LU**.
+1. **Direct Call** — a newly added mode, where the batch process calls the Custom Logic flow directly, **getting the entity list without pre-populating the entities in a dedicated table**. This approach is **available only when the flow is based on a single DbCommand** — that is, when it runs one SELECT query to get the required entities — and the **Business entity contains only one root LU**.
 
    The Direct Call mode performs rather better: It does not need to complete the population of all entities in a predefined table before starting the task execution. The task execution consumes the output cursor of the Select statement and executes the task on any chunk of consumed entities. Due to this behavior, **the Direct Call mode does not fit a Business Entity with multiple root LUs that must run on the same entity list**.
 
