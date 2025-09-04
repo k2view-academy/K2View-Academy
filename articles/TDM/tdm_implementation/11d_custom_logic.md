@@ -28,18 +28,18 @@ TDM supports **two execution modes** for running Custom Logic flows: **Direct Ca
 
 The Custom Logic Broadway flow can be created in either the **Shared Objects** or **a given LU**.
 
-The Custom Logic Broadway flow always includes **two external input parameters** and it gets their values from the task execution process:
+The Custom Logic Broadway flow always includes **two external input parameters**, whose values are provided by the task execution process:
 
 - LU_NAME
 - NUM_OF_ENTITIES — the maximum number of entities to be processed by the task execution. The number is set in either the task or the task's [overridden parameters](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-additional-task-execution-parameters).
 
-TDM supports the creation of **additional external parameters** in the flow, enabling the user to send the values of these parameters in the TDM task; e.g., you can add an external parameter name - customer_status - to the flow. The flow selects the customers for the task based on the customer_status input parameter. This way you can filter the selected customers by their status and still use the same flow to select them.
+TDM supports the creation of **additional external parameters** in the flow, enabling the user to send the values of these parameters in the TDM task. For example, you can add an external parameter named customer_status to the flow. The flow then selects customers for the task based on this input parameter. This way, you can filter customers by their status and still use the same flow to select them.
 
 **Notes:** 
 
 - The input parameter name must **not contain spaces or double quotes**.
 
-- TDM 8.0 added an integration of **Broadway editors** into the TDM portal when populating either the data generation parameters or the Custom logic parameters in the task’s tabs. This integration enables the user to select a valid value from a list, to set dates, and to set distributed parameters. 
+- TDM V8.0 introduced integration of **Broadway editors** into the TDM portal when populating either data generation or Custom logic parameters in the task tabs. This integration enables users to select valid values from a list, set dates, and configure distributed parameters. 
 
   Click [here](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md) for more information about the TDM integration with the Broadway editors and related implementation instructions.
 
@@ -167,7 +167,7 @@ The customLogicSql flow runs in a **direct call** mode.
 1. Run the **createLuExternalEntityListTable** TDM flow (imported from the TDM library) and populate the input **taskExecutionId** parameter to create the entity table in the TDM DB.
 2. Populate the input parameters and run the customized flow. 
 
-## 2. Add the flow to **CustomLogicFlows** Actor
+## 2. Add the Flow to **CustomLogicFlows** Actor
 
 Add the LU name and Custom Logic flow name to the **CustomLogicFlows** constTable TDM Actor (imported from the TDM library).
 
