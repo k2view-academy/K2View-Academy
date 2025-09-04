@@ -57,7 +57,7 @@ A [Direct Call](#custom-logic---tdm-81-improvements) Custom Logic flow should ha
 
 ![direct call structure](images/direct_call_custom_logic_structure.png)
 
-1. Init — calls the **TDMSetSessionGlobals** Actor to run the initial setting for the custom logic flow execution. The SESSION_GLOBALS input parameter must be defined as an external parameter. The external parameter name must be SESSION_GLOBALS.
+1. Init — calls the **TDMSetSessionGlobals** Actor to run the initial setting for the Custom Logic flow execution. The SESSION_GLOBALS input parameter must be defined as an external parameter named SESSION_GLOBALS.
 
 2. **DbCommand** — defines the SELECT statement to select the task entities. The SELECT statement must return only the entity IDs. 
 
