@@ -81,6 +81,6 @@ For more information about an advanced setup, read below:
 <ul>
    <li><a href="/articles/98_installation_and_upgrade/Install_on_Linux/02_Fabric_8.x.x_Setup.md">Fabric Installation</a></li>
    <li><a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md">Fabric main configuration files</a></li>
-   <li><a href="/articles/26_fabric_security/13_user_IAM_configuration.md">SAML configuration</a></li>
+   <li><a href="/articles/26_fabric_security_iam/13_user_IAM_configuration.md">SAML configuration</a></li>
    <li><a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/README.md">Hardware requirements</a></li>
 </ul>
