@@ -106,7 +106,7 @@ Below are examples of a Custom Logic flow:
 
 
 
-**Example 2 — get an input String of States, separated by a comma. Split the input String into an array and send it to the SQL query**:
+**Example 2 — get an input String of states, separated by a comma. Split the input String into an array and send it to the SQL query**:
 
 An example of input for US states: 
 
@@ -120,15 +120,15 @@ An example of input for US states:
 
 ![custom logic](images/custom_logic_example_3.png)
 
-Note: When exposing the SQL statement as an external parameter for the user, verify that it runs on a read-only DB connection; this would prevent a DB update.
+Note: When exposing the SQL statement as an external parameter for the user, ensure it runs on a read-only DB connection to prevent any DB updates.
 
 ### Examples — CustomLogicSql Flow
 
-A new generic Custom Logic flow has been added to the TDM library: **CustomLogicSql**. This flow gets an SQL query to run on a given DB interface. 
-Edit the flow in order to use it in the TDM tasks:
+A new generic Custom Logic flow, **CustomLogicSql** has been added to the TDM library. This flow executes a given SQL query on a specified DB interface. 
+Edit the flow in order to use it in TDM tasks:
 
- - Populate the **interface** input parameter in the **Run Input SQL** Actor (currently it is defined as an empty linked field).
- - It is recommended to update the external name of the **sql** input parameter in the **Run Input SQL** Actor to a meaningful name (currently it is populated with SQL). For example, SQL_query_on_CRM. 
+ - Populate the ***interface*** input parameter in the **Run Input SQL** Actor, which is currently defined as an empty linked field.
+ - It is recommended to update the external name of the ***sql*** input parameter in the **Run Input SQL** Actor to a meaningful name (currently set to *SQL*). For example, SQL_query_on_CRM. 
  - Add the CustomLogicSql flow to the **CustomLogicFlows** Actor. Populate the new record as follows:
    -  LU_NAME: optional. Can be left empty.
    -  FLOW_NAME: CustomLogicSql
@@ -137,10 +137,10 @@ Edit the flow in order to use it in the TDM tasks:
   - Redeploy the Web Services to Fabric.
   - If the LU_NAME field is populated with an LU name, redeploy the LU name to Fabric. Else (if the LU_NAME field is empty), redeploy the TDM LU to Fabric.
 
-The following parameters can be set by the user who creates the task:
+The following parameters can be set by the task creator:
 
-- **sql** — mandatory parameter defining the Select query to run on the TDM DB and to get the task's entity list.
-- **sqlParams** — optional parameter to set parameters for the Select query. You can set multiple parameters separated by a comma.
+- **sql** — mandatory parameter defining the SELECT query to run on the TDM DB and to get the task's entity list.
+- **sqlParams** — optional parameter to set parameters for the SELECT query. You can set multiple parameters separated by a comma.
 
 The customLogicSql flow runs in a **direct call** mode. 
 
