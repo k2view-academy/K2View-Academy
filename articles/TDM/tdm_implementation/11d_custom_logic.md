@@ -108,7 +108,7 @@ Below are examples of a Custom Logic flow:
 
 **Example 2 — get an input String of States, separated by a comma. Split the input String into an array and send it to the SQL query**:
 
-An example of the US states' input: 
+An example of input for US states: 
 
 - NY,CA
 
