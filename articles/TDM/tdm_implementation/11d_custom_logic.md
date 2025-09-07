@@ -63,9 +63,9 @@ A Direct Call Custom Logic flow should have the following structure:
 
 3. **customLogicDirectFlowUtil** — filters out the reserved entities if needed, and formats the entity IDs for the task execution:
    - Set the **NUMBER_OF_ENTITIES** input parameter to be external.
-   - Link the DBCommand result to the **input values** parameter.
+   - Link the DBCommand result to the **values** input parameter.
    - Set the **innerFlowClose** input parameter to **false** in order to support the streaming of the resultSet by the inner flow and avoid the Broadway limitation of the maximum number of records (set to 100K by default).
-   - The **output values** parameter must be external.
+   - The **values** output parameter must be external.
 
 
 #### Indirect Call Flow
