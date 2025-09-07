@@ -76,7 +76,7 @@ A Direct Call Custom Logic flow should have the following structure:
   - Initialize the entity counter for execution by adding the **InitRecordCount** TDM Actor (imported from the TDM library).
   - Notes: 
     - If the flow needs to obtain an array of parameters, it is recommended to define the external input parameter as a String and to add a **Split** Actor to the flow in order to separate the values by a delimiter and populate them into a String array.
-    - It is recommended to add a limit to the SQL query if you do not need to filter out reserved entities when running this flow. This way, the query returns a limited number of records.
+    - If filtering out reserved entities is not required when running this flow, it is recommended to add a limit to the SQL query. This way, the query would return only a limited number of records.
 
 - **Stages 2-4**: **Loop on the selected entities** — set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop in order to have one commit for all iterations: 
 
