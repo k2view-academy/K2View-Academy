@@ -177,7 +177,7 @@ View the below example:
 
 
 
-Check the **DIRECT_FLOW** checkbox to enable a Direct Call of the Custom Logic flow.
+Check the **DIRECT_FLOW** checkbox to enable Direct Call of the Custom Logic flow.
 
 Redeploy the Web Services.
 
