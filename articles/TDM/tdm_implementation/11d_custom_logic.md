@@ -45,7 +45,7 @@ TDM supports the creation of **additional external parameters** in the flow, ena
 
 - Sending multiple values in one parameter — you can define a String input parameter to provide a list of values, which the Broadway flow can split into an array using a specified delimiter (e.g.,"CA,NY"). The delimiter is configured in the split Actor within the flow.
 
-- You can define a SELECT statement as an input argument. The SELECT statement can have binding parameters. The parameter values can be either sent into a separate input parameter or added to the SELECT statement. See the [CustomLogicSql flow's examples](#examples-of-an-input-select-query) above.
+- You can define a SELECT statement as an input argument. The SELECT statement can have binding parameters. The parameter values can be provided either through separate input parameters or directly within the SELECT statement. See the [CustomLogicSql flow's examples](#examples-of-an-input-select-query) above.
 
   
 
