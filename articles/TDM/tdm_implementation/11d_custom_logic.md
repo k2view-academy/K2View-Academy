@@ -146,13 +146,13 @@ The CustomLogicSql flow runs in a **direct call** mode.
 
 ##### Examples of an input SELECT query:
 
-1. Populating both parameters — the **sql** and the **sqlParams**: 
+1. Populate both parameters — **sql** and **sqlParams**: 
 
    - **sql**: 
 
      select distinct cust.customer_id from customer cust, activity act, cases cs  where cust.customer_id = act.customer_id and act.activity_id = cs.activity_id and cs.status = ?  and cs.case_type = ? 
 
-   - **SqlParams:**
+   - **sqlParams:**
 
      Open,Billing Issue
 
