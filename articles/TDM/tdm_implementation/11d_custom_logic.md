@@ -78,14 +78,14 @@ A Direct Call Custom Logic flow should have the following structure:
     - If the flow needs to obtain an array of parameters, it is recommended to define the external input parameter as a String and to add a **Split** Actor to the flow in order to separate the values by a delimiter and populate them into a String array.
     - If filtering out reserved entities is not required when running this flow, it is recommended to add a limit to the SQL query. This way, the query would return only a limited number of records.
 
-- **Stages 2-4**: **Loop on the selected entities** — set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop in order to have one commit for all iterations: 
+- **Stages 2-4**: **Loop on the selected entities** — set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) within the loop to ensure a single commit for all iterations: 
 
   1. Stage 2: Set the selected entity ID — returned by the Actor of Stage 1 — to a String using the **ToString** Actor.
 
-  2. Stage 3: Call **CheckReserveAndLoadToEntityList** TDM Broadway flow (imported from the TDM library):
+  2. Stage 3: Call the **CheckReserveAndLoadToEntityList** TDM Broadway flow (imported from the TDM library):
 
-     - **Input** — **LU_NAME** parameter. This is an **external parameter** and it gets its value by the task execution process.
-     - **Output** — **recordLoaded**. This is the entity number counter, loaded into the entity table.
+     - **Input** — **LU_NAME** parameter. This is an **external parameter**, whose value is populated by the task execution process.
+     - **Output** — **recordLoaded**. This is the entity number counter, which is loaded into the entity table.
      - This flow executes the following activities on each selected entity ID:
 
    - Checking whether the entity is reserved for another user in the task's target environment when running a load task without a sequence replacement, a delete task, or a reserve task. If the entity is reserved for another user, it skips it, as it is unavailable.
