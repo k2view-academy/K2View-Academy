@@ -171,7 +171,7 @@ The CustomLogicSql flow runs in a **direct call** mode.
 
 Add the LU name and Custom Logic flow name to the **CustomLogicFlows** constTable TDM Actor (imported from the TDM library).
 
-View the example below:
+View the below example:
 
 ![custom logic](images/custom_logic_table_example.png)
 
