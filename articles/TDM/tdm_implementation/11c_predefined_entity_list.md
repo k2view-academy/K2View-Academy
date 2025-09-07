@@ -22,13 +22,13 @@ Redeploy the related LUs and the TDM LU.
 
 The Broadway flow needs to generate the entity list and call the TDM library Actors to insert them into a dedicated table in the TDM DB. For each task execution, a separate entity table is created with the following naming convention: `entity_list_<task exe_id>`. 
 
-The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) runs the [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) on entities in the entity table that are a part of the current task execution, having the current task execution id. The table is dropped at the end of the task execution.
+The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) runs the [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) on entities in the entity table that belong to the current task execution (identified by the current task execution id). The table is dropped at the end of the task execution.
 
-From TDM 8.1 onwards, the entity table is created in the TDM DB.
+From TDM V8.1 onwards, the entity table is created in the TDM DB.
 
 ## Debugging the Broadway Flow
 
-1. Run the **createLuExternalEntityListTable** TDM flow (imported from the TDM library) and populate the input **taskExecutionId** parameter to create the entity table in the TDM DB.
+1. Run the **createLuExternalEntityListTable** TDM flow (imported from the TDM library) and populate the **taskExecutionId** input parameter to create the entity table in the TDM DB.
 2. Populate the input parameters and run the customized Broadway flow. 
 
 
