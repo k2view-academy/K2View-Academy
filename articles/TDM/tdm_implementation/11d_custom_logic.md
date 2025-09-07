@@ -73,7 +73,7 @@ A Direct Call Custom Logic flow should have the following structure:
 - **Stage 1**: 
 
   - Add logic that requires entities, such as a DbCommand Actor running a SELECT statement on the CRM DB. The Actor needs to return the list of the selected entity IDs. 
-  - Initialize the entities' number counter for execution — add the **InitRecordCount** TDM Actor (imported from the TDM library).
+  - Initialize the entity counter for execution by adding the **InitRecordCount** TDM Actor (imported from the TDM library).
   - Notes: 
     - If the flow needs to get an array of parameters, it is recommended to define the external input parameter as a String and add a **Split** Actor to the flow in order to split the values by the delimiter and populate them into a String's array.
     - It is recommended to add a limit to the SQL query if you do not need to filter out reserved entities when running this flow. This way, the query returns a limited number of records.
