@@ -24,7 +24,6 @@ The Broadway flow needs to generate the entity list and call the TDM library Act
 
 The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) runs the [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) on entities in the entity table that belong to the current task execution (identified by the current task execution id). The table is removed when the task execution process is complete.
 
-As of TDM V8.1, the entity table is created in the TDM DB.
 
 ## Debugging the Broadway Flow
 
