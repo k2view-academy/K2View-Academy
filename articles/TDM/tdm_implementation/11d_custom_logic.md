@@ -53,7 +53,7 @@ TDM supports the creation of **additional external parameters** in the flow, ena
 
 #### Direct Call Flow
 
-A [Direct Call](#custom-logic---tdm-81-improvements) Custom Logic flow should have the following structure:
+A Direct Call Custom Logic flow should have the following structure:
 
 ![direct call structure](images/direct_call_custom_logic_structure.png)
 
@@ -177,7 +177,7 @@ View the example below:
 
 
 
-Check the **DIRECT_FLOW** checkbox to enable a [direct call](#custom-logic---tdm-81-improvements) of the Custom Logic flow.
+Check the **DIRECT_FLOW** checkbox to enable a Direct Call of the Custom Logic flow.
 
 Redeploy the Web Services.
 
