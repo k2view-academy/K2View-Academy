@@ -139,10 +139,10 @@ Edit the flow in order to use it in TDM tasks:
 
 The following parameters can be set by the task creator:
 
-- **sql** — mandatory parameter defining the SELECT query to run on the TDM DB and to get the task's entity list.
-- **sqlParams** — optional parameter to set parameters for the SELECT query. You can set multiple parameters separated by a comma.
+- **sql** — mandatory parameter that defines the SELECT query to run on the TDM DB and retrieve the task's entity list.
+- **sqlParams** — optional parameter for setting values in the SELECT query. You can set multiple parameters, separated by a comma.
 
-The customLogicSql flow runs in a **direct call** mode. 
+The CustomLogicSql flow runs in a **direct call** mode. 
 
 ##### Examples of an input SELECT query:
 
