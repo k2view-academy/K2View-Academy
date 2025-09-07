@@ -98,7 +98,7 @@ A Direct Call Custom Logic flow should have the following structure:
      The task needs to retrieve 5 entities. The SELECT statement selects 20 entities. The first 2 selected entities are reserved for another user. The 3rd, 4th, 5th, 6th, and 7th entities are available and are populated in the entity table; the entity loop then stops.
 
 
-Below are examples of a Custom Logic flow:
+Examples of a Custom Logic flow are shown below:
 
 **Example 1 — get the Contract Status as an input parameter and build the SELECT statement accordingly:** 
 
