@@ -1,21 +1,21 @@
 # TDM Installation and Initial Configuration
 
-This document outlines installation guidelines and initial configuration procedures required for a new TDM installation. The upgrade to TDM V9.4 is described in the [TDM upgrade document](/articles/98_installation_and_upgrade/Upgrade_TDM/TDM_Upgrade_Procedure_to_V9.4.pdf).
+This document outlines installation guidelines and initial configuration steps for a new TDM installation. The procedure for upgrading to TDM V9.4 is described in the [TDM upgrade document](/articles/98_installation_and_upgrade/Upgrade_TDM/TDM_Upgrade_Procedure_to_V9.4.pdf).
 
 ## Table of Contents
 
-- [TDM Development Environment Installation](#tdm-on-prem-installation--desktop-studio)
+- [TDM Development Environment — Installation](#tdm-on-prem-installation--desktop-studio)
     - [TDM On-Prem Installation — Desktop Studio](#tdm-on-prem-installation--desktop-studio)
     - [TDM On-Prem Installation — Web Studio](#tdm-on-prem-installation--web-studio)
     - [TDM K2view Cloud Installation](#k2view-cloud-development-environment-installation)     
-- [TDM Non-Development Environment Installation](#tdm-non-development-environment-installation)
+- [TDM Non-Development Environment — Installation](#tdm-non-development-environment-installation)
     - [On-Prem VM Installation](#on-prem-vm-installation) 
     - [K2view Cloud Installation](#k2view-cloud-installation)
 
 - [TDM Initial Setup](#tdm-initial-setup)
-- [Optional — TDM AI Installation](#optional--tdm-ai-installation)
+- [Optional Installation: TDM AI](#optional--tdm-ai-installation)
 
-## TDM Development Environment Installation
+## TDM Development Environment — Installation
 
 ### TDM On-Prem Installation — Desktop Studio
 
@@ -99,7 +99,7 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 - Deploy the TDM LU. This deployment creates the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by running the **masking-create-cache-table.flow** from the Broadway examples.
 - After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false**.
 
-## TDM Non-Development Environment Installation
+## TDM Non-Development Environment — Installation
 
 ### On-Prem VM Installation 
 
@@ -177,7 +177,7 @@ The following activities must be performed after deploying the TDM project to Fa
 
     
 
-## Optional — TDM AI Installation
+## Optional Installation: TDM AI 
 
 TDM equips your QA and development teams with cutting-edge AI-driven synthetic data generation, transforming test data creation from manual rule-based scripts into intelligent automation:
 
