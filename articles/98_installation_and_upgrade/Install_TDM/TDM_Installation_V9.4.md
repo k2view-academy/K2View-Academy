@@ -48,7 +48,7 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 - Set the **POSTGRESQL_ADMIN interface** to **active**.
 - Edit the **TDM** and **POSTGRESQL_ADMIN** interfaces with the installed PostgreSQL connection details.
 - Set the **CREATE_TDMDB** Global in the TDM LU to **true**.
-- Optional: Edit the **TDMDB_SCHEMA** shared Global if you wish to change the schema name for the TDM DB (the default schema name contains the cluster ID). Restart Fabric after updating this Global.
+- Optional: If you wish to change the schema name for the TDM DB (the default schema name contains the cluster ID), then edit the **TDMDB_SCHEMA** shared Global. Restart Fabric after updating this Global.
 - Deploy the TDM LU. This deployment creates the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by running the **masking-create-cache-table.flow** from the Broadway Examples (found in the Broadway Flow window, Main Menu > Actions > Examples and select this flow).
 - After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false**.
 
@@ -62,17 +62,17 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 
 #### TDM Library Installation
 
-**If internet access is available**: 
+**If internet access is available**, perform the following steps: 
 
 - Open the Fabric Web Studio.
 - Click the [Extensions](/articles/04_fabric_studio/28_web_k2exchange.md) icon.
-- Select **TDM** to install the TDM library.
+- Select **TDM** to install the TDM Library.
 
-**If internet access is unavailable**:  
+**If internet access is unavailable**, perform the following steps:  
 
 - Download the VSIX file from the download page.
 - Upload the file to the TDM project: 
-  -  Right-click on **project-resources** from the Project Tree.
+  -  Right-click on **project-resources** from the Project tree.
   -  Select **Upload Files…** and choose the downloaded TDM VSIX file. 
 - Click the **Extensions** icon.
 - Click the three-horizontal-dots menu (top-right of the pane).
