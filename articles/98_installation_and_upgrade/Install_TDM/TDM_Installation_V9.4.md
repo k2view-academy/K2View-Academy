@@ -4,7 +4,7 @@ This document outlines installation guidelines and initial configuration steps f
 
 ## Table of Contents
 
-- [TDM Development Environment — Installation](#tdm-on-prem-installation--desktop-studio)
+- [TDM Development Environment Installation](#tdm-on-prem-installation--desktop-studio)
     - [TDM On-Prem Installation — Desktop Studio](#tdm-on-prem-installation--desktop-studio)
     - [TDM On-Prem Installation — Web Studio](#tdm-on-prem-installation--web-studio)
     - [TDM K2view Cloud Installation](#k2view-cloud-development-environment-installation)     
@@ -15,7 +15,7 @@ This document outlines installation guidelines and initial configuration steps f
 - [TDM Initial Setup](#tdm-initial-setup)
 - [Optional Installation: TDM AI](#optional--tdm-ai-installation)
 
-## TDM Development Environment — Installation
+## TDM Development Environment Installation
 
 ### TDM On-Prem Installation — Desktop Studio
 
