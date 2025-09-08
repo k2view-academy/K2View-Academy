@@ -183,7 +183,7 @@ TDM equips your QA and development teams with cutting-edge AI-driven synthetic d
 
 - **SDG (Synthetic Data Generation) based on AI**: TDM seamlessly integrates with AI models to train on the existing data schema and generate realistic, production-grade synthetic entities — all within the platform.
 - **AI Workflows with One Click**: Select a Business Entity, choose your training model, specify the data volume, and launch a 'generate new data' task. The system handles model selection, data ingestion into Fabric, and optionally loads the data directly into test environments. 
-- **Robust Implementation Controls**: Easily configure AI endpoints using global settings — such as AI_DB_INTERFACE, AI_ENVIRONMENT and AI_EXECUTION — allowing teams to customize connectivity, environments, and cleanup protocols. 
+- **Robust Implementation Controls**: Configure AI endpoints קasily using global settings — such as AI_DB_INTERFACE, AI_ENVIRONMENT and AI_EXECUTION — allowing teams to customize connectivity, environments, and cleanup protocols. 
 - **Hybrid, Business-Ready Approach**: Choose between rule-based or AI-based generation for each scenario, which is an ideal approach for use cases ranging from edge-case testing to large-scale synthetic data population. 
 - **Seamless Integration & Compliance**: Generated entities include built-in support for sequence IDs, LUI mapping, and referential integrity. All data is cataloged in Fabric and masked as required. 
 
