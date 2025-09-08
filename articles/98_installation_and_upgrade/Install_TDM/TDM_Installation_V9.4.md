@@ -13,7 +13,7 @@ This document outlines installation guidelines and initial configuration steps f
     - [K2view Cloud Installation](#k2view-cloud-installation)
 
 - [TDM Initial Setup](#tdm-initial-setup)
-- [Optional Installation: TDM AI](#optional--tdm-ai-installation)
+- [Optional — TDM AI Installation](#optional--tdm-ai-installation)
 
 ## TDM Development Environment Installation
 
@@ -177,7 +177,7 @@ The following activities must be performed after deploying the TDM project to Fa
 
     
 
-## Optional Installation: TDM AI 
+## Optional — TDM AI Installation  
 
 TDM equips your QA and development teams with cutting-edge AI-driven synthetic data generation, transforming test data creation from manual rule-based scripts into intelligent automation:
 
