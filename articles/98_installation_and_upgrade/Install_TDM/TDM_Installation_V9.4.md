@@ -123,10 +123,10 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 
 #### Git Clone
 
-- It is recommended to use separate Git branches for development, testing (SIT), and production environments. Changes from the development branch are merged into the testing branch, and tested changes from the testing branch are merged into the production branch.
+- It is recommended to use separate Git branches for development, testing (SIT), and production environments. Changes from the development branch are merged into the testing branch, and once tested, changes from the testing branch are merged into the production branch.
 - Edit the following Globals in the relevant branch **before** cloning in order to create the TDM DB and k2masking schema during the first TDM LU deployment:
   - The **CREATE_TDMDB** Global in the TDM LU must be set to **true**.
-  - Optional: Edit the **TDMDB_SCHEMA** shared Global if you wish to change the schema name for the TDM DB (the default schema name contains the cluster ID). 
+  - Optional: If you wish to change the schema name for the TDM DB (the default schema name contains the cluster ID), then edit the **TDMDB_SCHEMA** shared Global. 
 - Clone the relevant GitHub branch. 
 
 #### Build and Deploy the Environments to Fabric
