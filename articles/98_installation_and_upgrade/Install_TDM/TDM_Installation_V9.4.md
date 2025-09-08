@@ -87,8 +87,8 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 - Perform the following step in order to use the **PostgreSQL** DB as the Fabric system DB:
   - Open Fabric’s **config.ini** file and edit the **[system_db]** section’s attributes, including the SYSTEM_DB_DATABASE attribute, to be aligned with the **POSTGRESQL_ADMIN** DB interface. 
 - Set the **CREATE_TDMDB** Global in the TDM LU to **true**.
-- Optional: Edit the **TDMDB_SCHEMA** shared Global if you wish to change the schema name for the TDM DB (the default schema name contains the cluster ID). Restart Fabric after updating this Global.
-- Deploy the TDM LU. This deployment creates the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by running the **masking-create-cache-table.flow** from the Broadway examples.
+- Optional: If you wish to change the schema name for the TDM DB (the default schema name contains the cluster ID), then Edit the **TDMDB_SCHEMA** shared Global. Restart Fabric after updating this Global.
+- Deploy the TDM LU. This deployment creates the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by running the **masking-create-cache-table.flow** from the Broadway Examples.
 - After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false**. 
 
 ### K2view Cloud Development Environment Installation
