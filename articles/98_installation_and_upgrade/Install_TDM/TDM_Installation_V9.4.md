@@ -8,7 +8,7 @@ This document outlines installation guidelines and initial configuration steps f
     - [TDM On-Prem Installation — Desktop Studio](#tdm-on-prem-installation--desktop-studio)
     - [TDM On-Prem Installation — Web Studio](#tdm-on-prem-installation--web-studio)
     - [TDM K2view Cloud Installation](#k2view-cloud-development-environment-installation)     
-- [TDM Non-Development Environment — Installation](#tdm-non-development-environment-installation)
+- [TDM Non-Development Environment Installation](#tdm-non-development-environment-installation)
     - [On-Prem VM Installation](#on-prem-vm-installation) 
     - [K2view Cloud Installation](#k2view-cloud-installation)
 
@@ -99,7 +99,7 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 - Deploy the TDM LU. This deployment creates the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by running the **masking-create-cache-table.flow** from the Broadway examples.
 - After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false**.
 
-## TDM Non-Development Environment — Installation
+## TDM Non-Development Environment Installation
 
 ### On-Prem VM Installation 
 
