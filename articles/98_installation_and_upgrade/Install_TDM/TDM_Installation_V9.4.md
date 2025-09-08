@@ -131,7 +131,7 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 
 #### Build and Deploy the Environments to Fabric
 
-- Build and deploy the [Environments](/articles/25_environments/04_offline_deployment.md) to Fabric. The Environments must be deployed before deploying the TDM project to Fabric. Use the [deploy-environment.sh](https://github.com/K2view-LTD/fabric/blob/fabric-8.2/scripts/deploy-environment.sh) script to deploy the Environments file. 
+- Build the [Environments](/articles/25_environments/04_offline_deployment.md) and deploy them to Fabric. Their deployment must take place before deploying the TDM project to Fabric. Use the [deploy-environment.sh](https://github.com/K2view-LTD/fabric/blob/fabric-8.2/scripts/deploy-environment.sh) script to deploy the Environments file. 
 - Note that the **POSTGRESQL_ADMIN interface** must be **active**.
 
 #### Build and Deploy the TDM Project to Fabric
@@ -147,10 +147,10 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 ### K2view Cloud Installation
 
 - Create a Project with Fabric V8.3.X and PostgreSQL DB.
-- Attach the relevant GitHub branch to this project. 
+- Attach the appropriate GitHub branch to this project. 
 - Edit the following Globals in the relevant branch **before** cloning in order to create the TDM DB and k2masking schema during the first TDM LU deployment:
-  - The **CREATE_TDMDB** Global in the TDM LU must be set to **true**
-  - Optional: Edit the **TDMDB_SCHEMA** shared Global if you wish to change the schema name for the TDM DB (the default schema name contains the cluster ID). 
+  - The **CREATE_TDMDB** Global in the TDM LU must be set to **true**.
+  - Optional: If you wish to change the schema name for the TDM DB (the default schema name contains the cluster ID), then Edit the **TDMDB_SCHEMA** shared Global. 
 - Create a Space based on this Project. Deploy the project to Fabric.
 
 
