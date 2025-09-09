@@ -65,11 +65,11 @@ Import the TDM_TableLevel LU and deploy it.
 
 - **interface_name** — the table's source interface.
 
-- **target_ref_table_name** — this is an optional parameter. It can be populated when the table names are different in the source and target. If empty, the target table name will be taken from the **reference_table_name** field.
+- **target_ref_table_name** — an optional parameter. Populate it when the table names in the source and target differ. If not provided, the target table name is taken from the **reference_table_name** field.
 
-- **target_schema_name** — populated by the target DB schema's name that stores the table.
+- **target_schema_name** — populated with the  name of the target DB that stores the table.
 
-- **target_interface_name** — the name of the table's target interface. 
+- **target_interface_name** — the table's target interface. 
 
 - **table_pk_list** — an optional setting. Populated by the list of the target's PK fields in the RefList object. These fields can be used later for customizing the load flow to run an Upsert on the target table.
 
