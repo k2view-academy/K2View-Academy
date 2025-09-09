@@ -25,7 +25,7 @@ Each LUI contains the following tables:
 
 - TDM_REF_ROOT
 
-- A dynamic SQLite table created with the structure of the source table and that contains the extracted table records. The dynamic SQLite table naming convention is: 
+- A dynamic SQLite table, which has the same structure as the source table and contains the extracted table records. The naming convention for this table is: 
 
   ```
   __t_<source table name>
@@ -33,7 +33,7 @@ Each LUI contains the following tables:
 
   
 
-- Example of an insert of case_note table record into the SQLite dynamic table:
+- The following is an example of how a case_note table record is inserted into the SQLite dynamic table:
 
   ```sqlite
   /*sqlite*/ insert into TDM_TableLevel.__t_case_note (case_id,note_id,note_date,note_text) values(?,?,?,?);
@@ -47,37 +47,37 @@ Notes:
 
 A TDM table-level implementation contains the following steps:
 
-## Step 1 - Deploy the TDM_TableLevel LU
+## Step 1 — Deploy the TDM_TableLevel LU
 
 Import and deploy the TDM_TableLevel LU. 
 
-## Step 2 - Relate Tables to a Business Entity
+## Step 2 — Relate Tables to a Business Entity
 
 **This step is required for [Entities & referential data](/articles/TDM/tdm_gui/14b_task_source_component_entities.md) tasks**. The list of available referential tables for a TDM task that contains a Business entity and referential data, is populated in the [RefList](04_fabric_tdm_library.md#reflist) MTable object. Populate the **RefList** with the list of available related tables for each LU. The following settings should be populated for each record:
 
-- **lu_name** - populated by the LU name to enable a selection of the related table in a TDM task based on the task's LUs.
+- **lu_name** — populated by the LU name to enable a selection of the related table in a TDM task based on the task's LUs.
 
-- **id** - populated by an incrementing number.
+- **id** — populated by an incrementing number.
 
-- **reference_table_name** - populated by the table name in the source environment.
+- **reference_table_name** — populated by the table name in the source environment.
 
-- **schema_name** - populated by the source DB schema's name that stores the table.
+- **schema_name** — populated by the source DB schema's name that stores the table.
 
-- **interface_name** - the table's source interface.
+- **interface_name** — the table's source interface.
 
-- **target_ref_table_name** - this is an optional parameter. It can be populated when the table names are different in the source and target. If empty, the target table name will be taken from the **reference_table_name** field.
+- **target_ref_table_name** — this is an optional parameter. It can be populated when the table names are different in the source and target. If empty, the target table name will be taken from the **reference_table_name** field.
 
-- **target_schema_name** - populated by the target DB schema's name that stores the table.
+- **target_schema_name** — populated by the target DB schema's name that stores the table.
 
-- **target_interface_name** - the name of the table's target interface. 
+- **target_interface_name** — the name of the table's target interface. 
 
-- **table_pk_list** - an optional setting. Populated by the list of the target's PK fields in the RefList object. These fields can be used later for customizing the load flow to run an Upsert on the target table.
+- **table_pk_list** — an optional setting. Populated by the list of the target's PK fields in the RefList object. These fields can be used later for customizing the load flow to run an Upsert on the target table.
 
-- **truncate_indicator** - by default, the TDM runs a delete on the table in the target environment before loading it. If you have permission to run a truncate on the target table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to **true**.
+- **truncate_indicator** — by default, the TDM runs a delete on the table in the target environment before loading it. If you have permission to run a truncate on the target table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to **true**.
 
-- **count_indicator** - this setting is set to **true**, by default, for counting the number of records in the source or target, in order to monitor the task execution. Set the indicator to **false**, if required, in order to avoid counting the records in the target.
+- **count_indicator** — this setting is set to **true**, by default, for counting the number of records in the source or target, in order to monitor the task execution. Set the indicator to **false**, if required, in order to avoid counting the records in the target.
 
-Note that from TDM 9.3.1 onwards, the schema_name and target_schema_name fields can be populated with either:
+Note that from TDM V9.3.1 onwards, the schema_name and target_schema_name fields can be populated with either:
 
 - Schema name
 - Global name. Add a `@` sign before and after the Global name in order to indicate that the schema name needs to be taken from the Global's value. For example: `@CUSTOMER_SCHEMA_NAME@`. Populating the schema with a Global is useful when different environments have different schema names. 
@@ -85,11 +85,11 @@ Note that from TDM 9.3.1 onwards, the schema_name and target_schema_name fields 
 
  Click [here](/articles/09_translations/06_mtables_overview.md) for more information about MTable objects. 
 
-## Step 3 - Optional - Set Different Source and Target Settings for Table-Level Tasks
+## Step 3 — Optional — Set Different Source and Target Settings for Table-Level Tasks
 
 TDM 9.1 enables adding tables to the **RefList** MTable for the purpose of supporting the setting of different interface, schema name, or table name in the source and target environments for [table-level tasks](/articles/TDM/tdm_gui/14c_task_source_component_tables.md). Set the **lu_name** to **TDM_TableLevel** as a way to define different settings on the source and target environments for table-level tasks. 
 
-## Step 4 - Catalog
+## Step 4 — Catalog
 
 ### Edit the PII settings
 
@@ -101,7 +101,7 @@ Run the Discovery job on the table's interfaces. Once the job has been completed
 
 Note that if you define a different interface in the target environment, you need to run the discovery process on the **target interface** in order to get the table's list, order, and fields from the Catalog.
 
-## Step 5 - Special Handling and Disabling Tables' Selection 
+## Step 5 — Special Handling and Disabling Tables' Selection 
 
 ###  TableLevelInterfaces MTable
 
@@ -109,15 +109,15 @@ The **TableLevelInterfaces** MTable enables either disabling a table's selection
 
 By default, the MTable is populated with the TDM DBs to disable a selection of TDM tables by a TDM task. It is possible to populate additional DB interfaces in order to exclude them from the table selection in the TDM task or to set special handling for their tables. A separate record needs to be set for each DB interface. The following settings should be populated for each record:
 
-- **interface_name** - the DB interface name defined in the TDM project implementation. 
+- **interface_name** — the DB interface name defined in the TDM project implementation. 
 
-- **suppress_indicator** - if **true**, the DB tables are excluded from the tables' selection in the TDM task. If this field is **false**, the interface's tables can be selected in a TDM task.
+- **suppress_indicator** — if **true**, the DB tables are excluded from the tables' selection in the TDM task. If this field is **false**, the interface's tables can be selected in a TDM task.
 
-- **truncate_indicator** - by default, the TDM runs a delete on the table in the target environment before loading it. If you have permission to run a truncate on the target table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to **true**.
+- **truncate_indicator** — by default, the TDM runs a delete on the table in the target environment before loading it. If you have permission to run a truncate on the target table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to **true**.
 
-- **count_indicator** - this setting is set to **true**, by default, for counting the number of records in the source or target, in order to monitor the task execution. Set the indicator to **false**, if required, in order to avoid counting the records in the target.
+- **count_indicator** — this setting is set to **true**, by default, for counting the number of records in the source or target, in order to monitor the task execution. Set the indicator to **false**, if required, in order to avoid counting the records in the target.
 
-- **order_flow** - an optional setting. Populate this setting to run a project's Broadway flow to define customized logic for getting the table's execution order. The order flow must have an external output **Map** named **result** with the list of the tables and their order. For example:
+- **order_flow** — an optional setting. Populate this setting to run a project's Broadway flow to define customized logic for getting the table's execution order. The order flow must have an external output **Map** named **result** with the list of the tables and their order. For example:
 
   ```json
   {
@@ -128,11 +128,11 @@ By default, the MTable is populated with the TDM DBs to disable a selection of T
 
   
 
-- **no_schema** - this indicator is used for interfaces that do not have a DB schema, but the JDBC connector adds a schema for them. For example: CSV files. The **CSV JDBC Connector** extension concatenates the 'main' schema name to the file list. Set this field to **true** in order to ignore the concatenated schema when accessing the files. 
+- **no_schema** — this indicator is used for interfaces that do not have a DB schema, but the JDBC connector adds a schema for them. For example: CSV files. The **CSV JDBC Connector** extension concatenates the 'main' schema name to the file list. Set this field to **true** in order to ignore the concatenated schema when accessing the files. 
 
 ### TableLevelDefinitions MTable - Customized Logic for Tables 
 
-TDM 9.1 has added the **TableLevelDefinitions** MTable to enable setting a customized logic for selected tables.
+TDM V9.1 has added the **TableLevelDefinitions** MTable to enable setting a customized logic for selected tables.
 
 A customized flow can be added to a table's extract, load or delete processes. The implementor can set a customized flow for all activities - extract, delete, and load - or only for apecific activities. This feature opens a variety of capabilities such as:
 
@@ -144,16 +144,16 @@ A customized flow can be added to a table's extract, load or delete processes. T
 
 The following settings should be populated for each record:
 
-- **interface_name** - the interface name defined in the TDM project implementation. 
-- **schema_name** - the DB schema. Can be populated either with:
+- **interface_name** — the interface name defined in the TDM project implementation. 
+- **schema_name** — the DB schema. Can be populated either with:
   - Schema name
   - From TDM 9.3.1 onwards, the schema name can also be populated with the Global name. Add a `@` sign before and after the Global name in order to indicate that the schema name needs to be taken from the Global's value. For example: `@CUSTOMER_SCHEMA_NAME@`. Populating the schema with a Global is useful when different environments have different schema names. 
 
-- **table_name** - populated with the table name. If the table_name is empty, the customized flows will run on all the tables in the interface and schema.
-- **extract_flow** - populated with the customized extract flow.
-- **table_order** - populated with a number. The table order in the TableLevelDefinitions MTable has the highest priority, and it can override the order defined in the TableLevelInterfaces MTable.
-- **delete_flow** - populated with the customized delete flow. 
-- **load_flow** - populated with the load flow.
+- **table_name** — populated with the table name. If the table_name is empty, the customized flows will run on all the tables in the interface and schema.
+- **extract_flow** — populated with the customized extract flow.
+- **table_order** — populated with a number. The table order in the TableLevelDefinitions MTable has the highest priority, and it can override the order defined in the TableLevelInterfaces MTable.
+- **delete_flow** — populated with the customized delete flow. 
+- **load_flow** — populated with the load flow.
 
 
 
@@ -161,7 +161,7 @@ The following settings should be populated for each record:
 
 The installment of a K2exchange connector adds a dedicated TableLevelDefinitions file for the connector. 
 
-**Example -  TableLevelDefinitions___mongodb** :
+**Example -  TableLevelDefinitions___mongodb**:
 
 ![mongo example](images/mongo_tableleveldefinitions.png) 
 
@@ -169,7 +169,7 @@ The installment of a K2exchange connector adds a dedicated TableLevelDefinitions
 
 Note that you must set the task's retention period to *Do not retain* in order to load the tables directly to the target environment without saving them to Fabric when the data source is based on a connector. 
 
-### Customized Table Flows - Implementation Guidelines
+### Customized Table Flows — Implementation Guidelines
 
 The customized table flows are Broadway flows. These flows must be added under the Shared Objects in the Project tree.
 
@@ -188,7 +188,7 @@ Setting customized masking logic on tables:
   - Add the customized masking actors to the extract flow to be invoked after the CatalogMaskingMapper actor.
   - Set the **enable_masking** parameter to **false** at the end of the extract flow as a way to prevent double masking of the table's record by the TDM execution processes.
 
-##### Customized Extract Flow - Example
+##### Customized Extract Flow — Example
 
 The below image depicts an example, which executes the following:
 
@@ -209,7 +209,7 @@ See the loop on the selected address records:
 #### Load Flow
 
 - The load flow gets a list of input parameters from the TDM execution processes and returns the number of loaded records. Duplicate the **LoadTableByQuery** flow (located in the TDM_TableLevel LU) to get the load flow template and customize the load logic.
-- Note that if you use **Fabric 8.1.6 and above**, you must manually add the **__active_environment** input parameter to the DbCommand/DbLoad actors. Set this parameter as *Const* and populate it with any value, e.g., target. See an example in the **LoadTableByQuery**  flow. This parameter is added as a way to support a direct table's load from environment A to environment B without storing the table in Fabric. The **__active_environment** parameter is needed in order to refresh the environment, update it to the target environment in the load flow, and run the load on the target environment.
+- Note that if you use **Fabric 8.1.6 and above**, you must manually add the **__active_environment** input parameter to the DbCommand/DbLoad actors. Set this parameter as *Const* and populate it with any value, e.g., target. See an example in the **LoadTableByQuery** flow. This parameter is added as a way to support a direct table's load from environment A to environment B without storing the table in Fabric. The **__active_environment** parameter is needed in order to refresh the environment, update it to the target environment in the load flow, and run the load on the target environment.
 
   
 
