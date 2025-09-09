@@ -97,7 +97,7 @@ The TDM table flow uses [Fabric Catalog masking](/articles/39_fabric_catalog/11_
 
 ### Run the Catalog to Identify a Table's Relation and Order
 
-Run the Discovery job on the table's interfaces. Once the job has been completed, the interface metadata would be retrieved from the Catalog.
+Run the Discovery job on the table's interfaces. Following the job completion, the interface metadata is retrieved from the Catalog.
 
 Note that if you define a different interface in the target environment, you need to run the discovery process on the **target interface** in order to get the table's list, order, and fields from the Catalog.
 
