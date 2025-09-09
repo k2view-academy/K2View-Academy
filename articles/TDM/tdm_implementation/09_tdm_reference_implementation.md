@@ -1,13 +1,13 @@
 # TDM - Table Implementation
 
-TDM enables the user to provision tables in a TDM task. To do that, the user can select 1 of the following 2 options:
+TDM enables users to provision tables in a TDM task. To do this, users can select one of the following two options:
 
-1. Business entities and referential data. The included tables are related to the task's business entities and are needed in the testing environment.
-2. Tables - TDM 9.x enables the option to select a list of tables from multiple DBs related to the source environment without any relation to a business entity.
+1. Business entities and referential data. The included tables are related to the task's business entities and are required in the testing environment.
+2. Tables — TDM V9.X provides the option to select a list of tables from multiple DBs that relate to the source environment, without any relation to a business entity.
 
-The user can either store the tables in Fabric for a later use or set the task's retention period to *Do not retain* in order to load the tables directly to the target environment without saving them to Fabric.
+Users can either store the tables in Fabric for a later use or set the task's retention period to *Do not retain* in order to load the tables directly to the target environment without saving them to Fabric.
 
-Each table is stored in Fabric, whithin the **TDM_TableLevel** LU, as a separate LUI. Each execution is stored as a separate LUI (a separate data snapshot), as well as creates a separate LUI (snapshot). For example: Running 2 executions of a task that extract the Product_Mapping table would create 2 LUIs in the **TDM_TableLevel** LU in Fabric. 
+Each table is stored in Fabric, whithin the **TDM_TableLevel** LU, as a separate LU Instance (LUI). Each execution is stored as a separate LUI (a separate data snapshot), as well as creates a separate LUI (snapshot). For example: Running two executions of a task that extract the Product_Mapping table would create two LUIs in the **TDM_TableLevel** LU in Fabric. 
 
  The LUI format is as follows:
 
