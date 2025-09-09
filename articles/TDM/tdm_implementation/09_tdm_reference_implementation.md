@@ -2,8 +2,8 @@
 
 TDM enables users to provision tables in a TDM task. To do this, users can select one of the following two options:
 
-1. Business entities and referential data. The included tables are related to the task's business entities and are required in the testing environment.
-2. Tables — TDM V9.X provides the option to select a list of tables from multiple DBs that relate to the source environment, without any relation to a business entity.
+1. Business Entities and referential data. The included tables are related to the task's Business Entities (BEs) and are required in the testing environment.
+2. Tables — TDM V9.X provides the option to select a list of tables from multiple DBs that relate to the source environment, without any relation to a Business Entity.
 
 Users can either store the tables in Fabric for a later use or set the task's retention period to *Do not retain* in order to load the tables directly to the target environment without saving them to Fabric.
 
@@ -53,7 +53,7 @@ Import the TDM_TableLevel LU and deploy it.
 
 ## Step 2: Relate Tables to a Business Entity
 
-**This step is required for [Entities & referential data](/articles/TDM/tdm_gui/14b_task_source_component_entities.md) tasks**. The list of available referential tables for a TDM task that contains a Business entity and referential data, is populated in the [RefList](04_fabric_tdm_library.md#reflist) MTable object. Populate the **RefList** with a list of all available related tables for each LU. The following settings should be populated for each record:
+**This step is required for [Entities & referential data](/articles/TDM/tdm_gui/14b_task_source_component_entities.md) tasks**. The list of available referential tables for a TDM task that contains a Business Entity and referential data, is populated in the [RefList](04_fabric_tdm_library.md#reflist) MTable object. Populate the **RefList** with a list of all available related tables for each LU. The following settings should be populated for each record:
 
 - **lu_name** — populated by the LU name to allow selection of the related table in a TDM task based on the task's LUs.
 
