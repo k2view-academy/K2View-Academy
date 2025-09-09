@@ -172,7 +172,7 @@ The following activities must be performed after deploying the TDM project to Fa
   - [Creating Systems](/articles/TDM/tdm_gui/05_tdm_gui_product_window.md).
 
   - [Environment creation and setup](/articles/TDM/tdm_gui/07_tdm_gui_environment_overview.md) — create all environments in the TDM self-service application.
-      - Optional: Add permission sets to the environments to assign testers to these environments and define their TDM permissions.
+      - Optional: Add permission sets to the environments to assign testers to these environments; this would define their TDM permissions.
       - Note that the environments must be deployed to Fabric before creating the environments in the TDM self-service application.
 
     
