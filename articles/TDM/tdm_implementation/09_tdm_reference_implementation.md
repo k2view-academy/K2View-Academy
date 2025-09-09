@@ -1,4 +1,4 @@
-# TDM - Table Implementation
+# TDM — Table Implementation
 
 TDM enables users to provision tables in a TDM task. To do this, users can select one of the following two options:
 
@@ -43,15 +43,15 @@ Each LUI contains the following tables:
 
 Notes: 
 
-- Previous TDM versions saved the tables into the TDM_Reference LU. However, as this LU is no longer in use (since TDM 9.0), the tables must be re-extracted into the new LU, namely TDM_TableLevel. 
+- In previous TDM versions, tables were saved in the TDM_Reference LU. However, as this LU is no longer used (from TDM V9.0), the tables must be re-extracted into the new TDM_TableLevel LU. 
 
 A TDM table-level implementation contains the following steps:
 
-## Step 1 — Deploy the TDM_TableLevel LU
+## Step 1: Deploy the TDM_TableLevel LU
 
 Import and deploy the TDM_TableLevel LU. 
 
-## Step 2 — Relate Tables to a Business Entity
+## Step 2: Relate Tables to a Business Entity
 
 **This step is required for [Entities & referential data](/articles/TDM/tdm_gui/14b_task_source_component_entities.md) tasks**. The list of available referential tables for a TDM task that contains a Business entity and referential data, is populated in the [RefList](04_fabric_tdm_library.md#reflist) MTable object. Populate the **RefList** with the list of available related tables for each LU. The following settings should be populated for each record:
 
@@ -85,11 +85,11 @@ Note that from TDM V9.3.1 onwards, the schema_name and target_schema_name fields
 
  Click [here](/articles/09_translations/06_mtables_overview.md) for more information about MTable objects. 
 
-## Step 3 — Optional — Set Different Source and Target Settings for Table-Level Tasks
+## Step 3: Optional — Set Different Source and Target Settings for Table-Level Tasks
 
 TDM 9.1 enables adding tables to the **RefList** MTable for the purpose of supporting the setting of different interface, schema name, or table name in the source and target environments for [table-level tasks](/articles/TDM/tdm_gui/14c_task_source_component_tables.md). Set the **lu_name** to **TDM_TableLevel** as a way to define different settings on the source and target environments for table-level tasks. 
 
-## Step 4 — Catalog
+## Step 4: Catalog
 
 ### Edit the PII settings
 
@@ -101,7 +101,7 @@ Run the Discovery job on the table's interfaces. Once the job has been completed
 
 Note that if you define a different interface in the target environment, you need to run the discovery process on the **target interface** in order to get the table's list, order, and fields from the Catalog.
 
-## Step 5 — Special Handling and Disabling Tables' Selection 
+## Step 5: Special Handling and Disabling Tables' Selection 
 
 ###  TableLevelInterfaces MTable
 
