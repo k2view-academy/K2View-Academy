@@ -67,20 +67,20 @@ Import the TDM_TableLevel LU and deploy it.
 
 - **target_ref_table_name** — an optional parameter. Populate it when the table names in the source and target differ. If not provided, the target table name is taken from the **reference_table_name** field.
 
-- **target_schema_name** — populated with the  name of the target DB that stores the table.
+- **target_schema_name** — populated with the name of the target DB that stores the table.
 
 - **target_interface_name** — the table's target interface. 
 
-- **table_pk_list** — an optional setting. Populated by the list of the target's PK fields in the RefList object. These fields can be used later for customizing the load flow to run an Upsert on the target table.
+- **table_pk_list** — an optional setting. Populated with the list of the target table's PK fields in the RefList object. These fields can be used later for customizing the load flow to run an Upsert on the target table.
 
-- **truncate_indicator** — by default, the TDM runs a delete on the table in the target environment before loading it. If you have permission to run a truncate on the target table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to **true**.
+- **truncate_indicator** — by default, TDM runs a delete on the table in the target environment before loading it. If you have permission to run a truncate on the target table and need to use the truncate instead of delete (e.g., the target DB is Cassandra), set this indicator to **true**.
 
-- **count_indicator** — this setting is set to **true**, by default, for counting the number of records in the source or target, in order to monitor the task execution. Set the indicator to **false**, if required, in order to avoid counting the records in the target.
+- **count_indicator** — this setting is set to **true** by default, enabling counting the number of records in the source or target, as a way to monitor task execution. Set this indicator to **false**, if required, to disable counting records in the target.
 
-Note that from TDM V9.3.1 onwards, the schema_name and target_schema_name fields can be populated with either:
+Note that from TDM V9.3.1 onwards, the schema_name and target_schema_name fields can be populated with either of the following options:
 
 - Schema name
-- Global name. Add a `@` sign before and after the Global name in order to indicate that the schema name needs to be taken from the Global's value. For example: `@CUSTOMER_SCHEMA_NAME@`. Populating the schema with a Global is useful when different environments have different schema names. 
+- Global name. Add a `@` sign before and after the Global name to indicate that the schema name should be taken from the Global's value. For example: `@CUSTOMER_SCHEMA_NAME@`. Using a Global to populate the schema is useful when different environments have different schema names. 
 
 
  Click [here](/articles/09_translations/06_mtables_overview.md) for more information about MTable objects. 
