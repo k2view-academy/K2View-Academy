@@ -85,13 +85,13 @@ Note that from TDM V9.3.1 onwards, the schema_name and target_schema_name fields
 
  Click [here](/articles/09_translations/06_mtables_overview.md) for more information about MTable objects. 
 
-## Step 3: Optional — Set Different Source and Target Settings for Table-Level Tasks
+## Step 3: Optional — Configure Different Source and Target Settings for Table-Level Tasks
 
-TDM 9.1 enables adding tables to the **RefList** MTable for the purpose of supporting the setting of different interface, schema name, or table name in the source and target environments for [table-level tasks](/articles/TDM/tdm_gui/14c_task_source_component_tables.md). Set the **lu_name** to **TDM_TableLevel** as a way to define different settings on the source and target environments for table-level tasks. 
+TDM 9.1 enables adding tables to the **RefList** MTable for the purpose of supporting the setting of different interface, schema name, or table name in the source and target environments for [table-level tasks](/articles/TDM/tdm_gui/14c_task_source_component_tables.md). To configure different settings in the source and target environments for table-level tasks, set the **lu_name** to **TDM_TableLevel**. 
 
 ## Step 4: Catalog
 
-### Edit the PII settings
+### Edit the PII Settings
 
 The TDM table flow uses [Fabric Catalog masking](/articles/39_fabric_catalog/11_catalog_masking.md). You can [edit the PII settings](/articles/39_fabric_catalog/10_catalog_settings.md#classifier-pii--masking-setup) in the Catalog, if needed.
 
