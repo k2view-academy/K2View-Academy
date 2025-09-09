@@ -43,13 +43,13 @@ Each LUI contains the following tables:
 
 Notes: 
 
-- In previous TDM versions, tables were saved in the TDM_Reference LU. However, as this LU is no longer used (from TDM V9.0), the tables must be re-extracted into the new TDM_TableLevel LU. 
+- In previous TDM versions, tables were saved in the TDM_Reference LU. However, as this LU is no longer used (from TDM V9.0), the tables must be re-extracted into the new **TDM_TableLevel LU**. 
 
 A TDM table-level implementation contains the following steps:
 
 ## Step 1: Deploy the TDM_TableLevel LU
 
-Import and deploy the TDM_TableLevel LU. 
+Import the TDM_TableLevel LU and deploy it. 
 
 ## Step 2: Relate Tables to a Business Entity
 
