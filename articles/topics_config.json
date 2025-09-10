@@ -431,14 +431,14 @@
 	"KB": [
 		{
 			"KB display name": "Product Release Notes",
-			"KB display text": "Product release notes documents, including the latest release features and a list of fixes.",
+			"KB display text": "Product release notes documents, including the latest features description and a list of fixes per each release.",
 			"KB icon": "images/icon-release.png",
 			"link": "Academy/Release_Notes/V8.3/Fabric_Release_Notes_V8.3.0.pdf.html",
 			"visible": true
 		},
 		{
 			"KB display name": "Product Versions",
-			"KB display text": "List of Fabric, ADI and TDM available versions, including the release date and number.",
+			"KB display text": "List of Fabric, ADI and TDM available versions, including their release information and end of life date.",
 			"KB icon": "images/product_version_icon.png",
 			"link": "Academy/articles/Product_Versions/README.html",
 			"visible": true
@@ -452,7 +452,7 @@
 		},
 		{
 			"KB display name": "Best Practices",
-			"KB display text": "Recommended tools, best practices and implementation examples. Tips & tricks for working with Fabric.",
+			"KB display text": "Recommended tools, best practices and examples. Tips & tricks for working with Fabric.",
 			"KB icon": "images/icon-best.png",
 			"link": "Academy/articles/COE/README.html",
 			"visible": true
