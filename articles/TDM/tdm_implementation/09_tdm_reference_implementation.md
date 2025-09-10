@@ -105,7 +105,7 @@ Run the Discovery job on the table's interfaces. Following the job completion, t
 
 The **TableLevelInterfaces** MTable enables implementors to control which tables can be selected in a task and allows to define special handling rules for a given DB.
 
-By default, this MTable is populated with the 'TDM' and 'POSTGRESQL_ADMIN' interfaces in order to prevent the TDM tasks from selecting the TDM tables. It is possible to populate additional DB interfaces in order to exclude them from the table selection in the TDM task or to set special handling for their tables. A separate record needs to be set for each DB interface. The following settings should be populated for each record:
+By default, this MTable is populated with the 'TDM' and 'POSTGRESQL_ADMIN' interfaces in order to prevent the TDM tasks from selecting the TDM tables. It is possible to populate additional DB interfaces, either to exclude them from table selection in the TDM task or to apply special handling to their tables. Each DB interface requires its own record. The following settings should be populated for each record:
 
 - **interface_name** — the DB interface name defined in the TDM project implementation. 
 
