@@ -287,7 +287,11 @@ Use dedicated servers for Kafka instances. Following a sizing process, the exact
 ### Operating system: 
 
 * RedHat (version 7 or higher) based distribution with the latest patches (for example: CentOS, Oracle Linux).   
-* Ubuntu Server, version 18.04 or higher, with the latest patches.
+* Ubuntu Server, version 18.04 or higher, with the latest patches. 
+
+#### Kafka Version: 
+K2view supports the Kafka version certified for a specific Fabric version. Refer to the <a href="/articles/Product_Versions
+/Fabric_versions.md">Fabric Versions</a> page for links to the associated release notes where version info is provided.
 
 ### Hardware Requirements:
 <table>
