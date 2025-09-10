@@ -173,18 +173,18 @@ The customized table flows are Broadway flows. These flows must be added under t
 
 #### Extract Flow
 
-- The extract flow gets a list of input parameters from the TDM execution processes and returns the number of records in the table and an object's array for the result. Duplicate the **GetSourceDataByQuery**  flow (located in the TDM_TableLevel LU) to get the extract flow template and customize the extract logic. 
+- The extract flow gets a list of input parameters from the TDM execution processes and returns the number of records in the table and an object's array for the result. Duplicate the **GetSourceDataByQuery** flow (located in the TDM_TableLevel LU) to get the extract flow template and customize the extract logic. 
 
 ##### Customized Masking Logic
 
-The Catalog masking actor is invoked **after** the extract flow execution. 
+The Catalog Masking Actor is invoked **after** the extract flow execution. 
 
 Setting customized masking logic on tables:
-- If you need to set customized logic on specific fields, edit the Catalog and remove the PII property from these fields in the Catalog in order to prevent double masking them.
-- Sometimes, the customized masking logic is based on the Catalog masking output, e.g., building the masked email address based on the masked first and last names. If you need to call the Catalog masking actor in the extract flow, proceed as follows: 
-  - Add the **CatalogMaskingMapper** actor to the extract flow. 
-  - Add the customized masking actors to the extract flow to be invoked after the CatalogMaskingMapper actor.
-  - Set the **enable_masking** parameter to **false** at the end of the extract flow as a way to prevent double masking of the table's record by the TDM execution processes.
+- If you need to set customized logic on specific fields, edit the Catalog and remove the PII property from these fields in the Catalog as a way to prevent double-masking them.
+- Sometimes, the customized masking logic is based on the Catalog masking output, e.g., building the masked email address based on the masked first and last names. If you need to call the Catalog Masking Actor in the extract flow, proceed as follows: 
+  - Add the **CatalogMaskingMapper** Actor to the extract flow. 
+  - Add the customized Masking Actors to the extract flow to be invoked after the CatalogMaskingMapper Actor.
+  - Set the **enable_masking** parameter to **false** at the end of the extract flow as a way to prevent double-masking of the table's record by the TDM execution processes.
 
 ##### Customized Extract Flow — Example
 
