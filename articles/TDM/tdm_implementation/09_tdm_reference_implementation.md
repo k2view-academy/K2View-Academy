@@ -107,7 +107,7 @@ The **TableLevelInterfaces** MTable enables implementors to control which tables
 
 By default, this MTable is populated with the 'TDM' and 'POSTGRESQL_ADMIN' interfaces in order to prevent the TDM tasks from selecting the TDM tables. It is possible to populate additional DB interfaces, either to exclude them from table selection in the TDM task or to apply special handling to their tables. Each DB interface requires its own record. The following settings should be populated for each record:
 
-- **interface_name** — the DB interface name defined in the TDM project implementation. 
+- **interface_name** — the interface name defined in the TDM project implementation. 
 
 - **suppress_indicator** — when set to **true**, the DB tables are excluded from the selection of tables in a TDM task; when set to **false**, the interface's tables can be selected in a TDM task.
 
@@ -147,9 +147,9 @@ The following settings should be populated for each record:
   - Schema name
   - From TDM V9.3.1 onwards, the schema name can also be populated with the Global name. Add a `@` sign before and after the Global name to indicate that the schema name should be taken from the Global's value. For example: `@CUSTOMER_SCHEMA_NAME@`. Using a Global to populate the schema is useful when different environments have different schema names. 
 
-- **table_name** — populated with the table name. If the table_name is empty, the customized flows will run on all the tables in the interface and schema.
+- **table_name** — populated with the table name. If this setting is empty, the customized flows will run on all the tables in the interface and schema.
 - **extract_flow** — populated with the customized extract flow.
-- **table_order** — populated with a number. The table order in the TableLevelDefinitions MTable has the highest priority, and it can override the order defined in the TableLevelInterfaces MTable.
+- **table_order** — populated with a number. The table order defined in the TableLevelDefinitions MTable has the highest priority and can override the order defined in the TableLevelInterfaces MTable.
 - **delete_flow** — populated with the customized delete flow. 
 - **load_flow** — populated with the load flow.
 
@@ -165,7 +165,7 @@ The installment of a K2exchange connector adds a dedicated TableLevelDefinitions
 
 
 
-Note that you must set the task's retention period to *Do not retain* in order to load the tables directly to the target environment without saving them to Fabric when the data source is based on a connector. 
+Note that you must set the task's retention period to *Do not retain*. This ensures that the tables are loaded directly to the target environment, without being saved to Fabric, when the data source is based on a connector. 
 
 ### Customized Table Flows — Implementation Guidelines
 
