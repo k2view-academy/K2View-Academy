@@ -36,7 +36,7 @@
 
 ## Introduction
 
-The Dev and QA environments are intended for development, functional testing, and validation prior to production rollout. These environments typically require less capacity than production systems but must still provide stability and representative performance to ensure reliable testing. This topic outlines the baseline requirements for each component (Fabric, PostgreSQL, Kafka, Cassandra) to help size and configure your Dev/QA clusters consistently across on-premises and cloud deployments.
+The Dev and QA environments are intended for development, functional testing, and validation before production rollout. These environments typically require less capacity than production systems but must still provide stability and representative performance to ensure reliable testing. This topic outlines the baseline requirements for each component (Fabric, PostgreSQL, Kafka, Cassandra) to help size and configure your Dev/QA clusters consistently across on-premises and cloud deployments.
 
 ## Fabric Servers - Node Specifications 
 
@@ -165,7 +165,8 @@ Cassandra and Kafka servers should be accessible from Fabric servers’ nodes.
 ## PostgreSQL Server Node Specifications 
 
 * PostgreSQL is required for TDM projects only.
-* K2view supports PostgreSQL version 9.6 & 13.x.
+* K2view supports the PostgreSQL version certified for a specific Fabric version. Refer to the <a href="/Product_Versions
+/Fabric_versions.md">Fabric Versions</a> page.
 * PostgreSQL can be deployed in one of the following two ways:
     * On-premises as a virtual or a physical machine. 
     * As a cloud service (SaaS)
@@ -409,9 +410,11 @@ A dedicated server for each Cassandra instance is preferred. Following a sizing 
 
 #### Cassandra Versions Supported
 
-The matrix of Cassandra versions supported, along with their associated TDM and Fabric versions, is available at https://support.k2view.com/Academy/articles/Product_Versions/TDM_versions.html.
+K2view supports the Cassandra version certified for a specific Fabric version. Refer to the <a href="/Product_Versions
+/Fabric_versions.md">Fabric Versions</a> page.
 
 #### Python version requirement
+
 Please ensure the matching Python version is available on all nodes where cqlsh or Cassandra tools are used.
 
 - Cassandra 3.11.14 requires Python 2.7.
