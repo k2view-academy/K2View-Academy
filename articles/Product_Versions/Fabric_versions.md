@@ -126,8 +126,8 @@ The table below displays the list of Fabric versions, certified Postgres and Cas
         <tr>
             <td align="left"><a href="/Release_Notes/V8.1/Fabric_Release_Notes_V8.1.9.pdf">8.1.9</a></td>
             <td>March 25, 2025</td>
-            <td>April 03, 2025</td>
             <td>HF1</td>
+            <td>April 03, 2025</td>            
             <td>9</td>
             <td>15.4</td>
             <td>4.1.3</td>
