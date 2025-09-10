@@ -165,7 +165,7 @@ Cassandra and Kafka servers should be accessible from Fabric servers’ nodes.
 ## PostgreSQL Server Node Specifications 
 
 * PostgreSQL is required for TDM projects only.
-* K2view supports the PostgreSQL version certified for a specific Fabric version. Refer to the <a href="/Product_Versions
+* K2view supports the PostgreSQL version certified for a specific Fabric version. Refer to the <a href="/articles/Product_Versions
 /Fabric_versions.md">Fabric Versions</a> page.
 * PostgreSQL can be deployed in one of the following two ways:
     * On-premises as a virtual or a physical machine. 
@@ -410,7 +410,7 @@ A dedicated server for each Cassandra instance is preferred. Following a sizing 
 
 #### Cassandra Versions Supported
 
-K2view supports the Cassandra version certified for a specific Fabric version. Refer to the <a href="/Product_Versions
+K2view supports the Cassandra version certified for a specific Fabric version. Refer to the <a href="/articles/Product_Versions
 /Fabric_versions.md">Fabric Versions</a> page.
 
 #### Python version requirement
