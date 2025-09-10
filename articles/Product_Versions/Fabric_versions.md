@@ -3,6 +3,8 @@
 
 The table below displays the list of Fabric versions, certified Postgres and Cassandra versions, their release date, and end-of-life date.
 
+Please check the release notes for component version support, such as Kafka, Neo4J, or others.
+
 <table>
     <tbody>
         <tr>
