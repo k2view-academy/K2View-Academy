@@ -143,9 +143,9 @@ A customized flow can be added to a table's extract, load or delete processes. T
 The following settings should be populated for each record:
 
 - **interface_name** — the interface name defined in the TDM project implementation. 
-- **schema_name** — the DB schema. Can be populated either with:
+- **schema_name** — the DB schema. Can be populated with either of the following options:
   - Schema name
-  - From TDM V9.3.1 onwards, the schema name can also be populated with the Global name. Add a `@` sign before and after the Global name in order to indicate that the schema name needs to be taken from the Global's value. For example: `@CUSTOMER_SCHEMA_NAME@`. Populating the schema with a Global is useful when different environments have different schema names. 
+  - From TDM V9.3.1 onwards, the schema name can also be populated with the Global name. Add a `@` sign before and after the Global name to indicate that the schema name should be taken from the Global's value. For example: `@CUSTOMER_SCHEMA_NAME@`. Using a Global to populate the schema is useful when different environments have different schema names. 
 
 - **table_name** — populated with the table name. If the table_name is empty, the customized flows will run on all the tables in the interface and schema.
 - **extract_flow** — populated with the customized extract flow.
