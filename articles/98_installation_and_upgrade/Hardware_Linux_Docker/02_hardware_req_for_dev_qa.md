@@ -294,6 +294,10 @@ A dedicated server is preferred for each Kafka instance. Following a sizing proc
 * RedHat (version 7 or higher) based distribution with the latest patches (for example: CentOS, Oracle Linux).   
 * Ubuntu Server, version 18.04 or higher, with the latest patches.
 
+#### Kafka Version: 
+K2view supports the Kafka version certified for a specific Fabric version. Refer to the <a href="/articles/Product_Versions
+/Fabric_versions.md">Fabric Versions</a> page for links to the associated release notes where version info is provided.
+
 #### Hardware Requirements:
 
 The following specifications outline the baseline hardware and software requirements for on-premises Kafka nodes in development and quality assurance (Dev/QA) environments. These requirements ensure reliable messaging throughput and integration with Fabric and Cassandra. 
