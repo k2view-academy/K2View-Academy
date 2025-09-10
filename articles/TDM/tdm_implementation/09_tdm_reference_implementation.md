@@ -188,7 +188,7 @@ Setting customized masking logic on tables:
 
 ##### Customized Extract Flow — Example
 
-The below image depicts an example, which executes the following:
+The below image depicts an example, which executes the following actions:
 
 - Selecting records from the address table.
 - Opening a loop on the extracted records.
@@ -207,13 +207,13 @@ See the loop on the selected address records:
 #### Load Flow
 
 - The load flow receives a list of input parameters from the TDM execution processes and returns the number of loaded records. Duplicate the **LoadTableByQuery** flow (located in the TDM_TableLevel LU) in order to implement the load template and customize the load logic.
-- Note that if you use **Fabric 8.1.6 and above**, you must manually add the **__active_environment** input parameter to the DbCommand/DbLoad actors. Set this parameter as *Const* and populate it with any value, e.g., target. See an example in the **LoadTableByQuery** flow. This parameter is added as a way to support a direct table's load from environment A to environment B without storing the table in Fabric. The **__active_environment** parameter is needed in order to refresh the environment, update it to the target environment in the load flow, and run the load on the target environment.
+- Note that if you use **Fabric V8.1.6 and above**, you must manually add the **__active_environment** input parameter to the DbCommand/DbLoad Actors. Set this parameter as *Const* and populate it with any value, e.g., target. See an example in the **LoadTableByQuery** flow. This parameter is added as a way to support a direct table's load from environment A to environment B without storing the table in Fabric. The **__active_environment** parameter is required in order to refresh the environment, update it to the target environment in the load flow, and run the load on the target environment.
 
   
 
 #### Delete Flow
 
-- The delete flow gets a list of input parameters from the TDM execution processes and deletes the table before the load. Duplicate the **DeleteTableByDBCommand**  flow (located in the TDM_TableLevel LU) to get the delete flow template and to customize the delete logic.
+- The delete flow receives a list of input parameters from the TDM execution processes and deletes the table before the load. Duplicate the **DeleteTableByDBCommand** flow (located in the TDM_TableLevel LU) in order to implement the delete template and customize the delete logic.
 
 
 
