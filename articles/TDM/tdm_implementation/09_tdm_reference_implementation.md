@@ -115,7 +115,7 @@ By default, this MTable is populated with the 'TDM' and 'POSTGRESQL_ADMIN' inter
 
 - **count_indicator** — this setting is set to **true** by default, enabling counting the number of records in the source or target, as a way to monitor task execution. Set this indicator to **false**, if required, to disable counting records in the target.
 
-- **order_flow** — an optional setting. Populate this setting to run a project's Broadway flow to define customized logic for getting the table's execution order. The order flow must have an external output **Map** named **result** with the list of the tables and their order. For example:
+- **order_flow** — an optional setting. Populate this setting to run a project's Broadway flow. The flow defines customized logic for determining the table execution order. The order flow must have an external output **Map** named **result**, which contains the list of tables and their order. This is an example of an output Map with the execution order:
 
   ```json
   {
@@ -126,9 +126,9 @@ By default, this MTable is populated with the 'TDM' and 'POSTGRESQL_ADMIN' inter
 
   
 
-- **no_schema** — this indicator is used for interfaces that do not have a DB schema, but the JDBC connector adds a schema for them. For example: CSV files. The **CSV JDBC Connector** extension concatenates the 'main' schema name to the file list. Set this field to **true** in order to ignore the concatenated schema when accessing the files. 
+- **no_schema** — this indicator is used for interfaces without a DB schema, where the JDBC connector adds a schema for them. For example: CSV files. The **CSV JDBC Connector** extension concatenates the 'main' schema name to the file list. Setting this field to **true** would ignore the concatenated schema when accessing the files. 
 
-### TableLevelDefinitions MTable - Customized Logic for Tables 
+### TableLevelDefinitions MTable — Customized Logic for Tables 
 
 TDM V9.1 has added the **TableLevelDefinitions** MTable to enable setting a customized logic for selected tables.
 
