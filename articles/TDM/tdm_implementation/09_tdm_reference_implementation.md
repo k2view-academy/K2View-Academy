@@ -115,7 +115,7 @@ By default, this MTable is populated with the 'TDM' and 'POSTGRESQL_ADMIN' inter
 
 - **count_indicator** — this setting is set to **true** by default, enabling counting the number of records in the source or target, as a way to monitor task execution. Set this indicator to **false**, if required, to disable counting records in the target.
 
-- **order_flow** — an optional setting. Populate this setting to run a project's Broadway flow. The flow defines customized logic for determining the table execution order. The order flow must have an external output **Map** named **result**, which contains the list of tables and their order. This is an example of an output Map with the execution order:
+- **order_flow** — an optional setting. Populate this setting to run a project's Broadway flow. The flow defines customized logic for determining the table execution order. The order flow must have an external output **Map** named **result**, which contains the list of tables and their order. An example of an output Map with the execution order:
 
   ```json
   {
@@ -130,22 +130,22 @@ By default, this MTable is populated with the 'TDM' and 'POSTGRESQL_ADMIN' inter
 
 ### TableLevelDefinitions MTable — Customized Logic for Tables 
 
-TDM V9.1 has added the **TableLevelDefinitions** MTable to enable setting a customized logic for selected tables.
+TDM V9.1 introduces the **TableLevelDefinitions** MTable, which enables setting a customized logic for selected tables.
 
-A customized flow can be added to a table's extract, load or delete processes. The implementor can set a customized flow for all activities - extract, delete, and load - or only for apecific activities. This feature opens a variety of capabilities such as:
+A customized flow can be added to a table's extract, load or delete processes. The implementor can apply it to all activities - extract, delete, and load - or only to specific ones. Using this feature, you can access the following capabilities:
 
-- Custom masking of selective fields (not Catalog-based).
+- Custom masking for selected fields (not Catalog-based).
 
-- Extract or Load massive data that requires using 3rd party tools, such as, DB2move.
+- Extract or load large volumes of data that requires using third-party party tools, such as DB2move.
 
-- Impact the order of the table's execution.
+- Impact the table execution order.
 
 The following settings should be populated for each record:
 
 - **interface_name** — the interface name defined in the TDM project implementation. 
 - **schema_name** — the DB schema. Can be populated either with:
   - Schema name
-  - From TDM 9.3.1 onwards, the schema name can also be populated with the Global name. Add a `@` sign before and after the Global name in order to indicate that the schema name needs to be taken from the Global's value. For example: `@CUSTOMER_SCHEMA_NAME@`. Populating the schema with a Global is useful when different environments have different schema names. 
+  - From TDM V9.3.1 onwards, the schema name can also be populated with the Global name. Add a `@` sign before and after the Global name in order to indicate that the schema name needs to be taken from the Global's value. For example: `@CUSTOMER_SCHEMA_NAME@`. Populating the schema with a Global is useful when different environments have different schema names. 
 
 - **table_name** — populated with the table name. If the table_name is empty, the customized flows will run on all the tables in the interface and schema.
 - **extract_flow** — populated with the customized extract flow.
@@ -155,11 +155,11 @@ The following settings should be populated for each record:
 
 
 
-### Supporting Table-Level Tasks Using Connectors - Update TableLevelDefinitions MTable 
+### Supporting Table-Level Tasks Using Connectors — Update TableLevelDefinitions MTable 
 
 The installment of a K2exchange connector adds a dedicated TableLevelDefinitions file for the connector. 
 
-**Example -  TableLevelDefinitions___mongodb**:
+**Example — TableLevelDefinitions___mongodb**:
 
 ![mongo example](images/mongo_tableleveldefinitions.png) 
 
