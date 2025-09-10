@@ -87,7 +87,7 @@ Note that from TDM V9.3.1 onwards, the schema_name and target_schema_name fields
 
 ## Step 3: Optional — Configure Different Source and Target Settings for Table-Level Tasks
 
-TDM 9.1 enables adding tables to the **RefList** MTable for the purpose of supporting the setting of different interface, schema name, or table name in the source and target environments for [table-level tasks](/articles/TDM/tdm_gui/14c_task_source_component_tables.md). To configure different settings in the source and target environments for table-level tasks, set the **lu_name** to **TDM_TableLevel**. 
+TDM V9.1 enables adding tables to the **RefList** MTable for the purpose of supporting the setting of different interface, schema name, or table name in the source and target environments for [table-level tasks](/articles/TDM/tdm_gui/14c_task_source_component_tables.md). To configure different settings in the source and target environments for table-level tasks, set the **lu_name** to **TDM_TableLevel**. 
 
 ## Step 4: Catalog
 
@@ -109,11 +109,11 @@ By default, this MTable is populated with the 'TDM' and 'POSTGRESQL_ADMIN' inter
 
 - **interface_name** — the DB interface name defined in the TDM project implementation. 
 
-- **suppress_indicator** — if **true**, the DB tables are excluded from the tables' selection in the TDM task. If this field is **false**, the interface's tables can be selected in a TDM task.
+- **suppress_indicator** — when set to **true**, the DB tables are excluded from the selection of tables in a TDM task; when set to **false**, the interface's tables can be selected in a TDM task.
 
-- **truncate_indicator** — by default, the TDM runs a delete on the table in the target environment before loading it. If you have permission to run a truncate on the target table and you need to use the truncate instead of the delete (e.g., the target DB is Cassandra), set this indicator to **true**.
+- **truncate_indicator** — by default, TDM runs a delete on the table in the target environment before loading it. If you have permission to run a truncate on the target table and need to use the truncate instead of delete (e.g., the target DB is Cassandra), set this indicator to **true**.
 
-- **count_indicator** — this setting is set to **true**, by default, for counting the number of records in the source or target, in order to monitor the task execution. Set the indicator to **false**, if required, in order to avoid counting the records in the target.
+- **count_indicator** — this setting is set to **true** by default, enabling counting the number of records in the source or target, as a way to monitor task execution. Set this indicator to **false**, if required, to disable counting records in the target.
 
 - **order_flow** — an optional setting. Populate this setting to run a project's Broadway flow to define customized logic for getting the table's execution order. The order flow must have an external output **Map** named **result** with the list of the tables and their order. For example:
 
