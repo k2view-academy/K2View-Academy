@@ -5,9 +5,9 @@ TDM enables users to provision tables in a TDM task. To do this, users can selec
 1. Business Entities and referential data. The included tables are related to the task's Business Entities (BEs) and are required in the testing environment.
 2. Tables — TDM V9.X provides the option to select a list of tables from multiple DBs that relate to the source environment, without any relation to a Business Entity.
 
-Users can either store the tables in Fabric for a later use or set the task's retention period to *Do not retain* in order to load the tables directly to the target environment without saving them to Fabric.
+Users can either store the tables in Fabric for later use or set the task's retention period to *Do not retain* in order to load the tables directly to the target environment without saving them to Fabric.
 
-Each table is stored in Fabric, whithin the **TDM_TableLevel** LU, as a separate LU Instance (LUI). Each execution is stored as a separate LUI (a separate data snapshot), as well as creates a separate LUI (snapshot). For example: Running two executions of a task that extract the Product_Mapping table would create two LUIs in the **TDM_TableLevel** LU in Fabric. 
+Each table is stored in Fabric, within the **TDM_TableLevel** LU, as a separate LU Instance (LUI). Each execution is stored as a separate LUI (a separate data snapshot), as well as creates a separate LUI (snapshot). For example, running two executions of a task to extract the Product_Mapping table would create two LUIs in the **TDM_TableLevel** LU in Fabric. 
 
  The LUI format is as follows:
 
@@ -53,7 +53,7 @@ Import the TDM_TableLevel LU and deploy it.
 
 ## Step 2: Relate Tables to a Business Entity
 
-**This step is required for [Entities & referential data](/articles/TDM/tdm_gui/14b_task_source_component_entities.md) tasks**. The list of available referential tables for a TDM task that contains a Business Entity and referential data, is populated in the [RefList](04_fabric_tdm_library.md#reflist) MTable object. Populate the **RefList** with a list of all available related tables for each LU. The following settings should be populated for each record:
+**This step is required for [Entities & referential data](/articles/TDM/tdm_gui/14b_task_source_component_entities.md) tasks**. The list of available referential tables for a TDM task that contains a Business Entity and referential data is populated in the [RefList](04_fabric_tdm_library.md#reflist) MTable object. Populate the **RefList** with a list of all available related tables for each LU. The following settings should be populated for each record:
 
 - **lu_name** — populated by the LU name to allow selection of the related table in a TDM task based on the task's LUs.
 
@@ -98,8 +98,6 @@ The TDM table flow uses [Fabric Catalog masking](/articles/39_fabric_catalog/11_
 ### Run the Catalog to Identify a Table's Relation and Order
 
 Run the Discovery job on the table's interfaces. Following the job completion, the interface metadata is retrieved from the Catalog.
-
-Note that when defining a different interface in the target environment, you need to run the discovery process on the **target interface** in order to get the table's list, order, and fields from the Catalog.
 
 ## Step 5: Special Handling and Disabling Tables' Selection 
 
