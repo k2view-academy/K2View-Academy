@@ -173,7 +173,7 @@ The customized table flows are Broadway flows. These flows must be added under t
 
 #### Extract Flow
 
-- The extract flow gets a list of input parameters from the TDM execution processes and returns the number of records in the table and an object's array for the result. Duplicate the **GetSourceDataByQuery** flow (located in the TDM_TableLevel LU) to get the extract flow template and customize the extract logic. 
+- The extract flow receives a list of input parameters from the TDM execution processes and returns the number of records in the table and an object's array for the result. Duplicate the **GetSourceDataByQuery** flow (located in the TDM_TableLevel LU) in order to implement the extract template and customize the extract logic. 
 
 ##### Customized Masking Logic
 
