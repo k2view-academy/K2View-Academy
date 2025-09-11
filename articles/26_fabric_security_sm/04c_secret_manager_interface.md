@@ -4,7 +4,22 @@ Fabric supports integration with Secrets Management services, offering several b
 
 To use a Secrets Management service, in the Interface Editor (including Environments Editor), you should mark the required interface connection details as those that should be taken from the Secrets Management service.
 
+## Table of Contents
 
+1. [Interface Connection Settings](#interface-connection-settings)  
+
+   1.1 [Setting and marking an interface property to use a Secrets Management service](#setting-and-marking-an-interface-property-to-use-a-secrets-management-service)  
+
+   1.2 [Provider-Specific Considerations and Usage Patterns](#provider-specific-considerations-and-usage-patterns)  
+   - [HashiCorp Vault](#hashicorp-vault)  
+   - [CyberArk CCP](#cyberark-ccp)  
+   - [One Identity Safeguard](#one-identity-safeguard)  
+
+2. [Multi Secrets Management Services and Instances Support](#multi-secrets-management-services-and-instances-support)  
+
+   2.1 [Multi Secrets Management Services](#multi-secrets-management-services)  
+
+   2.2 [Multi Secrets Management Service Instances](#multi-secrets-management-service-instances)  
 
 ## Interface Connection Settings
 
@@ -20,7 +35,7 @@ To use a Secrets Management service, in the Interface Editor (including Environm
 
 
 
-**Setting and marking an interface property to use a Secrets Management service:**
+### Setting and marking an interface property to use a Secrets Management service
 
 <studio>
 
@@ -48,7 +63,7 @@ The ${secretmanager:<id-at-secret-manager>} pattern should be used in the interf
 
 The following are additional notes and considerations regarding **specific** Secrets Management service providers:
 
-* **HashiCorp Vault**: 
+#### **HashiCorp Vault**
 
    * **KV (key-value) secrets engine** in HashiCorp Vault is designed as a hierarchical key-value store.
    
@@ -66,7 +81,7 @@ The following are additional notes and considerations regarding **specific** Sec
    
    
    
-* **CyberArk CCP**:
+#### **CyberArk CCP**
 
    * You should specify the *folder* and/or the *safe-name* parameters by using the '&' concatenating pattern, e.g., `Safe=my-safe&Folder=my-folder&Object=mysql-password&AppID=`
 >  
@@ -77,7 +92,7 @@ The following are additional notes and considerations regarding **specific** Sec
 
 
 
-* **One Identity Safeguard**:
+#### **One Identity Safeguard**
 
    * You should specify both the *asset name* and the *account name* parameters by using the '&' concatenating pattern, e.g., `asset_name=OracleDB&account_name=PreProd`
 
