@@ -6,7 +6,7 @@ The data is stored in a hierarchical structure, and Active Directory searches ar
 
 ## Terminology
 
-- **Distinguished Name (DN)** - uniquely identifies an entry and its path. It is comprised of a series of  relative distinguished names (RDNs) separated by commas.  
+- **Distinguished Name (DN)** - uniquely identifies an entry and its path. It is comprised of a series of relative distinguished names (RDNs) separated by commas.  
 - **Organization Unit** (**OU**) - part of the hierarchy at the DN.
 - **Common name (CN)** - the low level of an entry,  which is actually the user ID.
 - **Entry** - a collection of information about an entity.
@@ -20,7 +20,7 @@ The user attempts to access a Fabric app (1 in the diagram below). One of two re
 
    - If the user already has an existing Fabric session (2), he is allowed access and can carry out actions according to the permissions granted to him by Fabric and its apps. 
 
-     ELSE
+Otherwise:
    - If the user does not have an active session (3), Fabric displays the login page, where the user should enter their credentials (user/password). The following steps are then carried out: 
 
      1. Fabric sends these credentials to the LDAP server (4).
