@@ -140,13 +140,13 @@ The following flows are created for each LU table:
   - The data generation flow sends the parent IDs to the child's population flow, based on the parent-child LU schema definition.
   For example, the Address LU table is the child of the Customer LU table. It is linked to the Customer LU table via the customer_id field. A new customer_id sequence is generated for the Customer LU table. The Address' data generation flow gets the **parent_row** as the input, and it maps the parent customer_id to the Address record.
 
-  - IDs that are not linked to a parent LU table are populated by the Sequence Actors based on the fields mapped in **TDMSeqSrc2TrgMapping**.
+  - IDs that are not linked to a parent LU table are populated by the Sequence Actors based on the fields mapped in the **TDMSeqSrc2TrgMapping** Actor.
 
 - Other fields are populated with synthetic data:
 
-  - By default, this process calls the **CatalogGeneratorRecord** Actor to generate the field values based on the [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md). If a field's classification is set in the Catalog, the generated value is based on the classification's data generator. Otherwise, a default value is generated based on the field type.
+  - By default, this process calls the **CatalogGeneratorRecord** Actor to generate the field values based on the [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md). If a field's classification is defined in the Catalog, its value is generated based on the classification's data generator. Otherwise, a default value is generated based on the field type.
 
-  - If no data is returned by the CatalogGeneratorRecord Actor (when the Fabric Catalog is not implemented), then the flow calls the `${table name}.typeDefaultsGenerator` inner flow to utilize data generation Actors according to the fields' data type. Note that these default data generation Actors are selected based on the mappings defined in the **GenerateDataDefaultFieldTypeActors** constTable (imported from the TDM library under the Shared Objects). This table can be edited to change the default data generators and should be updated before the data generation flows are created.
+  - If no data is returned by the CatalogGeneratorRecord Actor (when the Fabric Catalog is not implemented), then the flow calls the `${table name}.typeDefaultsGenerator` inner flow to utilize data generation Actors according to the fields' data type. Note that these default data generation Actors are selected according to the mappings defined in the **GenerateDataDefaultFieldTypeActors** constTable (imported from the TDM library under the Shared Objects). This table can be edited to change the default data generators and should be updated before the data generation flows are created.
 
 - The output of the data generation flow contains a **Map** that includes a list of fields. These fields are sent to the related LU population flow and loaded into the LU table as a row column. Note that the data generation flow is called by a loop and returns a single record on each call. By default, the [rowsGenerator Actor](/articles/19_Broadway/actors/07a_data_generators_actors.md#rowsgenerator) handles both the loop over the parent rows and the loop over the child IDs for each parent ID.
 
@@ -168,9 +168,9 @@ The following flows are created for each LU table:
 
 ##### PII Fields
 
-- In general, **it is recommended to populate the PII fields in the data generation flow** and to avoid overriding them with the Masking Actors in the LU population flow. Such population enables exposing PII fields as [external business parameters](#external-business-parameters) for the data generation tasks without overriding their values (as set by the user) by the Masking Actors in the LU population.
-- It should be verified that the [Masking Sensitive Data](/articles/TDM/tdm_gui/08_environment_window_general_information.md#masking-sensitive-data) checkbox is clear for the **Synthetic** environment in the TDM Portal, in order to avoid masking PII fields in the LU population flows for data generation tasks.
-- TDM 8.1 has added a new Actor — **GenerateConsistent**. This Actor inherits from the **Masking** Actor but has its own **category** value — **generate_consistent**. Using the **GenerateConsistent** Actor in data generation flows ensures referential integrity across LUs for the generated field.
+- In general, **it is recommended to populate the PII fields in the data generation flow** and to avoid overriding them with the Masking Actors in the LU population flow. Such population makes it possible to expose PII fields as [external business parameters](#external-business-parameters) for data generation tasks, while ensuring that values set by the user are not overridden by the Masking Actors during LU population.
+- It should be verified that the [Masking Sensitive Data](/articles/TDM/tdm_gui/08_environment_window_general_information.md#masking-sensitive-data) checkbox is cleared for the **Synthetic** environment in the TDM Portal. This prevents PII fields from being masked in LU population flows for data generation tasks.
+- TDM V8.1 has added a new Actor — **GenerateConsistent**. This Actor inherits from the **Masking** Actor but has its own **category** value — **generate_consistent**. Using the **GenerateConsistent** Actor in data generation flows ensures referential integrity across LUs for the generated field.
 - Notes:
     - The TDM execution process sets the **generate_consistent** key to **true** on data generation tasks. 
     - The new Actor does not require having an input value since there is no original value for newly generated synthetic entities.
