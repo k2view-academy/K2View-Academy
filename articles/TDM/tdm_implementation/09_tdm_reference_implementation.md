@@ -99,7 +99,7 @@ The TDM table flow uses [Fabric Catalog masking](/articles/39_fabric_catalog/cat
 
 Run the Discovery job on the table's interfaces. Following the job completion, the interface metadata is retrieved from the Catalog.
 
-## Step 5: Special Handling and Disabling Tables' Selection 
+## Step 5: Tables — Special Handling and Selection Disabling  
 
 ###  TableLevelInterfaces MTable
 
