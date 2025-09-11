@@ -11,7 +11,7 @@ To support synthetic data generation, LU population must be based on Broadway fl
 1. Verify that the populations of LU tables are based on Broadway flows in order to support synthetic data generation. Note that you need to use the **populationRootTable.pop.flow** for the main source LU table. For other LU tables, generate the default population flow.
 
 
-2. **Optional** — **edit the default number of generated synthetic records**. In the data generation process, it is necessary to define how many records should be generated for each LU table. For example, you must specify the number of addresses to be generated for a synthetic customer.
+2. **Optional**: **Edit the default number of generated synthetic records**. In the data generation process, it is necessary to define how many records should be generated for each LU table. For example, you must specify the number of addresses to be generated for a synthetic customer.
   
    The **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor (named *Query*) in each LU table population flow sets the number of generated records for each table. By default, it generates one record for the main LU table, and between 1 and 3 records are generated for the remaining LU tables. The values '1' and '3' are set in **TABLE_DEFAULT_DISTRIBUTION_MIN** and **TABLE_DEFAULT_DISTRIBUTION_MAX** [TDM general parameters](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md#data-generation-parameters).
 
@@ -65,9 +65,9 @@ To support synthetic data generation, LU population must be based on Broadway fl
        
        For example: crm_address_number_of_records. 
        
-       The external parameter **enables the user to override the number range of generated records** for each table in the TDM task. For example, customers should be generated with 2 to 4 addresses and 3 to 6 contracts each.
+       The external parameter **enables users to override the number range of generated records** for each table in the TDM task. For example, customers should be generated with 2 to 4 addresses and 3 to 6 contracts each.
 
-3. **Optional** — **exclude the number of records for selected tables from the external parameters that can be set in the task.** For example, always generate one address per customer. Do not enable the tester to set the number of generated addresses per customer in the task. Populate the excluded LU name and LU table in **IgnoreGenerateTableDistList** MTable to disable the number of records for selected tables by the task creator.
+3. **Optional**: **Exclude the number of records for selected tables from the external parameters that can be set in the task.** For example, always generate one address for each customer. Do not enable the tester to set the number of generated addresses per customer in the task. Populate the excluded LU name and LU table in **IgnoreGenerateTableDistList** MTable to disable the number of records for selected tables by the task creator.
 
 
 
@@ -76,7 +76,7 @@ To support synthetic data generation, LU population must be based on Broadway fl
 The **sourceDbQuery** Actor (automatically added to the LU population flow and named *Query*) runs an inner data generation flow to generate synthetic records for data generation tasks.
 Data generation flows must be created on each source LU table to support synthetic data generation.
 
-A data generation flow must have the following naming convention:
+The naming convention for a data generation flow is as follows:
 
 ```
 ${population name}.generator
@@ -86,7 +86,7 @@ For example: activity.pop.generator
 
 Note that a synthetic data generation task execution sets the **ROWS_GENERATOR** key (session variable) to **true**, which triggers the execution of the data generation inner flow on each LU table.
 
-From TDM 8.1 onwards, data generation flows are integrated with the [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md) to generate synthetic data based on field types. Additionally, TDM supports synthetic data generation without using the Fabric Catalog, in cases where the Catalog is not implemented in the TDM project.
+From TDM V8.1 onwards, data generation flows are integrated with the [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md) to generate synthetic data based on field types. Additionally, TDM supports synthetic data generation without using the Fabric Catalog, in cases where the Catalog is not implemented in the TDM project.
 
 
 ### Data Generation Flows - Implementation Steps
