@@ -130,17 +130,17 @@ If you need multiple authenticators of the same type (e.g., two LDAP servers whe
   
    [ldap1_auth]
    class_name=com.k2view.fabric.authentication.providers.LdapAuthenticator
-   \# url=ldaps://ldap1.example.com
-   \# admin_dn=cn=admin,dc=example,dc=com
-   \# admin_password=********
-   \# users_base_dn=ou=users,dc=example,dc=com
+   # url=ldaps://ldap1.example.com
+   # admin_dn=cn=admin,dc=example,dc=com
+   # admin_password=********
+   # users_base_dn=ou=users,dc=example,dc=com
   
    [ldap2_auth]
    class_name=com.k2view.fabric.authentication.providers.LdapAuthenticator
-   \# url=ldaps://ldap2.example.com
-   \# admin_dn=cn=admin,dc=example,dc=com
-   \# admin_password=********
-   \# users_base_dn=ou=users,dc=example,dc=com
+   # url=ldaps://ldap2.example.com
+   # admin_dn=cn=admin,dc=example,dc=com
+   # admin_password=********
+   # users_base_dn=ou=users,dc=example,dc=com
    ```
 
 This pattern ensures Fabric correctly recognizes and evaluates each authenticator—even when multiple instances of the same type are used.
@@ -202,7 +202,7 @@ The chosen alias name must also be set in the configuration for the IDP_CERT_ALI
 
     The keystore path and related parameters are set in the `jvm.options` file. In the TLS/SSL SETTINGS section, review the `javax.net.ssl.keyStore` property. These values are configured for a hardened environment. For example: `$K2_HOME/.cassandra_ssl/keystore.jks`.
     
-    The specified alias name should be used in the configuration for the *SP_CERT_ALIAS* property. You'll need to use the alias of the certificate, which is already stored. Please verify it, using the keytool list command.
+    The specified alias name must be used for the *SP_CERT_ALIAS* property in your configuration. Ensure that you use the alias of the already stored certificate. Please verify the alias using the keytool list command.
 
     Use the same alias name in the configuration for the `SP_CERT_ALIAS` property. Confirm the alias exists by running:
 
