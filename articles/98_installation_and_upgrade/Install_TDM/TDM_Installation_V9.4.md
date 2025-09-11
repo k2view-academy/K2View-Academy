@@ -131,7 +131,7 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 
 #### Build and Deploy the Environments to Fabric
 
-- Build and deploy the [Environments](/articles/25_environments/04_offline_deployment.md) to Fabric. The Environments must be deployed before deploying the TDM project to Fabric. Use the [deploy-environment.sh](https://github.com/K2view-LTD/fabric/blob/fabric-8.2/scripts/deploy-environment.sh) script to deploy the Environments file. 
+- Build and deploy the [Environments](/articles/25_environments/04_offline_deployment.md) to Fabric. The Environments must be deployed before deploying the TDM project to Fabric. Use the **deploy-environment.sh** script to deploy the Environments file. 
 - Note that the **POSTGRESQL_ADMIN interface** must be **active**.
 
 #### Build and Deploy the TDM Project to Fabric
