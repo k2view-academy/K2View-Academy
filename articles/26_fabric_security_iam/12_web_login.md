@@ -2,6 +2,18 @@
 
 Access to the Fabric web framework and its apps is done via user credentials and permissions. 
 
+# Table of Contents
+
+1. [Login](#login)  
+   1.1 [Fabric and LDAP Authenticators](#fabric-and-ldap-authenticators)  
+   1.2 [SAML Authenticator](#saml-authenticator)  
+2. [Logout](#logout)  
+   2.1 [Fabric and LDAP Authenticators](#fabric-and-ldap-authenticators-1)  
+   2.2 [SAML Authenticator](#saml-authenticator-1)  
+3. [Session Timeout](#session-timeout)  
+4. [User Details Panel](#user-details-panel)  
+
+
 ## Login
 
 If there is no active Fabric session, the user must provide their credentials, which the relevant IAM authenticator verifies.
