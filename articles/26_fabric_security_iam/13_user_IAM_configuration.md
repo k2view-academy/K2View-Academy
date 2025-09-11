@@ -200,11 +200,11 @@ The chosen alias name must also be set in the configuration for the IDP_CERT_ALI
       -keystore <full-path-to-keystore-file>
    ```
 
-    The keystore path and related parameters are set in the `jvm.options` file. In the TLS/SSL SETTINGS section, review the `javax.net.ssl.keyStore` property. These values are configured for a hardened environment. For example: `$K2_HOME/.cassandra_ssl/keystore.jks`.
-    
-    The specified alias name must be used for the *SP_CERT_ALIAS* property in your configuration. Ensure that you use the alias of the already stored certificate. Please verify the alias using the keytool list command.
+   The keystore path and related parameters are set in the `jvm.options` file. In the TLS/SSL SETTINGS section, review the `javax.net.ssl.keyStore` property. These values are configured for a hardened environment. For example: `$K2_HOME/.cassandra_ssl/keystore.jks`.
 
-    Use the same alias name in the configuration for the `SP_CERT_ALIAS` property. Confirm the alias exists by running:
+  The specified alias name must be used for the *SP_CERT_ALIAS* property in your configuration. Ensure that you use the alias of the already stored certificate. Please verify the alias using the keytool list command.
+
+  Use the same alias name in the configuration for the `SP_CERT_ALIAS` property. Confirm the alias exists by running:
 
     ```bash
     keytool -list -keystore <full-path-to-keystore-file>
