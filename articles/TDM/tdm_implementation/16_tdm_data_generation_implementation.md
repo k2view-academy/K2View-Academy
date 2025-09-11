@@ -67,7 +67,7 @@ To support synthetic data generation, LU population must be based on Broadway fl
        
        The external parameter **enables users to override the number range of generated records** for each table in the TDM task. For example, customers should be generated with 2 to 4 addresses and 3 to 6 contracts each.
 
-3. **Optional**: **Exclude the number of records for selected tables from the external parameters that can be set in the task.** For example, always generate one address for each customer. Do not enable the tester to set the number of generated addresses per customer in the task. Populate the excluded LU name and LU table in **IgnoreGenerateTableDistList** MTable to disable the number of records for selected tables by the task creator.
+3. **Optional**: **Exclude the number of records for selected tables from the external parameters that can be set in the task.** For example, always generate one address for each customer. Do not enable the tester to set the number of generated addresses for each customer in the task. Populate the excluded LU name and LU table in the **IgnoreGenerateTableDistList** MTable to disable the number of records for selected tables by the task creator.
 
 
 
@@ -89,16 +89,16 @@ Note that a synthetic data generation task execution sets the **ROWS_GENERATOR**
 From TDM V8.1 onwards, data generation flows are integrated with the [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md) to generate synthetic data based on field types. Additionally, TDM supports synthetic data generation without using the Fabric Catalog, in cases where the Catalog is not implemented in the TDM project.
 
 
-### Data Generation Flows - Implementation Steps
+### Data Generation Flows — Implementation Steps
 
 #### 1. Sequence Handling 
 
 Map the relevant Sequence names to the related fields in the tables before generating data generation flows. This is required in order to include sequence generation within data generation flows. 
-The TDM templates can get the sequence mapping either from the TDMSeqSrc2TrgMapping Actor or the Catalog. 
+The TDM templates can get the sequence mapping from either the TDMSeqSrc2TrgMapping Actor or the Catalog. 
 
 Click [here](05d_tdm_sequence.md) for Sequence implementation guidelines. 
 
-The generated flow sets the **sequenceId** input argument, which is created in the TDM DB for the generated ID with the following naming convention:
+The generated flow sets the **sequenceId** input argument, which is created in the TDM DB for the generated ID using the following naming convention:
 
 ```
 Gen_[the sequence name in TDMSeqSrc2TrgMapping or the Catalog's Sequence name]
