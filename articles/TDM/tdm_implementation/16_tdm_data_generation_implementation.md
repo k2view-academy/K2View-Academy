@@ -116,7 +116,7 @@ The data generation flows of these tables create the gen_customer_id_seq, gen_ad
 
 
 
-#### 2. Generate data generation flows for LU tables
+#### 2. Generate Data Generation Flows for LU Tables
 
 Run the [TDMLUInitBasedOnFabric flow](05_tdm_lu_implementation_general.md#tdmluinitbasedonfabric-flow-execution) and set the **CREATE_GENERATE_FLOWS** input parameter to **true** in order to create data generation flows.
 
@@ -126,7 +126,7 @@ The following data generation flows are created for each LU table:
 
     For example: contract.pop.generator
 
-2. From TDM 8.1 onwards, TDM templates also create inner flows that set default values for table fields based on their types. This inner flow is called when the Fabric Catalog is not implemented in the TDM project. The inner flow has the following naming convention: `${table name}.typeDefaultsGenerator` .
+2. From TDM V8.1 onwards, TDM templates also create inner flows that set default values for table fields based on their types. This inner flow is called when the Fabric Catalog is not implemented in the TDM project. The inner flow has the following naming convention: `${table name}.typeDefaultsGenerator` .
 
     For example: contract.typeDefaultsGenerator
 
@@ -152,7 +152,7 @@ The following data generation flows are created for each LU table:
 
   
 
-#### 3. Edit the data generation flow
+#### 3. Edit the Data Generation Flow
 
  The following manual updates may be required for the data generation flows:
 
