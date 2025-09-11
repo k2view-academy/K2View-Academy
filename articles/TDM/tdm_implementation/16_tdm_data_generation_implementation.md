@@ -13,14 +13,14 @@ To support synthetic data generation, LU population must be based on Broadway fl
 
 2. **Optional** — **edit the default number of generated synthetic records**. In the data generation process, it is necessary to define how many records should be generated for each LU table. For example, you must specify the number of addresses to be generated for a synthetic customer.
   
-   The **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor (named *Query*) in each LU table's population flow sets the number of generated records for each table. By default, it generates one record for the main LU table, and between 1 and 3 records are generated for the remaining LU tables. The values '1' and '3' are set in **TABLE_DEFAULT_DISTRIBUTION_MIN** and **TABLE_DEFAULT_DISTRIBUTION_MAX** [TDM general parameters](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md#data-generation-parameters).
+   The **rowsGeneratorDistribution** input argument of the **sourceDbQuery** Actor (named *Query*) in each LU table population flow sets the number of generated records for each table. By default, it generates one record for the main LU table, and between 1 and 3 records are generated for the remaining LU tables. The values '1' and '3' are set in **TABLE_DEFAULT_DISTRIBUTION_MIN** and **TABLE_DEFAULT_DISTRIBUTION_MAX** [TDM general parameters](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md#data-generation-parameters).
 
    *Edit options:*
 
    The following methods can be used to override the number range of generated records in a TDM implementation:
    
    i. Edit the default number range of generated records (default is 1 to 3): Update the
-   **TABLE_DEFAULT_DISTRIBUTION_MIN** and **TABLE_DEFAULT_DISTRIBUTION_MAX** parameters in the TDM DB. This edit will impact the number of generated records on all LU tables, except for the main source LU table.
+   **TABLE_DEFAULT_DISTRIBUTION_MIN** and **TABLE_DEFAULT_DISTRIBUTION_MAX** parameters in the TDM DB. This edit will impact the number of generated records for all LU tables, except for the main source LU table.
    
    Example:
    Run the following Update statements in order to set the number of generated records to be between 2 and 4:
