@@ -7,18 +7,13 @@ To use a Secrets Management service, in the Interface Editor (including Environm
 ## Table of Contents
 
 1. [Interface Connection Settings](#interface-connection-settings)  
-
    1.1 [Setting and marking an interface property to use a Secrets Management service](#setting-and-marking-an-interface-property-to-use-a-secrets-management-service)  
-
    1.2 [Provider-Specific Considerations and Usage Patterns](#provider-specific-considerations-and-usage-patterns)  
    - [HashiCorp Vault](#hashicorp-vault)  
    - [CyberArk CCP](#cyberark-ccp)  
    - [One Identity Safeguard](#one-identity-safeguard)  
-
 2. [Multi Secrets Management Services and Instances Support](#multi-secrets-management-services-and-instances-support)  
-
    2.1 [Multi Secrets Management Services](#multi-secrets-management-services)  
-
    2.2 [Multi Secrets Management Service Instances](#multi-secrets-management-service-instances)  
 
 ## Interface Connection Settings
