@@ -19,6 +19,8 @@
 
 K2View’s auditing capability is now available to K2Cloud SaaS customers. This feature offers detailed visibility into user and system activity across Fabric.
 
+ > Requires: Fabric 8.3 or later to enable this feature.
+
 Note: Customers using self-hosted K2Cloud environments are not eligible for this capability.
 
 ## When to Enable Auditing in Production
