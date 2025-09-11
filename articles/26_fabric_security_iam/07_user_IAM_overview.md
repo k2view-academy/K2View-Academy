@@ -1,8 +1,20 @@
 # User Identification and Access Management
 
+## Table of Contents
+
+1. [Overview and Fundamentals](#overview-and-fundamentals)  
+2. [Identity Providers & Authenticators](#identity-providers--authenticators)  
+   2.1 [Proprietary Custom Authenticator](#proprietary-custom-authenticator)  
+   2.2 [Sequence Authenticators](#sequence-authenticators)  
+   2.3 [Authentication method by Channel](#authentication-method-by-channel)  
+   2.4 [User Information at UserCode](#user-information-at-usercode)  
+3. [Data Protection in Transit and at Rest](#data-protection-in-transit-and-at-rest)  
+4. [Auditing](#auditing)  
+
+
 ## Overview and Fundamentals 
 
-Modern authentication and authorization platforms are responsible for user **identification** via an **authentication** process, and for **access management** via **authorization** mechanisms. Together, they are also called Identity and Access Management (IAM).
+Modern authentication and authorization platforms are responsible for user **identification** via an **authentication** process, and for **access management** via **authorization** mechanisms. Together, they are also referred to as Identity and Access Management (IAM).
 
 Such platforms and related protocols usually define several actors that are present in every use case: *principal, Identity Provider (IDP)*, and *Relying Party (RP)*, also called *Service Provider (SP)*:
 
@@ -33,7 +45,7 @@ The following are the supported authentication providers:
 
 - **Fabric**, for console, WS, and web access. When used, Fabric stores users along with their credentials in a System DB table. Passwords are stored securely in this table, using a salted password hashing technique. By default, Fabric is configured to use 32 32-byte salt length.
 
-- **LDAP** server, for console, WS and web access. Done via LDAP integration. For more information, see [here](/articles/26_fabric_security_iam/11_user_IAM_LDAP.md).
+- **LDAP** server, for console, WS, and web access. Done via LDAP integration. For more information, see [here](/articles/26_fabric_security_iam/11_user_IAM_LDAP.md).
 
 - **ADLDAP** (Active Directory) server, for console, WS, and web access. Done via LDAP integration. For more information, see [here](/articles/26_fabric_security_iam/11_user_IAM_LDAP.md).
 
@@ -41,7 +53,7 @@ The following are the supported authentication providers:
 
 **Using SAML as the SSO methodology**. This brings additional benefits, in addition to admin operation perspectives: first, it improves the user experience. Users do not need to type their credentials repeatedly on different services within the organization. Second, in terms of security, the authentication credentials are neither handled nor known by Fabric. See [here](/articles/26_fabric_security_iam/08_user_IAM_SSO_overview.md) more about SSO.
 
-  Fabric is ready to work with commonly used and major IDPs such as Azure AD and Okta. 
+  Fabric is ready to work with commonly used and major IDPs such as Microsoft Entra ID and Okta. 
 
 Fabric also provides the option to **block** access either for console or web access. This capability empowers the security access control, for example, when an organization wants users' access to be limited to only specific node/s in a cluster.
 
@@ -102,4 +114,4 @@ For more information about Fabric Security, refer to these articles:
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/18_FIPS_implementation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/08_user_IAM_SSO_overview.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_iam/08_user_IAM_SSO_overview.md)
