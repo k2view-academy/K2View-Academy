@@ -2,6 +2,19 @@
 
 <web>
 
+## Table of Contents
+
+1. [K2Cloud Auditing Capability](#k2cloud-auditing-capability)  
+2. [When to Enable Auditing in Production](#when-to-enable-auditing-in-production)  
+3. [When Auditing Should Not Be Enabled](#when-auditing-should-not-be-enabled)  
+4. [Where to View Audit Logs](#where-to-view-audit-logs)  
+5. [Downloading Audit Logs](#downloading-audit-logs)  
+6. [Turning Auditing On/Off](#turning-auditing-onoff)  
+7. [What Gets Audited](#what-gets-audited)  
+8. [Auditing Reporting Structure](#auditing-reporting-structure)  
+9. [Auditing Reporting Examples](#auditing-reporting-examples)  
+
+
 ## K2Cloud Auditing Capability
 
 K2View’s auditing capability is now available to K2Cloud SaaS customers. This feature offers detailed visibility into user and system activity across Fabric.
