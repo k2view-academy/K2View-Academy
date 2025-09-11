@@ -8,6 +8,19 @@ Ready to be selected, each supported Secrets Management service has its own dedi
 
 In addition to populating these details, you **must** also activate that selected Secrets Management service by setting the 'ENABLED' property to 'true' in the relevant service section in the config.ini file. 
 
+## Table of Contents
+
+1. [Configuration Settings](#configuration-settings)  
+   1.1 [AWS Secrets Manager](#aws-secrets-manager)  
+   1.2 [HashiCorp Vault](#hashicorp-vault)  
+   1.3 [Azure Key Vault](#azure-key-vault)  
+   1.4 [CyberArk CCP](#cyberark-ccp)  
+   1.5 [Google Cloud Secret Manager](#google-cloud-secret-manager)  
+   1.6 [One Identity Safeguard](#one-identity-safeguard)  
+
+2. [Multi Secrets Management Services and Instances Support](#multi-secrets-management-services-and-instances-support)  
+   2.1 [Multi Secrets Management Service Systems](#multi-secrets-management-service-systems)  
+   2.2 [Multi Secrets Management Service Instances](#multi-secrets-management-service-instances)  
 
 
 ## Configuration Settings
