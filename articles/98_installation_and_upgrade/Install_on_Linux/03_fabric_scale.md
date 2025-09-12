@@ -1,4 +1,5 @@
-# Fabric scale
+# Fabric VM Cluster Scaling
+
 A Fabric cluster, during its lifecycle, may experience a higher load. Based on metrics such as CPU usage, available memory, or storage, you should consider scaling out the cluster. 
 
 By design, Fabric is built to enable horizontal scaling out by adding more fabric nodes. Each starting-up node knows how to add itself to the cluster autonomously; for example:
