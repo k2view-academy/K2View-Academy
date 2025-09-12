@@ -1,4 +1,4 @@
-<strong>Linux System Requirements</strong>
+<strong>VM System Requirements</strong>
   
 <ul>
   <li>
