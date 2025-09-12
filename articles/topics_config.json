@@ -325,7 +325,7 @@
 					"display name": "System Requirements",
 					"sub-topics": [
 						{
-							"display name": "Linux Requirements",
+							"display name": "VM Requirements",
 							"value": "98_installation_and_upgrade/Hardware_Linux_Docker"
 						},
 						{
@@ -346,7 +346,7 @@
 							"value": "98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1"
 						},
 						{
-							"display name": "Fabric on Linux",
+							"display name": "Fabric on VM",
 							"value": "98_installation_and_upgrade/Install_on_Linux"
 						},			
 						{
