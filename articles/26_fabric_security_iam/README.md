@@ -6,8 +6,8 @@
     <li><a href="/articles/26_fabric_security_iam/09_user_IAM_SAML_fundamentals_and_terms.md">SAML Fundamentals, Terminology and Security</a></li>
     <li><a href="/articles/26_fabric_security_iam/10_user_IAM_SAML_Fabric_flow.md">How Fabric works with SAML</a></li>
     <li><a href="/articles/26_fabric_security_iam/11_user_IAM_LDAP.md">User IAM Using LDAP</a></li>
-    <li><a href="/articles/26_fabric_security_iam/11.1_user_IAM_AD_LDAP.md">User IAM AD LDAP Setup</a></li>
-    <li><a href="/articles/26_fabric_security_iam/11.2_user_IAM_AD_LDAPS.md">User IAM AD LDAPS Setup</a></li>
+    <li><a href="/articles/26_fabric_security_iam/11.1_user_IAM_AD_LDAP.md">User IAM Azure AD DS LDAP Setup</a></li>
+    <li><a href="/articles/26_fabric_security_iam/11.2_user_IAM_AD_LDAPS.md">User IAM Azure AD DS LDAPS Setup</a></li>
     <li><a href="/articles/26_fabric_security_iam/12_web_login.md">Web Login</a></li>
     <li><a href="/articles/26_fabric_security_iam/13_user_IAM_configuration.md">User IAM Configuration</a></li>
     <li><a href="/articles/26_fabric_security_iam/14_user_IAM_SAML_Azure_AD_setup.md">Microsoft Entra ID SAML Setup Guide</a></li>
