@@ -14,7 +14,7 @@ Click [here](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#sequ
 
 Currently, the Catalog does not automatically identify the sequence fields. Therefore, after a list of sequences is set in the **Sequences** tab, the relevant Catalog fields should be manually marked as sequences. Build the Catalog artifacts when completing the manual updates.
 
-Note that you must run the discovery on the interface that is populated in the TARGET_INTERFACE parameter of the [TDMLUInitBasedOnFabric flow](05_tdm_lu_implementation_general.md#tdmluinitbasedonfabric-flow-execution), since the load flow, created by the TDMLUInitBasedOnFabric flow, sends the TARGET_INTERFACE value to the [HandleMaskAndSeqFields flow](05d_tdm_sequence.md), which applies masking and sequence replacements to every record before loading it into the target environment.   
+Note that you must run the discovery on the interface that is populated in the [TDMLUInitBasedOnFabric flow's](05_tdm_lu_implementation_general.md#tdmluinitbasedonfabric-flow-execution) TARGET_INTERFACE input parameter, since the load flow, created by the TDMLUInitBasedOnFabric flow, sends the TARGET_INTERFACE value to the [HandleMaskAndSeqFields flow](05d_tdm_sequence.md), which applies masking and sequence replacements to every record before loading it into the target environment.   
 
 Click [here](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#sequences-tab) for instructions.
 
