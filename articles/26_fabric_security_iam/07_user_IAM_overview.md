@@ -41,9 +41,9 @@ Fabric works with several authentication providers. Each authenticator is respon
 
 The following are the supported authentication providers:
 
-- **Cassandra**, for console, WS, and web access. This Fabric  authentication method uses Cassandra as a System DB. When another System DB is being used, then it shall be changed to "Fabric".
-
 - **Fabric**, for console, WS, and web access. When used, Fabric stores users along with their credentials in a System DB table. Passwords are stored securely in this table, using a salted password hashing technique. By default, Fabric is configured to use 32 32-byte salt length.
+
+- **Cassandra**, for console, WS, and web access authentication when Fabric uses Cassandra as its System DB. When the System DB does not use Cassandra, then you need to changd the authentication provider to "Fabric" or other supported providers.
 
 - **LDAP** server, for console, WS, and web access. Done via LDAP integration. For more information, see [here](/articles/26_fabric_security_iam/11_user_IAM_LDAP.md).
 
