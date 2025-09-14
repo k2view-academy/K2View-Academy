@@ -1,6 +1,6 @@
 # AI-driven Synthetic Data Generation
 
-TDM 9.0 adds integration with AI-based entities' generation (currently limited to a non-hierarchical BE). K2view's TDM supports two methods of generating synthetic entities:
+TDM V9.0 adds integration with AI-based entities' generation (currently limited to a non-hierarchical BE). K2view's TDM supports two methods of generating synthetic entities:
 
 - Rule-driven generation
 - AI-driven generation
