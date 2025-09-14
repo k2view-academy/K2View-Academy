@@ -56,8 +56,8 @@ Add the AI environment to:
 - [TDM portal](/articles/TDM/tdm_gui/10_environment_roles_tab.md#ai-environment---permission-set). Add the related [Systems](/articles/TDM/tdm_gui/11_environment_products_tab.md) to the AI environment in the TDM portal.
 
 ### AI Configuration Table
-A new constTable Actor has been added in TDM 9.4: **AIConfigParams**. This Actor is located in *Implementation/SharedObjects/Broadway/TDM/TDMImplementorActors/* folder. This table holds the infrastructure configuration parameters, such as cloud provider(GCP, AWS, Azure), AI training/generation/evaluation images, for the AI processes.
-Open the AIConfigParams and click the Input's description to view the detailed description of the table's fields. 
+A new ConstTable Actor has been added in TDM V9.4: **AIConfigParams**. This Actor is located in *Implementation/SharedObjects/Broadway/TDM/TDMImplementorActors/* folder and holds the infrastructure configuration parameters, such as cloud provider (GCP, AWS, Azure), AI training/generation/evaluation images, for the AI processes.
+Open the AIConfigParams Actor and click the Input's description to view the detailed description of the table's fields. 
 Edit the required parameters in this table.
 
 ### AI MTables 
@@ -68,11 +68,11 @@ Edit the required parameters in this table.
 
   - **Special parameters** are **text** fields with **high cardinality** (above the default threshold set in training execution params). For these fields, the data generation produces values that do not directly emerge from the original data. **The generated values do not have to be real, but they should appear realistic**. 
 
-  - **Categorical** data is a type of data that is used for grouping information for values with a low cardinality. The synthetic data keeps the source values for these fields. An example for categorical data is **gender**.
+  - **Categorical** data is a type of data that is used for grouping information for values with low cardinality. The synthetic data keeps the source values for these fields. An example for categorical data is **gender**.
 
     
 
-- The **override_special** and **override_categorical** column headings indicate if to override the default classification of the fields as special parameters or categorical data. One of these fields must be **true** for each record.
+- The **override_special** and **override_categorical** column headings indicate whether to override the default classification of the fields as special parameters or categorical data. One of these fields must be **true** for each record.
 
 - The **Indicator** column heading indicates how to override the default behavior: 
 
