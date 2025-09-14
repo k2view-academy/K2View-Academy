@@ -4,7 +4,7 @@
 
 1. [Overview and Fundamentals](#overview-and-fundamentals)  
 2. [Identity Providers & Authenticators](#identity-providers--authenticators)  
-   2.1 [Proprietary Custom Authenticator](#proprietary-custom-authenticator)  
+   2.1 [Custom Authenticator](#custom-authenticator)  
    2.2 [Sequence Authenticators](#sequence-authenticators)  
    2.3 [Authentication method by Channel](#authentication-method-by-channel)  
    2.4 [User Information at UserCode](#user-information-at-usercode)  
@@ -59,9 +59,9 @@ Fabric also provides the option to **block** access either for console or web ac
 
 Read [here](/articles/26_fabric_security_iam/13_user_IAM_configuration.md) how to define and configure Fabric's authenticator. 
 
-### Proprietary Custom Authenticator
+### Custom Authenticator
 
-Fabric can work with a proprietary custom authenticator when required by the organization.
+Fabric can work with a custom authenticator when required by the organization.
 
 To use such a custom authenticator, implement the interface `com.k2view.fabric.authentication.providers.Authenticator` and set the Fabric configuration accordingly. For more information see [here](/articles/26_fabric_security_iam/17_user_IAM_custom_authenticator.md)
 
