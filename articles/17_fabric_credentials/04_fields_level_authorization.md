@@ -10,8 +10,6 @@ Starting from Fabric V8.3, a new feature validates during the sync process wheth
 
 For example, to restrict certain users from accessing VIP customers, it is possible to add a new field to the root table called vip_ind and mark the VIP customers with 'Y'. All other customers will remain with vip_ind set to null. Afterwards, it is required to define a view called customers_vip that runs select * from root_table where vip_ind is null. Users with a role linked to a security profile that contains this view will not have access to the VIP customers, as the sync activity will throw unauthorized exception.
 
-Known limitation: Field-Level Authorization does not apply to GraphIt when it is invoked directly as a Web Service. In order to enforce the authorization mechanism, you should create a Web Service that invokes a GraphIt file.  
-
 ### End-to-End Definition of Field-Level Authorization
 
 1. Apply data manipulation on a table that contains sensitive data. For example, you can add a new field called MASKED_SSN to the CUSTOMER LU table and populate it with a masked value of the original SSN field using the CUSTOMER population flow as illustrated below:
