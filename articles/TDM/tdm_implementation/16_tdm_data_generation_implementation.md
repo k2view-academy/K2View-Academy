@@ -168,9 +168,9 @@ The following flows are created for each LU table:
 
 ##### PII Fields
 
-- In general, **it is recommended to populate the PII fields in the data generation flow** and to avoid overriding them with the Masking Actors in the LU population flow. Such population makes it possible to expose PII fields as [external business parameters](#external-business-parameters) for data generation tasks, while ensuring that values set by the user are not overridden by the Masking Actors during LU population.
-- It should be verified that the [Masking Sensitive Data](/articles/TDM/tdm_gui/08_environment_window_general_information.md#masking-sensitive-data) checkbox is cleared for the **Synthetic** environment in the TDM Portal. This prevents PII fields from being masked in LU population flows for data generation tasks.
-- TDM V8.1 has added a new Actor — **GenerateConsistent**. This Actor inherits from the **Masking** Actor but has its own **category** value — **generate_consistent**. Using the **GenerateConsistent** Actor in data generation flows ensures referential integrity across LUs for the generated field.
+- In general, **it is recommended to populate PII fields in the data generation flow** and to avoid overriding them with Masking Actors in the LU population flow. This ensures that PII fields can be exposed as [external business parameters](#external-business-parameters) for data generation tasks, while preserving user-defined values.
+- The [Masking Sensitive Data](/articles/TDM/tdm_gui/08_environment_window_general_information.md#masking-sensitive-data) checkbox should be cleared for the **Synthetic** environment in the TDM Portal. This prevents PII fields from being masked in LU population flows for data generation tasks.
+- TDM V8.1 has added a new Actor — **GenerateConsistent**. This Actor inherits from the **Masking** Actor but has its own **category** value — **generate_consistent**. Using the **GenerateConsistent** Actor in data generation flows ensures referential integrity across LUs for generated fields.
 - Notes:
     - The TDM execution process sets the **generate_consistent** key to **true** on data generation tasks. 
     - The new Actor does not require having an input value since there is no original value for newly generated synthetic entities.
