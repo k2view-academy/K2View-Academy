@@ -268,7 +268,7 @@ The following flows are created for each LU table:
 
 ##### External Business Parameters
 
-- If users wish to override the default values of parameters that are set in the TDM implementation, they should be able to set their own values. Such overriding is facilitated only if external business parameters, such as City and State, are to be added to data generation flows. The editor of the parameter depends on the parameter type. Spaces and special characters — except for an underscore — are not allowed in the External Name setting. 
+- If users wish to override the default values of parameters that are set in the TDM implementation, they should be able to set their own values. Such overriding is facilitated only if external business parameters, such as City and State, are to be added to data generation flows. The editor of the parameter depends on the parameter type. Spaces and special characters — except for an underscore — are not permitted in the External Name setting. 
 
   Click [here](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md) for more information about integrating the TDM portal with the Broadway editors, as well as implementation guides for MTable and Distribution parameters.
 
