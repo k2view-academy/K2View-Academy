@@ -14,6 +14,8 @@ Click [here](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#sequ
 
 Currently, the Catalog does not automatically identify the sequence fields. Therefore, after a list of sequences is set in the **Sequences** tab, the relevant Catalog fields should be manually marked as sequences. Build the Catalog artifacts when completing the manual updates.
 
+Note that you must run the discovery on the interface that is populated in the TARGET_INTERFACE parameter of the [TDMLUInitBasedOnFabric flow](05_tdm_lu_implementation_general.md#tdmluinitbasedonfabric-flow-execution), since the load flow, created by the TDMLUInitBasedOnFabric flow, sends the TARGET_INTERFACE value to the [HandleMaskAndSeqFields flow](05d_tdm_sequence.md), which applies masking and sequence replacements to every record before loading it into the target environment.   
+
 Click [here](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#sequences-tab) for instructions.
 
 The Catalog feature of [Bulk Edit](/articles/39_fabric_catalog/catalog_app/14_1_bulk_creation.md) is supported from Fabric V8.3 onwards. This feature simplifies adding a **Sequence Name** property to specified fields (such as unique IDs), since you can create a bulk of fields for each Sequence Name and update the fields accordingly. A separate bulk needs to be created for each Sequence Name.
