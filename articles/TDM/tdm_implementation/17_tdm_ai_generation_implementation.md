@@ -39,12 +39,12 @@ The following shared Globals have been added to the AI-based data generation:
 
 ###  AI Interfaces
 
-- **AI_DB** — this Postgres interface must be active to enable AI-based generation functionality. The TDM portal does not allow creating AI-based training or generation tasks if this interface is inactive. You can set the same connection details as the TDM DB if you wish to include the AI schemas in the TDM DB.
-- **AI_Execution** — this interface must be active to enable AI-based generation functionality. The TDM portal does not allow the creation of AI-based training or generation tasks if this interface is inactive. 
-- **AI_DB_External** — this custom interface must be active to enable the AI-based generation functionality. This custom interface is utilized in order to securely allow Fabric to interact with the Kubernetes server [(K8s server)](/articles/98_installation_and_upgrade/Install_TDM/TDM_AI_Installation_V9.x.md#admin-token). The AI_DB_EXTERNAL custom interface should have the same credentials as the AI_DB interface, and the Data field should be populated with your database name.
+- **AI_DB** — this Postgres interface must be active to enable AI-based data generation. If this interface is inactive, the TDM portal does not allow creating AI-based training or generation tasks. Setting the same connection details as the TDM DB would include the AI schemas in the TDM DB.
+- **AI_Execution** — this interface must be active to enable AI-based data generation. If this interface is inactive, the TDM portal does not allow creating AI-based training or generation tasks. 
+- **AI_DB_External** — this custom interface must be active to enable AI-based data generation. This custom interface is utilized in order to securely allow Fabric to interact with the Kubernetes server [(K8s server)](/articles/98_installation_and_upgrade/Install_TDM/TDM_AI_Installation_V9.x.md#admin-token). The AI_DB_EXTERNAL custom interface should have the same credentials as the AI_DB interface, and the Data field should be populated with your database name.
   ![ai training](images/External_DB.png)
 
-Note that by default, the AI interfaces are disabled (inactive). 
+Note: AI interfaces are disabled (inactive) by default. 
 
   Click [here](/articles/24_non_DB_interfaces/07_custom_interface.md) for more information about Custom Interface.
 
