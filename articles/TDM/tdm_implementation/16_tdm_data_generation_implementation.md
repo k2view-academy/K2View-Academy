@@ -264,7 +264,7 @@ The following flows are created for each LU table:
 
 
 
-​	Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) for more information about the masking Actors.
+​	Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) for more information about Masking Actors.
 
 ##### External Business Parameters
 
