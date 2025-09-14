@@ -272,13 +272,13 @@ The following flows are created for each LU table:
 
   Click [here](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md) for more information about integrating the TDM portal with the Broadway editors, as well as implementation guides for MTable and Distribution parameters.
 
-##### Handle Looping Over the Number of Records
+##### Handling Loops Over the Number of Records
 
 There are several optional modes for executing the data generation inner flow:
 
 - **Row by row** — this recommended approach is implemented by the data generation flows. The inner flow returns a single row and lets the RowsGenerator Actor handle parent rows and the number of rows per parent ID. The data generation flow can return either multiple results that will serve as the row columns or a single result named **result** of a **Map** type.
 
-Note that the data generation flow can be edited to be executed in different modes, if needed: 
+Note that the data generation flow can be configured to run in different modes, if needed: 
 
 - **Rows per parent** — generation of all records for each input parent ID. For example, generating 2 to 5 open cases and 1 to 6 closed cases per each parent activity ID requires the usage of the 'rows per parent' mode.
 - **Handle all parent rows** — generation of all records for all input parent IDs. The Actor will return these rows and will not call the inner flow again.
@@ -293,7 +293,7 @@ The rule-based data generation task runs in a dummy synthetic environment. This 
 Notes:
 
 - Fabric — the source and target interfaces can be set as *inactive* in the synthetic environment. The TDM interface must be active.
-- TDM self-service application — the synthetic environment is defined as a [source environment](/articles/TDM/tdm_gui/08_environment_window_general_information.md#environment-type) in the TDM self-service application. The synthetic environment must have environment_id = -1.
+- TDM self-service application — the synthetic environment is defined as a [source environment](/articles/TDM/tdm_gui/08_environment_window_general_information.md#environment-type) in the TDM self-service application, and must have environment_id = -1.
 
 
 [![Previous](/articles/images/Previous.png)](15_tdm_integrating_the_tdm_portal_with_broadway_editors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](17_tdm_ai_generation_implementation.md)
