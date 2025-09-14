@@ -74,20 +74,20 @@ Edit the required parameters in this table.
 
 - The **override_special** and **override_categorical** column headings indicate whether to override the default classification of the fields as special parameters or categorical data. One of these fields must be **true** for each record.
 
-- The **Indicator** column heading indicates how to override the default behavior: 
+- The **indicator** column heading indicates how to override the default behavior: 
 
 ​	**Examples**:
 
 - Do not define a city as a special parameter, as the data generation process has to generate real values for a city. Override the special parameters' default classification and set the indicator to false in order to indicate that the city must not be treated as a special parameter field.
 
-- Force the AI to treat the case_note field as a special parameter and generate a realistic-like dummy value for this field. 
+- Force the AI to treat the case_note field as a special parameter and generate a realistic dummy value for it. 
 
 - The MTable will be populated as follows:
 
   ![special params](images/ai_generation_special_params_example.png)
 
 ##### Note:
-  - **Primary and foreign keys** columns, as well as columns that are not string type, **cannot be overridden and populated** in this table.
+  - **Primary and foreign keys** columns, as well as columns that are not of string type, **cannot be overridden and populated** in this table.
   - Set the **active** to **true** to include this record in AI processing. 
 
 
