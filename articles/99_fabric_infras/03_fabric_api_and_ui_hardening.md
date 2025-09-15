@@ -19,6 +19,7 @@
 #### Import a TLS Certificate
 
 **Option 1: Import your existing TLS certificate into the keystore (recommended).**
+
 If you already have a TLS certificate, import it to the keystore:
 ~~~bash
 ${FABRIC_HOME}/fabric/scripts/certificates.sh addkey webserver ~/.keystore changeit
@@ -27,6 +28,7 @@ ${FABRIC_HOME}/fabric/scripts/certificates.sh addkey webserver ~/.keystore chang
 #### Generate a Self-signed TLS Certificate
 
 **Option 2: Generate a self-signed certificate**
+
 To create one, run the following command on one of your Fabric nodes:
 ~~~bash
 ${FABRIC_HOME}/fabric/scripts/certificates.sh genkey webserver ~/.keystore changeit
