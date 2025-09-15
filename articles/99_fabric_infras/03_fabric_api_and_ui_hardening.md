@@ -29,21 +29,7 @@ ${FABRIC_HOME}/fabric/scripts/certificates.sh addkey webserver ~/.keystore chang
 
 **Option 2: Generate a self-signed certificate**
 
-To create one, run the following command on one of your Fabric nodes:
-~~~bash
-${FABRIC_HOME}/fabric/scripts/certificates.sh genkey webserver ~/.keystore changeit
-~~~
-
->Note: When using IP-based access, a Subject Alternative Name (SAN) may be required. Use the following command instead:
->~~~bash
->keytool -genkey -keyalg RSA -keysize 4096 -sigalg SHA256WithRSA -alias webserver -keystore ~/.keystore -noprompt -storepass changeit -dname "CN=YOUR_IP, OU=K2View, O=K2View, L=City, ST=State, C=US" -ext "SAN=ip:YOUR_IP" -storetype PKCS12 -validity 760
->~~~
-
->Note: When using self-signed certificates, it may be necessary to export the certificate and add it to your browser’s truststore. Use the following command to export the certificate from the keystore and save it as a PEM file, which can then be imported into a browser truststore:
->~~~bash
->keytool -export -alias webserver -keystore ~/.keystore -storepass changeit -rfc -file webserver.pem
->~~~
-
+You can generate a self-signed certificate. The <a href="/articles/99_fabric_infras/13_creating_a_self_signed_certificate.md">Generating a Self-Signed Certificate in Fabric</a> article explains how to create and use a self-signed certificate in Fabric using the `certificates.sh` helper script, and alternatively, how to use the `keytool` utility directly. It also covers advanced options for IP-based access and browser trust configuration.
 
 ### Step 2 - Copy the Key to All Fabric Nodes
 
