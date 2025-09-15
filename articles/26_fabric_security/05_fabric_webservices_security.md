@@ -1,5 +1,19 @@
 # **Fabric Web Services Security** 
 
+## Table of Contents
+
+- [Authentication Methods](#authentication-methods)
+  - [API Key](#api-key)
+  - [JWT: Signed by Fabric](#jwt-signed-by-fabric)
+  - [JWT: Signed by the WS Client](#jwt-signed-by-the-ws-client)
+    - [External Trusted Authentication](#external-trusted-authentication)
+  - [Open Auth (OAuth)](#open-auth-oauth)
+  - [Basic Authentication](#basic-authentication)
+    - [Browser Calls Helper](#browser-calls-helper)
+- [Generating API Key](#generating-api-key)
+- [Web Service Authorization & Permissions](#web-service-authorization--permissions)
+
+
 ## Authentication Methods
 
 Fabric secures and controls Web Services (WS) access via an authentication and authorization mechanism in which each API call must be verified. 
