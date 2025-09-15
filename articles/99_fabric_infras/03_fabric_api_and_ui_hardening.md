@@ -29,7 +29,7 @@ ${FABRIC_HOME}/fabric/scripts/certificates.sh addkey webserver ~/.keystore chang
 
 **Option 2: Generate a self-signed certificate**
 
-You can generate a self-signed certificate. The <a href="/articles/99_fabric_infras/13_creating_a_self_signed_certificate.md">Generating a Self-Signed Certificate in Fabric</a> article explains how to create and use a self-signed certificate in Fabric using the `certificates.sh` helper script, and alternatively, how to use the `keytool` utility directly. It also covers advanced options for IP-based access and browser trust configuration.
+The <a href="/articles/99_fabric_infras/13_creating_a_self_signed_certificate.md">Generating a Self-Signed Certificate in Fabric</a> article explains how to create and use a self-signed certificate in Fabric using the `certificates.sh` helper script, and alternatively, how to use the `keytool` utility directly. It also covers advanced options for IP-based access and browser trust configuration.
 
 ### Step 2 - Copy the Key to All Fabric Nodes
 
