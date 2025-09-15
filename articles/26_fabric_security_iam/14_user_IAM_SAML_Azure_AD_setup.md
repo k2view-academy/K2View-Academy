@@ -4,6 +4,21 @@ This article describes how to connect your Microsoft Entra ID Single Sign-On (SS
 
 You can read more about the guidelines at this link: [Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/fabric-tutorial), as Fabric is a part of the Microsoft's Entra ID app marketplace. 
 
+## Table of Contents
+
+- [Prerequisite Requirements](#prerequisite-requirements)
+- [Configuration instructions: For Microsoft Entra ID](#configuration-instructions-for-microsoft-entra-id)
+  - [Step 1–3: Add Fabric Application](#step-1-3-add-fabric-application)
+  - [Step 4–5: Select Fabric from Gallery](#step-4-5-select-fabric-from-gallery)
+  - [Step 6–8: Configure Single Sign-On](#step-6-8-configure-single-sign-on)
+  - [Step 9: Basic SAML Configuration](#step-9-basic-saml-configuration)
+  - [Step 10: User Attributes & Claims](#step-10-user-attributes--claims)
+  - [Step 11: SAML Signing Certificate](#step-11-saml-signing-certificate)
+  - [Step 12: Upload Public Key Certificate](#step-12-upload-public-key-certificate)
+  - [Step 13: Copy IDP Parameters](#step-13-copy-idp-parameters)
+- [Configuration instructions: For Fabric](#configuration-instructions-for-fabric)
+
+
 ### Prerequisite Requirements
 
 - Admin access to Microsoft Entra ID.
