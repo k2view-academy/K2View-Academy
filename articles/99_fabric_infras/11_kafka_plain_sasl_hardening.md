@@ -2,6 +2,26 @@
 
 The following steps are used to harden the Kafka server in a Fabric cluster.
 
+## Table of Contents
+
+- [Kafka Hardening](#kafka-hardening)
+  - [Step 1 - Shut Down Services](#step-1---shut-down-services)
+  - [Step 2 - Keys Generation](#step-2-keys-generation)
+  - [Step 3 - Replicate to All Nodes](#step-3---replicate-to-all-nodes)
+- [ZooKeeper Configuration](#zookeeper-configuration)
+  - [Step 1 - SASL Authentication](#step-1---sasl-authentication)
+  - [Step 2 - Create zookeeper_jaas.conf](#step-2---create-zookeeper_jaasconf)
+  - [Step 3 - Start the ZooKeeper Service](#step-3---start-the-zookeeper-service)
+- [Kafka Server Configuration](#kafka-server-configuration)
+  - [Step 1 - SSL Authentication](#step-1---ssl-authentication)
+  - [Step 2 - kafka_server_jaas.conf](#step-2---kafka_server_jaasconf)
+  - [Step 3 - producer.properties](#step-3---producerproperties)
+  - [Step 4 - Start the Kafka Server](#step-4---start-the-kafka-server)
+  - [Step 5 - Create Topic](#step-5---create-topic)
+  - [Step 6 - Create Kafka Producer Client](#step-6---create-kafka-producer-client)
+  - [Step 7 - Create Kafka Consumer Client](#step-7---create-kafka-consumer-client)
+
+
 ## Step 1 - Shut Down Services
 
 Check that the following services are switched off:
