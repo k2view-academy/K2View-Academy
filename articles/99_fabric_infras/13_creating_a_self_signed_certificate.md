@@ -28,7 +28,7 @@ ${FABRIC_HOME}/fabric/scripts/certificates.sh genkey webserver ~/.keystore chang
 
 * `genkey` — command to generate a new keypair.
 * `webserver` — the alias under which the key will be stored.
-  * `sp_cert` - use `sp_cert` as an alias when creating a self-serve certificate that you will set as the value of the SP_CERT_ALIAS of the [saml] section of your config.ini
+  * `fabric_cert` - use `fabric_cert` as an alias when creating a self-serve certificate that you will set as the value of the SP_CERT_ALIAS of the [saml] section of your config.ini
 * `~/.keystore` — path to the keystore file (defaults to `~/.keystore` if not specified).
 * `changeit` — keystore password (default is `"changeit"` if omitted).
 
@@ -55,7 +55,7 @@ Key points:
 
 * `-genkeypair` generates both a private key and self-signed certificate.
 * `-alias` specifies the logical name for this keypair inside the keystore.
-  * `sp_cert` - use `sp_cert` as an alias when creating a self-serve certificate that you will set as the value of the SP_CERT_ALIAS of the [saml] section of your config.ini
+  * `fabric_cert` - use `fabric_cert` as an alias when creating a self-serve certificate that you will set as the value of the SP_CERT_ALIAS of the [saml] section of your config.ini
   * otherwise `webserver` or other alias names can be used. 
 * `-dname` sets the Distinguished Name fields; update `CN`, `O`, `L`, `ST`, and `C` as needed.
 * `-validity` defines the certificate lifetime in days (here, \~2 years).
