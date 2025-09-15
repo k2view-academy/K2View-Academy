@@ -114,7 +114,7 @@ Edit the required parameters in this table.
 ![k2system_tables](images/K2system_Tables.png)
 ### Overriding AI-Generated Values
 
-- In certain cases, it is necessary to fix or override some AI-based generated values. This can be done either by defining a post-execution flow that gets the generated entities and updates them, or by adding override logic to the load flows to update the values before loading them into the target environment.
+- In certain cases, it is necessary to fix or override some AI-generated values. This can be done either by defining a post-execution flow that updates the generated entities, or by adding override logic to the load flows to update the values before loading them into the target environment.
 
 ### LU Implementation
 - Verify that the linked fields in the LU tables have identical data types. The linked fields must have identical data types to support the MDB export of the LU schema into the TDM DB.
