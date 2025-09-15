@@ -2,6 +2,32 @@
 
 The following tables discuss how user access control is managed using Fabric commands.
 
+## Table of Contents
+
+- [CREATE Command](#create-command)
+  - [CREATE USER](#create-user)
+  - [CREATE ROLE](#create-role)
+  - [CREATE TOKEN](#create-token)
+- [ASSIGN Command](#assign-command)
+  - [ASSIGN SECURITY_PROFILE to ROLE](#assign-security_profile-to-role)
+  - [ASSIGN ROLE to USER](#assign-role-to-user)
+  - [ASSIGN ROLE to TOKEN](#assign-role-to-token)
+- [GRANT Command](#grant-command)
+  - [GRANT OPERATION](#grant-operation)
+    - [Examples](#grant-operation-command---examples)
+  - [GRANT WS_NAME](#grant-ws_name)
+    - [Examples](#grant-ws_name-command---examples)
+  - [Web Services Authorization](#web-services-authorization)
+- [Additional Commands](#additional-commands)
+  - [DROP USER](#drop-user)
+  - [DROP ROLE](#drop-role)
+  - [DROP TOKEN](#drop-token)
+  - [REVOKE](#revoke)
+  - [REVOKE ROLE](#revoke-role)
+  - [REVOKE SECURITY_PROFILE](#revoke-security_profile)
+  - [CHECK PERMISSION](#check-permission)
+
+
 ## CREATE Command
 
 **CREATE** commands are used to create a user, role or token in the [k2auth keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) in Cassandra:
