@@ -94,7 +94,7 @@ Edit the required parameters in this table.
 
 #### AITableFieldsInclusion
 
-- This is an optional table that enables the inclusion/exclusion of tables/fields from the LU schema export into the PG DB, to be used in the AI training process. See example:
+- This optional table specifies which tables and/or fields to include in or exclude from the LU schema export to the PG DB, to be used in the AI training process. See example:
 
   ![special params](images/ai_tables_inclusion_example.png)
 
@@ -104,17 +104,17 @@ Edit the required parameters in this table.
 
 - Creation of the K2system tables:
      - This shall be done by the TDM deploy flow if the CREATE_AI_K2SYSTEM_DB global is set to true.
-     - The TDM AI task and the AI job populate these created tables:
+     - The **TDM AI task** and **AI job** populate the following created tables:
        
               - Task_executions: This table stores all task executions for all task types.
-              - Task_execution_stats: A table that should be updated during job execution. Will hold any informative statistics or metrics that may be useful for later analysis.
+              - Task_execution_stats: Updated during job execution, this table stores statistics and metrics for later analysis.
               - Entity_list: A table containing all entities associated with an existing training or generation job.
      
 
 ![k2system_tables](images/K2system_Tables.png)
 ### Overriding Generated Values
 
-- In some cases, it may be required to fix or override some of the AI-based generated values. It can be implemented either by defining a post-execution flow that gets the generated entities and updates them, or by adding an override logic to the load flows to update the values before they are loaded to the target environment.
+- In certain cases, it is necessary to fix or override some AI-based generated values. It can be implemented either by defining a post-execution flow that gets the generated entities and updates them, or by adding an override logic to the load flows to update the values before they are loaded to the target environment.
 
 ### LU Implementation
 - Verify that the linked fields in the LU tables have identical data types. The linked fields must have identical data types to support the MDB export of the LU schema into the TDM DB.
