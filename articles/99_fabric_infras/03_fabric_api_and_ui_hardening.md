@@ -68,4 +68,4 @@ To securely access Fabric data via its JDBC driver, the TLS option is enabled (t
 To disable hardening, set the SECURE flag to false.
 
 
-[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/02_fabric_environments.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/04_cassandra_hardening.md)
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/02_fabric_environments.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/13_creating_a_self_signed_certificate.md)
