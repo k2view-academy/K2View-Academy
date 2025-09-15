@@ -107,8 +107,8 @@ Edit the required parameters in this table.
      - The TDM AI task and the AI job populate these created tables:
        
               - Task_executions: This table stores all task executions for all task types.
-              - Task_execution_stats: A table that should be updated during the job execution. Will hold any informative statistics or metrics that may be useful for a later analysis.
-              - Entity_list: A table with all the entities relevant to an existing training/generation job.
+              - Task_execution_stats: A table that should be updated during job execution. Will hold any informative statistics or metrics that may be useful for later analysis.
+              - Entity_list: A table containing all entities associated with an existing training or generation job.
      
 
 ![k2system_tables](images/K2system_Tables.png)
