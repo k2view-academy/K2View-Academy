@@ -1,9 +1,18 @@
 # Cassandra Hardening
 
-The following steps ensure that the keys that secure Fabric and Cassandra are properly generated and configured.
+## Table of Contents
+
+- [Step 1 - Keys Generation](#step-1---keys-generation)
+- [Step 2 - Transfer Keys and Certificates to All Cassandra and Fabric Nodes](#step-2---transfer-keys-and-certificates-to-all-cassandra-and-fabric-nodes)
+- [Step 3 - Cassandra YAML](#step-3---cassandra-yaml)
+- [Step 4 - Cassandra CQLSHRC](#step-4---cassandra-cqlshrc)
+- [Step 5 - Disable the default cassandra superuser](#step-5---disable-the-default-cassandra-superuser)
+
+
+The following steps ensure that the keys that secure Fabric and Cassandra are correctly generated and configured.
 
 - The example password ```Q1w2e3r4t5``` is used for TLS keys and can be replaced in all of the following sections by a new password.
-- Do not forget to replace all `$K2_HOME/` & `$INSTALL_DIR`  values with the full and correct path location for both Fabric and Cassandra.
+- Do not forget to replace all `$K2_HOME/` & `$INSTALL_DIR`  values with the complete and correct path location for both Fabric and Cassandra.
 
 
 ## Step 1 - Keys Generation
@@ -143,12 +152,12 @@ sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cas
     sed -i "s@port = .*@port = 9142@" $INSTALL_DIR/.cassandra/cqlshrc
     sed -i "s@hostname = .*@hostname = $(hostname -I |awk {'print $1'})@" $INSTALL_DIR/.cassandra/cqlshrc
     ```
-3. You can check your configuration by connecting to Cassandra with the followiong command: (use the user and password you have defined earlier)
+3. You can check your configuration by connecting to Cassandra with the following command: (use the user and password you have defined earlier)
    ```bash
    cqlsh -u k2admin -p Q1w2e3r4t5 --ssl
    ```
 
-## Step 5 - Disable the default cassandra superuser
+## Step 5 - Disable the default `cassandra` superuser
 
 Cassandra's default superuser is `cassandra`, and it must be disabled before deployment to production. Before doing so, you need to create new **superusers**, one for SYSDBA, and one that will be used for connecting Fabric to Cassandra.
 
