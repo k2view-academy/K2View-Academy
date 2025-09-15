@@ -117,7 +117,7 @@ Edit the required parameters in this table.
 - In certain cases, it is necessary to fix or override some AI-generated values. This can be done either by defining a post-execution flow that updates the generated entities, or by adding override logic to the load flows to update the values before loading them into the target environment.
 
 ### LU Implementation
-- Verify that the linked fields in the LU tables have identical data types. The linked fields must have identical data types to support the MDB export of the LU schema into the TDM DB.
+- Ensure that linked fields in the LU tables share the same data type. Identical data types are necessary for exporting the LU schema to the TDM DB via MDB [(Micro DB)](https://support.k2view.com/Academy/articles/01_fabric_overview/02_fabric_glossary.html#mdb--microdb).
 - Verify that the linked fields are defined as either PKs or unique indexes in the parent LU table to support the MDB export of these tables. All the parent LU table's PK/unique index fields must be linked to the child LU table. This is required for creating the FK relation in the PG DB for the exported LU tables.
 - The MDB export does not support multiple populations with different links to parent tables. The LU tables must have one link to a parent LU table.
 
