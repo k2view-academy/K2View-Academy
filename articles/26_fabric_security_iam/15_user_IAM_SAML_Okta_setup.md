@@ -2,6 +2,20 @@
 
 This article describes the setup and integration steps to connect your Single-Sign-On account at Okta to Fabric, allowing you to enjoy the benefits of easy sign-in, as well as authentication and authorization control through your admin tools.
 
+## Table of Contents
+
+- [Prerequisite Requirements](#prerequisite-requirements)
+- [Configuration instructions: At Okta](#configuration-instructions-at-okta)
+  - [Select Fabric from the Okta App Gallery](#select-fabric-from-the-okta-app-gallery)
+    - [Step 1–3: Open Applications and Browse App Catalog](#step-1-3-open-applications-and-browse-app-catalog)
+    - [Step 4–6: Add Fabric by K2View App](#step-4-6-add-fabric-by-k2view-app)
+  - [Setup Configuration Settings](#setup-configuration-settings)
+    - [Step 7: Assign Users or Groups](#step-7-assign-users-or-groups)
+    - [Step 8: Complete SAML SSO Configuration](#step-8-complete-saml-sso-configuration)
+  - [Collect the IDP Properties to be Set at Fabric Configuration](#collect-the-idp-properties-to-be-set-at-fabric-configuration)
+    - [Step 9–10: Copy IDP URL, Entity ID, and Certificate Key](#step-9-10-copy-idp-url-entity-id-and-certificate-key)
+
+
 ## Prerequisite Requirements
 
 - Admin access to Okta.
