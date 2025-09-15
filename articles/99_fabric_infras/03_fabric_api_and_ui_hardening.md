@@ -1,5 +1,15 @@
 # Fabric Hardening
 
+# Table of Contents
+
+- [Fabric API/WS Hardening](#fabric-apiws-hardening)
+  - [Step 1 - Import or Generate TLS Certificate](#step-1---import-or-generate-tls-certificate)
+  - [Step 2 - Copy the Key to All Fabric Nodes](#step-2---copy-the-key-to-all-fabric-nodes)
+  - [Step 3 - Configure Fabric](#step-3---configure-fabric)
+  - [Step 4 - Check the Access to Fabric Web UI via HTTPS](#step-4---check-the-access-to-fabric-web-ui-via-https)
+- [Fabric JDBC Driver Hardening](#fabric-jdbc-driver-hardening)
+
+
 ## Fabric API/WS Hardening
 
 ### Step 1 - Import or Generate TLS Certificate
