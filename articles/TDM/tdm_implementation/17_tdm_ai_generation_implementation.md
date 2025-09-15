@@ -112,9 +112,9 @@ Edit the required parameters in this table.
      
 
 ![k2system_tables](images/K2system_Tables.png)
-### Overriding Generated Values
+### Overriding AI-Generated Values
 
-- In certain cases, it is necessary to fix or override some AI-based generated values. It can be implemented either by defining a post-execution flow that gets the generated entities and updates them, or by adding an override logic to the load flows to update the values before they are loaded to the target environment.
+- In certain cases, it is necessary to fix or override some AI-based generated values. This can be done either by defining a post-execution flow that gets the generated entities and updates them, or by adding override logic to the load flows to update the values before loading them into the target environment.
 
 ### LU Implementation
 - Verify that the linked fields in the LU tables have identical data types. The linked fields must have identical data types to support the MDB export of the LU schema into the TDM DB.
@@ -124,7 +124,7 @@ Edit the required parameters in this table.
 #### LU Schema Update
 If the LU schema is updated, the subsequent training task execution will drop and recreate the schema tables for the updated LU.
 
-### Cleanup Process 
+### Cleanup Process of AI Execution Server and AI DB
 The cleanup process for both the AI execution server and the AI DB is manual and runs a dedicated flow. Click [here](/articles/98_installation_and_upgrade/Install_TDM/TDM_AI_Installation_V9.x.md#manual-cleanup-flow) for more information about the AI synthetic data generation cleanup process.
 
 [![Previous](/articles/images/Previous.png)](16_tdm_data_generation_implementation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](tdm_fabric_implementation_environments_setup.md)
