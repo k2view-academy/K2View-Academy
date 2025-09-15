@@ -15,7 +15,6 @@ This article explains how to create and use a self-signed certificate in Fabric 
 - [Summary](#summary)  
 
 
----
 
 ## 1. Using the `certificates.sh` Helper Script
 
@@ -35,7 +34,6 @@ ${FABRIC_HOME}/fabric/scripts/certificates.sh genkey webserver ~/.keystore chang
 
 By default, this generates a **4096-bit RSA key** signed with **SHA-256**, valid for **760 days**, and stored in **PKCS#12** format. The script also sets restrictive permissions (`chmod 600`) on the keystore for security.
 
----
 
 ## 2. Using `keytool` Directly (Alternative Approach)
 
@@ -65,7 +63,6 @@ Key points:
 
 This approach is helpful if you need finer control (e.g., adding SAN entries, non-default lifetimes, or different signing algorithms).
 
----
 
 ## 3. Generating a Certificate for IP-Based Access
 
@@ -85,7 +82,6 @@ keytool -genkey -keyalg RSA -keysize 4096 -sigalg SHA256WithRSA \
 
 Replace `YOUR_IP` with the Fabric node’s IP address. This ensures the certificate is accepted when connecting to Fabric services via IP.
 
----
 
 ## 4. Exporting the Certificate for Browser Trust
 
@@ -101,7 +97,6 @@ keytool -export -alias webserver \
 
 Then import `webserver.pem` into your browser or system truststore following the vendor’s instructions.
 
----
 
 ## 5. Key Points and Best Practices
 
@@ -109,7 +104,6 @@ Then import `webserver.pem` into your browser or system truststore following the
 * For production deployments, request certificates from a trusted CA or use an enterprise PKI.
 * When replacing or rotating certificates, the script automatically deletes any existing entry under the same alias before creating a new one.
 
----
 
 **Summary**:
 With `certificates.sh`, generating a self-signed certificate for Fabric is straightforward. Alternatively, you can use `keytool` directly for more control. For IP-based access, add SAN extensions with `keytool`. If external clients or browsers must connect, export the certificate and add it to their truststores.
