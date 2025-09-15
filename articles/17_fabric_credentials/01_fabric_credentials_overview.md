@@ -1,5 +1,16 @@
 # Fabric Authorization and Credentials Overview
 
+## Table of Contents
+
+- [RBAC in Fabric](#rbac-in-fabric)
+- [List of Permissions](#list-of-permissions)
+- [K2Auth Tables](#k2auth-tables)
+- [Setting Credentials](#setting-credentials)
+  - [Bootstrap Credentials](#bootstrap-credentials)
+- [Users Credentials](#users-credentials)
+  - [Admin User](#admin-user)
+
+
 ## RBAC in Fabric 
 Fabric includes an authentication and authorization mechanism that enables managing user access control and restrictions, such as:
 
