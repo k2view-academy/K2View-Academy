@@ -88,7 +88,7 @@ Edit the required parameters in this table.
 
 ##### Note:
   - **Primary and foreign keys** columns, as well as columns that are not of string type, **cannot be overridden and populated** in this table.
-  - Set the **active** to **true** to include this record in AI processing. 
+  - Set the **active** column to **true** to include the selected record in AI processing. 
 
 
 
