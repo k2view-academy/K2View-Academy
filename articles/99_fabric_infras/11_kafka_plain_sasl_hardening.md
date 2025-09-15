@@ -273,7 +273,7 @@ The Kafka daemon starts.
 $CONFLUENT_HOME/bin/kafka-console-producer --broker-list <broker-ip>:9093 --topic <topic-name> --producer.config ~/kafka/producer.properties
 ```
 
-### Step 7 - Create Kafka Consumer Clienr
+### Step 7 - Create Kafka Consumer Client
 
 1. For creating the Kafka consumer client, use the following command:
 
