@@ -1,6 +1,14 @@
 # Fabric Environments Security
 
-Fabric requires the following environments for each phase of the project lifecycle, from inception to delivery and maintenance. 
+Fabric benefits from being deployed to the following environments for the respective phases of a project's lifecycle, from inception to delivery and maintenance. 
+
+## Table of Contents
+
+- [Development Environment](#development-environment)
+- [QA Environment](#qa-environment)
+- [Pre-Production Environment](#pre-production-environment)
+- [Production Environment](#production-environment)
+
 
 ## Development Environment
 This environment should contain:
@@ -31,7 +39,7 @@ All access to the above-described servers should be limited to the QA team membe
 This environment should be isolated from the Development and QA environments and should be identical to the Production environment:
 
 - Fabric servers cluster, identical as possible to the Production environment ***(minimum 3 on each DC)***
-- Windows terminal server for installing and running the Fabric Studio. Access to this server should be limited to the relevant Admin team only.
+- Windows Terminal Server for installing and running the Fabric Studio. Access to this server should be limited to the relevant Admin team only.
 - Access to the Fabric WS (API) via the load balancer (LB).
 - Access to SVN/GIT for version control, limited to relevant users.
 - Source databases, including data that should have the same structure as in the Production environment.
