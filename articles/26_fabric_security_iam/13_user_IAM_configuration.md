@@ -2,29 +2,41 @@
 
 ## Table of Contents
 
-- [Overview](#overview)
-  - [Access Configuration](#access-configuration)
-- [Configuring Authentication](#configuring-authentication)
-  - [Built-in Authenticators](#built-in-authenticators)
-  - [Defaults and Custom Options](#defaults-and-custom-options)
-  - [Sequence Authenticators](#sequence-authenticators)
-    - [Example](#example)
-    - [Using Multiple Instances of the Same Type](#using-multiple-instances-of-the-same-type)
-    - [Worked Example](#worked-example)
-- [SAML Configuration](#saml-configuration)
-  - [Preparations & Prerequisites](#preparations--prerequisites)
-  - [Information Required from the IdP](#information-required-from-the-idp)
-  - [Provide the IdP](#provide-the-idp)
-  - [Generate a Self-signed Certificate](#generate-a-self-signed-ertificate)
-  - [Keystore Verification](#keystore-verification)
-  - [Editing the config.ini File](#editing-the-configini-file)
-    - [Configurations for Windows OS](#configurations-for-windows-os)
-- [LDAP & LDAPS Configuration](#ldap--ldaps-configuration)
-  - [Preparations & Prerequisites](#preparations--prerequisites-1)
-    - [Admin Role Settings](#admin-role-settings)
-    - [LDAPS: Secure LDAP](#ldaps-secure-ldap)
-  - [Editing the config.ini file](#editing-the-configini-file-1)
-- [Proprietary Custom Authenticator](#proprietary-custom-authenticator)
+- [Overview](#overview)  
+  - [Access Configuration](#access-configuration)  
+    - [Web Access](#web-access)  
+    - [Console Access](#console-access)  
+
+- [Configuring Authentication](#configuring-authentication)  
+  - [Built-in Authenticators](#built-in-authenticators)  
+    - [fabric](#fabric)  
+    - [cassandra](#cassandra)  
+    - [ldap](#ldap)  
+    - [adldap](#adldap)  
+    - [block_all](#block_all)  
+  - [Defaults and Custom Options](#defaults-and-custom-options)  
+  - [Sequence Authenticators](#sequence-authenticators)  
+    - [Example](#example)  
+    - [Using Multiple Instances of the Same Type](#using-multiple-instances-of-the-same-type)  
+    - [Worked Example](#worked-example)  
+
+- [SAML Configuration](#saml-configuration)  
+  - [Preparations & Prerequisites](#preparations--prerequisites)  
+  - [Information Required from the IdP](#information-required-from-the-idp)  
+  - [Provide the IDP](#provide-the-idp)  
+  - [Generate a Self-signed Certificate](#generate-a-self-signed-certificate)  
+  - [Keystore Verification](#keystore-verification)  
+  - [Editing the config.ini File](#editing-the-configini-file)  
+    - [Configurations for Windows OS](#configurations-for-windows-os)  
+
+- [LDAP & LDAPS Configuration](#ldap--ldaps-configuration)  
+  - [Preparations & Prerequisites](#preparations--prerequisites-1)  
+    - [Admin Role Settings](#admin-role-settings)  
+    - [LDAPS: Secure LDAP](#ldaps-secure-ldap)  
+  - [Editing the config.ini file](#editing-the-configini-file-1)  
+
+- [Custom Authenticator](#custom-authenticator)  
+
 
 ## Overview
 
@@ -298,7 +310,7 @@ The instructions for using LDAP and LDAPS can be found [here](/articles/26_fabri
 
 <br/>
 
-## Proprietary Custom Authenticator
+## Custom Authenticator
 
 To use a custom authenticator, do the following in the config.ini:
 
