@@ -1,5 +1,16 @@
 # LUI Encryption
 
+## Table of Contents
+
+- [LUI Encryption Key](#lui-encryption-key)
+- [Encrypting an LUI Using the Fabric Studio](#encrypting-an-lui-using-the-fabric-studio)
+- [Partial LUI Encryption](#partial-lui-encryption)
+  - [Partial LUI Encryption Functions](#partial-lui-encryption-functions)
+    - [luEncrypt()](#luencrypt)
+    - [luDecrypt()](#ludecrypt)
+    - [luRekey()](#lurekey)
+
+
 ## LUI Encryption Key
 Fabric encrypts each LUI using the AES-256 mode encryption algorithm. Hence, the key length is 256 bits. 
 
