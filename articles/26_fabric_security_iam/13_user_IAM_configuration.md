@@ -13,8 +13,9 @@
     - [Worked Example](#worked-example)
 - [SAML Configuration](#saml-configuration)
   - [Preparations & Prerequisites](#preparations--prerequisites)
-    - [Information Required from the IdP](#information-required-from-the-idp)
-    - [Provide the IdP](#provide-the-idp)
+  - [Information Required from the IdP](#information-required-from-the-idp)
+  - [Provide the IdP](#provide-the-idp)
+  - [Generate a Self-signed Certificate](#generate-a-self-signed-ertificate)
   - [Keystore Verification](#keystore-verification)
   - [Editing the config.ini File](#editing-the-configini-file)
     - [Configurations for Windows OS](#configurations-for-windows-os)
@@ -202,13 +203,18 @@ The chosen alias name must also be set in the configuration for the IDP_CERT_ALI
 
    The keystore path and related parameters are set in the `jvm.options` file. In the TLS/SSL SETTINGS section, review the `javax.net.ssl.keyStore` property. These values are configured for a hardened environment. For example: `$K2_HOME/.cassandra_ssl/keystore.jks`.
 
-  The specified alias name must be used for the *SP_CERT_ALIAS* property in your configuration. Ensure that you use the alias of the already stored certificate. Please verify the alias using the keytool list command.
+  The specified alias name must be used for the *SP_CERT_ALIAS* property in your configuration. `fabric_cert` is used by default in the config.ini. Ensure that you use the alias of the already stored certificate. Please verify the alias using the keytool list command.
 
-  Use the same alias name in the configuration for the `SP_CERT_ALIAS` property. Confirm the alias exists by running:
+  Use the same alias value in the configuration for the `SP_CERT_ALIAS` property. Confirm the alias exists by running:
 
     ```bash
     keytool -list -keystore <full-path-to-keystore-file>
     ```
+
+### Generate a Self-signed Certificate
+
+If you need to generate a self-signed certificate, you can follow the steps of the <a href="/articles/99_fabric_infras/13_creating_a_self_signed_certificate.md">Generating a Self-Signed Certificate in Fabric</a> article explains how to create using the `certificates.sh` helper script, and alternatively, how to use the `keytool` utility directly. 
+
 
 ### Keystore Verification
 
