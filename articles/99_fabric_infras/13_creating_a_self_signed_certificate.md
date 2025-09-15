@@ -112,4 +112,4 @@ Then import `webserver.pem` into your browser or system truststore following the
 With `certificates.sh`, generating a self-signed certificate for Fabric is straightforward. Alternatively, you can use `keytool` directly for more control. For IP-based access, add SAN extensions with `keytool`. If external clients or browsers must connect, export the certificate and add it to their truststores.
 
 
-[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/03_fabric_api_and_ui_hardening.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/04_cassandra_hardening.md)
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/03_fabric_api_and_ui_hardening.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/04_cassandra_hardening.md)
