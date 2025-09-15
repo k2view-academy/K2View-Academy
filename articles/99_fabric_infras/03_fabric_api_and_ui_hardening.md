@@ -1,9 +1,11 @@
 # Fabric Hardening
 
-# Table of Contents
+## Table of Contents
 
 - [Fabric API/WS Hardening](#fabric-apiws-hardening)
   - [Step 1 - Import or Generate TLS Certificate](#step-1---import-or-generate-tls-certificate)
+    - [Import a TLS Certificate](#import-a-tls-certificate)
+    - [Generate a Self-signed TLS Certificate](#generate-a-self-signed-tls-certificate)
   - [Step 2 - Copy the Key to All Fabric Nodes](#step-2---copy-the-key-to-all-fabric-nodes)
   - [Step 3 - Configure Fabric](#step-3---configure-fabric)
   - [Step 4 - Check the Access to Fabric Web UI via HTTPS](#step-4---check-the-access-to-fabric-web-ui-via-https)
@@ -14,11 +16,15 @@
 
 ### Step 1 - Import or Generate TLS Certificate
 
+#### Import a TLS Certificate
+
 **Option 1: Import your existing TLS certificate into the keystore (recommended).**
 If you already have a TLS certificate, import it to the keystore:
 ~~~bash
 ${FABRIC_HOME}/fabric/scripts/certificates.sh addkey webserver ~/.keystore changeit
 ~~~
+
+#### Generate a Self-signed TLS Certificate
 
 **Option 2: Generate a self-signed certificate**
 To create one, run the following command on one of your Fabric nodes:
