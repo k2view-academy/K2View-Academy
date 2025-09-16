@@ -108,10 +108,10 @@ Different components and deployment options require different system setups. Use
 
 **How to Use This Section**
 
-* *Identify your deployment scenario* (on-premises server, cloud VM, or Kubernetes cluster).
+1. *Identify your deployment scenario* (on-premises server, cloud VM, or Kubernetes cluster).
 
-* *Review the corresponding hardware requirements* in this section to ensure adequate resources.
+2. *Review the corresponding hardware requirements* in this section to ensure adequate resources.
 
-* *Follow the installation guides* for your chosen deployment type.
+3. *Follow the installation guides* for your chosen deployment type.
 
-* *Consult the upgrade procedures* to keep your environment current, stable, and secure.
+4. *Consult the upgrade procedures* to keep your environment current, stable, and secure.
