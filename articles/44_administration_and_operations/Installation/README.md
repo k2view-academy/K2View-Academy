@@ -7,13 +7,13 @@ This section holds a collection of documents related to deploying and installing
   </li>
   <li><a href="/articles/44_administration_and_operations/Installation/system_requirements_installation_and_upgrade_overview.md">System Requirements, Installation, and Upgrade Overview</a>
   </li>
-  <li><a href="/articles/44_administration_and_operations/Installation/Planning_Guide_for_K2view_Fabric_Services_Installation_AWS.md">AWS Planning Guide for K2view Fabric Services Installation</a>
+  <li><a href="/articles/44_administration_and_operations/Installation/Planning_Guide_for_K2view_Fabric_Services_Installation_AWS.md">AWS Planning Guide of Fabric Services</a>
   </li>
-  <li><a href="/articles/44_administration_and_operations/Installation/Planning_Guide_for_K2view_Fabric_Services_Installation_Azure.md">Azure Planning Guide for K2view Fabric Services Installation</a>
+  <li><a href="/articles/44_administration_and_operations/Installation/Planning_Guide_for_K2view_Fabric_Services_Installation_Azure.md">Azure Planning Guide of Fabric Services</a>
   </li>
-  <li><a href="/articles/44_administration_and_operations/Installation/Planning_Guide_for_K2view_Fabric_Services_Installation_GCP.md">GCP Planning Guide for K2view Fabric Services Installation</a>
+  <li><a href="/articles/44_administration_and_operations/Installation/Planning_Guide_for_K2view_Fabric_Services_Installation_GCP.md">GCP Planning Guide of Fabric Services</a>
   </li>
-  <li><a href="/articles/44_administration_and_operations/Installation/K2view_Fabric_Services_AWS_Air_Gapped_Kubernetes_Installation.md">AWS - Air-Gapped Kubernetes Installation of K2view Fabric Services</a> 
+  <li><a href="/articles/44_administration_and_operations/Installation/K2view_Fabric_Services_AWS_Air_Gapped_Kubernetes_Installation.md">Air-Gapped Installation in AWS</a> 
   </li>
 </ul>
 
