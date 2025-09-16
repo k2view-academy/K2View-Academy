@@ -12,7 +12,7 @@ Examples:
 
 ### 1. Create the Pre or Post Execution Flow
 
-The pre and post execution processes are Broadway flows. These flows can have external parameters that can be overridden by the task creator. 
+The pre- and post-execution processes are Broadway flows. These flows can have external parameters that can be overridden by the task creator. 
 
 #### Adding an Execution Note to the Task's Entities
 
