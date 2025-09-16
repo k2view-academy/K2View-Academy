@@ -6,13 +6,13 @@ Examples:
 
 - Running a cleanup flow prior to executing the task's LUs.
 - Sending an email to the tester to notify them that the task execution has ended.
-- Adding an execution note to the task's entities (part or all entities). The execution note can be viewed later in the self-service application.
+- Adding an execution note to the task's entities (some or all entities). The execution note can be viewed later in the self-service application.
 
 ## Implementation Steps
 
 ### 1. Create the Pre or Post Execution Flow
 
-The pre or post execution processes are Broadway flows. These flows can have external parameters that can be overridden by the task's creator. 
+The pre and post execution processes are Broadway flows. These flows can have external parameters that can be overridden by the task creator. 
 
 #### Adding an Execution Note to the Task's Entities
 
