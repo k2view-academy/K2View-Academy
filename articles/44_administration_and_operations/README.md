@@ -6,7 +6,7 @@ The Administration and Operations section of the Knowledge Base serves as a cent
 
 These technical notes are intended for system architects, DevOps engineers, administrators, and end users who need guidance outside of the K2view reference documentation. 
 
-Please also check out our <a href="/articles/COE/README.md">Best Practices</a>
+Please also check out our <a href="/articles/COE/README.md">Best Practices</a>.
 
 <strong>Topic Areas</strong>
 
