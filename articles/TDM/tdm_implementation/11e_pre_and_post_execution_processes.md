@@ -4,9 +4,9 @@ The TDM task enables adding **Pre-** and **post-execution processes** in the tas
 
 Examples:
 
-- Running a cleanup flow before executing the task's LUs.
-- Sending an email to the tester to notify them that the execution of a task has ended.
-- Adding an execution note to the task's entities (part or all entities). The execution note can be later be viewed in the self-service application.
+- Running a cleanup flow prior to executing the task's LUs.
+- Sending an email to the tester to notify them that the task execution has ended.
+- Adding an execution note to the task's entities (part or all entities). The execution note can be viewed later in the self-service application.
 
 ## Implementation Steps
 
@@ -16,7 +16,7 @@ The pre or post execution processes are Broadway flows. These flows can have ext
 
 #### Adding an Execution Note to the Task's Entities
 
-A new Actor has been added in TDM 9.4: **EntityExecutionNote**. This Actor updates the relevant records in task_execution_entities TDM DB table to populate the execution_note field for the required entities.
+A new Actor has been added in TDM V9.4: **EntityExecutionNote**. This Actor updates the relevant records in task_execution_entities TDM DB table to populate the execution_note field for the required entities.
 
 See an example below:
 
