@@ -7,7 +7,7 @@ This document explains how to integrate customer Identity Providers (IdPs) such 
 ## Link
 
 <ul>
-		<li><a href="/articles/44_administration_and_operations/Identity_Federation/Integration_Overview_K2view_Identity_Federation_Services.pdf">Integration Overview - K2view Identity Federation Services</a>
+		<li><a href="/articles/44_administration_and_operations/Identity_Federation/Integration_Overview_K2view_Identity_Federation_Services.pdf">(PDF) Integration Overview - K2view Identity Federation Services</a>
     </li>
 </ul>
 
