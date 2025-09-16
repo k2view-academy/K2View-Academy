@@ -30,7 +30,7 @@ See an example below:
 - Populate the list of Broadway flows, the flow's LU, and the process type (pre/post). The LU can be empty if the processes are defined under Shared Objects, whereby the TDM task execution process sets the LU Name to TDM when running Batch commands to carry out pre/post execution processes. 
 - Redeploy the LUs populated in this table, the TDM LU, and the Web-Services.
 
-### 3. Add the Flow to PostAndPreExecutionProcess MTable
+### 3. TDM self-service - Add the Flow to the Business Entities
 
 - TDM self-service application setup - add the pre and post-execution processes to the relevant Business Entities.
 - Click [here](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md#pre-and-post-execution-processes-tabs) for instructions.
