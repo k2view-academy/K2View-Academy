@@ -27,7 +27,7 @@ See an example below:
 ### 2. Add the Flow to PostAndPreExecutionProcess MTable
 
 - The **PostAndPreExecutionProcess** MTable defines the list of pre-execution and post-execution flows to run before or at the end of a task's execution. 
-- Populate the list of Broadway flows, the flow's LU, and the process type (pre/post). The LU can be empty if the processes are defined under Shared Objects, whereby the TDM task execution process sets the LU Name to TDM when running Batch commands to carry out pre/post execution processes. 
+- Populate the list of Broadway flows, the flow's LU, and the process type (pre/post). The pre/post execution flows can be defined under the Shared Objects to be available for multiple LUs. In such case, the TDM execution process attaches the TDM LU to these processes. 
 - Redeploy the LUs populated in this table, the TDM LU, and the Web-Services.
 
 ### 3. TDM Self-Service Application — Add the Flow to the Business Entities
