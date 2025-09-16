@@ -3,7 +3,7 @@
 
 ## Abstract
 
-The *System Requirements, Installation, and Upgrade Overview* document outlines the hardware baselines, environment types, and deployment scenarios for K2view Fabric, TDM, GenAI Data Fusion, and Fabric Web Studio (v8.3). It covers system requirements (CPU, memory, disk, network) differentiated by environment (Proof-of-Value, Dev/QA, Production), and describes installation paths for Linux servers, Docker/Podman, and Kubernetes clusters. Upgrade guidance is also provided—with emphasis on database backup, version management, storage, and specific steps for self-managed Kubernetes clusters. The goal is to help customers size, install, and maintain a stable, scalable, and secure deployment regardless of whether it's on-premises, in-cloud VMs, or orchestrated via Kubernetes.
+The *System Requirements, Installation, and Upgrade Overview* document outlines the hardware baselines, environment types, and deployment scenarios for K2view Fabric, TDM, GenAI Data Fusion, and Fabric Web Studio. It covers system requirements (CPU, memory, disk, network) differentiated by environment (Proof-of-Value, Dev/QA, Production), and describes installation paths for Linux servers, Docker/Podman, and Kubernetes clusters. Upgrade guidance is also provided—with emphasis on database backup, version management, storage, and specific steps for self-managed Kubernetes clusters. The goal is to help customers size, install, and maintain a stable, scalable, and secure deployment regardless of whether it's on-premises, in-cloud VMs, or orchestrated via Kubernetes.
 
 ## Link
 
