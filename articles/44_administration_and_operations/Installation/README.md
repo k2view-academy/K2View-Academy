@@ -5,7 +5,7 @@ This section holds a collection of documents related to deploying and installing
 <ul>
   <li><a href="/articles/44_administration_and_operations/Installation/K2view_Fabric_Service_Deployment_Options.md">K2view Fabric Service Deployment Options</a>
   </li>
-  <li><a href="/articles/44_administration_and_operations/Installation/K2view_system_requirements_installation_and_upgrade_overview.md">System Requirements, Installation, and Upgrade Overview</a>
+  <li><a href="/articles/44_administration_and_operations/Installation/system_requirements_installation_and_upgrade_overview.md">System Requirements, Installation, and Upgrade Overview</a>
   </li>
   <li><a href="/articles/44_administration_and_operations/Installation/Planning_Guide_for_K2view_Fabric_Services_Installation_AWS.md">AWS Planning Guide for K2view Fabric Services Installation</a>
   </li>
