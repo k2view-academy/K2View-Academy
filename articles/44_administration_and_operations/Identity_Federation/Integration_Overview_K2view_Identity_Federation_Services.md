@@ -11,3 +11,6 @@ This document explains how to integrate customer Identity Providers (IdPs) such 
     </li>
 </ul>
 
+## Keywords
+
+Identity Federation, Identity Provider (IdP), SAML, Single Sign-On (SSO), Role-Based Access Control (RBAC), Metadata Exchange, Microsoft Entra ID, Okta, PingFederate, CyberArk, K2cloud Directory, Security Groups, Fabric Roles, Domain Mapping, Attribute Claims, Orchestrator, Spaces (K2view), Federated Authentication, Partner Metadata, Federation Setup Instructions
