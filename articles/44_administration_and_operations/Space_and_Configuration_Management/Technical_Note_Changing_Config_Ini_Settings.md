@@ -1,4 +1,4 @@
-# hanging K2cloud config.ini Settings (Technical Note)
+# Changing K2cloud config.ini Settings (Technical Note)
 
 
 ## Abstract
