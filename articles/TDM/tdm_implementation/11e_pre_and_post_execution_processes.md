@@ -16,7 +16,7 @@ The pre- and post-execution processes are Broadway flows. These flows can have e
 
 #### Adding an Execution Note to the Task's Entities
 
-A new Actor has been added in TDM V9.4: **EntityExecutionNote**. This Actor updates the relevant records in task_execution_entities TDM DB table to populate the execution_note field for the required entities.
+A new Actor, **EntityExecutionNote**, has been introduced in TDM V9.4. This Actor updates the relevant records in task_execution_entities TDM DB table to populate the execution_note field for the required entities.
 
 See an example below:
 
