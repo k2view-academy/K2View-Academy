@@ -7,7 +7,7 @@ The K2view Fabric Service Deployment Options document outlines the flexible mode
 ## Link
 
 <ul>
-  <li><a href="/articles/44_administration_and_operations/Installation/K2view_Fabric_Service_Deployment_Options.pdf">K2view Fabric Service Deployment Options</a>
+  <li><a href="/articles/44_administration_and_operations/Installation/K2view_Fabric_Service_Deployment_Options.pdf">K2view Fabric Service Deployment Options</a>
   </li>
 </ul>
 
