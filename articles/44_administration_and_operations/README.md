@@ -1,21 +1,13 @@
 <strong>Administration and Operations</strong>
 
-The Administration and Operations section of the K2view Knowledge Base is a centralized resource providing technical notes on critical operational areas required to install, configure, scale, and manage the K2view platform. The notes are organized into major categories:
+The Administration and Operations section of the K2view Knowledge Base is a centralized resource providing technical notes (technotes) on critical operational areas required to install, configure, scale, and manage the K2view platform. The technotes are organized in the top-level categories listed below. 
 
-1. Installation Options & Planning
-2. Space & Configuration Management
-3. Kubernetes Operations & Scaling
-4. Platform Behavior & Orchestration
-5. Identity Federation
+These technotes are tailored for system architects, DevOps engineers, administrators, and end users who seek practical guidance that supplements the primary K2view reference documentation. 
 
-This section is tailored for system architects, DevOps engineers, administrators, and end users who seek practical guidance that supplements the primary K2view reference documentation.
-
-Please also check out our <a href="/articles/COE/README.md">Best Practices</a>.
+Please also check out our <a href="/articles/COE/README.md">*Best Practices*</a> intended for organizations adopting or scaling with Fabric, to ensure consistent standards, secure development, performance, and reliability in their deployments.
 
 
-
-
-<strong>Topic Areas</strong>
+<strong>Topic Categories</strong>
 
 <ul>
 	<li><a href="/articles/44_administration_and_operations/Installation/README.md">Installation Options and Planning</a>
