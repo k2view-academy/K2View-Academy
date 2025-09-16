@@ -8,10 +8,17 @@ These technical notes are intended for system architects, DevOps engineers, admi
 
 Please also check out our <a href="/articles/COE/README.md">Best Practices</a>
 
+<strong>Topic Areas</strong>
+
 <ul>
-		<li><a href="/articles/44_administration_and_operations/Installation/README.md">Installation Options and Planning</a></li>
-		<li><a href="/articles/44_administration_and_operations/Space_and_Configuration_Management/README.md">Space and Configuration Management</a></li>
-		<li><a href="/articles/44_administration_and_operations/Kubernetes_Operations_and_Scaling/README.md">Kubernetes Operations and Scaling</a></li>
-		<li><a href="/articles/44_administration_and_operations/Platform_Behavior_and_Orchestration/README.md">Platform Behavior and Orchestration</a></li>
-		<li><a href="/articles/44_administration_and_operations/Identity_Federation/README.md">K2cloud Identity Federation</a></li>	
+	<li><a href="/articles/44_administration_and_operations/Installation/README.md">Installation Options and Planning</a>
+	</li>
+	<li><a href="/articles/44_administration_and_operations/Space_and_Configuration_Management/README.md">Space and Configuration Management</a>
+	</li>
+	<li><a href="/articles/44_administration_and_operations/Kubernetes_Operations_and_Scaling/README.md">Kubernetes Operations and Scaling</a>
+	</li>
+	<li><a href="/articles/44_administration_and_operations/Platform_Behavior_and_Orchestration/README.md">Platform Behavior and Orchestration</a>
+	</li>
+	<li><a href="/articles/44_administration_and_operations/Identity_Federation/README.md">K2cloud Identity Federation</a>
+	</li>	
 </ul>
