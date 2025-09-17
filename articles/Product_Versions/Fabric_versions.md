@@ -22,7 +22,7 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td></td>
             <td>274</td>
             <td>17.5</td>
-            <td>4.1.8</td>
+            <td>4.1.3</td>
             <td></td>
         </tr>
         <tr>
