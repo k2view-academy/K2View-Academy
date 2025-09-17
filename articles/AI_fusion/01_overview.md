@@ -1,4 +1,4 @@
-# AI Data Fusion
+# GenAI Data Fusion
 
 K2view AI Data Fusion is a comprehensive end-to-end solution that bridges the gap between generative AI language models and enterprise data ecosystems. It empowers GenAI agents to deliver accurate, contextual, and secure responses powered by real-time business entity data retrieved from across your enterprise systems.
 
