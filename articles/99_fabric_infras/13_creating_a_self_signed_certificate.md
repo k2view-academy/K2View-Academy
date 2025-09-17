@@ -1,5 +1,5 @@
 
-# Generating a Self-Signed Certificate in Fabric
+# Generating a Self-Signed Certificate
 
 Fabric supports the use of TLS certificates to secure communication between its components and client applications. While production deployments typically use certificates issued by a trusted Certificate Authority (CA), it is sometimes necessary to generate a **self-signed certificate** for development, testing, or air-gapped environments.
 
