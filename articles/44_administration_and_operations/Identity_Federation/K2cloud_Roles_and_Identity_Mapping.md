@@ -8,6 +8,8 @@ Practical usage scenarios show how access can be limited to specific areas and h
 
 Together, these guidelines offer a framework for customers to align K2cloud access management with enterprise identity policies while maintaining flexibility and security across environments.
 
+For information on integrating customer Identity Providers with K2cloud’s federation service, see the companion article [K2cloud Identity Federation Services – Integration Overview](/articles/44_administration_and_operations/Identity_Federation/Integration_Overview_K2view_Identity_Federation_Services.md)
+
 
 ## Link
 
