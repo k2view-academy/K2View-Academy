@@ -18,6 +18,6 @@ Please also check out our <a href="/articles/COE/README.md">*Best Practices*</a>
 	</li>
 	<li><a href="/articles/44_administration_and_operations/Platform_Behavior_and_Orchestration/README.md">Platform Behavior and Orchestration</a>
 	</li>
-	<li><a href="/articles/44_administration_and_operations/Identity_Federation/README.md">K2cloud Identity Federation</a>
+	<li><a href="/articles/44_administration_and_operations/Identity_Federation/README.md">K2cloud Identity and Role Federation</a>
 	</li>	
 </ul>
