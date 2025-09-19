@@ -1,4 +1,4 @@
-<strong>K2cloud Identity Federation</strong>
+<strong>K2cloud Identity and Role Federation</strong>
 
 This section provides an overview of how K2cloud integrates with customer-managed Identity Providers (IdPs) such as Microsoft Entra ID, Okta, PingFederate, and other SAML-compliant platforms through the K2cloud CyberArk Identity Federation Service. It explains how Single Sign-On (SSO) is enabled, how metadata, domains, and group information are exchanged, and how customer-managed security groups are mapped to Fabric roles.
 
