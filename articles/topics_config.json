@@ -444,8 +444,8 @@
 			"visible": true
 		},
 		{
-			"KB display name": "Administration & Operations",
-			"KB display text": "Administration & operations documents, including technical notes and various system requirements.",
+			"KB display name": "Technical Notes",
+			"KB display text": "Administration, installation, how-to, and operations technical notes.",
 			"KB icon": "images/administration_icon.png",
 			"link": "Academy/articles/44_administration_and_operations/README.html",
 			"visible": true
