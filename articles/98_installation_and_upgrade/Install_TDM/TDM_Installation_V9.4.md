@@ -2,18 +2,26 @@
 
 This document outlines installation guidelines and initial configuration steps for a new TDM installation. The procedure for upgrading to TDM V9.4 is described in the [TDM upgrade document](/articles/98_installation_and_upgrade/Upgrade_TDM/TDM_Upgrade_Procedure_to_V9.4.pdf).
 
+
 ## Table of Contents
 
-- [TDM Development Environment Installation](#tdm-on-prem-installation--desktop-studio)
+  - [TDM Development Environment Installation](#tdm-development-environment-installation)
     - [TDM On-Prem Installation — Desktop Studio](#tdm-on-prem-installation--desktop-studio)
+      - [Prerequisites](#prerequisites)
+      - [TDM Library Installation](#tdm-library-installation)
+      - [TDM Deployment](#tdm-deployment)
     - [TDM On-Prem Installation — Web Studio](#tdm-on-prem-installation--web-studio)
-    - [TDM K2view Cloud Installation](#k2view-cloud-development-environment-installation)     
-- [TDM Non-Development Environment Installation](#tdm-non-development-environment-installation)
-    - [On-Prem VM Installation](#on-prem-vm-installation) 
+      - [Prerequisites](#prerequisites-1)
+      - [TDM Library Installation](#tdm-library-installation-1)
+      - [TDM Deployment](#tdm-deployment-1)
+    - [K2view Cloud Development Environment Installation](#k2view-cloud-development-environment-installation)
+  - [TDM Non-Development Environment Installation](#tdm-non-development-environment-installation)
+    - [Prerequisites](#prerequisites-2)
+    - [On-Prem VM Installation](#on-prem-vm-installation)
+      - [About Git](#about-git)
     - [K2view Cloud Installation](#k2view-cloud-installation)
-
-- [TDM Initial Setup](#tdm-initial-setup)
-- [Optional — TDM AI Installation](#optional--tdm-ai-installation)
+  - [TDM Initial Setup](#tdm-initial-setup)
+  - [Optional — TDM AI Installation](#optional--tdm-ai-installation)
 
 ## TDM Development Environment Installation
 
@@ -101,27 +109,52 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 
 ## TDM Non-Development Environment Installation
 
+This section outlines the steps for installing TDM in non-development environments.
+Two deployment models are supported: On-Prem VM Installation and K2cloud Installation.
+
+### Prerequisites
+
+The following prerequisites apply to both deployment models:
+- Fabric: Install Fabric v8.3.x.
+- PostgreSQL: Required for both the Fabric System DB (operational) and the TDM operational DB.
+    - TDM v9.4 was certified against PostgreSQL v17.
+- Kafka: Not required for TDM projects.
+- Git: Recommended use of separate branches for development, testing (SIT), and production.
+    - Development → Testing → Production merge flow.
+    - Before cloning the branch, edit the following Globals in order to create the TDM DB and k2masking schema during the first TDM LU deployment:
+        - CREATE_TDMDB Global must be set to true.
+        - (Optional) If changing schema name: edit TDMDB_SCHEMA shared Global.
+
+References:
+- VM References
+    - [Fabric 8 Setup Guide](/articles/98_installation_and_upgrade/Install_on_Linux/02_Fabric_8.x.x_Setup.md)
+    - [PostgreSQL Setup](/articles/98_installation_and_upgrade/Install_on_Linux/02.2_Fabric_8.x.x_PG_setup.md)
+    - [VM Requirements](/articles/98_installation_and_upgrade/Hardware_Linux_Docker/README.md)
+- K2cloud / Kubernetes Deployments
+    - [Kubernetes System Requirements](/articles/98_installation_and_upgrade/Hardware_K8s/README.md)
+
+
 ### On-Prem VM Installation 
 
-#### Prerequisites
+1. Provision VMs
+    - One VM for Fabric Server.
+    - One VM for PostgreSQL DB.
+2. Install Fabric and PostgreSQL
+    - Follow Fabric 8 setup guide and PostgreSQL setup guide.
+3.	Clone Project Branch
+    - Clone the relevant Git branch (after editing Globals as described above).
+4.	Build and Deploy Environments
+    - Build and deploy the environment configuration before deploying the TDM project. See [environments](/articles/25_environments/04_offline_deployment.md)
+    - Use deploy-environment.sh.
+    - Ensure the POSTGRESQL_ADMIN interface is active.
+5.	Deploy the TDM Project
+    - Deploy the TDM LU → creates the TDM DB and k2masking schema.
+    - After creation, set CREATE_TDMDB Global back to false.
+    - Build and deploy the remaining TDM components.
+6.	Offline Deployment
+    - Refer to [Offline Deployment Instructions](/articles/16_deploy_fabric/03_offline_deploy.md).
 
-- Install VMs (virtual machines) for the Fabric server and the PostgreSQL DB. The PostgreSQL DB is required for Fabric System (operational) DB and TDM operational DB.
-
-- Install Fabric V8.3.X and PostgreSQL DB (TDM V9.4 was certified based on PG V17).
-
-- Note that Kafka installation is not required for a TDM project.
-
-- For further information, refer to the following articles:
-
-  [Fabric 8 Setup Guide](/articles/98_installation_and_upgrade/Install_on_Linux/02_Fabric_8.x.x_Setup.md)
-  
-  [Kubernetes System Requirements](/articles/98_installation_and_upgrade/Hardware_K8s/README.md)
-
-  [Linux / Docker Requirements](/articles/98_installation_and_upgrade/Hardware_Linux_Docker/README.md)
-
-  [PostgreSQL Setup](/articles/98_installation_and_upgrade/Install_on_Linux/02.2_Fabric_8.x.x_PG_setup.md)
-
-#### Git Clone
+#### About Git
 
 - It is recommended to use separate Git branches for development, testing (SIT), and production environments. Changes from the development branch are merged into the testing branch, and once tested, changes from the testing branch are merged into the production branch.
 - Edit the following Globals in the relevant branch **before** cloning in order to create the TDM DB and k2masking schema during the first TDM LU deployment:
@@ -129,30 +162,18 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
   - Optional: If you wish to change the schema name for the TDM DB (the default schema name contains the cluster ID), then edit the **TDMDB_SCHEMA** shared Global. 
 - Clone the relevant GitHub branch. 
 
-#### Build and Deploy the Environments to Fabric
-
-- Build the [environments](/articles/25_environments/04_offline_deployment.md) and deploy them to Fabric. Their deployment must take place before deploying the TDM project to Fabric. Use the **deploy-environment.sh** script to deploy the *Environments* file. 
-- Note that the **POSTGRESQL_ADMIN interface** must be **active**.
-
-#### Build and Deploy the TDM Project to Fabric
-
-- Deploy the TDM LU. This deployment creates the TDM DB and the k2masking schema. After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false**.
-
-- Build and deploy the remaining TDM project components to Fabric.
-
-- Click [here](/articles/16_deploy_fabric/03_offline_deploy.md) for more information about offline deployment.
-
-  
 
 ### K2view Cloud Installation
 
-- Create a Project with Fabric V8.3.X and PostgreSQL DB.
-- Attach the appropriate GitHub branch to this project. 
-- Edit the following Globals in the relevant branch **before** cloning in order to create the TDM DB and k2masking schema during the first TDM LU deployment:
-  - The **CREATE_TDMDB** Global in the TDM LU must be set to **true**.
-  - Optional: If you wish to change the schema name for the TDM DB (the default schema name contains the cluster ID), then Edit the **TDMDB_SCHEMA** shared Global. 
-- Create a Space based on this Project. Deploy the project to Fabric.
-
+1. Create Project
+    - With Fabric v8.3.x and PostgreSQL DB.
+2.	Attach GitHub Branch
+	- Edit Globals (CREATE_TDMDB, TDMDB_SCHEMA optional) before cloning in order to create the TDM DB and k2masking schema during the first TDM LU deployment:
+        - The **CREATE_TDMDB** Global in the TDM LU must be set to **true**.
+        - Optional: If you wish to change the schema name for the TDM DB (the default schema name contains the cluster ID), then Edit the **TDMDB_SCHEMA** shared Global. 
+3.	Create a Space
+	- Based on the project.
+	- Deploy project to Fabric.
 
 
 ## TDM Initial Setup
