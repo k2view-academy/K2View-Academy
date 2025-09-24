@@ -1,6 +1,6 @@
-<strong>Administration and Operations</strong>
+<strong>Technical Notes</strong>
 
-The Administration and Operations section of the K2view Knowledge Base is a centralized resource providing technical notes (technotes) on critical operational areas required to install, configure, scale, and manage the K2view platform. The technotes are organized in the top-level categories listed below. 
+The Technical Notes section of the K2view Knowledge Base is a centralized resource providing technical notes (technotes) on critical operational areas required to install, configure, scale, and manage the K2view platform. The technotes are organized in the top-level categories listed below. 
 
 These technotes are tailored for system architects, DevOps engineers, administrators, and end users who seek practical guidance that supplements the primary K2view reference documentation. 
 
