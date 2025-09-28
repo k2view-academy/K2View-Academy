@@ -191,7 +191,7 @@ For example:
 
 #### Get Instance
 
-The **GET** command is used to get information for a given [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) and to synchronize information from data sources if needed.
+The **GET** command is used to retrieve information for a given [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) and to synchronize information from variuos data sources if needed.
 Note that multiple LUs can be received using a GET command. However, multiple LUIs cannot be received from the same LU using a GET command. 
 
 The following message is displayed when attempting to get multiple LUIs from the same LU using a GET command:
