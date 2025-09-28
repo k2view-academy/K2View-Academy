@@ -14,7 +14,7 @@ For example:
 
 ![help example](images/04_fabric_commands_help_example.png)
 
-## Fabric Commands - Main Groups
+## Fabric Commands — Main Groups
 
  Fabric commands can be divided into the following groups: 
 
@@ -106,7 +106,7 @@ For example:
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#jobs-commands">Jobs</a></p>
 </td>
 <td valign="top" width="550pxl">
-<p>Fabric jobs execution and monitoring commands.</p>
+<p>Fabric job execution and monitoring commands.</p>
 </td>
 </tr>
 <tr>
@@ -146,7 +146,7 @@ For example:
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-transactions">Fabric Transactions</a></p>
 </td>
 <td valign="top" width="550pxl">
-<p>Support transactions to update LUI or Reference table data (Fabric as the System of Record).</p>
+<p>Support transactions for updating LUI or Reference table data (Fabric as the System of Record).</p>
 </td>
 </tr>
 <tr>
@@ -285,7 +285,7 @@ The following table lists the GET commands:
 
 The remote GET and GETF commands run on a random Fabric node on the remote DC. Therefore, always verify the permissions for the GET and GETF commands’ execution on Fabric’s local and remote nodes.
 
-Note that users are responsible for identifying if a [sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) on an LUI is required, and to only then run the remote GET or GETF commands. This prevents unnecessary calls to the remote Fabric node and getting the local LUI version instead.
+Note that users are responsible for determining whether a [sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) on an LUI is required, and should only then run the remote GET or GETF commands. This prevents unnecessary calls to the remote Fabric node and getting the local LUI version instead.
 
 ### Delete LUI Command
 
@@ -808,8 +808,8 @@ The command supports two modes:
 | Parameter         | Description                                                  |
 | ----------------- | ------------------------------------------------------------ |
 | `INTERFACE_NAME`  | Name of the PostgreSQL or file-type interface.               |
-| `INCLUDED_TABLES` | Comma-separated list of tables (optionally with columns) to include. |
-| `EXCLUDED_TABLES` | Comma-separated list of tables (optionally with columns) to exclude. |
+| `INCLUDED_TABLES` | A comma-separated list of table names (optionally containing columns) to be included. |
+| `EXCLUDED_TABLES` | A comma-separated list of table names (optionally containing columns) to be excluded. |
 | `FK`              | When true, includes FK-linked tables/columns even if excluded (default: true). |
 | `PHYSICAL_FK`     | When true, FKs are physically created in schema (default: true). |
 | `REMOTE_IID`      | Optional. Used for renaming the IID in the target schema or file.       |
