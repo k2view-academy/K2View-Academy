@@ -725,7 +725,7 @@ Example:
 
 ### MDB Export / Import
 
-Fabric supports exporting and importing LUIs (Logical Unit Instances) for backup, testing, data sharing, and migration across environments. LUIs can be transferred either through PostgreSQL interfaces or via file-based interfaces using SQLite format.
+Fabric supports exporting and importing LUIs (Logical Unit Instances) for backup, testing, data sharing, and cross-environment migration. LUIs can be transferred either via PostgreSQL interfaces or through file-based interfaces in SQLite format.
 
 These capabilities are useful for scenarios such as environment replication, regression testing with fixed data snapshots, or issue reproduction and debugging.
 
@@ -745,7 +745,7 @@ The command operates in three modes:
 
    - All table definitions, constraints (PKs, FKs, indexes), and structure are exported.
 
-   - A `__iid` column is added to each table and included in the PK.
+   - An `__iid` column is added to each table and included in the PK.
 
    - If `PHYSICAL_FK=true` (default), foreign keys are included in the schema.
 
@@ -765,7 +765,7 @@ The command operates in three modes:
 
 3. LUI Data Export to File
 
-   - Exports LUI data from Fabric to a SQLite file via a file-type interface.
+   - Exports LUI data from Fabric to an SQLite file through a file-type interface.
 
    - Useful for portability, testing, and reproducibility across environments.
 
@@ -811,8 +811,8 @@ The command supports two modes:
 | `INCLUDED_TABLES` | Comma-separated list of tables (optionally with columns) to include. |
 | `EXCLUDED_TABLES` | Comma-separated list of tables (optionally with columns) to exclude. |
 | `FK`              | When true, includes FK-linked tables/columns even if excluded (default: true). |
-| `PHYSICAL_FK`     | When true, creates FKs physically in schema (default: true). |
-| `REMOTE_IID`      | Optional. Used to rename IID in target schema or file.       |
+| `PHYSICAL_FK`     | When true, FKs are physically created in schema (default: true). |
+| `REMOTE_IID`      | Optional. Used for renaming the IID in the target schema or file.       |
 
 This flexible export/import system allows teams to move LUIs between environments efficiently using either database or file-based approaches.
 
