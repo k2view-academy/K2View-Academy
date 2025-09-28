@@ -91,7 +91,7 @@
 <p><a title="LU Schema functions" href="LU_Schema_functions.pdf">LU Schema functions</a></p>
 </td>
 <td style="width: 216.984px;">
-<p>BW Advanced Actors</p>
+<p><a title="BW Advanced Actors" href="BW_Advanced.pdf">BW Advanced Actors</a></p>
 </td>
 <td style="width: 217.75px;">
 <p>Catalog</p>
