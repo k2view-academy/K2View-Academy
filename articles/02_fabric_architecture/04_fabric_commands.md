@@ -1,8 +1,8 @@
 # Fabric Commands
 
-Fabric includes a number of commands for viewing Fabric configurations, updating Fabric settings and running Fabric processes. Fabric commands can be executed from either the Fabric console or via the user code (project implementation) that invokes Fabric commands in the [execute() and fetch() methods](/articles/05_DB_interfaces/09_fabric_API_for_DB_interfaces.md#execute-fabric-command).
+Fabric includes a number of commands for viewing Fabric configurations, updating Fabric settings and running Fabric processes. Fabric commands can be executed either from the Fabric console or via the user code (project implementation) that invokes Fabric commands in the [execute() and fetch() methods](/articles/05_DB_interfaces/09_fabric_API_for_DB_interfaces.md#execute-fabric-command).
 
-Fabric commands are **not** case sensitive. For example, a Get, get, or GET command are all equivalent.
+Fabric commands are **not** case sensitive. For example, `Get`, `get`, and `GET` are all equivalent.
 
 In this document, we write commands in ALL CAPS when describing the commands in general, and in small type when quoting a command line example. This is done for clarity purposes only. You can type the commands in whatever type is convenient for your purposes, but it is a good practice to keep the manner of typing commands consistent. 
 
@@ -814,13 +814,13 @@ The command supports two modes:
 | `PHYSICAL_FK`     | When true, FKs are physically created in schema (default: true). |
 | `REMOTE_IID`      | Optional. Used for renaming the IID in the target schema or file.       |
 
-This flexible export/import system allows teams to move LUIs between environments efficiently using either database or file-based approaches.
+This flexible export/import system allows teams to efficiently move LUIs across environments, using either database- or file-based approaches.
 
 
 
 ### MDB Size
 
-Fabric provides the **MDB_SIZE** command to return the size of one or several MDB. The syntax is:
+Fabric provides the **MDB_SIZE** command to return the size of one or several MDBs. The syntax is:
 
 * Return the size of the specified instance:
 
