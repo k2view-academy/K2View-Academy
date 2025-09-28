@@ -4,7 +4,7 @@ Fabric includes a number of commands for viewing Fabric configurations, updating
 
 Fabric commands are **not** case sensitive. For example, `Get`, `get`, and `GET` are all equivalent.
 
-In this document, we write commands in ALL CAPS when describing the commands in general, and in small type when quoting a command line example. This is done for clarity purposes only. You can type the commands in whatever type is convenient for your purposes, but it is a good practice to keep the manner of typing commands consistent. 
+In this document, commands are written in ALL CAPS when described in general, and in lowercase when shown as command-line examples. This is done for clarity only. You can type commands in any style you prefer, but it is good practice to remain consistent. 
 
 ## Fabric Help
 
