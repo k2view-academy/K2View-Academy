@@ -114,13 +114,13 @@ A customer has 2 activities. The data generation inner flow needs to generate 3 
 ## Customized Data Generators
 Defining Broadway flows or Actors for customized data generation logic is possible. 
 ### Customized Data Generation Flows - Implementation Guidelines
-- Set the output generated value to be an external variable.
+- Set the output generated value to be an external variable. 
 
-- Add an external input named **value** to the data generator. This is needed since the Masking Actor always sends the input **value** (i.e. the original value) to the data generator. For example - a Masking Actor gets the original full address as an input value and calls a data generator in order to generate a new masked value based on an input State. The address data generator flow needs to get the **value** and **state** as input parameters. The Masking Actor will send both parameters to the data generator.  
+- Add an external input named **value** to the data generator. The **value** must be the first input argument in the flow. This is needed since the Masking Actor always sends the input **value** (i.e. the original value) to the data generator. For example, a Masking Actor gets the original full address as an input value and calls a data generator in order to generate a new masked value based on an input State. The address data generator flow needs to get the **value** and **state** as input parameters. The Masking Actor will send both parameters to the data generator.  
 
-- From Fabric 8.2 and onwards, **the catalog masking can send the entire record to the data generator**. The record is sent with the **original values**. This can be beneficial to enable data generation where the generated value of one field can be determined based on other fields within the same record. For example - generating an SSN based on the customer type. 
+- From Fabric 8.2 and onwards, **the catalog masking can send the entire record to the data generator**. The record is sent with the **original values**. This can be beneficial to enable data generation where the generated value of one field can be determined based on other fields within the same record. For example, generating an SSN based on the customer type. 
 
-  Add an external variable, named **record**, to the flow in order to get the entire record from the Catalog masking.
+ - Add an external variable, named **record**, to the flow in order to get the entire record from the Catalog masking.
 
   Example: The following flow gets the original address record as an input and generates a masked city based on the original state:
 
@@ -130,7 +130,7 @@ Defining Broadway flows or Actors for customized data generation logic is possib
 
 ### Customized Data Generators - Supporting [Data Consistency Using Seed](/articles/41_masking/02_data_masking_flow.md#data-consistency-using-seed)
 
-The data generator must support the generating a random value using seed and must contain the **seed** external input parameter.
+The data generator must support generating a random value using a seed and must contain the **seed** external input parameter.
 
 #### Creating new Data Generator Actor
 
@@ -160,7 +160,7 @@ The data generator must support the generating a random value using seed and mus
 
 #### Customized Data Generator Flow
 
-- The customized flow support a data consistency using seed by using the built-in product data generator Actors:  set the data generator Actor's input **seed** parameter to be an **external variable**. The following example flow gets a random first name from a Collection. The RandomFromCollection Actor's **seed** input parameter must be set as **external** variable: 
+- The customized flows support seed-based data consistency by using the built-in product data generator Actors:  set the data generator Actor's input **seed** parameter to be an **external variable**. The following example flow gets a random first name from a Collection. The RandomFromCollection Actor's **seed** input parameter must be set as **external** variable: 
 
   ![seeded random example](../images/example_seeded_random_flow.png)
 
