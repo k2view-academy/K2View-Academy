@@ -353,20 +353,20 @@ The Fabric **RELEASE** command detaches either a specific LU from the session, o
 
 ### Fabric View
 
-Fabric has commands that display a Fabric configuration and its settings. For example:
+Fabric includes commands that display the Fabric configuration and settings. For example:
 
 - Fabric cluster information:
   - **CLUSTERID**, returns the cluster identifier defined on the node.id.
   - **CLUSTERSTATUS**, returns the status of all Fabric nodes. Also includes: node_id, [logical IDs](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid), DC name, IP addresses.
   - **TIME**, gets the node system time.
-  - **VERSION INFO**, the version of the installed Fabric. Note that to get the Fabric version when logged out of Fabric, use the [k2fabric -version](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#get-fabric-version) command.
+  - **VERSION INFO**, the installed Fabric version. Note that when logged out of Fabric, you can retrieve the version using the [k2fabric -version](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#get-fabric-version) command.
 
 - Information about the [deployed implementation](/articles/16_deploy_fabric/01_deploy_Fabric_project.md):
   - **DESCRIBE,** to query Fabric's metadata structure.
   - **LIST,** a list of [deployed objects](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-are-deployed-objects-reflected-in-the-fabric-server) and [Fabric credentials](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) (ROLES, USERS, TOKENS, ROLE_PERMISSIONS, ENVIRONMENTS and METHODS).
 
 - General information:
-  - **SET,** displays the current session’s settings: [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1), the LUI in the scope (the latest LUI, get on each LU), the [deployed project name](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-do-i-check-which-project-is-deployed-to-fabric), [Globals' values](/articles/08_globals/01_globals_overview.md#globals-overview) and the [active environment](/articles/25_environments/05_set_and_list_commands.md). 
+  - **SET,** displays the current session’s settings: [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1), the LUI in scope (latest LUI, get on each LU), the [deployed project name](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-do-i-check-which-project-is-deployed-to-fabric), [Global values](/articles/08_globals/01_globals_overview.md#globals-overview) and the [active environment](/articles/25_environments/05_set_and_list_commands.md). 
 
 ### Fabric Settings
 
