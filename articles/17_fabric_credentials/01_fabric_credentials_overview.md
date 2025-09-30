@@ -14,14 +14,14 @@
 ## RBAC in Fabric 
 Fabric includes an authentication and authorization mechanism that enables managing user access control and restrictions, such as:
 
-- Creating / dropping users, roles and API Keys.
+- Creating/dropping users, roles, and API Keys.
 - Assigning users to roles.
 - Granting access on different levels, for example:
   - Access to LUIs can be defined on a user level.
   - Access to the methods that access LUIs can be defined on a role level.
 - Assigning security profiles to roles.
 
-The use of roles makes permissions management much easier. It avoids having to manually grant sets of privileges, user by user. For example, several users may be assigned as 'administrators'.
+The use of roles makes permissions management much easier. It eliminates the need to grant sets of privileges, user by user, manually. For example, several users may be assigned as 'administrators'.
 
 User access control management can be performed by using either one of these two methods:
 
@@ -194,16 +194,16 @@ Define credentials by either Admin UI (Security tab) or Fabric commands, as foll
 - Grant permissions to a role ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-command)).
 
 ### Bootstrap Credentials
-Fabric can also be started with predefined API keys, roles and permissions. This is available since Fabric 7.2.1.
-- Turn on this capability by adding a new line contains "rolespermissions" to the *modules* file, located at [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
+Fabric can also be started with predefined API keys, roles, and permissions. This is available since Fabric 7.2.1.
+- Turn on this capability by adding a new line containing "rolespermissions" to the *modules* file, located at [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
 - Create a file named **rolesPrivileges.json** at [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
-- Edit the file with the required values. It is built from 2 main independent objects - "roles" and "apikeys", where each can be set or skipped regardless the other one.
+- Edit the file with the required values. It is built from two main independent objects: "roles" and "apikeys", where each can be set or skipped independently of the other.
    - Define roles' associated operations, per role, at the "roles" array object.
    - Define API keys association to roles, per API key, at the `"apikeys"` array object.
-- When Fabric starts, it looks for this file; if it exists, definitions are applied (only for roles / apikeys which do not exist yet). 
+- When Fabric starts, it looks for this file; if it exists, definitions are applied (only for roles / apikeys that do not exist yet). 
 - Once applied by Fabric, the file is deleted from the config directory.
 
-Note: You can define only the operations and roles, as resources do not yet exist due to the project not yet being deployed.
+Note: You can define only the operations and roles, as resources do not yet exist since the project has not been deployed yet.
 
 Example:
 ```
@@ -217,28 +217,28 @@ Example:
 }
 ```
 
-In the above example, the role named "deploy" has 3 associated operations and API key "t1234". When applied, the roles and API keys will be created, if not exist yet at Fabric, and the defined permissions are associated to them. 
+In the above example, the role named "deploy" has 3 associated operations and an API key "t1234". When applied, the roles and API keys will be created, if they do not already exist at Fabric, and the defined permissions will be associated with them. 
 
 
 
-## Users Credentials
+## User Credentials
 
-Users may be defined in Fabric system DB and shall accordingly be associated to roles, as follows: 
+Users may be defined in Fabric system DB and shall accordingly be associated with roles, as follows: 
 - Assign a role to the user by either Admin UI (Security tab) or ([command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-user-user)).
 
-Note: When Fabric integrates with an external authenticator, Fabric does neither manage nor store users' information, and the users' permissions are applied by roles. For more information about User Identification and Access Management - read [here](/articles/26_fabric_security/07_user_IAM_overview.md).
+Note: When Fabric integrates with an external authenticator, Fabric neither manages nor stores users' information; instead, users' permissions are applied based on their roles. For more information about User Identification and Access Management - read [here](/articles/26_fabric_security_iam/07_user_IAM_overview.md).
 
 ### Admin User
 
-By default, Fabric creates the **admin** user as the initial superuser - when initially starting - and it defines its user and password as 'admin'. Fabric can also be initially started with a different initial superuser, which is not defined as admin/admin.
+By default, Fabric creates the **admin** user as the initial superuser when it is first started, and it defines its username and password as 'admin'. Fabric can also be initially started with a different initial superuser, which is not defined as admin/admin.
 
 - Copy the **adminInitialCredentials.template** file from the [$K2_HOME/fabric/config.template](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md) directory to the [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
 
 - Change the **File Name** to **adminInitialCredentials**.
 
-- Edit the file and update the **User**/**Password** to the required values. Note that the username must only contain lowercase letters.
+- Edit the file and update the **User**/**Password** to the required values. Note that the username must only have lowercase letters.
 
-- When Fabric starts initially, the new user is created and the **adminInitialCredentials** file is deleted.
+- When Fabric starts initially, the new user is created, and the **adminInitialCredentials** file is deleted.
 
 - There is no need to provide a password on **adminInitialCredentials** file when the users are maintained outside of Fabric (when the **READ_ONLY_AUTHENTICATORS** parameter in the config.ini is set to true).
 
