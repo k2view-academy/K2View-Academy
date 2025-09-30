@@ -349,7 +349,7 @@ The following table lists the DELETE commands:
 
 ### Release LU
 
-The Fabric **RELEASE** command detaches either a specific LU from the session, or all schemas from it. Where there is no specification, then all result sets close.
+The Fabric **RELEASE** command detaches either a specific LU from the session, or all schemas from it. If no specification is provided, all result sets close.
 
 ### Fabric View
 
