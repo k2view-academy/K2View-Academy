@@ -472,12 +472,12 @@ The Fabric SET command enables updating Fabric settings at session level.
   * If the interface name is not specified, the command will show the current interface name.
 
   * To turn it off use: set db_proxy=off.
-  * A new parameter was added to config.ini called ENABLE_DB_INTERFACE_PROXY, it is set by default to FALSE. Set it to TRUE to enable using this new command.
+  * A new parameter — ENABLE_DB_INTERFACE_PROXY — was added to the config.ini file; it is set by default to FALSE. Set it to TRUE to enable using this new command.
 * **SET BUFFER_RESULT_SET** command, enables uploading all the following SELECT statements from Fabric to memory. 
   * Syntax: ```SET BUFFER_RESULT_SET = true```
   * To inactivate it, set it back to false. 
-  * The purpose is to avoid the problem of locked MicroDB SQLite file which can happen in a use case when a GET & SELECT from LU1 is followed by loop on GET & SELECT from LU2. 
-* **SET CLUSTER_DISTRIBUTE_AFFINITY** command, to distribute the subsequent Fabric command to the specified affinity. 
+  * The purpose is to prevent the MicroDB SQLite file from being locked, which can occur when a GET & SELECT from LU1 is followed by loop of GET & SELECT from LU2. 
+* **SET CLUSTER_DISTRIBUTE_AFFINITY** command, used for distributing the subsequent Fabric command to the specified affinity. 
   * Syntax: ``` SET CLUSTER_DISTRIBUTE_AFFINITY = <AFFINITY>```
   * Use **ALL** to distribute the following Fabric command to all live nodes.
 
@@ -485,7 +485,7 @@ The Fabric SET command enables updating Fabric settings at session level.
 
 #### Fabric Setting via JDBC Connection URL
 
-Fabric supports the ability to set the session variables via the Fabric Connection URL by concatenating them to the connection string using the following syntax:
+Fabric allows setting session variables via the Connection URL by concatenating them to the connection string using the following syntax:
 
 ```jdbc:fabric://[server:port]?user=[user_name]&password=[password]&[key1]=[value1]&[key2]=[value2]```
 
@@ -495,9 +495,9 @@ For example:
 jdbc:fabric://[localhost:5124]?user=admin&password=admin&timeout=0&sync=off&auto_mdb_scope=true
 ~~~
 
-This can be used when external systems (such as BI) that are not familiar with the Fabric syntax, are connecting to Fabric. The delimiter can be either **&** or **;**.
+This can be used when external systems (such as BI) that are not familiar with Fabric syntax connect to Fabric. The delimiter can be either **&** or **;**.
 
-#### Fabric Setting - Cluster Level
+#### Fabric Setting — Cluster Level
 
 Use the **SET_GLOBAL** command to set an active environment or a [global value](/articles/08_globals/03_set_globals.md#how-do-i-use-set_global-global-command) on a Fabric cluster. 
 
