@@ -2,28 +2,28 @@
 
 ## Content
 <ul>      
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#prerequisites">Prerequisites</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#whats-in-this-package">What's in this Package</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#things-to-configure">Things to Configure</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#installation">Installation</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#step-1-install-and-validate-docker-and-docker-compose-runtime">Step 1: Install and Validate Docker and Docker Compose Runtime</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#step-2-setup">Step 2: Setup</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#step-3-download">Step 3: Download</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#step-5-select-a-fabric-blueprint-profile-to-use">Step 5: Select a Fabric Blueprint Profile to Use</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#step-6-log-in-to-k2views-nexus-container-registry">Step 6: Log in to K2view's Nexus Container Registry</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#step-7-create-and-launch-a-fabric-space">Step 7: Create and Launch a Fabric Space</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#step-8-access-web-studio">Step 8: Access Web Studio</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#docker-image-offline-package-download">Docker Image Offline Package Download</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#prerequisites">Prerequisites</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#whats-in-this-package">What's in this Package</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#things-to-configure">Things to Configure</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#installation">Installation</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#step-1-install-and-validate-docker-and-docker-compose-runtime">Step 1: Install and Validate Docker and Docker Compose Runtime</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#step-2-setup">Step 2: Setup</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#step-3-download">Step 3: Download</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#step-5-select-a-fabric-blueprint-profile-to-use">Step 5: Select a Fabric Blueprint Profile to Use</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#step-6-log-in-to-k2views-nexus-container-registry">Step 6: Log in to K2view's Nexus Container Registry</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#step-7-create-and-launch-a-fabric-space">Step 7: Create and Launch a Fabric Space</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#step-8-access-web-studio">Step 8: Access Web Studio</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#docker-image-offline-package-download">Docker Image Offline Package Download</a></li>
 </ul>
 
 
 ## Prerequisites
-Please review the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/About.html#Prerequisites">Prerequisites</a> topic first. There are essential steps for installing and configuring Docker described in the prerequisites section. Please review these and the prerequisites.
+Please review the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/About.md#Prerequisites">Prerequisites</a> topic first. There are essential steps for installing and configuring Docker described in the prerequisites section. Please review these and the prerequisites.
 
-A crucial step is to ensure that Docker and the Docker Compose plugin are properly installed. These are described in the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/About.html#3rd-party-software">3rd Party Software</a> topic, and the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/6-Docker-Compose.html#install-docker-and-docker-compose-on-linux-macos-or-microsoft-windows">Docker and Docker Compose Installation</a> topic. 
+A crucial step is to ensure that Docker and the Docker Compose plugin are properly installed. These are described in the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/About.md#3rd-party-software">3rd Party Software</a> topic, and the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/6-Docker-Compose.md#install-docker-and-docker-compose-on-linux-macos-or-microsoft-windows">Docker and Docker Compose Installation</a> topic. 
 
-If installing Docker on Microsoft Windows, it is essential to review the instructions for <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/6-Docker-Compose.html#using-the-windows-subsystem-for-linux-wsl">installing and using WSL</a>. If running Docker Desktop on Microsoft Windows, you also need to  <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/6-Docker-Compose.html#running-docker-desktop"> enable the WSL Linux distribution</a>.
+If installing Docker on Microsoft Windows, it is essential to review the instructions for <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/6-Docker-Compose.md#using-the-windows-subsystem-for-linux-wsl">installing and using WSL</a>. If running Docker Desktop on Microsoft Windows, you also need to  <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/6-Docker-Compose.md#running-docker-desktop"> enable the WSL Linux distribution</a>.
 
 ## What's in this Package
 
@@ -35,8 +35,8 @@ If installing Docker on Microsoft Windows, it is essential to review the instruc
 
 
 ## Things to Configure
-1. Git Configuration - this is described in <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a> of the Installation section below.
-2. TLS Certificate and Private Key Configuration - optional, as Traefik uses its own self-signed TLS certificate for HTTPS connections by default. The Certificate is created for you by default for the machine. To provide your own, please refer to <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a>. 
+1. Git Configuration - this is described in <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a> of the Installation section below.
+2. TLS Certificate and Private Key Configuration - optional, as Traefik uses its own self-signed TLS certificate for HTTPS connections by default. The Certificate is created for you by default for the machine. To provide your own, please refer to <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a>. 
 
 
 ## Things to Know
@@ -57,7 +57,7 @@ If installing Docker on Microsoft Windows, it is essential to review the instruc
    - The location of the persistent data directory is configured in the `.env` file and set by default to be in the Fabric Web Studio installation directory.
 
 4. Running on Microsoft Windows
-   - You need to use a Windows Subsystem for Linux (WSL) and a Linux distribution-mounted file system for the installation to avoid slow performance issues. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/6-Docker-Compose.html">Docker and Docker Compose Installation</a> topic.
+   - You need to use a Windows Subsystem for Linux (WSL) and a Linux distribution-mounted file system for the installation to avoid slow performance issues. Please refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/6-Docker-Compose.md">Docker and Docker Compose Installation</a> topic.
 
 
 ## Installation
@@ -65,14 +65,14 @@ If installing Docker on Microsoft Windows, it is essential to review the instruc
 Various steps should be taken to get Fabric Web Studio up and running within the Fabric Docker Compose Runtime environment:
 
 <ul> 
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#step-1-install-and-validate-docker-and-docker-compose-runtime">Step 1: Install and Validate Docker and Docker Compose Runtime</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#step-2-setup">Step 2: Setup</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#step-3-download">Step 3: Download</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#step-5-select-a-fabric-blueprint-profile-to-use">Step 5: Select a Fabric Blueprint Profile to Use</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#step-6-log-in-to-k2views-nexus-container-registry">Step 6: Log in to K2view's Nexus Container Registry</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#step-7-create-and-launch-a-fabric-space">Step 7: Create and Launch a Fabric Space</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#step-8-access-web-studio">Step 8: Access Web Studio</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#step-1-install-and-validate-docker-and-docker-compose-runtime">Step 1: Install and Validate Docker and Docker Compose Runtime</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#step-2-setup">Step 2: Setup</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#step-3-download">Step 3: Download</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#step-5-select-a-fabric-blueprint-profile-to-use">Step 5: Select a Fabric Blueprint Profile to Use</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#step-6-log-in-to-k2views-nexus-container-registry">Step 6: Log in to K2view's Nexus Container Registry</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#step-7-create-and-launch-a-fabric-space">Step 7: Create and Launch a Fabric Space</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#step-8-access-web-studio">Step 8: Access Web Studio</a></li>
 </ul>
 
 ### Before you proceed, confirm that you have a K2view Nexus Container Registry Account
@@ -81,9 +81,9 @@ You need to obtain credentials to access the K2view Nexus. Your K2view account r
 
 ### **Step 1**: Install and Validate Docker and Docker Compose Runtime
 
-If Docker has not already been installed on your machine, please refer to the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/6-Docker-Compose.html">Docker and Docker Compose Installation</a> topic. 
+If Docker has not already been installed on your machine, please refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/6-Docker-Compose.md">Docker and Docker Compose Installation</a> topic. 
 
-The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop includes Docker Compose, Docker Engine, and the Docker CLI, as well as all prerequisites for Compose. Please also refer to the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/6-Docker-Compose.html">Docker and Docker Compose Installation</a> topic.
+The easiest and recommended way to get Docker Compose is to install Docker Desktop. Docker Desktop includes Docker Compose, Docker Engine, and the Docker CLI, as well as all prerequisites for Compose. Please also refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/6-Docker-Compose.md">Docker and Docker Compose Installation</a> topic.
 
 ### **Step 2**: Setup
 
@@ -119,7 +119,7 @@ mkdir K2view
 
 #### Using Microsoft Windows
 
-> Using a Linux file system is highly recommended when installing on Microsoft Windows. It can be installed with the Windows Subsystem for Linux (WSL) and a Linux distribution such as Ubuntu. Doing so avoids performance problems using Docker on a native Windows file system. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/6-Docker-Compose.html">Docker and Docker Compose Installation</a> topic for instructions on how to install WSL and a Linux distribution.
+> Using a Linux file system is highly recommended when installing on Microsoft Windows. It can be installed with the Windows Subsystem for Linux (WSL) and a Linux distribution such as Ubuntu. Doing so avoids performance problems using Docker on a native Windows file system. Please refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/6-Docker-Compose.md">Docker and Docker Compose Installation</a> topic for instructions on how to install WSL and a Linux distribution.
 > 
 > Not only should you avoid using the Windows file system, but you should also avoid using WSL's `/mnt/c` mounted Windows file system. Instead, use the file system of the Linux distribution you installed, e.g., `/home/username/K2view`, to download and install the configuration files and store the workspace data created by Fabric Web Studio. 
 
@@ -185,9 +185,9 @@ cd K2view
 # renament the Studio-Docker directory to Studio
 ```
 
-The Studio directory contains the configuration, YAML, and the `k2Space.sh` script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
+The Studio directory contains the configuration, YAML, and the `k2Space.sh` script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
 
-You can now skip to <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a>.
+You can now skip to <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a>.
 
 #### Option: Clone the K2view Blueprints 
 
@@ -215,13 +215,13 @@ cp -r blueprints/Studio/ Studio
 ```
 *Using the Microsoft Windows PowerShell*
 
-You must use the Linux file system to store the Studio directory if you are using Microsoft Windows. Please review <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#step-2-download-the-k2view-blueprints">Step 2's</a> "Using Microsoft Windows" section for details.  
+You must use the Linux file system to store the Studio directory if you are using Microsoft Windows. Please review <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#step-2-download-the-k2view-blueprints">Step 2's</a> "Using Microsoft Windows" section for details.  
 
 ```bash
 cp -r blueprints\Studio\ Studio
 ```
 
-The Studio directory contains the configuration, YAML, and the `k2Space.sh` script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
+The Studio directory contains the configuration, YAML, and the `k2Space.sh` script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
 
 ### **Step 4**: Configure Git and TLS
 
@@ -285,7 +285,7 @@ You will be asked to enter your password.
 
 **Note**: The Docker login command and the `k2space.sh` bash shell script require Internet access to log in and pull K2view Fabric images from the K2view Nexus Container Registry at docker.share.cloud.k2view.com. 
 
-> Should you not have Internet connectivity, you can use the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Installation.html#docker-image-offline-package-download">Docker Image Offline Package Download</a> procedure to download the file on a separate machine and copy it to the local installation directory. The file, a Docker Image, is approximately 1.9 GB in size. The version of the image depends on what is configured in the `.env` file. You will need to download the same version.
+> Should you not have Internet connectivity, you can use the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#docker-image-offline-package-download">Docker Image Offline Package Download</a> procedure to download the file on a separate machine and copy it to the local installation directory. The file, a Docker Image, is approximately 1.9 GB in size. The version of the image depends on what is configured in the `.env` file. You will need to download the same version.
 >
 > By following this procedure, when the `k2space.sh` script runs, the expected file will have already been loaded on the local machine and will not need to be downloaded from the Internet. 
 
