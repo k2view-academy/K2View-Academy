@@ -399,7 +399,7 @@ The Fabric SET command enables updating Fabric settings at session level.
 
 - **SET OUTPUT** command, sets the output format of the query's results. 
 
-- **SET INSTANCE_TTL** command, sets the Time To Live (TTL) in seconds for each [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui); the LUI is automatically deleted from Fabric after the set TTL ends. Fabric V7.1 adds the option to avoid saving the LUI in Fabric (instead of save and delete) if the TTL is set to zero. Note that when the TTL is set to zero, Fabric does not clean an older version of the LUI (if it exists). The TTL must be greater than zero in order to clean the LUI from Fabric.  
+- **SET INSTANCE_TTL** command, sets the Time To Live (TTL) in seconds for each [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui); the LUI is automatically deleted from Fabric after the set TTL ends. Fabric V7.1 adds the option to avoid saving the LUI in Fabric (instead of save and delete) if the TTL is set to zero. When the TTL is set to zero, Fabric does not clean older versions of the LUI (if any exist). The TTL must be greater than zero in order to clean the LUI from Fabric.  
 
 - **SET LUI_READ_ONE_WHEN_FAIL** command, sets the consistency level for the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) to ONE. If it fails to achieve a QUORUM consistency level, the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF.
 
@@ -424,7 +424,7 @@ The Fabric SET command enables updating Fabric settings at session level.
 
 - **SET USER_ROLES** command, returns the list of roles of the connected user.
 
-- **SET AUTO_MDB_SCOPE** command, allows querying the Logical Unit without performing the **GET** command explicitly ("No Get") when an SQL statement includes a WHERE clause with the filter by IID. The filter must include the field name defined as Instance ID Column of the LU Root Table, otherwise the error message is displayed. 
+- **SET AUTO_MDB_SCOPE** command, allows querying the Logical Unit without performing the **GET** command explicitly ("No Get") when an SQL statement includes a WHERE clause with the filter by IID. The filter must include the field name defined as Instance ID Column of the LU Root Table; otherwise an error message is shown. 
 
   The following logic is performed on each SQL statement run:
 
@@ -432,7 +432,7 @@ The Fabric SET command enables updating Fabric settings at session level.
   - Execute the query.
   - Release the instance.
 
-  The queries without a filter by IID cannot be executed in this mode. To deactivate it, set **AUTO_MDB_SCOPE** to **false**.
+  Queries without a filter by IID cannot be executed in this mode. To deactivate it, set **AUTO_MDB_SCOPE** to **false**.
 
   ~~~
   fabric>set auto_mdb_scope=true;
@@ -461,15 +461,15 @@ The Fabric SET command enables updating Fabric settings at session level.
   Cannot execute the query due to missing WHERE clause on the IID column.
   ~~~
 
-  Note that this feature enables querying Fabric by various external systems (such as BI) that are not familiar with the Fabric syntax. They can use standard SQL language rather than the Fabric **GET** command. For external connection to Fabric, AUTO_MDB_SCOPE=true should be set via the [Fabric Connection URL](04_fabric_commands.md#fabric-setting-via-jdbc-connection-url).
+  This feature enables querying Fabric by various external systems (such as BI) that are not familiar with the Fabric syntax. They can use standard SQL language rather than the Fabric **GET** command. For external connection to Fabric, AUTO_MDB_SCOPE=true should be set via the [Fabric Connection URL](04_fabric_commands.md#fabric-setting-via-jdbc-connection-url).
 
 
-* **SET DEFAULT** command, can be used to reset all the related parameters set on a session level to their default value.
-* **SET DB_PROXY** command, can be used to activate an operations' scope toward the specified DB interface, so that until it is turned off, all operations are done against this interface.
+* **SET DEFAULT** command, can be used to reset all related session-level parameters to their default value.
+* **SET DB_PROXY** command, can be used to activate an operation's scope toward the specified DB interface, so that until it is turned off, all operations are done against this interface.
   * Syntax: ``` SET DB_PROXY [= <interface name>]```
-  * Description: Activates an operations' scope toward the specified DB interface, so that until it is turned off, all operations are done against this interface.
+  * Description: Activates an operation's scope toward the specified DB interface, so that until it is turned off, all operations are done against this interface.
 
-  * If interface name is not specified, the command will show the current interface name.
+  * If the interface name is not specified, the command will show the current interface name.
 
   * To turn it off use: set db_proxy=off.
   * A new parameter was added to config.ini called ENABLE_DB_INTERFACE_PROXY, it is set by default to FALSE. Set it to TRUE to enable using this new command.
