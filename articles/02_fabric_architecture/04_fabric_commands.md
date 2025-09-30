@@ -362,7 +362,7 @@ Fabric includes commands that display the Fabric configuration and settings. For
   - **VERSION INFO**, the installed Fabric version. Note that when logged out of Fabric, you can retrieve the version using the [k2fabric -version](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#get-fabric-version) command.
 
 - Information about the [deployed implementation](/articles/16_deploy_fabric/01_deploy_Fabric_project.md):
-  - **DESCRIBE,** to query Fabric's metadata structure.
+  - **DESCRIBE,** used for querying Fabric's metadata structure.
   - **LIST,** a list of [deployed objects](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-are-deployed-objects-reflected-in-the-fabric-server) and [Fabric credentials](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) (ROLES, USERS, TOKENS, ROLE_PERMISSIONS, ENVIRONMENTS and METHODS).
 
 - General information:
@@ -390,24 +390,24 @@ The Fabric SET command enables updating Fabric settings at session level.
 
 - Set the [active environment](/articles/25_environments/05_set_and_list_commands.md#sync-on-demand)
 
-- **SET ATTACH_POLICY** command, to set the MicroDB attachment policy to the Fabric session. The valid values are: 
+- **SET ATTACH_POLICY** command, sets the MicroDB attachment policy to the Fabric session. The valid values are: 
 
-  - LATEST (default) - check the Storage for the latest version of the MicroDB. Use the one in cache only if it is the latest.
+  - LATEST (default) - check the Storage for the latest version of the MicroDB. Use the one in cache only if it is the latest version.
   - ANY - use the MicroDB from cache if available, otherwise retrieve the MicroDB from Storage.
   - TRY_LATEST - try to retrieve the latest MicroDB from Storage. If the operation fails, use the one in cache, if exists.
   - The default can be changed in the config.ini file.
 
-- **SET OUTPUT** command, set the output format of the query's results. 
+- **SET OUTPUT** command, sets the output format of the query's results. 
 
-- **SET INSTANCE_TTL** command, set the Time To Live (TTL) in seconds for each [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui); the LUI is automatically deleted from Fabric after the set TTL ends. Fabric V7.1 adds the option to avoid saving the LUI in Fabric (instead of save and delete) if the TTL is set to zero. Note that when the TTL is set to zero, Fabric does not clean an older version of the LUI (if it exists). The TTL must be greater than zero in order to clean the LUI from Fabric.  
+- **SET INSTANCE_TTL** command, sets the Time To Live (TTL) in seconds for each [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui); the LUI is automatically deleted from Fabric after the set TTL ends. Fabric V7.1 adds the option to avoid saving the LUI in Fabric (instead of save and delete) if the TTL is set to zero. Note that when the TTL is set to zero, Fabric does not clean an older version of the LUI (if it exists). The TTL must be greater than zero in order to clean the LUI from Fabric.  
 
-- **SET LUI_READ_ONE_WHEN_FAIL** command, set the consistency level for the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) to ONE. If it fails to achieve a QUORUM consistency level, the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF.
+- **SET LUI_READ_ONE_WHEN_FAIL** command, sets the consistency level for the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) to ONE. If it fails to achieve a QUORUM consistency level, the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF.
 
-- **SET FROM** command, update several settings in one compound command using JSON structure with the following syntax: "set from '{\["scope" : {\<list of key and value command elements \>}],\]["attached" : {"\<LUT 1\>": "\<LUI\>"\[ , "<LUT 2\>": "\<LUI\>"} , ...\]}' " . The command is built from two optional parts, each can be omitted:
+- **SET FROM** command, updates several settings in one compound command using JSON structure with the following syntax: "set from '{\["scope" : {\<list of key and value command elements \>}],\]["attached" : {"\<LUT 1\>": "\<LUI\>"\[ , "<LUT 2\>": "\<LUI\>"} , ...\]}' " . The command is built from two optional parts, each can be omitted:
 
   - Scope, holds one or more set commands like "sync" or "environment".
 
-  - Attached, the LUs to load into the session. Several LUIs can be specified if they are from different LUTs. 
+  - Attached, the LUs to be loaded into the session. Several LUIs can be specified if they are from different LUTs. 
 
   - Examples:
 
@@ -424,7 +424,7 @@ The Fabric SET command enables updating Fabric settings at session level.
 
 - **SET USER_ROLES** command, returns the list of roles of the connected user.
 
-- **SET AUTO_MDB_SCOPE** command, provides the ability to query the Logical Unit without performing the **GET** command explicitly ("No Get") when an SQL statement includes a WHERE clause with the filter by IID. The filter must include the field name defined as Instance ID Column of the LU Root Table, otherwise the error message is displayed. 
+- **SET AUTO_MDB_SCOPE** command, allows querying the Logical Unit without performing the **GET** command explicitly ("No Get") when an SQL statement includes a WHERE clause with the filter by IID. The filter must include the field name defined as Instance ID Column of the LU Root Table, otherwise the error message is displayed. 
 
   The following logic is performed on each SQL statement run:
 
