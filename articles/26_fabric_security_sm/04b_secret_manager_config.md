@@ -193,8 +193,16 @@ Different Secrets Management service instances may be used in your organization.
 To use it:
 
 1. In the config.ini file, name the Secrets Management service section you would like to use, following this pattern: `[encryption_{my_name}_sm]`. For example, name the section for production's Secrets Management service instance as `[encryption_prod_sm]` and the section for the QA's instance as `[encryption_qa_sm]`.
-2. Add `TYPE` property to that section, including the name of the service provider. You can identify the type by searching for the default **section name**listed above. For example, the section name for AWS Secrets Manager is `[encryption_aws_sm]`, and accordingly, its type is `aws`.
-  > Note: This type-specifying step is not required for sections that preserve their default names stated in the above configuration settings.
+
+2. Add `TYPE` property to that section, including the name of the service provider. You can identify the type by searching for the default **section name** listed above. For example, the section name for AWS Secrets Manager is `[encryption_aws_sm]`, and accordingly, its type is `aws`.
+
+   > This type-specifying step is not required for sections that preserve their default names stated in the above configuration settings.
+
+3. When importing certificates to Fabric's trust store, the alias must contain the instance server hostname and optionally the port.
+
+   Format: `hostname:port` or `hostname` (port is optional)
+
+   Example: `keytool -import -alias db.example.com:8443_production-db -file server.crt -keystore truststore.jks`
 
 
 
@@ -203,3 +211,4 @@ You can add as many sections as needed and also several instances across several
 
 
 [![Previous](/articles/images/Previous.png)](/articles/26_fabric_security_sm/04a_secret_manager.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security_sm/04c_secret_manager_interface.md)
+
