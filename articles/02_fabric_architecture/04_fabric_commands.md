@@ -222,7 +222,7 @@ The following table lists the GET commands:
 </tr>
 <tr>
 <td style="width: 201.613px;" valign="top">
-<p><strong>GET</strong> - Retrieves information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. Fabric checks if the LUI needs to be synced from the source system, syncs the LUI if needed, or retrieves the latest version of the LUI from Fabric.</p>
+<p><strong>GET</strong> - retrieves information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. Fabric checks if the LUI needs to be synced from the source system, syncs the LUI if needed, or retrieves the latest version of the LUI from Fabric.</p>
 <p>Setting the PARALLEL parameter to true enables running parallel GET commands on different LU types. Setting this parameter to false disables running parallel GET commands on different LU types. A new parameter STOP_ON_ERROR (added in V6.5.1) supports a GET of several LUIs even if the sync of one LUI fails (when set to false).</p>
 </td>
 <td style="width: 327.05px;" valign="top">
@@ -242,7 +242,7 @@ The following table lists the GET commands:
 </tr>
 <tr>
 <td style="width: 201.613px;" valign="top">
-<p><strong>GETF</strong> - Retrieves information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. The instance is returned by an <a href="/articles/07_table_population/11_3_creating_an_LUDB_function.md">LUDB function</a>.</p>
+<p><strong>GETF</strong> - retrieves information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. The instance is returned by an <a href="/articles/07_table_population/11_3_creating_an_LUDB_function.md">LUDB function</a>.</p>
 <p>&nbsp;</p>
 </td>
 <td style="width: 327.05px;" valign="top">
@@ -258,7 +258,7 @@ The following table lists the GET commands:
 </tr>
 <tr>
 <td style="width: 201.613px;" valign="top">
-<p><strong>USE</strong> - an alias of GET command.</p>
+<p><strong>USE</strong> - an alias of the GET command.</p>
 </td>
 <td style="width: 327.05px;" valign="top">
 <p>Get an LUI:</p>
@@ -289,10 +289,10 @@ Note that users are responsible for determining whether a [sync](/articles/14_sy
 
 ### Delete LUI Command
 
-The **DELETE INSTANCE** command deletes an LUI or multiple LUIs from Fabric. Unlike the GET command, several LUI from the same LU can be deleted using one DELETE command.
+The **DELETE INSTANCE** command deletes an LUI or multiple LUIs from Fabric. Unlike the GET command, several LUI from the same LU can be deleted with a single DELETE command.
 The consistency level of the Delete Instance is set in the LU_INSTANCE_DELETE parameter of the [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini). The default value is LOCAL_QUOROM. 
 
-The following table lists the  DELETE commands:
+The following table lists the DELETE commands:
 
 <table width="900pxl">
 <tbody>
@@ -309,7 +309,7 @@ The following table lists the  DELETE commands:
 </tr>
 <tr>
 <td style="width: 456.55px;" valign="top">
-<p><strong>DELETE INSTANCE</strong> - Delete a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> or a list of LUIs from Fabric:</p>
+<p><strong>DELETE INSTANCE</strong> - delete a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> or a list of LUIs from Fabric:</p>
 <ul style="list-style-type: disc;">
 <li>mdbFinder = true (default) - delete from iid_info table&nbsp;</li>
 <li>mdbFinder = false - skip the delete from iid_info table</li>
@@ -330,7 +330,7 @@ The following table lists the  DELETE commands:
 </tr>
 <tr>
 <td style="width: 456.55px;" valign="top">
-<p><strong>DELETE INSTANCE IF NOT EXIST</strong> - Delete all LUIs that do not exist in the source system. To run this command, set the config.ini file as follows:</p>
+<p><strong>DELETE INSTANCE IF NOT EXIST</strong> - delete all LUIs that do not exist in the source system. To run this command, set the config.ini file as follows:</p>
 <ul>
 <li>Set DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter to true</li>
 <li>Uncomment DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter</li>
@@ -349,7 +349,7 @@ The following table lists the  DELETE commands:
 
 ### Release LU
 
-The Fabric **RELEASE** command is used to detach the [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) from the session on a list of LUs or all LUs.
+The Fabric **RELEASE** command detaches the [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) from the session on a list of LUs or all LUs.
 
 ### Fabric View
 
