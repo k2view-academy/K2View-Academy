@@ -285,11 +285,11 @@ The following table lists the GET commands:
 
 The remote GET and GETF commands run on a random Fabric node on the remote DC. Therefore, always verify the permissions for the GET and GETF commands’ execution on Fabric’s local and remote nodes.
 
-Note that users are responsible for determining whether a [sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) on an LUI is required, and should only then run the remote GET or GETF commands. This prevents unnecessary calls to the remote Fabric node and getting the local LUI version instead.
+Users are responsible for determining whether an LUI [sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) is required, and should run the remote GET or GETF commands only in that case. This prevents unnecessary calls to the remote Fabric node by retrieving the local LUI version instead.
 
 ### Delete LUI Command
 
-The **DELETE INSTANCE** command deletes an LUI or multiple LUIs from Fabric. Unlike the GET command, several LUI from the same LU can be deleted with a single DELETE command.
+The **DELETE INSTANCE** command deletes an LUI or multiple LUIs from Fabric. Unlike the GET command, several LUIs from the same LU can be deleted with a single DELETE command.
 The consistency level of the Delete Instance is set in the LU_INSTANCE_DELETE parameter of the [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini). The default value is LOCAL_QUOROM. 
 
 The following table lists the DELETE commands:
