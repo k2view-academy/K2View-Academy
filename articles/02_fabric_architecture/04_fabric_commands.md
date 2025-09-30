@@ -465,9 +465,9 @@ The Fabric SET command enables updating Fabric settings at session level.
 
 
 * **SET DEFAULT** command, can be used to reset all related session-level parameters to their default value.
-* **SET DB_PROXY** command, can be used to activate an operation's scope toward the specified DB interface, so that until it is turned off, all operations are done against this interface.
+* **SET DB_PROXY** command, can be used to activate the scope of the operations for a specified DB interface; all operations will then use this interface until deactivated.
   * Syntax: ``` SET DB_PROXY [= <interface name>]```
-  * Description: Activates an operation's scope toward the specified DB interface, so that until it is turned off, all operations are done against this interface.
+  
 
   * If the interface name is not specified, the command will show the current interface name.
 
