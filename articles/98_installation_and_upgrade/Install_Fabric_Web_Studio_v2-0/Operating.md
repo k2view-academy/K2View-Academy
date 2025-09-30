@@ -2,10 +2,10 @@
 
 ## Content
 <ul>      
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Operating.html#fabric-web-studio-spaces">Fabric Web Studio Spaces</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Operating.html#restarting-traefik">Restarting Traefik</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Operating.html#adding-users">Adding Users</a></li>
-   <li><a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/Operating.html#reference-information">Reference Information</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Operating.md#fabric-web-studio-spaces">Fabric Web Studio Spaces</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Operating.md#restarting-traefik">Restarting Traefik</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Operating.md#adding-users">Adding Users</a></li>
+   <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Operating.md#reference-information">Reference Information</a></li>
 </ul>
 
 ## Fabric Web Studio Spaces
@@ -18,7 +18,7 @@ Usage: `./k2space.sh COMMAND [OPTIONS] SPACE_NAME`
 
 > **Running k2space.sh on Microsoft Windows**
 >
-> The `k2space.sh` file is a `bash` script. A Windows PowerShell-compatible script is not yet available. To run the `k2space.sh` script, start the `Git Bash` application offered by Git. Using `Git Bash` ,you can run the script after changing the directory to its location. 
+> The `k2space.sh` file is a `bash` script. A Windows PowerShell-compatible script is not yet available. To run the `k2space.sh` script, start the `Git Bash` application offered by Git. Using `Git Bash`, you can run the script after changing the directory to its location. 
 > 
 > If you have Git integration enabled within Windows Explorer, you can also start `Git Bash` from Windows Explorer by navigating to the script's directory, right-clicking within the Explorer's window, and selecting 'Show more options'. This will display an 'Open Git Bash here' menu item that can be used to start `Git Bash` to run `k2start.sh`. 
 
@@ -82,7 +82,7 @@ Traefik starts automatically after you create your first Fabric space. It will a
 > __Note:__ Traefik relies on the Docker network created during the creation of a Fabric space. Therefore, it must be started __after__ the Fabric space.
 
 #### Restarting Traefik
-To restart Traefik (e.g., after configuring your TSL certificates), run the command below:
+To restart Traefik (e.g., after configuring your TLS certificates), run the command below:
 
 ```bash
 docker compose -f k2vingress-compose.yaml restart
@@ -92,16 +92,16 @@ docker compose -f k2vingress-compose.yaml restart
 
 You are ready to add users. You can experiment with the built-in System DB (e.g., Postgres or Cassandra data stores). We recommend using alternative authentication providers rather than relying on built-in providers. 
 
-To use the built-in authentication provider, navigate to the [Web Admin App](https://support.k2view.com/Academy/articles/30_web_framework/03_web_admin_application.html). Select the Security tab. Select the Users tab and add a user. Select the Roles tab, create a new role (e.g., User), and then assign Fabric permissions to the newly created role. 
+To use the built-in authentication provider, navigate to the [Web Admin App](/articles/30_web_framework/03_web_admin_application.md). Select the Security tab. Select the Users tab and add a user. Select the Roles tab, create a new role (e.g., User), and then assign Fabric permissions to the newly created role. 
 
 The Docker Compose Runtime for K2view Fabric Web Studio employs underlying Fabric security capabilities and configurations. Fabric works with several authentication providers. Each authenticator is responsible for handling user authentication and managing user IDs and roles.
 
-Following are the supported authentication providers as described [here](https://support.k2view.com/Academy/articles/26_fabric_security/07_user_IAM_overview.html). 
+The following are the supported authentication providers as described [here](/articles/26_fabric_security_iam/07_user_IAM_overview.md). 
 
 - **Fabric**: Fabric stores users' credentials in a System DB table using Postgres. Passwords are stored securely in this table using a salted password hashing technique. By default, Fabric is configured to use a 32-byte salt length. When Cassandra is used, the provider is named Cassandra.
-- **LDAP**: Fabric authentication is performed via LDAP integration as described [here](https://support.k2view.com/Academy/articles/26_fabric_security/11_user_IAM_LDAP.html).
-- **ADLDAP** (Microsoft Active Directory): Fabric authentication is performed via Active Directory integration as described [here](https://support.k2view.com/Academy/articles/26_fabric_security/11_user_IAM_LDAP.html).
-- **SAML**: Fabric authentication is performed via SAML IDP integration as described [here](https://support.k2view.com/Academy/articles/26_fabric_security/09_user_IAM_SAML_fundamentals_and_terms.html). SAML provides the means of offering an SSO experience to users by using, for example, Microsoft Entra ID and Okta. Read the [Microsoft Entra ID](https://support.k2view.com/Academy/articles/26_fabric_security/14_user_IAM_SAML_Azure_AD_setup.html) and [Okta](https://support.k2view.com/Academy/articles/26_fabric_security/15_user_IAM_SAML_Okta_setup.html) integration descriptions to learn more about Fabric SSO support.
+- **LDAP**: Fabric authentication is performed via LDAP integration as described [here](/articles/26_fabric_security_iam/11_user_IAM_LDAP.md).
+- **ADLDAP** (Microsoft Active Directory): Fabric authentication is performed via Active Directory integration as described [here](/articles/26_fabric_security_iam/11_user_IAM_LDAP.md).
+- **SAML**: Fabric authentication is performed via SAML IDP integration as described [here](/articles/26_fabric_security_iam/09_user_IAM_SAML_fundamentals_and_terms.md). SAML provides the means of offering an SSO experience to users by using, for example, Microsoft Entra ID and Okta. Read the [Microsoft Entra ID](/articles/26_fabric_security_iam/14_user_IAM_SAML_Azure_AD_setup.md) and [Okta](/articles/26_fabric_security_iam/15_user_IAM_SAML_Okta_setup.md) integration descriptions to learn more about Fabric SSO support.
 
 ## Reference Information
 
