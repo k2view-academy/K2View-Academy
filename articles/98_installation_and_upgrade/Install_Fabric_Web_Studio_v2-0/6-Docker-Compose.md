@@ -51,7 +51,8 @@ wsl
 
 ### Using the WSL File System
 
-When installing Fabric Web Studio, you must not use the Windows file system, such as installing it within the /mnt/c directory mounted by WSL. Rather, you should use the WSL file system (e.g., `/home/username/K2view/Studio`) for your installation. Please refer to the [installation instructions](/articles/98_maintenance_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#Installation) for this.
+When installing Fabric Web Studio, you must not use the Windows file system, such as installing it within the /mnt/c directory mounted by WSL. Rather, you should use the WSL file system (e.g., `/home/username/K2view/Studio`) for your installation. Please refer to the [installation instructions](/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#Installation) for this.
+
 
 ## Docker Commands
 
