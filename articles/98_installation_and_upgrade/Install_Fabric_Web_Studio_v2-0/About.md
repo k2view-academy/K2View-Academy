@@ -11,7 +11,7 @@ Docker Compose Runtime for K2view Fabric Web Studio, Version 2.0, supports:
 
 ## The Components
 
-1. **Docker Compose Runtime**: Fabric Web Studio can be installed within a Docker Compose Runtime environment. Docker and its Compose plugin provide the ability to run Web Studio for which profiles can be selected, an embedded Fabric engine, and a Traefik reverse proxy - that, when combined, provide the means to create multiple Fabric spaces within the Docker Compose Runtime. Installation instructions are provided in the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/6-Docker-Compose.html">Installing Docker and Docker Compose </a> topic.
+1. **Docker Compose Runtime**: Fabric Web Studio can be installed within a Docker Compose Runtime environment. Docker and its Compose plugin provide the ability to run Web Studio for which profiles can be selected, an embedded Fabric engine, and a Traefik reverse proxy - that, when combined, provide the means to create multiple Fabric spaces within the Docker Compose Runtime. Installation instructions are provided in the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/6-Docker-Compose.md">Installing Docker and Docker Compose </a> topic.
 2. **Fabric Image**: The Docker Compose Runtime is certified to run specific Fabric releases that you can download from K2view's Nexus Container Registry.
 3. **K2view Fabric Web Studio** - available with four profiles, each of which embeds Fabric.
   - **studio.config**. The default Web Studio profile embeds SQLite for its System DB.
@@ -40,13 +40,13 @@ The amount of RAM you need will depend on your use case. 32GB of memory should s
    - Install Docker: https://docs.docker.com/engine/install/
    - Install Docker Compose Plugin: https://docs.docker.com/compose/install/
 
-> Please refer to the installation instructions provided in the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/6-Docker-Compose.html">Installing Docker and Docker Compose </a> topic.
+> Please refer to the installation instructions provided in the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/6-Docker-Compose.md">Installing Docker and Docker Compose </a> topic.
      
 3. To install Docker and Docker Compose, a platform that will host the Docker Compose Runtime for Fabric Services, you need to have administrative rights on the machine:
    - Linux: Root or sudo access grants you administrative rights
    - Windows: Administrator rights are required on your machine
 
-4. To install Docker Compose Runtime for K2view Fabric Web Studio on Microsoft Windows, you will need to use Windows Subsystem for Linux (WSL) in conjunction with a Linux distribution. When installing on Microsoft Windows with WSL, you need to install a Linux distribution instead of using the default distribution bundled by Microsoft's WSL. Using the Microsoft-provided Linux distribution will cause the Docker Compose Runtime for Fabric Services to fail to run correctly. Instructions are provided in the <a href="/articles/98_maintenance_and_operational/Installations/Fabric_Web_Studio/version_2-0/6-Docker-Compose.html">Installing Docker and Docker Compose </a> topic. 
+4. To install Docker Compose Runtime for K2view Fabric Web Studio on Microsoft Windows, you will need to use Windows Subsystem for Linux (WSL) in conjunction with a Linux distribution. When installing on Microsoft Windows with WSL, you need to install a Linux distribution instead of using the default distribution bundled by Microsoft's WSL. Using the Microsoft-provided Linux distribution will cause the Docker Compose Runtime for Fabric Services to fail to run correctly. Instructions are provided in the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/6-Docker-Compose.md">Installing Docker and Docker Compose </a> topic. 
 
 ### K2view Software
 
