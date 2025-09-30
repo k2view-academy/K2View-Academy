@@ -366,40 +366,40 @@ Fabric includes commands that display the Fabric configuration and settings. For
   - **LIST,** a list of [deployed objects](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-are-deployed-objects-reflected-in-the-fabric-server) and [Fabric credentials](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) (ROLES, USERS, TOKENS, ROLE_PERMISSIONS, ENVIRONMENTS and METHODS).
 
 - General information:
-  - **SET,** displays the current session’s settings: [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1), the LUI in scope (latest LUI, get on each LU), the [deployed project name](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-do-i-check-which-project-is-deployed-to-fabric), [Global values](/articles/08_globals/01_globals_overview.md#globals-overview) and the [active environment](/articles/25_environments/05_set_and_list_commands.md). 
+  - **SET,** displays the current session’s settings: [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1), the LUI in scope, the [deployed project name](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-do-i-check-which-project-is-deployed-to-fabric), [Global values](/articles/08_globals/01_globals_overview.md#globals-overview) and the [active environment](/articles/25_environments/05_set_and_list_commands.md). 
 
 ### Fabric Settings
 
 #### SET Command
 
-The Fabric SET command displays the values Fabric session's settings such as project name, [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md), scope, and displays the session variables values. Note that the settings with default value are not displayed. They become part of SET command's output only after being set to another value. 
+The Fabric SET command displays the values of Fabric session's settings (such as project name, [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md), scope) as well as the session variable values. Note that settings with default values are not displayed; they appear in the SET command's output only after being modified to non-default values. 
 
-#### Fabric Setting - Session Level
+#### Fabric Setting — Session Level
 
-The Fabric SET command enables updating Fabric settings on a session level. 
+The Fabric SET command enables updating Fabric settings at session level. 
 
 - Set [global variables](/articles/08_globals/03_set_globals.md#how-do-i-use-the-set-command).
 
 - [Sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) settings:
 
-  - Set [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md).
-  - Set [sync timeout](/articles/14_sync_LU_instance/08_sync_timeout.md).
-  - Set [ignore source exception](/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md).
-  - Set [always_sync](/articles/14_sync_LU_instance/02_sync_modes.md#always-sync).
-  - Set [sync_on_demand](/articles/14_sync_LU_instance/02_sync_modes.md#sync-on-demand).
+  - Set [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md)
+  - Set [sync timeout](/articles/14_sync_LU_instance/08_sync_timeout.md)
+  - Set [ignore source exception](/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md)
+  - Set [always_sync](/articles/14_sync_LU_instance/02_sync_modes.md#always-sync)
+  - Set [sync_on_demand](/articles/14_sync_LU_instance/02_sync_modes.md#sync-on-demand)
 
-- Set the [active environment](/articles/25_environments/05_set_and_list_commands.md#sync-on-demand).
+- Set the [active environment](/articles/25_environments/05_set_and_list_commands.md#sync-on-demand)
 
 - **SET ATTACH_POLICY** command, to set the MicroDB attachment policy to the Fabric session. The valid values are: 
 
-  - LATEST (default) - Check the Storage for the latest version of the MicroDB. Use the one in cache only if it is the latest.
-  - ANY - Use the MicroDB in cache if one exists, bring the MicroDB from Storage if not.
-  - TRY_LATEST - Try to bring the latest MicroDB from Storage. If the operation fails, use the one in cache, if exists.
-  - The default can be changed in config.ini.
+  - LATEST (default) - check the Storage for the latest version of the MicroDB. Use the one in cache only if it is the latest.
+  - ANY - use the MicroDB from cache if available, otherwise retrieve the MicroDB from Storage.
+  - TRY_LATEST - try to retrieve the latest MicroDB from Storage. If the operation fails, use the one in cache, if exists.
+  - The default can be changed in the config.ini file.
 
 - **SET OUTPUT** command, set the output format of the query's results. 
 
-- **SET INSTANCE_TTL** command, set the Time To Live (TTL) in seconds for each [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui); the LUI is deleted automatically from Fabric after the set TTL ends. Fabric 7.1 adds the option to avoid saving the LUI in Fabric (instead of save and delete) if the TTL is set to zero. Note that when the TTL is set to zero, Fabric does not clean an older version of the LUI (if it exists). The TTL must be greater than zero in order to clean the LUI from Fabric.  
+- **SET INSTANCE_TTL** command, set the Time To Live (TTL) in seconds for each [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui); the LUI is automatically deleted from Fabric after the set TTL ends. Fabric V7.1 adds the option to avoid saving the LUI in Fabric (instead of save and delete) if the TTL is set to zero. Note that when the TTL is set to zero, Fabric does not clean an older version of the LUI (if it exists). The TTL must be greater than zero in order to clean the LUI from Fabric.  
 
 - **SET LUI_READ_ONE_WHEN_FAIL** command, set the consistency level for the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) to ONE. If it fails to achieve a QUORUM consistency level, the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF.
 
@@ -407,7 +407,7 @@ The Fabric SET command enables updating Fabric settings on a session level.
 
   - Scope, holds one or more set commands like "sync" or "environment".
 
-  - Attached, the LUs to load into the session. Several LUI can be specified if they are from different LUTs. 
+  - Attached, the LUs to load into the session. Several LUIs can be specified if they are from different LUTs. 
 
   - Examples:
 
@@ -424,7 +424,7 @@ The Fabric SET command enables updating Fabric settings on a session level.
 
 - **SET USER_ROLES** command, returns the list of roles of the connected user.
 
-- **SET AUTO_MDB_SCOPE** command, provides an ability to query the Logical Unit without performing the **GET** command explicitly ("No Get") when an SQL statement includes a WHERE clause with the filter by IID. The filter must include the field name defined as Instance ID Column of the LU Root Table, otherwise the error message is displayed. 
+- **SET AUTO_MDB_SCOPE** command, provides the ability to query the Logical Unit without performing the **GET** command explicitly ("No Get") when an SQL statement includes a WHERE clause with the filter by IID. The filter must include the field name defined as Instance ID Column of the LU Root Table, otherwise the error message is displayed. 
 
   The following logic is performed on each SQL statement run:
 
