@@ -520,7 +520,7 @@ The **DROP LUTYPE** command deletes [LU metadata (the LU schema)](/articles/03_l
 
 [Click for more information about Fabric System DB.](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
 
-Note that this command is used mainly in a Testing environment to restart deployment configurations. In Production, the DROP LUTYPE command and [reset.sh script](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#reset-fabric) are rarely used. A possible scenario is to clean the environment after a soft launch prior to starting an actual Production run. A Drop is followed by an initial load / migration of the data for the dropped LU.
+This command is primarily intended for use in Testing environment to restart deployment configurations. In Production, the DROP LUTYPE command and the [reset.sh script](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#reset-fabric) are rarely used. A possible scenario is to clean the environment after a soft launch prior to starting an actual Production run. A Drop is followed by an initial load / migration of the data for the dropped LU.
 
 **Drop LU Syntax**
 
@@ -538,7 +538,7 @@ fabric>DROP LUTYPE Customer;
 
 Fabric enables deploying Fabric environments and setting active environments at [session](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting---session-level) or [cluster level](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting---cluster-level).
 
-The interfaces of an active environment can be tested using the **TEST_CONNECTION** command. To do so, run the **TEST_CONNECTION** command without parameters to test the connection of all interfaces (DB and none DB) in the [active environment](/articles/25_environments/05_set_and_list_commands.md).
+The interfaces of an active environment can be tested using the **TEST_CONNECTION** command. To do so, run the **TEST_CONNECTION** command without parameters to test the connection of all interfaces (DB and non-DB) in the [active environment](/articles/25_environments/05_set_and_list_commands.md).
 
 ### Run Queries on System DB
 
