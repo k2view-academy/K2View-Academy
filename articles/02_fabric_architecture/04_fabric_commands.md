@@ -572,9 +572,9 @@ MIGRATE commands serve as aliases for BATCH commands.
 
 #### PS and Kill Commands
 
-- The **PS** command displays the current tasks running on the Fabric cluster, allowing you to run it on node1 and view running tasks on node2. The **PS** command displays different types of tasks such as Fabric commands, Fabric Jobs, [Web Service and Graphit](/articles/15_web_services_and_graphit/01_web_services_overview.md), [Sync processes](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), [Broadway Actor](/articles/19_Broadway/03_broadway_actor.md), parser, or user logic. When a task/thread is specified as a parameter, it shows its stack trace.
+- The **PS** command displays the current tasks running on the Fabric cluster, allowing you to run it on node1 and view running tasks on node2. The **PS** command displays different types of tasks such as Fabric commands, Fabric jobs, [Web Service and Graphit](/articles/15_web_services_and_graphit/01_web_services_overview.md), [Sync processes](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), [Broadway Actor](/articles/19_Broadway/03_broadway_actor.md), parser, or user logic. When a task/thread is specified as a parameter, it shows its stack trace.
 
-- The **KILL** command is used to kill any running task displayed by the PS command. Note that you can kill a task that runs on a different node on the Fabric cluster.
+- The **KILL** command terminates tasks currently shown by the PS command. Note that you can terminate a task running on a different node within the Fabric cluster.
 
 ### Execution Monitoring
 
