@@ -507,8 +507,8 @@ The values are kept in the System DB **global_settings** table under [k2system](
 
 #### Fabric Security Commands
 
-- Master key generation commands used to encrypt LUI data and to encrypt an [interface’s](/articles/05_DB_interfaces/01_interfaces_overview.md) details. Click to open the Fabric [Devops Security](/articles/99_fabric_infras/devops/01_fabric_security_overview.md) articles and to read more about Fabric Security Hardening.
-- Fabric [Credentials Commands](/articles/17_fabric_credentials/01_fabric_credentials_overview.md), a list of commands for setting Fabric credentials like, users, roles, tokens or permissions.
+- Master key generation commands are used for encrypting LUI data and [interface](/articles/05_DB_interfaces/01_interfaces_overview.md) details. Click to open the Fabric [Devops Security](/articles/99_fabric_infras/devops/01_fabric_security_overview.md) articles and learn more about Fabric Security Hardening.
+- Fabric [Credentials Commands](/articles/17_fabric_credentials/01_fabric_credentials_overview.md), a list of commands used for setting Fabric credentials such as users, roles, tokens or permissions.
 
 ###  Deploy and Drop Commands
 
@@ -516,7 +516,7 @@ Fabric commands to deploy [Fabric implementation](/articles/16_deploy_fabric/03_
 
 #### Drop LU Command
 
-The **DROP LUTYPE** command deletes [LU metadata (LU schema)](/articles/03_logical_units/01_LU_overview.md) and its [LUIs](/articles/01_fabric_overview/02_fabric_glossary.md#lui) from Fabric. The DROP command also deletes the the LU from Storage and the related LU entry from the k2_lut_info in the System DB. Once the LU is dropped it should be [redeployed to the Fabric server](/articles/16_deploy_fabric/01_deploy_Fabric_project.md).
+The **DROP LUTYPE** command deletes [LU metadata (the LU schema)](/articles/03_logical_units/01_LU_overview.md) and its [LUIs](/articles/01_fabric_overview/02_fabric_glossary.md#lui) from Fabric. The DROP command also deletes the LU from Storage and the related LU entry from the k2_lut_info in the System DB. Once the LU is dropped, it should be [redeployed to the Fabric server](/articles/16_deploy_fabric/01_deploy_Fabric_project.md).
 
 [Click for more information about Fabric System DB.](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
 
