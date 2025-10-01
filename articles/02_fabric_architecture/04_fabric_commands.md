@@ -65,7 +65,7 @@ For example:
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-settings">Fabric Settings</a></p>
 </td>
 <td valign="top" width="550pxl">
-<p>Session and cluster levels settings.</p>
+<p>Session- and cluster-level settings.</p>
 </td>
 </tr>
 <tr>
@@ -203,7 +203,7 @@ The consistency level of the GET LUI command can be set to ONE. If it fails to a
 SET LUI_READ_ONE_WHEN_FAIL = true
 ~~~
 
-Note that this command sets the consistency level on the session level. The default value of this parameter is **false**.
+Note that this command sets the consistency level at session level. The default value of this parameter is **false**.
 
 The following table lists the GET commands:
 
@@ -536,7 +536,7 @@ fabric>DROP LUTYPE Customer;
 
 ### Fabric Environments and Interfaces
 
-Fabric enables the deployment of Fabric environments and setting active environments on a [session](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting---session-level) or [cluster levels](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting---cluster-level).
+Fabric enables deploying Fabric environments and setting active environments at [session](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting---session-level) or [cluster level](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting---cluster-level).
 
 The interfaces of an active environment can be tested using the **TEST_CONNECTION** command. To do so, run the **TEST_CONNECTION** command without parameters to test the connection of all interfaces (DB and none DB) in the [active environment](/articles/25_environments/05_set_and_list_commands.md).
 
