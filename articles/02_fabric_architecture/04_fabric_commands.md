@@ -562,9 +562,9 @@ Get the Fabric jobs' list and status, start, stop, update and resume jobs.
 
 The Batch Process mechanism enables executing different types of Fabric commands in a batch mode on remote Fabric nodes.
 
-Fabric has commands that start an execution, retry and cancel the execution of a batch process and commands that monitor an execution on batch processes.
+Fabric includes commands for starting, retrying and canceling batch process executions, as well as commands for monitoring their progress.
 
-Note that MIGRATE commands are used as aliases to BATCH commands.
+MIGRATE commands serve as aliases for BATCH commands.
 
 [Click for more information about the Fabric Batch Process mechanism](/articles/20_jobs_and_batch_services/11_batch_process_overview.md).
 
@@ -572,7 +572,7 @@ Note that MIGRATE commands are used as aliases to BATCH commands.
 
 #### PS and Kill Commands
 
-- The **PS** command displays the current tasks running on the Fabric cluster, i.e. you can run this command on node1 and view tasks running on node2. The **PS** command displays different types of tasks like Fabric commands, Fabric Jobs, [Web Service and Graphit](/articles/15_web_services_and_graphit/01_web_services_overview.md), [Sync processes](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), [Broadway Actor](/articles/19_Broadway/03_broadway_actor.md), parser, or user logic.  When a task/thread is specified as a parameter it shows its stack trace.
+- The **PS** command displays the current tasks running on the Fabric cluster, allowing you to run it on node1 and view running tasks on node2. The **PS** command displays different types of tasks such as Fabric commands, Fabric Jobs, [Web Service and Graphit](/articles/15_web_services_and_graphit/01_web_services_overview.md), [Sync processes](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), [Broadway Actor](/articles/19_Broadway/03_broadway_actor.md), parser, or user logic. When a task/thread is specified as a parameter, it shows its stack trace.
 
 - The **KILL** command is used to kill any running task displayed by the PS command. Note that you can kill a task that runs on a different node on the Fabric cluster.
 
