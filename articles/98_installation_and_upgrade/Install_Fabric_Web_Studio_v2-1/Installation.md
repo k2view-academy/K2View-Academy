@@ -421,19 +421,19 @@ Following this procedure, when the `k2space.sh` script runs, the expected file w
 
 Here is the flow:
 
-1. Pull the desired Image tag:
+1. Pull the desired Image tag (replace 8.x.x_xxx with the specific version you need):
 
-`docker pull docker.share.cloud.k2view.com/k2view/fabric-studio:8.1.7_22`
+`docker pull docker.share.cloud.k2view.com/k2view/fabric-studio:8.x.x_xxx`
  
 2. Save / compress the desired Image tag:
 
-`docker save docker.share.cloud.k2view.com/k2view/fabric-studio:8.1.7_22 | gzip > k2view_fabric-studio_8.1.7_22.tar.gz`
+`docker save docker.share.cloud.k2view.com/k2view/fabric-studio:8.x.x_xxx | gzip > k2view_fabric-studio_8.x.x_xxx.tar.gz`
 
-3. Copy the `k2view_fabric-studio_8.1.7_22.tar.gz` file to the target machine.
+3. Copy the `k2view_fabric-studio_8.x.x_xxx.tar.gz` file to the target machine.
 
 4. On the target machine, load the image locally:
 
-`docker load -i k2view_fabric-studio_8.1.7_22.tar.gz`
+`docker load -i k2view_fabric-studio_8.x.x_xxx.tar.gz`
 
 Doing this before you run the first `k2space.sh` command ensures the file is present on your system to create your first space and avoids downloading it from the Internet.
 
