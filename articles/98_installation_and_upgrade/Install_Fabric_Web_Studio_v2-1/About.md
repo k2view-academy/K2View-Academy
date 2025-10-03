@@ -283,8 +283,8 @@ Ensure the following external services are reachable from the host machine:
 
 The installation package is available for download via K2view's Nexus Container Registry or can be obtained via [K2view's GitHub Studio Blueprint](https://github.com/k2view/blueprints/tree/main/Studio). We recommend downloading the installation package from K2view's Nexus Container Registry.
 
-  - Docker distribution: `Studio-Docker-latest.zip` at [https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Podman-Studio-latest.zip](https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Docker-Studio-latest.zip)
-  - Podman distribution: `Studio-Podman-latest.zip` at [https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Podman-Studio-latest.zip](https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Podman-Studio-latest.zip)
+  - Docker distribution: `Studio-Docker-latest.zip` at [https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Studio-Docker-latest.zip](https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Studio-Docker-latest.zip)
+  - Podman distribution: `Studio-Podman-latest.zip` at [https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Studio-Podman-latest.zip](https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Studio-Podman-latest.zip)
 
 Either path will require that you obtain an account for K2view's Nexus Container Registry. If you do not have an account, please request one from your K2view representative. 
 
