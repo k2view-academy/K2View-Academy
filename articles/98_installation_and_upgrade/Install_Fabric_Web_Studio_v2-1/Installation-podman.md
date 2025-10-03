@@ -158,9 +158,11 @@ mkdir K2view
 
 ### **Step 3**: Download
 
-There are two options to obtain Fabric Web Studio. You can download a zip file or clone the content from K2view's Blueprints.
+There are two options to obtain Fabric Web Studio. You can download a zip file (recommended) or clone the content from K2view's Blueprints.
 
-#### Option 1: Download The Latest Version of Fabric Web Studio for Podman
+#### Option 1 (Recommended): Download The Latest Version of Fabric Web Studio for Podman
+
+The recommended approach is to download the latest version of Fabric Web Studio for Podman from this location:
 
 You can download the latest version of Fabric Web Studio for Podman from this location: 
 
@@ -178,11 +180,13 @@ cd K2view
 ```
 
 
-The Studio directory contains the configuration, YAML, and the `k2Space.sh` script files to configure and create your Fabric Web Studio spaces. Please refer to the What's in this Package topic above for details about these files. 
+The Studio directory contains the configuration, YAML, and the `k2space.sh` script files to configure and create your Fabric Web Studio spaces. Please refer to the What's in this Package topic above for details about these files. 
 
 You can now skip to Step 4.
 
 #### Option 2: Clone the K2view Blueprints 
+
+> You may prefer to use Git to clone the installation files; in this case, you can clone the K2view Blueprints, which provide these files.
 
 Using a shell, change your directory to your K2view directory and run the following command to clone K2view Blueprints (this requires a prior installation of a Git client):
 
@@ -195,16 +199,18 @@ git clone https://github.com/k2view/blueprints.git
 
 This will create a `blueprints` directory with various subdirectories. The `Studio` subdirectory holds the Fabric Web Studio installation files. 
 
+> You will find two subdirectories: `Docker` and `Podman`. For the Podman installation, use the content of the `Podman` subdirectory.
+
 #### Create an Installation Directory and Copy the Fabric Web Studio Files
 
-We recommend running Fabric Web Studio within the `Studio` directory of the `K2view` directory. From the K2view directory, copy the `blueprints/Studio` directory as `Studio`. 
+We recommend running Fabric Web Studio within the `Studio` directory of the `K2view` directory. From the K2view directory, copy the `blueprints/Studio/Podman` directory as `Studio`. 
 
 From the K2view directory
 
 ```bash
-cp -r blueprints/Studio/ Studio
+cp -r blueprints/Studio/Podman Studio
 ```
-The Studio directory contains the configuration, YAML, and the `k2Space.sh` script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation-podman.md#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
+The Studio directory contains the configuration, YAML, and the `k2space.sh` script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation-podman.md#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
 
 ### **Step 4**: Configure Git and TLS
 
