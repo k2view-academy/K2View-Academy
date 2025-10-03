@@ -172,11 +172,11 @@ mkdir K2view
 
 ### **Step 3**: Download
 
-There are two options to obtain the Docker Compose Runtime for Fabric Web Studio. You can download a zip file or clone the content from K2view's Blueprints.
+There are two options to obtain the Docker Compose Runtime for Fabric Web Studio. You can download a zip file (recommended) or clone the content from K2view's Blueprints.
 
-#### Option: Download The Latest Version of Fabric Web Studio for Docker Compose
+#### Option (Recommended): Download The Latest Version of Fabric Web Studio for Docker Compose
 
-You can download the latest version of Fabric Web Studio for Docker Compose from this location: 
+The recommended approach is to download the latest version of Fabric Web Studio for Docker Compose from this location: 
 
 ```bash
 https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Studio-Docker-latest.zip
@@ -196,6 +196,8 @@ The Studio directory contains the configuration, YAML, and the `k2space.sh` scri
 You can now skip to <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a>.
 
 #### Option: Clone the K2view Blueprints 
+
+> You may prefer to use Git to clone the installation files; in this case, you can clone the K2view Blueprints, which provide these files.
 
 Using a shell, change your directory to your K2view directory and run the following command to clone K2view Blueprints (this requires a prior installation of a Git client):
 
