@@ -191,7 +191,7 @@ cd K2view
 # rename Studio-Docker as Studio
 ```
 
-The Studio directory contains the configuration, YAML, and the `k2Space.sh` script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
+The Studio directory contains the configuration, YAML, and the `k2space.sh` script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
 
 You can now skip to <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md#step-4-configure-git-and-tls">Step 4: Configure Git and TLS</a>.
 
@@ -228,7 +228,7 @@ You must use the Linux file system to store the Studio directory if you are usin
 cp -r blueprints\Studio\ Studio
 ```
 
-The Studio directory contains the configuration, YAML, and the `k2Space.sh` script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
+The Studio directory contains the configuration, YAML, and the `k2space.sh` script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
 
 ### **Step 4**: Configure Git and TLS
 
@@ -341,7 +341,7 @@ You may need to make `k2space.sh` executable on a Linux system. To do so, use th
  chmod 700 k2space.sh
 ```
 
-**Running the k2spach.sh Script**
+**Running the k2space.sh Script**
 You can create multiple Fabric spaces on your server. To do so, use the `k2space.sh` script as shown here. 
 
  > On some Linux systems, you may need to prefix the command with `sudo`.
