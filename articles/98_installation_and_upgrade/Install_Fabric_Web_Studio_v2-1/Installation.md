@@ -164,7 +164,7 @@ cd \\wsl$\Ubuntu\home\[username]
 
 *Create your Download and Installation Directory Locations*
 
-Using a shell, create a `K2view` directory to download K2view's Blueprints. You can also use the K2view directory to hold the K2view Fabric Web Studio Installation directory. We would recommend that you use K2view for this directory.
+Using a shell, create a `K2view` directory to download K2view's Blueprints. You can also use the K2view directory to hold the K2view Fabric Web Studio Installation directory. We recommend using K2view for this directory.
 
 ```bash
 mkdir K2view
@@ -210,16 +210,18 @@ git clone https://github.com/k2view/blueprints.git
 
 This will create a `blueprints` directory with various subdirectories. The `Studio` subdirectory holds the Fabric Web Studio installation files. 
 
+> You will find two subdirectories: `Docker` and `Podman`. For the Docker installation, use the content of the `Docker` subdirectory. 
+
 #### Create an Installation Directory and Copy the Fabric Web Studio Files
 
 We recommend running Fabric Web Studio within the `Studio` directory of the `K2view` directory. From the K2view directory, copy the `blueprints/Studio` directory as `Studio`. 
 
 *Using Linux or MacOS*
 
-From the K2view directory
+From the K2view directory, copy the content of the `blueprints/Studio/Docker` to the `Studio` directory.
 
 ```bash
-cp -r blueprints/Studio/ Studio
+cp -r blueprints/Studio/Docker Studio
 ```
 
 *Using the Microsoft Windows PowerShell*
@@ -227,7 +229,7 @@ cp -r blueprints/Studio/ Studio
 You must use the Linux file system to store the Studio directory if you are using Microsoft Windows. Please review <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md#step-2-setup">Step 2's</a> "Using Microsoft Windows" section for details.  
 
 ```bash
-cp -r blueprints\Studio\ Studio
+cp -r blueprints\Studio\Docker Studio
 ```
 
 The Studio directory contains the configuration, YAML, and the `k2space.sh` script files to configure and create your Fabric Web Studio spaces. Please refer to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md#whats-in-this-package">What's in this Package</a> topic above for details about these files. 
