@@ -50,7 +50,6 @@ With **multi-space development**, Fabric Web Studio enables multiple developers 
 Version 2.1 introduces several important enhancements, most notably:
 
 - **Support for Podman Compose runtime**, providing a daemonless, enterprise-grade alternative to Docker Compose.
-- **Upgraded Fabric version 8.2.1_46** bundled with the distribution.
 - **Heap size increased to 4GB by default**, configurable per Space.
 - **PROJECT_NAME parameter introduced** to decouple project name from Space name.
 - **Per-space configuration files** (`.env`, `compose.yaml`, `.config`) enable easier customization.
@@ -305,7 +304,7 @@ Either path will require that you obtain an account for K2view's Nexus Container
 
 ## Version Compatibility
 
-Fabric Web Studio 2.1 packages are validated and certified against Fabric version `8.2.4_3`. Please contact your K2view representative if you'd like to use a later version of Fabric and TDM.
+Fabric Web Studio 2.1 packages are validated and certified against Fabric version `8.2.4_3` and older. Please contact your K2view representative if you'd like to use a later version of Fabric and TDM.
 
 To specify a later version of Fabric to use with Fabric Web Studio, edit the `.env` file's `FABRIC_VERSION` parameter. 
 
