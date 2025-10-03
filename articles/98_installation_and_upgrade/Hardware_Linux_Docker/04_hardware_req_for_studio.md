@@ -18,7 +18,7 @@
 
 K2view Fabric Studio is the development environment for building, managing, and testing K2view Fabric projects. It provides data engineers and developers with the tools to design and deploy Logical Units (LUs), business workflows, data pipelines, and other Fabric components with speed and precision.
 
-There are two generations of Fabric Studio: *Fabric Web Studio* and *Fabric .Net Studio*.
+There are two generations of Fabric Studio: *Fabric Web Studio* and *Fabric .NET Studio*.
 
 ### Fabric Web Studio – The Next Generation
 
@@ -31,16 +31,16 @@ There are two generations of Fabric Studio: *Fabric Web Studio* and *Fabric .Net
 
 With Fabric Web Studio, organizations gain a more modern, flexible, and collaborative development experience that accelerates project delivery.
 
-### Fabric .Net Studio – The Previous Generation
+### Fabric .NET Studio – The Previous Generation
 
-**Fabric .Net Studio** is the earlier version of Studio, designed primarily for Windows environments. It provides a powerful IDE experience for Fabric developers, with system requirements detailed later in this topic. While it remains supported for customers with existing Windows-based workflows, new projects are encouraged to adopt Fabric Web Studio for its modern, containerized, and cloud-ready capabilities.
+**Fabric .NET Studio** is the earlier version of Studio, designed primarily for Windows environments. It provides a powerful IDE experience for Fabric developers, with system requirements detailed later in this topic. While it remains supported for customers with existing Windows-based workflows, new projects are encouraged to adopt Fabric Web Studio for its modern, containerized, and cloud-ready capabilities.
 
 
 ## Fabric Web Studio Requirements
 
 Fabric Web Studio is designed for flexible deployment across Windows, macOS, and Linux using Docker Compose or Podman, and is also available natively in K2cloud. To ensure a smooth experience, we recommend starting with the <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/00_hardware_requirements_for_POV.md">Proof of Value (POV) environment sizing</a>. This configuration is optimized for evaluation, development, and smaller-scale projects, while still providing the resources needed to explore Fabric’s full capabilities.
  
-Fabric Web Studio supports the creation of multiple spaces, allowing multiple users to share a single environment for dedicated purposes. The number of concurrent running spaces will dictate the amount of RAM required on the host. You should allocate 4-8 MB of RAM per space, depending on your project needs. A K2view representative can assist you with determining the correct size. 
+Fabric Web Studio supports the creation of multiple spaces, allowing multiple users to share a single environment for dedicated purposes. The number of concurrent running spaces will dictate the amount of RAM required on the host. You should allocate 4-8 GB of RAM per space, depending on your project needs. A K2view representative can help you figure out the correct size. 
 
 ### Recommended Environment Sizing
 
@@ -84,7 +84,7 @@ Tip: This sizing is intended for POV and initial development environments. For p
 
 ## Fabric .Net Studio Requirements
 
-Fabric .Net Studio is used for configuring, managing, and controlling the Fabric server operation, and its installation is Windows-based.
+Fabric .NET Studio is used for configuring, managing, and controlling the Fabric server operation, and its installation is Windows-based.
  
 The application can be installed locally on either a workstation or a server with Terminal Services for RDP connection.
 
@@ -214,7 +214,7 @@ Local administrator privileges are needed for the Fabric Studio installation.
 
 ### Linux Server Ports
 
-Open the following ports on the Linux server and ensure they are accessible from Management stations.
+Open the following ports on the Linux server and ensure they are accessible from the Management station.
  
 Depending on your setup, not all ports are required:
 
