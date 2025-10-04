@@ -190,6 +190,14 @@ To do so:
 This section outlines the steps for installing TDM in non-development environments.
 Two deployment models are supported: On-Prem VM Installation and K2cloud Installation.
 
+### References
+- K2cloud / Kubernetes Deployments
+    - [Kubernetes System Requirements](/articles/98_installation_and_upgrade/Hardware_K8s/README.md)
+- VM References
+    - [Fabric 8 Setup Guide](/articles/98_installation_and_upgrade/Install_on_Linux/02_Fabric_8.x.x_Setup.md)
+    - [PostgreSQL Setup](/articles/98_installation_and_upgrade/Install_on_Linux/02.2_Fabric_8.x.x_PG_setup.md)
+    - [VM Requirements](/articles/98_installation_and_upgrade/Hardware_Linux_Docker/README.md)
+
 ### Non-Development Prerequisites
 
 The following prerequisites apply to both deployment models:
@@ -202,14 +210,6 @@ The following prerequisites apply to both deployment models:
     - Before cloning the branch, edit the following Globals to create the TDM DB and k2masking schema during the first TDM LU deployment:
         - CREATE_TDMDB Global must be set to true.
         - (Optional) If changing schema name: edit TDMDB_SCHEMA shared Global.
-
-#### References
-- VM References
-    - [Fabric 8 Setup Guide](/articles/98_installation_and_upgrade/Install_on_Linux/02_Fabric_8.x.x_Setup.md)
-    - [PostgreSQL Setup](/articles/98_installation_and_upgrade/Install_on_Linux/02.2_Fabric_8.x.x_PG_setup.md)
-    - [VM Requirements](/articles/98_installation_and_upgrade/Hardware_Linux_Docker/README.md)
-- K2cloud / Kubernetes Deployments
-    - [Kubernetes System Requirements](/articles/98_installation_and_upgrade/Hardware_K8s/README.md)
 
 
 ### On-Prem VM Installation 
@@ -231,7 +231,6 @@ The following prerequisites apply to both deployment models:
     - Build and deploy the remaining TDM components.
 6.	Offline Deployment
     - Refer to [Offline Deployment Instructions](/articles/16_deploy_fabric/03_offline_deploy.md).
-
 
 
 ### K2cloud Installation
