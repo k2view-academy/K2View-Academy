@@ -1,5 +1,7 @@
 # TDM DB - General Parameters
 
+The TDM DB **tdm_general_parameters** table holds the name of each parameter (param_name) and its value (param_value). This article documents categories of parameters in this table
+
 ## Table of Contents
 
 * [TDM VERSION](#tdm-version)
@@ -12,11 +14,9 @@
 * [Parameter Coupling Mode](#parameter-coupling-mode)
 * [Display of Parameters' Name in the Task - ADD_LU_NAME_TO_PARAM_NAME](#display-of-parameters-name-in-the-task---add_lu_name_to_param_name)
 * [TDM Portal General Parameters](#tdm-portal-general-parameters)
-
   * [Update the TDM_GENERAL_PARAMETERS to Support Fabric Storage without a TTL](#update-the-tdm_general_parameters-to-support-fabric-storage-without-a-ttl)
 
 
-The TDM DB **tdm_general_parameters** table holds the name of each parameter (param_name) and its value (param_value). The following categories of parameters are populated in this table:
 
 ## TDM VERSION
 
