@@ -106,13 +106,13 @@ To verify what is configured, please open Fabric’s `workspace/config/config.in
 - For both the **TDM** and **POSTGRESQL_ADMIN** interfaces set the connection details as follows:
 
   - Set the Host value.
-    - For K2cloud use: `postgres-service`.
-    - For Docker Compose or Podman use: `{your spacename}-postgres`. Please review the note above.
+     - For K2cloud use: `postgres-service`.
+     - For Docker Compose or Podman use: `{your spacename}-postgres`. Please review the note above.
     
   - Set the Port. By default, it is `5432`.
   - The database's name on the interface
-    - For the **POSTGRESQL_ADMIN** interface use: `postgres`.
-    - For the **TDM** interface use: `TDMDB`.
+     - For the **POSTGRESQL_ADMIN** interface use: `postgres`.
+     - For the **TDM** interface use: `TDMDB`.
    
   - Set the User as: `postgres` with Password as: `postgres`.
   - Save the interface.
@@ -122,23 +122,23 @@ To verify what is configured, please open Fabric’s `workspace/config/config.in
  
 - Set the **CREATE_TDMDB** Global in the TDM LU to **true**.
   
-    > You will find the Globals.java file at this location: `workspace/project/Implementation/LogicalUnits/TDM/Java/src/com/k2view/cdbms/usercode/lu/TDM/Globals.java`
+     > You will find the Globals.java file at this location: `workspace/project/Implementation/LogicalUnits/TDM/Java/src/com/k2view/cdbms/usercode/lu/TDM/Globals.java`
 
   
-    > Note. The default schema name of the TDM DB contains the cluster ID.
-    > 
-    > Changing the TDM DB schema name: If you would like to change the schema name for the TDM DB, please edit the **TDMDB_SCHEMA** shared Global. Restart Fabric after updating this Global.
+     > Note. The default schema name of the TDM DB contains the cluster ID.
+     > 
+     > Changing the TDM DB schema name: If you would like to change the schema name for the TDM DB, please edit the **TDMDB_SCHEMA** shared Global. Restart Fabric after updating this Global.
 
 - Deploy the TDM LU.
   - This deployment creates the TDM DB and the k2masking schema.
     
-    > Note that the k2masking schema can also be created by running the **masking-create-cache-table.flow** from the Broadway Examples.
+     > Note that the k2masking schema can also be created by running the **masking-create-cache-table.flow** from the Broadway Examples.
 
 - After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false** in the Globals.java file.
 
 - The deployment will add a *TDM* item to the list of Fabric applications in the top left main menu. 
 
-    > In some situations, you may need to clear your browser's cache for the *TDM* item to become visible from the main menu.
+     > In some situations, you may need to clear your browser's cache for the *TDM* item to become visible from the main menu.
 
 
 ### Desktop Studio TDM Installation
