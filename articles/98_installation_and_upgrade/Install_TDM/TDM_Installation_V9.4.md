@@ -6,15 +6,15 @@ This document outlines installation guidelines and initial configuration steps f
 ## Table of Contents
 
   - [TDM Development Environment Installation](#tdm-development-environment-installation)
-    - [TDM On-Prem Installation — Desktop Studio](#tdm-on-prem-installation--desktop-studio)
-      - [Prerequisites](#prerequisites)
-      - [TDM Library Installation](#tdm-library-installation)
-      - [TDM Deployment](#tdm-deployment)
     - [TDM On-Prem Installation — Web Studio](#tdm-on-prem-installation--web-studio)
       - [Prerequisites](#prerequisites-1)
       - [TDM Library Installation](#tdm-library-installation-1)
       - [TDM Deployment](#tdm-deployment-1)
     - [K2view Cloud Development Environment Installation](#k2view-cloud-development-environment-installation)
+    - [TDM On-Prem Installation — Desktop Studio](#tdm-on-prem-installation--desktop-studio)
+      - [Prerequisites](#prerequisites)
+      - [TDM Library Installation](#tdm-library-installation)
+      - [TDM Deployment](#tdm-deployment)
   - [TDM Non-Development Environment Installation](#tdm-non-development-environment-installation)
     - [Prerequisites](#prerequisites-2)
     - [On-Prem VM Installation](#on-prem-vm-installation)
@@ -24,6 +24,77 @@ This document outlines installation guidelines and initial configuration steps f
   - [Optional — TDM AI Installation](#optional--tdm-ai-installation)
 
 ## TDM Development Environment Installation
+
+### TDM On-Prem Installation — Web Studio
+
+#### Prerequisites
+
+- [Install Fabric Web Studio for Docker Compose](/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md).
+- If your organization would like to use Podman, please perform the [Fabric Web Studio for Podman](/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation-podman.md) installation.
+
+> When performing the steps to **Create and Launch a Fabric Space**, it is essential to use the **studio_pg** profile, which utilizes PostgreSQL for the System DB and TDM.
+
+#### TDM Library Installation
+
+**If internet access is available**, perform the following steps: 
+
+- Open the Fabric Web Studio.
+- Click the [Extensions](/articles/04_fabric_studio/28_web_k2exchange.md) icon.
+- Select **TDM** to install the TDM Library.
+
+**If internet access is unavailable**, follow the following steps:  
+
+- Download the VSIX file from the download page. Please request this location from your K2view representative.
+- Upload the file to the TDM project: 
+  -  Right-click on **project-resources** from the Project tree.
+  -  Select **Upload Files…** and choose the downloaded TDM VSIX file. 
+- Click the **Extensions** icon.
+- Click the three-horizontal-dots menu (top-right of the pane).
+- Select *Install from VSIX…*.
+- In the pop-up window, select the uploaded TDM VSIX file.
+- Click *Install from VSIX*. 
+
+#### TDM Deployment
+
+- Edit the **TDM** and **POSTGRESQL_ADMIN** interfaces with the PostgreSQL connection details.
+
+  - Set the Host.
+    > This value is the space's name with `-postgres` appended.
+    > E.g., If the space's name is `myspacepg`, the host will be myspacepg-postgres
+    > 
+    > You can confirm this by viewing the `workspace/config/config.ini` file, in the [system_db] section, where you will find the SYSTEM_DB_HOST setting.
+    
+  - Set the Port. By default, it is `5432`.
+  - The database's name on the interface must be `postgres`.
+  - Set the User as: `postgres` with Password as: `postgres`.
+  - Save the interface (don’t test the connection).
+  - Set the interface as **active**.
+
+- Perform the following step in order to use the **PostgreSQL** DB as the Fabric system DB:
+  - Open Fabric’s **config.ini** file and edit the **[system_db]** section’s attributes, including the SYSTEM_DB_DATABASE attribute, to match the **POSTGRESQL_ADMIN** database interface values.
+ 
+- Set the **CREATE_TDMDB** Global in the TDM LU to **true**.
+  > You will find the Global file in this location: `workspace/project/Implementation/LogicalUnits/TDM/Java/src/com/k2view/cdbms/usercode/lu/TDM/Globals.java`
+  > 
+  > Optional: If you would like to change the schema name for the TDM DB (the default schema name contains the cluster ID), please edit the **TDMDB_SCHEMA** shared Global. Restart Fabric after updating this Global.
+  > 
+- Deploy the TDM LU.
+  - This deployment creates the TDM DB and the k2masking schema.
+  > Note that the k2masking schema can also be created by running the **masking-create-cache-table.flow** from the Broadway Examples.
+
+- After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false**.
+
+- The deployment will add a *TDM* item to the list of Fabric applications in the top left main menu. 
+
+  > In some situations, you may need to clear your browser's cache for the *TDM* item to become visible from the main menu.
+
+### K2view Cloud Development Environment Installation
+
+- Create a new Space on K2cloud. Select the **TDM Dev** Project and **TDM-9.4** Profile.
+- Set the **CREATE_TDMDB** Global in the TDM LU to **true**.
+- Optional: If you wish to change the schema name for the TDM DB (the default schema name contains the cluster ID), then edit the **TDMDB_SCHEMA** shared Global. Restart Fabric after updating this Global.
+- Deploy the TDM LU. This deployment creates the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by running the **masking-create-cache-table.flow** from the Broadway Examples.
+- After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false**.
 
 ### TDM On-Prem Installation — Desktop Studio
 
@@ -60,52 +131,6 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 - Deploy the TDM LU. This deployment creates the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by running the **masking-create-cache-table.flow** from the Broadway Examples (found in the Broadway Flow window, Main Menu > Actions > Examples and select this flow).
 - After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false**.
 
-### TDM On-Prem Installation — Web Studio
-
-#### Prerequisites
-
-- [Install **Docker Compose** container](https://github.com/k2view/blueprints/blob/main/Studio/Docker/README.md) to host the Web Studio.
-
-  [Install Fabric V8.3.X Web Studio](/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/README.md). Use the **studio_pg** profile, which is a Web Studio with PostgreSQL for use with its System DB and TDM.
-
-#### TDM Library Installation
-
-**If internet access is available**, perform the following steps: 
-
-- Open the Fabric Web Studio.
-- Click the [Extensions](/articles/04_fabric_studio/28_web_k2exchange.md) icon.
-- Select **TDM** to install the TDM Library.
-
-**If internet access is unavailable**, perform the following steps:  
-
-- Download the VSIX file from the download page.
-- Upload the file to the TDM project: 
-  -  Right-click on **project-resources** from the Project tree.
-  -  Select **Upload Files…** and choose the downloaded TDM VSIX file. 
-- Click the **Extensions** icon.
-- Click the three-horizontal-dots menu (top-right of the pane).
-- Select *Install from VSIX…*.
-- In the pop-up window, select the uploaded TDM VSIX file.
-- Click *Install from VSIX*. 
-
-#### TDM Deployment
-
-- Set the **POSTGRESQL_ADMIN interface** to **active**.
-- Edit the **TDM** and **POSTGRESQL_ADMIN** interfaces with the installed PostgreSQL connection details.
-- Perform the following step in order to use the **PostgreSQL** DB as the Fabric system DB:
-  - Open Fabric’s **config.ini** file and edit the **[system_db]** section’s attributes, including the SYSTEM_DB_DATABASE attribute, to be aligned with the **POSTGRESQL_ADMIN** DB interface. 
-- Set the **CREATE_TDMDB** Global in the TDM LU to **true**.
-- Optional: If you wish to change the schema name for the TDM DB (the default schema name contains the cluster ID), then Edit the **TDMDB_SCHEMA** shared Global. Restart Fabric after updating this Global.
-- Deploy the TDM LU. This deployment creates the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by running the **masking-create-cache-table.flow** from the Broadway Examples.
-- After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false**. 
-
-### K2view Cloud Development Environment Installation
-
-- Create a new Space on K2cloud. Select the **TDM Dev** Project and **TDM-9.4** Profile.
-- Set the **CREATE_TDMDB** Global in the TDM LU to **true**.
-- Optional: If you wish to change the schema name for the TDM DB (the default schema name contains the cluster ID), then edit the **TDMDB_SCHEMA** shared Global. Restart Fabric after updating this Global.
-- Deploy the TDM LU. This deployment creates the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by running the **masking-create-cache-table.flow** from the Broadway Examples.
-- After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false**.
 
 ## TDM Non-Development Environment Installation
 
