@@ -27,7 +27,7 @@ This document outlines installation guidelines and initial configuration steps f
 2. TDM requires Postgres as its database.
 3. For installation of TDM on Docker or Podman, when performing the steps to [Create and Launch a Fabric Space](/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md#step-7-create-and-launch-a-fabric-space), it is essential to use the **studio_pg** profile, which utilizes PostgreSQL for the System DB and TDM.
 
-##### TDM Installation on Docker or Podman
+##### Docker or Podman-based Installations
 
 You can install TDM within your K2cloud Kubernetes self-hosted environment, and also Docker or Podman container runtimes on a VM or a computer. 
 
@@ -51,7 +51,9 @@ If internet access is available, perform the following steps:
 
 If internet access is unavailable, follow the following steps:  
 
-- Download the VSIX file from the download page. Please request this location from your K2view representative.
+- Download the VSIX file from the download page. Please request a link to this file from your K2view representative.
+  - <a href="https://k2view.sharepoint.com/:f:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v9.x/V9.4?csf=1&web=1&e=jANmIa">Download Links for K2view Representatives</a>. This link is accessible only to K2view representatives.
+    
 - Upload the file to the TDM project: 
   -  Right-click on **project-resources** from the Project tree.
   -  Select **Upload Files…** and choose the downloaded TDM VSIX file. 
@@ -117,11 +119,9 @@ To verify what is configured, please open Fabric’s `workspace/config/config.in
 
 #### TDM Library Installation
 
-- Download the TDM Library export files from the links provided by your K2view representative. 
+- Download the TDM Library export files from the links provided by your K2view representative.
+  - <a href="https://k2view.sharepoint.com/:f:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v9.x/V9.4?csf=1&web=1&e=jANmIa">Download Links for K2view Representatives</a>. This link is accessible only to K2view representatives.
 
-<ul>
-    <li><a href="https://k2view.sharepoint.com/:f:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v9.x/V9.4?csf=1&web=1&e=jANmIa">Download Links for K2view Representatives</a></li>
-</ul>
 
 - Once downloaded, import the TDM Library export file using the **Import All** option: Right-click on the root of the Project tree, click on **Import**, and select **Import All...**, then in the File Browser, choose the export file to be imported. The following LUs would then be imported into your project: TDM, TDM_LIBRARY, and the TDM_TableLevel.
 
