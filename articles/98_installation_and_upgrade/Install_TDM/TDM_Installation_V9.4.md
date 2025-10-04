@@ -59,7 +59,7 @@ The procedure for upgrading to TDM V9.4 is described in the [TDM upgrade documen
 2. TDM requires Postgres as its database.
 3. For installation of TDM on Docker or Podman, when performing the steps to [Create and Launch a Fabric Space](/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md#step-7-create-and-launch-a-fabric-space), it is essential to use the **studio_pg** profile, which utilizes PostgreSQL for the System DB and TDM.
 
-##### Docker or Podman-based Installations
+#### Docker or Podman-based Installations
 
 You can install TDM within your K2cloud Kubernetes self-hosted environment, and also Docker or Podman container runtimes on a VM or a computer. 
 
@@ -71,7 +71,7 @@ Here are instructions links for installing Fabric Web Studio on Docker or Podman
 
 #### TDM Library Installation
 
-##### Internet Access is Available
+*Internet Access is Available*
 
 If internet access is available, perform the following steps: 
 
@@ -79,7 +79,7 @@ If internet access is available, perform the following steps:
 - Click the [Extensions](/articles/04_fabric_studio/28_web_k2exchange.md) icon.
 - Select **TDM** to install the TDM Library.
 
-##### Internet Access is Unavailable
+*Internet Access is Unavailable*
 
 If internet access is unavailable, follow the following steps:  
 
@@ -97,11 +97,29 @@ If internet access is unavailable, follow the following steps:
 
 #### TDM Deployment
 
-When using Fabric Web Studio with K2cloud, TDM uses a Postgres instance named `postgres-service`.
+*Overview*
 
-When using Fabric Web Studio with Docker Compose or Postman, TDM uses a Postgres database with an instance name generated from the space's name and `-postgres` appended to it. For example, if the space's name is `myspacepg`, the database instance's host name will be `myspacepg-postgres`.
+Before configuring TDM, note that **Fabric Web Studio’s setup differs slightly depending on where it runs**:
 
-To verify what is configured, please open Fabric’s `workspace/config/config.ini` file. In the [system_db] section, you will find various attributes, including the SYSTEM_DB_HOST attribute. This is the host to use when configuring the host value for the POSTGRESQL_ADMIN interface.
+   - **K2cloud (managed):** Fabric Web Studio is provisioned by K2cloud. The TDM project connects to a managed PostgreSQL service exposed in the Space as **`postgres-service`**.
+   - **Docker/Podman (self-managed):** Fabric Web Studio runs in your containers. The PostgreSQL service name is derived from the Space name with **`-postgres`** appended. For example, if the Space is `myspacepg`, the Postgres host will be **`myspacepg-postgres`**.
+
+*Verify your Postgres host (authoritative source)*
+
+To confirm what your environment is actually using:
+
+   1. Open `workspace/config/config.ini`.
+   2. In the `[system_db]` section, locate **`SYSTEM_DB_HOST`** — this is the host you should use when configuring the **`POSTGRESQL_ADMIN`** interface.
+
+   ```ini
+   [system_db]
+   SYSTEM_DB_HOST=postgres-service            ; K2cloud example
+   ; or
+   SYSTEM_DB_HOST=myspacepg-postgres          ; Docker/Podman example
+   ```
+   3. Ensure the **Database** for the admin connection is **`postgres`**, and provide the matching port/credentials.
+
+*Configuration Steps*
 
 - For both the **TDM** and **POSTGRESQL_ADMIN** interfaces set the connection details as follows:
 
