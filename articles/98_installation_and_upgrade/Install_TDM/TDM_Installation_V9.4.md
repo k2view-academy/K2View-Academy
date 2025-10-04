@@ -10,8 +10,10 @@ This document outlines installation guidelines and initial configuration steps f
   - [K2cloud Fabric Web Studio TDM Installation](#k2cloud-fabric-web-studio-tdm-installation)
   - [Desktop Studio TDM Installation](#desktop-studio-tdm-installation)
 - [TDM Non-Development Environment Installation](#tdm-non-development-environment-installation)
+  - [Non-Development Prerequisites](#non-development-prerequisites)
+  - [On-Prem VM Installation](#on-prem-vm-installation)
   - [K2cloud Installation](#k2cloud-installation)
-  - [TDM Initial Setup](#tdm-initial-setup)
+- [TDM Initial Setup](#tdm-initial-setup)
 - [TDM AI Installation](#tdm-ai-installation)
 
 
@@ -131,7 +133,7 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 This section outlines the steps for installing TDM in non-development environments.
 Two deployment models are supported: On-Prem VM Installation and K2cloud Installation.
 
-### Prerequisites
+### Non-Development Prerequisites
 
 The following prerequisites apply to both deployment models:
 - Fabric: Install Fabric v8.3.x.
@@ -144,7 +146,7 @@ The following prerequisites apply to both deployment models:
         - CREATE_TDMDB Global must be set to true.
         - (Optional) If changing schema name: edit TDMDB_SCHEMA shared Global.
 
-References:
+#### References
 - VM References
     - [Fabric 8 Setup Guide](/articles/98_installation_and_upgrade/Install_on_Linux/02_Fabric_8.x.x_Setup.md)
     - [PostgreSQL Setup](/articles/98_installation_and_upgrade/Install_on_Linux/02.2_Fabric_8.x.x_PG_setup.md)
@@ -173,7 +175,7 @@ References:
 6.	Offline Deployment
     - Refer to [Offline Deployment Instructions](/articles/16_deploy_fabric/03_offline_deploy.md).
 
-#### About Git
+### About Git
 
 - It is recommended to use separate Git branches for development, testing (SIT), and production environments. Changes from the development branch are merged into the testing branch, and once tested, changes from the testing branch are merged into the production branch.
 - Edit the following Globals in the relevant branch **before** cloning in order to create the TDM DB and k2masking schema during the first TDM LU deployment:
