@@ -23,15 +23,19 @@ This document outlines installation guidelines and initial configuration steps f
 
 #### Prerequisites
 
-##### TDM Installation on K2cloud
-
+1. Verify that the respective Fabric and TDM versions conform to these version requirements: https://support.k2view.com/Academy/articles/Product_Versions/TDM_versions.html.
+2. TDM requires Postgres as its database.
+3. For installation of TDM on Docker or Podman, when performing the steps to [Create and Launch a Fabric Space](/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md#step-7-create-and-launch-a-fabric-space), it is essential to use the **studio_pg** profile, which utilizes PostgreSQL for the System DB and TDM.
 
 ##### TDM Installation on Docker or Podman
 
-1. [Install Fabric Web Studio for Docker Compose](/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md).
-2. If your organization would like to use Podman, please perform the [Fabric Web Studio for Podman](/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation-podman.md) installation.
+You can install TDM within your K2cloud Kubernetes self-hosted environment, and also Docker or Podman container runtimes on a VM or a computer. 
 
-   > Note: When performing the steps to [Create and Launch a Fabric Space](/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md#step-7-create-and-launch-a-fabric-space), it is essential to use the **studio_pg** profile, which utilizes PostgreSQL for the System DB and TDM.
+Here are instructions links for installing Fabric Web Studio on Docker or Podman : 
+
+1. [Install Fabric Web Studio for Docker Compose](/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md).
+2. [Install Fabric Web Studio for Podman](/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation-podman.md).
+
 
 #### TDM Library Installation
 
@@ -59,25 +63,27 @@ If internet access is unavailable, follow the following steps:
 
 #### TDM Deployment
 
-- Edit the **TDM** and **POSTGRESQL_ADMIN** interfaces with the PostgreSQL connection details.
+When using Fabric Web Studio with K2cloud, TDM uses a Postgres instance named `postgres-service`.
 
-    > When using Fabric Web Studio with K2cloud, TDM and Fabric will share the same system database instance named `postgres-service`.
-    >
-    > When using Fabric Web Studio with Docker Compose or Postman, TDM and Fabric will share the same system DB instance, but the database instance's name is generated from the space's name with `-postgres` appended. E.g., If the space's name is `myspacepg`, the database host will be `myspacepg-postgres`.
-    >
-    > To verify what is configured, please open Fabric’s `workspace/config/config.ini` file. In the [system_db] section, you will find various attributes, including the SYSTEM_DB_HOST attribute. This is the host to use when configuring the host value for the POSTGRESQL_ADMIN interface
-  
+When using Fabric Web Studio with Docker Compose or Postman, TDM uses a Postgres database with an instance name generated from the space's name and `-postgres` appended to it. For example, if the space's name is `myspacepg`, the database instance's host name will be `myspacepg-postgres`.
+
+To verify what is configured, please open Fabric’s `workspace/config/config.ini` file. In the [system_db] section, you will find various attributes, including the SYSTEM_DB_HOST attribute. This is the host to use when configuring the host value for the POSTGRESQL_ADMIN interface.
+
+- For both the **TDM** and **POSTGRESQL_ADMIN** interfaces set the connection details as follows:
+
   - Set the Host value.
     - For K2cloud use: `postgres-service`.
-    - For Docker Compose or Podman use: `{your spacename}-postgres`. See note above.
+    - For Docker Compose or Podman use: `{your spacename}-postgres`. Please review the note above.
     
   - Set the Port. By default, it is `5432`.
   - The database's name on the interface
     - For the **POSTGRESQL_ADMIN** interface use: `postgres`.
     - For the **TDM** interface use: `TDMDB`.
+   
   - Set the User as: `postgres` with Password as: `postgres`.
   - Save the interface.
      - Don’t test the connection of the TDM interface because it hasn't been created yet. This will be performed in the next step.
+       
   - Set the interface as **active**.
  
 - Set the **CREATE_TDMDB** Global in the TDM LU to **true**.
