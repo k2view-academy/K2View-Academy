@@ -248,25 +248,42 @@ The following prerequisites apply to both deployment models:
 
 ## TDM Initial Setup
 
-The following activities must be performed after deploying the TDM project to Fabric:
+After the TDM project is deployed to Fabric, complete the following one-time setup to make the TDM self-service app usable for your teams. 
 
-- [Define Fabric roles](/articles/TDM/tdm_configuration/03_tdm_fabric_credentials.md) — one for each user group as defined in the external IDP, and grant permissions to each role.
+### 1) Prepare access (Fabric roles & IDP groups)
 
-- [TDM DB — General Parameters setup](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md).
+* [Create Fabric roles](/articles/TDM/tdm_configuration/03_tdm_fabric_credentials.md) that mirror your identity provider (IDP) groups (e.g., Admins, Owners, Testers) and grant the appropriate Fabric permissions to each role.
+* These roles will later be mapped to TDM permission groups inside the TDM app. 
 
-- TDM self-service application setup:
+### 2) Configure TDM DB general parameters
 
-  - [Permission group mapping](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md) — map the Fabric roles related to the corresponding TDM users to the TDM permission group (admin/owner/user).
+* Open [TDM DB — General Parameters](/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md) and review/update values such as reservation/retention limits, LUI separator, parameter coupling, and portal defaults, according to your governance needs. 
 
-  - [Creating Business Entities](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md). Note that all LUs must be deployed to Fabric before creating Business Entities (BEs).
+### 3) Bring the TDM self-service app online
 
-  - [Creating Systems](/articles/TDM/tdm_gui/05_tdm_gui_product_window.md).
+1. **Map permission groups**
+   In the TDM app, map your Fabric roles to [TDM permission groups](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md) (**admin / owner / tester**). This controls what each user can do in TDM. 
+2. **Create Business Entities (BEs)**
+   [Define BEs](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md) only **after all required LUs have been deployed** to Fabric, so entity definitions can reference deployed LUs. 
+3. **Create Systems**
+   [Register source/target systems](/articles/TDM/tdm_gui/05_tdm_gui_product_window.md) that BEs will use within tasks. 
+4. **Create Environments in the TDM app**
 
-  - [Environment creation and setup](/articles/TDM/tdm_gui/07_tdm_gui_environment_overview.md) — create all environments in the TDM self-service application.
-      - Optional: Add permission sets to the environments to assign testers to these environments; this would define their TDM permissions.
-      - Note that the environments must be deployed to Fabric before creating the environments in the TDM self-service application.
+   * Ensure the [environments are built and deployed](/articles/TDM/tdm_gui/07_tdm_gui_environment_overview.md) in Fabric before creating them in the TDM app (TDM references the Fabric environments).
+   * (Optional) Add **permission sets** per environment to assign testers and scope their actions. 
 
-    
+### 4) Quick validation
+
+* Sign in with a **tester** account and confirm the correct environment access and task permissions.
+* Run a small **extract** or **extract and load** task to verify reservation/retention defaults and LU visibility align with your parameters and role mappings. (Relies on the configuration above.) 
+
+### Notes & Tips
+
+* **Order matters:** Roles/permissions → General parameters → TDM app mappings → Environments. This avoids rework and mismatches between Fabric and TDM. 
+* **Environments:** If environments aren’t deployed in Fabric first, they cannot be created reliably in the TDM app. 
+* **Next steps:** Once setup is complete, teams can create tasks (extract, load, data generation/versioning) and operate within their assigned environments. 
+
+
 
 
 
