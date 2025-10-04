@@ -59,14 +59,14 @@ This document outlines installation guidelines and initial configuration steps f
 
 - Edit the **TDM** and **POSTGRESQL_ADMIN** interfaces with the PostgreSQL connection details.
 
-  - Set the Host.
+  - Set the Host value.
     > This value is the space's name with `-postgres` appended.
     > E.g., If the space's name is `myspacepg`, the host will be myspacepg-postgres
     > 
     > You can confirm this by viewing the `workspace/config/config.ini` file, in the [system_db] section, where you will find the SYSTEM_DB_HOST setting.
     
   - Set the Port. By default, it is `5432`.
-  - The database's name on the interface must be `postgres`.
+  - The database's name on the interface will be `postgres`. This is the name of the database deployed to a space created using the `studio_pg` profile - refer to the [Prerequisites](#prerequisites) section. 
   - Set the User as: `postgres` with Password as: `postgres`.
   - Save the interface (don’t test the connection).
   - Set the interface as **active**.
