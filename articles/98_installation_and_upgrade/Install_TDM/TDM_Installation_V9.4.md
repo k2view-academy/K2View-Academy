@@ -71,12 +71,15 @@ This document outlines installation guidelines and initial configuration steps f
   - Set the interface as **active**.
  
 - Set the **CREATE_TDMDB** Global in the TDM LU to **true**.
+  
   > You will find the Global file in this location: `workspace/project/Implementation/LogicalUnits/TDM/Java/src/com/k2view/cdbms/usercode/lu/TDM/Globals.java`
-  > 
+
+  
   > Optional: If you would like to change the schema name for the TDM DB (the default schema name contains the cluster ID), please edit the **TDMDB_SCHEMA** shared Global. Restart Fabric after updating this Global.
-  > 
+
 - Deploy the TDM LU.
   - This deployment creates the TDM DB and the k2masking schema.
+    
   > Note that the k2masking schema can also be created by running the **masking-create-cache-table.flow** from the Broadway Examples.
 
 - After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false**.
@@ -89,7 +92,9 @@ This document outlines installation guidelines and initial configuration steps f
 
 - Create a new Space on K2cloud. Select the **TDM Dev** Project and **TDM-9.4** Profile.
 - Set the **CREATE_TDMDB** Global in the TDM LU to **true**.
+  
   > Optional: If you would like to change the schema name for the TDM DB (the default schema name contains the cluster ID), please edit the **TDMDB_SCHEMA** shared Global. Restart Fabric after updating this Global.
+
 - Deploy the TDM LU. This deployment creates the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by running the **masking-create-cache-table.flow** from the Broadway Examples.
 - After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false**.
 
