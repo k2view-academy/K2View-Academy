@@ -5,7 +5,7 @@
 - [Before you begin](#before-you-begin)
 - [Upgrading](#upgrading)
 - [TDM Development Environment Installation](#tdm-development-environment-installation)
-  - [Fabric Web Studio TDM Installation for K2cloud, Docker, or Podman ](#fabric-web-studio-tdm-installation-for-k2cloud-docker-or-podman)
+  - [Web Studio TDM Installation for K2cloud, Docker, or Podman ](#web-studio-tdm-installation-for-k2cloud-docker-or-podman)
   - [Desktop Studio TDM Installation](#desktop-studio-tdm-installation)
 - [Git Best Practices](#git-best-practices)
 - [TDM Non-Development Environment Installation](#tdm-non-development-environment-installation)
@@ -51,7 +51,7 @@ The procedure for upgrading to TDM V9.4 is described in the [TDM upgrade documen
 
 ## TDM Development Environment Installation
 
-### Fabric Web Studio TDM Installation for K2cloud, Docker, or Podman 
+### Web Studio TDM Installation for K2cloud, Docker, or Podman 
 
 #### Prerequisites
 
