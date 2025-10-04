@@ -5,33 +5,28 @@ This document outlines installation guidelines and initial configuration steps f
 
 ## Table of Contents
 
-* [TDM Development Environment Installation](#tdm-development-environment-installation)
-
-  * [TDM On-Prem Installation — Web Studio](#tdm-on-prem-installation--web-studio)
-
-    * [Prerequisites](#prerequisites)
-    * [TDM Library Installation](#tdm-library-installation)
-    * [TDM Deployment](#tdm-deployment)
-  * [K2cloud Development Environment Installation](#k2cloud-development-environment-installation)
-  * [TDM On-Prem Installation — Desktop Studio](#tdm-on-prem-installation--desktop-studio)
-
-    * [Prerequisites](#prerequisites-1)
-    * [TDM Library Installation](#tdm-library-installation-1)
-    * [TDM Deployment](#tdm-deployment-1)
-* [TDM Non-Development Environment Installation](#tdm-non-development-environment-installation)
-
-  * [Prerequisites](#prerequisites-2)
-  * [On-Prem VM Installation](#on-prem-vm-installation)
-
-    * [About Git](#about-git)
-  * [K2view Cloud Installation](#k2view-cloud-installation)
-* [TDM Initial Setup](#tdm-initial-setup)
-* [Optional — TDM AI Installation](#optional--tdm-ai-installation)
+- [TDM Development Environment Installation](#tdm-development-environment-installation)
+  - [TDM Installation - Fabric Web Studio](#tdm-installation--fabric-web-studio)
+    - [Prerequisites](#prerequisites)
+    - [TDM Library Installation](#tdm-library-installation)
+    - [TDM Deployment](#tdm-deployment)
+- [K2cloud Development Environment Installation](#k2cloud-development-environment-installation)
+- [TDM Installation — Desktop Studio](#tdm-installation--desktop-studio)
+    - [Prerequisites](#prerequisites-1)
+    - [TDM Library Installation](#tdm-library-installation-1)
+    - [TDM Deployment](#tdm-deployment-1)
+- [TDM Non-Development Environment Installation](#tdm-non-development-environment-installation)
+  - [Prerequisites](#prerequisites-2)
+  - [On-Prem VM Installation](#on-prem-vm-installation)
+    - [About Git](#about-git)
+- [K2view Cloud Installation](#k2view-cloud-installation)
+- [TDM Initial Setup](#tdm-initial-setup)
+- [Optional — TDM AI Installation](#optional--tdm-ai-installation)
 
 
 ## TDM Development Environment Installation
 
-### TDM On-Prem Installation — Web Studio
+### TDM Installation — Fabric Web Studio
 
 #### Prerequisites
 
@@ -102,7 +97,7 @@ This document outlines installation guidelines and initial configuration steps f
 - Deploy the TDM LU. This deployment creates the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by running the **masking-create-cache-table.flow** from the Broadway Examples.
 - After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false**.
 
-### TDM On-Prem Installation — Desktop Studio
+### TDM Installation — Desktop Studio
 
 #### Prerequisites
 
