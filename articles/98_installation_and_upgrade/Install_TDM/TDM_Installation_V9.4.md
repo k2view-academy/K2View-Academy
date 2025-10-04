@@ -114,7 +114,8 @@ To verify what is configured, please open Fabric’s `workspace/config/config.in
      - For the **POSTGRESQL_ADMIN** interface use: `postgres`.
      - For the **TDM** interface use: `TDMDB`.
    
-  - Set the User as: `postgres` with Password as: `postgres`.
+  - Set the User as: `postgres`
+  - Set the Password as: `postgres`.
   - Save the interface.
      - Don’t test the connection of the TDM interface because it hasn't been created yet. This will be performed in the next step.
        
