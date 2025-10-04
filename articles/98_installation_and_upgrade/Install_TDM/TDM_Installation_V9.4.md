@@ -5,23 +5,29 @@ This document outlines installation guidelines and initial configuration steps f
 
 ## Table of Contents
 
-  - [TDM Development Environment Installation](#tdm-development-environment-installation)
-    - [TDM On-Prem Installation — Web Studio](#tdm-on-prem-installation--web-studio)
-      - [Prerequisites](#prerequisites-1)
-      - [TDM Library Installation](#tdm-library-installation-1)
-      - [TDM Deployment](#tdm-deployment-1)
-    - [K2view Cloud Development Environment Installation](#k2view-cloud-development-environment-installation)
-    - [TDM On-Prem Installation — Desktop Studio](#tdm-on-prem-installation--desktop-studio)
-      - [Prerequisites](#prerequisites)
-      - [TDM Library Installation](#tdm-library-installation)
-      - [TDM Deployment](#tdm-deployment)
-  - [TDM Non-Development Environment Installation](#tdm-non-development-environment-installation)
-    - [Prerequisites](#prerequisites-2)
-    - [On-Prem VM Installation](#on-prem-vm-installation)
-      - [About Git](#about-git)
-    - [K2view Cloud Installation](#k2view-cloud-installation)
-  - [TDM Initial Setup](#tdm-initial-setup)
-  - [Optional — TDM AI Installation](#optional--tdm-ai-installation)
+* [TDM Development Environment Installation](#tdm-development-environment-installation)
+
+  * [TDM On-Prem Installation — Web Studio](#tdm-on-prem-installation--web-studio)
+
+    * [Prerequisites](#prerequisites)
+    * [TDM Library Installation](#tdm-library-installation)
+    * [TDM Deployment](#tdm-deployment)
+  * [K2view Cloud Development Environment Installation](#k2view-cloud-development-environment-installation)
+  * [TDM On-Prem Installation — Desktop Studio](#tdm-on-prem-installation--desktop-studio)
+
+    * [Prerequisites](#prerequisites-1)
+    * [TDM Library Installation](#tdm-library-installation-1)
+    * [TDM Deployment](#tdm-deployment-1)
+* [TDM Non-Development Environment Installation](#tdm-non-development-environment-installation)
+
+  * [Prerequisites](#prerequisites-2)
+  * [On-Prem VM Installation](#on-prem-vm-installation)
+
+    * [About Git](#about-git)
+  * [K2view Cloud Installation](#k2view-cloud-installation)
+* [TDM Initial Setup](#tdm-initial-setup)
+* [Optional — TDM AI Installation](#optional--tdm-ai-installation)
+
 
 ## TDM Development Environment Installation
 
