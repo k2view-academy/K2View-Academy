@@ -6,7 +6,7 @@ This document outlines installation guidelines and initial configuration steps f
 ## Table of Contents
 
 - [TDM Development Environment Installation](#tdm-development-environment-installation)
-  - [Fabric Web Studio for Docker/Podman TDM Installation](#fabric-web-studio-for-docker-podman-tdm-installation)
+  - [Fabric Web Studio for Docker TDM Installation](#fabric-web-studio-for-docker-tdm-installation)
   - [K2cloud Fabric Web Studio TDM Installation](#k2cloud-fabric-web-studio-tdm-installation)
   - [Desktop Studio TDM Installation](#desktop-studio-tdm-installation)
 - [TDM Non-Development Environment Installation](#tdm-non-development-environment-installation)
@@ -20,7 +20,7 @@ This document outlines installation guidelines and initial configuration steps f
 
 ## TDM Development Environment Installation
 
-### Fabric Web Studio for Docker/Podman TDM Installation
+### Fabric Web Studio for Docker TDM Installation
 
 #### Prerequisites
 
