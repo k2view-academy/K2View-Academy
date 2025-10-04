@@ -6,27 +6,18 @@ This document outlines installation guidelines and initial configuration steps f
 ## Table of Contents
 
 - [TDM Development Environment Installation](#tdm-development-environment-installation)
-  - [TDM Installation - Fabric Web Studio](#tdm-installation--fabric-web-studio)
-    - [Prerequisites](#prerequisites)
-    - [TDM Library Installation](#tdm-library-installation)
-    - [TDM Deployment](#tdm-deployment)
-- [K2cloud Development Environment Installation](#k2cloud-development-environment-installation)
-- [TDM Installation — Desktop Studio](#tdm-installation--desktop-studio)
-    - [Prerequisites](#prerequisites-1)
-    - [TDM Library Installation](#tdm-library-installation-1)
-    - [TDM Deployment](#tdm-deployment-1)
+  - [Fabric Web Studio for Docker/Podman TDM Installation](#fabric-web-studio-for-docker-podman-tdm-installation)
+  - [K2cloud Fabric Web Studio TDM Installation](#k2cloud-fabric-web-studio-tdm-installation)
+  - [Desktop Studio TDM Installation](#desktop-studio-tdm-installation)
 - [TDM Non-Development Environment Installation](#tdm-non-development-environment-installation)
-  - [Prerequisites](#prerequisites-2)
-  - [On-Prem VM Installation](#on-prem-vm-installation)
-    - [About Git](#about-git)
-- [K2view Cloud Installation](#k2view-cloud-installation)
-- [TDM Initial Setup](#tdm-initial-setup)
-- [Optional — TDM AI Installation](#optional--tdm-ai-installation)
+  - [K2cloud Installation](#k2cloud-installation)
+  - [TDM Initial Setup](#tdm-initial-setup)
+- [TDM AI Installation](#tdm-ai-installation)
 
 
 ## TDM Development Environment Installation
 
-### TDM Installation — Fabric Web Studio
+### Fabric Web Studio for Docker/Podman TDM Installation
 
 #### Prerequisites
 
@@ -91,15 +82,15 @@ This document outlines installation guidelines and initial configuration steps f
 
   > In some situations, you may need to clear your browser's cache for the *TDM* item to become visible from the main menu.
 
-### K2cloud Development Environment Installation
+### K2cloud Fabric Web Studio TDM Installation
 
 - Create a new Space on K2cloud. Select the **TDM Dev** Project and **TDM-9.4** Profile.
 - Set the **CREATE_TDMDB** Global in the TDM LU to **true**.
-- Optional: If you wish to change the schema name for the TDM DB (the default schema name contains the cluster ID), then edit the **TDMDB_SCHEMA** shared Global. Restart Fabric after updating this Global.
+  > Optional: If you would like to change the schema name for the TDM DB (the default schema name contains the cluster ID), please edit the **TDMDB_SCHEMA** shared Global. Restart Fabric after updating this Global.
 - Deploy the TDM LU. This deployment creates the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by running the **masking-create-cache-table.flow** from the Broadway Examples.
 - After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false**.
 
-### TDM Installation — Desktop Studio
+### Desktop Studio TDM Installation
 
 #### Prerequisites
 
@@ -124,7 +115,7 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 #### TDM Deployment
 
 - If you use **Cassandra** as the Fabric system DB, you must edit the **SEQ_CACHE_INTERFACE** Global and update its value to **DB_CASSANDRA**.
-- Perform the following step in order to use the **PostgreSQL** DB as the Fabric system DB:
+- Perform the following step to use the **PostgreSQL** DB as the Fabric system DB:
   - Open Fabric’s **config.ini** file and edit the **[system_db]** section’s attributes, including the SYSTEM_DB_DATABASE attribute, to be aligned with the **POSTGRESQL_ADMIN** DB interface. 
 
 - Set the **POSTGRESQL_ADMIN interface** to **active**.
@@ -149,7 +140,7 @@ The following prerequisites apply to both deployment models:
 - Kafka: Not required for TDM projects.
 - Git: Recommended use of separate branches for development, testing (SIT), and production.
     - Development → Testing → Production merge flow.
-    - Before cloning the branch, edit the following Globals in order to create the TDM DB and k2masking schema during the first TDM LU deployment:
+    - Before cloning the branch, edit the following Globals to create the TDM DB and k2masking schema during the first TDM LU deployment:
         - CREATE_TDMDB Global must be set to true.
         - (Optional) If changing schema name: edit TDMDB_SCHEMA shared Global.
 
@@ -191,12 +182,12 @@ References:
 - Clone the relevant GitHub branch. 
 
 
-### K2view Cloud Installation
+### K2cloud Installation
 
 1. Create Project
     - With Fabric v8.3.x and PostgreSQL DB.
 2.	Attach GitHub Branch
-	- Edit Globals (CREATE_TDMDB, TDMDB_SCHEMA optional) before cloning in order to create the TDM DB and k2masking schema during the first TDM LU deployment:
+	- Edit Globals (CREATE_TDMDB, TDMDB_SCHEMA optional) before cloning to create the TDM DB and k2masking schema during the first TDM LU deployment:
         - The **CREATE_TDMDB** Global in the TDM LU must be set to **true**.
         - Optional: If you wish to change the schema name for the TDM DB (the default schema name contains the cluster ID), then Edit the **TDMDB_SCHEMA** shared Global. 
 3.	Create a Space
@@ -226,13 +217,13 @@ The following activities must be performed after deploying the TDM project to Fa
 
     
 
-## Optional — TDM AI Installation  
+## TDM AI Installation  
 
 TDM equips your QA and development teams with cutting-edge AI-driven synthetic data generation, transforming test data creation from manual rule-based scripts into intelligent automation:
 
 - **SDG (Synthetic Data Generation) based on AI**: TDM seamlessly integrates with AI models to train on the existing data schema and generate realistic, production-grade synthetic entities — all within the platform.
 - **AI Workflows with One Click**: Select a Business Entity, choose your training model, specify the data volume, and launch a 'generate new data' task. The system handles model selection, data ingestion into Fabric, and optionally loads the data directly into test environments. 
-- **Robust Implementation Controls**: Configure AI endpoints easily using global settings — such as AI_DB_INTERFACE, AI_ENVIRONMENT and AI_EXECUTION — allowing teams to customize connectivity, environments, and cleanup protocols. 
+- **Robust Implementation Controls**: Configure AI endpoints easily using global settings — such as AI_DB_INTERFACE, AI_ENVIRONMENT, and AI_EXECUTION — allowing teams to customize connectivity, environments, and cleanup protocols. 
 - **Hybrid, Business-Ready Approach**: Choose between rule-based or AI-based data generation for each scenario, which is an ideal approach for use cases ranging from edge-case testing to large-scale synthetic data population. 
 - **Seamless Integration & Compliance**: Generated entities include built-in support for sequence IDs, LUI mapping, and referential integrity. All data is cataloged in Fabric and masked as required. 
 
