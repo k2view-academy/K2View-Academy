@@ -11,6 +11,7 @@ This document outlines installation guidelines and initial configuration steps f
   - [Desktop Studio TDM Installation](#desktop-studio-tdm-installation)
 - [TDM Non-Development Environment Installation](#tdm-non-development-environment-installation)
   - [Non-Development Prerequisites](#non-development-prerequisites)
+  - [About Git](#about-git)
   - [On-Prem VM Installation](#on-prem-vm-installation)
   - [K2cloud Installation](#k2cloud-installation)
 - [TDM Initial Setup](#tdm-initial-setup)
@@ -154,6 +155,14 @@ The following prerequisites apply to both deployment models:
 - K2cloud / Kubernetes Deployments
     - [Kubernetes System Requirements](/articles/98_installation_and_upgrade/Hardware_K8s/README.md)
 
+ 
+### About Git
+
+- It is recommended to use separate Git branches for development, testing (SIT), and production environments. Changes from the development branch are merged into the testing branch, and once tested, changes from the testing branch are merged into the production branch.
+- Edit the following Globals in the relevant branch **before** cloning in order to create the TDM DB and k2masking schema during the first TDM LU deployment:
+  - The **CREATE_TDMDB** Global in the TDM LU must be set to **true**.
+  - Optional: If you wish to change the schema name for the TDM DB (the default schema name contains the cluster ID), then edit the **TDMDB_SCHEMA** shared Global. 
+- Clone the relevant GitHub branch. 
 
 ### On-Prem VM Installation 
 
@@ -175,13 +184,6 @@ The following prerequisites apply to both deployment models:
 6.	Offline Deployment
     - Refer to [Offline Deployment Instructions](/articles/16_deploy_fabric/03_offline_deploy.md).
 
-### About Git
-
-- It is recommended to use separate Git branches for development, testing (SIT), and production environments. Changes from the development branch are merged into the testing branch, and once tested, changes from the testing branch are merged into the production branch.
-- Edit the following Globals in the relevant branch **before** cloning in order to create the TDM DB and k2masking schema during the first TDM LU deployment:
-  - The **CREATE_TDMDB** Global in the TDM LU must be set to **true**.
-  - Optional: If you wish to change the schema name for the TDM DB (the default schema name contains the cluster ID), then edit the **TDMDB_SCHEMA** shared Global. 
-- Clone the relevant GitHub branch. 
 
 
 ### K2cloud Installation
