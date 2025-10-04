@@ -27,7 +27,7 @@ This document outlines installation guidelines and initial configuration steps f
 - [Install Fabric Web Studio for Docker Compose](/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md).
    - If your organization would like to use Podman, please perform the [Fabric Web Studio for Podman](/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation-podman.md) installation.
 
-> When performing the steps to **Create and Launch a Fabric Space**, it is essential to use the **studio_pg** profile, which utilizes PostgreSQL for the System DB and TDM.
+> When performing the steps to [Create and Launch a Fabric Space](/Academy/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md#step-7-create-and-launch-a-fabric-space), it is essential to use the **studio_pg** profile, which utilizes PostgreSQL for the System DB and TDM.
 
 #### TDM Library Installation
 
