@@ -59,6 +59,10 @@ This document outlines installation guidelines and initial configuration steps f
 
 - Edit the **TDM** and **POSTGRESQL_ADMIN** interfaces with the PostgreSQL connection details.
 
+  > When using Fabric Web Studio on Docker Compose or Postman, TDM and Fabric will share the same system DB instance.
+  >
+  > To obtain the system DB information, please open Fabric’s `workspace/config/config.ini` file. In the [system_db] section, you will find its attributes, including the SYSTEM_DB_DATABASE attribute. The **POSTGRESQL_ADMIN** database interface values need to match this.
+
   - Set the Host value.
     > This value is the space's name with `-postgres` appended.
     > E.g., If the space's name is `myspacepg`, the host will be myspacepg-postgres
@@ -71,9 +75,6 @@ This document outlines installation guidelines and initial configuration steps f
   - Set the User as: `postgres` with Password as: `postgres`.
   - Save the interface (don’t test the connection).
   - Set the interface as **active**.
-
-- Perform the following step to use the **PostgreSQL** DB as the Fabric system DB:
-  - Open Fabric’s **config.ini** file and edit the **[system_db]** section’s attributes, including the SYSTEM_DB_DATABASE attribute, to match the **POSTGRESQL_ADMIN** database interface values.
  
 - Set the **CREATE_TDMDB** Global in the TDM LU to **true**.
   > You will find the Global file in this location: `workspace/project/Implementation/LogicalUnits/TDM/Java/src/com/k2view/cdbms/usercode/lu/TDM/Globals.java`
