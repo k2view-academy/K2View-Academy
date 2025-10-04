@@ -21,8 +21,8 @@ This guide walks you through the installation of **K2view TDM 9.4** and performs
 
 **1) Choose your Development setup**
 
-* **Fabric Web Studio (containerized):** Run Fabric Web Studio in containers (Docker; Podman-compatible in many orgs) on a shared VM or a personal computer. Use the `studio_pg` profile so PostgreSQL backs both the System DB and TDM. Follow **TDM On-Prem — Web Studio** for instructions on installing the in-Studio library or importing a VSIX. 
-* * **K2cloud (Dev):** Create a Dev Space from a TDM project/profile and deploy—quickest path to a working Dev environment. 
+* **Fabric Web Studio (containerized):** Run Fabric Web Studio in containers (Docker; Podman-compatible in many orgs) on a shared VM or a personal computer. Use the `studio_pg` profile so PostgreSQL backs both the System DB and TDM. Follow **TDM On-Prem — Web Studio** for instructions on installing the in-Studio library or importing a VSIX.
+* **K2cloud (Dev):** Create a Dev Space from a TDM project/profile and deploy—quickest path to a working Dev environment. 
 * **Desktop Studio:** Install Fabric Studio locally, import the TDM libraries (TDM, TDM_LIBRARY, TDM_TableLevel), then deploy. 
 
 **2) Plan your Git strategy for smooth SIT/Prod rollouts**
