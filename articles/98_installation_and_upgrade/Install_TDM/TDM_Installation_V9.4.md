@@ -1,21 +1,53 @@
 # TDM Installation and Initial Configuration
 
-This document outlines installation guidelines and initial configuration steps for a new TDM installation. The procedure for upgrading to TDM V9.4 is described in the [TDM upgrade document](/articles/98_installation_and_upgrade/Upgrade_TDM/TDM_Upgrade_Procedure_to_V9.4.pdf).
-
-
 ## Table of Contents
 
+- [Before you begin](#before-you-begin)
+- [Upgrading](#upgrading)
 - [TDM Development Environment Installation](#tdm-development-environment-installation)
   - [Fabric Web Studio for K2cloud, Docker, or Podman TDM Installation](#fabric-web-studio-for-k2cloud-docker-or-podman-tdm-installation)
   - [Desktop Studio TDM Installation](#desktop-studio-tdm-installation)
+- [Git Best Practices](#git-best-practices)
 - [TDM Non-Development Environment Installation](#tdm-non-development-environment-installation)
   - [Non-Development Prerequisites](#non-development-prerequisites)
-  - [About Git](#about-git)
   - [On-Prem VM Installation](#on-prem-vm-installation)
   - [K2cloud Installation](#k2cloud-installation)
 - [TDM Initial Setup](#tdm-initial-setup)
-- [TDM AI Installation](#tdm-ai-installation)
 
+
+## Before you begin
+
+This guide walks you through the installation of **K2view TDM 9.4** and performs the initial setup.
+
+**1) Choose your Development setup**
+
+* **Fabric Web Studio (containerized):** Run Fabric Web Studio in containers (Docker; Podman-compatible in many orgs) on a shared VM or a personal computer. Use the `studio_pg` profile so PostgreSQL backs both the System DB and TDM. Follow **TDM On-Prem — Web Studio** for instructions on installing the in-Studio library or importing a VSIX. 
+* * **K2cloud (Dev):** Create a Dev Space from a TDM project/profile and deploy—quickest path to a working Dev environment. 
+* **Desktop Studio:** Install Fabric Studio locally, import the TDM libraries (TDM, TDM_LIBRARY, TDM_TableLevel), then deploy. 
+
+**2) Plan your Git strategy for smooth SIT/Prod rollouts**
+
+Adopt **separate branches** per environment (e.g., `dev` → `sit` → `prod`). Review the [Git Best Practices](#git-best-practices) for guidance. 
+
+**3) What’s required in non-Dev environments**
+
+* **K2cloud:** Create a Fabric 8.3.x + PostgreSQL project, attach the correct Git branch, set the initial Globals, create a Space, and deploy. 
+* **On-Prem VM:** Provision VMs for Fabric and PostgreSQL, install Fabric 8.3.x + PG (certified with PG v17). Then build and deploy **Environments** before deploying the TDM project. Offline deployment is supported. 
+
+
+**4) Initial setup (post-deploy)**
+
+* Define **Fabric roles** and permissions aligned to your IDP groups.
+* Configure **TDM DB General Parameters**.
+* In the TDM self-service app: map **permission groups**, create **Business Entities** and **Systems**, and create/setup **Environments** (deploy Environments in Fabric before creating them in the app). 
+
+**5) Optional: AI-driven Synthetic Data (TDM-AI)**
+
+If you plan to generate AI-based synthetic data, review the [TDM AI Installation](/articles/98_installation_and_upgrade/Install_TDM/TDM_AI_Installation_V9.x.md) guide. It covers prerequisites (e.g., GCP/GKE and GPU quotas), GPU cluster setup, project configuration, cleanup flows, and performance notes. 
+
+## Upgrading
+
+The procedure for upgrading to TDM V9.4 is described in the [TDM upgrade document](/articles/98_installation_and_upgrade/Upgrade_TDM/TDM_Upgrade_Procedure_to_V9.4.pdf).
 
 ## TDM Development Environment Installation
 
@@ -142,6 +174,16 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 - Deploy the TDM LU. This deployment creates the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by running the **masking-create-cache-table.flow** from the Broadway Examples (found in the Broadway Flow window, Main Menu > Actions > Examples and select this flow).
 - After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false**.
 
+ 
+## Git Best Practices
+
+It is recommended to use separate Git branches for development, testing (SIT), and production environments. Changes from the development branch are merged into the testing branch, and once tested, changes from the testing branch are merged into the production branch.
+
+To do so:
+- Edit the following Globals in the relevant branch **before** cloning to create the TDM DB and k2masking schema during the first TDM LU deployment:
+  - The **CREATE_TDMDB** Global in the TDM LU must be set to **true**.
+  - Optional: If you wish to change the schema name for the TDM DB (the default schema name contains the cluster ID), then edit the **TDMDB_SCHEMA** shared Global. 
+- Clone the relevant GitHub branch. 
 
 ## TDM Non-Development Environment Installation
 
@@ -169,14 +211,6 @@ The following prerequisites apply to both deployment models:
 - K2cloud / Kubernetes Deployments
     - [Kubernetes System Requirements](/articles/98_installation_and_upgrade/Hardware_K8s/README.md)
 
- 
-### About Git
-
-- It is recommended to use separate Git branches for development, testing (SIT), and production environments. Changes from the development branch are merged into the testing branch, and once tested, changes from the testing branch are merged into the production branch.
-- Edit the following Globals in the relevant branch **before** cloning in order to create the TDM DB and k2masking schema during the first TDM LU deployment:
-  - The **CREATE_TDMDB** Global in the TDM LU must be set to **true**.
-  - Optional: If you wish to change the schema name for the TDM DB (the default schema name contains the cluster ID), then edit the **TDMDB_SCHEMA** shared Global. 
-- Clone the relevant GitHub branch. 
 
 ### On-Prem VM Installation 
 
@@ -234,20 +268,6 @@ The following activities must be performed after deploying the TDM project to Fa
       - Note that the environments must be deployed to Fabric before creating the environments in the TDM self-service application.
 
     
-
-## TDM AI Installation  
-
-TDM equips your QA and development teams with cutting-edge AI-driven synthetic data generation, transforming test data creation from manual rule-based scripts into intelligent automation:
-
-- **SDG (Synthetic Data Generation) based on AI**: TDM seamlessly integrates with AI models to train on the existing data schema and generate realistic, production-grade synthetic entities — all within the platform.
-- **AI Workflows with One Click**: Select a Business Entity, choose your training model, specify the data volume, and launch a 'generate new data' task. The system handles model selection, data ingestion into Fabric, and optionally loads the data directly into test environments. 
-- **Robust Implementation Controls**: Configure AI endpoints easily using global settings — such as AI_DB_INTERFACE, AI_ENVIRONMENT, and AI_EXECUTION — allowing teams to customize connectivity, environments, and cleanup protocols. 
-- **Hybrid, Business-Ready Approach**: Choose between rule-based or AI-based data generation for each scenario, which is an ideal approach for use cases ranging from edge-case testing to large-scale synthetic data population. 
-- **Seamless Integration & Compliance**: Generated entities include built-in support for sequence IDs, LUI mapping, and referential integrity. All data is cataloged in Fabric and masked as required. 
-
-The [TDM AI installation guide](TDM_AI_Installation_V9.x.md) outlines the essential infrastructure and application setup steps needed to integrate K2view's TDM with AI-powered capabilities. It covers everything from provisioning GPU-enabled environments to project configuration, cleanup processes, and performance testing.
-
-
 
 
 
