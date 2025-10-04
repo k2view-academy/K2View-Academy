@@ -12,7 +12,7 @@ This document outlines installation guidelines and initial configuration steps f
     * [Prerequisites](#prerequisites)
     * [TDM Library Installation](#tdm-library-installation)
     * [TDM Deployment](#tdm-deployment)
-  * [K2view Cloud Development Environment Installation](#k2view-cloud-development-environment-installation)
+  * [K2cloud Development Environment Installation](#k2cloud-development-environment-installation)
   * [TDM On-Prem Installation — Desktop Studio](#tdm-on-prem-installation--desktop-studio)
 
     * [Prerequisites](#prerequisites-1)
@@ -76,7 +76,7 @@ This document outlines installation guidelines and initial configuration steps f
   - Save the interface (don’t test the connection).
   - Set the interface as **active**.
 
-- Perform the following step in order to use the **PostgreSQL** DB as the Fabric system DB:
+- Perform the following step to use the **PostgreSQL** DB as the Fabric system DB:
   - Open Fabric’s **config.ini** file and edit the **[system_db]** section’s attributes, including the SYSTEM_DB_DATABASE attribute, to match the **POSTGRESQL_ADMIN** database interface values.
  
 - Set the **CREATE_TDMDB** Global in the TDM LU to **true**.
@@ -94,7 +94,7 @@ This document outlines installation guidelines and initial configuration steps f
 
   > In some situations, you may need to clear your browser's cache for the *TDM* item to become visible from the main menu.
 
-### K2view Cloud Development Environment Installation
+### K2cloud Development Environment Installation
 
 - Create a new Space on K2cloud. Select the **TDM Dev** Project and **TDM-9.4** Profile.
 - Set the **CREATE_TDMDB** Global in the TDM LU to **true**.
