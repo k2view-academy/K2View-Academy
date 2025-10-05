@@ -713,9 +713,9 @@ Below are the types of execution parameters:
 
 ### Queries Helpers
 
-An SQL statement can be preceded by the **EXPLAIN** keyword or by the **EXPLAIN QUERY PLAN** phrase. The SQL statement then behaves like a query and returns information about the SQL statement’s operations if the EXPLAIN keyword or phrase is omitted. 
+An SQL statement can be preceded by either the **EXPLAIN** keyword or the **EXPLAIN QUERY PLAN** phrase. When used, the SQL statement behaves like a query and returns details about its operations. If the EXPLAIN keyword or phrase is omitted, the statement executes normally. 
 
-**EXPLAIN** and **EXPLAIN QUERY PLAN** are intended for interactive analysis and troubleshooting only.
+**EXPLAIN** and **EXPLAIN QUERY PLAN** are intended for interactive analysis and troubleshooting purposes only.
 
 Example:
 
