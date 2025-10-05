@@ -8,15 +8,17 @@
 
   * [Web Studio TDM Installation for K2cloud, Docker, or Podman](#web-studio-tdm-installation-for-k2cloud-docker-or-podman)
 
-    * [Prerequisites](#prerequisites)
-    * [Docker or Podman-based Installations](#docker-or-podman-based-installations)
-    * [TDM Library Installation](#tdm-library-installation)
-    * [TDM Deployment](#tdm-deployment)
+      * [Prerequisites](#prerequisites)
+      * [Docker or Podman-based Installations](#docker-or-podman-based-installations)
+      * [TDM Library Installation](#tdm-library-installation)
+      * [TDM Deployment](#tdm-deployment)
+        
   * [Desktop Studio TDM Installation](#desktop-studio-tdm-installation)
 
-    * [Prerequisites](#prerequisites-1)
-    * [TDM Library Installation](#tdm-library-installation-1)
-    * [TDM Deployment](#tdm-deployment-1)
+      * [Prerequisites](#prerequisites-1)
+      * [TDM Library Installation](#tdm-library-installation-1)
+      * [TDM Deployment](#tdm-deployment-1)
+        
 * [Git Best Practices](#git-best-practices)
 * [TDM Non-Development Environment Installation](#tdm-non-development-environment-installation)
 
@@ -24,6 +26,7 @@
   * [Non-Development Prerequisites](#non-development-prerequisites)
   * [On-Prem VM Installation](#on-prem-vm-installation)
   * [K2cloud Installation](#k2cloud-installation)
+    
 * [TDM Initial Setup](#tdm-initial-setup)
 
   * [1) Prepare access (Fabric roles & IDP groups)](#1-prepare-access-fabric-roles--idp-groups)
