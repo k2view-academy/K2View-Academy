@@ -578,7 +578,7 @@ MIGRATE commands serve as aliases for BATCH commands.
 
 ### Execution Monitoring
 
-The **TRACE** command enables tracing internal Fabric operations by request and writing them into Tracing files.
+The **TRACE** command enables tracing of internal Fabric operations upon request and recording them in tracing files.
 
 [Click for more information about the Tracing mechanism](/articles/29_tracing/01_tracing_overview.md).
 
