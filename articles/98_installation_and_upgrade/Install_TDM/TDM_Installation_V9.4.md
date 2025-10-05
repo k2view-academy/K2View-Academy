@@ -157,6 +157,8 @@ To confirm what your environment is actually using:
 
      > In some situations, you may need to clear your browser's cache for the *TDM* item to become visible from the main menu.
 
+- You are now ready to proceed to the [TDM Initial Setup](#tdm-initial-setup) steps. 
+
 
 ### Desktop Studio TDM Installation
 
