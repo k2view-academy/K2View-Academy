@@ -685,11 +685,11 @@ Below are the types of execution parameters:
 
 3. Recovery parameters:
 
-  * **recoveryId**, unique ID for running the flow with a recovery point. Flow recovery is enabled only if the **recovery ID** is provided.
+  * **recoveryId**, a unique ID for running the flow with a recovery point. Flow recovery is enabled only if the **recovery ID** is provided.
 
   * **recoveryTtl** (optional), *time to live* (in seconds) for keeping the recovery point in the Cassandra **broadway_recovery_point** table under the [k2system keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). The default value is defined in the Broadway *config.ini* section with the RECOVERY_TTL_SEC key.
 
-  * **recoveryMaxTries** (optional), maximum number of retries until the flow is deleted from the Cassandra **broadway_recovery_point** table. The default value is defined in the Broadway *config.ini* section with the RECOVERY_MAX_RETRIES key.
+  * **recoveryMaxTries** (optional), specifies the maximum number of retries allowed before a flow is deleted from the Cassandra **broadway_recovery_point** table. The default value is defined in the Broadway *config.ini* section with the RECOVERY_MAX_RETRIES key.
 
     [Click for more information about Broadway Recovery Points](/articles/19_Broadway/29_recovery_point.md).
 
