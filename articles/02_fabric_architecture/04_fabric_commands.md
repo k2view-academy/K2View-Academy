@@ -607,11 +607,11 @@ Fabric also enables writing the transaction into a delta table using the **SET A
 
 ### CDC and Search
 
-The Fabric [Change Data Capture (CDC)](/articles/18_fabric_cdc/01_change_data_capture_overview.md) solution notifies external systems about data changes and has [built-in integration with Elasticsearch](/articles/18_fabric_cdc/cdc_consumers/search/01_search_overview_and_use_cases.md) to enable a cross [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) search.
+The Fabric [Change Data Capture (CDC)](/articles/18_fabric_cdc/01_change_data_capture_overview.md) solution notifies external systems about data changes and provides [built-in integration with Elasticsearch](/articles/18_fabric_cdc/cdc_consumers/search/01_search_overview_and_use_cases.md) to support cross-[LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) search capabilities.
 
-For example: Search all customers called “John Doe” that live in “New-York”.
+For example: Search all customers named “John Doe” that live in “New-York”.
 
-Fabric has a **SEARCH** command that initiates a search on Elasticsearch. In addition, the Fabric **CDC_REPUBLISH_INSTANCE** command can be used to republish CDC data on LUI.
+The Fabric **SEARCH** command initiates a search on Elasticsearch, while the **CDC_REPUBLISH_INSTANCE** command allows republishing CDC data on LUI.
 
 ### Broadway Command
 
@@ -627,7 +627,7 @@ Below are the types of execution parameters:
 
 2. Result Structure enables defining the format of the flow output. The default mode is configurable via config.ini. Three modes exist:
 
-  * **COLUMN** (default) – The outputs are returned as each output in a column.
+  * **COLUMN** (default) — the outputs are returned as each output in a column.
 
     ~~~
     |result |date         |                                                 
@@ -635,7 +635,7 @@ Below are the types of execution parameters:
     |15     |2022-07-19   |
     ~~~
 
-  * **ROW** – The Broadway flow outputs are returned as each output in a row.
+  * **ROW** — the Broadway flow outputs are returned as each output in a row.
 
     ~~~
     |column |value       |                                                     
@@ -644,7 +644,7 @@ Below are the types of execution parameters:
     |date     |2022-07-19|
     ~~~
 
-  * **CURSOR** – The first flow's output is transformed into a table. Other outputs are being disregarded.
+  * **CURSOR** — the output of the first flow is transformed into a table; all other outputs are disregarded.
 
     Case 1: the following output:
 
