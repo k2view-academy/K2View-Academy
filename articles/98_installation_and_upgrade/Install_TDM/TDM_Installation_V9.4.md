@@ -104,8 +104,6 @@ Before configuring TDM, note that **Fabric Web Studio’s setup differs slightly
    - **K2cloud (managed):** Fabric Web Studio is provisioned by K2cloud. The TDM project connects to a managed PostgreSQL service exposed in the Space as **`postgres-service`**.
    - **Docker/Podman (self-managed):** Fabric Web Studio runs in your containers. The PostgreSQL service name is derived from the Space name with **`-postgres`** appended. For example, if the Space is `myspacepg`, the Postgres host will be **`myspacepg-postgres`**.
 
-*Verify your Postgres host (authoritative source)*
-
 To confirm what your environment is actually using:
 
    1. Open `workspace/config/config.ini`.
@@ -125,7 +123,7 @@ To confirm what your environment is actually using:
 
   - Set the Host value.
      - For K2cloud use: `postgres-service`.
-     - For Docker Compose or Podman use: `{your spacename}-postgres`. Please review the note above.
+     - For Docker Compose or Podman use: `{your spacename}-postgres`. Please consult the overview above.
     
   - Set the Port. By default, it is `5432`.
   - The database's name on the interface
