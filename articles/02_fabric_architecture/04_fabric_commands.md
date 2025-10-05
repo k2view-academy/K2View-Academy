@@ -584,7 +584,7 @@ The **TRACE** command enables tracing of internal Fabric operations upon request
 
 ### CommonDB & Reference Tables
 
-Fabric enables creating [Reference tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) which can be used by all LUs or Web Services. A Reference table typically contains metadata. For example, a Postal Code table that identifies the postal code of customer addresses.
+Fabric enables the creation of [Reference tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) that can be used by all LUs and Web Services. A Reference table typically contains metadata. For example, a Postal Code table that identifies the postal code of customer addresses.
 
 Reference table commands enable synchronizing, getting the sync status and waiting for a sync's processing of Reference tables to be completed before continuing the workflow.
 
