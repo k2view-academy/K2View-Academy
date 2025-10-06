@@ -24,11 +24,11 @@ This need presents several critical data challenges for enterprises:
 
 ## AI Data Fusion Solution: Core Capabilities and Benefits
 
-AI Data Fusion solution addresses these challenges by integrating the [Data Product Platform](/articles/01_fabric_overview/01_what%20is%20fabric.md) with GenAI capabilities, enabling a powerful fusion of real-time data access, AI orchestration, and operational control, across four key dimensions:
+The AI Data Fusion solution addresses the above-mentioned challenges by integrating the [Data Product Platform](/articles/01_fabric_overview/01_what%20is%20fabric.md) with GenAI capabilities, enabling a powerful fusion of real-time data access, AI orchestration, and operational control, across four key dimensions:
 
 ### Quality & Accuracy
 
-- **Entity-Centric Data Modeling** — creates unified 360 views of business entities (customers, orders, products) by consolidating data from multiple source systems.
+- **Entity-Centric Data Modeling** — creates unified 360° views of business entities (customers, orders, products) by consolidating data from multiple source systems.
 - **Live Data Synchronization** — maintains current information through continuous synchronization with underlying enterprise systems.
 - **Quick Response Times** — enables conversational AI experiences with immediate data access and retrieval.
 - **Accurate SQL Generation** — provides up-to-date data structures to LLMs for building accurate, on-the-fly SQL queries.
