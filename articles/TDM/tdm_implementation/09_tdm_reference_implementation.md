@@ -77,7 +77,7 @@ Import the TDM_TableLevel LU and deploy it.
 
 - **count_indicator** — this setting is set to **true** by default, enabling counting the number of records in the source or target, as a way to monitor task execution. Set this indicator to **false**, if required, to disable counting records in the target.
 
-Note that from TDM V9.3.1 onwards, the schema_name and target_schema_name fields can be populated with either of the following options:
+Note that from TDM V9.4 onwards, the schema_name and target_schema_name fields can be populated with either of the following options:
 
 - Schema name
 - Global name. Add a `@` sign before and after the Global name to indicate that the schema name should be taken from the Global's value. For example: `@CUSTOMER_SCHEMA_NAME@`. Using a Global to populate the schema is useful when different environments have different schema names. 
@@ -145,7 +145,7 @@ The following settings should be populated for each record:
 - **interface_name** — the interface name defined in the TDM project implementation. 
 - **schema_name** — the DB schema. Can be populated with either of the following options:
   - Schema name
-  - From TDM V9.3.1 onwards, the schema name can also be populated with the Global name. Add a `@` sign before and after the Global name to indicate that the schema name should be taken from the Global's value. For example: `@CUSTOMER_SCHEMA_NAME@`. Using a Global to populate the schema is useful when different environments have different schema names. 
+  - From TDM V9.4 onwards, the schema name can also be populated with the Global name. Add a `@` sign before and after the Global name to indicate that the schema name should be taken from the Global's value. For example: `@CUSTOMER_SCHEMA_NAME@`. Using a Global to populate the schema is useful when different environments have different schema names. 
 
 - **table_name** — populated with the table name. If this setting is empty, the customized flows will run on all the tables in the interface and schema.
 - **extract_flow** — populated with the customized extract flow.
