@@ -1,4 +1,4 @@
-# **Secrets Management Integration** 
+# **Secrets Management** 
 
 A **secret**, such as a password, is considered sensitive data, and it is used in [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md), [Environments](/articles/25_environments/01_environments_overview.md) and [Fabric System Database](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) as a way to enable communication with external systems. Hence, secrets should be protected and suitably stored. Click [here](/articles/26_fabric_security/04_fabric_interfaces_security.md) for further information about the secured storage of secrets in Fabric.
 
