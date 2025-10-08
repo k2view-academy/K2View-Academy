@@ -15,7 +15,7 @@ Industry research shows that 50-70% of customer service inquiries require direct
 This need presents several critical data challenges for enterprises:
 
 - **Data Fragmentation** — enterprise data resides across dozens of disparate systems (CRM, billing, ERP, support platforms), making it difficult to deliver complete, unified information to AI applications.
-- **Real-Time Requirements** — AI applications require quick access to up-to-date data to deliver accurate and responsive conversational experiences.
+- **Real-time Requirements** — AI applications require quick access to up-to-date data to deliver accurate and responsive conversational experiences.
 - **Security & Privacy** — strict access controls and data sanitization are essential; LLMs should only access data relevant to the current user and specific business context, and with appropriate scrubbing or masking of sensitive content.
 - **Scale & Performance** — supporting thousands of simultaneous AI interactions while maintaining high-speed responses across enterprise-scale data volumes.
 - **Data Quality & Reliability** — ensuring AI responses are grounded in complete, current, and accurate information to prevent hallucinations and maintain user trust.
@@ -28,17 +28,17 @@ The AI Data Fusion solution addresses the above-mentioned challenges by integrat
 
 ### Quality & Accuracy
 
-- **Entity-Centric Data Modeling** — creates unified 360° views of business entities (customers, orders, products) by consolidating data from multiple source systems.
+- **Entity-centric Data Modeling** — creates unified 360° views of business entities (customers, orders, products) by consolidating data from multiple source systems.
 - **Live Data Synchronization** — maintains current information through continuous synchronization with underlying enterprise systems.
 - **Quick Response Times** — enables conversational AI experiences with immediate data access and retrieval.
 - **Accurate SQL Generation** — provides up-to-date data structures to LLMs for building accurate, on-the-fly SQL queries.
 
 ### Privacy & Security
 
-- **Entity-Level Access Control** — ensures LLMs access only data relevant to the current user and specific business entity.
-- **Dynamic Data Masking** — automatically anonymizes personally identifiable information (PII) and sensitive data before transmission to LLMs.
-- **Role-Based Permissions** — guarantees users and applications view only authorized information based on their access privileges.
-- **Built-in Data Access Partitioning** — implements comprehensive data segregation at the entity level, by using security profiles.
+- **Entity-level Access Control** — ensures LLMs access only data relevant to the current user and specific business entity.
+- **Dynamic Data Masking** — automatically anonymizes Personally Identifiable Information (PII) and sensitive data prior to exposure to LLMs.
+- **Role-based Permissions** — guarantees users and applications view only authorized information based on their access privileges.
+- **Built-in Data Access Partitioning** — implements comprehensive data segregation at entity level, by using security profiles.
 
 ### Control & Trace
 
