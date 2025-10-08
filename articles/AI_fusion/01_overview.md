@@ -43,7 +43,7 @@ The AI Data Fusion solution addresses the above-mentioned challenges by integrat
 ### Control & Trace
 
 - **Visual Flow Builder** — enables editing and debugging of each step in the agent workflow for complete decision transparency.
-- **Cost Management** — provides token consumption tracking and monitoring for precise cost control.
+- **Cost Management** — provides tracking and monitoring of token usage for cost control.
 - **Comprehensive Auditing** — ensures every agent interaction and processing step can be audited and traced.
 - **Advanced Observability** — features dynamic, customized tags, signals and dashboards, including deep-dive capabilities to review and track individual conversation threads.
 
@@ -56,5 +56,5 @@ The AI Data Fusion solution addresses the above-mentioned challenges by integrat
 
 
 
-Altogether, AI Data Fusion leverages K2view's proven Data Product Platform to transform enterprise data into AI-ready resources. The solution combines real-time data integration, enterprise-grade security, and sophisticated prompt engineering to deliver AI applications that enterprises can trust and scale with confidence.
+Altogether, AI Data Fusion uses K2view's proven Data Product Platform to transform enterprise data into AI-ready resources. The solution combines real-time data integration, enterprise-grade security, and advanced prompt engineering to deliver AI applications that are reliable and easy to scale.
 
