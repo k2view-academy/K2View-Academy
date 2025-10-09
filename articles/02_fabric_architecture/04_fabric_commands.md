@@ -472,7 +472,7 @@ The Fabric SET command enables updating Fabric settings at session level.
   * If the interface name is not specified, the command will show the current interface name.
 
   * To turn it off use: set db_proxy=off.
-  * A new parameter — ENABLE_DB_INTERFACE_PROXY — was added to the config.ini file; it is set by default to FALSE. Set it to TRUE to enable using this new command.
+  * A new parameter — ENABLE_DB_INTERFACE_PROXY — was added to the config.ini file; it is set by default to **false**. Set it to **true** to enable using this new command.
 * **SET BUFFER_RESULT_SET** command, enables uploading all the following SELECT statements from Fabric to memory. 
   * Syntax: ```SET BUFFER_RESULT_SET = true```
   * To inactivate it, set it back to false. 
