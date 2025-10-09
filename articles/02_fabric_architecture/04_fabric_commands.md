@@ -475,7 +475,7 @@ The Fabric SET command enables updating Fabric settings at session level.
   * A new parameter — ENABLE_DB_INTERFACE_PROXY — was added to the config.ini file; it is set by default to **false**. Set it to **true** to enable using this new command.
 * **SET BUFFER_RESULT_SET** command, enables uploading all the following SELECT statements from Fabric to memory. 
   * Syntax: ```SET BUFFER_RESULT_SET = true```
-  * To inactivate it, set it back to false. 
+  * To inactivate it, set it back to **false**. 
   * The purpose is to prevent the MicroDB SQLite file from being locked, which can occur when a GET & SELECT from LU1 is followed by loop of GET & SELECT from LU2. 
 * **SET CLUSTER_DISTRIBUTE_AFFINITY** command, used for distributing the subsequent Fabric command to the specified affinity. 
   * Syntax: ``` SET CLUSTER_DISTRIBUTE_AFFINITY = <AFFINITY>```
