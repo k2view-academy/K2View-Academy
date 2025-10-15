@@ -133,7 +133,7 @@ By default, this parameter is set to the STRING, INTEGER or REAL data type for t
 
 #### Queries Path
 
-The ```queriesPath``` plugin input parameter must be set to the path of the file containing the list of queries to be analyzed. 
+The ```queriesPath``` plugin input parameter must be set to the path to a folder containing the files with a list of queries to be analyzed. 
 
 The file name format is: ```<Data Platform name>.sql```.
 
