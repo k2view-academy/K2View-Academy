@@ -593,7 +593,7 @@ Click for more information about [Reference tables](/articles/22_reference(commo
 
 ### Fabric Transactions
 
-Fabric enables running a single transaction on a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) of the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) or on a Reference table. When this functionality is used, Fabric becomes the master of the data rather than [syncing data](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) from external systems. Thus, Fabric can receive transaction feeds and apply updates to the relevant Instance ID or Reference table. Use a **BEGIN** command to start a transaction before running INSERT, UPDATE or DELETE commands, and end it with **COMMIT** or **ROLLBACK** commands to confirm or cancel the updates.
+Fabric enables executing a single transaction on a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) associated with an [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) or on a Reference table. In this mode, Fabric serves as the system of record rather than [synchronizing data](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) from external systems. Thus, Fabric can receive transaction feeds and apply updates to the relevant Instance ID or Reference table. Use a **BEGIN** command to start a transaction before running INSERT, UPDATE or DELETE commands, and end it with **COMMIT** or **ROLLBACK** commands to confirm or cancel the updates.
 
 The following Fabric commands support transactional operations:
 
