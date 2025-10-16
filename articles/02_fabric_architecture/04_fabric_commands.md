@@ -701,7 +701,7 @@ Below are the types of execution parameters:
 
 4. Profiler Telemetry:
 
-  * To invoke the Broadway profiler, set **profilerTelemetry** to **true**. This will add the profiler results to the command results, under the **profilerTelemetry** key.
+  * To invoke the Profiler when running the flow using the broadway command, set the **profilerTelemetry** parameter to **true**. This will add the Profiler results to the command results.
 
     [Click for more information about Broadway Profiler](/articles/19_Broadway/31_broadway_profiler.md).
 
