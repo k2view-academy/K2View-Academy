@@ -627,7 +627,7 @@ Below are the types of execution parameters:
 
 2. Result Structure enables defining the format of the flow output. The default mode is configurable via config.ini. Three modes exist:
 
-  * **COLUMN** (default) — the outputs are returned as each output in a column.
+  * **COLUMN** (default) — the outputs are returned with each output displayed in a separate column.
 
     ~~~
     |result |date         |                                                 
@@ -635,7 +635,7 @@ Below are the types of execution parameters:
     |15     |2022-07-19   |
     ~~~
 
-  * **ROW** — the Broadway flow outputs are returned as each output in a row.
+  * **ROW** — the Broadway flow outputs are returned with each output displayed in a separate row.
 
     ~~~
     |column |value       |                                                     
