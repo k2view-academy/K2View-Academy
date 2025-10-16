@@ -19,7 +19,7 @@ The Profiler provides the metrics per a single flow execution. However, when you
 
 ### How Do I Run the Profiler Via the Broadway Command?
 
-To invoke the Profiler when running the flow using the **broadway** command, set the **profilerTelemetry** argument to **true** . This will add the Profiler results to the command results.
+To invoke the Profiler when running the flow using the **broadway** command, set the **profilerTelemetry** parameter to **true** . This will add the Profiler results to the command results.
 
 ~~~
 fabric>broadway CRM.callGraphIt profilerTelemetry=true;
