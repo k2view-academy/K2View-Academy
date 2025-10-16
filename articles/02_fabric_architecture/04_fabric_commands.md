@@ -611,7 +611,7 @@ The Fabric [Change Data Capture (CDC)](/articles/18_fabric_cdc/01_change_data_ca
 
 For example: Search all customers named “John Doe” that live in “New-York”.
 
-The Fabric **SEARCH** command initiates a search on Elasticsearch, while the **CDC_REPUBLISH_INSTANCE** command allows republishing CDC data on LUI.
+The Fabric **SEARCH** command initiates a search on Elasticsearch, while the **CDC_REPUBLISH_INSTANCE** command allows republishing CDC data for a specific LUI.
 
 ### Broadway Command
 
