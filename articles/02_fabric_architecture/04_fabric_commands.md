@@ -554,7 +554,7 @@ fabric>cql select * from k2view_customer.entity;
 
 ### Jobs Commands
 
-Get the Fabric jobs' list and status, start, stop, update and resume jobs.
+List the Fabric jobs along with their status, and perform operations such as starting, stopping, updating, and resuming jobs.
 
 [Click for more information about Fabric jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md).
 
