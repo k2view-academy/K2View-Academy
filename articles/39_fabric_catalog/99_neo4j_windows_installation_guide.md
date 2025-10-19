@@ -28,16 +28,16 @@ cd '\path\to\neo4j-folder'
 
 #### Download K2view's Neo4j package:
 
-Download the link from [here](https://download.k2view.com/index.php/s/yAA0ezCsAB6bzXV/download).
+Download the link from [here](https://download.k2view.com/index.php/s/9qplXIkw72frBjT/download).
 
 #### Unzip the package:
 ```powershell
-Expand-Archive -Path .\k2view-neo4j-enterprise-5.26.12-windows.zip .
+Expand-Archive -Path .\k2view-neo4j-enterprise-5.26.13-windows.zip .
 ```
 
 #### Remove zip file:
 ```powershell
-Remove-Item -Path .\k2view-neo4j-enterprise-5.26.12-windows.zip
+Remove-Item -Path .\k2view-neo4j-enterprise-5.26.13-windows.zip
 ```
 
 #### Environment Variables in Windows:
