@@ -10,28 +10,28 @@ The K2view patented [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md
 
 ### Key TDM Features
 
-- Built-in self-service web application, where testers can request data to be provisioned on-demand and in real-time. 
+- Built-in self-service web application, where testers can request data to be provisioned on demand and in real-time. 
 - Central storage of provisioned entities in Fabric.
 - Copying data into live testing environments.
 - Request for a subset of entities for data provisioning:
   - Provisioning predefined lists of Business Entities from a selected source environment to a selected target environment. All data related to the selected entities is extracted and copied to the relevant data systems.
   - Copying a subset of entities based on predefined parameters. For example, selecting from a source some customers based in NY with small business packages, and copying this selection to the testing environment.
-- TDM 9.0 adds a support for sub-setting (filtering) of table records for data provisioning - it now enables to set a filter on the selected records on each table.
+- TDM 9.0 adds support for sub-setting (filtering) of table records for data provisioning - it now enables setting a filter on the selected records on each table.
 - Synthetic entities generation:
-  - Rule-Based Synthetic Data Generation - generating synthetic entities on-demand. The synthetic entities can be either generated and saved in Fabric in order to be loaded later into the testing environment, or generated and loaded into the target environment in one task. The user can set values in a selected list of data generation parameters for the data generation flow. For example, generating a list of customers where 30% live in NY and 70% live in TX.
+  - Rule-Based Synthetic Data Generation - generating synthetic entities. The synthetic entities can be either generated and saved in Fabric in order to be loaded later into the testing environment, or generated and loaded into the target environment in one task. The user can set values in a selected list of data generation parameters for the data generation flow. For example, generating a list of customers where 30% live in NY and 70% live in TX.
   - TDM 9.0 adds an integration with AI to generate synthetic entities based on a pre-created training model. Both processes, training and AI-based data generation can be initiated by the TDM.  
 
 - Entity clone - cloning a given entity into the target environment. TDM replaces the sequences of each clone to avoid sequence duplication.
 - Replacement of sequences of provisioned entities to avoid duplication in the target DB. 
 - Entity reservation - enables the user to reserve entities in the testing environment, thus preventing other users from deleting or reloading these entities in the environment until the user completes their functional testing.
 - Automatic data security and masking on an entity-by-entity basis.
-- TDM 9.0 adds a support for automatic data masking on the provisioned tables when creating a task for tables provisioning. 
-- Support for an up-to-date data of the selected entities.
+- TDM 9.0 adds support for automatic data masking on the provisioned tables when creating a task for tables provisioning. 
+- Support for up-to-date data of the selected entities.
 - Cross-application integrity.
 - Data Versioning features:
   - Users can save (extract) specific versions of either a selected list of entities or a selected list of tables.
   - Users can load either a selected version of entities or tables to the selected target environment.
-- Data provisioning - can be done either on-demand or automatically (based on scheduling parameters), e.g., an automatic data provisioning every Monday, 08:00 AM.
+- Data provisioning - can be done either on demand or automatically (based on scheduling parameters), e.g., an automatic data provisioning every Monday, 08:00 AM.
 
 
 
