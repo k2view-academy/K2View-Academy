@@ -137,6 +137,3 @@ The sequences are saved in the **catalog_classification_generators** MTable (the
 * The category of PII-sequences is **enable_masking_uniqueness**.
 
 
-
-[![Previous](/articles/images/Previous.png)](08_search_catalog.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](11_catalog_masking.md) 
-

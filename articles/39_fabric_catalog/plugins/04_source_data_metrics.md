@@ -4,9 +4,23 @@ This article describes plugins that analyze source systems and calculate various
 
 **The plugins are:**
 
+* [Empty Datasets Discard](04_source_data_metrics.md#empty-datasets-discard) — excludes empty tables based on the data snapshot results. This plugin is available starting from Fabric V8.3.1.
 * [Data Quality Metrics](04_source_data_metrics.md#data-quality-metrics) — calculates various data quality metrics as described below. These metrics can then be used for masking and synthetic data generation.
 * [Option Set Analyzer](04_source_data_metrics.md#option-set-analyzer) — identifies fields with a limited number of distinct values (in a data sample) and saves them into an MTable. These metrics can then be used for masking and synthetic data generation. This plugin is available starting from Fabric V8.3.
-* [NULL Percentage](04_source_data_metrics.md#null-percentage) — calculates the percentage of NULL values per column. Starting with Fabric V8.2, this plugin has been merged into the Data Quality Metrics plugin.
+
+All of these plugins are inactive by default and must be activated via Discovery Pipeline if needed. 
+
+## Empty Datasets Discard
+
+Sometimes a data source might include significant number of empty tables which are irrelevant for Catalog and for further LU creation. 
+
+This plugin has been introduced to improve Catalog usability as well as the LU development process. It **excludes** all empty tables from the Catalog during the Discovery job, writing a message into the Fabric's log (1 message per each schema):
+
+~~~
+"<num> empty datasets were removed from schema <schema name>"
+~~~
+
+
 
 ## Data Quality Metrics
 
@@ -32,7 +46,7 @@ This plugin scans the data of the data sample in order to calculate various data
 
 The purpose of this plugin is to identify fields with a limited number of distinct values (in the data sample) and save those values in a dedicated MTable, enabling their use in masking and synthetic data generation.
 
-Once a field is identified as an Option Set, the property ```optionSet = true``` is created for it. In addition, a separate MTable is generated for each data platform and schema to store the distinct values (and their distribution). The MTable has the following naming format: 
+Once a field is identified as an Option Set, the property ```optionSet = true``` is created for it. A separate MTable is generated for each data platform and schema to store the distinct values (and their distribution), identified by the plugin in a field. The MTable has the following naming format: 
 
 ```catalog_field_option_set___<dataPlatform>_<schema>.csv```, (containing 3 underscores before the data platform name).
 
@@ -40,12 +54,18 @@ The below image is an example of such MTable:
 
 <img src="../images/option_set_mtable_ex.png" />
 
+Starting from V8.3.1, a classification **OPTION_SET** is assigned to this field, unless this field has been previously assigned a classification. In the Catalog Settings, the OPTION_SET classification is mapped to the **RandomOptionSet** actor for masking and synthetic data generation. The actor randomly selects a value from the catalog_field_option_set MTable, based on the input data platform, schema, dataset, class and field.
+
 The rules for identifying fields with a limited number of distinct values are:
 
 * The field is **not PII** (in order to comply with privacy regulations and not to expose sensitive values).
 * The number of distinct values is either below a plugin's threshold (e.g., 0.05) **or** below the ```Absolute Threshold```  input parameter (which is set to 15 by default).
 
 Additional rules apply based on the **plugin input parameters**, as explained below.
+
+#### Property Name
+
+The property that will be created on a field if the plugin returns true. By default, the property name is optionSet.
 
 #### Absolute Threshold
 
@@ -69,6 +89,14 @@ This parameter allows to set up an override list of field names. These fields wi
 
 This parameter allows to set up an override list of field names. These fields will be excluded from the plugin's validation algorithm.
 
+#### Incremental Mode
+
+The ```incrementalMode``` parameter in introduced in Fabric V8.3.1. It defines whether the Option Set Analyzer plugin should be executed for the fields that already have the same property created by this plugin in a previous Discovery Job execution. It has the following modes:
+
+- ```"Keep All"``` (default) - if the plugin has already been executed for this field in a previous Discovery Job execution, don’t invoke the plugin again (even if the field doesn't have the 'Option Set' property). The plugin will only be invoked for the new fields.
+- ```"Keep Existing"``` - if the plugin has already been executed for this field in a previous Discovery Job execution and created a property, don’t invoke it again. The plugin will only be invoked for the new fields and for the fields without this property.
+- ```"Evaluate All"``` - the plugin will be invoked for all fields.
+
 #### Max String Length
 
 This parameter defines a limit to STRING size, to prevent handling text files or complex structures inside a field. The default value is 512 bytes.
@@ -77,12 +105,4 @@ This parameter defines a limit to STRING size, to prevent handling text files or
 
 This parameter allows to skip small tables by defining the minimum sample size required to verify whether a field qualifies as an **Option Set**. The default value is 100.
 
-## NULL Percentage
-
-The purpose of this plugin is to calculate the percentage of NULL values per column, based on the data snapshot. This percentage is calculated for each column in non-empty tables. The default size of the data snapshot is configured in the plugins.discovery file as explained [here](/articles/39_fabric_catalog/04_discovery_pipeline.md#data-sample-size).
-
-As a result, when the calculated value exceeds the threshold, the **Null Percentage** property is added to the field's properties. 
-
-For example, when 30% of the values in a given field are null, the Null Percentage property will be added to this field with the value = 0.3. However, if 20% or less of the values in this field are null, then this property will not be added.
-
-This plugin was valid until Fabric V8.1. In V8.2 it has been merged into the Data Quality Metrics plugin.
+## 

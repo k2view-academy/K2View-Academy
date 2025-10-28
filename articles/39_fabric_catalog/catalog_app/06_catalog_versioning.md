@@ -4,7 +4,7 @@ The Catalog supports **versioning**, which is the ability to create a new Catalo
 
 A user can view each version separately or check the differences between 2 selected versions using the Catalog application, as described below.
 
-### Version Creation
+## Version Creation
 
 Every time the Discovery job is executed, it performs the comparison between the current results and the previous Catalog version of the same data platform. The changes can be either due to the data source changes (such as a new table or a field) or due to the configuration changes (such as a new profiling rule or an update of an existing one). 
 
@@ -16,7 +16,7 @@ Additional trigger for a version creation is a manual edit of the Catalog.
 
 [Click here for more information about manual overrides](07_manual_overrides.md).
 
-### Version View
+## Version View
 
 By default, the Catalog application displays the latest available version. To view any version, open the version's drop-down list and click a version number: 
 
@@ -24,7 +24,7 @@ By default, the Catalog application displays the latest available version. To vi
 
 The Catalog tree is then displayed using the standard coloring scheme, where all the nodes are blue and the relations are orange. 
 
-### Version Comparison
+## Version Comparison
 
 To compare 2 versions, click the comparison <img src="../images/compare.png" style="zoom:75%;" /> icon in the version's drop-down list. The Catalog tree is then displayed using the comparison coloring scheme, indicating the differences between the 2 versions, as follows:
 
@@ -36,11 +36,29 @@ To return to a regular view mode, open the version's drop-down list again and cl
 
 <img src="../images/compare_versions.png" style="zoom:67%;" />
 
-**Show Updates Only**
+### Show Differences Only
 
-When a Schema contains too many Datasets, it might be difficult to identify the updated nodes. To view updated Datasets only, you should first expand the Datasets and then click the "Show updated only" icon in the Catalog's legend. Note that this icon is only visible in the version comparison mode.
+When a schema contains too many datasets, it might be difficult to spot the updated ones. To view only the changes, start from expanding the schema and then click the "Show differences only" icon in the Catalog's legend. Note that this icon is only visible in the version comparison mode.
 
 <img src="../images/data_platform_diff.gif"  />
+
+### Version Differences Report
+
+The **Version Differences** screen shows all changes between the 2 selected versions, under the selected schema. 
+
+The screen can be accessed by clicking the Version Differences Report icon, available on the schema node in the ‘versions compare’ mode only.
+
+<img src="../images/version_differences_icon.png" style="zoom:67%;" />
+
+Each line in the  **Version Differences** screen includes the node name, its path and the change type, which indicates whether the node was added, deleted or updated. For properties, the columns Old Value & New Value display the property value.
+
+The differences list can be exported into a CSV file by clicking the Export icon.
+
+<img src="../images/version_differences_report.png" style="zoom:67%;" />
+
+
+
+
 
 
 
