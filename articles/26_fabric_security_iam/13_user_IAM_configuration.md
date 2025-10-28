@@ -344,6 +344,9 @@ username_attribute=cn                    # single attribute
 * Default behavior (when not set) remains cn, preserving backward compatibility.
 * You may specify one attribute or a comma-separated list (order does not affect authentication).
 
+**Known Issues**
+Fabric's LDAP authenticator does not chase LDAP referrals. This means the user_base_dn may need to be more specific to avoid cross-forest referrals that are not supported. 
+
 
 ## Custom Authenticator
 
