@@ -33,7 +33,8 @@
   - [Preparations & Prerequisites](#preparations--prerequisites-1)  
     - [Admin Role Settings](#admin-role-settings)  
     - [LDAPS: Secure LDAP](#ldaps-secure-ldap)  
-  - [Editing the config.ini file](#editing-the-configini-file-1)  
+  - [Editing the config.ini file](#editing-the-configini-file-1)
+  - [AD LDAP Login attribute selection](#ad-ldap-login-attribute-selection)
 
 - [Custom Authenticator](#custom-authenticator)  
 
@@ -309,6 +310,40 @@ The LDAP owner should provide the values.
 The instructions for using LDAP and LDAPS can be found [here](/articles/26_fabric_security_iam/11_user_IAM_LDAP.md).
 
 <br/>
+
+### AD LDAP Login attribute selection
+
+**Requires**: Fabric 8.3.0 hf3 or later
+
+Fabric’s AD/LDAP authenticator supports using CN and/or sAMAccountName as the username attribute. This lets organizations keep their standard login practice (e.g., LAN ID via sAMAccountName).
+
+**When to use**
+
+* Your AD users typically sign in with LAN ID (sAMAccountName) instead of their Common Name (cn).
+* You want to accept either cn or sAMAccountName at the login prompt.
+
+**Configuration**
+Add or update the username_attribute setting under the [adldap_auth] section of your config.ini.
+
+ ```bash
+SERVER_AUTHENTICATOR=adldap
+
+[adldap_auth]
+url=ldaps://<host>:636
+security_level=simple
+admin_dn=CN=<serviceUser>,OU=...,DC=...,DC=...
+admin_password=<secret>
+users_base_dn=OU=<...>,DC=<...>,DC=<...>
+# Accept one or both attributes (comma-separated list allowed)
+username_attribute=cn                    # single attribute
+# username_attribute=sAMAccountName      # single attribute
+# username_attribute=cn,sAMAccountName   # accept either
+# username_attribute=sAMAccountName,cn   # accept either (order preference)
+```
+**Notes**
+* Default behavior (when not set) remains cn, preserving backward compatibility.
+* You may specify one attribute or a comma-separated list (order does not affect authentication).
+
 
 ## Custom Authenticator
 
