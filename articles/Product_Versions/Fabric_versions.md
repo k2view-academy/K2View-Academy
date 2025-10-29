@@ -319,8 +319,8 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td align="left"><a href="/Release_Notes/Archived%20Fabric%20Versions/Fabric_Release_Notes_V6.5.9.pdf">6.5.9</a></td>
             <td>September 2, 2022</td>
             <td>HF32</td>
-            <td>September 1, 2025</td>
-            <td>294</td>
+            <td>October 29, 2025</td>
+            <td>298</td>
             <td></td>
             <td>3.11.12 or 4.0.3</td>
             <td></td>
