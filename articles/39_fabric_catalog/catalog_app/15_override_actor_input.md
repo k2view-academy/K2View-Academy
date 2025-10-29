@@ -2,7 +2,7 @@
 
 ### Overview
 
-Fabric V8.3.1 includes the ability to use the values of Catalog field properties for masking or synthetic data generation process. The purpose of this cross-system capability is to improve the generated data quality by using the data snapshot values of the source system as a basis for generated data.
+Fabric V8.3.1 includes the ability to use the values of Catalog-calculated metrics for masking or synthetic data generation process. The purpose of this cross-system capability is to improve the generated data quality by using the data snapshot values of the source system as a basis for generated data.
 
 The capability is based on a set of core features and requires to perform few steps in order to utilize it properly. The following article includes the description of user stories that demonstrate how to utilize the override capability during the masking or synthetic data generation process.
 
