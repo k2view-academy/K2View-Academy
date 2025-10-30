@@ -40,15 +40,15 @@ To return to a regular view mode, open the version's drop-down list again and cl
 
 When a schema contains too many datasets, it might be difficult to spot the updated ones. To view only the changes, start from expanding the schema and then click the "Show differences only" icon in the Catalog's legend. Note that this icon is only visible in the version comparison mode.
 
-<img src="../images/data_platform_diff.gif"  />
+<img src="../images/show_diff_only.png"  />
 
 ### Version Differences Report
 
 The **Version Differences** screen shows all changes between the 2 selected versions, under the selected schema. 
 
-The screen can be accessed by clicking the Version Differences Report icon, available on the schema node in the ‘versions compare’ mode only.
+The screen can be accessed by clicking the Version Differences Report icon, available on the schema node in the version comparison mode only.
 
-<img src="../images/version_differences_icon.png" style="zoom:67%;" />
+<img src="../images/version_differences_icon.png" style="zoom:75%;" />
 
 Each line in the  **Version Differences** screen includes the node name, its path and the change type, which indicates whether the node was added, deleted or updated. For properties, the columns Old Value & New Value display the property value.
 
