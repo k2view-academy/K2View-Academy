@@ -8,10 +8,18 @@ To define Fabric to work with KMS, the information should first be acquired from
 ## Table of Contents
 
 1. [Integration with AWS KMS](#integration-with-aws-kms)
+
 2. [Integration with GCP KMS](#integration-with-gcp-kms)
+
 3. [Integration with KMIP KMS](#integration-with-kmip-kms)
+
 4. [Integration with Thales KMS](#integration-with-thales-kms)
-5. [Symmetric and Asymmetric Master Key Encryption Types](#symmetric-and-asymmetric-master-key-encryption-types)
+
+5. [Integration with Fortanix Data Security Manager KMS]([#integration-with-fortanix-data-security-manager-kms)
+
+6. [Symmetric and Asymmetric Master Key Encryption Types](#symmetric-and-asymmetric-master-key-encryption-types)
+
+   
 
 
 ## Integration with AWS KMS
@@ -70,11 +78,11 @@ While Fabric might be deployed across several regions, it can use the same KMS k
 
       ~~~
       [encryption_gcp_kms]
-      PROJECT_ID=
-      LOCATION_ID=
-      KEY_ID=
-      KEY_RING_ID=
-      CREDENTIAL_FILE=
+      PROJECT_ID
+      LOCATION_ID
+      KEY_ID
+      KEY_RING_ID
+      CREDENTIAL_FILE
       ~~~
       >  Note: 
       >
@@ -94,11 +102,11 @@ While Fabric might be deployed across several regions, it can use the same KMS k
 
    ~~~
    [encryption_kmip_kms] 
-   USER=
-   PASSWORD=
-   PARTITION=
-   KEY_ID=
-   BASE_URL_TEMPLATE=
+   USER
+   PASSWORD
+   PARTITION
+   KEY_ID
+   BASE_URL_TEMPLATE
    ~~~
 
    >  Notes: 
@@ -119,12 +127,12 @@ While Fabric might be deployed across several regions, it can use the same KMS k
 
    ~~~
    [encryption_thales_kms]
-   USER=
-   PASSWORD=
-   AUTH_DOMAIN=
-   KEY_ID=
-   AAD=
-   BASE_URL_TEMPLATE=
+   USER
+   PASSWORD
+   AUTH_DOMAIN
+   KEY_ID
+   AAD
+   BASE_URL_TEMPLATE
    ~~~
 
    >  Notes: 
@@ -134,6 +142,43 @@ While Fabric might be deployed across several regions, it can use the same KMS k
    >  * Changes in the config.ini file are performed on all Fabric nodes.
 
 3. In Fabric, run ``activatekey name='<name>' generatorType='Java_AES' storeType='KMIP_KMS'``.
+
+
+
+## Integration with Fortanix Data Security Manager KMS 
+
+[Fortanix's KMS](https://www.fortanix.com/platform/data-security-manager/key-management-service) service is part of their Data Security Manager platform.
+
+1. At config.ini:
+
+   * Set the following attribute (located at [fabric] section) as following  `PACKAGE_NAMES_CLASS_LOADING_FILTER=com.k2view.,com.fasterxml.`
+
+   * Set the values for the following parameters at ``[encryption_fortanix_kms]`` section, according to the KMS information
+
+     ~~~
+     [encryption_fortanix_kms]
+     KEY_ID
+     API_KEY
+     END_POINT_URL
+     ALGORITHM
+     MODE
+     AD
+     TAG_LEN
+     ~~~
+
+
+   >  Notes: 
+   >
+   >  * KEY_ID stands for the Security Object ID at Fortanix KMS.
+   >  * API_KEY - as generated for the app, at Fortanix KMS.
+   >  * AD - Authentication Data - is optional
+   >  * TAG_LEN - when attribute is commented or set to be with value = 0, its actual value will be the default which was defined by Fortanix at its SDK.
+   >  * Attributes which considered as secrets are encrypted and are not saved in the file in their clear/plain form.
+   >  * Changes in the config.ini file are performed on all Fabric nodes.
+
+   
+
+2. In Fabric console/terminal, run this command: ``activatekey name='<name>' generatorType='Java_AES' storeType='FORTANIX_KMS'``.
 
 
 
