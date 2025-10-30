@@ -41,7 +41,7 @@ To better understand the concept of a **transformation flow** and its pivotal us
 **Get Metadata** is the first transformation flow, and it builds the Catalog's expected metadata, returning it in a format of an array of maps. This flow is mandatory.
 
 * Metadata may be based on the schema definition file(s), if they are provided. Two dedicated actors are provided for this use case:
-  * **JsonSchemaToMetadata** to transform the JSON schema to the Catalog metadata format.
+  * **JsonSchemaToMetadata** to transform the JSON schema to the Catalog metadata format. From Fabric V8.3.1, the actor supports JSON Schema version Draft-07 and up (via NetworkNT schema validator).
   * **AvroSchemaToMetadata** to transform the Avro schema to the Catalog metadata format (Avro extension should be installed to use this actor).
 * When no schema definition file exists, the metadata is expected to be discovered from a data sample. In this case, the output Catalog metadata will only include the dataset name with its corresponding schema. The fields and their properties will then be inferred from the sample data.
 * A combined approach is also possible, where some datasets are defined using schema definition files, while others are based on sample data.
