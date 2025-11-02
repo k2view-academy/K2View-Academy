@@ -107,11 +107,11 @@ The menu bar is a toolbar located at the top of the window. It includes the foll
 
 ### Properties Tab
 
-The Properties tab displays the selected element's name, the icon of the type and the element's properties.
+The Properties tab displays the icon indicating the entity type (field, dataset, schema or data platform) and the entity name. In case of fields - the **Defined By** property is displayed (e.g. STRING) - available starting from Fabric V8.3.1.
 
 ​	<img src="../images/properties.png" style="zoom: 67%;" />
 
-Each element has different properties. For example, a Dataset field has properties such as **column size** and **source data type** - created by the Crawler, and **PII** and **Classification** that are created by the plugins.
+Each entity has different properties - some are created by the Crawler, some - by the plugins. 
 
 Clicking the property name or the <img src="../images/info.png" style="zoom: 95%;" /> icon next to the element's name, opens the More Info pop-up window that provides more details about the property, e.g., the property's Origin, which could be either the Crawler, one of the plugins or manual.
 
