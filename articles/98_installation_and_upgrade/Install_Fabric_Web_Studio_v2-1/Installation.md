@@ -267,7 +267,12 @@ Traefik will use its own self-signed TLS certificates for HTTPS connections by d
 
 These files must be named `cert.cer` and `cert.key`, respectively. The TLS certificate must be in PEM format and contain the server, root, and intermediate certificates, should they exist.
 
-If you perform this step after the initial installation, you must restart Fabric for these to take effect.
+If you perform this step after the initial installation, you must restart Fabric for these to take effect. In addition, you will also need to restart the ingress using this command: 
+
+```bash
+docker compose -f k2vingress-compose.yaml restart
+```
+
 
 ### **Step 5**: Select a Fabric Blueprint Profile to Use
 
