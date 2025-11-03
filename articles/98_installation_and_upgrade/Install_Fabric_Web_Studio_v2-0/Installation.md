@@ -283,7 +283,7 @@ docker login -u [YourAccount] https://docker.share.cloud.k2view.com
 
 You will be asked to enter your password.
 
-**Note**: The Docker login command and the `k2space.sh` bash shell script require Internet access to log in and pull K2view Fabric images from the K2view Nexus Container Registry at docker.share.cloud.k2view.com. 
+**Note**: The Docker login command and the `k2space.sh` bash shell script require Internet access to log in and pull K2view Fabric images from the K2view Container Registry at docker.share.cloud.k2view.com. 
 
 > Should you not have Internet connectivity, you can use the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#docker-image-offline-package-download">Docker Image Offline Package Download</a> procedure to download the file on a separate machine and copy it to the local installation directory. The file, a Docker Image, is approximately 1.9 GB in size. The version of the image depends on what is configured in the `.env` file. You will need to download the same version.
 >
@@ -398,7 +398,7 @@ If you access Fabric Web Studio, you have successfully installed it.
 
 ## Docker Image Offline Package Download
 
-The Docker login command and the `k2space.sh` bash shell script require Internet access to log in and pull K2view Fabric images from the K2view Nexus Container Registry at docker.share.cloud.k2view.com. 
+The Docker login command and the `k2space.sh` bash shell script require Internet access to log in and pull K2view Fabric images from the K2view Container Registry at docker.share.cloud.k2view.com. 
 
 If you do not have Internet connectivity, you can use the following procedure to download the file offline on a separate machine and then copy it to the local installation directory. The file, a Docker Image, is approximately 1.9 GB in size. The version of the image depends on what is configured in the `.env` file. You will need to download the same version.
 
@@ -408,11 +408,11 @@ Here is the flow:
 
 1. Pull the desired Image tag:
 
-`docker pull docker.share.cloud.k2view.com/k2view/fabric-studio:8.1.7_22`
+`docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.1.7_22`
  
 2. Save / compress the desired Image tag:
 
-`docker save docker.share.cloud.k2view.com/k2view/fabric-studio:8.1.7_22 | gzip > k2view_fabric-studio_8.1.7_22.tar.gz`
+`docker save docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.1.7_22 | gzip > k2view_fabric-studio_8.1.7_22.tar.gz`
 
 3. Copy the `k2view_fabric-studio_8.1.7_22.tar.gz` file to the target machine.
 
