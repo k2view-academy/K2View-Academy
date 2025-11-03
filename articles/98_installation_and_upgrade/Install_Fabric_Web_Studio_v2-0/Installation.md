@@ -173,7 +173,7 @@ There are two options to obtain the Docker Compose Runtime for Fabric Web Studio
 You can download the latest version of Docker Compose Runtime for Fabric Web Studio from this location: 
 
 ```bash
-https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/archive/Studio-Docker-2.0.0.zip
+https://internal-nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/archive/Studio-Docker-2.0.0.zip
 ```
 
 Then, change the directory to the K2view directory. Copy `Studio-latest.zip` to this directory, and unzip `Studio-latest.zip`. This will create the `Studio-Docker` directory. Please rename this directory `Studio`.
