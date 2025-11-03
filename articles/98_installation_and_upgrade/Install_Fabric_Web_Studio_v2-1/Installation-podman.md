@@ -167,7 +167,7 @@ The recommended approach is to download the latest version of Fabric Web Studio 
 You can download the latest version of Fabric Web Studio for Podman from this location: 
 
 ```bash
-https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Studio-Podman-latest.zip
+https://internal-nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Studio-Podman-latest.zip
 ```
 
 Then, change the directory to the K2view directory. Copy `Studio-Podman-latest.zip` to this directory, and unzip `Studio-Podman-latest.zip` to this directory. Then, rename the `Studio-Podman` directory as `Studio`.
