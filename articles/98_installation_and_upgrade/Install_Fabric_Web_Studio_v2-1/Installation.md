@@ -74,7 +74,7 @@ Various steps should be taken to get Fabric Web Studio up and running within the
 3. [Step 3: Download](#step-3-download)
 4. [Step 4: Configure Git and TLS](#step-4-configure-git-and-tls)
 5. [Step 5: Select a Fabric Blueprint Profile to Use](#step-5-select-a-fabric-blueprint-profile-to-use)
-6. [Step 6: Log in to K2view's Nexus Container Registry](#step-6-log-in-to-k2views-nexus-container-registry)
+6. [Step 6: Log in to K2view's Container Registry](#step-6-log-in-to-k2views-container-registry)
 7. [Step 7: Create and Launch a Fabric Space](#step-7-create-and-launch-a-fabric-space)
 8. [Step 8: Access Web Studio](#step-8-access-web-studio)
 
@@ -179,7 +179,7 @@ There are two options to obtain the Docker Compose Runtime for Fabric Web Studio
 The recommended approach is to download the latest version of Fabric Web Studio for Docker Compose from this location: 
 
 ```bash
-https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Studio-Docker-latest.zip
+https://internal-nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Studio-Docker-latest.zip
 ```
 
 Then, change the directory to the K2view directory. Copy `Studio-Docker-latest.zip` to this directory, and unzip `Studio-Docker-latest.zip` to this directory. Then, rename the `Studio-Docker` directory as `Studio`.
@@ -418,7 +418,7 @@ If you access Fabric Web Studio, you have successfully installed it.
 
 ## Docker Image Offline Package Download
 
-The Docker login command and the `k2space.sh` bash shell script require Internet access to log in and pull K2view Fabric images from the K2view Nexus Container Registry at docker.share.cloud.k2view.com. 
+The Docker login command and the `k2space.sh` bash shell script require Internet access to log in and pull K2view Fabric images from the K2view Container Registry at docker.share.cloud.k2view.com. 
 
 If you do not have Internet connectivity, you can use the following procedure to download the file offline on a separate machine and then copy it to the local installation directory. The file, a Docker Image, is approximately 1.9 GB in size. The version of the image depends on what is configured in the `.env` file. You will need to download the same version.
 
