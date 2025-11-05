@@ -181,7 +181,7 @@ The recommended approach is to download the latest version of Fabric Web Studio 
 ```bash
 https://download.k2view.com/index.php/s/hBv6Xz8bP9K8fwm/download
 ```
-Alternatively you can use `wget` as follows:
+Alternatively, you can use `wget` as follows:
 
 ```bash
 wget -c -O Studio-Docker-latest.zip 'https://download.k2view.com/index.php/s/hBv6Xz8bP9K8fwm/download'
