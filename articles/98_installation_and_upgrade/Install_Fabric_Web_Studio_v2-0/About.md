@@ -2,7 +2,7 @@
 This document describes the Docker Compose Runtime used for hosting K2view Fabric Web Studio. It covers setup, components, installation options, and features. 
 
 ## Deprecation Notice
-K2view Fabric Web Studio, Version 2.0, is now deprecated and has been replaced with Version 2.1. Please use to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-e/README.md">Fabric Web Studio 2.1 release.</a>
+K2view Fabric Web Studio, Version 2.0, is now deprecated and has been replaced with Version 2.1. Please use to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/README.md">Fabric Web Studio 2.1 release.</a>
 
 If you need version 2.0, please contact K2view support, who can make arrangements to make it available to you.
 
