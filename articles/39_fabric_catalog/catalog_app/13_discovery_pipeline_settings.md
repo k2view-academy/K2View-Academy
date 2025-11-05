@@ -53,14 +53,12 @@ A **rule** should be attached to a data platform, along with several optional pa
 * Click on **Add Rule +** to create a new rule. 
 
 
-* The mandatory rule's parameters are *Rule Name* (which must be unique) and *Data Platform*. 
+* The mandatory rule's parameters vary based on the Crawler Filter value:
+  * When **Crawler Filter** is set to either **'Exclude Others'** or **'Exclude This'**, Data Platform and Schema are mandatory, while Dataset population is optional.
+  * When **Crawler Filter** is set to **'No Filter'**, only Data Platform is mandatory. In this case, selecting an **'Override'** checkbox is mandatory.
+* The same rule may include a filter and the overrides by setting **Crawler Filter** = **'Exclude Others'** and a checking the **Override** checkbox.
+* Starting from Fabric V8.3.1, the new row is added with 'Exclude Others' filter value, which can be changed to any other value if needed.
 
-
-* Populating a schema and a dataset is optional. 
-
-
-* When multiple schemas or datasets are populated, they should be comma-separated.
-* A rule should include either a Crawler Filter or a checked Override checkbox, or both. Possible filter settings are described below.
 
 #### Rule Type: Crawler Filter = Exclude This 
 
