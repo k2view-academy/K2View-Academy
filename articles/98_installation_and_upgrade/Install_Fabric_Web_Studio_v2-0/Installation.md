@@ -17,6 +17,10 @@
    <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/Installation.md#docker-image-offline-package-download">Docker Image Offline Package Download</a></li>
 </ul>
 
+## Deprecation Notice
+K2view Fabric Web Studio, Version 2.0, is now deprecated and has been replaced with Version 2.1. Please use to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-e/README.md">Fabric Web Studio 2.1 release.</a>
+
+If you need version 2.0, please contact K2view support, who can make arrangements to make it available to you.  
 
 ## Prerequisites
 Please review the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-0/About.md#Prerequisites">Prerequisites</a> topic first. There are essential steps for installing and configuring Docker described in the prerequisites section. Please review these and the prerequisites.
@@ -166,15 +170,10 @@ mkdir K2view
 
 ### **Step 3**: Download
 
-There are two options to obtain the Docker Compose Runtime for Fabric Web Studio. You can download a zip file or clone the content from K2view's Blueprints.
+K2view Fabric Web Studio, Version 2.0, is now deprecated and has been replaced with Version 2.1. Please use to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-e/README.md">Fabric Web Studio 2.1 release.</a>
 
-#### Option: Download The Latest Version of Docker Compose Runtime for Fabric Web Studio
+If you need version 2.0, please contact K2view support, who can make arrangements to make it available to you.  
 
-You can download the latest version of Docker Compose Runtime for Fabric Web Studio from this location: 
-
-```bash
-https://internal-nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/archive/Studio-Docker-2.0.0.zip
-```
 
 Then, change the directory to the K2view directory. Copy `Studio-latest.zip` to this directory, and unzip `Studio-latest.zip`. This will create the `Studio-Docker` directory. Please rename this directory `Studio`.
 
