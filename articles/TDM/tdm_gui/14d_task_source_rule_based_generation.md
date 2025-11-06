@@ -1,6 +1,6 @@
 # Task — Source Component — Rule-Based Generation
 
-K2view's TDM supports 2 modes of synthetic entities' generation:
+K2view's TDM supports two modes of generating synthetic entities:
 
 - Rule-based generation
 - AI-based generation
@@ -53,7 +53,7 @@ The user can edit the distribution type and the related distribution parameters.
 
   ![normal dist](images/normal_dist_example.png)
 
-  In the above example, the generated customers get an invoice balance between 20-200. Most of the generated customers get an invoice balance of around 80 with a standard deviation of 5.
+  In the above example, invoices are generated for the customers, with balances ranging from 20 to 200. Most customers receive an invoice balance around 80 with a standard deviation of 5.
 
    
 
@@ -69,7 +69,7 @@ The user can edit the distribution type and the related distribution parameters.
 
   ![normal dist](images/uniform_dist_example2.png)
 
-- **Weighted** distribution returns a value from the list, based on the value's weight. Weighted distribution uses a 'weights' map, where the keys are the results and the values are positive numbers indicating the entry's weight as a porportion of the whole list. Both, the distributed values and the weights, need to be populated manually.
+- **Weighted** distribution returns a value from the list, based on the value's weight. Weighted distribution uses a 'weights' map, where the keys are the results and the values are positive numbers indicating the entry's weight as a proportion of the whole list. Both, the distributed values and the weights, need to be populated manually.
 
   Example:
 
