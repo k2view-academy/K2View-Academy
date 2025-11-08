@@ -26,7 +26,7 @@ This guide explains how to read the names of K2cloud’s **versionless** Space P
 * `-mngd` — Fabric only: uses a **managed PostgreSQL** service + object storage bucket.
 * `-noSdB` — Fabric only: **no system DB** is provisioned by K2cloud.
 
-> Storage classes are cloud-aware and set via your Foundation (e.g., GCP `regional-pd`, Azure `managed`).
+> Storage classes are cloud-aware and set via your Foundation (e.g., GCP `regional-pd`, Azure `managed`, AWS `gp3`).
 
 ---
 
