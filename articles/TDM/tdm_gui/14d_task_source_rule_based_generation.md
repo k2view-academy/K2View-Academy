@@ -61,7 +61,7 @@ The user can edit the distribution type and the related distribution parameters.
 
   Examples:
 
-  i. The generated customers will have 1-3 cases for each generated parent activity:
+  i. The generated customers will have between 1 and 3 cases for each generated parent activity:
 
   ![normal dist](images/uniform_dist_example.png)
 
