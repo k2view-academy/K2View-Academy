@@ -14,13 +14,13 @@ All of these plugins are inactive by default and must be activated via Discovery
 
 Sometimes a data source might include significant number of empty tables which are irrelevant for Catalog and for further LU creation. 
 
-This plugin has been introduced to improve Catalog usability as well as the LU development process. It **excludes** all empty tables from the Catalog during the Discovery job, writing a message into the Fabric's log (1 message per each schema):
+The purpose of this plugin is to improve Catalog usability as well as the LU development process. When activated, the plugin automatically **discards** all empty tables during the Discovery job, writing a message into the Fabric's log (1 message per each schema):
 
 ~~~
 "<num> empty datasets were removed from schema <schema name>"
 ~~~
 
-
+The Catalog schema is then created without the discarded tables.
 
 ## Data Quality Metrics
 
