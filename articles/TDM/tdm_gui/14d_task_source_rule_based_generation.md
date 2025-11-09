@@ -75,7 +75,7 @@ The user can edit the distribution type and the related distribution parameters.
 
   ![weighted dist example](images/weighted_dist_example.png)
 
-  In the above example, 16% (30/190) of the generated customers get a Bronze status, 16% (30/190) get a Silver status, 26% (50/190) get a Platinum status, and 42% (80/190) get a Gold status.
+  In the above example, 16% (30/190) of the generated subscribers get a Bronze status, 16% (30/190) get a Silver status, 26% (50/190) get a Platinum status, and 42% (80/190) get a Gold status.
 
   
 
