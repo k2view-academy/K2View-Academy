@@ -2,17 +2,17 @@
 
 ### Overview
 
-Fabric V8.3.1 includes the ability to override the Catalog generator parameters by the values of Catalog-calculated metrics. The purpose of this cross-system capability is to improve the quality of generated data by using the data snapshot values retrieved from the source system as a basis for generated data.
+The [PII & Masking tab](10_catalog_settings.md#pii--masking-tab) of the Catalog Settings screen allows to view and update the Catalog-based masking settings per each classification. The masking settings include, amount others, the Generator (actor or flow) - for generation of the masked values. 
 
-The capability is based on several of Fabric features and it requires to perform few steps in order to utilize them properly. 
+Starting from Fabric V8.3.1, it is possible to override the Generator's input parameters by the values of the Catalog-calculated metrics. The purpose of this capability is to improve the quality of generated data by using the data snapshot values retrieved from the source system during the discovery process.
 
-The following article includes user stories that demonstrate how to utilize the override capability during the masking or synthetic data generation process. However, the functionality is generic and not limited to the specified user stories. 
+This cross-system capability is based on several of Fabric features. The following article includes user stories that illustrate how to properly utilize the override capability during the masking or synthetic data generation process.  
+
+Note that the solution is generic and not limited to the specific user stories below.
 
 ### User story 1: Improve generation of random numeric values
 
-When generation of a numeric field's value is required, the default **RandomNumber.actor** is assigned to the relevant classification in the PII & Masking tab. The actor receives two input parameters: ```minimum``` and ```maximum```, with pre-defined default values which are set per each relevant classification. 
-
-To generate random values that will be significantly closer to the real column values, the user should create an alias map between the actor's input parameters and the field's calculated properties.
+Assume there is a numeric Catalog field and its value should be masked. When generation of a numeric field's value is required, the RandomNumber.actor can be assigned to the relevant classification in the PII & Masking tab. The actor receives two input parameters - ```minimum``` and ```maximum``` - and it generates a random number in the given range. These parameters have default values which are set per each relevant classification in the Catalog Settings. It is required to generate random values that will be significantly closer to the actual column values in the data source.
 
 Below steps describe how to generate a random value based on the field's ```minimumValue``` and ```maximumValue``` range, calculated during the Discovery run. 
 
@@ -20,16 +20,16 @@ Below steps describe how to generate a random value based on the field's ```mini
 
 1. Activate the  **Data Quality Metrics** plugin in the **Catalog Settings > Discovery Pipeline** screen and run discovery of the required interface. 
 
-2. Perform **Build Artifacts** and validate which metrics were created for the catalog fields, e.g.  ```minimumValue``` , ```maximumValue```, ```average```. 
+2. Perform **Build Artifacts** and validate which metrics were created for the catalog fields, e.g.  ```minimumValue``` and ```maximumValue```. 
 
 3. Verify the **classification** of the fields with the calculated metrics.
 
-4. In the **Catalog Settings > PII & Masking** tab, for each relevant **classification** - click the **Advanced** link and set up the alias map between the generator's inputs and the Catalog's calculated properties: 
+4. In the **Catalog Settings > PII & Masking** tab, go over the relevant classifications and click the **Advanced** link to set up the **Property Alias Map** between the generator's inputs and the Catalog's calculated properties: 
 
-   <img src="../images/settings_masking_advanced.png" />
+   <img src="../images/settings_masking_advanced_num.png" />
 
 
-Once this alias map is set, the values of the Catalog field properties from the Catalog's artifact are used during **masking** or **synthetic data generation** process. 
+Once this alias map is set, the values of the Catalog field properties are used during **masking** or **synthetic data generation** process. 
 
 ### User story 2: Improve generation of values from distinct list
 
