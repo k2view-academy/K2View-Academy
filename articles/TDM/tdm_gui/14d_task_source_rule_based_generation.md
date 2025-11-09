@@ -53,7 +53,7 @@ The user can edit the distribution type and the related distribution parameters.
 
   ![normal dist](images/normal_dist_example.png)
 
-  In the above example, invoices are generated for the customers, with balances ranging from 20 to 200. Most customers receive an invoice balance around 80 with a standard deviation of 5.
+  In the above example, invoices are generated for the customers, with balances ranging from 20 to 200. Most customers receive an invoice balance of around 80 with a standard deviation of 5.
 
    
 
