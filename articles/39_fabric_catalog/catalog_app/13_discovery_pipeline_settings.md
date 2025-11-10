@@ -27,7 +27,7 @@ The Baseline rule is always enabled. It can be edited by checking the **Override
 * Updating the parameters of the product built-in plugins. 
 * [Adding a new plugins](13_discovery_pipeline_settings.md#adding-new-plugins) - described further in this article. 
 
-Note that the Baseline rule overrides are automatically propagated to the project-level rules. For example, when a plugin is updated from 'active' to 'inactive' in the baseline, it becomes 'inactive' in all project-level rules. The rule, however, can override the baseline.
+Note that the Baseline rule overrides are automatically propagated to the project-level rules. For example, when a plugin is updated from 'active' to 'inactive' in the baseline, it becomes 'inactive' in all project-level rules. A project rule, however, can override the baseline rule.
 
 #### Revert Baseline Overrides
 
@@ -44,20 +44,20 @@ The Baseline rule overrides can be reverted in one of the following ways:
 
 The Discovery Pipeline screen enables the user to refine the default configuration per the project's requirements. 
 
-A **rule** should be attached to a data platform, along with several optional parameters (schema, dataset, crawler filter and override indicator) that may become mandatory, based on conditions; this is described further in this article. 
+A **rule** should be attached to a data platform, along with several others parameters (schema, dataset, crawler filter and override indicator) that may become mandatory, based on conditions; this is described further in this article. 
 
 #### How Do I Create a Rule?
 
 ![](../images/discovery_pipeline_2.png)
 
 * Click on **Add Rule +** to create a new rule. 
+  * Starting from Fabric V8.3.1, when a new rule is added, the Crawler Filter is set by default to **'Exclude Others'**. It can be changed any other value if needed. 
 
 
 * The mandatory rule's parameters vary based on the Crawler Filter value:
   * When **Crawler Filter** is set to either **'Exclude Others'** or **'Exclude This'**, Data Platform and Schema are mandatory, while Dataset population is optional.
   * When **Crawler Filter** is set to **'No Filter'**, only Data Platform is mandatory. In this case, selecting an **'Override'** checkbox is mandatory.
 * The same rule may include a filter and the overrides by setting **Crawler Filter** = **'Exclude Others'** and a checking the **Override** checkbox.
-* Starting from Fabric V8.3.1, the new row is added with 'Exclude Others' filter value, which can be changed to any other value if needed.
 
 
 #### Rule Type: Crawler Filter = Exclude This 
