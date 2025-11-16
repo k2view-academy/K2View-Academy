@@ -28,9 +28,9 @@ Please check the release notes for component version support, such as Kafka, Neo
         <tr>
             <td align="left"><a href="/Release_Notes/V8.2/Fabric_Release_Notes_V8.2.10.pdf">8.2.10</a></td>
             <td>Sep 30, 2025</td>
-            <td></td>
-            <td></td>
-            <td>1</td>
+            <td>HF1</td>
+            <td>Nov 14, 2025</td>
+            <td>3</td>
             <td>15.12</td>
             <td>4.1.8</td>
             <td></td>
