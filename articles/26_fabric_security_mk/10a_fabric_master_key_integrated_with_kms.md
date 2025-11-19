@@ -15,7 +15,7 @@ To define Fabric to work with KMS, the information should first be acquired from
 
 4. [Integration with Thales KMS](#integration-with-thales-kms)
 
-5. [Integration with Fortanix Data Security Manager KMS]([#integration-with-fortanix-data-security-manager-kms)
+5. [Integration with Fortanix Data Security Manager KMS](#integration-with-fortanix-data-security-manager-kms)
 
 6. [Symmetric and Asymmetric Master Key Encryption Types](#symmetric-and-asymmetric-master-key-encryption-types)
 

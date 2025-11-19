@@ -44,7 +44,7 @@ cd ~/K2view
 
 ```bash
 # Download and extract to ~/K2view
-wget https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Studio-Docker-latest.zip
+wget -c -O Studio-Docker-latest.zip 'https://download.k2view.com/index.php/s/hBv6Xz8bP9K8fwm/download'
 unzip Studio-Docker-latest.zip
 mv Studio-Docker Studio
 ```

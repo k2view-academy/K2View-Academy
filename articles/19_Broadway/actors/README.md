@@ -1,4 +1,4 @@
-<strong>Actors Specifications and Examples<strong>
+<strong>Actors Specs and Examples<strong>
 
 <ul>
 <li><a href="01_javascript_actor.md">JavaScript Actor</a></li>

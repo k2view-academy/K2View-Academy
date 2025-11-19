@@ -68,6 +68,12 @@ Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to 
 
 Click [here](02_fabric_entities_design.md#fabric-hashing-mechanism) to read more about the Fabric hashing mechanism.
 
+A new configuration parameter, SERIALIZE_CACHED_VALUE, has been added to the Fabric config.ini file from V8.3.x onwards to provide finer control over masked value serialization:
+- When set to true, the masking process preserves the original data type when generating masked values.
+- When set to false (default), masked values are serialized as strings.
+To enable type-preserving masking, set SERIALIZE_CACHED_VALUE=true and restart Fabric.
+
+
 #### Customized Masking Logic 
 
 K2view enables users to create their own masking functions:

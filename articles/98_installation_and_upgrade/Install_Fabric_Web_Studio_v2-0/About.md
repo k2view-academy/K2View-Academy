@@ -1,6 +1,11 @@
 # Docker Compose Runtime for K2view Fabric Web Studio, Version 2.0
 This document describes the Docker Compose Runtime used for hosting K2view Fabric Web Studio. It covers setup, components, installation options, and features. 
 
+## Deprecation Notice
+K2view Fabric Web Studio, Version 2.0, is now deprecated and has been replaced with Version 2.1. Please use to the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/README.md">Fabric Web Studio 2.1 release.</a>
+
+If you need version 2.0, please contact K2view support, who can make arrangements to make it available to you.
+
 ## About K2view Fabric Web Studio
 
 K2view Fabric Web Studio provides developers a unified platform for designing, building, and managing data-driven solutions. The Docker Compose Runtime's multi-space capability enables the creation of data management applications supporting multiple developers. Developers benefit from robust data management and orchestration tools for real-time integration, seamless testing, and debugging features. These accelerate project completions and deliver collaborative functionality that supports multiple users. 

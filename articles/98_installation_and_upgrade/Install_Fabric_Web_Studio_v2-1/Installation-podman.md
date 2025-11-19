@@ -57,14 +57,14 @@ A supported **Enterprise Linux distribution** (e.g., RHEL, AlmaLinux, Rocky Linu
 
 **K2view Software**
 
-1. The installation assumes you have Internet access, allowing you to obtain Fabric images from the K2view Nexus Container Registry and perform a Git clone on your machine. 
-2. To obtain a Fabric Studio docker image, you need a K2view Nexus account. Your K2view representative can arrange this for you. 
+1. The installation assumes you have Internet access, allowing you to obtain Fabric images from the K2view Container Registry and perform a Git clone on your machine. 
+2. To obtain a Fabric Studio docker image, you need a K2view account. Your K2view representative can arrange this for you. 
 
 **Internet Access is Required**
 
 Internet access is required to perform this installation. You will need access to:
 
-1. K2view’s Nexus Docker Image repository at https://docker.share.cloud.k2view.com
+1. K2view’s Docker Image repository at https://docker.share.cloud.k2view.com
 2. (Optional) Github.com to clone K2view’s blueprints at https://github.com/k2view/blueprints.git
 3. If you plan to install TDM, you need access to K2view’s Exchange.
 
@@ -113,14 +113,14 @@ Various steps should be taken to get Fabric Web Studio up and running within the
 3. [Step 3: Download](#step-3-download)
 4. [Step 4: Configure Git and TLS](#step-4-configure-git-and-tls)
 5. [Step 5: Select a Fabric Blueprint Profile to Use](#step-5-select-a-fabric-blueprint-profile-to-use)
-6. [Step 6: Log in to K2view's Nexus Container Registry](#step-6-log-in-to-k2views-nexus-container-registry)
+6. [Step 6: Log in to K2view's Container Registry](#step-6-log-in-to-k2views-container-registry)
 7. [Step 7: Create and Launch a Fabric Space](#step-7-create-and-launch-a-fabric-space)
 8. [Step 8: Access Web Studio](#step-8-access-web-studio)
 
 
-**Before you proceed, confirm that you have a K2view Nexus Container Registry Account**
+**Before you proceed, confirm that you have a K2view Container Registry Account**
 
-You need to obtain credentials to access the K2view Nexus. Your K2view account representative can arrange this for you. If you do not have access, please contact your K2view representative, who can provide steps to help you through this process.
+You need to obtain credentials to access the K2view container registry. Your K2view account representative can arrange this for you. If you do not have access, please contact your K2view representative, who can provide steps to help you through this process.
 
 ### **Step 1**: Install and Validate the Podman Runtime
 
@@ -167,7 +167,13 @@ The recommended approach is to download the latest version of Fabric Web Studio 
 You can download the latest version of Fabric Web Studio for Podman from this location: 
 
 ```bash
-https://nexus.share.cloud.k2view.com/repository/k2view-download/web-studio/Studio-Podman-latest.zip
+https://download.k2view.com/index.php/s/8lgQY4ybu5fNy4u/download
+```
+
+Alternatively, you can use `wget` as follows:
+
+```bash
+wget -c -O Studio-Docker-latest.zip 'https://download.k2view.com/index.php/s/8lgQY4ybu5fNy4u/download'
 ```
 
 Then, change the directory to the K2view directory. Copy `Studio-Podman-latest.zip` to this directory, and unzip `Studio-Podman-latest.zip` to this directory. Then, rename the `Studio-Podman` directory as `Studio`.
@@ -259,13 +265,13 @@ There are four profiles, each of which embeds Fabric. The default is 'studio'.
 Using the default profile, 'studio', you will not need to provide the profile on the `k2space.sh` command line. Otherwise, you will need to enter one of the other profiles. 
 
 
-### **Step 6**: Log in to K2view's Nexus Container Registry
+### **Step 6**: Log in to K2view's Container Registry
 
 *Prerequisite*
 
 Podman must be installed and properly configured to access the container registry. If running in rootless mode, ensure the Podman socket is active.
 
-Using the K2view Nexus Container Registry credentials provided to you, run the following command from the same directory where you performed the `git clone`:
+Using the K2view Container Registry credentials provided to you, run the following command from the same directory where you performed the `git clone`:
 
 ```bash
 podman login -u [YourAccount] https://docker.share.cloud.k2view.com
@@ -331,7 +337,7 @@ Active: active (listening)
 
 ### Podman Image Offline Package Download
 
-The Podman login command and the `k2space.sh` bash shell script require Internet access to log in and pull K2view Fabric images from the K2view Nexus Container Registry at docker. share. cloud. k2view.com.
+The Podman login command and the `k2space.sh` bash shell script require Internet access to log in and pull K2view Fabric images from the K2view Container Registry at docker. share. cloud. k2view.com.
 
 If your target machine **does not have Internet connectivity**, you can follow this **offline download procedure** to transfer the required image from another system. The Fabric image is approximately **1.9GB**, and its version must match the value specified in your local `.env` file.
 
@@ -342,7 +348,7 @@ By preloading the image locally, the `k2space.sh` script can create a Fabric Spa
 **Save and compress the desired Fabric image on an online machine:**
 
 ```bash
-podman save docker.share.cloud.k2view.com/k2view/fabric-studio:X.Y.Z_0 | gzip > k2view_fabric-studio_X.Y.Z_0.tar.gz
+podman save docker.share.cloud.k2view.com/k2view-images/fabric-studio:X.Y.Z_0 | gzip > k2view_fabric-studio_X.Y.Z_0.tar.gz
 ```
 
 **Transfer the image file to your target (offline) machine:**
@@ -431,7 +437,7 @@ Otherwise, please use the following --profile commands:
 
 #### The Initial Installation
 
-You will download Fabric from the K2view Nexus Container Registry when creating your first Fabric Space. While this is happening, you should observe the following.
+You will download Fabric from the K2view Container Registry when creating your first Fabric Space. While this is happening, you should observe the following.
 
 ```bash
 $ ./k2space.sh create myspace
