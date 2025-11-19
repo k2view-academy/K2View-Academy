@@ -42,6 +42,7 @@ The ${secretmanager:<id-at-secret-manager>} pattern should be used in the interf
 
 1. Turn on the key switch, located beside each relevant property (![off](images/secret-key-off.png) &rarr; ![off](images/secret-key-on.png)).
 1. Enter the key as it appears in the Secrets Management service.
+1. When specifying the keys, you can use either dedicated patterns, as describe in the later *Provider-Specific* section, or use URL query string.
 
 
 
@@ -62,20 +63,22 @@ The following are additional notes and considerations regarding **specific** Sec
 
    * **KV (key-value) secrets engine** in HashiCorp Vault is designed as a hierarchical key-value store.
    
-      - Each **path** is like a folder (for example:`k2view/mysql`).
-   
+      - Each **path** is like a folder (for example: `k2view/mysql`).
+      
       - Inside each path, you can store multiple key-value pairs (e.g., `user`, `password`, `host`, `port`. In the below illustrated example we show `password` and `user`).
-   
+      
         ![](images/04c_hashicorp_example.png)
    
    * When retrieving secrets via the API, Vault returns **all** keys under that path. However, Fabric allows you to specify which key you wish to use.
    
       The pattern is `key-path.key`. For example: <studio>${secretmanager:k2view/mysql.user} and ${secretmanager:k2view/mysql.password}</studio><web>k2view/mysql.user and k2view/mysql.password</web>
    
+   As mentioned, URL query string can be used, where *secretName* and *secretKey* shall be provided as aprameters. For example, assuming the secret entry is named "k2view/mysql.prod" then for the password key, the pattern shall be: `secretName=k2view/mysql.prod&secretKey=password`.
+   
    * HashiCorp has two versions, and in each version, the key paths differ. However, this difference in paths does not affect how the keys work or how you configure them in the interface properties. For more information about the versions, read [here](https://developer.hashicorp.com/vault/docs/secrets/kv).
+
    
-   
-   
+
 #### **CyberArk CCP**
 
    * You should specify the *folder* and/or the *safe-name* parameters by using the '&' concatenating pattern, e.g., `Safe=my-safe&Folder=my-folder&Object=mysql-password&AppID=`
