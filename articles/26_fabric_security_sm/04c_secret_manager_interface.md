@@ -2,7 +2,9 @@
 
 Fabric supports integration with Secrets Management services, offering several benefits. While secrets are not stored in Fabric itself, only their reference IDs are. 
 
-To use a Secrets Management service, in the Interface Editor (including Environments Editor), you should mark the required interface connection details as those that should be taken from the Secrets Management service.
+To use a secrets management service, in the Interface Editor (including Environments Editor), you should mark the required interface connection details as those that should be taken from the Secrets Management service.
+
+>  **Note**: Before provisioning it at interfaces, you shall set first the secrets management service definitions at Fabric's config, as described [here](/articles/26_fabric_security_sm/04b_secret_manager_config.md).  
 
 ## Table of Contents
 
@@ -72,9 +74,9 @@ The following are additional notes and considerations regarding **specific** Sec
    * When retrieving secrets via the API, Vault returns **all** keys under that path. However, Fabric allows you to specify which key you wish to use.
    
       The pattern is `key-path.key`. For example: <studio>${secretmanager:k2view/mysql.user} and ${secretmanager:k2view/mysql.password}</studio><web>k2view/mysql.user and k2view/mysql.password</web>
-   
+
    As mentioned, URL query string can be used, where *secretName* and *secretKey* shall be provided as aprameters. For example, assuming the secret entry is named "k2view/mysql.prod" then for the password key, the pattern shall be: `secretName=k2view/mysql.prod&secretKey=password`.
-   
+
    * HashiCorp has two versions, and in each version, the key paths differ. However, this difference in paths does not affect how the keys work or how you configure them in the interface properties. For more information about the versions, read [here](https://developer.hashicorp.com/vault/docs/secrets/kv).
 
    
