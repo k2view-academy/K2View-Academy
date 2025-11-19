@@ -25,7 +25,7 @@ The Baseline rule is always enabled. It can be edited by checking the **Override
 
 * Updating the Crawler-related settings, e.g., a sample size. 
 * Updating the parameters of the product built-in plugins. 
-* [Adding a new plugins](13_discovery_pipeline_settings.md#adding-new-plugins) - described further in this article. 
+* [Adding a new plugins](13_discovery_pipeline_settings.md#adding-new-plugins) — described further in this article. 
 
 Note that the Baseline rule overrides are automatically propagated to the project-level rules. For example, when a plugin is updated from 'active' to 'inactive' in the baseline, it becomes 'inactive' in all project-level rules. A project rule, however, can override the baseline rule.
 
@@ -108,7 +108,7 @@ When multiple rules are defined for the same data platform, they adhere to the f
 
 **Example of rules combination and hierarchy**
 
-The below image shows 3 rules defined for the **AdventureWorks** data platform:
+The below image shows three rules defined for the **AdventureWorks** data platform:
 
 ![](../images/discovery_pipeline_h.png)
 
