@@ -14,8 +14,8 @@ The artifacts are uploaded to the Fabric memory as **catalog_field_info** and **
 
 In addition, the following CSV-format files are created and saved in the Project under the  ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder:
 
-* Field artifacts files, with the following name format: ```catalog_field_info___<dataPlatform>_<schema>.csv```, (containing 3 underscores before the data platform name).
-* Relation artifact files, with the following name format: ```catalog_relations_info___<dataPlatform>_<schema>.csv```, (containing 3 underscores before the data platform name). It includes a list of *refersTo* relations with their properties (parent info, child info, origin). Note that these files are only generated starting from V8.3.1.
+* **Field artifacts** files, with the following name format: ```catalog_field_info___<dataPlatform>_<schema>.csv```, (containing 3 underscores before the data platform name).
+* **Relation artifact** files, with the following name format: ```catalog_relations_info___<dataPlatform>_<schema>.csv```, (containing 3 underscores before the data platform name). It includes a list of *refersTo* relations with their properties (parent info, child info, origin). Note that these files are generated only from V8.3.1 onward.
 
 The below image is an example of a ```catalog_field_info___DB2_sakila.csv``` file:
 
