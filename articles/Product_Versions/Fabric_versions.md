@@ -20,7 +20,7 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td>Aug 7, 2025</td>
             <td>HF5</td>
             <td>Nov 20, 2025</td>
-            <td>345</td>
+            <td>349</td>
             <td>17.5</td>
             <td>4.1.8</td>
             <td></td>
