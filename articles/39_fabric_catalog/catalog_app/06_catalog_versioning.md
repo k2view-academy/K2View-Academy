@@ -2,15 +2,15 @@
 
 The Catalog supports **versioning**, which is the ability to create a new Catalog version in the Neo4j Graph DB every time the Discovery process runs and finds differences when comparing with the previous version.
 
-A user can view each version separately or check the differences between 2 selected versions using the Catalog application, as described below.
+A user can view each version separately or check the differences between two selected versions using the Catalog application, as described below.
 
 ## Version Creation
 
-Every time the Discovery job is executed, it performs the comparison between the current results and the previous Catalog version of the same data platform. The changes can be either due to the data source changes (such as a new table or a field) or due to the configuration changes (such as a new profiling rule or an update of an existing one). 
+Every time the Discovery job is executed, it performs a comparison between the current results and the previous Catalog version of the same data platform. The changes can be either due to the data source changes (such as a new table or a field) or due to the configuration changes (such as a new profiling rule or an update of an existing one). 
 
-If the Discovery process doesn't identify any changes either in the data source or in the configuration rules, it doesn't create a new Catalog version.
+If the Discovery process does not identify any changes in either the data source or the configuration rules, it does not create a new Catalog version.
 
-If the changes are found, a new version is created and the can be analyzed by version comparison, as explained further in this article. 
+If changes are found, a new version is created and the can be analyzed by version comparison, as explained further in this article. 
 
 Additional trigger for a version creation is a manual edit of the Catalog. 
 
