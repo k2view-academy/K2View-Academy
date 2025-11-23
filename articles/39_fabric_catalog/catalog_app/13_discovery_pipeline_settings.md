@@ -51,13 +51,13 @@ A **rule** should be attached to a data platform, along with several others para
 ![](../images/discovery_pipeline_2.png)
 
 * Click on **Add Rule +** to create a new rule. 
-  * Starting from Fabric V8.3.1, when a new rule is added, the Crawler Filter is set by default to **'Exclude Others'**. It can be changed any other value if needed. 
+  * Starting from Fabric V8.3.1, when a new rule is added, the Crawler Filter is set by default to **'Exclude Others'**. It can be changed to any other value if needed. 
 
 
 * The mandatory rule's parameters vary based on the Crawler Filter value:
   * When **Crawler Filter** is set to either **'Exclude Others'** or **'Exclude This'**, Data Platform and Schema are mandatory, while Dataset population is optional.
   * When **Crawler Filter** is set to **'No Filter'**, only Data Platform is mandatory. In this case, selecting an **'Override'** checkbox is mandatory.
-* The same rule may include a filter and the overrides by setting **Crawler Filter** = **'Exclude Others'** and a checking the **Override** checkbox.
+* The same rule may include a filter and the overrides by setting **Crawler Filter** = **'Exclude Others'** and checking the **Override** checkbox.
 
 
 #### Rule Type: Crawler Filter = Exclude This 
@@ -92,7 +92,7 @@ When the *Crawler Filter* is empty and the *Override* checkbox is checked:
 
 **Example of a rule applied on Schema & Dataset level**
 
-The below image shows a rule defined for the **CUSTOMER** table of **CRM_DB** data platform & **main** schema. 
+The below image shows a rule defined for the **CUSTOMER** table of the **CRM_DB** data platform and **main** schema. 
 
 The purpose of this rule is to override the Sample Size definition, increasing it to 25% (instead of the default 10% setting). This override is only applicable for the specified dataset. 
 
@@ -118,20 +118,20 @@ The below image shows three rules defined for the **AdventureWorks** data platfo
 
 ## Adding New Plugins
 
-When a new plugin is created in a project, it should be added to the Baseline rule in order to become part of the Discovery job execution. Once added to the baseline, the new plugin is automatically propagated to all the existing rules and can have different settings in each rule.
+When a new plugin is created in a project, it should be added to the Baseline rule in order to become part of the Discovery job execution. Once added to the baseline, the new plugin is automatically propagated to all existing rules and can have different settings in each.
 
-For example, when a newly created plugin is applicable only for running Discovery on the CRM_DB, it should be added to the baseline as 'inactive'. In addition, a rule for the CRM_DB should be created, where this plugin should be set to 'active'.
+For example, when a newly created plugin is applicable only to running Discovery on the CRM_DB, it should be added to the baseline as 'inactive'. In addition, a rule for the CRM_DB should be created, where this plugin is set to 'active'.
 
 The steps for adding a new plugin to the pipeline are:
 
 1. Check the **Override** checkbox of the Baseline rule.
 2. Click the ![](../images/dots.png) icon to open the Plugins context menu and choose **Add Plugin**.
-3. Alternatively, you can select an existing plugin from the list and choose **Duplicate selected** in the context menu. Once the plugin has been duplicated, you can update all its parameters. 
+3. Alternatively, you can select an existing plugin from the list and choose **Duplicate selected** from the context menu. Once the plugin has been duplicated, you can update all its parameters. 
 
 ![](../images/discovery_pipeline_new_plugin.png)
 
 
 
-The new plugin is always added to the end of the Plugins list. However, the plugin's execution order can be changed by dragging it to a required position in the list.  
+The new plugin is always added to the end of the Plugins list. However, the plugin's execution order can be changed by dragging it to the desired position within the list.  
 
-Note that the **Delete selected** option in the context menu is only available for the project plugins while the product plugins cannot be deleted. If a product plugin is not needed, it can be set to 'inactive' in the Baseline rule.
+Note that the **Delete selected** option in the context menu is available only for the project plugins while the product plugins cannot be deleted. If a product plugin is not needed, it can be set to 'inactive' in the Baseline rule.
