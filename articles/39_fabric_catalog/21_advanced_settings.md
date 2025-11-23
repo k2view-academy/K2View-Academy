@@ -63,5 +63,5 @@ The ```DATA_SNAP_WRITE_MEMORY_CAP_MB``` parameter in the ```[data_discovery]``` 
 
 The ```STUDIO_INTERFACES_FROM_CATALOG``` (known as ```ENABLE_DATA_DISCOVERY``` before V8.3) is a hidden configuration parameter that defines whether the interfaces metadata (in the Web Studio's Interface Explorer) should be retrieved from the Catalog or from the source DB. By default, it is set to true. If the Fabric configuration does not include Catalog, the ```STUDIO_INTERFACES_FROM_CATALOG``` parameter should be added to this section and set to false, to prevent the Studio APIs trying to retrieve the metadata from the Catalog.
 
-
+Starting from V8.3.1, during the version creation in GraphDB step of the Discovery job the list of version changes are split into batches and written into Neo4j as separate transactions, allowing the batches to run in parallel and by that reduce the memory consumption. The ```NODES_BATCH_SIZE_PER_TRANSACTION``` parameter in the ```[data_discovery]``` section of the config.ini file defines the maximum number of nodes written into Neo4j in each transaction. By default, it's set to 5000. In addition, the ```RELATIONS_BATCH_SIZE_PER_TRANSACTION``` parameters defines the maximum number of relations written into Neo4j per each transaction.By default, its set to 1000.
 
