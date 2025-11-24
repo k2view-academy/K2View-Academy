@@ -27,17 +27,17 @@ The Baseline rule is always enabled. It can be edited by checking the **Override
 * Updating the parameters of the product's built-in plugins. 
 * [Adding a new plugins](13_discovery_pipeline_settings.md#adding-new-plugins) — described further in this article. 
 
-Note that the Baseline rule overrides are automatically propagated to the project-level rules. For example, when a plugin is updated from 'active' to 'inactive' in the baseline, it becomes 'inactive' in all project-level rules. A project rule, however, can override the baseline rule.
+Note that the Baseline rule overrides are automatically propagated to the project-level rules. For example, when a plugin is updated from 'active' to 'inactive' in the baseline, it becomes 'inactive' in all project-level rules. A project rule, however, can override the Baseline rule.
 
 #### Revert Baseline Overrides
 
-The Baseline rule overrides can be reverted in one of the following ways:
+The Baseline rule overrides can be reverted by one of the following ways:
 
 ![](../images/discovery_pipeline_revert.png)
 
 1. Unchecking the **Override** checkbox on the Baseline rule to remove all overrides at once.
-2. Clicking the **revert** icon at the lower-left side of the screen to reset the plugin's order to the original order.
-3. Clicking the **revert** icon at the lower-right side of the screen to reset the plugin's current settings back to the baseline.
+2. Clicking the **revert** icon at the lower-left pane of the screen to reset the plugin order to its original sequence.
+3. Clicking the **revert** icon at the lower-right pane of the screen to reset the plugin's current settings back to the baseline.
    * Note that if this is a project-level plugin, reverting to the baseline would delete it (since this plugin is not part of the baseline).
 
 ## Project Rules
