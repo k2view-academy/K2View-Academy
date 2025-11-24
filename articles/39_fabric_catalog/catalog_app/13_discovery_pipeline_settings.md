@@ -61,7 +61,7 @@ A **rule** should be attached to a data platform, along with several others para
 
 #### Rule Type: Crawler Filter = Exclude This 
 
-When the filter is set to **Exclude This**:
+When the filter is set to '**Exclude This**':
 
 * The Crawler **excludes** the specified *Schema(s)* and *Dataset(s)*. Thus, at least the schema should be populated.
 * This rule cannot be combined with the *Override* action, as the specified *Schema(s)* and *Dataset(s)* are excluded by the Crawler.
@@ -76,7 +76,7 @@ The purpose of this rule is to completely exclude the **CASE_NOTES** table from 
 
 #### Rule Type: Crawler Filter = Exclude Others
 
-When the filter is set to **Exclude Others**:
+When the filter is set to '**Exclude Others**':
 
 * The Crawler will **include** only the specified *Schema(s)* and *Dataset(s)* (if they were stated). Thus, at least the schema should be populated.
 * This rule can be combined with the *Override* action. It allows to define the Crawler's include list as well as to override the Baseline rules at the same time.
@@ -117,9 +117,9 @@ The below image shows three rules defined for the **AdventureWorks** data platfo
 
 ## Adding New Plugins
 
-When a new plugin is created in a project, it should be added to the Baseline rule in order to become part of the Discovery job execution. Once added to the baseline, the new plugin is automatically propagated to all existing rules and can have different settings in each.
+When a new plugin is created in a project, it should be added to the Baseline rule in order to be included in the Discovery job execution. Once added to the baseline, the new plugin is automatically propagated to all existing rules and can have different settings in each.
 
-For example, when a newly created plugin is applicable only to running Discovery on the CRM_DB, it should be added to the baseline as 'inactive'. In addition, a rule for the CRM_DB should be created, where this plugin is set to 'active'.
+For example, if a newly created plugin is applicable only to running Discovery on the CRM_DB, it should be added to the baseline as 'inactive'. Then, a rule for the CRM_DB should be created, where this plugin is set to 'active'.
 
 The steps for adding a new plugin to the pipeline are:
 
@@ -133,4 +133,4 @@ The steps for adding a new plugin to the pipeline are:
 
 The new plugin is always added to the end of the Plugins list. However, the plugin's execution order can be changed by dragging it to the desired position within the list.  
 
-Note that the **Delete selected** option in the context menu is available only for the project plugins while the product plugins cannot be deleted. If a product plugin is not needed, it can be set to 'inactive' in the Baseline rule.W
+Note that the **Delete selected** option in the context menu is available only for the project plugins as product plugins cannot be deleted. If a product plugin is not needed, it can be set to 'inactive' in the Baseline rule.W
