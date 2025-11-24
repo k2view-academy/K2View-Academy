@@ -28,17 +28,17 @@ The Catalog tree is then displayed using the standard coloring scheme, with node
 
 To compare two versions, click the comparison <img src="../images/compare.png" style="zoom:75%;" /> icon in the version's drop-down list. The Catalog tree is then displayed using the comparison coloring scheme, indicating the differences between the two versions, as follows:
 
-* The new elements are green, the removed elements are red, and the updated elements are purple.
-* When a property is updated, it is displayed twice – the new value is highlighted in green whereas the removed value is in red.
-* All unchanged entities and relations are grey.
+* New elements are shown in green, the removed elements in red, and updated elements in purple.
+* When a property is updated, it is displayed twice — the new value is highlighted in green, while the removed value is shown in red.
+* All unchanged entities and relations are shown in grey.
 
-To return to a regular view mode, open the version's drop-down list again and click a version number.
+To return to the regular view mode, open the version's drop-down list again and click a version number.
 
 <img src="../images/compare_versions.png" style="zoom:67%;" />
 
 ### Show Differences Only
 
-When a schema contains too many datasets, it might be difficult to spot the updated ones. To view only the changes, start from expanding the schema and then click the "Show differences only" icon in the Catalog's legend. Note that this icon is only visible in the version comparison mode.
+When a schema contains too many datasets, it might be difficult to spot the updated ones. To view only the changes, start by expanding the schema and then click the 'Show differences only' icon in the Catalog's legend. Note that this icon is only visible in the version comparison mode.
 
 <img src="../images/show_diff_only.png"  />
 
