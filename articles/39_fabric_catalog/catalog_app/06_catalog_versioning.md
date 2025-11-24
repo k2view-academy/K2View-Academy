@@ -26,7 +26,7 @@ The Catalog tree is then displayed using the standard coloring scheme, with node
 
 ## Version Comparison
 
-To compare 2 versions, click the comparison <img src="../images/compare.png" style="zoom:75%;" /> icon in the version's drop-down list. The Catalog tree is then displayed using the comparison coloring scheme, indicating the differences between the 2 versions, as follows:
+To compare two versions, click the comparison <img src="../images/compare.png" style="zoom:75%;" /> icon in the version's drop-down list. The Catalog tree is then displayed using the comparison coloring scheme, indicating the differences between the two versions, as follows:
 
 * The new elements are green, the removed elements are red, and the updated elements are purple.
 * When a property is updated, it is displayed twice – the new value is highlighted in green whereas the removed value is in red.
@@ -44,7 +44,7 @@ When a schema contains too many datasets, it might be difficult to spot the upda
 
 ### Version Differences Report
 
-The **Version Differences** screen, available in Fabric V8.3.1, displays all changes between the 2 selected versions, under the selected data platform and schema. The purpose of this screen is to visualize the changes in a table view, so that it will be easier to identify the differences.
+The **Version Differences** screen, available in Fabric V8.3.1, displays all changes between the two selected versions, under the selected data platform and schema. The purpose of this screen is to visualize the changes in a table view, so that it will be easier to identify the differences.
 
 The screen can be accessed by clicking the Version Differences Report icon, available on the schema node in the version comparison mode only.
 
