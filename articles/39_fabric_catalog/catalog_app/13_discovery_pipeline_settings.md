@@ -38,7 +38,7 @@ The Baseline rule overrides can be reverted by one of the following ways:
 1. Unchecking the **Override** checkbox on the Baseline rule to remove all overrides at once.
 2. Clicking the **revert** icon at the lower-left pane of the screen to reset the plugin order to its original sequence.
 3. Clicking the **revert** icon at the lower-right pane of the screen to reset the plugin's current settings back to the baseline.
-   * Note that if this is a project-level plugin, reverting to the baseline would delete it (since this plugin is not part of the baseline).
+   * Note that reverting to the baseline would delete project-level plugins as they are not part of the baseline.
 
 ## Project Rules
 
@@ -51,7 +51,7 @@ A **rule** should be attached to a data platform, along with several others para
 ![](../images/discovery_pipeline_2.png)
 
 * Click on **Add Rule +** to create a new rule. 
-  * Starting from Fabric V8.3.1, when a new rule is added, the Crawler Filter is set by default to **'Exclude Others'**. It can be changed to any other value if needed. 
+  * Starting from Fabric V8.3.1, when a new rule is added, its Crawler Filter parameter is set by default to **'Exclude Others'**. This value can be updated to any other value if needed. 
 * There might be three types of rules:
   * For **filter** rule creation, set either **'Exclude Others'** or **'Exclude This'** in the **Crawler Filter** column. In this case, Data Platform and Schema are mandatory, while Dataset population is optional.
   * For **override** rule creation, only selecting a Data Platform and checking an **'Override'** checkbox are mandatory. This rule will be applicable for the whole Data Platform. By populating Schema(s) and Dataset(s) will make this rule more specific.
