@@ -12,7 +12,7 @@ If the Discovery process does not identify any changes in either the data source
 
 If changes are found, a new version is created and the can be analyzed by version comparison, as explained further in this article. 
 
-Additional trigger for a version creation is a manual edit of the Catalog. 
+An additional trigger for a version creation is a manual edit of the Catalog. 
 
 [Click here for more information about manual overrides](07_manual_overrides.md).
 
@@ -22,7 +22,7 @@ By default, the Catalog application displays the latest available version. To vi
 
 <img src="../images/versions.png" style="zoom:75%;" />
 
-The Catalog tree is then displayed using the standard coloring scheme, where all the nodes are blue and the relations are orange. 
+The Catalog tree is then displayed using the standard coloring scheme, with nodes shown in blue and relations in orange. 
 
 ## Version Comparison
 
