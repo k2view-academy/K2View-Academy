@@ -52,12 +52,11 @@ A **rule** should be attached to a data platform, along with several others para
 
 * Click on **Add Rule +** to create a new rule. 
   * Starting from Fabric V8.3.1, when a new rule is added, the Crawler Filter is set by default to **'Exclude Others'**. It can be changed to any other value if needed. 
+* There might be three types of rules:
+  * For **filter** rule creation, set either **'Exclude Others'** or **'Exclude This'** in the **Crawler Filter** column. In this case, Data Platform and Schema are mandatory, while Dataset population is optional.
+  * For **override** rule creation, only selecting a Data Platform and checking an **'Override'** checkbox are mandatory. This rule will be applicable for the whole Data Platform. By populating Schema(s) and Dataset(s) will make this rule more specific.
 
-
-* The mandatory rule's parameters vary based on the Crawler Filter value:
-  * When **Crawler Filter** is set to either **'Exclude Others'** or **'Exclude This'**, Data Platform and Schema are mandatory, while Dataset population is optional.
-  * When **Crawler Filter** is set to **'No Filter'**, only Data Platform is mandatory. In this case, selecting an **'Override'** checkbox is mandatory.
-* The same rule may include a filter and the overrides by setting **Crawler Filter** = **'Exclude Others'** and checking the **Override** checkbox.
+  * For creating a **combined** rule, which includes both a filter and the overrides, set **Crawler Filter** = **'Exclude Others'** and check the **Override** checkbox.
 
 
 #### Rule Type: Crawler Filter = Exclude This 
@@ -134,4 +133,4 @@ The steps for adding a new plugin to the pipeline are:
 
 The new plugin is always added to the end of the Plugins list. However, the plugin's execution order can be changed by dragging it to the desired position within the list.  
 
-Note that the **Delete selected** option in the context menu is available only for the project plugins while the product plugins cannot be deleted. If a product plugin is not needed, it can be set to 'inactive' in the Baseline rule.
+Note that the **Delete selected** option in the context menu is available only for the project plugins while the product plugins cannot be deleted. If a product plugin is not needed, it can be set to 'inactive' in the Baseline rule.W
