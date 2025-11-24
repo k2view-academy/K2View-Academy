@@ -2,7 +2,12 @@
 
 ### Overview
 
-The Catalog provides the ability to build artifacts and save them in the Project tree. The field artifact files include details of all Catalog fields and their properties - such as Classification and PII - for the currently displayed Catalog version. The relations artifact files include details of the Catalog's relations.
+The Catalog provides the ability to build **artifacts** and save them in the Project tree as CSV files. They are also created as MTables, uploaded to the Fabric memory.
+
+There are two kinds of artifacts: the artifacts of the Catalog fields and the artifacts of the relations.  
+
+* The **field** artifact files include details of all Catalog fields and their properties - such as Classification and PII - for the selected Catalog version. 
+* The **relations** artifact files include details of the Catalog's relations.
 
 The prerequisite for building the Catalog artifact is running the Discovery job for at least one project interface.
 
