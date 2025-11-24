@@ -2,9 +2,9 @@
 
 ### Overview
 
-The Catalog provides the ability to build **artifacts** and save them in the Project tree as CSV files. They are also created as MTables, uploaded to the Fabric memory.
+The Catalog provides the ability to build **artifacts** and save them in the Project tree as CSV files. The artifacts are also created as MTables, uploaded to the Fabric memory.
 
-There are two kinds of artifacts: the artifacts of **Catalog fields** and the artifacts of **relations**.  
+There are two kinds of artifacts: those of **Catalog fields** and those of **relations**.  
 
 Artifacts are used by the masking and synthetic data generation mechanism, as explained [here](11_catalog_masking.md).
 
