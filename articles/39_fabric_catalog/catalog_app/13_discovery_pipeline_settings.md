@@ -4,7 +4,7 @@
 
 The **Discovery Pipeline** screen in the Catalog Settings tab provides a full and comprehensive view of the Discovery job configuration. It displays the product's default baseline configuration (retrieved from the product's **plugins.discovery** file) and the project-level rules. 
 
-The **Baseline** rule includes a list of product built-in plugins with their input parameters, data snapshot sample size and more. 
+The **Baseline** rule includes a list of the product's built-in plugins with their input parameters, data snapshot sample size and more. 
 
 The Discovery Pipeline screen enables performing the following actions, described further in this article:
 
@@ -24,7 +24,7 @@ The **Baseline** rule is a default configuration, applied when running the Disco
 The Baseline rule is always enabled. It can be edited by checking the **Override** checkbox. The following changes can be applied to the Baseline rule:
 
 * Updating the Crawler-related settings, e.g., a sample size. 
-* Updating the parameters of the product built-in plugins. 
+* Updating the parameters of the product's built-in plugins. 
 * [Adding a new plugins](13_discovery_pipeline_settings.md#adding-new-plugins) — described further in this article. 
 
 Note that the Baseline rule overrides are automatically propagated to the project-level rules. For example, when a plugin is updated from 'active' to 'inactive' in the baseline, it becomes 'inactive' in all project-level rules. A project rule, however, can override the baseline rule.
