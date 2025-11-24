@@ -4,12 +4,9 @@
 
 The Catalog provides the ability to build **artifacts** and save them in the Project tree as CSV files. They are also created as MTables, uploaded to the Fabric memory.
 
-There are two kinds of artifacts: the artifacts of the Catalog fields and the artifacts of the relations.  
+There are two kinds of artifacts: the artifacts of **Catalog fields** and the artifacts of **relations**.  
 
-* The **field** artifact files include details of all Catalog fields and their properties - such as Classification and PII - for the selected Catalog version. 
-* The **relations** artifact files include details of the Catalog's relations.
-
-The prerequisite for building the Catalog artifact is running the Discovery job for at least one project interface.
+Artifacts are used by the masking and synthetic data generation mechanism, as explained [here](11_catalog_masking.md).
 
 ### Building Artifacts
 
@@ -17,7 +14,7 @@ Catalog artifacts are created by clicking **Actions > Build Artifacts** in the C
 
 The artifacts are uploaded to the Fabric memory as **catalog_field_info** and **catalog_relations_info** [MTables](/articles/09_translations/06_mtables_overview.md). 
 
-In addition, the following CSV-format files are created and saved in the Project under the  ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder:
+The following CSV-format files are created and saved in the Project under the  ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder:
 
 * **Field artifacts** files, with the following name format: ```catalog_field_info___<dataPlatform>_<schema>.csv```, (containing 3 underscores before the data platform name).
 * **Relation artifact** files, with the following name format: ```catalog_relations_info___<dataPlatform>_<schema>.csv```, (containing 3 underscores before the data platform name). It includes a list of *refersTo* relations with their properties (parent info, child info, origin). Note that these files are generated only from V8.3.1 onward.
