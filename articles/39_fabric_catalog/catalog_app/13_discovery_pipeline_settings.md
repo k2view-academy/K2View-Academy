@@ -86,7 +86,7 @@ When the filter is set to '**Exclude Others**':
 
 When the *Crawler Filter* is empty and the *Override* checkbox is checked:
 
-* The Crawler is executed on the whole Data Platform.
+* The Crawler is executed on the entire Data Platform.
 * The **override** rules are applied only on the specified *Schema(s)* and *Datasets(s)*.
 
 **Example of a rule applied on Schema and Dataset level**
