@@ -68,7 +68,7 @@ When the filter is set to '**Exclude This**':
 
 **Example of an 'Exclude This' rule applied on Schema and Dataset level**
 
-The below image presents a rule defined for the **CASE_NOTES** table of **CRM_DB** data platform & **main** schema. 
+The below image presents a rule defined for the **CASE_NOTES** table of **CRM_DB** data platform and **main** schema. 
 
 The purpose of this rule is to completely exclude the **CASE_NOTES** table from the Discovery process. 
 
@@ -89,7 +89,7 @@ When the *Crawler Filter* is empty and the *Override* checkbox is checked:
 * The Crawler is executed on the whole Data Platform.
 * The override rules are applied only on the specified *Schema(s)* and *Datasets(s)*.
 
-**Example of a rule applied on Schema & Dataset level**
+**Example of a rule applied on Schema and Dataset level**
 
 The below image presents a rule defined for the **CUSTOMER** table of the **CRM_DB** data platform and **main** schema. 
 
