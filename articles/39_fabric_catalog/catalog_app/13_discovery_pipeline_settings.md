@@ -21,7 +21,7 @@ This article describes the capabilities of the Discovery Pipeline screen and exp
 
 The **Baseline** rule is a default configuration, applied when running the Discovery job on any data platform. It includes a sample size definition, a global schema exclude list and a list of product plugins with their settings.
 
-The Baseline rule is always enabled. It can be edited by checking the **Override** checkbox. The following changes can be applied to the Baseline rule:
+The Baseline rule is always enabled. It can be edited by checking the ***Override*** checkbox. The following changes can be applied to the Baseline rule:
 
 * Updating the Crawler-related settings, e.g., a sample size. 
 * Updating the parameters of the product's built-in plugins. 
@@ -35,7 +35,7 @@ The Baseline rule overrides can be reverted by one of the following ways:
 
 ![](../images/discovery_pipeline_revert.png)
 
-1. Unchecking the **Override** checkbox on the Baseline rule to remove all overrides at once.
+1. Unchecking the ***Override*** checkbox on the Baseline rule to remove all overrides at once.
 2. Clicking the **revert** icon at the lower-left pane of the screen to reset the plugin order to its original sequence.
 3. Clicking the **revert** icon at the lower-right pane of the screen to reset the plugin's current settings back to the baseline.
    * Note that reverting to the baseline would delete project-level plugins as they are not part of the baseline.
@@ -54,9 +54,9 @@ A **rule** should be attached to a data platform, along with several others para
   * Starting from Fabric V8.3.1, when a new rule is added, its Crawler Filter parameter is set by default to '**Exclude Others**'. This value can be updated to any other value if needed. 
 * Rules may be of three types:
   * For **filter** rule creation, set either '**Exclude Others**' or '**Exclude This**' in the **Crawler Filter** column. In this case, *Data Platform* and *Schema(s)* fields are mandatory, while the *Dataset* field is optional.
-  * For **override** rule creation, the only mandatory actions are selecting a *Data Platform* and checking the '**Override**' checkbox. This rule will apply to the entire Data Platform. Populating the *Schema(s)* and *Dataset(s)* fields will make this rule more specific.
+  * For **override** rule creation, the only mandatory actions are selecting a *Data Platform* and checking the ***Override*** checkbox. This rule will apply to the entire Data Platform. Populating the *Schema(s)* and *Dataset(s)* fields will make this rule more specific.
 
-  * For creating a **combined** rule, which includes both a filter and the overrides, set **Crawler Filter** = **'Exclude Others'** and check the **Override** checkbox.
+  * For creating a **combined** rule, which includes both a filter and the overrides, set **Crawler Filter** = **'Exclude Others'** and check the ***Override*** checkbox.
 
 
 #### Rule Type: Crawler Filter = Exclude This 
@@ -82,7 +82,7 @@ When the filter is set to '**Exclude Others**':
 * This rule can be combined with the *Override* action. It allows to define the Crawler's include list as well as to override the Baseline rules at the same time.
 
 
-#### Rule Type: No Crawler Filter; 'Override' is Checked
+#### Rule Type: No *Crawler Filter*; *Override* is Checked
 
 When the *Crawler Filter* is empty and the *Override* checkbox is checked:
 
@@ -123,7 +123,7 @@ For example, if a newly created plugin is applicable only to running Discovery o
 
 The steps for adding a new plugin to the pipeline are:
 
-1. Check the **Override** checkbox of the Baseline rule.
+1. Check the *Override* checkbox of the Baseline rule.
 2. Click the ![](../images/dots.png) icon to open the Plugins context menu and choose **Add Plugin**.
 3. Alternatively, you can select an existing plugin from the list and choose **Duplicate selected** from the context menu. Once the plugin has been duplicated, you can update all its parameters. 
 
@@ -133,4 +133,4 @@ The steps for adding a new plugin to the pipeline are:
 
 The new plugin is always added to the end of the Plugins list. However, the plugin's execution order can be changed by dragging it to the desired position within the list.  
 
-Note that the **Delete selected** option in the context menu is available only for the project plugins as product plugins cannot be deleted. If a product plugin is not needed, it can be set to 'inactive' in the Baseline rule.W
+Note that the **Delete selected** option in the context menu is available only for the project plugins as product plugins cannot be deleted. If a product plugin is not needed, it can be set to 'inactive' in the Baseline rule.
