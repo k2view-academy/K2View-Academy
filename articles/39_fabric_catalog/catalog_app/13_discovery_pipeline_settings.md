@@ -64,11 +64,11 @@ A **rule** should be attached to a data platform, along with several others para
 When the filter is set to '**Exclude This**':
 
 * The Crawler **excludes** the specified *Schema(s)* and *Dataset(s)*. Thus, at least the schema should be populated.
-* This rule cannot be combined with the *Override* action, as the specified *Schema(s)* and *Dataset(s)* are excluded by the Crawler.
+* This rule cannot be combined with the *Override* action, as the Crawler excludes the specified *Schema(s)* and *Dataset(s)*.
 
-**Example of 'Exclude This' rule applied on Schema & Dataset level**
+**Example of an 'Exclude This' rule applied on Schema and Dataset level**
 
-The below image shows a rule defined for the **CASE_NOTES** table of **CRM_DB** data platform & **main** schema. 
+The below image presents a rule defined for the **CASE_NOTES** table of **CRM_DB** data platform & **main** schema. 
 
 The purpose of this rule is to completely exclude the **CASE_NOTES** table from the Discovery process. 
 
@@ -91,7 +91,7 @@ When the *Crawler Filter* is empty and the *Override* checkbox is checked:
 
 **Example of a rule applied on Schema & Dataset level**
 
-The below image shows a rule defined for the **CUSTOMER** table of the **CRM_DB** data platform and **main** schema. 
+The below image presents a rule defined for the **CUSTOMER** table of the **CRM_DB** data platform and **main** schema. 
 
 The purpose of this rule is to override the Sample Size definition, increasing it to 25% (instead of the default 10% setting). This override is only applicable for the specified dataset. 
 
@@ -99,21 +99,21 @@ The purpose of this rule is to override the Sample Size definition, increasing i
 
 #### Rules Combination and Hierarchy
 
-Multiple rules can be defined for the same data platform. The purpose of creating multiple rules is to allow variations of the Discovery process execution for different elements. For example, one may need to set a higher sample size for some datasets or execute a certain plugin on a selected dataset or schema only. 
+Multiple rules can be defined for the same data platform. The purpose of creating multiple rules is to allow variations of the Discovery process execution for different elements. For example, one may need to set a larger sample size for some datasets or execute a specific plugin on a designated dataset or schema. 
 
 When multiple rules are defined for the same data platform, they adhere to the following hierarchy: 
 
-- When multiple rules apply on the same process element, the most specific rule takes precedence. 
+- When multiple rules apply on the same process element, the most specific one takes priority. 
 
-**Example of rules combination and hierarchy**
+**Example of rule combinations and hierarchy**
 
-The below image shows three rules defined for the **AdventureWorks** data platform:
+The below image presents three rules defined for the **AdventureWorks** data platform:
 
 ![](../images/discovery_pipeline_h.png)
 
 - **Rule1** defines one or more overrides applied on all elements of the AdventureWorks. 
 - **Rule2** defines a filter on Sales schema. This rule implies that the Sales schema is excluded from the Crawler on the AdventureWorks. 
-- **Rule3** defines an override that should be applied on the specified datasets of the Person schema only. This rule implies that plugins applied on these datasets are only those defined in the **Rule3**.
+- **Rule3** defines an override that applies only to the specified datasets of the Person schema. This means that for this dataset, only the plugins defined in **Rule3** are applied. Having the most specific criteria, this rule takes priority.
 
 ## Adding New Plugins
 
