@@ -2,9 +2,9 @@
 
 ## Overview
 
-The **Discovery Pipeline** screen in the Catalog Settings tab provides a full and comprehensive view of the Discovery job configuration. It displays the product's default baseline configuration (retrieved from the product's **plugins.discovery** file) and the project-level rules. 
+The **Discovery Pipeline** screen in the Catalog Settings tab provides a full and comprehensive view of the Discovery job configuration. It displays the product's default baseline configuration (retrieved from the product's plugins.discovery file) and the project-level rules. 
 
-The **Baseline** rule includes a list of the product's built-in plugins with their input parameters, data snapshot sample size and more. 
+The Baseline rule includes a list of the product's built-in plugins with their input parameters, data snapshot sample size and more. 
 
 The Discovery Pipeline screen enables performing the following actions, described further in this article:
 
@@ -21,7 +21,7 @@ This article describes the capabilities of the Discovery Pipeline screen and exp
 
 The **Baseline** rule is a default configuration, applied when running the Discovery job on any data platform. It includes a sample size definition, a global schema exclude list and a list of product plugins with their settings.
 
-The Baseline rule is always *Enabled*. It can be edited by checking the ***Override*** checkbox. The following changes can be applied to the Baseline rule:
+The Baseline rule is always enabled. It can be edited by checking the **Override** checkbox. The following changes can be applied to the Baseline rule:
 
 * Updating the Crawler-related settings, e.g., a sample size. 
 * Updating the parameters of the product's built-in plugins. 
@@ -35,7 +35,7 @@ The Baseline rule overrides can be reverted by one of the following ways:
 
 ![](../images/discovery_pipeline_revert.png)
 
-1. Unchecking the ***Override*** checkbox on the Baseline rule to remove all overrides at once.
+1. Unchecking the **Override** checkbox on the Baseline rule to remove all overrides at once.
 2. Clicking the **revert** icon at the lower-left pane of the screen to reset the plugin order to its original sequence.
 3. Clicking the **revert** icon at the lower-right pane of the screen to reset the plugin's current settings back to the baseline.
    * Note that reverting to the baseline would delete project-level plugins as they are not part of the baseline.
@@ -44,19 +44,19 @@ The Baseline rule overrides can be reverted by one of the following ways:
 
 The Discovery Pipeline screen enables the user to refine the default configuration per the project's requirements. 
 
-A **rule** should be attached to a data platform, along with several others parameters (schema, dataset, crawler filter and override indicator) that may become mandatory, based on conditions; this is described further in this article. 
+A rule should be attached to a data platform, along with several others parameters (schema, dataset, crawler filter and override indicator) that may become mandatory, based on conditions; this is described further in this article. 
 
 #### How Do I Create a Rule?
 
 ![](../images/discovery_pipeline_2.png)
 
 * Click on '**Add Rule +**' to create a new rule. 
-  * Starting from Fabric V8.3.1, when a new rule is added, its *Crawler Filter* parameter is set by default to '**Exclude Others**'. This value can be updated to any other value if needed. 
+  * Starting from Fabric V8.3.1, when a new rule is added, its **Crawler Filter** parameter is set by default to '**Exclude Others**'. This value can be updated to any other value if needed. 
 * Rules may be of three types:
-  * For **filter** rule creation, set either '**Exclude Others**' or '**Exclude This**' in the ***Crawler Filter*** column. In this case, *Data Platform* and *Schema(s)* fields are mandatory, while the *Dataset* field is optional.
-  * For **override** rule creation, the only mandatory actions are selecting a *Data Platform* and checking the ***Override*** checkbox. This rule will apply to the entire Data Platform. Populating the *Schema(s)* and *Dataset(s)* fields will make this rule more specific.
+  * For filter rule creation, set either '**Exclude Others**' or '**Exclude This**' in the **Crawler Filter** column. In this case, **Data Platform** and **Schema(s)** fields are mandatory, while the Dataset field is optional.
+  * For override rule creation, the only mandatory actions are selecting a **Data Platform** and checking the **Override** checkbox. This rule will apply to the entire Data Platform. Populating the Schema(s) and Dataset(s) fields will make this rule more specific.
 
-  * For creating a **combined** rule, which includes both a filter and the overrides, set **Crawler Filter** = **'Exclude Others'** and check the ***Override*** checkbox.
+  * For creating a combined rule, which includes both a filter and the overrides, set **Crawler Filter** = **'Exclude Others'** and check the **Override** checkbox.
 
 
 #### Rule Type: Crawler Filter = Exclude This 
