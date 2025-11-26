@@ -38,7 +38,7 @@ To return to the regular view mode, open the version's drop-down list again and 
 
 ### Show Differences Only
 
-When a schema contains too many datasets, it might be difficult to spot the updated ones. To view only the changes, start by expanding the schema and then click the 'Show differences only' icon in the Catalog's legend. Note that this icon is only visible in the version comparison mode.
+When a schema contains many datasets, it might be difficult to spot which ones were updated. To view only the changes, start by expanding the schema and then click the 'Show differences only' icon in the Catalog legend. Note that this icon is visible only in version comparison mode.
 
 <img src="../images/show_diff_only.png"  />
 
