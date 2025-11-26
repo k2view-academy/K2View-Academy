@@ -44,15 +44,15 @@ When a schema contains many datasets, it might be difficult to spot which ones w
 
 ### Version Differences Report
 
-The **Version Differences** screen, available in Fabric V8.3.1, displays all changes between the two selected versions, under the selected data platform and schema. The purpose of this screen is to visualize the changes in a table view, so that it will be easier to identify the differences.
+The **Version Differences** screen, available in Fabric V8.3.1, displays all changes between the two selected versions, under the selected data platform and schema. The purpose of this screen is to visualize the changes in a table view, making it easier to identify the differences.
 
-The screen can be accessed by clicking the Version Differences Report icon, available on the schema node in the version comparison mode only.
+The screen can be accessed by clicking the *Version differences report* icon, which is available on the schema node and appears only in version comparison mode.
 
 <img src="../images/version_differences_icon.png" style="zoom:75%;" />
 
-Each line in the  **Version Differences** screen includes the node name, its path and the change type, which indicates whether the node was added, deleted or updated. For properties, the columns Old Value & New Value display the property value.
+Each line in the **Version Differences** screen includes the node name, its path and the type of change. The latter indicates whether the node was added, deleted or updated. For property changes, the *Old Value* and *New Value* columns display the previous and updated property values.
 
-The differences list can be exported into a CSV file by clicking the Export icon.
+The differences list can be exported to a CSV file by clicking the *Export* icon (top-right corner).
 
 <img src="../images/version_differences_report.png" style="zoom:67%;" />
 
