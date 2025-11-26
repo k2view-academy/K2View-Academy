@@ -12,9 +12,9 @@ All of the above plugins are inactive by default and must be activated through t
 
 ## Empty Datasets Discard
 
-Sometimes a data source might include significant number of empty tables which are irrelevant for Catalog and for further LU creation. 
+Sometimes a data source might include significant number of empty tables that are irrelevant for the Catalog and for further LU creation. 
 
-The purpose of this plugin is to improve Catalog usability as well as the LU development process. When activated, the plugin automatically **discards** all empty tables during the Discovery job, writing a message into the Fabric's log (1 message per each schema):
+Accordingly, the purpose of this plugin is to improve the Catalog usability as well as the LU development process. When activated, the plugin automatically **discards** all empty tables during the Discovery job, writing a message in the Fabric log (one message per schema):
 
 ~~~
 "<num> empty datasets were removed from schema <schema name>"
