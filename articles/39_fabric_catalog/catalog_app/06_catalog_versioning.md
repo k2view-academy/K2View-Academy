@@ -50,9 +50,9 @@ The screen can be accessed by clicking the *Version differences report* icon, wh
 
 <img src="../images/version_differences_icon.png" style="zoom:75%;" />
 
-Each line in the **Version Differences** screen includes the node name, its path and the type of change. The latter indicates whether the node was added, deleted or updated. For property changes, the *Old Value* and *New Value* columns display the previous and updated property values.
+Each line in the **Version Differences** window includes the node name, its path and the type of change. The latter indicates whether the node was added, deleted or updated. For property changes, the Old Value and New Value columns display the previous and updated property values.
 
-The differences list can be exported to a CSV file by clicking the *Export* icon (top-right corner).
+The differences list can be exported to a CSV file by clicking the Export icon (top-right corner).
 
 <img src="../images/version_differences_report.png" style="zoom:67%;" />
 
