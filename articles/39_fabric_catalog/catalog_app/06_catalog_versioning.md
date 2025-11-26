@@ -2,7 +2,7 @@
 
 K2view's Catalog supports **versioning**, which is the ability to create a new Catalog version in the Neo4j Graph DB whenever the Discovery process runs and detects differences compared to the previous version.
 
-A user can view each version separately or check the differences between two selected versions using the Catalog application, as described below.
+Using the Catalog application, a user can view each version separately or compare two selected versions to identify their differences, as described below.
 
 ## Version Creation
 
