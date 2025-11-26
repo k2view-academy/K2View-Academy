@@ -12,7 +12,7 @@ If the Discovery process does not identify any differences in either the data so
 
 If differences are detected, a new version is created and they can then be analyzed through version comparison, as described later in this article. 
 
-An additional trigger for a version creation is a manual edit of the Catalog. 
+A new version is also created whenever the Catalog is manually edited. 
 
 [Click here for more information about manual overrides](07_manual_overrides.md).
 
@@ -38,13 +38,13 @@ To return to the regular view mode, open the version's drop-down list again and 
 
 ### Show Differences Only
 
-When a schema contains many datasets, it might be difficult to spot which ones were updated. To view only the changes, start by expanding the schema and then click the 'Show differences only' icon in the Catalog legend. Note that this icon is visible only in version comparison mode.
+When a schema contains many datasets, it might be difficult to spot which ones were updated. To view only the differences between versions, start by expanding the schema and then click the 'Show differences only' icon in the Catalog legend. Note that this icon is visible only in version comparison mode.
 
 <img src="../images/show_diff_only.png"  />
 
 ### Version Differences Report
 
-The **Version Differences** window, available from Fabric V8.3.1, displays all changes between the two selected versions, under the selected data platform and schema. Its purpose is to present data in a table view, making it easier to identify the differences.
+The **Version Differences** window, available from Fabric V8.3.1, displays all changes between the two selected versions, under the selected data platform and schema. Its purpose is to present data in a table view, providing a clear and structured overview.
 
 The screen can be accessed by clicking the *Version differences report* icon, which is available on the schema node and appears only in version comparison mode.
 
