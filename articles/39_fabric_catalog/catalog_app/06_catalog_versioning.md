@@ -6,9 +6,9 @@ Using the Catalog application, a user can view each version separately or compar
 
 ## Version Creation
 
-Every time the Discovery job is executed, it performs a comparison between the current results and the previous Catalog version of the same data platform. The changes can be either due to the data source changes (such as a new table or a field) or due to the configuration changes (such as a new profiling rule or an update of an existing one). 
+Every time the Discovery job is executed, it compares the current results with the previous Catalog version of the same data platform. The differences may result from changes in the data source (such as a new table or field) or from configuration updates, such as adding a new profiling rule or modifying an existing one. 
 
-If the Discovery process does not identify any changes in either the data source or the configuration rules, it does not create a new Catalog version.
+If the Discovery process does not identify any differences in either the data source or the configuration rules, it does not create a new Catalog version.
 
 If changes are found, a new version is created and the can be analyzed by version comparison, as explained further in this article. 
 
