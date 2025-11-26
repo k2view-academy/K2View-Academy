@@ -10,7 +10,7 @@ Every time the Discovery job is executed, it compares the current results with t
 
 If the Discovery process does not identify any differences in either the data source or the configuration rules, it does not create a new Catalog version.
 
-If changes are found, a new version is created and the can be analyzed by version comparison, as explained further in this article. 
+If differences are detected, a new version is created and they can then be analyzed through version comparison, as described later in this article. 
 
 An additional trigger for a version creation is a manual edit of the Catalog. 
 
