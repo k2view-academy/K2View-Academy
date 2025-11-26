@@ -44,7 +44,7 @@ When a schema contains many datasets, it might be difficult to spot which ones w
 
 ### Version Differences Report
 
-The **Version Differences** screen, available in Fabric V8.3.1, displays all changes between the two selected versions, under the selected data platform and schema. The purpose of this screen is to visualize the changes in a table view, making it easier to identify the differences.
+The **Version Differences** window, available from Fabric V8.3.1, displays all changes between the two selected versions, under the selected data platform and schema. Its purpose is to present data in a table view, making it easier to identify the differences.
 
 The screen can be accessed by clicking the *Version differences report* icon, which is available on the schema node and appears only in version comparison mode.
 
