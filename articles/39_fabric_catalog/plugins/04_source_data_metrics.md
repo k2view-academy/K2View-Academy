@@ -5,10 +5,10 @@ This article describes plugins that analyze source systems and calculate various
 **The plugins are:**
 
 * [Empty Datasets Discard](04_source_data_metrics.md#empty-datasets-discard) — excludes empty tables based on the data snapshot results. This plugin is available starting from Fabric V8.3.1.
-* [Data Quality Metrics](04_source_data_metrics.md#data-quality-metrics) — calculates various data quality metrics as described below. These metrics can then be used for masking and synthetic data generation.
-* [Option Set Analyzer](04_source_data_metrics.md#option-set-analyzer) — identifies fields with a limited number of distinct values (in a data sample) and saves them into an MTable. These metrics can then be used for masking and synthetic data generation. This plugin is available starting from Fabric V8.3.
+* [Data Quality Metrics](04_source_data_metrics.md#data-quality-metrics) — calculates various data quality metrics as described below. These metrics can then be applied for data masking and synthetic data generation.
+* [Option Set Analyzer](04_source_data_metrics.md#option-set-analyzer) — identifies fields that contain a limited number of distinct values (within a data sample) and saves them in an MTable. These metrics can then be applied for data masking and synthetic data generation. This plugin is available starting from Fabric V8.3.
 
-All of these plugins are inactive by default and must be activated via Discovery Pipeline if needed. 
+All of the above plugins are inactive by default and must be activated through the Discovery Pipeline if needed. 
 
 ## Empty Datasets Discard
 
