@@ -2,7 +2,7 @@
 
 This article describes plugins that analyze source systems and calculate various metrics. The analysis is done based on data snapshots.
 
-**The plugins are:**
+The plugins are:
 
 * [Empty Datasets Discard](04_source_data_metrics.md#empty-datasets-discard) — excludes empty tables based on the data snapshot results. This plugin is available starting from Fabric V8.3.1.
 * [Data Quality Metrics](04_source_data_metrics.md#data-quality-metrics) — calculates various data quality metrics as described below. These metrics can then be applied for data masking and synthetic data generation.
