@@ -35,7 +35,7 @@ This plugin scans the data of the data sample in order to calculate various data
   * This calculation is performed for alphanumeric and numeric fields (strings, integers and real numbers).
 * **Minimum Value**, **Maximum Value**, **Average**, and **Standard Deviation** are basic statistical calculations performed on numeric or date columns in the data sample.
   * Establishing the existing range of values in the data can assist in verifying whether these values fall within expected or acceptable limits. This can help reveal potential errors, such as outliers or incorrect data entries (e.g., a negative age value).
-  * Understanding the range of values helps to ensure consistency across similar datasets. It can also support business decisions-making by providing insights into variability and distribution. 
+  * Understanding the range of values helps ensure consistency across similar datasets. It can also support business decisions-making by providing insights into variability and distribution. 
   * As part of basic descriptive statistics, these metrics offer an initial glimpse into data distribution and can serve as a precursor to more advanced statistical analyses.
 * **Null Percentage** — the percentage of null values per column. 
   * This percentage is calculated for each column in non-empty tables. The **Null Percentage** property is added to the field's properties when the calculated value exceeds the plugin's threshold. 
