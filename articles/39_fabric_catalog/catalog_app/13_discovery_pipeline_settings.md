@@ -150,7 +150,7 @@ For example, if a newly created plugin is applicable only to running Discovery o
 
 The steps for adding a new plugin to the pipeline are:
 
-1. Check the *Override* checkbox of the Baseline rule.
+1. Check the Override checkbox of the Baseline rule.
 2. Click the ![](../images/dots.png) icon to open the Plugins context menu and choose **Add Plugin**.
 3. Alternatively, you can select an existing plugin from the list and choose **Duplicate selected** from the context menu. Once the plugin has been duplicated, you can update all its parameters. 
 
@@ -160,4 +160,4 @@ The steps for adding a new plugin to the pipeline are:
 
 The new plugin is always added to the end of the Plugins list. However, the plugin's execution order can be changed by dragging it to the desired position within the list.  
 
-Note that the **Delete selected** option in the context menu is available only for the project plugins as product plugins cannot be deleted. If a product plugin is not needed, it can be set to 'inactive' in the Baseline rule.
+Note that the **Delete selected** option in the context menu is available only for the project plugins, as product plugins cannot be deleted. If a product plugin is not needed, it can be set to 'inactive' in the Baseline rule.
