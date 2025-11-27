@@ -82,7 +82,7 @@ The purpose of this rule type is to override one or multiple baseline settings w
 * The Crawler Filter should be set to 'No Filter' as the discovery should be executed on the entire data platform.
 
 
-* Note that when the schema(s) and dataset(s) fields are populated, the override rules are applied only to them. This type of rule has no filter effect.  
+* Note that when the schema(s) and dataset(s) fields are populated, the override rules are applied only to them. This type of rule does not have any filtering effect.  
 
 **Example**
 
