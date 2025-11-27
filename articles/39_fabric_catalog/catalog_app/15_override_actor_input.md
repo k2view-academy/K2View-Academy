@@ -2,13 +2,13 @@
 
 ### Overview
 
-The [PII & Masking tab](10_catalog_settings.md#pii--masking-tab) of the Catalog Settings screen allows to view and update the Catalog-based masking settings per each classification. The masking settings include, amount others, the Generator (actor or flow) - for generation of the masked values. 
+The [PII & Masking tab](10_catalog_settings.md#pii--masking-tab) of the Catalog Settings window allows to view and update the Catalog-based masking settings for each classification. The masking settings include, among other configurations, the Generator (actor or flow) - for generation of the masked values. 
 
-Starting from Fabric V8.3.1, it is possible to override the Generator's input parameters by the values of the Catalog-calculated metrics. The purpose of this capability is to improve the quality of generated data by using the data snapshot values retrieved from the source system during the discovery process.
+Starting from Fabric V8.3.1, it is possible to override the Generator's input parameters by the values of the Catalog-calculated metrics. The purpose of this capability is to improve the quality of generated data by using data snapshot values retrieved from the source system during the Discovery process.
 
 This cross-system capability is based on several Fabric features. The following article includes user stories that illustrate how to properly utilize the override capability during the masking or synthetic data generation process.  
 
-The solution is generic and not limited to the specific user stories below.
+The solution is generic and not limited to the specific user stories presented below.
 
 ### User story 1: Improve generation of random numeric values
 
