@@ -10,28 +10,28 @@ This cross-system capability is based on several Fabric features. The following 
 
 The solution is generic and not limited to the specific user stories presented below.
 
-### User story 1: Improve generation of random numeric values
+### User Story 1: Improve generation of random numeric values
 
-Let's assume that a numeric field's value should be masked. The default generator for masking numeric fields is ```RandomNumber.actor```, which is assigned to various classifications in the Catalog's PII & Masking tab. This actor generates a random number in the range which is defined by the input parameters - ```minimum``` and ```maximum```. The default values of the above parameters are set per each classification. 
+Let's assume that a numeric field's value should be masked. The default generator for masking numeric fields is ```RandomNumber.actor```, which is assigned to various classifications in the Catalog's PII & Masking tab. This actor generates a random number in the range defined by the input parameters — ```minimum``` and ```maximum```. The default values of the above parameters are set for each classification. 
 
-It is required that the generated random values will be significantly closer to the actual field values in the data source. 
+It is required that the generated random values be significantly closer to the actual field values in the data source. 
 
-Below steps describe how to generate a random value in a range that is based on the field's calculated properties rather than on the default values:
+The below steps describe how to generate a random value in a range that is based on the field's calculated properties rather than on the default values:
 
-1. Set the **Data Quality Metrics** plugin to active in the **Catalog Settings > Discovery Pipeline** screen and run Discovery on the required interface. 
+1. Set the **Data Quality Metrics** plugin to 'active' in the **Catalog Settings > Discovery Pipeline** window and run Discovery on the required interface. 
 
-2. Perform **Build Artifacts** and validate that ```minimumValue``` and ```maximumValue``` metrics were created for the catalog fields. 
+2. Perform **Build Artifacts** and validate that ```minimumValue``` and ```maximumValue``` metrics were created for the Catalog fields. 
 
 3. Verify the **classification** of the fields with the calculated metrics.
 
-4. In the **Catalog Settings > PII & Masking** tab, go over the relevant classifications and click the **Advanced** link to set up the **Property Alias Map** between the generator's inputs and the Catalog's calculated properties: 
+4. In the **Catalog Settings > PII & Masking** tab, review the relevant classifications and click the **Advanced** link to set up the **Property Alias Map** between the generator's inputs and the Catalog's calculated properties: 
 
    <img src="../images/settings_masking_advanced_num.png" />
 
 
-Once this alias map is set, the values of the Catalog field properties are used during **masking** or **synthetic data generation** process. 
+Once this alias map is set, the values of the Catalog field properties are used during the **masking** or **synthetic data generation** process. 
 
-### User story 2: Improve generation of values from distinct list
+### User Story 2: Improve generation of values from distinct list
 
 Let's assume there is a field which includes a value from a limited list of possible values. For example, a 'status' field usually includes values, such as *New*, *Open*, *Pending*, *In progress*, *Resolved*, *Closed*. 
 
