@@ -112,15 +112,15 @@ The below image presents a rule defined for **sakilla_pg** data platform and **c
 
 The purpose of this rule type is to exclude specified source entities during the Crawler run. 
 
-- The rule requires to select a data platform and populate at least one schema. 
+- The rule requires to selecting a data platform and populating at least one schema. 
 - When one or multiple datasets are populated, these dataset(s) will be excluded.
 
 
-- This rule cannot be combined with the override action, as the Crawler excludes the specified nodes.
+- This rule cannot be combined with the override action, as the Crawler will exclude the specified nodes.
 
 **Example**
 
-The below image presents a rule that excludes the **CASE_NOTES** table of **CRM_DB** data platform and **main** schema from the Discovery process. It means that discovery run on all **CRM_DB** tables, except for **CASE_NOTES**.
+The below image presents a rule that excludes the **CASE_NOTES** table of the **CRM_DB** data platform and the **main** schema from the Discovery process. This means that discovery runs on all **CRM_DB** tables except **CASE_NOTES**.
 
 ![](../images/discovery_pipeline_excludeThis.png)
 
