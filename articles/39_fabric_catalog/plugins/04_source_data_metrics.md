@@ -27,14 +27,14 @@ The Catalog schema is then created without the discarded tables.
 This plugin scans the data of the data sample in order to calculate various data quality metrics. These metrics can then be used for masking and synthetic data generation.
 
 * **Data Sample Size** — the actual number of values in a column of the data sample.
-  * The data sample is retrieved per the Catalog settings. For example, the default sample size is 10% of the table size, with minimum 100 and maximum 500. However, the actual data sample size can vary, based on the table size.
+  * The data sample is retrieved per the Catalog settings. For example, the default sample size is 10% of the table size, with a minimum of 100 and a maximum of 500. However, the actual size of the data sample can vary depending on the table size.
 * **Distinct Values** — the count of distinct values per column in the data sample. 
   * This parameter helps to assess the variety or uniqueness of data within a column.  
-  * In addition, it can help to validate whether the data values are within an acceptable or predefined range. For example, if a column is expected to store binary values (Yes/No or true/false), the presence of more distinct values might indicate data quality issues. 
-  * A high number of distinct values in a column where fewer unique entries are expected may indicate potential data anomalies, typos, or other errors. 
+  * In addition, it can help to validate whether the data values are within an acceptable or predefined range. For example, if a column is expected to store binary values (Yes/No or true/false), the presence of additional distinct values may indicate data quality issues. 
+  * A high number of distinct values in a column, where fewer unique entries are expected, may indicate potential data anomalies, typographical errors, or other issues. 
   * This calculation is performed for alphanumeric and numeric fields (strings, integers and real numbers).
-* **Minimum Value**, **Maximum Value**, **Average** and **Standard Deviation** are basic statistical calculations performed on numeric or date columns in the data sample.
-  * Establishing the existing range of values in the data can help to verify whether these values fall within expected or acceptable limits. This can help to reveal potential errors, such as outliers or incorrect data entries (e.g., a negative age value).
+* **Minimum Value**, **Maximum Value**, **Average**, and **Standard Deviation** are basic statistical calculations performed on numeric or date columns in the data sample.
+  * Establishing the existing range of values in the data can assist in verifying whether these values fall within expected or acceptable limits. This can help reveal potential errors, such as outliers or incorrect data entries (e.g., a negative age value).
   * Understanding the range of values helps to ensure consistency across similar datasets. It can also support business decisions-making by providing insights into variability and distribution. 
   * As part of basic descriptive statistics, these metrics offer an initial glimpse into data distribution and can serve as a precursor to more advanced statistical analyses.
 * **Null Percentage** — the percentage of null values per column. 
