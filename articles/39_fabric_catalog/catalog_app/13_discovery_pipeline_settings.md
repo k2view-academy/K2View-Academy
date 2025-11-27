@@ -44,7 +44,7 @@ The Baseline rule overrides can be reverted by one of the following ways:
 
 The Discovery Pipeline window enables the user to refine the default configuration per the project's requirements. 
 
-A rule should be attached to a data platform, along with several others parameters that may become mandatory, based on conditions. Mandatory and optional parameters of each rule type are described further in this article. 
+A rule should be attached to a data platform, along with several other parameters that may become mandatory, based on conditions. Mandatory and optional parameters of each rule type are described further in this article. 
 
 #### How Do I Create a Rule?
 
@@ -53,7 +53,7 @@ A rule should be attached to a data platform, along with several others paramete
 * Click on '**Add Rule +**' to create a new rule. 
   * Starting from Fabric V8.3.1, a new rule is added with **Crawler Filter** parameter set by default to '**Exclude Others**'. This value can be updated to any other value if needed. 
 * Rules may be of three types:
-  * For filter rule creation, set either '**Exclude Others**' or '**Exclude This**' in the **Crawler Filter** column. In this case, **Data Platform** and **Schema(s)** fields are mandatory, while the Dataset field is optional.
+  * For filter rule creation, set either '**Exclude Others**' or '**Exclude This**' in the **Crawler Filter** column. In this case, the **Data Platform** and **Schema(s)** fields are mandatory, while the Dataset field is optional.
   * For override rule creation, the only mandatory actions are selecting a **Data Platform** and checking the **Override** checkbox. This rule will apply to the entire Data Platform. Populating the Schema(s) and Dataset(s) fields will make this rule more specific.
 
   * For creating a combined rule, which includes both a filter and the overrides, set **Crawler Filter** = **'Exclude Others'** and check the **Override** checkbox.
@@ -63,9 +63,9 @@ A rule should be attached to a data platform, along with several others paramete
 
 The purpose of this rule type is to limit the Discovery process to the specified source entities. 
 
-- The rule requires to select a data platform and populate at least one schema - to be included in discovery. 
+- The rule requires selecting a data platform and populating at least one schema that will be included in discovery. 
 - The Crawler Filter should be set to 'Exclude Others'.
-- Optionally, dataset(s) can be populated as well on the rule. When one or multiple datasets are populated, only these datasets will be included while all other dataset(s) will be excluded.
+- Optionally, dataset(s) can be populated as well on the rule. When one or multiple datasets are populated, only these datasets will be included, while all other dataset(s) will be excluded.
 - This rule can be combined with an override action (as explained further in this article).  
 
 **Example**
