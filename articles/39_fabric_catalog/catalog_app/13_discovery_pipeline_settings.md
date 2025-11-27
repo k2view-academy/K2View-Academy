@@ -13,7 +13,7 @@ The Discovery Pipeline window enables performing the following actions, describe
 * [Adding new plugins](13_discovery_pipeline_settings.md#adding-new-plugins) to the pipeline.
 
 
-The overrides are saved into the project **pluginsOverride.discovery** file, which is created in the Project's ```Implementation/SharedObjects/Interfaces/Discovery/``` folder.
+The overrides are saved in the project **pluginsOverride.discovery** file, which is created in the Project's ```Implementation/SharedObjects/Interfaces/Discovery/``` folder.
 
 This article describes the capabilities of the Discovery Pipeline window and explains how they can impact the Discovery job. 
 
@@ -27,7 +27,7 @@ The Baseline rule is always enabled. It can be edited by checking the **Override
 * Updating the parameters of the product's built-in plugins. 
 * [Adding a new plugins](13_discovery_pipeline_settings.md#adding-new-plugins) — described further in this article. 
 
-Note that the Baseline rule overrides are automatically propagated to the project-level rules. For example, when a plugin is updated from 'inactive' to 'active' in the baseline, it becomes 'active' in all project-level rules. A project rule, however, can override the Baseline rule.
+Note that the Baseline rule overrides are automatically propagated to the project-level rules. For example, when a plugin is changed from 'inactive' to 'active' in the baseline, it will become 'active' in all project-level rules. A project rule, however, can override the Baseline rule.
 
 #### Revert Baseline Overrides
 
