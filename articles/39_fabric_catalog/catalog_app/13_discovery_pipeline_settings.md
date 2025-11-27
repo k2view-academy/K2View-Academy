@@ -63,14 +63,14 @@ A rule should be attached to a data platform, along with several other parameter
 
 The purpose of this rule type is to limit the Discovery process to the specified source entities. 
 
-- The rule requires selecting a data platform and populating at least one schema that will be included in discovery. 
+- The rule requires selecting a data platform and populating at least one schema that will be included in the discovery. 
 - The Crawler Filter should be set to 'Exclude Others'.
 - Optionally, dataset(s) can be populated as well on the rule. When one or multiple datasets are populated, only these datasets will be included, while all other dataset(s) will be excluded.
 - This rule can be combined with an override action (as explained further in this article).  
 
 **Example**
 
-The below image presents a rule defined for **sakilla_pg** data platform and **crm** schema. The purpose of this rule is to limit the Discovery process to **crm** schema only, since **sakilla_pg** includes multiple schemas irrelevant for the current run.
+The below image presents a rule defined for **sakilla_pg** data platform and **crm** schema. The purpose of this rule is to limit the Discovery process to **crm** schema only, since **sakilla_pg** includes multiple schemas that are irrelevant for the current run.
 
 ![](../images/discovery_pipeline_excludeOthers.png)
 
@@ -78,11 +78,11 @@ The below image presents a rule defined for **sakilla_pg** data platform and **c
 
 The purpose of this rule type is to override one or multiple baseline settings without filtering the data source.
 
-* The rule requires to select a data platform and check an Override checkbox.
-* The Crawler Filter should be set to 'No Filter' since the discovery should be executed on the entire data platform.
+* The rule requires selecting a data platform and checking the Override checkbox.
+* The Crawler Filter should be set to 'No Filter' as the discovery should be executed on the entire data platform.
 
 
-* Note that when schema(s) and dataset(s) are populated, the override rules are applied only on them. This kind of rule has no filter effect.  
+* Note that when the schema(s) and dataset(s) fields are populated, the override rules are applied only to them. This type of rule has no filter effect.  
 
 **Example**
 
@@ -98,7 +98,7 @@ The purpose of this rule is to override the Sample Size definition, increasing i
 
 The purpose of this rule type is to limit the Discovery process to the specified source entities and at the same time to override some of the baseline settings.
 
-- The rule requires to select a data platform and populate at least one schema - to be included in discovery. 
+- The rule requires selecting a data platform and populating at least one schema that will be included in the discovery. 
 - The Crawler Filter should be set to 'Exclude Others' and check an Override checkbox.
 - Optionally, dataset(s) can be populated as well on the rule. When one or multiple datasets are populated, only these datasets will be included while all other dataset(s) will be excluded.
 
