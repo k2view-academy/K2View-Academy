@@ -130,7 +130,7 @@ Multiple rules can be defined for the same data platform. The purpose of creatin
 
 When multiple rules are defined for the same data platform, they adhere to the following hierarchy: 
 
-- When multiple rules apply on the same process element, the most specific one takes priority. 
+- When multiple rules apply to the same process element, the most specific one takes priority. 
 
 **Example of rule combinations and hierarchy**
 
@@ -138,9 +138,9 @@ The below image presents three rules defined for the **AdventureWorks** data pla
 
 ![](../images/discovery_pipeline_h.png)
 
-- **Rule1** defines one or more overrides applied on all elements of the AdventureWorks. 
-- **Rule2** defines a filter on Sales schema. This rule implies that the Sales schema is excluded from the Crawler on the AdventureWorks. 
-- **Rule3** defines an override that applies only to the specified datasets of the Person schema. This means that for this dataset, only the plugins defined in **Rule3** are applied. Having the most specific criteria, this rule takes priority.
+- **Rule1** defines one or more overrides applied to all elements of AdventureWorks. 
+- **Rule2** defines a filter on Sales schema. This rule implies that the Sales schema is excluded from the Crawler on AdventureWorks. 
+- **Rule3** defines an override that applies only to the specified datasets within the Person schema. This means that for this dataset, only the plugins defined in **Rule3** are applied. Having the most specific criteria, this rule takes priority.
 
 ## Adding New Plugins
 
