@@ -88,7 +88,7 @@ The purpose of this rule type is to override one or multiple baseline settings w
 
 The below image presents an override rule defined for the **CUSTOMER** table of the **CRM_DB** data platform and **main** schema. 
 
-The purpose of this rule is to override the Sample Size definition, increasing it to 25% (instead of the default 10% setting). This override is only applicable for the specified dataset - CUSTOMER. The discovery is executed on the whole CRM_DB data platform without any filter.
+The purpose of this rule is to override the Sample Size definition, increasing it to 25% (instead of the default 10% setting). This override is applicable only to the specified dataset — CUSTOMER. The discovery is executed on the entire CRM_DB data platform without any filters.
 
 ![](../images/discovery_pipeline_sampleSize.png)
 
@@ -99,12 +99,12 @@ The purpose of this rule is to override the Sample Size definition, increasing i
 The purpose of this rule type is to limit the Discovery process to the specified source entities and at the same time to override some of the baseline settings.
 
 - The rule requires selecting a data platform and populating at least one schema that will be included in the discovery. 
-- The Crawler Filter should be set to 'Exclude Others' and check an Override checkbox.
-- Optionally, dataset(s) can be populated as well on the rule. When one or multiple datasets are populated, only these datasets will be included while all other dataset(s) will be excluded.
+- The Crawler Filter should be set to 'Exclude Others' and the Override checkbox should be checked.
+- Optionally, dataset(s) can be populated as well on the rule. When one or multiple datasets are populated, only these datasets will be included, while all other dataset(s) will be excluded.
 
 **Example**
 
-The below image presents a rule defined for **sakilla_pg** data platform and **crm** schema. The purpose of this rule is to limit the Discovery process to **crm** schema only, since **sakilla_pg** includes multiple schemas irrelevant for the current run. In addition to the filter, the rule also defines a baseline override - by setting one of inactive plugins to active.
+The below image presents a rule defined for **sakilla_pg** data platform and **crm** schema. The purpose of this rule is to limit the Discovery process to **crm** schema only, since **sakilla_pg** includes multiple schemas that are irrelevant for the current run. In addition to the filter, the rule also defines a baseline override by setting one of the inactive plugins to 'active'.
 
 ![](../images/discovery_pipeline_excludeOthersOverride.png)
 
