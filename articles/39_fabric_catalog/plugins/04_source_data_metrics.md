@@ -44,22 +44,22 @@ This plugin scans the data of the data sample in order to calculate various data
 
 ## Option Set Analyzer
 
-The purpose of this plugin is to identify fields with a limited number of distinct values (in the data sample) and save those values in a dedicated MTable, enabling their use in masking and synthetic data generation.
+The purpose of this plugin is to identify fields with a limited number of distinct values (in the data sample) and save these values in a dedicated MTable, enabling their use in masking and synthetic data generation.
 
-Once a field is identified as an Option Set, the property ```optionSet = true``` is created for it. A separate MTable is generated for each data platform and schema to store the distinct values (and their distribution), identified by the plugin in a field. The MTable has the following naming format: 
+Once a field is identified as an Option Set, the property ```optionSet = true``` is created for it. A separate MTable is generated for each data platform and schema to store the distinct values (and their distribution) identified by the plugin in a field. The MTable has the following naming format: 
 
-```catalog_field_option_set___<dataPlatform>_<schema>.csv```, (containing 3 underscores before the data platform name).
+```catalog_field_option_set___<dataPlatform>_<schema>.csv```, (containing three underscores before the data platform name).
 
 The below image is an example of such MTable:
 
 <img src="../images/option_set_mtable_ex.png" />
 
-Starting from V8.3.1, a classification **OPTION_SET** is assigned to this field, unless this field has been previously assigned a classification. In the Catalog Settings, the OPTION_SET classification is mapped to the **RandomOptionSet** actor for masking and synthetic data generation. The actor randomly selects a value from the catalog_field_option_set MTable, based on the input data platform, schema, dataset, class and field.
+Starting from Fabric V8.3.1, the **OPTION_SET** classification is assigned to this field, unless this field has been previously assigned a classification. In the Catalog Settings, the OPTION_SET classification is mapped to the **RandomOptionSet** actor for masking and synthetic data generation. The actor randomly selects a value from the catalog_field_option_set MTable, based on the input data platform, schema, dataset, class and field.
 
 The rules for identifying fields with a limited number of distinct values are:
 
 * The field is **not PII** (in order to comply with privacy regulations and not to expose sensitive values).
-* The number of distinct values is either below a plugin's threshold (e.g., 0.05) **or** below the ```Absolute Threshold```  input parameter (which is set to 15 by default).
+* The number of distinct values is either below a plugin's threshold (e.g., 0.05) **or** below the ```Absolute Threshold``` input parameter (which is set to 15 by default).
 
 Additional rules apply based on the **plugin input parameters**, as explained below.
 
@@ -71,7 +71,7 @@ The property that will be created on a field if the plugin returns true. By defa
 
 This parameter defines the absolute threshold number of distinct values. If the relative number of distinct values per field, found in a data sample, exceeds the plugin’s threshold (0.05), it is then validated against the absolute threshold (15). For example:
 
-* The sample size is 100 and a field includes 10 distinct values, thus the proportion of distinct values equals to 0.1. This figure exceeds  the plugin's threshold (0.05).
+* The sample size is 100 and a field includes 10 distinct values, thus the proportion of distinct values equals to 0.1. This figure exceeds the plugin's threshold (0.05).
 * In this case, the result is validated against the absolute threshold to verify whether it qualifies as an **Option Set**. 
 * Since 10 distinct values are below the absolute threshold (15), the field qualifies as an **Option Set**.
 
@@ -79,7 +79,7 @@ This parameter defines the absolute threshold number of distinct values. If the 
 
 The ```fieldTypeIncludeList``` plugin input parameter controls which field data types are considered when checking for distinct values. 
 
-By default, this parameter is set to the STRING or INTEGER data type for this plugin. The valid values are STRING, INTEGER, REAL, DATETIME, DATE and BOOLEAN.
+By default, this parameter is set to either the STRING or INTEGER data type for this plugin. The valid values are STRING, INTEGER, REAL, DATETIME, DATE and BOOLEAN.
 
 #### Field Name Include List
 
@@ -91,18 +91,18 @@ This parameter allows to set up an override list of field names. These fields wi
 
 #### Incremental Mode
 
-The ```incrementalMode``` parameter in introduced in Fabric V8.3.1. It defines whether the Option Set Analyzer plugin should be executed for the fields that already have the same property created by this plugin in a previous Discovery Job execution. It has the following modes:
+The ```incrementalMode``` parameter is introduced in Fabric V8.3.1. It defines whether the Option Set Analyzer plugin should be executed for the fields that already have the same property created by this plugin in a previous Discovery Job execution. It has the following modes:
 
-- ```"Keep All"``` (default) - if the plugin has already been executed for this field in a previous Discovery Job execution, don’t invoke the plugin again (even if the field doesn't have the 'Option Set' property). The plugin will only be invoked for the new fields.
-- ```"Keep Existing"``` - if the plugin has already been executed for this field in a previous Discovery Job execution and created a property, don’t invoke it again. The plugin will only be invoked for the new fields and for the fields without this property.
-- ```"Evaluate All"``` - the plugin will be invoked for all fields.
+- ```"Keep All"``` (default) — if the plugin has already been executed for this field in a previous Discovery Job execution, do not invoke the plugin again (even if the field does not have the 'Option Set' property). The plugin will only be invoked for new fields.
+- ```"Keep Existing"``` — if the plugin has already been executed for this field in a previous Discovery Job execution and created a property, do not invoke it again. The plugin will only be invoked for new fields and for the fields without this property.
+- ```"Evaluate All"``` — the plugin will be invoked for all fields.
 
 #### Max String Length
 
-This parameter defines a limit to STRING size, to prevent handling text files or complex structures inside a field. The default value is 512 bytes.
+This parameter sets a limit on STRING size to prevent handling text files or complex structures within a field. The default value is 512 bytes.
 
 #### Min Sample Size
 
-This parameter allows to skip small tables by defining the minimum sample size required to verify whether a field qualifies as an **Option Set**. The default value is 100.
+This parameter allows to skip small tables by defining the minimum sample size required to determine whether a field qualifies as an **Option Set**. The default value is 100.
 
 ## 
