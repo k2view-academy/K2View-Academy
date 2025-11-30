@@ -33,7 +33,7 @@ Once this alias map is set, the values of the Catalog field properties are used 
 
 ### User Story 2: Improve generation of values from distinct list
 
-Let's assume there is a field which includes a value from a limited list of possible values. For example, a 'status' field usually includes values, such as *New*, *Open*, *Pending*, *In progress*, *Resolved*, *Closed*. 
+Let's assume there is a field that includes a value from a limited list of possible values. For example, a 'status' field usually includes values such as *New*, *Open*, *Pending*, *In progress*, *Resolved* or *Closed*. 
 
 When generating a value for such field, it is required to randomly select one of the existing values (in the data sample), rather than generating a random string, so that the generated value will be significantly closer to the actual field values.
 
