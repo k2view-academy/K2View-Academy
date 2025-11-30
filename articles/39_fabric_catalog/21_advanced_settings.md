@@ -8,13 +8,13 @@ The ```Implementation/SharedObjects/Interfaces/Discovery/``` folder in the Proje
 
 <img src="images/discovery_folder.png" style="zoom:70%;" />
 
-* The **MTable** subfolder holds the MTables used by the Catalog's various processes. Additionally, when the [Build Artifacts](/articles/39_fabric_catalog/catalog_app/09_build_artifacts.md) action is performed, the Catalog artifact - **catalog_field_info.csv** - is created in this folder.
-  * Starting from V8.1, the Catalog artifact can be split. As a result, multiple files are created instead of a single one. 
+* The **MTable** subfolder holds the MTables used by the Catalog's various processes. Additionally, when the [Build Artifacts](/articles/39_fabric_catalog/catalog_app/09_build_artifacts.md) action is performed, the Catalog artifact — **catalog_field_info.csv** — is created in this folder.
+  * Starting from Fabric V8.1, the Catalog artifact can be split. As a result, multiple files are created instead of a single one. 
   * Starting from V8.3, the splitting is enabled by default. Click [here](/articles/39_fabric_catalog/catalog_app/09_build_artifacts.md#splitting-and-combining-artifacts) for more information about it.
 * The **pluginsOverride.discovery** is a configuration file that defines the prospective overrides in the Crawler and the plugins configuration (starting from V8.2). Click [here](/articles/39_fabric_catalog/catalog_app/13_discovery_pipeline_settings.md#overview) for more information about it.
   * Note that prior to V8.2, the project-level overrides file was called **plugins.discovery**. 
 
-*Show Catalog Commands* is a Web Studio setting that either shows or hides the Catalog's related commands - **Run Discovery Job** and **Open in Catalog** - in the Web Studio. 
+*Show Catalog Commands* is a Web Studio setting that either shows or hides the Catalog's related commands — **Run Discovery Job** and **Open in Catalog** — in the Web Studio. 
 
 * By default, *Show Catalog Commands* is enabled. 
 * This setting can be updated using the [Web Studio's user preferences](/articles/04_fabric_studio/04_user_preferences.md). 
@@ -22,13 +22,13 @@ The ```Implementation/SharedObjects/Interfaces/Discovery/``` folder in the Proje
 ### Catalog Application Configuration
 
 The **properties-info.json** is a configuration file used by the Catalog application to determine the view and the behavior of various Catalog UI elements. The following settings can be performed:
-* ```"editable": true``` - the property is editable via the [Edit Catalog capabililty](/articles/39_fabric_catalog/catalog_app/07_manual_overrides.md).
-* ```"deletable": true``` - the property can be deleted via the [Edit Catalog capabililty.](/articles/39_fabric_catalog/catalog_app/07_manual_overrides.md)
-* ```"searchable": true``` - the property is searchable using the [Advanced Search](/articles/39_fabric_catalog/catalog_app/08_search_catalog.md#advanced-search) screen.
-* ```"filterable": true``` - the property is filterable using the [Catalog Filter](/articles/39_fabric_catalog/catalog_app/08a_filter_catalog.md) screen.
+* ```"editable": true``` — the property is editable via the [Edit Catalog capabililty](/articles/39_fabric_catalog/catalog_app/07_manual_overrides.md).
+* ```"deletable": true``` — the property can be deleted via the [Edit Catalog capabililty.](/articles/39_fabric_catalog/catalog_app/07_manual_overrides.md)
+* ```"searchable": true``` — the property is searchable using the [Advanced Search](/articles/39_fabric_catalog/catalog_app/08_search_catalog.md#advanced-search) screen.
+* ```"filterable": true``` — the property is filterable using the [Catalog Filter](/articles/39_fabric_catalog/catalog_app/08a_filter_catalog.md) screen.
 * ```"values":[]``` defines a list of a property's valid values. For some properties, this list is combined with programmatically retrieved values (e.g., classification).
 * ```"allow_custom_values": true``` defines the ability to populate a custom value for a property that has a drop-down list. 
-* ```"hidden": true``` - the property is hidden from the Catalog's Properties tab.
+* ```"hidden": true``` — the property is hidden from the Catalog's Properties tab.
 
 The properties-info.json file is located in the ```fabric/staticWeb/catalog``` folder.
 
