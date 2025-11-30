@@ -14,7 +14,7 @@ Starting from V8.3, Fabric can provide native E2E support for NoSQL Document Sto
 
   * ```_docId``` is a unique ID added to each LU table. Its purpose is to uniquely identify the row of an instance, when splitting the document and composing it back.
   * ```_parentDocId``` is added to all LU tables except the root table, and it is used for creating the referential link from the nested structure to its parent structure.
-  * ```_value``` is only added to LU tables that represent an array of primitives, to keep the element’s value.
+  * ```_value``` is only added to LU tables that represent an array of primitives, to keep the element’s value. Note that the [Catalog masking](/articles/39_fabric_catalog/catalog_app/11_catalog_masking.md) does not apply to an array of primitives (contains only primitive values, such as numbers or text strings). If masking is required for these values, the implementor must apply the masking logic manually.
   * ```_docHints``` is a field used internally by Fabric to manage the composition of the original Document.
 * Root table population is the only action that reads data from the source (the Document).
 * The populations created for such LU tables include a dedicated **DocumentQuery** Actor that is responsible for generating unique IDs to maintain the relations between hierarchy levels of the Document. In addition, the Actor takes the respective part of the original Document and breaks it into fields that are then populated in the LU table.
