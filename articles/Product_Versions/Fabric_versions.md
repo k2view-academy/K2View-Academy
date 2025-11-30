@@ -12,7 +12,7 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td width="150pxl"><p><strong>Version Release Date</strong></p></td>
             <td width="100pxl"><p><strong>Latest Hot Fix</strong></p></td>
             <td width="125pxl"><p><strong>HF Release Date</strong></p></td>
-            <td width="100pxl"><p><strong>Release Num</strong></p></td>
+            <td width="100pxl"><p><strong>Build</strong></p></td>
             <td width="170pxl"><p><strong>Certified Postgres Version</strong></p></td><td width="200pxl"><p><strong>Certified Cassandra Version</strong></p></td><td width="125pxl"><p><strong>End of Life</strong></p></td>
         </tr>
         <tr>
