@@ -39,10 +39,10 @@ When generating a value for such field, it is required to randomly select one of
 
 The below steps describe how to generate a random value based on the field's list of possible values:
 
-1. Activate the  **Option Set Analyzer** plugin in the **Catalog Settings > Discovery Pipeline** screen and run discovery on the interface. 
-2. Perform **Build Artifacts** and validate which catalog fields include the property ```optionSet = true``` and ```classification = OPTION_SET``` . These fields were identified as having a list of possible values, based on the data sample. 
-3. Validate that ```catalog_field_option_set___<data platform>_<schema>_main.csv``` file was created and it includes field names and their distinct values, identified in the data sample.
-4. In the **Catalog Settings > PII & Masking** tab, validate that the **OPTION_SET** classification exists and includes the **RandomOptionSet.actor** generator. Click the **Advanced** link to view the predefined alias map between the generator's inputs and the Catalog's calculated properties, as shown below.
+1. Activate the **Option Set Analyzer** plugin in the **Catalog Settings > Discovery Pipeline** window and run Discovery on the interface. 
+2. Perform **Build Artifacts** and validate which Catalog fields include the property ```optionSet = true``` and ```classification = OPTION_SET```. These fields were identified as having a list of possible values based on the data sample. 
+3. Validate that the ```catalog_field_option_set___<data platform>_<schema>_main.csv``` file was created and that it includes field names along with their distinct values identified in the data sample.
+4. In the **Catalog Settings > PII & Masking** tab, validate that the **OPTION_SET** classification exists and that it includes the **RandomOptionSet.actor** generator. Click the **Advanced** link to view the predefined alias map between the generator's inputs and the Catalog's calculated properties, as shown below.
    * If the alias map is not set, create it based on the below image:
 
 <img src="../images/settings_masking_advanced_optionSet.png" />
