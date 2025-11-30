@@ -86,8 +86,18 @@ For example: activity.pop.generator
 
 Note that a synthetic data generation task execution sets the **ROWS_GENERATOR** key (session variable) to **true**, which triggers the execution of the data generation inner flow on each LU table.
 
-From TDM V8.1 onwards, data generation flows are integrated with the [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md) to generate synthetic data based on field types. Additionally, TDM supports synthetic data generation without using the Fabric Catalog, in cases where the Catalog is not implemented in the TDM project.
+### Fabric Catalog Integration 
 
+From TDM V8.1 onwards, data generation flows are integrated with the [Fabric Catalog](/articles/39_fabric_catalog/01_catalog_overview.md) to generate synthetic data based on field types and source values. Additionally, TDM supports synthetic data generation without using the Fabric Catalog, in cases where the Catalog is not implemented in the TDM project.
+
+The generation flow invokes the **CatalogGeneratorRecord** Actor to generate synthetic records. The catalog generates the synthetic records based on the following logic:
+- [Option set analyzer](/articles/39_fabric_catalog/plugins/04_source_data_metrics.md#option-set-analyzer) - Fabric 8.3.1 added this plugin in order to identify non-sensitive (non-PII) fields with a limited number of distinct values (in the data sample) and save those values in a dedicated MTable, enabling their use in synthetic data generation. The catalog sets one of the field's identified values in the synthetic record. For example, the valid values, identified for the **case_status** field are 'Unresolved', 'Closed', and 'New'. The catalog generator will get one of these values when generating a synthetic Case record instead of generating a random string for this field.
+- Default classifications - Fabric 8.3.1 has added a generation of synthetic values based on default classifications in the catalog. Each field type has its own default classification. For example, DEFAULT_STRING, DEFAULT_INTERGER, DEFAULT_DATE etc..
+
+  Each default classification has its own data generator and advanced settings. This way, the catalog can generate a synthetic value for a field based on its type and size. The minimum and maximum values for the generated value can be hard-coded in the classification. Alternatively, you can map the minimum and maximum sizes to the field's size in the [advanced settings](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#advanced-masking-settings).
+  
+  - Example:
+    - The **DEFAULT_STRING** classification generates a random string using the **RandocString** Actor.        
 
 ### Data Generation Flows — Implementation Steps
 
@@ -177,7 +187,7 @@ The following flows are created for each LU table:
     - If a PII field exists across multiple LUs and is set in several records within the LUI, you should use the **Masking** Actor instead of the **GenerateConsistent** Actor. For example, a customer may have multiple contracts, each requiring a different name. The contracts exist in both the CRM and Billing LUs. To handle this, populate the Masking Actor's input parameters in the data generation flow as follows:
         - **value** — populate it with an initial value of the field name + the record number, e.g., first_name_1, first_name_2, etc. The record number is sent to the data generation flow by the RowsGenerator Actor in the **count** parameter.
 
-      View the below example:
+      View the example below:
 
       ![pii example](images/data_generation_pii_example_1.png)
       
