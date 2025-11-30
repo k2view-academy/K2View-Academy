@@ -37,7 +37,7 @@ Let's assume there is a field that includes a value from a limited list of possi
 
 When generating a value for such field, it is required to randomly select one of the existing values (in the data sample), rather than generating a random string, so that the generated value will be significantly closer to the actual field values.
 
-Below steps describe how to generate a random value based on the field's list of possible values:
+The below steps describe how to generate a random value based on the field's list of possible values:
 
 1. Activate the  **Option Set Analyzer** plugin in the **Catalog Settings > Discovery Pipeline** screen and run discovery on the interface. 
 2. Perform **Build Artifacts** and validate which catalog fields include the property ```optionSet = true``` and ```classification = OPTION_SET``` . These fields were identified as having a list of possible values, based on the data sample. 
