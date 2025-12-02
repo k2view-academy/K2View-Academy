@@ -23,9 +23,9 @@ The ```Implementation/SharedObjects/Interfaces/Discovery/``` folder in the Proje
 The **properties-info.json** is a configuration file used by the Catalog application to determine the view and the behavior of various Catalog UI elements. The following settings can be performed:
 * ```"editable": true``` — the property is editable via the [Edit Catalog capabililty](/articles/39_fabric_catalog/catalog_app/07_manual_overrides.md).
 * ```"deletable": true``` — the property can be deleted via the [Edit Catalog capabililty.](/articles/39_fabric_catalog/catalog_app/07_manual_overrides.md)
-* ```"searchable": true``` — the property is searchable using the [Advanced Search](/articles/39_fabric_catalog/catalog_app/08_search_catalog.md#advanced-search) screen.
-* ```"filterable": true``` — the property is filterable using the [Catalog Filter](/articles/39_fabric_catalog/catalog_app/08a_filter_catalog.md) screen.
-* ```"values":[]``` defines a list of a property's valid values. For some properties, this list is combined with programmatically retrieved values (e.g., classification).
+* ```"searchable": true``` — the Catalog can be searched using this property in the [Advanced Search](/articles/39_fabric_catalog/catalog_app/08_search_catalog.md#advanced-search) screen.
+* ```"filterable": true``` — the Catalog can be filtered using the [Catalog Filter](/articles/39_fabric_catalog/catalog_app/08a_filter_catalog.md) screen.
+* ```"values":[]``` specifies the list of valid values for a property. For some properties, this list is combined with programmatically retrieved values (e.g., classification).
 * ```"allow_custom_values": true``` defines the ability to populate a custom value for a property that has a drop-down list. 
 * ```"hidden": true``` — the property is hidden from the Catalog's Properties tab.
 
