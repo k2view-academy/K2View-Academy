@@ -9,8 +9,7 @@ The ```Implementation/SharedObjects/Interfaces/Discovery/``` folder in the Proje
 <img src="images/discovery_folder.png" style="zoom:70%;" />
 
 * The **MTable** subfolder holds the MTables used by the Catalog's various processes. Additionally, when the [Build Artifacts](/articles/39_fabric_catalog/catalog_app/09_build_artifacts.md) action is performed, the Catalog artifact — **catalog_field_info.csv** — is created in this folder.
-  * Starting from Fabric V8.1, the Catalog artifact can be split. As a result, multiple files are created instead of a single one. 
-  * Starting from V8.3, the splitting is enabled by default. Click [here](/articles/39_fabric_catalog/catalog_app/09_build_artifacts.md#splitting-and-combining-artifacts) for more information about it.
+  * Starting from V8.3, the splitting of artifacts is enabled by default. Click [here](/articles/39_fabric_catalog/catalog_app/09_build_artifacts.md#splitting-and-combining-artifacts) for more information about it.
 * The **pluginsOverride.discovery** is a configuration file that defines the prospective overrides in the Crawler and the plugins configuration (starting from V8.2). Click [here](/articles/39_fabric_catalog/catalog_app/13_discovery_pipeline_settings.md#overview) for more information about it.
   * Note that prior to V8.2, the project-level overrides file was called **plugins.discovery**. 
 

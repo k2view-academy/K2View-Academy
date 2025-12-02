@@ -10,15 +10,15 @@ To create a new SFTP interface, do the following:
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **SFTP** from the **File System** section to open the **New Interface** window.
 
    ![image](images/02_sftp_1.PNG)
-   
+
 2. Populate the connection's settings and click **Save**.
-</studio>
+  </studio>
 
 <web>
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **SFTP** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
 2. Enter a suitable name for your new SFTP Interface, then click **Create**
-  
+
    ![image](images/02_sftp_1WEB.PNG)
 
 3. Populate the connection's settings and click **Save**.
@@ -58,7 +58,7 @@ To create a new SFTP interface, do the following:
 </tr>
 <tr>
 <td><strong>Files Filter</strong></td>
-<td>Regular expression.</td>
+<td>Wildcard - to support files wildcard pattern.</td>
 </tr>
 <tr>
 <td><strong>Affinity</strong></td>
