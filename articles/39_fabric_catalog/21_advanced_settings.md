@@ -26,7 +26,7 @@ The **properties-info.json** is a configuration file used by the Catalog applica
 * ```"searchable": true``` — the Catalog can be searched using this property in the [Advanced Search](/articles/39_fabric_catalog/catalog_app/08_search_catalog.md#advanced-search) screen.
 * ```"filterable": true``` — the Catalog can be filtered using the [Catalog Filter](/articles/39_fabric_catalog/catalog_app/08a_filter_catalog.md) screen.
 * ```"values":[]``` specifies the list of valid values for a property. For some properties, this list is combined with programmatically retrieved values (e.g., classification).
-* ```"allow_custom_values": true``` defines the ability to populate a custom value for a property that has a drop-down list. 
+* ```"allow_custom_values": true``` defines the ability to populate a custom value for a property that includes a drop-down list. 
 * ```"hidden": true``` — the property is hidden from the Catalog's Properties tab.
 
 The properties-info.json file is located in the ```fabric/staticWeb/catalog``` folder.
@@ -53,7 +53,7 @@ The ```NEO4J_SERVER_MEMORY_HEAP_MAX_SIZE_MB``` parameter in the ```[data_discove
 * This value can be adjusted, based on the data platform size and the number of schemas. For example, when an expected data platform size is large, it is recommended to increase this setting. 
 * To update the heap size in an existing space, stop the Neo4j and the DATA_DISCOVERY_JOB, update this setting in the config.ini file and run the Discovery job.
 
-The ```DATA_SNAP_WRITE_MEMORY_CAP_MB``` parameter in the ```[data_discovery]``` section of the config.ini file specifies the maximum Fabric memory allocated for the Data Snapshot process. This parameter helps to balance the Fabric memory when running Discovery on a data platform with multiple schemas or when multiple Discovery jobs run in parallel on the same Neo4j.
+The ```DATA_SNAP_WRITE_MEMORY_CAP_MB``` parameter in the ```[data_discovery]``` section of the config.ini file specifies the maximum Fabric memory allocated for the Data Snapshot process. This parameter helps to balance the Fabric memory when running Discovery on a data platform with multiple schemas or when multiple Discovery jobs run in parallel on the same Neo4j DB.
 
 * When the in-memory data reaches this predefined limit, the Data Snapshot's data is committed to the SQLite file. 
 
