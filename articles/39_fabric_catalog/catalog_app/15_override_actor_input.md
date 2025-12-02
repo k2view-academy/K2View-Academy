@@ -1,22 +1,22 @@
-# Override Masking actor input by Catalog Properties
+# Overriding Masking Actor Inputs
 
 ### Overview
 
-The [PII & Masking tab](10_catalog_settings.md#pii--masking-tab) of the Catalog Settings window allows to view and update the Catalog-based masking settings for each classification. The masking settings include, among other configurations, the Generator (actor or flow) - for generation of the masked values. 
+The [PII & Masking tab](10_catalog_settings.md#pii--masking-tab) of the Catalog Settings window allows to view and update the Catalog-based masking settings for each classification. The masking settings include, among other configurations, the Generator (actor or flow) responsible for generating the masked values. 
 
-Starting from Fabric V8.3.1, it is possible to override the Generator's input parameters by the values of the Catalog-calculated metrics. The purpose of this capability is to improve the quality of generated data by using data snapshot values retrieved from the source system during the Discovery process.
+Starting from Fabric V8.3.1, it is possible to override the Generator's input parameters with values of the Catalog-calculated metrics. The purpose of this capability is to improve the quality of generated data by using data snapshot values retrieved from the source system during the Discovery process.
 
-This cross-system capability is based on several Fabric features. The following article includes user stories that illustrate how to properly utilize the override capability during the masking or synthetic data generation process.  
+This cross-system capability is based on several Fabric features. The following article includes user stories that illustrate how to properly utilize the override during the masking or synthetic data generation process.  
 
 The solution is generic and not limited to the specific user stories presented below.
 
-### User Story 1: Improve generation of random numeric values
+### User Story 1: Improving the generation of random numeric values
 
-Let's assume that a numeric field's value should be masked. The default generator for masking numeric fields is ```RandomNumber.actor```, which is assigned to various classifications in the Catalog's PII & Masking tab. This actor generates a random number in the range defined by the input parameters — ```minimum``` and ```maximum```. The default values of the above parameters are set for each classification. 
+Suppose that a numeric field contains a value that should be masked. The default generator for masking numeric fields is ```RandomNumber.actor```, which is assigned to various classifications in the Catalog's PII & Masking tab. This actor generates a random number in the range defined by the input parameters — ```minimum``` and ```maximum```. The default values of these parameters are set for each classification. 
 
 It is required that the generated random values be significantly closer to the actual field values in the data source. 
 
-The below steps describe how to generate a random value in a range that is based on the field's calculated properties rather than on the default values:
+The below steps describe how to generate a random value in a range that is derived from the field's calculated properties rather than on the default values:
 
 1. Set the **Data Quality Metrics** plugin to 'active' in the **Catalog Settings > Discovery Pipeline** window and run Discovery on the required interface. 
 
