@@ -20,18 +20,18 @@ The below steps describe how to generate a random value in a range that is deriv
 
 1. Set the **Data Quality Metrics** plugin to 'active' in the **Catalog Settings > Discovery Pipeline** window and run Discovery on the required interface. 
 
-2. Perform **Build Artifacts** and validate that ```minimumValue``` and ```maximumValue``` metrics were created for the Catalog fields. 
+2. Perform the **Build Artifacts** action and validate that ```minimumValue``` and ```maximumValue``` metrics were created for the Catalog fields. 
 
-3. Verify the **classification** of the fields with the calculated metrics.
+3. Find which **classification** is assigned to the fields with calculated metrics.
 
-4. In the **Catalog Settings > PII & Masking** tab, review the relevant classifications and click the **Advanced** link to set up the **Property Alias Map** between the generator's inputs and the Catalog's calculated properties: 
+4. Then, in the **Catalog Settings > PII & Masking** tab, open the relevant classifications and click the **Advanced** link to set up the **Property Alias Map** between the generator's inputs and the Catalog's calculated properties: 
 
    <img src="../images/settings_masking_advanced_num.png" />
 
 
 Once this alias map is set, the values of the Catalog field properties are used during the **masking** or **synthetic data generation** process. 
 
-### User Story 2: Improve generation of values from distinct list
+### User Story 2: Improving the generation of values from distinct list
 
 Let's assume there is a field that includes a value from a limited list of possible values. For example, a 'status' field usually includes values such as *New*, *Open*, *Pending*, *In progress*, *Resolved* or *Closed*. 
 
