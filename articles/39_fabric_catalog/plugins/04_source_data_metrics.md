@@ -12,7 +12,7 @@ All of the above plugins are inactive by default and must be activated through t
 
 ## Empty Datasets Discard
 
-Sometimes a data source might include significant number of empty tables that are irrelevant for the Catalog and for further LU creation. 
+Some data sources may contain a large number of empty tables that are irrelevant for the Catalog and for further LU creation. 
 
 Accordingly, the purpose of this plugin is to improve the Catalog usability as well as the LU development process. When activated, the plugin automatically **discards** all empty tables during the Discovery job, writing a message in the Fabric log (one message per schema):
 
@@ -26,8 +26,8 @@ The Catalog schema is then created without the discarded tables.
 
 This plugin scans the data of the data sample in order to calculate various data quality metrics. These metrics can then be used for masking and synthetic data generation.
 
-* **Data Sample Size** — the actual number of values in a column of the data sample.
-  * The data sample is retrieved per the Catalog settings. For example, the default sample size is 10% of the table size, with a minimum of 100 and a maximum of 500. However, the actual size of the data sample can vary depending on the table size.
+* **Data Sample Size** — the actual number of values per column in the data sample.
+  * The data sample is retrieved per the Catalog settings. For example, the default sample is 10% of the table size, with a minimum of 100 and a maximum of 500. However, the actual size of the data sample can vary depending on the table size.
 * **Distinct Values** — the count of distinct values per column in the data sample. 
   * This parameter helps to assess the variety or uniqueness of data within a column.  
   * In addition, it can help to validate whether the data values are within an acceptable or predefined range. For example, if a column is expected to store binary values (Yes/No or true/false), the presence of additional distinct values may indicate data quality issues. 
@@ -36,7 +36,7 @@ This plugin scans the data of the data sample in order to calculate various data
 * **Minimum Value**, **Maximum Value**, **Average**, and **Standard Deviation** are basic statistical calculations performed on numeric or date columns in the data sample.
   * Establishing the existing range of values in the data can assist in verifying whether these values fall within expected or acceptable limits. This can help reveal potential errors, such as outliers or incorrect data entries (e.g., a negative age value).
   * Understanding the range of values helps ensure consistency across similar datasets. It can also support business decisions-making by providing insights into variability and distribution. 
-  * As part of basic descriptive statistics, these metrics offer an initial glimpse into data distribution and can serve as a precursor to more advanced statistical analyses.
+  * As part of basic descriptive statistics, these metrics offer an initial insight into data distribution and can serve as a precursor to more advanced statistical analyses.
 * **Null Percentage** — the percentage of null values per column. 
   * This percentage is calculated for each column in non-empty tables. The **Null Percentage** property is added to the field's properties when the calculated value exceeds the plugin's threshold. 
   * For example, when 30% of the values in a given field are null, the Null Percentage property will be added to the field with the value = 0.3. However, if 20% or fewer of the values in this field are null, then this property will not be added.
