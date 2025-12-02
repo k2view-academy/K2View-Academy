@@ -42,7 +42,7 @@ The below steps describe how to generate a random value derived from the field's
 1. Activate the **Option Set Analyzer** plugin in the **Catalog Settings > Discovery Pipeline** window and run Discovery on the interface. 
 2. Perform the **Build Artifacts** action and validate which Catalog fields include the property ```classification = OPTION_SET```. These fields were identified as containing a predefined list of possible values based on the data sample. 
 3. Validate that the ```catalog_field_option_set___<data platform>_<schema>_main.csv``` file was created and that it includes field names along with their distinct values identified in the data sample.
-4. In the **Catalog Settings > PII & Masking** tab, validate that the **OPTION_SET** classification exists and that it includes the **RandomOptionSet.actor** generator. Click the **Advanced** link to view the predefined alias map between the generator's inputs and the Catalog's calculated properties, as shown below.
+4. In the **Catalog Settings > PII & Masking** tab, validate that the **OPTION_SET** classification exists and that it includes the **RandomOptionSet.actor** generator. Click the **Advanced** link to view the predefined alias map connecting the Generator's inputs and the Catalog's calculated properties, as shown below.
    * If the alias map is not set, create it based on the below image:
 
 <img src="../images/settings_masking_advanced_optionSet.png" />
