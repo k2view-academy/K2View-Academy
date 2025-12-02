@@ -46,7 +46,7 @@ This plugin scans the data of the data sample in order to calculate various data
 
 The purpose of this plugin is to identify fields with a limited number of distinct values (in the data sample) and save these values in a dedicated MTable, enabling their use in masking and synthetic data generation.
 
-Once a field is identified as an Option Set, the property ```optionSet = true``` is created for it. A separate MTable is generated for each data platform and schema to store the distinct values (and their distribution) identified by the plugin in a field. The MTable has the following naming format: 
+Once a field is identified as an Option Set, the property ```optionSet = true``` is created for it. A separate MTable is generated for each data platform and schema to store the distinct values (and their distribution) identified by the plugin in a field. The MTable has the following format: 
 
 ```catalog_field_option_set___<dataPlatform>_<schema>.csv```, (containing three underscores before the data platform name).
 
@@ -54,7 +54,7 @@ The below image is an example of such MTable:
 
 <img src="../images/option_set_mtable_ex.png" />
 
-Starting from Fabric V8.3.1, the **OPTION_SET** classification is assigned to this field, unless this field has been previously assigned a classification. In the Catalog Settings, the OPTION_SET classification is mapped to the **RandomOptionSet** actor for masking and synthetic data generation. The actor randomly selects a value from the catalog_field_option_set MTable, based on the input data platform, schema, dataset, class and field.
+Starting from Fabric V8.3.1, the **OPTION_SET** classification is assigned to this field, unless it has already been classified. In the Catalog Settings, the OPTION_SET classification is mapped to the **RandomOptionSet** actor for masking and synthetic data generation. The actor randomly selects a value from the catalog_field_option_set MTable, based on the input data platform, schema, dataset, class and field.
 
 The rules for identifying fields with a limited number of distinct values are:
 
@@ -65,7 +65,7 @@ Additional rules apply based on the **plugin input parameters**, as explained be
 
 #### Property Name
 
-The property that will be created on a field if the plugin returns true. By default, the property name is optionSet.
+The property that will be created on a field if the plugin returns true. By default, the property is named optionSet.
 
 #### Absolute Threshold
 
@@ -83,7 +83,7 @@ By default, this parameter is set to either the STRING or INTEGER data type for 
 
 #### Field Name Include List
 
-This parameter allows to set up an override list of field names. These fields will be included in the plugin's validation algorithm, even if they are PII or belong to a small table (see the ```minSampleSize``` property).
+This parameter allows to set up an override list of field names. These fields will be included in the plugin's validation algorithm, even if they are identified as PII or belong to a small table (see the ```minSampleSize``` property).
 
 #### Field Name Exclude List
 
