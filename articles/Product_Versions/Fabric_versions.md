@@ -108,7 +108,7 @@ Please check the release notes for component version support, such as Kafka, Neo
         <tr>
             <td align="left"><a href="/Release_Notes/V8.2/Fabric_Release_Notes_V8.2.3.pdf">8.2.3</a></td>
             <td>May 13, 2025</td>
-            <td>HF1</td>
+            <td align="left"><a href="/Release_Notes/V8.2/Fabric_Release_Notes_V8.2.3_HF1.pdf">HF1</a></td>
             <td>May 19, 2025</td>
             <td>22</td>
             <td>15.12</td>
@@ -128,7 +128,7 @@ Please check the release notes for component version support, such as Kafka, Neo
         <tr>
             <td align="left"><a href="/Release_Notes/V8.2/Fabric_Release_Notes_V8.2.1.pdf">8.2.1</a></td>
             <td>March 05, 2025</td>
-            <td>HF3</td>
+            <td align="left"><a href="/Release_Notes/V8.2/Fabric_Release_Notes_V8.2.1_HF3.pdf">HF3</a></td>
             <td>May 19, 2025</td>
             <td>52</td>
             <td>15.12</td>
@@ -148,7 +148,7 @@ Please check the release notes for component version support, such as Kafka, Neo
         <tr>
             <td align="left"><a href="/Release_Notes/V8.1/Fabric_Release_Notes_V8.1.9.pdf">8.1.9</a></td>
             <td>March 25, 2025</td>
-            <td>HF1</td>
+            <td align="left"><a href="/Release_Notes/V8.1/Fabric_Release_Notes_V8.1.9_HF1.pdf">HF1</a></td>
             <td>April 03, 2025</td>            
             <td>9</td>
             <td>15.4</td>
@@ -208,7 +208,7 @@ Please check the release notes for component version support, such as Kafka, Neo
         <tr>
             <td align="left"><a href="/Release_Notes/V8.1/Fabric_Release_Notes_V8.1.3.pdf">8.1.3</a></td>
             <td>November 11, 2024</td>
-            <td>HF1</td>
+            <td align="left"><a href="/Release_Notes/V8.1/Fabric_Release_Notes_V8.1.3_HF1.pdf">HF1</a></td>
             <td>November 17, 2024</td>
             <td>9</td>
             <td>15.4</td>
@@ -248,7 +248,7 @@ Please check the release notes for component version support, such as Kafka, Neo
         <tr>
             <td align="left"><a href="/Release_Notes/V8.0/Fabric_Release_Notes_V8.0.0.pdf">8.0.0</a></td>
             <td>June 4, 2024</td>
-            <td>HF4</td>
+            <td align="left"><a href="/Release_Notes/V8.0/Fabric_Release_Notes_V8.0.0_HF4.pdf">HF4</a></td>
             <td>August 27, 2024</td>
             <td>322</td>
             <td>15.4</td>
@@ -258,7 +258,7 @@ Please check the release notes for component version support, such as Kafka, Neo
          <tr>
             <td align="left"><a href="/Release_Notes/V7.2/Fabric_Release_Notes_V7.2.2.pdf">7.2.2</a></td>
             <td>February 14, 2024</td>
-            <td>HF28</td>
+            <td align="left"><a href="/Release_Notes/V7.2/Fabric_Release_Notes_V7.2.2_HF28.pdf">HF28</a></td>
             <td>May 28, 2025</td>
             <td>352</td>
             <td>15.4</td>
@@ -268,7 +268,7 @@ Please check the release notes for component version support, such as Kafka, Neo
         <tr>
             <td align="left"><a href="/Release_Notes/V7.2/Fabric_Release_Notes_V7.2.1.pdf">7.2.1</a></td>
             <td>January 7, 2024</td>
-            <td>HF1</td>
+            <td align="left"><a href="/Release_Notes/V7.2/Fabric_Release_Notes_V7.2.1_HF1.pdf">HF1</a></td>
             <td>January 29, 2024</td>
             <td>4</td>
             <td>15.4</td>
@@ -278,7 +278,7 @@ Please check the release notes for component version support, such as Kafka, Neo
         <tr>
             <td align="left"><a href="/Release_Notes/V7.2/Fabric_Release_Notes_V7.2.0.pdf">7.2.0</a></td>
             <td>October 22, 2023</td>
-            <td>HF5</td>
+            <td align="left"><a href="/Release_Notes/V7.2/Fabric_Release_Notes_V7.2.0_HF5.pdf">HF5</a></td>
             <td>February 14, 2024</td>
             <td>281</td>
             <td>15.4</td>
@@ -288,7 +288,7 @@ Please check the release notes for component version support, such as Kafka, Neo
         <tr>
             <td align="left"><a href="/Release_Notes/Archived%20Fabric%20Versions/Fabric_Release_Notes_V7.1.1.pdf">7.1.1</a></td>
             <td>July 25, 2023</td>
-            <td>HF15</td>
+            <td align="left"><a href="/Release_Notes/Archived%20Fabric%20Versions/Fabric_Release_Notes_V7.1.1_HF15.pdf">HF15</a></td>
             <td>June 17, 2025</td>
             <td>104</td>
             <td></td>
@@ -298,7 +298,7 @@ Please check the release notes for component version support, such as Kafka, Neo
         <tr>
             <td align="left"><a href="/Release_Notes/Archived%20Fabric%20Versions/Fabric_Release_Notes_V7.1.0.pdf">7.1.0</a></td>
             <td>May 11, 2023</td>
-            <td>HF4</td>
+            <td align="left"><a href="/Release_Notes/Archived%20Fabric%20Versions/Fabric_Release_Notes_V7.1.0_HF4.pdf">HF4</a></td>
             <td>Aug 15, 2023</td>
             <td>235</td>
             <td></td>
@@ -308,7 +308,7 @@ Please check the release notes for component version support, such as Kafka, Neo
         <tr>
             <td align="left"><a href="/Release_Notes/Archived%20Fabric%20Versions/Fabric_Release_Notes_V7.0.1.pdf">7.0.1</a></td>
             <td>January 29, 2023</td>
-            <td>HF3</td>
+            <td align="left"><a href="/Release_Notes/Archived%20Fabric%20Versions/Fabric_Release_Notes_V7.0.1_HF3.pdf">HF3</a></td>
             <td>June 26, 2023</td>
             <td>118</td>
             <td></td>
@@ -318,7 +318,7 @@ Please check the release notes for component version support, such as Kafka, Neo
         <tr>
             <td align="left"><a href="/Release_Notes/Archived%20Fabric%20Versions/Fabric_Release_Notes_V7.0.0.pdf">7.0.0</a></td>
             <td>November 30, 2022</td>
-            <td>HF2</td>
+            <td align="left"><a href="/Release_Notes/Archived%20Fabric%20Versions/Fabric_Release_Notes_V7.0.0_HF2.pdf">HF2</a></td>
             <td>December 15, 2022</td>
             <td>324</td>
             <td></td>
@@ -328,7 +328,7 @@ Please check the release notes for component version support, such as Kafka, Neo
         <tr>
             <td align="left"><a href="/Release_Notes/Archived%20Fabric%20Versions/Fabric_Release_Notes_V6.5.9.pdf">6.5.9</a></td>
             <td>September 2, 2022</td>
-            <td>HF33</td>
+            <td align="left"><a href="/Release_Notes/Archived%20Fabric%20Versions/Fabric_Release_Notes_V6.5.9_HF33.pdf">HF33</a></td>
             <td>October 29, 2025</td>
             <td>298</td>
             <td></td>
@@ -338,7 +338,7 @@ Please check the release notes for component version support, such as Kafka, Neo
         <tr>
             <td align="left"><a href="/Release_Notes/Archived%20Fabric%20Versions/Fabric_Release_Notes_V6.5.8.pdf">6.5.8</a></td>
             <td>June 13, 2022</td>
-            <td>HF2</td>
+            <td align="left"><a href="/Release_Notes/Archived%20Fabric%20Versions/Fabric_Release_Notes_V6.5.8_HF2.pdf">HF2</a></td>
             <td>June 15, 2022</td>
             <td>96</td>
             <td></td>
@@ -348,7 +348,7 @@ Please check the release notes for component version support, such as Kafka, Neo
         <tr>
             <td align="left"><a href="/Release_Notes/Archived%20Fabric%20Versions/Fabric_Release_Notes_V6.5.7.pdf">6.5.7</a></td>
             <td>April 21, 2022</td>
-            <td>HF7</td>
+            <td align="left"><a href="/Release_Notes/Archived%20Fabric%20Versions/Fabric_Release_Notes_V6.5.7_HF7.pdf">HF7</a></td>
             <td>April 21, 2022</td>
             <td>65</td>
             <td></td>
