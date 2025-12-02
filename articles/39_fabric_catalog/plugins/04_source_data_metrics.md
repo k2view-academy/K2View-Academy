@@ -54,7 +54,7 @@ The below image is an example of such MTable:
 
 <img src="../images/option_set_mtable_ex.png" />
 
-Starting from Fabric V8.3.1, the **OPTION_SET** classification is assigned to this field, unless it has already been classified. In the Catalog Settings, the OPTION_SET classification is mapped to the **RandomOptionSet** actor for masking and synthetic data generation. The actor randomly selects a value from the catalog_field_option_set MTable, based on the input data platform, schema, dataset, class and field.
+Starting from Fabric V8.3.1, the **OPTION_SET** classification is assigned to this field, unless it has already been classified. In the Catalog Settings, the OPTION_SET classification is mapped to the **RandomOptionSet** Actor for masking and synthetic data generation. The actor randomly selects a value from the catalog_field_option_set MTable, based on the input data platform, schema, dataset, class and field.
 
 The rules for identifying fields with a limited number of distinct values are:
 
