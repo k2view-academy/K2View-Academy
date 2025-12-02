@@ -33,14 +33,14 @@ Once this alias map is set, the values of the Catalog field properties are used 
 
 ### User Story 2: Improving the generation of values from distinct list
 
-Let's assume there is a field that includes a value from a limited list of possible values. For example, a 'status' field usually includes values such as *New*, *Open*, *Pending*, *In progress*, *Resolved* or *Closed*. 
+Suppose there is a field, whose value is taken from a predefined list. For example, a 'status' field usually includes values such as *New*, *Open*, *Pending*, *In progress*, *Resolved* or *Closed*. 
 
-When generating a value for such field, it is required to randomly select one of the existing values (in the data sample), rather than generating a random string, so that the generated value will be significantly closer to the actual field values.
+When generating a value for such field, it is required to randomly select one of the existing values from the data sample rather than generating a random string. This approach ensures the generated output is closely aligned with the data sample values in this field.
 
-The below steps describe how to generate a random value based on the field's list of possible values:
+The below steps describe how to generate a random value derived from the field's list of possible values:
 
 1. Activate the **Option Set Analyzer** plugin in the **Catalog Settings > Discovery Pipeline** window and run Discovery on the interface. 
-2. Perform **Build Artifacts** and validate which Catalog fields include the property ```optionSet = true``` and ```classification = OPTION_SET```. These fields were identified as having a list of possible values based on the data sample. 
+2. Perform the **Build Artifacts** action and validate which Catalog fields include the property ```classification = OPTION_SET```. These fields were identified as containing a predefined list of possible values based on the data sample. 
 3. Validate that the ```catalog_field_option_set___<data platform>_<schema>_main.csv``` file was created and that it includes field names along with their distinct values identified in the data sample.
 4. In the **Catalog Settings > PII & Masking** tab, validate that the **OPTION_SET** classification exists and that it includes the **RandomOptionSet.actor** generator. Click the **Advanced** link to view the predefined alias map between the generator's inputs and the Catalog's calculated properties, as shown below.
    * If the alias map is not set, create it based on the below image:
