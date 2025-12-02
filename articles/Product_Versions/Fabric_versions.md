@@ -21,7 +21,7 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td align="left"><a href="/Release_Notes/V8.3/Fabric_Release_Notes_V8.3.0_HF6.pdf">HF6</a></td>
             <td>Nov 26, 2025</td>
             <td><p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.3.0_359</p>
-        <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.3.0_359</p></td>
+                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.3.0_359</p></td>
             <td>17.5</td>
             <td>4.1.8</td>
             <td></td>
@@ -31,7 +31,8 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td>Nov 30, 2025</td>
             <td></td>
             <td></td>
-            <td>9</td>
+            <td><p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.2.11_9</p>
+                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.2.11_9</p></td>
             <td>15.12</td>
             <td>4.1.8</td>
             <td></td>
@@ -41,7 +42,8 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td>Sep 30, 2025</td>
             <td align="left"><a href="/Release_Notes/V8.2/Fabric_Release_Notes_V8.2.10_HF1.pdf">HF1</a></td>
             <td>Nov 14, 2025</td>
-            <td>3</td>
+            <td><p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.2.10_3</p>
+                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.2.10_3</p></td>
             <td>15.12</td>
             <td>4.1.8</td>
             <td></td>
