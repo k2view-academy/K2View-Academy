@@ -12,7 +12,7 @@ The solution is generic and not limited to the specific user stories presented b
 
 ### User Story 1: Improving the generation of random numeric values
 
-Suppose that a numeric field contains a value that should be masked. The default generator for masking numeric fields is ```RandomNumber.actor```, which is assigned to various classifications in the Catalog's PII & Masking tab. This actor generates a random number in the range defined by the input parameters — ```minimum``` and ```maximum```. The default values of these parameters are set for each classification. 
+Suppose that a numeric field contains a value that should be masked. The default Generator for masking numeric fields is ```RandomNumber.actor```, which is assigned to various classifications in the Catalog's PII & Masking tab. This actor generates a random number in the range defined by the input parameters — ```minimum``` and ```maximum```. The default values of these parameters are set for each classification. 
 
 It is required that the generated random values be significantly closer to the actual field values in the data source. 
 
