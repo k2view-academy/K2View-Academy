@@ -18,7 +18,7 @@ Please check the release notes for component version support, such as Kafka, Neo
         <tr>
             <td align="left"><a href="/Release_Notes/V8.3/Fabric_Release_Notes_V8.3.0.pdf">8.3.0</a></td>
             <td>Aug 7, 2025</td>
-            <td>HF6</td>
+            <td align="left"><a href="/Release_Notes/V8.3/Fabric_Release_Notes_V8.3.0_HF6.pdf">HF6</a></td>
             <td>Nov 26, 2025</td>
             <td>359</td>
             <td>17.5</td>
