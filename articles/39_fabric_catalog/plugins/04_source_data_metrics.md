@@ -56,10 +56,12 @@ The below image is an example of such MTable:
 
 Starting from Fabric V8.3.1, the **OPTION_SET** classification is assigned to this field, unless it has already been classified. In the Catalog Settings, the OPTION_SET classification is mapped to the **RandomOptionSet** Actor for masking and synthetic data generation. The actor randomly selects a value from the catalog_field_option_set MTable, based on the input data platform, schema, dataset, class and field.
 
-The rules for identifying fields with a limited number of distinct values are:
+To identify fields with limited distinct values, consider these guidelines:
 
-* The field is **not PII** (in order to comply with privacy regulations and not to expose sensitive values).
-* The number of distinct values is either below a plugin's threshold (e.g., 0.05) **or** below the ```Absolute Threshold``` input parameter (which is set to 15 by default).
+1. Ensure the field is non-PII to comply with privacy regulations and avoid the exposure of sensitive data. 
+
+2. The number of distinct values should be below either a plugin’s threshold (e.g., 0.05) or the Absolute Threshold input parameter, which defaults to 15.
+
 
 Additional rules apply based on the **plugin input parameters**, as explained below.
 
