@@ -172,12 +172,13 @@ While Fabric might be deployed across several regions, it can use the same KMS k
    >  * KEY_ID stands for the Security Object ID at Fortanix KMS.
    >  * API_KEY - as generated for the app, at Fortanix KMS.
    >  * AD - Authentication Data - is optional
-   >  * TAG_LEN - when attribute is commented or set to be with value = 0, its actual value will be the default which was defined by Fortanix at its SDK.
+   >  * TAG_LEN - The authentication tag length, used in AES-GCM and other AEAD algorithms. Commonly to be set to 1
    >  * Attributes which considered as secrets are encrypted and are not saved in the file in their clear/plain form.
    >  * Changes in the config.ini file are performed on all Fabric nodes.
 
    
 
+2. Set certificate when needed for trust, as any communication with external servers.
 2. In Fabric console/terminal, run this command: ``activatekey name='<name>' generatorType='Java_AES' storeType='FORTANIX_KMS'``.
 
 
