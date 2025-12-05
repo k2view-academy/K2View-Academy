@@ -31,7 +31,7 @@ If Customer desires to have such failures corrected, K2view shall make reasonabl
 **1.3.** Maintenance for Supported Versions - K2view shall provide Maintenance & Support for Version Releases for the longer of: (1) A period of two years, commencing on the Major Version release date, for the Major Version used by the Customer (“Major Version X”); or (2) until K2view releases Major Version (X + 3), subject to having a license agreement in term. 
 
 
-**1.4.** K2view’s Maintenance & Support only include support services for K2view Software to the extent that the Customer System meets the requirements and specifications defined by K2view [here](/articles/98_maintenance_and_operational/Hardware/2_All_Environments/01_hardware_requirements_introduction.md) and an effective monitoring system.
+**1.4.** K2view’s Maintenance & Support only includes support services for K2view Software to the extent that the Customer System meets the requirements and specifications defined by K2view [here](/articles/98_installation_and_upgrade/Hardware/README.md) and an effective monitoring system.
 
 
 **1.5.** K2view’s Maintenance & Support do not include services such as assistance in program and architectural design or consultation services or training or performance tuning, including consultation regarding configuration and implementation issues in development and production.
