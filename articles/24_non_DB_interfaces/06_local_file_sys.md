@@ -67,7 +67,7 @@ To create a new interface, do the following:
 </tr>
 <tr>
 <td><strong>Discovery</strong></td>
-<td>Broadway flows, invoked upon running Discovery on the given interface. They define mapping and transformation rules to conver the files into the Catalog&rsquo;s standard hierarchy.&nbsp;</td>
+<td>Broadway flows, invoked upon running Discovery on the given interface. These flows define mapping and transformation rules to convert the files into the Catalog&rsquo;s standard hierarchy.&nbsp;</td>
 </tr>
 </tbody>
 </table>
