@@ -22,19 +22,19 @@ To create a new interface, do the following:
 <web>
 
 1. Go to **Project Tree** > **Implementation** > **Shared Objects**, right click **Interfaces**, select **New Interface**.
-   
+
 2. From the window that appears, select the interface type. Scroll down to see more interface types. You can reduce the number of interface types shown by clicking on a menu item from the *Show All ... Others* list. 
-   
+
    ![image](images/local_3WEB.png)
-   
+
 3. Enter a suitable name for your new interface, then click **Create**:
    ![image](images/local_1WEB.PNG). 
-   
+
 4. Set "Active" to ON. 
 
 5. Populate the connection's settings and click **Test Connection**.
    ![image](images/local_2WEB.PNG)
-   
+
 6. Once the connection test succeeds, the interface is ready. If the connection test did not succeed, check your settings and try again. 
 
 </web>   
@@ -46,25 +46,33 @@ To create a new interface, do the following:
 <table>
 <tbody>
 <tr>
-<td width="200pxl">&nbsp;<strong>Parameter</strong></td>
-<td width="700pxl">&nbsp;<strong>Description</strong></td>
+<td width="200pxl"><strong>Parameter</strong></td>
+<td width="700pxl"><strong>Description</strong></td>
 </tr>
 <tr>
-<td>&nbsp;<strong>Working Directory&nbsp;</strong></td>
+<td><strong>Working Directory</strong></td>
 <td>Directory where the files are stored - Windows or Linux.</td>
 </tr>
 <tr>
-<td>&nbsp;<strong>Files filter</strong></td>
+<td><strong>Files filter</strong></td>
 <td>Filters files by regular expression, e.g. "*.CSV"</td>
 </tr>
 <tr>
-<td>&nbsp;<strong>Affinity</strong></td>
+<td><strong>Recursive</strong></td>
+<td>Indicator, to enable presenting all files included in all embedded folders.</td>
+</tr>
+<tr>
+<td><strong>Affinity</strong></td>
 <td>Affinity (Optional) populate this parameter with the IP address of a Fabric node, DC name, or logical identifier for Fabric nodes.</td>
+</tr>
+<tr>
+<td><strong>Discovery</strong></td>
+<td>Broadway flows, invoked upon running Discovery on the given interface. They define mapping and transformation rules to conver the files into the Catalog&rsquo;s standard hierarchy.&nbsp;</td>
 </tr>
 </tbody>
 </table>
 
-
+[Click for more information about the File Cataloging solution.](/articles/39_fabric_catalog/05_cataloging_of_files.md)
 
 
 ### Example of Using a Local File System Interface
@@ -82,7 +90,7 @@ To create an [Interface Listener](/articles/19_Broadway/09_broadway_integration_
    * Note that the **interface** and the **path** input arguments of the **FileRead** Actor are defined as an [External link type](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs). Their values are passed from the defined interface by the Listener.
 
 <studio>
-   
+
 4. In the Jobs window, select the **Broadway flow** and **Execution mode** and then save the job.
 
    ![images](images/02_sftp_2.PNG)
