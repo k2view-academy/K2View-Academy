@@ -36,9 +36,7 @@ To create a new interface, do the following:
 
 5. Once the connection test succeeds, the interface is ready. If the connection test did not succeed, check your settings and try again. 
 
-6. If the interface is supposed to be used for File Cataloging, expand the **Discovery** section and populate the names of 3 Broadway flows. This option is available starting from Fabric V8.3.
-
-[Click for more information about the File Cataloging solution.](/articles/39_fabric_catalog/05_cataloging_of_files.md)
+6. If the interface is supposed to be used for File Cataloging, expand the **Discovery** section and populate the names of 3 Broadway flows. This option is available starting from Fabric V8.3. [Click here for more information about the File Cataloging solution.](/articles/39_fabric_catalog/05_cataloging_of_files.md)
 
 </web>   
 
@@ -58,7 +56,7 @@ To create a new interface, do the following:
 </tr>
 <tr>
 <td><strong>Files filter</strong></td>
-<td>Filters files by regular expression, e.g. "*.CSV"</td>
+<td>Filters files using the <em>files wildcard pattern</em>, e.g. "*.CSV"</td>
 </tr>
 <tr>
 <td><strong>Recursive</strong></td>

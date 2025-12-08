@@ -26,6 +26,8 @@ To create a new Amazon S3 Storage interface, do the following:
 
    ![image](images/12_s3_2WEB.png)
 
+4. If the interface is supposed to be used for File Cataloging, expand the **Discovery** section and populate the names of 3 Broadway flows. This option is available starting from Fabric V8.3. [Click here for more information about the File Cataloging solution.](/articles/39_fabric_catalog/05_cataloging_of_files.md)
+
 </web>
 
 
@@ -47,10 +49,10 @@ To create a new Amazon S3 Storage interface, do the following:
 </tr>
 <tr>
 <td><strong>Files Filter</strong></td>
-<td>Filters files using regular expressions.</td>
+<td>Filters files based on the below filter type.</td>
 </tr>
 <tr>
-<td><strong><strong><label id="#/properties/FILES_FILTER_TYPE-label" class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-348fk2" for="#/properties/FILES_FILTER_TYPE" data-shrink="true">Files Filter Type</label></strong></strong></td>
+<td><strong>Files Filter Type</strong></td>
 <td>
 <p>Two types are supported:</p>
 <ul>
@@ -60,7 +62,7 @@ To create a new Amazon S3 Storage interface, do the following:
 </td>
 </tr>
 <tr>
-<td><strong><span class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-9l3uo3">Recursive</span></strong></td>
+<td><strong>Recursive</strong></td>
 <td>Indicator, to enable presenting all files included in all embedded folders.</td>
 </tr>
 <tr>
