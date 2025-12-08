@@ -47,6 +47,10 @@ To create a new Google Cloud Storage interface, do the following:
 <td><strong>Working Path</strong></td>
 <td>The specific folder path within the bucket where the connector will look for files. </td>
 </tr><tr>
+<td><strong>Files Filter</strong></td>
+<td>Filters files based on the below filter type.</td>
+</tr>
+<tr>
 <td><strong>Files Filter Type</strong></td>
 <td>
 <p>Two types are supported:</p>
