@@ -11,20 +11,22 @@ To create a new Google Cloud Storage interface, do the following:
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **Google Cloud Storage** from the **File System** section to open the **New Interface** window.
 
    ![image](images/14_gcs_1.png)
-   
+
 2. Populate the connection's settings and click **Save**.
-</studio>
+  </studio>
 
 <web>
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **Google Cloud Storage** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
 2. Enter a suitable name for your new Google Cloud Storage Interface, then click **Create**
-  
+
    ![image](images/14_gcs_WEB1.png)
 
 3. Populate the connection's settings and click **Save**.
 
    ![image](images/14_gcs_WEB2.png)
+
+4. If the interface is supposed to be used for File Cataloging, expand the **Discovery** section and populate the names of 3 Broadway flows. This option is available starting from Fabric V8.3. [Click here for more information about the File Cataloging solution.](/articles/39_fabric_catalog/05_cataloging_of_files.md)
 
 </web>
 
@@ -44,11 +46,21 @@ To create a new Google Cloud Storage interface, do the following:
 <tr>
 <td><strong>Working Path</strong></td>
 <td>The specific folder path within the bucket where the connector will look for files. </td>
+</tr><tr>
+<td><strong>Files Filter Type</strong></td>
+<td>
+<p>Two types are supported:</p>
+<ul>
+<li><strong>Wildcard </strong>&ndash; to support filter using the <em>files wildcard pattern</em>.</li>
+<li><strong>Regular expression </strong>&ndash; to support filter using <em>regex</em>.</li>
+</ul>
+</td>
 </tr>
 <tr>
-<td><strong>Files Filter</strong></td>
-<td>Filters files using regular expressions to specify which files to look for.</td>
+<td><strong>Recursive</strong></td>
+<td>Indicator, to enable presenting all files included in all embedded folders.</td>
 </tr>
+
 <tr>
 <td><strong>Project ID</strong></td>
 <td>The Google Cloud Platform project ID where your bucket is located. This is a required field with a globally unique identifier, typically 6-30 characters using lowercase letters, numbers, and hyphens.</td>
