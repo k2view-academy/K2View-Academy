@@ -11,15 +11,15 @@ To create a new Amazon S3 Storage interface, do the following:
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **Amazon S3 Storage** from the **File System** section to open the **New Interface** window.
 
    ![image](images/12_s3_1.png)
-   
+
 2. Populate the connection's settings and click **Save**.
-</studio>
+  </studio>
 
 <web>
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **Amazon S3 Storage** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
 2. Enter a suitable name for your new Amazon S3 Storage Interface, then click **Create**
-  
+
    ![image](images/12_s3_1WEB.png)
 
 3. Populate the connection's settings and click **Save**.
@@ -50,6 +50,20 @@ To create a new Amazon S3 Storage interface, do the following:
 <td>Filters files using regular expressions.</td>
 </tr>
 <tr>
+<td><strong><strong><label id="#/properties/FILES_FILTER_TYPE-label" class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-348fk2" for="#/properties/FILES_FILTER_TYPE" data-shrink="true">Files Filter Type</label></strong></strong></td>
+<td>
+<p>Two types are supported:</p>
+<ul>
+<li><strong>Wildcard </strong>&ndash; to support filter using the <em>files wildcard pattern</em>.</li>
+<li><strong>Regular expression </strong>&ndash; to support filter using <em>regex</em>.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><strong><span class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-9l3uo3">Recursive</span></strong></td>
+<td>Indicator, to enable presenting all files included in all embedded folders.</td>
+</tr>
+<tr>
 <td><strong>Access key ID</strong></td>
 <td>The AWS access key ID for authentication. This is a 20-character alphanumeric identifier that works with the secret access key to authenticate API requests to AWS services.</td>
 </tr>
@@ -63,21 +77,18 @@ To create a new Amazon S3 Storage interface, do the following:
 </tr>
 <tr>
 <td><strong>Discovery</strong></td>
-<td>Platform discovery catalog options for analyzing and cataloging S3 bucket contents. Available options:
+<td>Broadway flows, invoked upon running Discovery for analyzing and cataloging S3 bucket contents. These flows define mapping and transformation rules to convert the files into the Catalog&rsquo;s standard hierarchy:
 <ul>
 <li>Get Metadata - Retrieves metadata information about files and objects</li>
 <li>Get Files List - Generates a list of all files in the specified bucket/path</li>
 <li>Get File Data - Extracts actual file content and data for processing</li>
-</ul></td>
-</tr>
-<studio>
-<p>Add an Interface Listener as a Broadway job. Click to create an Interface Listener job under the specified Logical Unit.</p>
-</studio>
+</ul>
 </td>
 </tr>
 </tbody>
 </table>
 
+[Click for more information about the File Cataloging solution.](/articles/39_fabric_catalog/05_cataloging_of_files.md)
 
 
 

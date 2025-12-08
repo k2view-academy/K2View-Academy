@@ -30,12 +30,15 @@ To create a new interface, do the following:
 3. Enter a suitable name for your new interface, then click **Create**:
    ![image](images/local_1WEB.PNG). 
 
-4. Set "Active" to ON. 
+4. Populate the connection's settings and click **Test Connection**.
 
-5. Populate the connection's settings and click **Test Connection**.
    ![image](images/local_2WEB.PNG)
 
-6. Once the connection test succeeds, the interface is ready. If the connection test did not succeed, check your settings and try again. 
+5. Once the connection test succeeds, the interface is ready. If the connection test did not succeed, check your settings and try again. 
+
+6. If the interface is supposed to be used for File Cataloging, expand the **Discovery** section and populate the names of 3 Broadway flows. This option is available starting from Fabric V8.3.
+
+[Click for more information about the File Cataloging solution.](/articles/39_fabric_catalog/05_cataloging_of_files.md)
 
 </web>   
 
@@ -67,12 +70,19 @@ To create a new interface, do the following:
 </tr>
 <tr>
 <td><strong>Discovery</strong></td>
-<td>Broadway flows, invoked upon running Discovery on the given interface. These flows define mapping and transformation rules to convert the files into the Catalog&rsquo;s standard hierarchy.&nbsp;</td>
+<td>Broadway flows, invoked upon running Discovery for analyzing and cataloging the content of this interface. These flows define mapping and transformation rules to convert the files into the Catalog&rsquo;s standard hierarchy:
+<ul>
+<li>Get Metadata - Retrieves metadata information about files and objects</li>
+<li>Get Files List - Generates a list of all files in the specified bucket/path</li>
+<li>Get File Data - Extracts actual file content and data for processing</li>
+</ul>
+
+</td>
 </tr>
 </tbody>
 </table>
 
-[Click for more information about the File Cataloging solution.](/articles/39_fabric_catalog/05_cataloging_of_files.md)
+
 
 
 ### Example of Using a Local File System Interface
