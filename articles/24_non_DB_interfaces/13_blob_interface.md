@@ -103,6 +103,17 @@ To create a new Azure Blob Storage interface, do the following:
 </studio>
 </td>
 </tr>
+
+<tr>
+<td><strong>Discovery</strong></td>
+<td>Broadway flows, invoked upon running Discovery for analyzing and cataloging S3 bucket contents. These flows define mapping and transformation rules to convert the files into the Catalog&rsquo;s standard hierarchy:
+<ul>
+<li>Get Metadata - Retrieves metadata information about files and objects</li>
+<li>Get Files List - Generates a list of all files in the specified bucket/path</li>
+<li>Get File Data - Extracts actual file content and data for processing</li>
+</ul>
+</td>
+</tr>
 </tbody>
 </table>
 

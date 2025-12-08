@@ -76,15 +76,14 @@ To create a new Google Cloud Storage interface, do the following:
 <tr>
 <td><strong>Credentials file</strong></td>
 <td>The location of the credentials file. This file includes the private key and service account details required to access the GCS bucket securely.</td>
-</tr>
-<tr>
+</tr><tr>
 <td><strong>Discovery</strong></td>
-<td>Discoveryoptions for analyzing and cataloging GCS bucket contents. Available options include Get Metadata, Get Files List, and Get File Data for different levels of bucket analysis.</td>
-</tr>
-<p>Test Connection. Click to test the connection.</p>
-<studio>
-<p>Add an Interface Listener as a Broadway job. Click to create an Interface Listener job under the specified Logical Unit.</p>
-</studio>
+<td>Broadway flows, invoked upon running Discovery for analyzing and cataloging S3 bucket contents. These flows define mapping and transformation rules to convert the files into the Catalog&rsquo;s standard hierarchy:
+<ul>
+<li>Get Metadata - Retrieves metadata information about files and objects</li>
+<li>Get Files List - Generates a list of all files in the specified bucket/path</li>
+<li>Get File Data - Extracts actual file content and data for processing</li>
+</ul>
 </td>
 </tr>
 </tbody>
