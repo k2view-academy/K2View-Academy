@@ -63,7 +63,7 @@ To create a new Azure Blob Storage interface, do the following:
 </tr>
 <tr>
 <td><strong>Recursive</strong></td>
-<td>Indicator, to enable presenting all files included in all embedded folders.</td>
+<td>Indicator, to allow displaying all files in embedded folders.</td>
 </tr>
 
 <tr>
