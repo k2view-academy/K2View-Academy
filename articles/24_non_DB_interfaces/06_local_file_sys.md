@@ -64,7 +64,7 @@ To create a new interface, do the following:
 </tr>
 <tr>
 <td><strong>Affinity</strong></td>
-<td>Affinity (Optional) populate this parameter with the IP address of a Fabric node, DC name, or logical identifier for Fabric nodes.</td>
+<td>(Optional) Should be populated with IP address of a Fabric node, DC name, or logical identifier for Fabric nodes.</td>
 </tr>
 <tr>
 <td><strong>Discovery</strong></td>
