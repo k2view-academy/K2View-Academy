@@ -25,6 +25,10 @@ To create a new SFTP interface, do the following:
 
    ![image](images/02_sftp_2WEB.PNG)
 
+4. If the interface is supposed to be used for File Cataloging, expand the **Discovery** section and populate the names of 3 Broadway flows. This option is available starting from Fabric V8.3. [Click here for more information about the File Cataloging solution.](/articles/39_fabric_catalog/05_cataloging_of_files.md)
+
+
+
 </web>
 
 
@@ -58,7 +62,12 @@ To create a new SFTP interface, do the following:
 </tr>
 <tr>
 <td><strong>Files Filter</strong></td>
-<td>Wildcard - to support files wildcard pattern.</td>
+<td>Filters files using <em>files wildcard pattern</em>, e.g. "*.CSV"</td>
+</tr>
+
+<tr>
+<td><strong>Recursive</strong></td>
+<td>Indicator, to enable presenting all files included in all embedded folders.</td>
 </tr>
 <tr>
 <td><strong>Affinity</strong></td>

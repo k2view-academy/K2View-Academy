@@ -55,7 +55,7 @@ To create a new interface, do the following:
 <td>Directory where the files are stored - Windows or Linux.</td>
 </tr>
 <tr>
-<td><strong>Files filter</strong></td>
+<td><strong>Files Filter</strong></td>
 <td>Filters files using <em>files wildcard pattern</em>, e.g. "*.CSV"</td>
 </tr>
 <tr>
