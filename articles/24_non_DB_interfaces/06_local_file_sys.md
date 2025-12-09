@@ -56,7 +56,7 @@ To create a new interface, do the following:
 </tr>
 <tr>
 <td><strong>Files filter</strong></td>
-<td>Filters files using the <em>files wildcard pattern</em>, e.g. "*.CSV"</td>
+<td>Filters files using <em>files wildcard pattern</em>, e.g. "*.CSV"</td>
 </tr>
 <tr>
 <td><strong>Recursive</strong></td>
