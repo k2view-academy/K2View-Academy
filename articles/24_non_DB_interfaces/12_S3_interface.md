@@ -56,8 +56,8 @@ To create a new Amazon S3 Storage interface, do the following:
 <td>
 <p>Two types are supported:</p>
 <ul>
-<li><strong>Wildcard </strong>&ndash; to support filter using the <em>files wildcard pattern</em>.</li>
-<li><strong>Regular expression </strong>&ndash; to support filter using <em>regex</em>.</li>
+<li><strong>Wildcard </strong>&ndash; supports filtering using <em>files wildcard pattern</em>.</li>
+<li><strong>Regular expression </strong>&ndash; supports filtering using <em>regex</em>.</li>
 </ul>
 </td>
 </tr>
