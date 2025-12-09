@@ -60,7 +60,7 @@ To create a new interface, do the following:
 </tr>
 <tr>
 <td><strong>Recursive</strong></td>
-<td>Indicator, to enable presenting all files included in all embedded folders.</td>
+<td>Indicator, to allow displaying all files in embedded folders.</td>
 </tr>
 <tr>
 <td><strong>Affinity</strong></td>
