@@ -6,7 +6,7 @@ Here are some of the highlights of this release:
 
 * **Improved transaction management**: Catalog's graph creation in Neo4j has been enhanced by splitting the changes into batches. This allows to run each batch in parallel as separate transactions, significantly reducing memory consumption during Discovery job execution.
 * **Enhanced data quality**: The quality of generated data during masking and SDG is now improved. You can override the Generator's input parameters with values from Catalog-calculated metrics.
-* **Version differences list**: The Catalog App now includes a Version Differences window. This feature displays changes between selected versions and allows exporting the data to a CSV file.
+* **Version differences list**: The Catalog App now includes a Version Differences window which displays changes between selected versions and allows exporting the data to a CSV file.
 * **Expanded JSON support**: Cataloging of JSON files now fully supports Draft-07 and later versions of the JSON Schema specification.
 * **Web Studio enhancements**: 
   * You can now hide LUs in the Project tree within Web Studio, excluding them from the deployment process. 
