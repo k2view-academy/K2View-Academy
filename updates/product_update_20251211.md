@@ -9,7 +9,7 @@ Here are some of the highlights of this release:
 * **Version differences list**: The Catalog App now includes a Version Differences window which displays changes between selected versions and allows exporting the data to a CSV file.
 * **Expanded JSON support**: Cataloging of JSON files now fully supports Draft-07 and later versions of the JSON Schema specification.
 * **Web Studio enhancements**: 
-  * You can now hide LUs in the Project tree within Web Studio, excluding them from the deployment process. 
+  * You can now hide LUs in the Project tree within Web Studio, excluding them from build and deployment process. 
   * We've made various enhancements to both Graphit and Environments UX.
 * **Fortanix KMS Integration**: Fabric now supports storing its encrypted master key for data encryption in Fortanix Data Security Manager KMS.
 
