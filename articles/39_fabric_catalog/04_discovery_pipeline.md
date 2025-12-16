@@ -11,7 +11,7 @@ The Plugin Framework is an internal platform for running the plugins. It is a pi
 The pipeline is executed based on a combination of the product configuration and the project rules:
 
 * The **product** configuration of the Discovery Pipeline is a baseline, which includes the list of product built-in plugins, their execution order and input parameters, data snapshot sample size and more. 
-* The **project** configuration is a list of user-created rules that can be defined for any of the project's interfaces using a [Discovery Pipeline screen](/articles/39_fabric_catalog/catalog_app/13_discovery_pipeline_settings.md) in the Catalog Settings. The rules can be created on either a schema level or a dataset level, and their purpose is to override the baseline settings. 
+* The **project** configuration is a list of user-created rules that can be defined for any of the project's interfaces using a [Discovery Pipeline Settings](/articles/39_fabric_catalog/catalog_app/13_discovery_pipeline_settings.md) in the Catalog App. The rules can be created on either a schema level or a dataset level, and their purpose is to override the baseline settings. 
 
 ### Plugins Pipeline
 
@@ -77,9 +77,9 @@ The rules are executed based on the following hierarchy: When multiple rules app
 
 Depending which interface and/or schema the Discovery is executed on, the ```Plugin X``` settings are taken from the most specific rule.
 
-All the overrides are saved in the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder, in the **pluginsOverride.discovery** file. This file is created when the overrides are performed using the [Discovery Pipeline screen](/articles/39_fabric_catalog/catalog_app/13_discovery_pipeline_settings.md) in the Catalog Settings tab.
+All the overrides are saved in the ```Implementation/SharedObjects/Interfaces/Discovery/``` folder, in the **pluginsOverride.discovery** file. This file is created when the overrides are performed using the [Discovery Pipeline Settings](/articles/39_fabric_catalog/catalog_app/13_discovery_pipeline_settings.md) in the Catalog App.
 
-Click [here](/articles/39_fabric_catalog/catalog_app/13_discovery_pipeline_settings.md) to learn about baseline configuration as well as override rules that can be viewed and updated via the Discovery Pipeline screen in the Catalog Settings tab. 
+Click [here](/articles/39_fabric_catalog/catalog_app/13_discovery_pipeline_settings.md) to learn about baseline configuration as well as override rules that can be viewed and updated via the Discovery Pipeline window in the Catalog Settings tab. 
 
 
 

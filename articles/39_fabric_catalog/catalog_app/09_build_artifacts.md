@@ -2,57 +2,44 @@
 
 ### Overview
 
-The Catalog provides the ability to build artifacts and save them in the Project tree. An artifact includes details of all Catalog fields and  their properties — such as Classification and PII — for the currently displayed Catalog version. 
+The Catalog provides the ability to build **artifacts** and save them in the Project tree as CSV files. The artifacts are also created as MTables, uploaded to the Fabric memory.
 
-The prerequisite for building the Catalog artifact is running the Discovery job for at least one project interface.
+There are two kinds of artifacts: those of **Catalog fields** and those of **relations**.  
+
+Artifacts are used by the masking and synthetic data generation mechanism, as explained [here](11_catalog_masking.md).
 
 ### Building Artifacts
 
-Building a Catalog artifact is done by clicking **Actions > Build Artifacts** in the Catalog application's [Menu bar](05_catalog_app.md#menu-bar). 
+Catalog artifacts are created by clicking **Actions > Build Artifacts** in the Catalog application's [Menu bar](05_catalog_app.md#menu-bar). 
 
-A Catalog artifact is a file called **catalog_field_info.csv**. It is created in a CSV format, saved in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree and uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md).
+The artifacts are uploaded to the Fabric memory as **catalog_field_info** and **catalog_relations_info** [MTables](/articles/09_translations/06_mtables_overview.md). 
 
-The below image is an example of a Catalog artifact:
+The following CSV-format files are created and saved in the Project under the  ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder:
+
+* **Field artifacts** files, with the following name format: ```catalog_field_info___<dataPlatform>_<schema>.csv```, (containing 3 underscores before the data platform name).
+* **Relation artifact** files, with the following name format: ```catalog_relations_info___<dataPlatform>_<schema>.csv```, (containing 3 underscores before the data platform name). It includes a list of *refersTo* relations with their properties (parent info, child info, origin). Note that these files are generated only from V8.3.1 onward.
+
+The below image is an example of a ```catalog_field_info___DB2_sakila.csv``` file:
 
 <img src="../images/catalog_info_mtable.png" />
 
-The artifact is created for the Catalog version, which is displayed in the application. The heading of the last column indicates the version number (**V14** in the above example), and the column itself always remains empty.
-
-Catalog artifacts can be created for any Catalog version. Each new artifact overrides the existing one in the Project tree.
-
-### Building Artifacts Including Relations
-
-Starting from Fabric V8.3, the relations artifact can be created when needed. This is only available through the ```/api/catalog/{version}/build-catalog-artifacts``` API, by setting ```refersTo=true``` in the API input, as described [here](/articles/39_fabric_catalog/20_catalog_APIs.md#build-catalog-artifacts). Note that relations artifacts are not created when *Build Artifacts* activity is initiated via the Catalog application.
-
-The below image is an example of the Catalog relations artifact. As you can see, it includes a list of relations between datasets upon their keys:
+The below image is an example of ```catalog_relations_info___CRM_DB_main.csv```:
 
 <img src="../images/catalog_relations_mtable.png"  />
 
+The heading of the last column indicates the version number (**V14** in the above examples), and the column itself always remains empty.
 
-
-The relations artifact includes a list of *refersTo* relations, containing the following information:
-
-* Parent data platform, schema, dataset and field(s)
-* Child data platform, schema, dataset and field(s)
-* Origin of the relation (Crawler or manual)
-
-In case of a combined relations key, the field names are separated by a semicolon.
+Catalog artifacts can be created for any Catalog version. Each new artifact overrides the existing one in the Project tree.
 
 ### Splitting and Combining Artifacts
 
-Catalog artifacts can be split into separate files for each data platform and schema of a given Catalog version. The content of these files is then combined into one single MTable in Fabric's memory although the files are saved separately in the Project tree.
+Catalog artifacts can be split into separate files for each data platform and schema of a given Catalog version. The content of these files is then combined into a single MTable in Fabric's memory although the files are saved separately in the Project tree.
 
-Splitting the Catalog artifacts is enabled when the SPLIT_CATALOG_ARTIFACTS parameter in the config.ini file is set to ON (default parameter setting starting from Fabric V8.3).
+Starting from Fabric V8.3, all artifacts are split by default into separate files. The splitting or combining of artifacts is controlled by the SPLIT_CATALOG_ARTIFACTS parameter in the config.ini file.
 
-This ability allows to combine separate artifacts, created in different projects (or different spaces), into a single artifact. Hence, the artifact files can be copied from one project to another, and upon deployment, they will be combined into one MTable.
+This capability allows to combine separate artifacts, created in different projects (or different spaces), into a single artifact. Hence, the artifact files can be copied from one project to another, and upon deployment, they will be combined into one MTable.
 
 Note that if either the ```catalog_field_info.csv``` or ```catalog_relations_info.csv``` file exists in the Project tree, it should be manually deleted.
-
-The names of the separate files follow the below format:
-
-*  ```catalog_field_info___<dataPlatform>_<schema>.csv```, (containing 3 underscores before the data platform name)
-*  ```catalog_relations_info___<dataPlatform>_<schema>.csv```, (containing 3 underscores before the data platform name)
-
 
 
 

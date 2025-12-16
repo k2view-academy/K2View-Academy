@@ -87,7 +87,7 @@ The purpose of the Advanced Masking Settings pop-up window is to allow the confi
 
 * **Masking Indicators** — determine the masking behavior during a flow run. They can be set either per population, via the Catalog Masking Actor's inputs, or per Classification, via the Advanced Masking Settings screen. The Catalog definition of masking indicators overrides the settings of these indicators on the Catalog Masking Actor — for all the fields with the same Classification.
 * **Formatter Name and Parameters** — these are set in order to enable the [format-preserving masking](/articles/41_masking/03_format_preserving_masking.md).
-* **Property Alias Map** — establishes mappings between a Catalog field property and an input parameter of the attached Masking Actor. Such mappings override the actor’s input parameters (Generator or Formatter) with values from the Catalog field properties.
+* **Property Alias Map** — establishes mappings between a Catalog field property and an input parameter of the attached Masking Actor. Such mappings override the actor’s input parameters (Generator or Formatter) with values from the Catalog field properties. Click [here](15_override_actor_input.md) to get more information about the override use cases.
 
 <img src="../images/settings_masking_advanced.png" />
 
@@ -136,7 +136,4 @@ The sequences are saved in the **catalog_classification_generators** MTable (the
 * The category of non-PII sequences is **enable_sequence**.
 * The category of PII-sequences is **enable_masking_uniqueness**.
 
-
-
-[![Previous](/articles/images/Previous.png)](08_search_catalog.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](11_catalog_masking.md) 
 

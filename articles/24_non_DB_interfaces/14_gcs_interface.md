@@ -11,20 +11,22 @@ To create a new Google Cloud Storage interface, do the following:
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **Google Cloud Storage** from the **File System** section to open the **New Interface** window.
 
    ![image](images/14_gcs_1.png)
-   
+
 2. Populate the connection's settings and click **Save**.
-</studio>
+  </studio>
 
 <web>
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **Google Cloud Storage** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
 2. Enter a suitable name for your new Google Cloud Storage Interface, then click **Create**
-  
+
    ![image](images/14_gcs_WEB1.png)
 
 3. Populate the connection's settings and click **Save**.
 
    ![image](images/14_gcs_WEB2.png)
+
+4. If the interface is supposed to be used for File Cataloging, expand the **Discovery** section and populate the names of 3 Broadway flows. This option is available starting from Fabric V8.3. [Click here for more information about the File Cataloging solution.](/articles/39_fabric_catalog/05_cataloging_of_files.md)
 
 </web>
 
@@ -44,11 +46,25 @@ To create a new Google Cloud Storage interface, do the following:
 <tr>
 <td><strong>Working Path</strong></td>
 <td>The specific folder path within the bucket where the connector will look for files. </td>
+</tr><tr>
+<td><strong>Files Filter</strong></td>
+<td>Filters files based on the below filter type.</td>
 </tr>
 <tr>
-<td><strong>Files Filter</strong></td>
-<td>Filters files using regular expressions to specify which files to look for.</td>
+<td><strong>Files Filter Type</strong></td>
+<td>
+<p>Two types are supported:</p>
+<ul>
+<li><strong>Wildcard </strong>&ndash; supports filtering using <em>files wildcard pattern</em>.</li>
+<li><strong>Regular expression </strong>&ndash; supports filtering using <em>regex</em>.</li>
+</ul>
+</td>
 </tr>
+<tr>
+<td><strong>Recursive</strong></td>
+<td>Indicator, to allow displaying all files in embedded folders.</td>
+</tr>
+
 <tr>
 <td><strong>Project ID</strong></td>
 <td>The Google Cloud Platform project ID where your bucket is located. This is a required field with a globally unique identifier, typically 6-30 characters using lowercase letters, numbers, and hyphens.</td>
@@ -60,15 +76,14 @@ To create a new Google Cloud Storage interface, do the following:
 <tr>
 <td><strong>Credentials file</strong></td>
 <td>The location of the credentials file. This file includes the private key and service account details required to access the GCS bucket securely.</td>
-</tr>
-<tr>
+</tr><tr>
 <td><strong>Discovery</strong></td>
-<td>Discoveryoptions for analyzing and cataloging GCS bucket contents. Available options include Get Metadata, Get Files List, and Get File Data for different levels of bucket analysis.</td>
-</tr>
-<p>Test Connection. Click to test the connection.</p>
-<studio>
-<p>Add an Interface Listener as a Broadway job. Click to create an Interface Listener job under the specified Logical Unit.</p>
-</studio>
+<td>Broadway flows, invoked upon running Discovery for analyzing and cataloging S3 bucket contents. These flows define mapping and transformation rules to convert the files into the Catalog&rsquo;s standard hierarchy:
+<ul>
+<li>Get Metadata - Retrieves metadata information about files and objects</li>
+<li>Get Files List - Generates a list of all files in the specified bucket/path</li>
+<li>Get File Data - Extracts actual file content and data for processing</li>
+</ul>
 </td>
 </tr>
 </tbody>

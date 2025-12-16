@@ -40,9 +40,9 @@ The plugin's input parameters are:
 - ```samplePrompt``` defines a part of the user prompt related to the sample data. It is included in the user prompt when the ```sampleSize``` > 0 and if the column is not empty in the data snapshot. 
   - The ```${sampleData}``` is the source data retrieved in the Snapshot step and added to the prompt. 
 - ```incrementalMode``` defines whether the plugin should be executed for the fields that already have the same property created by the same LLM plugin in a previous Discovery Job execution. This parameter is set in order to minimize the number of calls to the LLM. It has the following modes:
-  - ```"KEEP_ALL"``` (default) - if an LLM plugin has already been executed for this field in a previous Discovery Job execution, don’t invoke the plugin again (even if the field has no LLM-created property). The plugin will only be invoked for the new fields.
-  - ```"KEEP_EXISTING"``` - if an LLM plugin has already been executed for this field in a previous Discovery Job execution and created a property, don’t invoke it again. The plugin will only be invoked for the new fields and for the fields without this property (e.g., "classification").
-  - ```"EVALUATE_ALL"``` - the LLM plugin will be invoked for all fields.
+  - ```"Keep All"``` (default) - if the plugin has already been executed for this field in a previous Discovery Job execution, don’t invoke the plugin again (even if the field has no LLM-created property). The plugin will only be invoked for the new fields.
+  - ```"Keep Existing"``` - if the plugin has already been executed for this field in a previous Discovery Job execution and created a property, don’t invoke it again. The plugin will only be invoked for the new fields and for the fields without this property (e.g., "classification").
+  - ```"Evaluate All"``` - the plugin will be invoked for all fields.
 - ```llmInterface``` is an optional parameter. It allows overriding the default project's LLM AI interface, to be used by the LLM plugin. This parameter should include the interface's name.
   - When the ```llmInterface``` parameter is not set in the plugin definition, the plugin will search for an LLM AI interface tagged as 'discovery'. If non of the LLM AI interfaces are tagged as 'discovery', an interface with a 'default' tag will be used.
 

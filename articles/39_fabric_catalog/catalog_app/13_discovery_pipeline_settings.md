@@ -2,20 +2,20 @@
 
 ## Overview
 
-The **Discovery Pipeline** screen in the Catalog Settings tab provides a full and comprehensive view of the Discovery job configuration. It displays the product's default baseline configuration (retrieved from the product's **plugins.discovery** file) and the project-level rules. 
+The **Discovery Pipeline** window in the Catalog Settings tab provides a full and comprehensive view of the Discovery job configuration. It displays the product's default baseline configuration (retrieved from the product's plugins.discovery file) and the project-level rules. 
 
-The **Baseline** rule includes a list of product built-in plugins with their input parameters, data snapshot sample size and more. 
+The Baseline rule includes a list of the product's built-in plugins with their input parameters, data snapshot sample size and more. 
 
-The Discovery Pipeline screen enables performing the following actions, described further in this article:
+The Discovery Pipeline window enables performing the following actions, described further in this article:
 
 * Overriding the product's default [Baseline rule](13_discovery_pipeline_settings.md#baseline-rule).
 * Creating [project rules](13_discovery_pipeline_settings.md#project-rule) to set a crawler filter and/or override the crawler and/or plugins' settings.
 * [Adding new plugins](13_discovery_pipeline_settings.md#adding-new-plugins) to the pipeline.
 
 
-The overrides are saved into the project **pluginsOverride.discovery** file, which is created in the Project's ```Implementation/SharedObjects/Interfaces/Discovery/``` folder.
+The overrides are saved in the project **pluginsOverride.discovery** file, which is created in the Project's ```Implementation/SharedObjects/Interfaces/Discovery/``` folder.
 
-This article describes the capabilities of the Discovery Pipeline screen and explains how they can impact the Discovery job. 
+This article describes the capabilities of the Discovery Pipeline window and explains how they can impact the Discovery job. 
 
 ## Baseline Rule
 
@@ -24,116 +24,140 @@ The **Baseline** rule is a default configuration, applied when running the Disco
 The Baseline rule is always enabled. It can be edited by checking the **Override** checkbox. The following changes can be applied to the Baseline rule:
 
 * Updating the Crawler-related settings, e.g., a sample size. 
-* Updating the parameters of the product built-in plugins. 
-* [Adding a new plugins](13_discovery_pipeline_settings.md#adding-new-plugins) - described further in this article. 
+* Updating the parameters of the product's built-in plugins. 
+* [Adding a new plugins](13_discovery_pipeline_settings.md#adding-new-plugins) — described further in this article. 
 
-Note that the Baseline rule overrides are automatically propagated to the project-level rules. For example, when a plugin is updated from 'active' to 'inactive' in the baseline, it becomes 'inactive' in all project-level rules. The rule, however, can override the baseline.
+Note that the Baseline rule overrides are automatically propagated to the project-level rules. For example, when a plugin is changed from 'inactive' to 'active' in the baseline, it will become 'active' in all project-level rules. A project rule, however, can override the Baseline rule.
 
 #### Revert Baseline Overrides
 
-The Baseline rule overrides can be reverted in one of the following ways:
+The Baseline rule overrides can be reverted by one of the following ways:
 
 ![](../images/discovery_pipeline_revert.png)
 
 1. Unchecking the **Override** checkbox on the Baseline rule to remove all overrides at once.
-2. Clicking the **revert** icon at the lower-left side of the screen to reset the plugin's order to the original order.
-3. Clicking the **revert** icon at the lower-right side of the screen to reset the plugin's current settings back to the baseline.
-   * Note that if this is a project-level plugin, reverting to the baseline would delete it (since this plugin is not part of the baseline).
+2. Clicking the **revert** icon at the lower-left pane of the window to reset the plugin order to its original sequence.
+3. Clicking the **revert** icon at the lower-right pane of the window to reset the plugin's current settings back to the baseline.
+   * Note that reverting to the baseline would delete project-level plugins as they are not part of the baseline.
 
 ## Project Rules
 
-The Discovery Pipeline screen enables the user to refine the default configuration per the project's requirements. 
+The Discovery Pipeline window enables the user to refine the default configuration per the project's requirements. 
 
-A **rule** should be attached to a data platform, along with several optional parameters (schema, dataset, crawler filter and override indicator) that may become mandatory, based on conditions; this is described further in this article. 
+A rule should be attached to a data platform, along with several other parameters that may become mandatory, based on conditions. Mandatory and optional parameters of each rule type are described further in this article. 
 
 #### How Do I Create a Rule?
 
 ![](../images/discovery_pipeline_2.png)
 
-* Click on **Add Rule +** to create a new rule. 
+* Click on '**Add Rule +**' to create a new rule. 
+  * Starting from Fabric V8.3.1, a new rule is added with **Crawler Filter** parameter set by default to '**Exclude Others**'. This value can be updated to any other value if needed. 
+* Rules may be of three types:
+  * For filter rule creation, set either '**Exclude Others**' or '**Exclude This**' in the **Crawler Filter** column. In this case, the **Data Platform** and **Schema(s)** fields are mandatory, while the Dataset field is optional.
+  * For override rule creation, the only mandatory actions are selecting a **Data Platform** and checking the **Override** checkbox. This rule will apply to the entire Data Platform. Populating the Schema(s) and Dataset(s) fields will make this rule more specific.
+
+  * For creating a combined rule, which includes both a filter and the overrides, set **Crawler Filter** = **'Exclude Others'** and check the **Override** checkbox.
 
 
-* The mandatory rule's parameters are *Rule Name* (which must be unique) and *Data Platform*. 
+#### Rule Type: 'Exclude Others'
+
+The purpose of this rule type is to limit the Discovery process to the specified source entities. 
+
+- The rule requires selecting a data platform and populating at least one schema that will be included in the discovery. 
+- The Crawler Filter should be set to 'Exclude Others'.
+- Optionally, dataset(s) can be populated as well on the rule. When one or multiple datasets are populated, only these datasets will be included, while all other dataset(s) will be excluded.
+- This rule can be combined with an override action (as explained further in this article).  
+
+**Example**
+
+The below image presents a rule defined for **sakilla_pg** data platform and **crm** schema. The purpose of this rule is to limit the Discovery process to **crm** schema only, since **sakilla_pg** includes multiple schemas that are irrelevant for the current run.
+
+![](../images/discovery_pipeline_excludeOthers.png)
+
+#### Rule Type: 'No Filter' & Override
+
+The purpose of this rule type is to override one or multiple baseline settings without filtering the data source.
+
+* The rule requires selecting a data platform and checking the Override checkbox.
+* The Crawler Filter should be set to 'No Filter' as the discovery should be executed on the entire data platform.
 
 
-* Populating a schema and a dataset is optional. 
+* Note that when the schema(s) and dataset(s) fields are populated, the override rules are applied only to them. This type of rule does not have any filtering effect.  
 
+**Example**
 
-* When multiple schemas or datasets are populated, they should be comma-separated.
-* A rule should include either a Crawler Filter or a checked Override checkbox, or both. Possible filter settings are described below.
+The below image presents an override rule defined for the **CUSTOMER** table of the **CRM_DB** data platform and **main** schema. 
 
-#### Rule Type: Crawler Filter = Exclude This 
-
-When the filter is set to **Exclude This**:
-
-* The Crawler **excludes** the specified *Schema(s)* and *Dataset(s)*. Thus, at least the schema should be populated.
-* This rule cannot be combined with the *Override* action, as the specified *Schema(s)* and *Dataset(s)* are excluded by the Crawler.
-
-**Example of 'Exclude This' rule applied on Schema & Dataset level**
-
-The below image shows a rule defined for the **CASE_NOTES** table of **CRM_DB** data platform & **main** schema. 
-
-The purpose of this rule is to completely exclude the **CASE_NOTES** table from the Discovery process. 
-
-![](../images/discovery_pipeline_excludeThis.png)
-
-#### Rule Type: Crawler Filter = Exclude Others
-
-When the filter is set to **Exclude Others**:
-
-* The Crawler will **include** only the specified *Schema(s)* and *Dataset(s)* (if they were stated). Thus, at least the schema should be populated.
-* This rule can be combined with the *Override* action. It allows to define the Crawler's include list as well as to override the Baseline rules at the same time.
-
-
-#### Rule Type: No Crawler Filter; Override is Checked
-
-When the *Crawler Filter* is empty and the *Override* checkbox is checked:
-
-* The Crawler is executed on the whole Data Platform.
-* The override rules are applied only on the specified *Schema(s)* and *Datasets(s)*.
-
-**Example of a rule applied on Schema & Dataset level**
-
-The below image shows a rule defined for the **CUSTOMER** table of **CRM_DB** data platform & **main** schema. 
-
-The purpose of this rule is to override the Sample Size definition, increasing it to 25% (instead of the default 10% setting). This override is only applicable for the specified dataset. 
+The purpose of this rule is to override the Sample Size definition, increasing it to 25% (instead of the default 10% setting). This override is applicable only to the specified dataset — CUSTOMER. The discovery is executed on the entire CRM_DB data platform without any filters.
 
 ![](../images/discovery_pipeline_sampleSize.png)
 
+
+
+#### Rule Type: 'Exclude Others' & Override
+
+The purpose of this rule type is to limit the Discovery process to the specified source entities and at the same time to override some of the baseline settings.
+
+- The rule requires selecting a data platform and populating at least one schema that will be included in the discovery. 
+- The Crawler Filter should be set to 'Exclude Others' and the Override checkbox should be checked.
+- Optionally, dataset(s) can be populated as well on the rule. When one or multiple datasets are populated, only these datasets will be included, while all other dataset(s) will be excluded.
+
+**Example**
+
+The below image presents a rule defined for **sakilla_pg** data platform and **crm** schema. The purpose of this rule is to limit the Discovery process to **crm** schema only, since **sakilla_pg** includes multiple schemas that are irrelevant for the current run. In addition to the filter, the rule also defines a baseline override by setting one of the inactive plugins to 'active'.
+
+![](../images/discovery_pipeline_excludeOthersOverride.png)
+
+#### Rule Type: 'Exclude This'
+
+The purpose of this rule type is to exclude specified source entities during the Crawler run. 
+
+- The rule requires to selecting a data platform and populating at least one schema. 
+- When one or multiple datasets are populated, these dataset(s) will be excluded.
+
+
+- This rule cannot be combined with the override action, as the Crawler will exclude the specified nodes.
+
+**Example**
+
+The below image presents a rule that excludes the **CASE_NOTES** table of the **CRM_DB** data platform and the **main** schema from the Discovery process. This means that discovery runs on all **CRM_DB** tables except **CASE_NOTES**.
+
+![](../images/discovery_pipeline_excludeThis.png)
+
 #### Rules Combination and Hierarchy
 
-Multiple rules can be defined for the same data platform. The purpose of creating multiple rules is to allow variations of the Discovery process execution for different elements. For example, one may need to set a higher sample size for some datasets or execute a certain plugin on a selected dataset or schema only. 
+Multiple rules can be defined for the same data platform. The purpose of creating multiple rules is to allow variations of the Discovery process execution for different elements. For example, one may need to set a larger sample size for some datasets or execute a specific plugin on a designated dataset or schema. 
 
 When multiple rules are defined for the same data platform, they adhere to the following hierarchy: 
 
-- When multiple rules apply on the same process element, the most specific rule takes precedence. 
+- When multiple rules apply to the same process element, the most specific one takes priority. 
 
-**Example of rules combination and hierarchy**
+**Example of rule combinations and hierarchy**
 
-The below image shows 3 rules defined for the **AdventureWorks** data platform:
+The below image presents three rules defined for the **AdventureWorks** data platform:
 
 ![](../images/discovery_pipeline_h.png)
 
-- **Rule1** defines one or more overrides applied on all elements of the AdventureWorks. 
-- **Rule2** defines a filter on Sales schema. This rule implies that the Sales schema is excluded from the Crawler on the AdventureWorks. 
-- **Rule3** defines an override that should be applied on the specified datasets of the Person schema only. This rule implies that plugins applied on these datasets are only those defined in the **Rule3**.
+- **Rule1** defines one or more overrides applied to all elements of AdventureWorks. 
+- **Rule2** defines a filter on Sales schema. This rule implies that the Sales schema is excluded from the Crawler on AdventureWorks. 
+- **Rule3** defines an override that applies only to the specified datasets within the Person schema. This means that for this dataset, only the plugins defined in **Rule3** are applied. Having the most specific criteria, this rule takes priority.
 
 ## Adding New Plugins
 
-When a new plugin is created in a project, it should be added to the Baseline rule in order to become part of the Discovery job execution. Once added to the baseline, the new plugin is automatically propagated to all the existing rules and can have different settings in each rule.
+When a new plugin is created in a project, it should be added to the Baseline rule in order to be included in the Discovery job execution. Once added to the baseline, the new plugin is automatically propagated to all existing rules and can have different settings in each.
 
-For example, when a newly created plugin is applicable only for running Discovery on the CRM_DB, it should be added to the baseline as 'inactive'. In addition, a rule for the CRM_DB should be created, where this plugin should be set to 'active'.
+For example, if a newly created plugin is applicable only to running Discovery on the CRM_DB, it should be added to the baseline as 'inactive'. Then, a rule for the CRM_DB should be created, where this plugin is set to 'active'.
 
 The steps for adding a new plugin to the pipeline are:
 
-1. Check the **Override** checkbox of the Baseline rule.
+1. Check the Override checkbox of the Baseline rule.
 2. Click the ![](../images/dots.png) icon to open the Plugins context menu and choose **Add Plugin**.
-3. Alternatively, you can select an existing plugin from the list and choose **Duplicate selected** in the context menu. Once the plugin has been duplicated, you can update all its parameters. 
+3. Alternatively, you can select an existing plugin from the list and choose **Duplicate selected** from the context menu. Once the plugin has been duplicated, you can update all its parameters. 
 
 ![](../images/discovery_pipeline_new_plugin.png)
 
 
 
-The new plugin is always added to the end of the Plugins list. However, the plugin's execution order can be changed by dragging it to a required position in the list.  
+The new plugin is always added to the end of the Plugins list. However, the plugin's execution order can be changed by dragging it to the desired position within the list.  
 
-Note that the **Delete selected** option in the context menu is only available for the project plugins while the product plugins cannot be deleted. If a product plugin is not needed, it can be set to 'inactive' in the Baseline rule.
+Note that the **Delete selected** option in the context menu is available only for the project plugins, as product plugins cannot be deleted. If a product plugin is not needed, it can be set to 'inactive' in the Baseline rule.

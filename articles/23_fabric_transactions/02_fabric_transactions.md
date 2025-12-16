@@ -38,6 +38,8 @@ The OPTIMISTIC_LOCKING parameter in the **config.ini** can be set per node to su
 - **QUORUM** - the first transaction locks the LUI. The latest transaction fails until the first transaction is committed (the commit requires a quorum).
 - **LOCAL QUORUM** - the first transaction locks the LUI. The latest transaction fails until the first transaction is committed (the commit requires a local quorum on the DC).
 
+Note: when the system DB is not Cassandra, there is no difference between **QUORUM** and **LOCAL QUORUM** behavior.
+
 **Example**
 
 Transaction 1 runs on Node 1 (DC1), and Transaction 2 runs on Node 4 (DC2).

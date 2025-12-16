@@ -10,20 +10,24 @@ To create a new SFTP interface, do the following:
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **SFTP** from the **File System** section to open the **New Interface** window.
 
    ![image](images/02_sftp_1.PNG)
-   
+
 2. Populate the connection's settings and click **Save**.
-</studio>
+  </studio>
 
 <web>
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **SFTP** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
 2. Enter a suitable name for your new SFTP Interface, then click **Create**
-  
+
    ![image](images/02_sftp_1WEB.PNG)
 
 3. Populate the connection's settings and click **Save**.
 
    ![image](images/02_sftp_2WEB.PNG)
+
+4. If the interface is supposed to be used for File Cataloging, expand the **Discovery** section and populate the names of 3 Broadway flows. This option is available starting from Fabric V8.3. [Click here for more information about the File Cataloging solution.](/articles/39_fabric_catalog/05_cataloging_of_files.md)
+
+
 
 </web>
 
@@ -58,7 +62,12 @@ To create a new SFTP interface, do the following:
 </tr>
 <tr>
 <td><strong>Files Filter</strong></td>
-<td>Regular expression.</td>
+<td>Filters files using <em>files wildcard pattern</em>, e.g. "*.CSV"</td>
+</tr>
+
+<tr>
+<td><strong>Recursive</strong></td>
+<td>Indicator, to allow displaying all files in embedded folders.</td>
 </tr>
 <tr>
 <td><strong>Affinity</strong></td>

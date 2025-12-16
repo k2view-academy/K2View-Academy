@@ -11,20 +11,22 @@ To create a new Amazon S3 Storage interface, do the following:
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **Amazon S3 Storage** from the **File System** section to open the **New Interface** window.
 
    ![image](images/12_s3_1.png)
-   
+
 2. Populate the connection's settings and click **Save**.
-</studio>
+  </studio>
 
 <web>
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **Amazon S3 Storage** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
 2. Enter a suitable name for your new Amazon S3 Storage Interface, then click **Create**
-  
+
    ![image](images/12_s3_1WEB.png)
 
 3. Populate the connection's settings and click **Save**.
 
    ![image](images/12_s3_2WEB.png)
+
+4. If the interface is supposed to be used for File Cataloging, expand the **Discovery** section and populate the names of 3 Broadway flows. This option is available starting from Fabric V8.3. [Click here for more information about the File Cataloging solution.](/articles/39_fabric_catalog/05_cataloging_of_files.md)
 
 </web>
 
@@ -47,7 +49,21 @@ To create a new Amazon S3 Storage interface, do the following:
 </tr>
 <tr>
 <td><strong>Files Filter</strong></td>
-<td>Filters files using regular expressions.</td>
+<td>Filters files based on the below filter type.</td>
+</tr>
+<tr>
+<td><strong>Files Filter Type</strong></td>
+<td>
+<p>Two types are supported:</p>
+<ul>
+<li><strong>Wildcard </strong>&ndash; supports filtering using <em>files wildcard pattern</em>.</li>
+<li><strong>Regular expression </strong>&ndash; supports filtering using <em>regex</em>.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><strong>Recursive</strong></td>
+<td>Indicator, to allow displaying all files in embedded folders.</td>
 </tr>
 <tr>
 <td><strong>Access key ID</strong></td>
@@ -63,21 +79,18 @@ To create a new Amazon S3 Storage interface, do the following:
 </tr>
 <tr>
 <td><strong>Discovery</strong></td>
-<td>Platform discovery catalog options for analyzing and cataloging S3 bucket contents. Available options:
+<td>Broadway flows, invoked upon running Discovery for analyzing and cataloging S3 bucket contents. These flows define mapping and transformation rules to convert the files into the Catalog&rsquo;s standard hierarchy:
 <ul>
 <li>Get Metadata - Retrieves metadata information about files and objects</li>
 <li>Get Files List - Generates a list of all files in the specified bucket/path</li>
 <li>Get File Data - Extracts actual file content and data for processing</li>
-</ul></td>
-</tr>
-<studio>
-<p>Add an Interface Listener as a Broadway job. Click to create an Interface Listener job under the specified Logical Unit.</p>
-</studio>
+</ul>
 </td>
 </tr>
 </tbody>
 </table>
 
+[Click for more information about the File Cataloging solution.](/articles/39_fabric_catalog/05_cataloging_of_files.md)
 
 
 
