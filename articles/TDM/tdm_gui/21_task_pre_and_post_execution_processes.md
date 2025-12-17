@@ -17,7 +17,7 @@ The pre and post execution processes that are available for tasks, are defined i
 
 ## How to Add a Pre/Post Execution Process?
 
-- Click the **Add Process** button in the Pre execution process or Post execution process tabs. A popup window is opened. Select from the drop-down list a process and click the Save:
+- Click the **Add Process** button in the Pre execution process or Post execution process tabs. A pop-up window opens. Select from the drop-down list a process and click the Save:
 
   ![add pre exe process](images/task_add_pre_exe_process.png)
 
@@ -31,7 +31,7 @@ The pre and post execution processes that are available for tasks, are defined i
 
   
 
-## How to Add a Pre/Post Execution Process?
+## How to Remove a Pre/Post Execution Process?
 
 Click the Trash icon next to the selected process in order to remove it from the task.
 
