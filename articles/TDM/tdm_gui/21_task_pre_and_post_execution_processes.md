@@ -25,7 +25,7 @@ The pre and post execution processes that are available for tasks, are defined i
 
   ![pre exe processes 2](images/task_pre_exe_processes.png)
 
-- Click the Edit icon to populate the parameters for the process. A popup window is opened with the process' parameters. Mandatory input parameters are marked with a red asterisk. Populate the parameter values for the task:
+- Click the Edit icon to populate the parameters for the process. A pop-up window is opens with the process' parameters. Mandatory input parameters are marked with a red asterisk. Populate the parameter values for the task:
 
   ![pre exe param](images/task_pre_exe_param.png)
 
