@@ -1,8 +1,8 @@
-# Fabric VM Cluster Scaling
+# Fabric Cluster Scaling
 
-A Fabric cluster, during its lifecycle, may experience a higher load. Based on metrics such as CPU usage, available memory, or storage, you should consider scaling out the cluster. 
+A Fabric cluster may experience higher load during its lifecycle. Based on metrics such as CPU usage, available memory, or storage, you should consider scaling out the cluster. 
 
-By design, Fabric is built to enable horizontal scaling out by adding more fabric nodes. Each starting-up node knows how to add itself to the cluster autonomously; for example:
+By design, Fabric is built to enable horizontal scaling out by adding more Fabric nodes. Each starting-up node knows how to add itself to the cluster autonomously; for example:
 
 * Register itself to join the cluster's node list and start receiving the cluster's workload, such as job handling.
 * Obtain the project deployment code.
@@ -73,7 +73,7 @@ After a short while, the following message will be displayed:
 
 When the Fabric cluster experiences a reduction in load, consider scaling it in by removing or stopping the working Fabric cluster nodes.
 
-You can stop the relevant node, even though it is in the midst of processing jobs, as Fabric knows how to reconcile the tasks with other nodes that will process these jobs. Since Fabric operates on a stateless architecture, all interactions, like web services, will function seamlessly.
+You can stop the relevant node, even though it is in the midst of processing jobs, because Fabric knows how to reconcile the tasks with other nodes that will process them. Since Fabric operates on a stateless architecture, all interactions, like web services, will function seamlessly.
 
 
 
