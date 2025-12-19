@@ -2,7 +2,7 @@
 <strong>Fabric Installation on a Linux Host</strong>
 
 <ul>
-  <li><a href="/articles/98_installation_and_upgrade/Install_on_Linux/02_Fabric_8.x.x_Setup.md">Fabric 8 Setup (Main Installation Guide)</a></li>
+  <li><a href="/articles/98_installation_and_upgrade/Install_on_Linux/02_Fabric_8.x.x_Setup.md">Fabric 8 Installation Guide</a></li>
   <li><a href="/articles/98_installation_and_upgrade/Install_on_Linux/02.2_Fabric_8.x.x_PG_setup.md">Fabric 8 PostgreSQL Setup</a></li>
   <li><a href="/articles/98_installation_and_upgrade/Install_on_Linux/02.3_Fabric_8.x.x_Sqlite_setup.md">Fabric 8 SQLite Setup</a></li>
   <li><a href="/articles/98_installation_and_upgrade/Install_on_Linux/02.1_Fabric_8.x.x_Cassandra_setup.md">Fabric 8 Cassandra Setup</a></li>
