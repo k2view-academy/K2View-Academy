@@ -1,9 +1,9 @@
-<strong>VM System Requirements</strong>
+<strong>Linux Host System Requirements</strong>
   
 <ul>
   <li>
     <a href="/articles/98_installation_and_upgrade/Hardware_Linux_Docker/04_hardware_req_for_studio.md">
-      Fabric Studio System Requirements
+      Fabric Web Studio System Requirements
     </a>
   </li>
   <li>
