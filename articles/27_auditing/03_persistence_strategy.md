@@ -1,13 +1,14 @@
-<studio>
-
 # Persistence Strategy
 
-The persistence of the data published by the Auditing mechanism can be controlled. Product provides two persistence strategies:
+The persistence of the data published by the Auditing mechanism can be controlled. Product provides three persistence strategies:
 
-* **com.k2view.fabric.auditing.persistence.SystemDbBeanPersistence** (default) - The data is written to **k2_auditing** table in the metadata keyspace (k2audit by default). 
+* **com.k2view.fabric.auditing.persistence.SystemDbBeanPersistence** (default) - The data is written to **k2_auditing** table in the metadata keyspace (k2audit by default) atthe system database. 
 * **com.k2view.fabric.auditing.persistence.KafkaBeanPersistence** - Kafka persistence strategy. The audit data is written to **k2audit** default topic.
+* **com.k2view.fabric.auditing.persistence.AuditLog** - The data is written to the [k2Fabric log files](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md)
 
-Persistence strategy is defined in the **config.ini** using the AUDIT_PERSISTENCE_STRATEGY parameter, which by default, is set to **com.k2view.fabric.auditing.persistence.SystemDbBeanPersistence**.
+
+
+Persistence strategy is defined in the **config.ini** using the `AUDIT_PERSISTENCE_STRATEGY` parameter, which by default, is set to **com.k2view.fabric.auditing.persistence.SystemDbBeanPersistence**.
 
 In addition to the above product strategies, a new strategy can be defined by creating your own class. The steps on how to do it are explained further on in this article.
 
@@ -125,4 +126,3 @@ public class SamplePersist implements AuditBeanPersistence {
 
 [![Previous](/articles/images/Previous.png)](02_filtering_strategy.md)
 
-</studio>
