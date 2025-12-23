@@ -16,6 +16,17 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td width="170pxl"><p><strong>Certified Postgres Version</strong></p></td><td width="200pxl"><p><strong>Certified Cassandra Version</strong></p></td><td width="125pxl"><p><strong>End of Life</strong></p></td>
         </tr>
         <tr>
+            <td align="left"><a href="/Release_Notes/V8.3/Fabric_Release_Notes_V8.3.1.pdf">8.3.1</a></td>
+            <td>Dec 24, 2025</td>
+            <td align="left"></td>
+            <td></td>
+            <td><p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.3.1_231</p>
+                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.3.1_231</p></td>
+            <td>17.5</td>
+            <td>4.1.8</td>
+            <td></td>
+        </tr>
+        <tr>
             <td align="left"><a href="/Release_Notes/V8.3/Fabric_Release_Notes_V8.3.0.pdf">8.3.0</a></td>
             <td>Aug 7, 2025</td>
             <td align="left"><a href="/Release_Notes/V8.3/Fabric_Release_Notes_V8.3.0_HF7.pdf">HF7</a></td>
