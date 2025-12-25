@@ -21,7 +21,7 @@ The search process is built from 2 steps:
 
 
 
-## Supported DB
+## Supported DBs
 
 AI Fusion supports 2 vector DBs
 
@@ -29,8 +29,6 @@ AI Fusion supports 2 vector DBs
 * Postgres, using its `pgvector` flavor.
 
 
-
-## Vectors LU
 
 The Vectors LU maintains SQLite-based vector stores with separate tables for each information type. Tables can be created by using the utility actors and are not shown 
 

@@ -95,5 +95,19 @@ Once the plan steps are prepared, it executes them step-by-step.
 
 
 
+## Debug, Trace and Control
+
+During the agent flows, the platform logs and collects information for:
+
+- **Comprehensive Auditing** — ensures every agent interaction and processing step can be audited and traced.  
+- **Cost Management** — provides tracking and monitoring of token usage for cost control, in vast granularity information, by model and agents and for input, output and cached tokens.
+- **Maintainability and Continues Improvement** — Each agent and tool call is logged so that later on can be analyzed and accordingly to improve agents performance. 
+
+The information is gathered into the aifusion LU tables, so that trace can be done a specific conversation session, as well into the Assurance metrics DB, for overall observation and insights.
+
+The information is also accessible at the Trace panel in the Chat Playground, which is part of the AI Fusion app, where you can make chats and see a detailed trace of what user asked, what are inputs and outputs of each called agent and tool and how many tokens were consumed in each step.
+
+This Trace panel is in addition to the comprehensive debugging capabilities and visibility at the Broadway flows and Java code within the Studio.
+
 
 
