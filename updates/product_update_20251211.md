@@ -1,6 +1,6 @@
 ### The Fabric 8.3.1 Official Release
 
-We are glad to announce the Fabric 8.3.1 release which introduces several key enhancements to both Fabric and the Catalog: 
+We are glad to announce the release of Fabric 8.3.1! This version introduces several key enhancements to both Fabric and the Catalog.  
 
 Here are some of the highlights of this release:
 
