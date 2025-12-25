@@ -1,0 +1,83 @@
+# AI Data Fusion Modules and Apps
+
+K2View's GenAI Data Fusion platform, **aifusion**, is an enterprise-grade framework for building, testing, deploying, and governing AI-powered agents and applications. Designed to work seamlessly with Data Products and operational data at scale, aifusion brings reliability, predictability, and observability to AI systems.
+
+The platform streamlines the full lifecycle of enterprise GenAI agents, from design and orchestration of complex multi-agent flows, through rigorous evaluation and testing, to continuous monitoring of live executions. This ensures accuracy, context-awareness, compliance, and cost efficiency in production environments.
+
+## Core Modules
+
+The platform is structured around three core modules:
+
+### Agents Builder & Framework
+
+A low-code, Studio-integrated environment for creating agents, defining tools, and orchestrating flows with Broadway. Key features include:
+
+- Full step-by-step debugging capabilities
+- LLM-agnostic architecture supporting multiple providers
+- Connectors for various LLM and vector search services
+- Built-in chat playground for testing apps and agents
+- Comprehensive Trace view showing agent and tool flows, token consumption, and response times at each level
+
+### Evaluation
+
+A comprehensive testing and assessment system for validating AI agent performance before production deployment. Capabilities include:
+
+- Multiple assessment methodologies, including LLM-as-judge with configurable thresholds
+- Multi-dimensional scoring (accuracy, relevance, clarity, politeness, and more)
+- End-to-end solution for testing multi-turn AI conversations
+- Complete workflow from test creation through regression testing and results analysis
+- Detailed drill-down views for thorough analysis
+
+This ensures agents and apps meet quality standards across various criteria before interacting with end users or production data.
+
+### Observation
+
+A production monitoring and analytics platform providing visibility into agent behavior, performance metrics, and operational health. Features include:
+
+- Tracking of key indicators such as token usage, response quality, sentiment, risk level, and system performance
+- LLM-scored indicators that are fully configurable
+- Customizable dashboard widgets defined by type and query
+- Deep-dive capabilities for reviewing individual conversation threads
+
+This enables teams to identify issues, optimize costs, and continuously improve agent effectiveness based on production data.
+
+
+
+## Getting Started
+
+The platform is delivered as a solution built on K2view's Fabric framework. To get started in Studio:
+
+1. Install the **aifusion** extension from [K2Exchange](/articles/04_fabric_studio/28_web_k2exchange.md#install-an-extension)
+2. Install the relevant LLM connector extension from K2Exchange according to your organization's guidelines and licenses
+3. For Evaluation regression test execution, install and deploy the **Pipeline** module from K2Exchange
+4. *Recommended:* Install the **aifusion-demo** extension, which includes three complete end-to-end demo apps covering various business types and use cases as implementation references
+
+### Installed Components
+
+These extensions add all utilities required to implement GenAI agents and run related execution processes, including:
+
+#### Logical Units
+
+| Component | Description |
+|-----------|-------------|
+| **AI Fusion LU** | Main logical unit containing AI-related flows, actors, and utilities. Data product tables store chat memory, traces, and token usage, where each LUI represents a single AI session (e.g., a chat) |
+| **GenAI Testing LU** | Contains evaluation logic, test pipelines, and ranking flows |
+| **Pipeline LU** | Provides a framework for organizing and executing Broadway flows in a structured hierarchy: pipelines → suites → cases. Includes utility actors for dynamic loading, file scanning, labeling, and linking |
+
+#### Additional Components
+
+- Web services and shared objects as cross-project utilities
+- Interface metadata, code and library JARs (located in the `lib` folder)
+
+### Metrics Database (Assurance)
+
+The metrics database (assurance) collects agents' functionality, token usage, and other metrics during agent sessions. SQLite (for development) and PostgreSQL databases are supported out-of-the-box. The Metrics database tables are created automatically during AI Fusion deployment. For more information, see [Metrics DB]().
+
+
+
+## Next Steps
+
+- [Agent Builder and Framework - Introduction](/articles/AI_fusion/02_agent_framework/01_intro_agent_framework.md)
+- [Agent Framework Core Components](/articles/AI_fusion/02_agent_framework/02_core_components.md)
+- [Building Agentic Workflow](/articles/AI_fusion/05_examples/01_agent_workflow_example.md) 
+
