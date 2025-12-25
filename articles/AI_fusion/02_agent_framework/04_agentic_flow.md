@@ -4,12 +4,13 @@ The aifusion framework orchestrates AI agents behavior through a structured deci
 
 The framework consists of several built-in workflow orchestrating agents, represented by Broadway actors and flows. In addition, other agents - worker subagents - are involved in the agentic flow process, either built-in or implementation.
 
-| Agent                | Role                                                     |
-| -------------------- | -------------------------------------------------------- |
-| **Orchestrator**     | Manages the overall agentic flow                         |
-| **Reflector**        | Part of Orchestrator; evaluates and refines user queries |
-| **Planner**          | Part of Orchestrator; creates and executes task plans    |
-| **Worker Subagents** | Execute dedicated tasks using specialized tools          |
+| Agent                | Role                                                         |
+| -------------------- | ------------------------------------------------------------ |
+| **Orchestrator**     | Manages the overall agentic flow                             |
+| **Reflector**        | Part of Orchestrator; evaluates user queries                 |
+| **Refiner**          | Refine the user’s request into a concise, complete goal description for the selected sub-agent, using conversation history and context |
+| **Planner**          | Part of Orchestrator; creates and executes task plans        |
+| **Worker Subagents** | Execute dedicated tasks using specialized tools              |
 
 
 
@@ -32,11 +33,12 @@ The *Reflector* evaluates the user's question and determines the best path forwa
 
 
 
-| Path                                     | Description                                                  | When to Use                                                  | Performance                                       |
-| ---------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------- |
-| **Have All Info** (1)                    | moving on to the Responder to formulate the answer           | Information exists in business entity synopsis, conversation history, or is generic public knowledge | **Fastest**                                       |
-| **Build a Plan** (2)                     | Call the Planner agent  to build and execute a step-by-step plan | More information is needed and no specialized subagent exists | Most **flexible** but slower                      |
-| **Call Worker Specialized Subagent** (3) | Route to a specialized subagent for the domain               | Questions relate to specific domains (e.g., credit card issues) | **Faster and more accurate** due to focused tools |
+| Path                                     | Description                                                  | When to Use                                                  | Performance                                                |
+| ---------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---------------------------------------------------------- |
+| **Have All Info** (1)                    | moving on to the Responder to formulate the answer           | Information exists in business entity story, conversation history, or is generic public knowledge | **Fastest**                                                |
+| **Call Worker Specialized Subagent** (2) | Route to a specialized subagent for the domain               | Questions relate to specific domains (e.g., credit card issues) | **Faster and more accurate** due to focused goal and tools |
+| **Build a Plan** (3)                     | Call the Planner agent  to build and execute a step-by-step plan | Multiple actions and steps are needed like calling several subagents and tools | Most **flexible** but slower                               |
+| **Clarify** (4)                          | Ask the user to clarify his question                         | User's question is not clear and cannot be understood from context | Fast                                                       |
 
 ### Flow Delegation
 
@@ -50,7 +52,7 @@ Once a path is chosen, the flow is **delegated** to the relevant agent, so that 
 
 ## Utilizing Subagents
 
-A worker subagent is a tagged Broadway flow designed to handle a specific domain or request type.
+A worker subagent is a tagged Broadway flow (e.g., with `loans_subagent` tag) to handle a specific domain or request type (banking loans). 
 
 ### Subagent Discovery
 
@@ -60,17 +62,7 @@ The Reflector agent:
 2. Examines their descriptions
 3. Identifies the specialized agent best suited for the current task
 
-
-
-
-
-
-
-
-
-A worker subagent is a tagged Broadway flow (e.g., with `loans_subagent` tag) to handle a specific domain or request type (in our example - banking loans). 
-
-The Reflect agent looks first for the flows which have agent tags and then looks their description in order to find a specialized agent that can handle the current task.
+Orchestrator then calls the Refiner agent to prepare the subagent's goal according to user request and context.
 
 ##### Notes:
 
@@ -84,9 +76,6 @@ When invoking a subagent, it receives detailed context, including:
 - Its **Role and Objectives** (as a system message).
 - **Domain Data** (details on relevant LUs, reference tables, column names, and descriptions) to enable dynamic SQL query construction.
 - A specific **List of Tools** (other Broadway flows) tailored to the domain.
-- **Execution Policies** and **Response Guidelines**.
-
-The Orchestrator identifies the relevant subagent by checking the flows which were tagged with the value provided in the `subagents_tag` input parameter.
 
 
 
@@ -97,10 +86,10 @@ If a request requires gathering information or executing multiple steps but does
 The LLM is tasked with generating a step-by-step execution plan using several resources:
 
 1. **Sample Plans:** JSON files (e.g., `Banking_plans.json`) containing pre-built templates showing the LLM how to combine tools to accomplish similar objectives.
-2. **Tools List:** A full list of available Broadway flows, along with descriptions and remarks added to input parameters. The LLM uses these descriptions to choose the right tool and determine the required inputs. Tools are made discoverable via the `tool_tags` MTable.
+2. **Tools List:** A full list of available Broadway flows, along with descriptions and remarks added to input parameters. The LLM uses these descriptions to choose the right tool and determine the required inputs. Tools can be also subagents. 
 3. **Corporate Procedures:** Documents indexed in the vector repository that define business rules or step-by-step instructions (e.g., verification criteria for credit limit reduction).
 
-Once the plan is generated, the **`LLMAgentFlow`** executes it step-by-step. 
+Once the plan steps are prepared, it executes them step-by-step. 
 
 > Note: It is a best practice to rely on subagents for high-performance needs, as the Planner approach is slower and less predictable due to the required plan generation step.
 

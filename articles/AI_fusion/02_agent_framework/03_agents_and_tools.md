@@ -29,6 +29,7 @@ The GenAI Data Fusion framework includes two categories of agents, both represen
 | **Orchestrator** | Manages the overall agentic flow and coordinates all processing |
 | **Reflector**    | Part of the Orchestrator; evaluates and refines user queries based on context |
 | **Planner**      | Part of the Orchestrator; creates and executes step-by-step task plans |
+| **Refiner**      |                                                              |
 
 #### Data Agents
 
@@ -38,18 +39,19 @@ The GenAI Data Fusion framework includes two categories of agents, both represen
 
 ### Project Implementation Agents
 
-Implementation agents extend the built-in types to accomplish domain-specific goals. These are Broadway flows tagged to handle specific domains or request types.
+Implementation agents extend the built-in agents to accomplish domain-specific goals. These are Broadway flows tagged to handle specific domains or request types.
 
-**Example:** A `loans_subagent` tag identifies an agent specialized for banking loan inquiries.
+Example: A `loans_subagent` tag identifies an agent specialized for banking loan inquiries.
 
-A typical subagent flow includes:
+A typical subagent includes a combination of logic steps along with LLMAgent usage. In this way a better controlled and reliable flow is achieved.
+
+The LLMAgent decides on tools activation and response formulation according to:
 
 1. **Predefined Domain Data** - Retrieved using a DBCommand actor
 2. **Schema Information** - Relevant tables for SQL crafting
 3. **System Prompt** - Agent goals and behavioral guidelines
 4. **User Prompt** - The refined user query
 5. **Tool List** - Available tools the AI can invoke
-6. **LLMAgent Call** - Where the LLM decides on tool activation and response formulation
 
 
 
