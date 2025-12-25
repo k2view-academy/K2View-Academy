@@ -51,7 +51,7 @@ Read [here](05_llm_interfaces.md) more information of provisioning LLM interface
 
 
 
-## Vectors LU - Vector Data Stores & RAG
+## Vector Data Stores & RAG
 
 The aifusion framework supports vector databases for semantic search, enabling Retrieval-Augmented Generation (RAG). This is essential for organizations with unstructured data such as:
 
@@ -59,17 +59,21 @@ The aifusion framework supports vector databases for semantic search, enabling R
 - Corporate procedures
 - Policy documents
 
-The **Vectors LU** maintains SQLite-based vector stores with separate tables for each information type.
-
 ### How It Works
 
 1. Documents are pre-converted into vector embeddings that capture semantic meaning
 2. User queries are also converted to vectors
 3. The system retrieves items whose meaning is closest to the query, when it identifies that information from vector store DB is relevant
 
-> **Note:** Fabric's built-in vector DB is recommended for framework operational tasks (plans, procedures, base KB). For complex documents like tariff plans, device support guides, or marketing materials, consider dedicated vector DB services such as AWS Bedrock Knowledge Base.
+The platform provides actors and embedding interfaces that help you to interact with vector stores. 
 
 For additional information, see [Vector Data Stores](07_vector_db.md).
+
+### Vector Data Store at Fabric Storage
+
+You can use vector stores within Fabric storage, meaning as LUI within LUs. This is maintained SQLite-based vector stores with dedicated tables with a special form.
+
+Fabric's built-in vector store is recommended for framework operational tasks like plans, procedures and base KB. For complex documents like tariff plans, device support guides, or marketing materials, consider dedicated vector DB services such as AWS Bedrock Knowledge Base.
 
 
 
