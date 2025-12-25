@@ -10,6 +10,8 @@
     <li><a href="/articles/AI_fusion/02_agent_framework/07_vector_db.md">Vector Database</a></li>
     <li><a href="/articles/AI_fusion/02_agent_framework/08_chat_playground.md">Chat Playground, Trace and Debug</a></li>
      <li><a href="/articles/AI_fusion/02_agent_framework/09_security.md">Privacy and Security</a></li>
+     <li><a href="/articles/AI_fusion/02_agent_framework/10_setup_and_operation.md">Setup and Operation</a></li>
+
 
 
 
