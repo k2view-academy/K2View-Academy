@@ -1,8 +1,6 @@
 ### The Fabric 8.3.1 Official Release
 
-We are glad to announce the release of Fabric 8.3.1! This version introduces several key enhancements to both Fabric and the Catalog.  
-
-Here are some of the highlights of this release:
+We are glad to announce the release of Fabric 8.3.1! This version introduces several key enhancements to both Fabric and the Catalog. Here are some of the highlights of this release:
 
 * **Improved transaction management**: Catalog's graph creation in Neo4j has been enhanced by splitting the changes into batches. This allows to run each batch in parallel as separate transactions, significantly reducing memory consumption during Discovery job execution.
 * **Enhanced data quality**: The quality of generated data during masking and SDG is now improved. This is achieved by the ability to override the Generator's default input parameters with values of the Catalog metrics (calculated from the data snapshot).
