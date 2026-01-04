@@ -37,7 +37,7 @@ The following matching rules are applied by the plugin. Note that each of these 
   - The relation *dataset2 refers to dataset1* is created.
   - Example: *customer.customer_id (PK) and* *activity.customer_id* 
 
-- ```*commonFieldsInBothPk``` - common fields that are part of the PK in both datasets, where dataset2 has more PKs than dataset1.
+- ```commonFieldsInBothPk``` - common fields that are part of the PK in both datasets, where dataset2 has more PKs than dataset1.
 
   - The relation *dataset2 refers to dataset1* is created.
 
