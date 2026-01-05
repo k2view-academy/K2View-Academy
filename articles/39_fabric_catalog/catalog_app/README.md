@@ -4,7 +4,7 @@
 	<li><a href="/articles/39_fabric_catalog/catalog_app/05_catalog_app.md">Catalog Application</a></li>
 	<li><a href="/articles/39_fabric_catalog/catalog_app/06_catalog_versioning.md">Catalog Versioning</a></li>
 	<li><a href="/articles/39_fabric_catalog/catalog_app/07_manual_overrides.md">Manual Overrides</a></li>
-	<li><a href="/articles/39_fabric_catalog/catalog_app/08_search_catalog.md">Search Catalog</a></li>
+	<li><a href="/articles/39_fabric_catalog/catalog_app/08_search_catalog.md">Catalog Search</a></li>
 	<li><a href="/articles/39_fabric_catalog/catalog_app/08a_filter_catalog.md">Catalog Filter</a></li>
 	<li><a href="/articles/39_fabric_catalog/catalog_app/09_build_artifacts.md">Build Catalog Artifacts</a></li>
 	<li><a href="/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md">Catalog Settings</a></li>
