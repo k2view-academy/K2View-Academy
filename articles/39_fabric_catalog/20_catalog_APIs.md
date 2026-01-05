@@ -367,3 +367,44 @@ Example 2: When searching for node types with *PII = true* and *Classification =
 
 <span style="border-radius: 12em; background-color: #F93E3E; padding: 0 10px; color:white">DELETE</span>   `/api/catalog/clean-graph`
 
+The API permanently deletes all catalog data from the Neo4j GraphDB including the versions and all included data platforms with their information.
+
+Starting from Fabric 8.4, the following optional input parameters are available:
+
+<table style="width: 800px;">
+<thead>
+<tr>
+<th style="text-align: left;" width="50pxl"><strong>Component</strong></th>
+<th style="text-align: left;" width="50pxl"><strong>Mandatory</strong></th>
+<th style="text-align: left;" width="700pxl"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 151.406px;">dataPlatform</td>
+<td style="width: 83.7969px;">N</td>
+<td style="width: 542.797px;">
+<p>The data platform name. When it is populated, only data data of the specified data platform is deleted from the Neo4j GraphDB.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 151.406px;">keepManualOverrides</td>
+<td style="width: 83.7969px;">N</td>
+<td style="width: 542.797px;">
+<p>When set to <strong>true</strong>,&nbsp;the manual overrides will not be deleted, so the next time when running discovery on the same interface - they will be automatically applied to it.</p>
+<p>When set to <strong>false</strong>, the manual overrides will be deleted.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Example of an API call:**
+
+```
+https://localhost:3213/api/catalog/clean-graph
+```
+
+~~~
+https://localhost:3213/api/catalog/clean-graph?dataPlatform=BILLING_DB&keepManualOverride=true
+~~~
+
