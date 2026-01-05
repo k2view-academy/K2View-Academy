@@ -8,7 +8,9 @@ Manual update of multiple Catalog entities is often slow and prone to errors, es
 
 - For simultaneous editing, adding or deleting of multiple entities.
 
-This article explains how to edit properties using the Bulk Edit capability. Click [here](14_1_bulk_creation.md) to learn how to create and view a bulk of entities.
+This article explains how to edit properties using the Bulk Edit capability. 
+
+Click [here](14_1_bulk_creation.md) to learn how to create and view a bulk of entities.
 
 ### How Can I Edit Entities in a Bulk Group?
 
