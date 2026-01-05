@@ -49,8 +49,8 @@ Use dedicated servers for Fabric instances. Following a sizing process, the exac
 
 ### Operating system: 
 
-* RedHat (version 7 or higher) based distribution (for example: CentOS, Oracle Linux).   
-* Ubuntu Server, version 18.04 or higher. 
+* RedHat (version 8 or higher) based distribution (for example: Centos, Oracle, Linux).   
+* Ubuntu Server, version 22 or higher. 
 
 
 ### Hardware Requirements:
@@ -178,8 +178,8 @@ Cassandra and Kafka servers should be accessible from Fabric servers’ nodes.
 
 ### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with the latest patches (for example: CentOS, Oracle Linux).   
-* Ubuntu Server, version 18.04 or higher, with the latest patches.
+* RedHat (version 8 or higher) based distribution (for example: Centos, Oracle, Linux).   
+* Ubuntu Server, version 22 or higher. 
 
 ### Hardware Requirements:
 <table>
@@ -286,8 +286,8 @@ Use dedicated servers for Kafka instances. Following a sizing process, the exact
 
 ### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with the latest patches (for example: CentOS, Oracle Linux).   
-* Ubuntu Server, version 18.04 or higher, with the latest patches. 
+* RedHat (version 8 or higher) based distribution (for example: Centos, Oracle, Linux).   
+* Ubuntu Server, version 22 or higher. 
 
 #### Kafka Version: 
 K2view supports the Kafka version certified for a specific Fabric version. Refer to the <a href="/articles/Product_Versions
@@ -401,8 +401,8 @@ Use dedicated servers for Cassandra instances. Following a sizing process, the e
 
 ### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with the latest patches (for example: CentOS, Oracle Linux).   
-* Ubuntu Server, version 18.04 or higher, with the latest patches.
+* RedHat (version 8 or higher) based distribution (for example: Centos, Oracle, Linux).   
+* Ubuntu Server, version 22 or higher. 
 
 
 ### Cassandra Versions Supported
