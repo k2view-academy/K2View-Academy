@@ -29,8 +29,8 @@ For system requirements for Fabric Studio, please refer to <a href="/articles/98
 
 #### Operating System: 
 
-* RedHat (version 7 or higher) based distribution (for example: Centos, Oracle, Linux).   
-* Ubuntu Server, version 18.04 or higher. 
+* RedHat (version 8 or higher) based distribution (for example: Centos, Oracle, Linux).   
+* Ubuntu Server, version 22 or higher. 
 
 ### Hardware Requirements
 
