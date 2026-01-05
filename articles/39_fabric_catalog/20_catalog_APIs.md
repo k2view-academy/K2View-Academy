@@ -28,15 +28,13 @@ https://localhost:3213/api/catalog/start-crawler-job?dataPlatform=CRM_DB
 
 The API retrieves a list of Catalog versions along with their creation timestamps.
 
-Starting from Fabric V8.4, version source (Crawler, Manual or Revert) and a list of impacted data platforms are also returns in the API's response - per each version.
+Starting from Fabric V8.4, version source (Crawler, Manual or Revert) and a list of impacted data platforms are also returned in the API's response per each version.
 
 **Example of an API call:**
 
 ```
 https://localhost:3213/api/catalog
 ```
-
-
 
 ## Get Details of Catalog Version 
 
@@ -238,10 +236,11 @@ The API retrieves a list of datasets that belong to the **latest version** of th
 
 The API retrieves a list of fields that belong to the **latest version** of the specified data platform, schema and dataset. This API is available starting from Fabric V8.3.
 
-Starting from Fabric V8.3.2, an optional input parameter ```primitiveTypeOnly ``` has been added:
+Starting from Fabric V8.3.2, an optional input parameter ```primitiveTypeOnly``` has been added:
 
-* When set to ```false``` (default) - the API returns all fields.
+* When set to ```false``` (default) - the API returns all fields of the specified dataset.
 * When set to ```true``` - the API filters out fields with complex type and returns primitive-type fields only.
+
 
 ## Building Catalog Artifacts
 
@@ -253,7 +252,7 @@ Starting from Fabric V8.3, the relations artifact can also be extracted by the A
 
 Refer to the [Catalog Artifacts article](/articles/39_fabric_catalog/catalog_app/09_build_artifacts.md) for more details about the structure and naming format of relations artifacts. 
 
-Starting from Fabric V8.4, building an artifact can be done for either a single data platform or for the full catalog (as before). 
+Starting from Fabric V8.4, building an artifact can be done for either a single data platform or for the full catalog. 
 
 <table style="width: 800px;">
 <thead>
