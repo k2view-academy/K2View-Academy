@@ -1,6 +1,11 @@
 {
 	"Branches": [
 		{
+			"display name": "Fabric 8.4",
+			"branch name": "Academy_8.4",
+			"build": true
+		},
+		{
 			"display name": "Fabric 8.3",
 			"branch name": "Academy_8.3",
 			"build": true
@@ -13,7 +18,7 @@
 		{
 			"display name": "Fabric 8.1",
 			"branch name": "Academy_8.1",
-			"build": true
+			"build": false
 		},
 		{
 			"display name": "Fabric 8.0",

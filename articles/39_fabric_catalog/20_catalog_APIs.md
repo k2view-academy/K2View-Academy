@@ -28,6 +28,8 @@ https://localhost:3213/api/catalog/start-crawler-job?dataPlatform=CRM_DB
 
 The API retrieves a list of Catalog versions along with their creation timestamps.
 
+Starting from Fabric V8.4, version source (Crawler, Manual or Revert) and a list of impacted data platforms are also returns in the API's response - per each version.
+
 **Example of an API call:**
 
 ```
@@ -236,6 +238,11 @@ The API retrieves a list of datasets that belong to the **latest version** of th
 
 The API retrieves a list of fields that belong to the **latest version** of the specified data platform, schema and dataset. This API is available starting from Fabric V8.3.
 
+Starting from Fabric V8.3.2, an optional input parameter ```primitiveTypeOnly ``` has been added:
+
+* When set to ```false``` (default) - the API returns all fields.
+* When set to ```true``` - the API filters out fields with complex type and returns primitive-type fields only.
+
 ## Building Catalog Artifacts
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/build-catalog-artifacts`
@@ -246,6 +253,41 @@ Starting from Fabric V8.3, the relations artifact can also be extracted by the A
 
 Refer to the [Catalog Artifacts article](/articles/39_fabric_catalog/catalog_app/09_build_artifacts.md) for more details about the structure and naming format of relations artifacts. 
 
+Starting from Fabric V8.4, building an artifact can be done for either a single data platform or for the full catalog (as before). 
+
+<table style="width: 800px;">
+<thead>
+<tr>
+<th style="text-align: left;" width="50pxl"><strong>Component</strong></th>
+<th style="text-align: left;" width="50pxl"><strong>Mandatory</strong></th>
+<th style="text-align: left;" width="700pxl"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>version</td>
+<td>Y</td>
+<td>
+<p>Populate either the version number or the word <strong>latest</strong> to build the version's artifacts.</p>
+</td>
+</tr>
+<tr>
+<td>refersTo</td>
+<td>N</td>
+<td>
+<p>When set to <strong>true</strong>, the artifact of the 'refersTo' relations is creation in addition to the artifact of fields.</p>
+</td>
+</tr>
+<tr>
+<td>dataPlatform</td>
+<td>N</td>
+<td>
+<p>The data platform name. When it is populated, the artifact is created for the specified data platform only.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 **Example of an API call:**
 
 ```
@@ -255,6 +297,10 @@ https://localhost:3213/api/catalog/4/build-catalog-artifacts
 ```
 https://localhost:3213/api/catalog/latest/build-catalog-artifacts?refersTo=true
 ```
+
+~~~
+https://localhost:3213/api/catalog/latest/build-catalog-artifacts?refersTo=true&dataPlatform=CRM_DB
+~~~
 
 
 
@@ -317,4 +363,8 @@ Example 2: When searching for node types with *PII = true* and *Classification =
 ~~~
 
 
+
+## Clean Graph
+
+<span style="border-radius: 12em; background-color: #F93E3E; padding: 0 10px; color:white">DELETE</span>   `/api/catalog/clean-graph`
 
