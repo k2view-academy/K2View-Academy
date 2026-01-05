@@ -384,7 +384,7 @@ Starting from Fabric 8.4, the following optional input parameters are available:
 <td style="width: 151.406px;">dataPlatform</td>
 <td style="width: 83.7969px;">N</td>
 <td style="width: 542.797px;">
-<p>The data platform name. When it is populated, only data data of the specified data platform is deleted from the Neo4j GraphDB.</p>
+<p>The data platform name. When it is populated, only data of the specified data platform is deleted from the Neo4j GraphDB.</p>
 </td>
 </tr>
 <tr>
