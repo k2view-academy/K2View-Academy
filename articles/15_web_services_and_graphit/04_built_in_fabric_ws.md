@@ -179,7 +179,7 @@ Similar to the POST method but send the information using GET parameters.
 <span style="border-radius: 2em; background-color: #0969da; padding: 0 7px; color:white">POST</span>  `/api/authenticate`
 
 
-Generate a JWT digitally signed cookie for Web-Services calls on the same session. Consequently, future Fabric Web-services calls will not require a token as a parameter. 
+Generate a JWT digitally signed cookie for Web-Services calls on the same session. Consequently, later Fabric Web-services calls requires sending this JWT. Read more [here](/articles/26_fabric_security/05_fabric_webservices_security.md#jwt-signed-by-fabric)
 
 The web service expects either an API Key to be sent in the request body or username and password, as follows:
 
