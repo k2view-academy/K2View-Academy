@@ -49,8 +49,8 @@ A dedicated server is preferred for each Fabric instance. Following a sizing pro
 
 #### Operating system: 
 
-* RedHat (version 7 or higher) based distribution (for example: CentOS, Oracle Linux).   
-* Ubuntu Server, version 18.04 or higher. 
+* RedHat (version 8 or higher) based distribution (for example: Centos, Oracle, Linux).   
+* Ubuntu Server, version 22 or higher. 
 
 
 #### Hardware Requirements:
@@ -176,8 +176,8 @@ Cassandra and Kafka servers should be accessible from Fabric servers’ nodes.
 ### Software Requirements:
 ### Operating system: 
 
-* RedHat (version 7 or higher) based distribution with the latest patches (for example: CentOS, Oracle Linux).   
-* Ubuntu Server, version 18.04 or higher, with the latest patches.
+* RedHat (version 8 or higher) based distribution (for example: Centos, Oracle, Linux).   
+* Ubuntu Server, version 22 or higher. 
 
 ### Hardware Requirements:
 
