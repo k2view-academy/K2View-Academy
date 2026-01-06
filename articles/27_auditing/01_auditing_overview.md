@@ -376,10 +376,10 @@ When an activity is captured by the Fabric Auditing mechanism, it is logged with
 
 ## Auditing Settings
 
-Two major Auditing features can be controlled:
+There are two major controllable features within the Auditing mechanism:
 
--  **Filtering strategies:** provides full flexibility over the type of activities that are introduced to the Auditing mechanism. For instance, you may audit only Web Service calls, without impacting the performance of other activities but with saving a lot of disk space. Read [here](02_filtering_strategy.md) for more details.
--  **Persistence strategies:** defines the reporting channel for the Auditing mechanism. Examples for such channels include system_db (default), Kafka, and files. Read [here](03_persistence_strategy.md) for more details.
+-  **Filtering:** Through various strategies, this feature provides full control over which activities are tracked by the Auditing mechanism. For instance, you can audit only Web Service calls, minimizing impact on other activities while saving disk space. Read [here](02_filtering_strategy.md) for more details.
+-  **Persistence:** Through various strategies, this feature defines the reporting channels for the Auditing mechanism. Examples of these channels include system_db (default), Kafka, and files. Read [here](03_persistence_strategy.md) for more details.
 
 The Auditing mechanism can be set in the **[audit]** and **[audit_kafka_producer]** sections of the Fabric's Configuration, found within the [K2admin's Configuration tab](/articles/30_web_framework/03_web_admin_application.md). By default, the persistence strategy is system database, and the data is written into the **k2_auditing** table of the [k2audit](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) keyspace.
 
