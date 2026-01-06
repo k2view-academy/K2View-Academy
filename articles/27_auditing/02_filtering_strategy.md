@@ -4,15 +4,15 @@ The list of activities reported by the Auditing mechanism can be controlled.
 
 Once the AUDIT parameter is set to ON in **config.ini**, all Fabric activities are logged by the Fabric Auditing mechanism.
 
-In order to limit the auditing to a specific predefined list of activities, the AUDIT_FILTER_STRATEGY parameter in the **config.ini** should be populated with the full path of the class defining the filter strategy. 
+In order to limit auditing to a specific predefined list of activities, the AUDIT_FILTER_STRATEGY parameter in the **config.ini** should be populated with the full path of the class that defines the filter strategy. 
 
 ###  How Can I Define the Auditing Filter?
 
-In order to define the auditing filter, start from the sample provided as part of the Fabric installation and modify it according to your needs. 
+Defining the auditing filter starts with the sample provided as part of the Fabric installation, which you can then modify as needed. 
 
 Alternatively, create a new class under the **com.k2view.external.fabric.audit.filters** folder. Note that the  filter class should implement the **com.k2view.external.fabric.audit.filters.AuditingFilter** interface.
 
-Take the following steps in order to build the artifacts:
+Follow the following steps in order to build the artifacts:
 
 1. Copy the project located under $K2_HOME/fabric/samples/AuditCustomStrategies locally.  
 
