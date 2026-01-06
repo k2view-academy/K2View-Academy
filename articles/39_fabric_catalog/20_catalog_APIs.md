@@ -413,7 +413,7 @@ https://localhost:3213/api/catalog/4/revert-catalog-version?dataPlatform=BILLING
 
 <span style="border-radius: 12em; background-color: #F93E3E; padding: 0 10px; color:white">DELETE</span>   `/api/catalog/clean-graph`
 
-The API permanently deletes the entire Catalog from the Neo4j GraphDB, including all versions and data platforms with their associated information.
+The API permanently deletes the Catalog's metadata from the Neo4j GraphDB, including all versions and data platforms with their associated information.
 
 Starting from Fabric 8.4, the following optional input parameters are available:
 
