@@ -252,7 +252,7 @@ Starting from Fabric V8.3, the relations artifact can also be extracted by the A
 
 Refer to the [Catalog Artifacts](/articles/39_fabric_catalog/catalog_app/09_build_artifacts.md) article for more details about the structure and naming format of the created artifacts. 
 
-Starting from Fabric V8.4, building an artifact can be done for either a single data platform or for the full catalog. 
+Starting from Fabric V8.4, building an artifact can be done for either a selected data platform or for the full catalog. 
 
 <table>
 <thead>
