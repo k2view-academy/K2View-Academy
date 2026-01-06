@@ -246,11 +246,11 @@ Starting from Fabric V8.3.2, an optional input parameter ```primitiveTypeOnly```
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/build-catalog-artifacts`
 
-The API builds the Catalog artifacts based on a given version. The artifacts include details of all Catalog fields and their properties, such as Classification and PII. The artifact is created in a CSV format, saved in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree, and uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md). 
+The API builds the Catalog artifacts for the specified Catalog version. The artifacts include details of the fields that belong to all Catalog's data platforms and their properties (such as *definedBy*, *classification* and *pii*). The artifact is created in a CSV format, saved in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree, and uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md). 
 
-Starting from Fabric V8.3, the relations artifact can also be extracted by the API. It can be done when setting ```refersTo=true``` in the API input. The relations artifact is created in a CSV format, saved in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree, and uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md). 
+Starting from Fabric V8.3, the relations artifact can also be extracted by the API. The relations artifacts include the details of the Catalog's *refersTo* relations. It can be done when setting ```refersTo=true``` in the API input. The relations artifact is created in a CSV format, saved in the ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder of the Project tree, and uploaded to the Fabric memory as an [MTable](/articles/09_translations/06_mtables_overview.md). 
 
-Refer to the [Catalog Artifacts article](/articles/39_fabric_catalog/catalog_app/09_build_artifacts.md) for more details about the structure and naming format of relations artifacts. 
+Refer to the [Catalog Artifacts](/articles/39_fabric_catalog/catalog_app/09_build_artifacts.md) article for more details about the structure and naming format of the created artifacts. 
 
 Starting from Fabric V8.4, building an artifact can be done for either a single data platform or for the full catalog. 
 
@@ -274,7 +274,7 @@ Starting from Fabric V8.4, building an artifact can be done for either a single 
 <td>refersTo</td>
 <td>N</td>
 <td>
-<p>When set to <strong>true</strong>, the artifact of the 'refersTo' relations is creation in addition to the artifact of fields.</p>
+<p>When set to <strong>true</strong>, the artifacts of the <em>refersTo</em> relations are created in addition to the artifacts of fields.</p>
 </td>
 </tr>
 <tr>
@@ -367,7 +367,7 @@ Example 2: When searching for node types with *PII = true* and *Classification =
 
 <span style="border-radius: 12em; background-color: #F93E3E; padding: 0 10px; color:white">DELETE</span>   `/api/catalog/clean-graph`
 
-The API permanently deletes all catalog data from the Neo4j GraphDB including the versions and all included data platforms with their information.
+The API permanently deletes the entire Catalog from the Neo4j GraphDB, including all versions and data platforms with their associated information.
 
 Starting from Fabric 8.4, the following optional input parameters are available:
 
@@ -384,15 +384,15 @@ Starting from Fabric 8.4, the following optional input parameters are available:
 <td>dataPlatform</td>
 <td>N</td>
 <td>
-<p>The data platform name. When it is populated, only data of the specified data platform is deleted from the Neo4j GraphDB.</p>
+<p>The data platform name. When populated, only the specified data platform's metadata is deleted from the Neo4j GraphDB.</p>
 </td>
 </tr>
 <tr>
 <td>keepManualOverrides</td>
 <td>N</td>
 <td>
-<p>When set to <strong>true</strong>,&nbsp;the manual overrides will not be deleted, so the next time when running discovery on the same interface - they will be automatically applied to it.</p>
-<p>When set to <strong>false</strong>, the manual overrides will be deleted.</p>
+<p>When set to <strong>true</strong>,&nbsp;the manual overrides will not be deleted. So the next time when running discovery on the same data platform - the manual overrides will be automatically re-applied to it.</p>
+<p>When set to <strong>false</strong>, the manual overrides will be permanently deleted.</p>
 </td>
 </tr>
 </tbody>
