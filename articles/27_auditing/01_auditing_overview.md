@@ -8,8 +8,8 @@ Fabric has a robust Auditing mechanism that logs various activities running on F
 3. [When Should Auditing Not Be Enabled](#when-should-auditing-not-be-enabled)  
 4. [Turning Auditing ON/OFF](#turning-auditing-onoff)  
 7. [Activities Subject To Auditing](#activities-subject-to-auditing)  
-8. [Auditing Reporting Structure](#auditing-reporting-structure)  
-9. [Auditing Reporting Examples](#auditing-reporting-examples)  
+8. [Audit Report Structure](#audit-report-structure)  
+9. [Audit Report Examples](#audit-report-examples)  
 
 ## When to Enable Auditing in Production
 
@@ -144,7 +144,7 @@ Fabric auditing tracks the following activity types:
 - Web Service calls  
 - All executed data queries (read and write)
 
-## Auditing Reporting Structure
+## Audit Report Structure
 
 When an activity is captured by the Fabric Auditing mechanism, it is logged with the following fields:
 
@@ -200,7 +200,7 @@ When an activity is captured by the Fabric Auditing mechanism, it is logged with
 </table>
 
 
-## Auditing Reporting Examples
+## Audit Report Examples
 
 <table border="1" class="dataframe">
   <thead>
