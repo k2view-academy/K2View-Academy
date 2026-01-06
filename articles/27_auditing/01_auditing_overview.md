@@ -6,7 +6,7 @@ Fabric has a robust Auditing mechanism that logs various activities running on F
 
 1. [When to Enable Auditing in Production](#when-to-enable-auditing-in-production)  
 3. [When Should Auditing Not Be Enabled](#when-should-auditing-not-be-enabled)  
-4. [Turning Auditing On/Off](#turning-auditing-onoff)  
+4. [Turning Auditing ON/OFF](#turning-auditing-onoff)  
 7. [What Gets Audited](#what-gets-audited)  
 8. [Auditing Reporting Structure](#auditing-reporting-structure)  
 9. [Auditing Reporting Examples](#auditing-reporting-examples)  
@@ -15,7 +15,7 @@ Fabric has a robust Auditing mechanism that logs various activities running on F
 
 Auditing is particularly useful in production environments, where system integrity, accountability, and regulatory compliance are essential. Enabling auditing ensures that user actions and system events are accurately recorded for analysis, compliance, and troubleshooting purposes.
 
-Here’s a list of common activities audited in production:
+The following list presents common activities audited in production:
 
 <table border="1">
   <thead>
@@ -55,7 +55,7 @@ Here’s a list of common activities audited in production:
     </tr>
     <tr>
       <td></td>
-      <td>- Feature enablement/disabling (e.g., turning audit ON/OFF)</td>
+      <td>- Feature enablement/disabling (e.g., turning auditing ON/OFF)</td>
     </tr>
     <tr>
       <td>Deployment Actions</td>
@@ -119,14 +119,14 @@ In development environments, Fabric Web Studio often executes actions on behalf 
 
 - Both user-driven actions and system-initiated background tasks by Web Studio will be logged.
 - This results in misleading or noisy audit records that do not accurately reflect user behavior.
-- There is no operational benefit, as this environment is typically used for prototyping or testing—not production governance or compliance.
+- There is no operational benefit, as this environment is typically used for prototyping or testing rather than for production governance or compliance.
 
 **Recommendation:**  
 Do not enable auditing in development environments where Fabric Web Studio is employed. It provides no added value and may introduce confusion in interpreting activity logs.
 
 
 
-## Turning Auditing On/Off
+## Turning Auditing ON/OFF
 
 By default, Auditing is set to OFF. To enable Auditing in Fabric, set **AUDIT=ON** using K2admin's Configuration panel and set a configuration override for AUDIT. You then need to restart the K2cloud space.
 
