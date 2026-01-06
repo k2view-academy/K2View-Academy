@@ -34,14 +34,14 @@ Follow the following steps in order to build the artifacts:
 
    * Click **OK**.
 
-7. In the **Project Structure** screen, click **Artifacts > the + sign > JAR > From modules with dependencies**.
+7. In the **Project Structure** screen, click **Artifacts > the + sign > JAR > From modules with dependencies...**
 
    <img src="images/02_choose_artifacts.png" style="zoom:80%;" />
 
    * Choose the **Main class**, which can be either All, filter strategies or persistency strategies. 
    * Click **OK**.
 
-8. Click **Build > Build Artifacts** in IntelliJ menu and select the **Build** action.
+8. Click **Build > Build Artifacts** in the IntelliJ menu and select the **Build** action.
 
 9. The artifacts are created under the AuditCustomStrategies/out/artifacts folder. 
 
