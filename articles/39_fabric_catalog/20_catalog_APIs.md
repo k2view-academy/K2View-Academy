@@ -363,6 +363,52 @@ Example 2: When searching for node types with *PII = true* and *Classification =
 
 
 
+## Revert Catalog Version
+
+<span style="border-radius: 12em; background-color: #46B583; padding: 0 10px; color:white">POST</span>   `/api/catalog/{toVersion}/revert-catalog-version`
+
+The API reverts from the last Catalog version to a specified version. The revert can be performed either to the whole Catalog or to a selected data platform. 
+
+This API is available starting from Fabric 8.4.
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left;" width="100pxl"><strong>Component</strong></th>
+<th style="text-align: left;" width="100pxl"><strong>Mandatory</strong></th>
+<th style="text-align: left;" width="700pxl"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>toVersion</td>
+<td>Y</td>
+<td>
+<p>Populate the version number to which the Catalog should be reverted. Must be lower than the latest version.</p>
+</td>
+</tr>
+<tr>
+<td>dataPlatform</td>
+<td>N</td>
+<td>
+<p>The data platform name. When populated, only the specified data platform's metadata is reverted to the specified version.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Example of an API call:**
+
+```
+https://localhost:3213/api/catalog/4/revert-catalog-version
+```
+
+~~~
+https://localhost:3213/api/catalog/4/revert-catalog-version?dataPlatform=BILLING_DB
+~~~
+
+
+
 ## Clean Graph
 
 <span style="border-radius: 12em; background-color: #F93E3E; padding: 0 10px; color:white">DELETE</span>   `/api/catalog/clean-graph`
@@ -390,9 +436,8 @@ Starting from Fabric 8.4, the following optional input parameters are available:
 <tr>
 <td>keepManualOverrides</td>
 <td>N</td>
-<td>
-<p>When set to <strong>true</strong>,&nbsp;the manual overrides will not be deleted. So the next time when running discovery on the same data platform - the manual overrides will be automatically re-applied to it.</p>
-<p>When set to <strong>false</strong>, the manual overrides will be permanently deleted.</p>
+<td><p>When set to <strong>true</strong>, the manual overrides will not be deleted. During the next discovery run on the same data platform, the manual overrides are automatically reapplied.</p><p>When set to <strong>false</strong>, the manual overrides will be permanently deleted.</p>
+
 </td>
 </tr>
 </tbody>
@@ -405,6 +450,6 @@ https://localhost:3213/api/catalog/clean-graph
 ```
 
 ~~~
-https://localhost:3213/api/catalog/clean-graph?dataPlatform=BILLING_DB&keepManualOverride=true
+https://localhost:3213/api/catalog/clean-graph?dataPlatform=BILLING_DB&keepManualOverrides=true
 ~~~
 
