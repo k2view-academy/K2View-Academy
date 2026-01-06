@@ -415,7 +415,7 @@ https://localhost:3213/api/catalog/4/revert-catalog-version?dataPlatform=BILLING
 
 The API permanently deletes the Catalog's metadata from the Neo4j GraphDB, including all versions and data platforms with their associated information.
 
-Starting from Fabric 8.4, the following optional input parameters are available:
+Starting from Fabric 8.4, cleaning of the graph can be applied either on the whole Catalog or on a selected data platform.
 
 <table>
 <thead>
