@@ -5,7 +5,7 @@ Fabric has a robust Auditing mechanism that logs various activities running on F
 ## Table of Contents
 
 1. [When to Enable Auditing in Production](#when-to-enable-auditing-in-production)  
-3. [When Auditing Should Not Be Enabled](#when-auditing-should-not-be-enabled)  
+3. [When Should Auditing Not Be Enabled](#when-should-auditing-not-be-enabled)  
 4. [Turning Auditing On/Off](#turning-auditing-onoff)  
 7. [What Gets Audited](#what-gets-audited)  
 8. [Auditing Reporting Structure](#auditing-reporting-structure)  
@@ -109,7 +109,7 @@ Here’s a list of common activities audited in production:
 </table>
 
 
-## When Auditing Should Not Be Enabled
+## When Should Auditing Not Be Enabled
 
 Auditing is not recommended in development environments, particularly when using Fabric Web Studio.
 
