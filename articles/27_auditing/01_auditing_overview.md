@@ -83,7 +83,7 @@ The following list presents common activities audited in production:
     </tr>
     <tr>
       <td>Web Service Usage</td>
-      <td>- Web service calls via Fabric endpoints</td>
+      <td>- Web Service calls via Fabric endpoints</td>
     </tr>
     <tr>
       <td></td>
@@ -128,7 +128,7 @@ Do not enable auditing in development environments where Fabric Web Studio is em
 
 ## Turning Auditing ON/OFF
 
-By default, Auditing is set to OFF. To enable Auditing in Fabric, set **AUDIT=ON** using K2admin's Configuration panel and set a configuration override for AUDIT. You then need to restart the K2cloud space.
+By default, Auditing is set to OFF. To enable Auditing in Fabric, set **AUDIT=ON** using K2admin's Configuration panel and set a configuration override for AUDIT. The K2cloud space must then be restarted.
 
 ~~~
 AUDIT=ON
@@ -141,7 +141,7 @@ Fabric auditing tracks the following activity types:
 
 - System logins  
 - All executed Fabric commands  
-- Web-Service calls  
+- Web Service calls  
 - All executed data queries (read and write)
 
 ## Auditing Reporting Structure
