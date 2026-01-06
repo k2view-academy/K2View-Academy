@@ -18,7 +18,7 @@ Follow the following steps in order to build the artifacts:
 
    * For example, copy from **C:\K2View\Fabric_6.5\Server\fabric\samples\AuditCustomStrategies** to your local **AuditCustomStrategies** directory.
 
-2. Create a directory **k2view-libs** under **AuditCustomStrategies** directory.
+2. Create a directory named **k2view-libs** under the **AuditCustomStrategies** directory.
 
 3. Copy the files $K2_HOME/fabric/lib/fabric/fabric-common-[version-num].jar and auditing-[version-num].jar to your local **k2view-libs** folder. 
 
@@ -28,7 +28,7 @@ Follow the following steps in order to build the artifacts:
 
 6. Choose libraries either via the IntelliJ menu **File > Project Structure** or by typing **CTRL+ALT+SHIFT+S**.
 
-   * In the **Project Structure** screen, click **Libraries > the + sign > Java** and select the above two Jars.
+   * In the **Project Structure** screen, click **Libraries > the + sign > Java** and select the top two Jars.
 
      <img src="images/02_filter_select_lib.png" style="zoom:80%;" />
 
