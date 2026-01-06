@@ -44,11 +44,11 @@ The API retrieves a list of data platforms that belong to a given Catalog versio
 
 The API has two modes — ***view*** and ***compare*** — that are interchangeably invoked based on the **version** input parameter, as explained below:
 
-<table style="width: 800px;">
+<table>
 <thead>
 <tr>
-<th style="text-align: left;" width="50pxl"><strong>Component</strong></th>
-<th style="text-align: left;" width="50pxl"><strong>Mandatory</strong></th>
+<th style="text-align: left;" width="100pxl"><strong>Component</strong></th>
+<th style="text-align: left;" width="100pxl"><strong>Mandatory</strong></th>
 <th style="text-align: left;" width="700pxl"><strong>Description</strong></th>
 </tr>
 </thead>
@@ -96,11 +96,11 @@ The API retrieves a list of schemas that belong to the specified Catalog version
 
 The API has two modes — ***view*** and ***compare*** — that are interchangeably invoked based on the **version** input parameter, as explained below:
 
-<table style="width: 800px;">
+<table>
 <thead>
 <tr>
-<th style="text-align: left;" width="50pxl"><strong>Component</strong></th>
-<th style="text-align: left;" width="50pxl"><strong>Mandatory</strong></th>
+<th style="text-align: left;" width="100pxl"><strong>Component</strong></th>
+<th style="text-align: left;" width="100pxl"><strong>Mandatory</strong></th>
 <th style="text-align: left;" width="700pxl"><strong>Description</strong></th>
 </tr>
 </thead>
@@ -161,15 +161,15 @@ https://localhost:3213/api/catalog/1...latest/CRM_DB
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/{dataPlatform}/{schema}`
 
-The API retrieves all elements that belong to the specified Catalog version, data platform and schema. The elements include datasets, fields and their properties, and the *refersTo* relations between dataset nodes. 
+The API retrieves all metadata elements that belong to the specified Catalog version, data platform and schema, including datasets, fields with their properties, and the *refersTo* relations between dataset nodes. 
 
 The API has two modes — ***view*** and ***compare*** — that are interchangeably invoked based on the **version** input parameter, as explained below:
 
-<table style="width: 800px;">
+<table>
 <thead>
 <tr>
-<th style="text-align: left;" width="50pxl"><strong>Component</strong></th>
-<th style="text-align: left;" width="50pxl"><strong>Mandatory</strong></th>
+<th style="text-align: left;" width="100pxl"><strong>Component</strong></th>
+<th style="text-align: left;" width="100pxl"><strong>Mandatory</strong></th>
 <th style="text-align: left;" width="700pxl"><strong>Description</strong></th>
 </tr>
 </thead>
@@ -254,11 +254,11 @@ Refer to the [Catalog Artifacts article](/articles/39_fabric_catalog/catalog_app
 
 Starting from Fabric V8.4, building an artifact can be done for either a single data platform or for the full catalog. 
 
-<table style="width: 800px;">
+<table>
 <thead>
 <tr>
-<th style="text-align: left;" width="50pxl"><strong>Component</strong></th>
-<th style="text-align: left;" width="50pxl"><strong>Mandatory</strong></th>
+<th style="text-align: left;" width="100pxl"><strong>Component</strong></th>
+<th style="text-align: left;" width="100pxl"><strong>Mandatory</strong></th>
 <th style="text-align: left;" width="700pxl"><strong>Description</strong></th>
 </tr>
 </thead>
@@ -371,26 +371,26 @@ The API permanently deletes all catalog data from the Neo4j GraphDB including th
 
 Starting from Fabric 8.4, the following optional input parameters are available:
 
-<table style="width: 800px;">
+<table>
 <thead>
 <tr>
-<th style="text-align: left;" width="50pxl"><strong>Component</strong></th>
-<th style="text-align: left;" width="50pxl"><strong>Mandatory</strong></th>
+<th style="text-align: left;" width="100pxl"><strong>Component</strong></th>
+<th style="text-align: left;" width="100pxl"><strong>Mandatory</strong></th>
 <th style="text-align: left;" width="700pxl"><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="width: 151.406px;">dataPlatform</td>
-<td style="width: 83.7969px;">N</td>
-<td style="width: 542.797px;">
+<td>dataPlatform</td>
+<td>N</td>
+<td>
 <p>The data platform name. When it is populated, only data of the specified data platform is deleted from the Neo4j GraphDB.</p>
 </td>
 </tr>
 <tr>
-<td style="width: 151.406px;">keepManualOverrides</td>
-<td style="width: 83.7969px;">N</td>
-<td style="width: 542.797px;">
+<td>keepManualOverrides</td>
+<td>N</td>
+<td>
 <p>When set to <strong>true</strong>,&nbsp;the manual overrides will not be deleted, so the next time when running discovery on the same interface - they will be automatically applied to it.</p>
 <p>When set to <strong>false</strong>, the manual overrides will be deleted.</p>
 </td>
