@@ -367,7 +367,7 @@ Example 2: When searching for node types with *PII = true* and *Classification =
 
 <span style="border-radius: 12em; background-color: #46B583; padding: 0 10px; color:white">POST</span>   `/api/catalog/{toVersion}/revert-catalog-version`
 
-The API reverts from the last Catalog version to a specified version. The revert can be performed either to the whole Catalog or to a selected data platform. 
+The API reverts from the last Catalog version to a specified version. The revert can be performed either to the whole Catalog or to a selected data platform. The selected data platform is sent in the request body.
 
 This API is available starting from Fabric 8.4.
 
@@ -403,8 +403,12 @@ This API is available starting from Fabric 8.4.
 https://localhost:3213/api/catalog/4/revert-catalog-version
 ```
 
-~~~
-https://localhost:3213/api/catalog/4/revert-catalog-version?dataPlatform=BILLING_DB
+**Example of the request body:**
+
+~~~json
+{
+  "dataPlatform": "CRM_DB"
+}
 ~~~
 
 

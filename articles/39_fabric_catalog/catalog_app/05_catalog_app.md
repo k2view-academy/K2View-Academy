@@ -26,7 +26,7 @@ The Catalog has a top bar for navigation, which includes the following areas:
 
 The Catalog Navigator's main area enables navigation between different hierarchy levels, by expanding and collapsing various nodes.
 
-The initial view displays the Data Platform nodes (the data source interfaces defined in the Fabric project), for which the Discovery process is performed. In case the Discovery process hasn't been executed on any project interface, the main area would be empty. 
+The initial view displays the data platform nodes (the data source interfaces defined in the Fabric project), for which the Discovery process is performed. In case the Discovery process hasn't been executed on any project interface, the main area would be empty. 
 
 The Catalog's Legend, which presents the 3 node types with their respective icons, allows to hide or unhide all the elements of the same type.
 
@@ -43,23 +43,23 @@ The Navigator displays the latest Catalog version by default. The version number
 
 **Data Platform and Schema's Context Menu**
 
-A single click on any Data Platform or Schema node opens the context menu: 
+A single click on any data platform or schema node opens the context menu: 
 
 <img src="../images/dataplatform_collapsed_expanded.png" style="zoom: 67%;" />
 
 The context menu allows performing the following actions:
 
 * **Expand** <img src="../images/expand.png" style="zoom:80%;" />or **Collapse** <img src="../images/collapse.png" style="zoom:80%;" /> the next level elements. 
-  * For example, clicking the <img src="../images/expand.png" style="zoom:80%;" /> icon of the Data Platform expands all of its Schemas. 
+  * For example, clicking the <img src="../images/expand.png" style="zoom:80%;" /> icon of the data platform expands all of its schemas. 
   * A double-click on a selected node can either expand or collapse it.
 
-* **Run Discovery** <img src="../images/run_discovery.png" style="zoom:80%;" /> on the selected Data Platform.
+* **Run Discovery** <img src="../images/run_discovery.png" style="zoom:80%;" /> on the selected data platform.
 
 * **Hide** <img src="../images/hide.png" style="zoom:80%;" /> an element from the window. A hidden element can be unhidden either from the Actions menu (as explained further in this article) or by reloading the Catalog.
 
 * **Focus** <img src="../images/focus.png" style="zoom:80%;" /> on the next level elements.
   * The Focus action differs from the Expand action in a way that it dives into the next hierarchy level, eliminating other nodes from the screen.
-  * For example, when<img src="../images/focus.png" style="zoom:80%;" />is clicked on a Schema node, the Catalog will only display the Dataset nodes of the selected Schema. 
+  * For example, when<img src="../images/focus.png" style="zoom:80%;" />is clicked on a schema node, the Catalog will only display the dataset nodes of the selected schema. 
 
   * In the Focus view, breadcrumbs are displayed in the upper-left corner of the main area, indicating your path within the Catalog tree. The breadcrumbs are clickable, and they allow to navigate up the tree.
 
@@ -67,21 +67,21 @@ The context menu allows performing the following actions:
 
 **Dataset Context Menu**
 
-Clicking on any Dataset node opens its context menu, which includes the following actions:
+Clicking on any dataset node opens its context menu, which includes the following actions:
 
-* **Expand** <img src="../images/expand.png" style="zoom:80%;" /> Dataset fields:
+* **Expand** <img src="../images/expand.png" style="zoom:80%;" /> dataset fields:
 
-  * Click the <img src="../images/expand.png" style="zoom:80%;" /> icon of the selected Dataset node to expand its fields. The Dataset node then changes its shape from a circle to a rectangle and displays field properties such as PK, FK and PII, where applicable.
+  * Click the <img src="../images/expand.png" style="zoom:80%;" /> icon of the selected dataset node to expand its fields. The dataset node then changes its shape from a circle to a rectangle and displays field properties such as PK, FK and PII, where applicable.
 
     ​	<img src="../images/dataset_collapsed_expanded.png" style="zoom: 67%;" />
 
-  * To simultaneously expand all Datasets on the screen, click the <img src="../images/expand-fields.png" style="zoom:75%;" /> icon on the Catalog's Legend:
+  * To simultaneously expand all datasets on the screen, click the <img src="../images/expand-fields.png" style="zoom:75%;" /> icon on the Catalog's Legend:
 
     ​	<img src="../images/legend.png" style="zoom: 67%;" />
 
   * ​
 
-  * To collapse an expanded Dataset, click the three dots in the corner of the node. To do so for all Dataset nodes together, click the <img src="../images/eye.png" alt="." style="zoom:80%;" /> icon in the Catalog's Legend.
+  * To collapse an expanded dataset, click the three dots in the corner of the node. To do so for all dataset nodes together, click the <img src="../images/eye.png" alt="." style="zoom:80%;" /> icon in the Catalog's Legend.
 
 * **Hide** <img src="../images/hide.png" style="zoom:80%;" /> an element from the window.
 
@@ -90,24 +90,27 @@ Clicking on any Dataset node opens its context menu, which includes the followin
 The menu bar is a toolbar located at the top of the window. It includes the following choices:
 
 * An **Actions** menu that allows to:
-  * **Build Artifacts**. [Click for more information about the Catalog artifacts](09_build_artifacts.md).
-  * **Edit Catalog**. [Click for more information about the Manual Overrides](07_manual_overrides.md).
-  * View the list of **Hidden Nodes**. Clicking a node in this list, unhides it and the node returns to the Catalog tree.
-  * **Delete Catalog**. Clicking it will delete all data from the Neo4j Graph DB (once the user confirms his action). This feature is useful during the Development when a user wants to run Discovery on various data platforms and then re-build the Catalog from scratch on the same space. Available in V8.1.
+  * **Build artifacts** - to initiate building of the Catalog artifacts. [Click for more information about the Catalog artifacts](09_build_artifacts.md).
+  * **Edit catalog** - to switch the Catalog to the Edit mode in order to perform manual overrides. [Click for more information about the Manual overrides](07_manual_overrides.md).
+  * **Revert** - enables reverting full Catalog or a selected data platform to an earlier version. Available in V8.4. Click for more information about the Revert. 
+  * **Delete** - enables deleting all Catalog's metadata or a selected data platform from the Neo4j Graph DB (once the user confirms his action). Available in V8.4. Click for more information about the Delete.
+  * **Hidden nodes** - to view the list of hidden nodes. Clicking a node in this list, unhides it and the node returns to the Catalog tree.
 * **Search** <img src="../images/search.png" style="zoom:90%;" /> the Catalog. [Click for more information about the Catalog Search](08_search_catalog.md). 
 * **Filter** <img src="../images/filter.png" style="zoom:90%;" /> the Catalog graph by property. When a filter is set, the icon changes its color to orange. Available in V8.1. [Click for more information about the Catalog Filter](08a_filter_catalog.md). 
 * **Bulk**  <img src="../images/bulk_icon.png" >, used to indicate whether there are entities in a bulk. When the bulk is not empty, the icon changes its color to orange. Available in V8.3. [Click for more information about the Catalog Bulk](14_1_bulk_creation.md). 
 * **Hide** <img src="../images/hide.png" style="zoom:80%;" />the node from the Catalog graph. Multiple element selection is supported.  
 * **Show only connected** <img src="../images/connected_only.png" style="zoom:80%;" />, used for focusing only on a selected node with its predecessors and successors. When clicked, all other nodes are hidden, and the icon changes its color to orange, indicating it is now in use. Clicking the icon again, unhides the other nodes and returns to the original view.
-* **Run Discovery** <img src="../images/run_discovery.png" style="zoom:75%;" />, used for running the Discovery Job on the selected Data Platform.
-* **Schema Insights** <img src="../images/insights.png" style="zoom:75%;" />, used for analyzing the Catalog's statistics in either a view version mode or a version comparison mode. The insights are currently available only on a Schema level.
+* **Run Discovery** <img src="../images/run_discovery.png" style="zoom:75%;" />, used for running the Discovery Job on the selected data platform.
+* **Schema Insights** <img src="../images/insights.png" style="zoom:75%;" />, used for analyzing the Catalog's statistics in either a view version mode or a version comparison mode. The insights are currently available only on a schema level.
 * **Data Viewer** <img src="../images/data_viewer.png" style="zoom:75%;" />, used for connecting to the selected Fabric interface and querying the data directly from the data source.
 * **Layout selection** <img src="../images/layout.png" style="zoom:80%;" />, used for selecting a Catalog layout. A centered layout is the default, and vertical or horizontal layouts are supported.
 * **Zoom in / out**, used for adjusting the zoom of the view.
 
 ### Properties Tab
 
-The Properties tab displays the icon indicating the entity type (field, dataset, schema or data platform) and the entity name. In case of fields - the **Defined By** property is displayed (e.g. STRING) - available starting from Fabric V8.3.1.
+The Properties tab displays the icon indicating the entity type (field, dataset, schema or data platform) and the entity name. 
+
+For the Catalog fields - the **Defined By** property (e.g. STRING) is displayed next to the field name. This is available starting from Fabric V8.3.1.
 
 ​	<img src="../images/properties.png" style="zoom: 67%;" />
 
@@ -117,7 +120,7 @@ Clicking the property name or the <img src="../images/info.png" style="zoom: 95%
 
 When the selected element is a relation (a link) between 2 objects in the Catalog tree, its properties are displayed in the Properties tab. 
 
-Note that in case there are more than one *refers to* relation between 2 Datasets, the Catalog tree displays only one link. However, the Properties tab displays details of all relations. 
+Note that in case there are more than one *refers to* relation between 2 datasets, the Catalog tree displays only one link. However, the Properties tab displays details of all relations. 
 
 ### Deep Linking
 
