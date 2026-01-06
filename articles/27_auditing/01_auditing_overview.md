@@ -128,7 +128,7 @@ Do not enable auditing in development environments where Fabric Web Studio is em
 
 ## Turning Auditing ON/OFF
 
-By default, Auditing is set to OFF. To enable Auditing in Fabric, set **AUDIT=ON** using K2admin's Configuration tab and set a configuration override to AUDIT. The K2cloud space must then be restarted.
+By default, Auditing is set to OFF. To enable Auditing in Fabric, set **AUDIT=ON** using [K2admin's Configuration tab](/articles/30_web_framework/03_web_admin_application.md) and set a configuration override to AUDIT. The K2cloud space must then be restarted.
 
 ~~~
 AUDIT=ON
@@ -381,7 +381,7 @@ Two major Auditing features can be controlled:
 -  **Filtering strategies:** provides full flexibility over the type of activities that are introduced to the Auditing mechanism. For instance, you may audit only Web Service calls, without impacting the performance of other activities but with saving a lot of disk space. Read [here](02_filtering_strategy.md) for more details.
 -  **Persistence strategies:** defines the reporting channel for the Auditing mechanism. Examples for such channels include system_db (default), Kafka, and files. Read [here](03_persistence_strategy.md) for more details.
 
-The Auditing mechanism can be configured via the **[audit]** and **[audit_kafka_producer]** sections of the **config.ini**. By default, the persistence strategy is system database, and the data is written into the **k2_auditing** table of the [k2audit](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) keyspace.
+The Auditing mechanism can be set in the **[audit]** and **[audit_kafka_producer]** sections of the Fabric's Configuration, found within the [K2admin's Configuration tab](/articles/30_web_framework/03_web_admin_application.md). By default, the persistence strategy is system database, and the data is written into the **k2_auditing** table of the [k2audit](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) keyspace.
 
 
 
