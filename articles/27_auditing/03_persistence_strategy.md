@@ -3,18 +3,18 @@
 The persistence of the data published by the Auditing mechanism can be controlled. Product provides three persistence strategies:
 
 * **com.k2view.fabric.auditing.persistence.SystemDbBeanPersistence** (default) — the data is written to **k2_auditing** table in the metadata keyspace (k2audit by default) atthe system database. 
-* **com.k2view.fabric.auditing.persistence.KafkaBeanPersistence** — Kafka persistence strategy. The audit data is written to **k2audit** default topic.
-* **com.k2view.fabric.auditing.persistence.AuditLog** — the data is written to the [k2Fabric log files](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md)
+* **com.k2view.fabric.auditing.persistence.KafkaBeanPersistence** — Kafka persistence strategy. Audit data is written to **k2audit** default topic.
+* **com.k2view.fabric.auditing.persistence.AuditLog** — the data is written to the [k2Fabric log files](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md).
 
 
 
-Persistence strategy is defined in the **config.ini** using the `AUDIT_PERSISTENCE_STRATEGY` parameter, which by default, is set to **com.k2view.fabric.auditing.persistence.SystemDbBeanPersistence**.
+Persistence strategy is defined in the **config.ini** using the `AUDIT_PERSISTENCE_STRATEGY` parameter, which defaults to **com.k2view.fabric.auditing.persistence.SystemDbBeanPersistence**.
 
-In addition to the above product strategies, a new strategy can be defined by creating your own class. The steps on how to do it are explained further on in this article.
+In addition to the product strategies described above, a new strategy can be defined by creating your own class. The required steps are explained further on in this article.
 
 ### How Can I Set The Persistence Strategy to Kafka?
 
-In order to switch the persistence strategy to Kafka, do the following:
+In order to switch the persistence strategy to Kafka, perform the following actions:
 
 1. Update the **AUDIT_PERSISTENCY_STRATEGY** parameter in the **config.ini** file to: 
 
@@ -32,7 +32,7 @@ In order to switch the persistence strategy to Kafka, do the following:
 
 4. Restart the Fabric node.
 
-#### Example - Logging Audit to PostgreSQL via Kafka
+#### Example — Logging Audit to PostgreSQL via Kafka
 
 When you have a requirement to make the audit records available to another channel, the persistence strategy should be changed from the System DB to Kafka. 
 
