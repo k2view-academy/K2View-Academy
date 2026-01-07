@@ -128,7 +128,7 @@ Do not enable auditing in development environments where Fabric Web Studio is em
 
 ## Turning Auditing ON/OFF
 
-By default, Auditing is set to OFF. To enable Auditing in Fabric, set **AUDIT=ON** using [K2admin's Configuration tab](/articles/30_web_framework/03_web_admin_application.md) and set a configuration override to AUDIT. The K2cloud space must then be restarted.
+By default, Auditing is set to OFF. To enable Auditing in Fabric, set **AUDIT=ON** using the [K2admin's Configuration tab](/articles/30_web_framework/03_web_admin_application.md) and set a configuration override to AUDIT. The K2cloud space must then be restarted.
 
 ~~~
 AUDIT=ON
