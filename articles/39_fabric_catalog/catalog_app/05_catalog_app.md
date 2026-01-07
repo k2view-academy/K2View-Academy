@@ -16,9 +16,9 @@ The Catalog has a top bar for navigation, which includes the following areas:
 
   * Catalog's [deep linking](05_catalog_app.md#deep-linking) mechanism.
 
-* The **Monitor** displays the Discovery job execution progress. It allows to either re-run the job for a selected data platform or stop the currently running job. [Click here to get more details about the Discovery job execution monitor](12_discovery_monitor.md). 
+* The **Monitor** displays the Discovery job execution progress. It allows to either re-run the job for a selected data platform or stop the currently running job. For more information about the Discovery job execution monitor click [here](12_discovery_monitor.md). 
 
-* The **Settings** allows to view and edit the pre-defined Catalog configuration. [Click here to get more details about the Settings](10_catalog_settings.md). 
+* The **Settings** allows to view and edit the pre-defined Catalog configuration. For more information about the Catalog Settings click [here](10_catalog_settings.md). 
 
 ### Navigator's Main Area
 
@@ -90,14 +90,14 @@ Clicking on any dataset node opens its context menu, which includes the followin
 The menu bar is a toolbar located at the top of the window. It includes the following choices:
 
 * An **Actions** menu that allows to:
-  * **Build artifacts** - to initiate building of the Catalog artifacts. [Click for more information about the Catalog artifacts](09_build_artifacts.md).
-  * **Edit catalog** - to switch the Catalog to the Edit mode in order to perform manual overrides. [Click for more information about the Manual overrides](07_manual_overrides.md).
-  * **Revert** - enables reverting full Catalog or a selected data platform to an earlier version. Available in V8.4. Click for more information about the Revert. 
-  * **Delete** - enables deleting all Catalog's metadata or a selected data platform from the Neo4j Graph DB (once the user confirms his action). Available in V8.4. Click for more information about the Delete.
-  * **Hidden nodes** - to view the list of hidden nodes. Clicking a node in this list, unhides it and the node returns to the Catalog tree.
-* **Search** <img src="../images/search.png" style="zoom:90%;" /> the Catalog. [Click for more information about the Catalog Search](08_search_catalog.md). 
-* **Filter** <img src="../images/filter.png" style="zoom:90%;" /> the Catalog graph by property. When a filter is set, the icon changes its color to orange. Available in V8.1. [Click for more information about the Catalog Filter](08a_filter_catalog.md). 
-* **Bulk**  <img src="../images/bulk_icon.png" >, used to indicate whether there are entities in a bulk. When the bulk is not empty, the icon changes its color to orange. Available in V8.3. [Click for more information about the Catalog Bulk](14_1_bulk_creation.md). 
+  * **Build artifacts** - initiate building of the Catalog artifacts, which can be done for the entire Catalog or for a selected data platform. For more information about the Catalog artifacts click [here](09_build_artifacts.md).
+  * **Edit catalog** - switch the Catalog to Edit mode in order to perform manual overrides. For more information about the Manual overrides click [here](07_manual_overrides.md).
+  * **Revert** - initiate reverting either the entire Catalog or a selected data platform to an earlier version. Available in V8.4. For more information about the Revert click [here](16_revert_catalog_version.md). 
+  * **Delete** - initiate deleting either the entire Catalog or a selected data platform from the Neo4j Graph DB. Available in V8.4. For more information about the Delete click [here](17_delete_catalog.md).
+  * **Hidden nodes** - view the list of nodes, hidden from the Catalog's graph. Clicking a node in this list, unhides it and the node returns to the Catalog graph.
+* **Search** <img src="../images/search.png" style="zoom:90%;" /> the Catalog. For more information about the Catalog Search click [here](08_search_catalog.md). 
+* **Filter** <img src="../images/filter.png" style="zoom:90%;" /> the Catalog graph by property. When a filter is set, the icon changes its color to orange. Available in V8.1. For more information about the Catalog Filter click [here](08a_filter_catalog.md). 
+* **Bulk**  <img src="../images/bulk_icon.png" >, used to indicate whether there are entities in a bulk. When the bulk is not empty, the icon changes its color to orange. Available in V8.3. For more information about the Catalog Bulk click [here](14_1_bulk_creation.md). 
 * **Hide** <img src="../images/hide.png" style="zoom:80%;" />the node from the Catalog graph. Multiple element selection is supported.  
 * **Show only connected** <img src="../images/connected_only.png" style="zoom:80%;" />, used for focusing only on a selected node with its predecessors and successors. When clicked, all other nodes are hidden, and the icon changes its color to orange, indicating it is now in use. Clicking the icon again, unhides the other nodes and returns to the original view.
 * **Run Discovery** <img src="../images/run_discovery.png" style="zoom:75%;" />, used for running the Discovery Job on the selected data platform.
