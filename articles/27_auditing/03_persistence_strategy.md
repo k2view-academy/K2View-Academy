@@ -34,9 +34,9 @@ In order to switch the persistence strategy to Kafka, perform the following acti
 
 #### Example — Logging Audit to PostgreSQL via Kafka
 
-When you have a requirement to make the audit records available to another channel, the persistence strategy should be changed from the System DB to Kafka. 
+When there is a requirement to make the audit records available to another channel, the persistence strategy should be changed from System DB to Kafka. 
 
-For example, when you need to log the Audit records into some relational DB (e.g. PostgreSQL), you can publish them to Kafka. To do so, update the **AUDIT_PERSISTENCE_STRATEGY** parameter in the **config.ini** to **com.k2view.fabric.auditing.persistence.SystemDbBeanPersistence** and restart the Fabric node as explained above.
+For example, when you need to log the Audit records into some relational DB (e.g., PostgreSQL), you can publish them to Kafka. To do so, update the **AUDIT_PERSISTENCE_STRATEGY** parameter in the **config.ini** to **com.k2view.fabric.auditing.persistence.SystemDbBeanPersistence** and restart the Fabric node as explained above.
 
 Then, create a Broadway flow that will consume the Kafka messages and load them into your required target DB. 
 
