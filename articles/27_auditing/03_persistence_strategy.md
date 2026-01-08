@@ -36,7 +36,7 @@ In order to switch the persistence strategy to Kafka, perform the following acti
 
 When there is a requirement to make the audit records available to another channel, the persistence strategy should be changed from System DB to Kafka. 
 
-For example, when you need to log the Audit records into some relational DB (e.g., PostgreSQL), you can publish them to Kafka. To do so, update the **AUDIT_PERSISTENCE_STRATEGY** parameter in the **config.ini** to **com.k2view.fabric.auditing.persistence.SystemDbBeanPersistence** and restart the Fabric node as explained above.
+For example, when you need to log the Audit records into some relational DB (e.g., PostgreSQL), you can publish them to Kafka. To do this, update the **AUDIT_PERSISTENCE_STRATEGY** parameter in the **config.ini** to **com.k2view.fabric.auditing.persistence.SystemDbBeanPersistence** and restart the Fabric node as explained above.
 
 Then, create a Broadway flow that will consume the Kafka messages and load them into your required target DB. 
 
@@ -44,7 +44,7 @@ The below Broadway flow consumes the Audit messages from Kafka topic and loads t
 
 ![](images/03_kafka_persistance.png)
 
-The Kafka message looks as follows:
+The Kafka message appears as follows:
 
 ~~~json
 {
@@ -67,13 +67,13 @@ The Kafka message looks as follows:
 
 ### How Can I Define A New Persistence Strategy?
 
-In order to define a new persistency strategy, create your own persistency strategy class. Alternatively, you can start from the sample class **com.k2view.external.fabric.audit.persistencies.SamplePersist** provided as part of the Fabric installation and modify it according to your needs. 
+In order to define a new persistency strategy, create your own persistency strategy class. Alternatively, you can start with the sample class **com.k2view.external.fabric.audit.persistencies.SamplePersist** provided as part of the Fabric installation and modify it as needed. 
 
-In case of your own class, it must be created under the **com.k2view.external.fabric.audit.persistencies** folder and it should implement the **com.k2view.external.fabric.audit.filters.AuditBeanPersistence** interface. 
+In case of your own class, it must be created under the **com.k2view.external.fabric.audit.persistencies** folder and should implement the **com.k2view.external.fabric.audit.filters.AuditBeanPersistence** interface. 
 
-Build artifacts by doing the same steps as described [in the Filtering Strategy article](02_filtering_strategy.md). Then, do the following:
+Build the artifacts using the same steps as described [in the Filtering Strategy article](02_filtering_strategy.md). Then, perform the following actions:
 
-1. Update the **config.ini** file with the full path of the class in the  **AUDIT_PERSISTENCE_STRATEGY** parameter. For example:
+1. Update the **config.ini** file with the full path of the class in the **AUDIT_PERSISTENCE_STRATEGY** parameter. For example:
 
    ~~~
    AUDIT_PERSISTENCE_STRATEGY = com.k2view.external.fabric.audit.persistencies.SamplePersist
