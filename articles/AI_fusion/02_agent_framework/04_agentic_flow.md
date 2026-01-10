@@ -1,48 +1,135 @@
-# Agent Framework: The Agentic Flow
+# The Agentic Flow: Core Concepts and Execution Model
 
-The aifusion framework orchestrates AI agents behavior through a structured decision-making process. This article explains how the Orchestrator evaluates user queries and determines the optimal response path.
+An agentic workflow is usually built from several core steps. This article describes a recommended flow within the AI Fusion agent framework. an agentic workflow is built as Broadway flow at the project's implementation.
 
-The framework consists of several built-in workflow orchestrating agents, represented by Broadway actors and flows. In addition, other agents - worker subagents - are involved in the agentic flow process, either built-in or implementation.
+Following are the flow's steps in high level (numbers and signs refers to the below diagram):
 
-| Agent                | Role                                                         |
-| -------------------- | ------------------------------------------------------------ |
-| **Orchestrator**     | Manages the overall agentic flow                             |
-| **Reflector**        | Part of Orchestrator; evaluates user queries                 |
-| **Refiner**          | Refine the user’s request into a concise, complete goal description for the selected sub-agent, using conversation history and context |
-| **Planner**          | Part of Orchestrator; creates and executes task plans        |
-| **Worker Subagents** | Execute dedicated tasks using specialized tools              |
+* [A] **Scoping** - Associate the base business entity and the specific AI Fusion conversation to the each session request/step.
+
+* [B] **Foundational Context** – Establish the deterministic, pre-AI context layer, including the base entity story and conversation history, which serves as the foundation for all subsequent reasoning and context expansion.
+
+* [C] **AI Reasoning and Action**
+
+  * Reflect on Query - determines the appropriate response path.
+
+  * Execute - Responsibility is delegated to the relevant execution sub-agent.
+
+* [D] **Respond** - Crafting and formulating the final answer
 
 
 
-## Orchestration and Decision Making
+## Scoping
 
-### High-Level Flow
+The purpose of this step is to bind the session to a specific base business entity LUI and a specific AI Fusion conversation LUI, based on the leading LU IID and the session conversation ID.
 
-The high-level flow begins with retrieving the business entity and conversation LUIs to establish full context. The core of the response process is handled first by the **Orchestrator** flow.
+By explicitly establishing this association (using the Fabric `GET` action), the system ensures that every request is strictly constrained to the relevant business entity and conversation scope. This prevents cross-entity data leakage, reduces the risk of context drift, and mitigates issues such as prompt hijacking or hallucinations caused by out-of-scope information.
 
-The Orchestrator uses AI to *reflect* on the user question, *refining* it based on conversation history, and *deciding* the best path forward.
+As a result, all subsequent reasoning and actions are constrained to a well-defined and isolated scope.
 
-1. **Retrieve Context** — Fetch the business entity and conversation LUIs to establish full context
-2. **Reflect on Query** — The Orchestrator uses AI to refine the user question based on conversation history
-3. **Determine Path** — The reflection determines one of three primary response paths
-4. **Execute and Respond** — Delegate to the appropriate agent and formulate the final answer
+
+
+> Notes:
+>
+> * Along the flow, other LUs might be needed, usually by dedicated sub-agent worker. To ensure security, the LUI of the another LU shall be attached based on the base entity LUI. see below for more information.
+> * Session ID is set by the client side - the caller to the main conversation flow, and shall be handled carefully so that conversion history will be effective.
+
+
+
+## Foundational Context
+
+This step establishes the initial, deterministic context layer by fetching the relevant business entity and conversation LUIs. It provides the baseline information that the AI will rely on before any dynamic reasoning, tool usage, or context expansion takes place.
+
+> While additional context may be dynamically introduced later in the flow, this step guarantees that the system always starts from a reliable and controlled reference point.
+
+
+
+This step is typically composed of two main actions:
+
+### Retrieve the business entity story (Long Term Memory)
+
+A concise profile of the business entity is retrieved to serve as foundational knowledge for the AI. This may include structured attributes, historical summaries, past events, or other relevant descriptors. The information can be such which can be considered as insights - some prediction, of why current conversation is happening, like why a customer is calling now.
+
+This information is also known in the agentic AI terms as Long-Term Memory (LTM) or as “Persistent Knowledge”.
+
+This retrieval is usually implemented through multiple queries across several LU's tables. 
+
+It is important to perform this step selectively and efficiently, by bringing only the data that is beneficial for reasoning, while avoiding excessive or irrelevant information. Overloading the context can confuse or mislead LLMs and degrade response quality.
+
+### Retrieve conversation history (Short term Memory)
+
+Several prior steps of the current conversation are retrieved to preserve continuity and intent. When the conversation becomes long, older interactions can be summarized to maintain coherence while keeping the context compact.
+
+This information is also known in the agentic AI terms as Short-Term Memory (STM) or as “Working Memory”.
+
+
+
+> NOTES:
+>
+> * A conversation lifetime should be carefully defined.
+>   For example, in a CRM scenario, a new conversation may be started for each incoming customer call. In other cases, organizations may treat an entire day as a single conversational session, preserving context across multiple interactions.
+>
+>   Similar considerations apply to non-chat and non-call-based sessions as well.
+>
+> * The number of prior steps can be set, usually 4-5 steps are enough for the context. When a conversion becomes long, it is used to sum up older steps and to add them to the context.
+
+
+
+## AI Reasoning and Action
+
+The AI Reasoning and Action phase is responsible for the AI-driven decisions and executions within the agentic workflow. During this phase, the framework evaluates the user’s request, determines the most appropriate response strategy, dynamically expands context when needed, and executes the required actions to produce a final answer.
+
+This phase is not a single operation but a controlled reasoning loop that combines reflection, decision-making, and execution.
+
+### Reasoning Flow: Reason → Decide → Act
+
+At a high level, the framework performs the following steps:
+
+* **Reason** – Analyze the user’s request using the available foundational and accumulated context.
+
+* **Decide** – Select the most suitable response path based on the request’s complexity and available information.
+
+* **Act** – Execute the selected path, which may involve calling tools, invoking sub-agents, or running multi-step plans.
+
+As execution progresses, additional information may be retrieved or generated and added to the context, enabling more informed decisions in subsequent steps.
 
 ### Response Paths
 
-The *Reflector* evaluates the user's question and determines the best path forward:
+As part of the reasoning process, the framework determines the best response path for the current request:
+
+| Path                                      | Description                                                  | When to Use                                                  | Performance                   |
+| ----------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ----------------------------- |
+| **Have All Required Information** (1)     | Proceed directly to response formulation                     | Information exists in the business entity story, conversation history, or general knowledge | **Fastest**                   |
+| **Call Specialized Worker Sub-Agent** (2) | Route the request to a domain-specific sub-agent             | The request requires specialized knowledge or tools (e.g., billing, payments) | **Faster and more accurate**  |
+| **Build and Execute a Plan** (3)          | Create and execute a multi-step plan involving multiple actions or agents | The request requires coordination of several steps or tool invocations | Most **flexible**, but slower |
+| **Clarify the Request** (4)               | Ask the user for additional information                      | The request cannot be resolved from the current context      | Fast                          |
+
+### Flow Delegation and Ownership
+
+Once a response path is selected, responsibility for handling the request is delegated to the appropriate execution logic, responsible for:
+
+- Executing the required actions
+- Expanding context as needed (via tools or sub-agents)
+- Producing a complete and coherent result
+
+Delegation ensures clear ownership and avoids overlapping responsibilities between agents.
+
+Regardless of the selected path, all flows eventually converge at the Responder, which aggregates outputs and formulates the final response. At this stage, organizations can enforce formatting, compliance, and legal rules according to business directives.
+
+### Agentic Flow Agents
+
+The behaviors described above are implemented by a set of workflow orchestration agents and worker sub-agents, represented as Broadway actors and flows within the AI Fusion framework.
+
+| Agent                 | Role                                                         |
+| --------------------- | ------------------------------------------------------------ |
+| **Orchestrator**      | Manages the overall agentic flow and coordination            |
+| **Reflector**         | Evaluates the user’s request and selects the appropriate response path |
+| **Refiner**           | When sub-agent path is chosen, Refines the user’s request into a concise, actionable goal for a selected sub-agent |
+| **Planner**           | Builds and executes multi-step task plans                    |
+| **Worker Sub-Agents** | Execute dedicated tasks using specialized tools or domain logic |
+
+Together, these flows implement the reasoning, decision-making, and execution semantics of the AI Reasoning and Action phase, while keeping the workflow modular, extensible, and easy to evolve. When used, implementor shall provide them the right inputs, like prompts and list of tags of tools and worker agents.
 
 
-
-| Path                                     | Description                                                  | When to Use                                                  | Performance                                                |
-| ---------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---------------------------------------------------------- |
-| **Have All Info** (1)                    | moving on to the Responder to formulate the answer           | Information exists in business entity story, conversation history, or is generic public knowledge | **Fastest**                                                |
-| **Call Worker Specialized Subagent** (2) | Route to a specialized subagent for the domain               | Questions relate to specific domains (e.g., credit card issues) | **Faster and more accurate** due to focused goal and tools |
-| **Build a Plan** (3)                     | Call the Planner agent  to build and execute a step-by-step plan | Multiple actions and steps are needed like calling several subagents and tools | Most **flexible** but slower                               |
-| **Clarify** (4)                          | Ask the user to clarify his question                         | User's question is not clear and cannot be understood from context | Fast                                                       |
-
-### Flow Delegation
-
-Once a path is chosen, the flow is **delegated** to the relevant agent, so that the the selected agent becomes responsible for preparing the complete answer. Finally the *Responder* collects responses from any path and crafts the final answer. At the Responder the organizations can set rules for answer formatting according to business and legal directives.
 
 
 
@@ -50,54 +137,11 @@ Once a path is chosen, the flow is **delegated** to the relevant agent, so that 
 
 
 
-## Utilizing Subagents
-
-A worker subagent is a tagged Broadway flow (e.g., with `loans_subagent` tag) to handle a specific domain or request type (banking loans). 
-
-### Subagent Discovery
-
-The Reflector agent:
-
-1. Looks for flows with agent tags
-2. Examines their descriptions
-3. Identifies the specialized agent best suited for the current task
-
-Orchestrator then calls the Refiner agent to prepare the subagent's goal according to user request and context.
-
-##### Notes:
-
-> 1. Use the subagent [Broadway flow's properties](/articles/19_Broadway/33_flow_properties.md) to add tags and description.
-> 2. Agent tags are specified as attribute of the *Orchestrator* agent. Providing it all flows which are tagged as subagents can confuse and overwhelmed the agent to choose the right sub-agent.
-
-
-
-When invoking a subagent, it receives detailed context, including:
-
-- Its **Role and Objectives** (as a system message).
-- **Domain Data** (details on relevant LUs, reference tables, column names, and descriptions) to enable dynamic SQL query construction.
-- A specific **List of Tools** (other Broadway flows) tailored to the domain.
-
-
-
-## The Planner Approach
-
-If a request requires gathering information or executing multiple steps but does not fit a predefined subagent, the `orchestrator_planner` is triggered.
-
-The LLM is tasked with generating a step-by-step execution plan using several resources:
-
-1. **Sample Plans:** JSON files (e.g., `Banking_plans.json`) containing pre-built templates showing the LLM how to combine tools to accomplish similar objectives.
-2. **Tools List:** A full list of available Broadway flows, along with descriptions and remarks added to input parameters. The LLM uses these descriptions to choose the right tool and determine the required inputs. Tools can be also subagents. 
-3. **Corporate Procedures:** Documents indexed in the vector repository that define business rules or step-by-step instructions (e.g., verification criteria for credit limit reduction).
-
-Once the plan steps are prepared, it executes them step-by-step. 
-
-> Note: It is a best practice to rely on subagents for high-performance needs, as the Planner approach is slower and less predictable due to the required plan generation step.
-
 
 
 ## Debug, Trace and Control
 
-During the agent flows, the platform logs and collects information for:
+During the agent flows, the platform logs and collects information about the agents' usage with the agentic flow, for:
 
 - **Comprehensive Auditing** — ensures every agent interaction and processing step can be audited and traced.  
 - **Cost Management** — provides tracking and monitoring of token usage for cost control, in vast granularity information, by model and agents and for input, output and cached tokens.
@@ -107,7 +151,4 @@ The information is gathered into the aifusion LU tables, so that trace can be do
 
 The information is also accessible at the Trace panel in the Chat Playground, which is part of the AI Fusion app, where you can make chats and see a detailed trace of what user asked, what are inputs and outputs of each called agent and tool and how many tokens were consumed in each step.
 
-This Trace panel is in addition to the comprehensive debugging capabilities and visibility at the Broadway flows and Java code within the Studio.
-
-
-
+This Trace panel is available in addition to the comprehensive debugging capabilities and visibility at the Broadway flows and Java code within the Studio.

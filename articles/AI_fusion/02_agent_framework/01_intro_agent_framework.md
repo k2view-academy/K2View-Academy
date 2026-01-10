@@ -4,6 +4,6 @@ K2view’s GenAI Data Fusion framework, referred to as **aifusion**, provides a 
 
 This framework enables the agent to utilize context, plan actions, and orchestrate complex workflows to manage conversations and provide accurate, data-driven answers.
 
-The later articles explain the core components, architecture, agentic flow and recommended development patterns for implementing AI agents.
+The later articles explain the core components, architecture, agentic workflow and recommended development patterns for implementing AI agents.
 
-
+Agentic workflow are built as Broadway flows at the project's implementation, which improves reliability and flexibility. It provides the organization and its implementors the control of the process and the flexibility to use both logical parts, using Broadway and code parts, along with LLM calls, with full debug capabilities.

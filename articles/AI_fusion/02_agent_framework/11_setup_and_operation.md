@@ -19,3 +19,18 @@ In addition to implementation setup activities like extensions installs, there a
   * DB schema is set for the vector DB
 
     If Fabric is used for this purpose, then config.ini shall be updated accordingly
+
+
+
+
+
+## Vector DB integrations
+
+
+
+- Parse and grounding sources - One of the options is to use 
+- DB
+
+https://hub.docker.com/r/pgvector/pgvector
+
+- Embedding interface

@@ -16,7 +16,7 @@ Each session (like a chat) creates a new aifusion LUI with the session ID as the
 
 As the conversation progresses, Fabric stores the user's questions and agent's responses within the dedicated instance. 
 
-This mechanism maintains ongoing conversation context, enabling the AI agent to correctly interpret follow-up questions and references to earlier exchanges.
+This mechanism maintains ongoing conversation context, enabling the AI agent to correctly interpret follow-up questions and references to earlier exchanges. Such capability also known as Short-Term Memory (STM), or as Working Memory, in the agentic AI terms.
 
 ### Data Stored Per Session
 
@@ -53,27 +53,17 @@ Read [here](05_llm_interfaces.md) more information of provisioning LLM interface
 
 ## Vector Data Stores & RAG
 
-The aifusion framework supports vector databases for semantic search, enabling Retrieval-Augmented Generation (RAG). This is essential for organizations with unstructured data such as:
-
-- Knowledge base articles
-- Corporate procedures
-- Policy documents
-
-### How It Works
-
-1. Documents are pre-converted into vector embeddings that capture semantic meaning
-2. User queries are also converted to vectors
-3. The system retrieves items whose meaning is closest to the query, when it identifies that information from vector store DB is relevant
-
-The platform provides actors and embedding interfaces that help you to interact with vector stores. 
-
-For additional information, see [Vector Data Stores](07_vector_db.md).
+The aifusion framework supports vector databases for semantic search, enabling Retrieval-Augmented Generation (RAG). This is essential for organizations with unstructured data such as knowledge base articles, corporate procedures, policy documents
 
 ### Vector Data Store at Fabric Storage
 
-You can use vector stores within Fabric storage, meaning as LUI within LUs. This is maintained SQLite-based vector stores with dedicated tables with a special form.
+You can use vector stores within Fabric storage, meaning as tables within LUIs. This is maintained SQLite-based vector stores with dedicated tables with a special form.
 
 Fabric's built-in vector store is recommended for framework operational tasks like plans, procedures and base KB. For complex documents like tariff plans, device support guides, or marketing materials, consider dedicated vector DB services such as AWS Bedrock Knowledge Base.
+
+The platform provides actors and embedding interfaces that help you to interact with vector stores. 
+
+For additional information, see [Vector Data Stores](07_vector_db_intro.md).
 
 
 
@@ -89,7 +79,7 @@ The Metrics DB collects data for tracking, analysis, and optimization across thr
 | **Financial**   | Token usage and cost tracking                                |
 | **Behavioral**  | Agent triggering sequences, context, compliance, and satisfaction indicators |
 
-### Supported Databases
+**Supported Databases:**
 
 - **SQLite** - For development environments
 - **PostgreSQL** - For production deployments
