@@ -40,7 +40,7 @@ For example, when Audit records need to be logged into an external DB, they can 
 
 Then, create a Broadway flow that will consume the Kafka messages and load them into your required target DB. 
 
-The below Broadway flow consumes the Audit messages from Kafka topic and loads them into the target PostgreSQL DB.
+The following Broadway flow consumes Audit messages from a Kafka topic and loads them into the target PostgreSQL DB.
 
 ![](images/03_kafka_persistance.png)
 
@@ -67,7 +67,7 @@ The Kafka message appears as follows:
 
 ### How Can I Define A New Persistence Strategy?
 
-In order to define a new persistency strategy, create your own persistency strategy class. Alternatively, you can start with the sample class **com.k2view.external.fabric.audit.persistencies.SamplePersist** provided as part of the Fabric installation and modify it as needed. 
+In order to define a new persistence strategy, you can create your own persistence strategy class. Alternatively, you can start with the  **com.k2view.external.fabric.audit.persistencies.SamplePersist** sample class provided as part of the Fabric installation and modify it as needed. 
 
 In case of your own class, it must be created under the **com.k2view.external.fabric.audit.persistencies** folder and should implement the **com.k2view.external.fabric.audit.filters.AuditBeanPersistence** interface. 
 
