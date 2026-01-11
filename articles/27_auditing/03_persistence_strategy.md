@@ -71,7 +71,7 @@ In order to define a new persistence strategy, you can create your own persisten
 
 In case of your own class, it must be created under the **com.k2view.external.fabric.audit.persistencies** folder and should implement the **com.k2view.external.fabric.audit.filters.AuditBeanPersistence** interface. 
 
-Build the artifacts using the same steps as described [in the Filtering Strategy article](02_filtering_strategy.md). Then, perform the following actions:
+Build the artifacts by using the same steps as described [in the 'Auditing Mechanism — Filtering' article](02_filtering_strategy.md). Then, perform the following actions:
 
 1. Update the **config.ini** file with the full path of the class in the **AUDIT_PERSISTENCE_STRATEGY** parameter. For example:
 
@@ -89,7 +89,7 @@ Build the artifacts using the same steps as described [in the Filtering Strategy
 
 ####  Setting New Persistence Strategy — Example
 
-The following example displays the persistency class **com.k2view.external.fabric.audit.persistencies.SamplePersist** which writes the Audit operations into a file.
+The example shown below displays the **com.k2view.external.fabric.audit.persistencies.SamplePersist** persistence class, which writes audit operations into a file.
 
 ~~~java
 package com.k2view.external.fabric.audit.persistencies;
