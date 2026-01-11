@@ -1,4 +1,4 @@
-# Filtering Strategy
+# Auditing Mechanism — Filtering
 
 The list of activities reported by the Auditing mechanism can be controlled. 
 
