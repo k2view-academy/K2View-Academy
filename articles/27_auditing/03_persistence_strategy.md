@@ -14,29 +14,29 @@ In addition to the above persistence strategies offered by Fabric, a new strateg
 
 ### How Can I Set The Persistence Strategy to Kafka?
 
-In order to switch the persistence strategy to Kafka, perform the following actions:
+In order to switch the persistence strategy to Kafka, perform the following actions using the [K2admin's Configuration tab](/articles/30_web_framework/03_web_admin_application.md):
 
-1. Update the **AUDIT_PERSISTENCY_STRATEGY** parameter in the **config.ini** file to: 
+1. Update the **AUDIT_PERSISTENCE_STRATEGY** parameter to: 
 
    ~~~
    AUDIT_PERSISTENCE_STRATEGY = com.k2view.fabric.auditing.persistence.KafkaBeanPersistence
    ~~~
 
-2. Verify that AUDIT is set to ON in the **config.ini** file.
+2. Verify that AUDIT is set to ON.
 
    ~~~
    AUDIT=ON
    ~~~
 
-3. Configure the Kafka producer using the relevant parameters in the **[audit_kafka_producer]** section of the **config.ini** file.
+3. Configure the Kafka producer using the relevant parameters in the **[audit_kafka_producer]** section.
 
 4. Restart the Fabric node.
 
-#### Example — Logging Audit to PostgreSQL via Kafka
+####  Logging Audit Data to PostgreSQL via Kafka — Example
 
 When there is a requirement to make the audit records available to another channel, the persistence strategy should be changed from System DB to Kafka. 
 
-For example, when you need to log the Audit records into some relational DB (e.g., PostgreSQL), you can publish them to Kafka. To do this, update the **AUDIT_PERSISTENCE_STRATEGY** parameter in the **config.ini** to **com.k2view.fabric.auditing.persistence.SystemDbBeanPersistence** and restart the Fabric node as explained above.
+For example, when Audit records need to be logged into an external DB, they can be published to Kafka. To do this, update the **AUDIT_PERSISTENCE_STRATEGY** parameter in Fabric Configuration to **com.k2view.fabric.auditing.persistence.KafkaBeanPersistence** and restart the Fabric node as explained above.
 
 Then, create a Broadway flow that will consume the Kafka messages and load them into your required target DB. 
 
@@ -87,7 +87,7 @@ Build the artifacts using the same steps as described [in the Filtering Strategy
 
 3. Restart the Fabric node.
 
-#### Example - Setting New Persistence Strategy
+####  Setting New Persistence Strategy — Example
 
 The following example displays the persistency class **com.k2view.external.fabric.audit.persistencies.SamplePersist** which writes the Audit operations into a file.
 
