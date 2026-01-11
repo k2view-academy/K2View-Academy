@@ -2,9 +2,9 @@
 
 The list of activities reported by the Auditing mechanism can be controlled. 
 
-Once the AUDIT parameter is set to ON in **config.ini**, all Fabric activities are logged by the Fabric Auditing mechanism.
+Once the AUDIT parameter is set to ON, all Fabric activities are logged by the Fabric Auditing mechanism.
 
-In order to limit auditing to a specific predefined list of activities, the AUDIT_FILTER_STRATEGY parameter in the **config.ini** should be populated with the full path of the class that defines the filter strategy. 
+In order to refine auditing to a specific predefined list of activities, the AUDIT_FILTER_STRATEGY parameter should be populated with the full path of the class that defines the filtering strategy. 
 
 ###  How Can I Define the Auditing Filter?
 
