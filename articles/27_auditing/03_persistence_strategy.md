@@ -73,13 +73,13 @@ In case of your own class, it must be created under the **com.k2view.external.fa
 
 Build the artifacts by using the same steps as described [in the 'Auditing Mechanism — Filtering' article](02_filtering_strategy.md). Then, perform the following actions:
 
-1. Update the **config.ini** file with the full path of the class in the **AUDIT_PERSISTENCE_STRATEGY** parameter. For example:
+1. Update the **AUDIT_PERSISTENCE_STRATEGY** parameter in Fabric Configuration with the full path of the class. For example:
 
    ~~~
    AUDIT_PERSISTENCE_STRATEGY = com.k2view.external.fabric.audit.persistencies.SamplePersist
    ~~~
 
-2. Verify that AUDIT is set to ON in the **config.ini** file.
+2. Verify that AUDIT is set to ON.
 
    ~~~
    AUDIT=ON
