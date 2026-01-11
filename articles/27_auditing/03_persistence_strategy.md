@@ -1,4 +1,4 @@
-# Persistence Strategy
+# Auditing Mechanism — Persistence
 
 The persistence of the data published by the Auditing mechanism can be controlled. Product provides three persistence strategies:
 
