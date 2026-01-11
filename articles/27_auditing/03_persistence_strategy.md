@@ -10,7 +10,7 @@ The persistence of the data reported by the Auditing mechanism can be controlled
 
 To update the persistence strategy, set the `AUDIT_PERSISTENCE_STRATEGY` parameter using the [K2admin's Configuration tab](/articles/30_web_framework/03_web_admin_application.md). As mentioned above, this parameter defaults to **com.k2view.fabric.auditing.persistence.SystemDbBeanPersistence**.
 
-In addition to the product strategies described above, a new strategy can be defined by creating your own class. The required steps are explained further on in this article.
+In addition to the above persistence strategies offered by Fabric, a new strategy can be defined by creating a custom class. The required steps are explained further in this article.
 
 ### How Can I Set The Persistence Strategy to Kafka?
 
