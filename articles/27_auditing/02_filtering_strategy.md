@@ -63,7 +63,7 @@ Follow the following steps in order to build the artifacts:
 
 ###  Reporting on Web Services Only — Example
 
-The following example displays the filter class **com.k2view.external.fabric.audit.filters.SampleFilter** that performs auditing only of Web Service calls.
+The following example displays the **com.k2view.external.fabric.audit.filters.SampleFilter** filter class, which audits only Web Service calls.
 
 ~~~java
    package com.k2view.external.fabric.audit.filters;
