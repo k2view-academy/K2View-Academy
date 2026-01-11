@@ -10,7 +10,7 @@ In order to refine auditing to a specific predefined list of activities, the AUD
 
 Defining the auditing filter starts with the sample provided as part of the Fabric installation, which you can then modify as needed. 
 
-Alternatively, create a new class under the **com.k2view.external.fabric.audit.filters** folder. Note that the  filter class should implement the **com.k2view.external.fabric.audit.filters.AuditingFilter** interface.
+Alternatively, you can create a new class under the **com.k2view.external.fabric.audit.filters** folder. Note that the filter class should implement the **com.k2view.external.fabric.audit.filters.AuditingFilter** interface.
 
 Follow the following steps in order to build the artifacts:
 
@@ -26,15 +26,15 @@ Follow the following steps in order to build the artifacts:
 
 5. Import project **AuditCustomStrategies** via the IntelliJ menu **File > New > Project from Existing Source**.
 
-6. Choose libraries either via the IntelliJ menu **File > Project Structure** or by typing **CTRL+ALT+SHIFT+S**.
+6. Choose libraries using the IntelliJ menu: **File > Project Structure**, or by pressing **CTRL+ALT+SHIFT+S**.
 
-   * In the **Project Structure** screen, click **Libraries > the + sign > Java** and select the top two Jars.
+   * In the **Project Structure** window, click **Libraries > + icon > Java** and select the top two Jars.
 
      <img src="images/02_filter_select_lib.png" style="zoom:80%;" />
 
    * Click **OK**.
 
-7. In the **Project Structure** screen, click **Artifacts > the + sign > JAR > From modules with dependencies...**
+7. In the **Project Structure** window, click **Artifacts > + icon > JAR > From modules with dependencies...**
 
    <img src="images/02_choose_artifacts.png" style="zoom:80%;" />
 
@@ -45,7 +45,7 @@ Follow the following steps in order to build the artifacts:
 
 9. The artifacts are created under the AuditCustomStrategies/out/artifacts folder. 
 
-10. Copy the created artifact JARs to the **$K2_HOME/ExternalJars** directory. 
+10. Copy the created JARs artifact to the **$K2_HOME/ExternalJars** directory. 
 
 11. Update the **config.ini** file with the full path of the filtering class in the **AUDIT_FILTER_STRATEGY** parameter. 
 
@@ -61,7 +61,7 @@ Follow the following steps in order to build the artifacts:
 
 13. Restart the Fabric node.
 
-### Example of Reporting Web Services Only
+###  Reporting on Web Services Only — Example
 
 The following example displays the filter class **com.k2view.external.fabric.audit.filters.SampleFilter** that performs auditing only of Web Service calls.
 
@@ -93,7 +93,7 @@ The following example displays the filter class **com.k2view.external.fabric.aud
    }
 ~~~
 
-The WS calls are populated in the  **k2_auditing** table in system DB as follows:
+The Web Service calls are populated in the **k2_auditing** table in system DB as follows:
 
 <studio>
 
