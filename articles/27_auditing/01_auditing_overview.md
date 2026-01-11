@@ -122,7 +122,7 @@ In development environments, Fabric Web Studio often executes actions on behalf 
 - There is no operational benefit, as this environment is typically used for prototyping or testing rather than for production governance or compliance.
 
 **Recommendation:**  
-Do not enable auditing in development environments where Fabric Web Studio is employed. It provides no added value and may introduce confusion in interpreting activity logs.
+Auditing should not be enabled in development environments that use Fabric Web Studio, since it is unnecessary. When auditing is directed to the logs, it may lead to confusion during log interpretation and cause information overload for users.
 
 
 
