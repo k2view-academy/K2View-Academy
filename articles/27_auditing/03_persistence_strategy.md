@@ -1,10 +1,10 @@
 # Auditing Mechanism — Persistence
 
-The persistence of the data reported by the Auditing mechanism can be controlled. Fabric offers three persistence strategies:
+The persistence of the data reported by the Auditing mechanism can be controlled. Fabric offers three persistence options that are written to:
 
-* **com.k2view.fabric.auditing.persistence.SystemDbBeanPersistence** (default) — the data is written to **k2_auditing** table in the metadata keyspace (k2audit by default) in the System DB. 
-* **com.k2view.fabric.auditing.persistence.KafkaBeanPersistence** — Kafka persistence strategy. Audit data is written to **k2audit** default topic.
-* **com.k2view.fabric.auditing.persistence.AuditLog** — the data is written to the [k2Fabric log files](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md).
+* System DB — **com.k2view.fabric.auditing.persistence.SystemDbBeanPersistence** (default) — audit data is written to **k2_auditing** table in the metadata keyspace (k2audit by default). 
+* Kafka — **com.k2view.fabric.auditing.persistence.KafkaBeanPersistence** — audit data is written to the default **k2audit** topic.
+* Fabric log — **com.k2view.fabric.auditing.persistence.AuditLog** — audit data is written to the [k2Fabric log files](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md).
 
 
 
