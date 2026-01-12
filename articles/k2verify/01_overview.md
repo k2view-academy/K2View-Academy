@@ -3,7 +3,7 @@
 
 k2verify is a data verification library designed to validate data integrity, consistency, and privacy compliance between source and target systems during data movement, migration, or replication processes.
 
-The library provides an end-to-end, user-friendly verification solution that compares data at multiple levels—tables, records, and fields—while being PII-aware and performance-optimized through parallel execution. Verification tasks are defined and executed through a web-based GUI, eliminating the need for custom scripting or manual validation.
+The library provides an end-to-end, user-friendly verification solution that compares data at multiple levels (tables, records, and fields), while being PII-aware and performance-optimized through parallel execution. Verification tasks are defined and executed through a web-based GUI, eliminating the need for custom scripting or manual validation.
 
 k2verify supports:
   * Exact matching for regular (non-PII) fields
