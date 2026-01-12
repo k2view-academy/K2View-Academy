@@ -1,8 +1,6 @@
 # How To Use
 
-## k2verify Configurations
-
-#### Bucket Distribution (Optional)
+## Bucket Distribution (Optional)
 
 **What Are Buckets?**:
 
