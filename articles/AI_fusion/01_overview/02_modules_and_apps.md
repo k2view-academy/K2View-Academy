@@ -1,6 +1,6 @@
 # AI Data Fusion Modules and Apps
 
-K2View's GenAI Data Fusion platform, **aifusion**, is an enterprise-grade framework for building, testing, deploying, and governing AI-powered agents and applications. Designed to work seamlessly with Data Products and operational data at scale, aifusion brings reliability, predictability, and observability to AI systems.
+K2view's GenAI Data Fusion platform, **aifusion**, is an enterprise-grade framework for building, testing, deploying, and governing AI-powered agents and applications. Designed to work seamlessly with Data Products and operational data at scale, aifusion brings reliability, predictability, and observability to AI systems.
 
 The platform streamlines the full lifecycle of enterprise GenAI agents, from design and orchestration of complex multi-agent flows, through rigorous evaluation and testing, to continuous monitoring of live executions. This ensures accuracy, context-awareness, compliance, and cost efficiency in production environments.
 
@@ -25,7 +25,7 @@ A comprehensive testing and assessment system for validating AI agent performanc
 - Multiple assessment methodologies, including LLM-as-judge with configurable thresholds
 - Multi-dimensional scoring (accuracy, relevance, clarity, politeness, and more)
 - End-to-end solution for testing multi-turn AI conversations
-- Complete workflow from test creation through regression testing and results analysis
+- Complete workflow covering test creation, regression testing and results analysis
 - Detailed drill-down views for thorough analysis
 
 This ensures agents and apps meet quality standards across various criteria before interacting with end users or production data.
