@@ -1,8 +1,6 @@
 # How To Use
 
-## k2verify Configurations
-
-### Web Page Integration
+## Web Page Integration
 
 ##### Integrate k2verify Web Page
 If your Cloud Studio environment already uses an apps.json file, follow the steps below to merge the k2verify application entry.
