@@ -60,9 +60,9 @@ These extensions add all utilities required to implement GenAI agents and run re
 
 | Component | Description |
 |-----------|-------------|
-| **AI Fusion LU** | Main logical unit containing AI-related flows, actors, and utilities. Data product tables store chat memory, traces, and token usage, where each LUI represents a single AI session (e.g., a chat) |
-| **GenAI Testing LU** | Contains evaluation logic, test pipelines, and ranking flows |
-| **Pipeline LU** | Provides a framework for organizing and executing Broadway flows in a structured hierarchy: pipelines → suites → cases. Includes utility actors for dynamic loading, file scanning, labeling, and linking |
+| **AI Fusion LU** | Main logical unit containing AI-related flows, actors, and utilities. Data product tables store chat memory, traces, and token usage, where each LUI represents a single AI session (e.g., a chat). |
+| **GenAI Testing LU** | Contains evaluation logic, test pipelines, and ranking flows. |
+| **Pipeline LU** | Provides a framework for organizing and executing Broadway flows in a structured hierarchy: pipelines → suites → cases. Includes utility actors for dynamic loading, file scanning, labeling, and linking. |
 
 #### Additional Components
 
