@@ -50,7 +50,7 @@ The platform is delivered as a solution built on K2view's Fabric framework. To g
 1. Install the **aifusion** extension from [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md#install-an-extension)
 2. Install the relevant LLM connector extension from K2exchange according to your organization's guidelines and licenses
 3. For Evaluation regression test execution, install and deploy the **Pipeline** module from K2exchange
-4. *Recommended:* Install the **aifusion-demo** extension, which includes three complete end-to-end demo apps covering various business types and use cases as implementation references
+4. *Recommended:* Install the **aifusion-demo** extension. It includes three complete end-to-end demo apps that serve as implementation references for various business types and use cases.
 
 ### Installed Components
 
