@@ -66,7 +66,7 @@ These extensions add all utilities required to implement GenAI agents and run re
 
 #### Additional Components
 
-- Web services and shared objects as cross-project utilities
+- Web Services and shared objects as cross-project utilities
 - Interface metadata, code and library JARs (located in the `lib` folder)
 
 ### Metrics Database (Assurance)
