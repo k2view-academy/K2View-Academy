@@ -1,8 +1,6 @@
 # How To Use
 
-## k2verify Configurations
-
-#### Configure k2verify Globals
+## Configure k2verify Globals
 Configure the following Globals to ensure successful execution of the library.
 
 **REQUIRED GLOBALS:**
