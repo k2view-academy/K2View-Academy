@@ -19,12 +19,12 @@ Please check the release notes for component version support, such as Kafka, Neo
                 <p>Dec 24, 2025</p>
             </td>
             <td>
-				<p><a href="/Release_Notes/V8.3/Fabric_Release_Notes_V8.3.1_HF1.pdf">HF1</a></p>
-                <p>Jan 7, 2026</p>
+				<p><a href="/Release_Notes/V8.3/Fabric_Release_Notes_V8.3.1_HF2.pdf">HF2</a></p>
+                <p>Jan 13, 2026</p>
 			</td>
             <td>
-                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.3.1_235</p>
-                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.3.1_235</p>
+                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.3.1_239</p>
+                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.3.1_239</p>
             </td>
             <td>17.5</td>
             <td>4.1.8</td>
