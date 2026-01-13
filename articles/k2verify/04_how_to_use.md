@@ -1,4 +1,4 @@
-<strong>Fabric Verif How To Use<strong>
+<strong>How To Use Fabric Verify<strong>
 
 <ul>
 <li><a href="/articles/k2verify/04_interfaces_configuration.md">Interfaces Configuration</a></li>
