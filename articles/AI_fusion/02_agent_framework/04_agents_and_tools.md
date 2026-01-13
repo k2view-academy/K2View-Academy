@@ -27,25 +27,33 @@ The GenAI Data Fusion framework includes two categories of agents, both represen
 | ----------------- | ------------------------------------------------------------ |
 | **Data Retrieve** | Handles queries against Fabric Data Products using dynamic SQL generation |
 
-### Project Implementation Agents (Worker Sub-Agents)
 
-Implementation agents - taking the role of the worker sub-agents at the agentic flow - are aimed to accomplish domain-specific goals. These are Broadway flows tagged to handle specific domains or request types.
+
+### Project Implementation Agents - Worker Sub-Agents
+
+Implementation agents - taking the role of the worker sub-agents at the agentic workflow - are aimed to accomplish domain-specific goals. These are Broadway flows tagged to handle specific domains or request types.
 
 Example: A `loans_subagent` tag identifies an agent specialized for banking loan inquiries.
 
-A typical subagent includes a combination of logic steps along with LLMAgent usage. In this way a better controlled and reliable flow is achieved.
 
-The LLMAgent decides on tools activation and response formulation according to:
 
-1. **Predefined Domain Data** - Retrieved using a DBCommand actor
-2. **Schema Information** - Relevant tables for SQL crafting
-3. **System Prompt** - Agent goals and behavioral guidelines
-4. **User Prompt** - The refined user query
-5. **Tool List** - Available tools the AI can invoke
+Read [here](04a_agentic_flow_agents.md) more practice information about the agentic workflow built-in agents as well as worker sub agents.
 
 
 
-> Use Broadway [flow properties](/articles/19_Broadway/33_flow_properties.md) to add tags and descriptions to subagent flows. The framework uses these to select the appropriate agent for each request.
+## Data Retrieve & Domain List
+
+Domain list is useful when an LU contains many tables, which not all might be relevant for the current This attribute is used by the Reflector and is added to its context. 
+
+A good practice for provisioning and maintaining it is to create an MTable at the leading business entity LU, with the following recommended columns:
+
+* Domain - name of domain 
+* Description
+* Rules
+* Tables
+* Goal_Description
+
+
 
 
 
@@ -87,7 +95,7 @@ This information is passed to the LLM to aid in tool selection during plan execu
 
 ## Utility Actors
 
-AIFusion uses several utility actors for working with AI, like LLMConst, LLAppend and LLInvoke.
+AI Fusion uses several utility actors for working with AI, like LLMConst, LLAppend and LLInvoke.
 
 For more information read [here](06_llm_calls_utility_actors.md).
 

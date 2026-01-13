@@ -12,24 +12,13 @@ When the conversation entry point flow calls the Orchestrator actor, it passes s
 | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------- |
 | `userQuery`                | The user's question or request                               | "What is my credit card balance?"                 |
 | `synopsis`                 | business entity story/summary.                               | "David Smith, Retail customer, 2 credit cards..." |
-| `domain_list`              | List of domains and their description                        | `Banking_DomainData`                              |
 | `searchPlanFlowName`       | Flow to retrieve sample plans                                | `Banking_searchPlan`                              |
 | `searchProceduresFlowName` | Flow to retrieve corporate procedures                        | `Banking_searchProcedures`                        |
 | `toolMTable`               | The MTable name containing tool tag definitions              | `Banking_tool_tags`                               |
 | `subagents_tag`            | Tag identifying available subagents                          | `Banking_subagent`                                |
 | `responderPrompt`          | app specific guidelines to ground the response to the user. It usually contains rules and instructions of how to formalize the answer | `TBD`                                             |
 
-#### Domain List
 
-Domain list is useful when an LU contains many tables, which not all might be relevant for the current This attribute is used by the Reflector and is added to its context. 
-
-A good practice for provisioning and maintaining it is to create an MTable at the leading business entity LU, with the following recommended columns:
-
-* Domain - name of domain 
-* Description
-* Rules
-* Tables
-* Goal_Description
 
 #### Search Plan Flow Name 
 
@@ -47,36 +36,7 @@ A good practice for provisioning and maintaining it is to create an MTable at th
 
 
 
-## Utilizing Subagents
-
-A worker subagent is a tagged Broadway flow (e.g., with `loans_subagent` tag) to handle a specific domain or request type (banking loans). 
-
-### Subagent Discovery
-
-The Reflector agent:
-
-1. Looks for flows with agent tags
-2. Examines their descriptions
-3. Identifies the specialized agent best suited for the current task
-
-Orchestrator then calls the Refiner agent to prepare the subagent's goal according to user request and context.
-
-##### Notes:
-
-> 1. Use the subagent [Broadway flow's properties](/articles/19_Broadway/33_flow_properties.md) to add tags and description.
-> 2. Agent tags are specified as attribute of the *Orchestrator* agent. Providing it all flows which are tagged as subagents can confuse and overwhelmed the agent to choose the right sub-agent.
-
-
-
-When invoking a subagent, it receives detailed context, including:
-
-- Its **Role and Objectives** (as a system message).
-- **Domain Data** (details on relevant LUs, reference tables, column names, and descriptions) to enable dynamic SQL query construction.
-- A specific **List of Tools** (other Broadway flows) tailored to the domain.
-
-
-
-## The Planner Approach
+## The Planner
 
 If a request requires gathering information or executing multiple steps but does not fit a predefined subagent, the `orchestrator_planner` is triggered.
 
@@ -89,5 +49,54 @@ The LLM is tasked with generating a step-by-step execution plan using several re
 Once the plan steps are prepared, it executes them step-by-step. 
 
 > Note: It is a best practice to rely on subagents for high-performance needs, as the Planner approach is slower and less predictable due to the required plan generation step.
+
+
+
+## Worker Subagents
+
+A worker subagent is a tagged Broadway flow (e.g., with `loans_subagent` tag) to handle a specific domain or request type (e.g., banking loans). 
+
+### Subagent Discovery
+
+The Reflector agent:
+
+1. Looks for flows with agent tags
+2. Examines their descriptions
+3. Identifies the specialized agent best suited for the current task
+
+When an appropriate subagent is found, the Orchestrator then calls the Refiner agent to prepare the subagent's goal according to user request and context.
+
+##### Notes:
+
+> 1. Use the subagent [Broadway flow's properties](/articles/19_Broadway/33_flow_properties.md) to add tags and description.
+> 2. Agent tags are specified as attribute of the *Orchestrator* agent. Providing it all flows which are tagged as subagents can confuse and overwhelmed the agent to choose the right sub-agent.
+
+
+
+### Subagent 
+
+#### Input
+
+When invoking a subagent, it receives detailed context, including:
+
+- Its **Role and Objectives** (as a system message).
+- **Domain Data** (details on relevant LUs, reference tables, column names, and descriptions) to enable dynamic SQL query construction.
+- A specific **List of Tools** (other Broadway flows) tailored to the domain.
+
+#### Logic 
+
+A typical subagent includes a combination of logic steps along with LLMAgent actor usage. In this way a better controlled and reliable flow is achieved.
+
+The LLMAgent decides on tools activation and response formulation according to:
+
+1. **Predefined Domain Data** - Retrieved using a DBCommand actor
+2. **Schema Information** - Relevant tables for SQL crafting
+3. **System Prompt** - Agent goals and behavioral guidelines
+4. **User Prompt** - The refined user query
+5. **Tool List** - Available tools the AI can invoke
+
+> Use Broadway [flow properties](/articles/19_Broadway/33_flow_properties.md) to add tags and descriptions to subagent flows. The framework uses these to select the appropriate agent for each request.
+
+
 
 
