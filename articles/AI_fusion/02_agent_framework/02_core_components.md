@@ -40,10 +40,10 @@ The aifusion LU provides the actors and flows necessary to orchestrate agent pro
 
 LLMs are invoked at various points in the agent workflow to handle different tasks:
 
-- **Reflecting** on user queries to determine the appropriate response path
-- **Generating SQL** queries based on natural language requests
-- **Planning** **& executing** multi-step execution strategies
-- **Formulating** natural-language answers for users
+- Reflecting on user queries to determine the appropriate response path
+- Generating SQL queries based on natural language requests
+- Planning & executing multi-step execution strategies
+- Formulating natural-language answers for users
 
 LLM interfaces are installed via the K2Exchange, offering various LLM provides, like OpenAI, Anthropic, AWS Bedrock, Google/Gemini.
 
@@ -59,7 +59,12 @@ The aifusion framework supports vector databases for semantic search, enabling R
 
 You can use vector stores within Fabric storage, meaning as tables within LUIs. This is maintained SQLite-based vector stores with dedicated tables with a special form.
 
-Fabric's built-in vector store is recommended for framework operational tasks like plans, procedures and base KB. For complex documents like tariff plans, device support guides, or marketing materials, consider dedicated vector DB services such as AWS Bedrock Knowledge Base.
+Fabric's built-in vector store is mainly recommended for 
+
+* Unstructured data which is associated to the business entity LUI like personal contract and agreements.
+* Framework operational tasks like plans, procedures and base KB. 
+
+For complex documents like tariff plans, device support guides, or marketing materials, consider dedicated vector DB services such as AWS Bedrock Knowledge Base.
 
 The platform provides actors and embedding interfaces that help you to interact with vector stores. 
 
@@ -88,3 +93,18 @@ The Metrics DB collects data for tracking, analysis, and optimization across thr
 
 The collected data powers customizable dashboards for tracking and improving the solution. This database also supports the Evaluation platform for testing and validation.
 
+
+
+## aifusion Web Application
+
+The aifusion web app provides the tools that accompany the whole agent framework and builder lifecycle:
+
+* **Chat Playground**, a chat user interface, which enables developer a quick, out of the box way, to interact with their agents. it also includes a Trace Panel that enable viewing a detailed trace of what are inputs and outputs of each called agent and tool and how many tokens were consumed in each step.
+
+  >  This Trace panel is available in addition to the comprehensive debugging capabilities and visibility at the Broadway flows and Java code within the Studio.
+
+* **Evaluation workspace**, where testers can design and easily build, with a native chat interface, test cases for your agents, saving them into test suites, with all evaluation dimensions. Having it fully integrated with the Fabric, as data product platform leverage the capability to build reliable agents for C360 enterprises needs.
+
+  >  An accomplishing tool, for running regressions on these test cases, is the **Pipeline**.
+
+* **Observation**, a production monitoring and analytics platform providing visibility into agent behavior, performance metrics, and operational health, via flexible dashboards, as well as with the ability to drill down, by picking a specific conversation and see its details.
