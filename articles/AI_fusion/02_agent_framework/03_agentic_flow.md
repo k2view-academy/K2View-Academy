@@ -139,10 +139,6 @@ Here is a typical agentic flow illustration (numbers and signs refers to those m
 
 
 
-
-
-
-
 ## Debug, Trace and Control
 
 During the agent flows, the platform logs and collects information about the agents' usage with the agentic flow, for:
