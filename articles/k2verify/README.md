@@ -11,5 +11,5 @@
 	<li><a href="/articles/k2verify/08_web_page_integration.md">Fabric Verify Web Page Integration</a></li>
 	<li><a href="/articles/k2verify/09_execution.md">Fabric Verify Execution</a></li>
 	<li><a href="/articles/k2verify/10_monitoring.md">Fabric Verify Monitoring</a></li>
-	<li><a href="/articles/k2verify/11_execution_results.md">Fabric Verify Execution Results</a></li>
+	<li><a href="/articles/k2verify/11_execution_results.md">Fabric Verify Results</a></li>
 </ul>
