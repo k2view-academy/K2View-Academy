@@ -1,6 +1,6 @@
 # AI Data Fusion Modules and Apps
 
-K2View's GenAI Data Fusion platform, **aifusion**, is an enterprise-grade framework for building, testing, deploying, and governing AI-powered agents and applications. Designed to work seamlessly with Data Products and operational data at scale, aifusion brings reliability, predictability, and observability to AI systems.
+K2view's GenAI Data Fusion platform, **aifusion**, is an enterprise-grade framework for building, testing, deploying, and governing AI-powered agents and applications. Designed to work seamlessly with Data Products and operational data at scale, aifusion brings reliability, predictability, and observability to AI systems.
 
 The platform streamlines the full lifecycle of enterprise GenAI agents, from design and orchestration of complex multi-agent flows, through rigorous evaluation and testing, to continuous monitoring of live executions. This ensures accuracy, context-awareness, compliance, and cost efficiency in production environments.
 
@@ -25,7 +25,7 @@ A comprehensive testing and assessment system for validating AI agent performanc
 - Multiple assessment methodologies, including LLM-as-judge with configurable thresholds
 - Multi-dimensional scoring (accuracy, relevance, clarity, politeness, and more)
 - End-to-end solution for testing multi-turn AI conversations
-- Complete workflow from test creation through regression testing and results analysis
+- Complete workflow covering test creation, regression testing and results analysis
 - Detailed drill-down views for thorough analysis
 
 This ensures agents and apps meet quality standards across various criteria before interacting with end users or production data.
@@ -47,10 +47,10 @@ This enables teams to identify issues, optimize costs, and continuously improve 
 
 The platform is delivered as a solution built on K2view's Fabric framework. To get started in Studio:
 
-1. Install the **aifusion** extension from [K2Exchange](/articles/04_fabric_studio/28_web_k2exchange.md#install-an-extension)
-2. Install the relevant LLM connector extension from K2Exchange according to your organization's guidelines and licenses
-3. For Evaluation regression test execution, install and deploy the **Pipeline** module from K2Exchange
-4. *Recommended:* Install the **aifusion-demo** extension, which includes three complete end-to-end demo apps covering various business types and use cases as implementation references
+1. Install the **aifusion** extension from [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md#install-an-extension)
+2. Install the relevant LLM connector extension from K2exchange according to your organization's guidelines and licenses
+3. For Evaluation regression test execution, install and deploy the **Pipeline** module from K2exchange
+4. *Recommended:* Install the **aifusion-demo** extension. It includes three complete end-to-end demo apps that serve as implementation references for various business types and use cases.
 
 ### Installed Components
 
@@ -60,13 +60,13 @@ These extensions add all utilities required to implement GenAI agents and run re
 
 | Component | Description |
 |-----------|-------------|
-| **AI Fusion LU** | Main logical unit containing AI-related flows, actors, and utilities. Data product tables store chat memory, traces, and token usage, where each LUI represents a single AI session (e.g., a chat) |
-| **GenAI Testing LU** | Contains evaluation logic, test pipelines, and ranking flows |
-| **Pipeline LU** | Provides a framework for organizing and executing Broadway flows in a structured hierarchy: pipelines → suites → cases. Includes utility actors for dynamic loading, file scanning, labeling, and linking |
+| **AI Fusion LU** | Main logical unit containing AI-related flows, actors, and utilities. Data product tables store chat memory, traces, and token usage, where each LUI represents a single AI session (e.g., a chat). |
+| **GenAI Testing LU** | Contains evaluation logic, test pipelines, and ranking flows. |
+| **Pipeline LU** | Provides a framework for organizing and executing Broadway flows in a structured hierarchy: pipelines → suites → cases. Includes utility actors for dynamic loading, file scanning, labeling, and linking. |
 
 #### Additional Components
 
-- Web services and shared objects as cross-project utilities
+- Web Services and shared objects as cross-project utilities
 - Interface metadata, code and library JARs (located in the `lib` folder)
 
 ### Metrics Database (Assurance)
