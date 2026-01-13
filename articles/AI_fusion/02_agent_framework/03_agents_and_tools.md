@@ -2,17 +2,7 @@
 
 
 
-## Understanding AI Agents
-
 An AI agent is a module that receives data, context, and resources, then uses an AI model for reasoning, planning, and decision-making to achieve specific goals.
-
-### Agent Resources
-
-Agents can leverage:
-
-- **Tools** - Broadway flows that perform specific actions
-- **Context** - Business entity data, conversation history, and domain information
-- **Procedures** - Corporate guidelines indexed in vector repositories
 
 
 
@@ -24,22 +14,22 @@ The GenAI Data Fusion framework includes two categories of agents, both represen
 
 #### Workflow Orchestrating Agents
 
-| Agent            | Description                                                  |
+| Agent            | Role                                                         |
 | ---------------- | ------------------------------------------------------------ |
-| **Orchestrator** | Manages the overall agentic flow and coordinates all processing |
-| **Reflector**    | Part of the Orchestrator; evaluates and refines user queries based on context |
-| **Planner**      | Part of the Orchestrator; creates and executes step-by-step task plans |
-| **Refiner**      |                                                              |
+| **Orchestrator** | Manages the overall agentic flow and coordination            |
+| **Reflector**    | Evaluates the user’s request and selects the appropriate response path |
+| **Refiner**      | When sub-agent path is chosen, Refines the user’s request into a concise, actionable goal for a selected sub-agent |
+| **Planner**      | Builds and executes multi-step task plans                    |
 
 #### Data Agents
 
-| Agent             | Description                                                  |
+| Agent             | Role                                                         |
 | ----------------- | ------------------------------------------------------------ |
 | **Data Retrieve** | Handles queries against Fabric Data Products using dynamic SQL generation |
 
-### Project Implementation Agents
+### Project Implementation Agents (Worker Sub-Agents)
 
-Implementation agents extend the built-in agents to accomplish domain-specific goals. These are Broadway flows tagged to handle specific domains or request types.
+Implementation agents - taking the role of the worker sub-agents at the agentic flow - are aimed to accomplish domain-specific goals. These are Broadway flows tagged to handle specific domains or request types.
 
 Example: A `loans_subagent` tag identifies an agent specialized for banking loan inquiries.
 
@@ -99,5 +89,5 @@ This information is passed to the LLM to aid in tool selection during plan execu
 
 AIFusion uses several utility actors for working with AI, like LLMConst, LLAppend and LLInvoke.
 
-For more information read [here]().
+For more information read [here](06_llm_calls_utility_actors.md).
 

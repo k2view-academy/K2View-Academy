@@ -61,8 +61,6 @@ Several prior steps of the current conversation are retrieved to preserve contin
 
 This information is also known in the agentic AI terms as Short-Term Memory (STM) or as “Working Memory”.
 
-
-
 > NOTES:
 >
 > * A conversation lifetime should be carefully defined.
@@ -127,13 +125,19 @@ The behaviors described above are implemented by a set of workflow orchestration
 | **Planner**           | Builds and executes multi-step task plans                    |
 | **Worker Sub-Agents** | Execute dedicated tasks using specialized tools or domain logic |
 
-Together, these flows implement the reasoning, decision-making, and execution semantics of the AI Reasoning and Action phase, while keeping the workflow modular, extensible, and easy to evolve. When used, implementor shall provide them the right inputs, like prompts and list of tags of tools and worker agents.
+Together, these flows implement the reasoning, decision-making, and execution semantics of the AI Reasoning and Action phase, while keeping the workflow modular, extensible, and easy to evolve. When used, implementor shall provide them the right inputs, like prompts and list of tags of tools and worker agents. Read [here]() more information. 
 
 
+
+Here is a typical agentic flow illustration (numbers and signs refers to those mentioned above)
 
 
 
 ![aifusion agentic flow](images/AIFusion-agnet-flow.jpg)
+
+
+
+
 
 
 
@@ -149,6 +153,6 @@ During the agent flows, the platform logs and collects information about the age
 
 The information is gathered into the aifusion LU tables, so that trace can be done a specific conversation session, as well into the Assurance metrics DB, for overall observation and insights.
 
-The information is also accessible at the Trace panel in the Chat Playground, which is part of the AI Fusion app, where you can make chats and see a detailed trace of what user asked, what are inputs and outputs of each called agent and tool and how many tokens were consumed in each step.
+The information is also accessible at the **Trace panel** in the **Chat Playground**, which is part of the AI Fusion app, where you can make chats and see a detailed trace of what user asked, what are inputs and outputs of each called agent and tool and how many tokens were consumed in each step.
 
 This Trace panel is available in addition to the comprehensive debugging capabilities and visibility at the Broadway flows and Java code within the Studio.

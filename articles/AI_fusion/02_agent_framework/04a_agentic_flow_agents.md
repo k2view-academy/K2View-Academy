@@ -1,12 +1,49 @@
-# Agentic Flow Agents
+# Agentic Flow Agents in Practice
 
-This article describes the agents that implement the Agentic Flow execution model within the AI Fusion framework.
+This article provides a practical, implementation-focused guide to the agents that participate in the Agentic Flow within the AI Fusion framework.
+
+While [The Agentic Flow](04_agentic_flow.md) article explains the conceptual execution model - how decisions are made, how paths are selected, and how responsibility is delegated, this article focuses on guiding on how to set the input parameters and attributes of the built-in agents and how to create, configure, and reference sub-agents.
+
+## The Orchestrator
+
+When the conversation entry point flow calls the Orchestrator actor, it passes several inputs. These inputs and attributes are then used by the Orchestrator flow itself and by its complementors - Reflector, Refiner and the Planner. All these flows can be considered as building blocks which you do not need to touch. 
+
+| Input                      | Description                                                  | Example                                           |
+| -------------------------- | ------------------------------------------------------------ | ------------------------------------------------- |
+| `userQuery`                | The user's question or request                               | "What is my credit card balance?"                 |
+| `synopsis`                 | business entity story/summary.                               | "David Smith, Retail customer, 2 credit cards..." |
+| `domain_list`              | List of domains and their description                        | `Banking_DomainData`                              |
+| `searchPlanFlowName`       | Flow to retrieve sample plans                                | `Banking_searchPlan`                              |
+| `searchProceduresFlowName` | Flow to retrieve corporate procedures                        | `Banking_searchProcedures`                        |
+| `toolMTable`               | The MTable name containing tool tag definitions              | `Banking_tool_tags`                               |
+| `subagents_tag`            | Tag identifying available subagents                          | `Banking_subagent`                                |
+| `responderPrompt`          | app specific guidelines to ground the response to the user. It usually contains rules and instructions of how to formalize the answer | `TBD`                                             |
+
+#### Domain List
+
+Domain list is useful when an LU contains many tables, which not all might be relevant for the current This attribute is used by the Reflector and is added to its context. 
+
+A good practice for provisioning and maintaining it is to create an MTable at the leading business entity LU, with the following recommended columns:
+
+* Domain - name of domain 
+* Description
+* Rules
+* Tables
+* Goal_Description
+
+#### Search Plan Flow Name 
 
 
 
+#### Search Procedures Flow Name
 
 
 
+#### Tool MTable
+
+
+
+#### Subagents Tag
 
 
 
