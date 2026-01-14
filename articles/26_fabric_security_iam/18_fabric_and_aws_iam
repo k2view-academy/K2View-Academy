@@ -1,0 +1,5 @@
+
+## How Fabric Leverages AWS IAM in a Kubernetes Environment
+
+This article explains how Fabric leverages AWS IAM to authenticate and authorize access to AWS services such as AWS S3 in a Kubernetes environment.
+
