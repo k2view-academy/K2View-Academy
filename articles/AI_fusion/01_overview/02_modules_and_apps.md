@@ -77,7 +77,7 @@ The metrics database (assurance) collects agents' functionality, token usage, an
 
 ## Next Steps
 
-- [Agent Builder and Framework - Introduction](/articles/AI_fusion/02_agent_framework/01_intro_agent_framework.md)
+- [Agent Builder and Framework — Introduction](/articles/AI_fusion/02_agent_framework/01_intro_agent_framework.md)
 - [Agent Framework Core Components](/articles/AI_fusion/02_agent_framework/02_core_components.md)
 - [Building Agentic Workflow](/articles/AI_fusion/05_examples/01_agent_workflow_example.md) 
 
