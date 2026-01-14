@@ -77,7 +77,7 @@ To create a new Amazon S3 Storage interface, do the following:
 <td><strong>Access key ID</strong></td>
 <td>The AWS access key ID for authentication. This is a 20-character alphanumeric identifier that works with the secret access key to authenticate API requests to AWS services.
 
-If you are using AWS STS/IRSA-based authentication, leave this field blank.
+<br>If you are using AWS STS/IRSA-based authentication, leave this field blank.
 
 </td>
 </tr>
@@ -85,7 +85,7 @@ If you are using AWS STS/IRSA-based authentication, leave this field blank.
 <td><strong>Secret access key</strong></td>
 <td>The AWS secret access key paired with the access key ID. This is a 40-character base64-encoded string that must be kept secure and should not be shared or exposed in code.
 
-If you are using AWS STS/IRSA-based authentication, leave this field blank.
+<br>If you are using AWS STS/IRSA-based authentication, leave this field blank.
 </td>
 </tr>
 <tr>
