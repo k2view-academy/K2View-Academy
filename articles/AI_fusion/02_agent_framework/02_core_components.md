@@ -47,22 +47,22 @@ LLMs are invoked at various points in the agent workflow to handle different tas
 
 LLM interfaces are installed via K2exchange, offering various LLM provides, like OpenAI, Anthropic, AWS Bedrock, Google/Gemini.
 
-Read [here](05_llm_interfaces.md) more information of provisioning LLM interfaces.
+For more information on provisioning LLM interfaces, read [here](05_llm_interfaces.md).
 
 
 
-## Vector Data Stores & RAG
+## Vector Data Stores and RAG
 
 The aifusion framework supports vector databases for semantic search, enabling Retrieval-Augmented Generation (RAG). This is essential for organizations with unstructured data such as knowledge base articles, corporate procedures, policy documents
 
-### Vector Data Store at Fabric Storage
+### Vector Data Store in Fabric Storage
 
 You can use vector stores within Fabric storage, meaning as tables within LUIs. This is maintained SQLite-based vector stores with dedicated tables with a special form.
 
-Fabric's built-in vector store is mainly recommended for 
+Fabric's built-in vector store is mainly recommended for: 
 
-* Unstructured data which is associated to the business entity LUI like personal contract and agreements.
-* Framework operational tasks like plans, procedures and base KB. 
+* Unstructured data associated with the business entity LUI, such as personal contracts and agreements.
+* Framework operational tasks, such as plans, procedures and base KB. 
 
 For complex documents like tariff plans, device support guides, or marketing materials, consider dedicated vector DB services such as AWS Bedrock Knowledge Base.
 
