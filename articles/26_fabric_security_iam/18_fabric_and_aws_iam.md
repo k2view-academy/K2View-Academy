@@ -31,9 +31,7 @@ The ARN is not configured in the Fabric UI, but via Helm values, and credentials
 
 ## Summary
 
-The ARN is not entered in the UI.
-
-It is injected into the Fabric pod via Helm, ServiceAccounts, and IRSA.
+The ARN is not entered in the UI. It is injected into the Fabric pod via Helm, ServiceAccounts, and IRSA.
 
 To use AWS IAM with Fabric:
 
@@ -49,7 +47,7 @@ secrets:
 4. Deploy Fabric
 5. Leave AWS credentials blank in the Fabric UI
 
-Fabric handles everything else automatically.
+Fabric handles everything else automatically. Please consult https://github.com/k2view/blueprints/blob/main/helm/k2view-agent/values.yaml for details. 
 
 ## Mechanism: How AWS-based IAM Access Works
 
@@ -109,7 +107,7 @@ The IAM Role ARN is configured at deployment time via Helm — not in the Fabric
 
 **Primary Setting (Fabric Spaces)**
 
-To set the AWS IAM role ARN for Fabric spaces, which are used to access cloud resources, you use this secret.
+To set the AWS IAM role ARN for Fabric spaces, which are used to access cloud resources, you use this secret. Please consult https://github.com/k2view/blueprints/blob/main/helm/k2view-agent/values.yaml. 
 
 ```
 secrets:
