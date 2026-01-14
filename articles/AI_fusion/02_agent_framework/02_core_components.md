@@ -32,7 +32,7 @@ This data provides the conversation context but also supports debugging, optimiz
 
 ### Core Flows and Actors
 
-The aifusion LU provides the actors and flows necessary to orchestrate agent processing. Most components are located under the `aifusion/Broadway/ai`
+The aifusion LU provides the actors and flows needed to orchestrate agent processing. Most components are located under the `aifusion/Broadway/ai` path.
 
 
 
@@ -41,11 +41,11 @@ The aifusion LU provides the actors and flows necessary to orchestrate agent pro
 LLMs are invoked at various points in the agent workflow to handle different tasks:
 
 - Reflecting on user queries to determine the appropriate response path
-- Generating SQL queries based on natural language requests
-- Planning & executing multi-step execution strategies
+- Generating SQL queries based on natural-language requests
+- Planning and executing multi-step execution strategies
 - Formulating natural-language answers for users
 
-LLM interfaces are installed via the K2Exchange, offering various LLM provides, like OpenAI, Anthropic, AWS Bedrock, Google/Gemini.
+LLM interfaces are installed via K2exchange, offering various LLM provides, like OpenAI, Anthropic, AWS Bedrock, Google/Gemini.
 
 Read [here](05_llm_interfaces.md) more information of provisioning LLM interfaces.
 
