@@ -117,14 +117,6 @@ Regardless of the selected path, all flows eventually converge at the Responder,
 
 The behaviors described above are implemented by a set of workflow orchestration agents and worker sub-agents, represented as Broadway actors and flows within the AI Fusion framework.
 
-| Agent                 | Role                                                         |
-| --------------------- | ------------------------------------------------------------ |
-| **Orchestrator**      | Manages the overall agentic flow and coordination            |
-| **Reflector**         | Evaluates the user’s request and selects the appropriate response path |
-| **Refiner**           | When sub-agent path is chosen, Refines the user’s request into a concise, actionable goal for a selected sub-agent |
-| **Planner**           | Builds and executes multi-step task plans                    |
-| **Worker Sub-Agents** | Execute dedicated tasks using specialized tools or domain logic |
-
 Together, these flows implement the reasoning, decision-making, and execution semantics of the AI Reasoning and Action phase, while keeping the workflow modular, extensible, and easy to evolve. When used, implementor shall provide them the right inputs, like prompts and list of tags of tools and worker agents. Read [here]() more information. 
 
 
