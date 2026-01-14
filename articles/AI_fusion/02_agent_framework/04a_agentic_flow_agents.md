@@ -82,5 +82,3 @@ The LLMAgent decides on tools activation and response formulation according to:
 > Use Broadway [flow properties](/articles/19_Broadway/33_flow_properties.md) to add tags and descriptions to subagent flows. The framework uses these to select the appropriate agent for each request.
 
 
-
-
