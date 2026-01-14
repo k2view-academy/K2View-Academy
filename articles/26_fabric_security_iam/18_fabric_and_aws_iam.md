@@ -41,11 +41,14 @@ There are two AWS accounts involved:
 * **Account A – Compute:** Hosts the Kubernetes cluster and Fabric.
 * **Account B – Storage:** Hosts the S3 bucket and the IAM Role.
 
+
 To enable access:
+
 
 * The **IAM Role is created in Account B** (same account as the S3 bucket).
 * The Role’s **Trust Policy allows the Kubernetes OIDC identity from Account A** to assume it.
 * In Fabric, we configure the **Role ARN from Account B**.
 * At runtime, Fabric uses STS to **assume the role in Account B** and access the bucket.
+
 
 This is a standard AWS cross-account role assumption using STS, with IRSA handling identity mapping from Kubernetes.
