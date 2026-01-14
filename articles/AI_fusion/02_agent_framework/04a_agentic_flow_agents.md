@@ -12,27 +12,11 @@ When the conversation entry point flow calls the Orchestrator actor, it passes s
 | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------- |
 | `userQuery`                | The user's question or request                               | "What is my credit card balance?"                 |
 | `synopsis`                 | business entity story/summary.                               | "David Smith, Retail customer, 2 credit cards..." |
-| `searchPlanFlowName`       | Flow to retrieve sample plans                                | `Banking_searchPlan`                              |
-| `searchProceduresFlowName` | Flow to retrieve corporate procedures                        | `Banking_searchProcedures`                        |
-| `toolMTable`               | The MTable name containing tool tag definitions              | `Banking_tool_tags`                               |
-| `subagents_tag`            | Tag identifying available subagents                          | `Banking_subagent`                                |
-| `responderPrompt`          | app specific guidelines to ground the response to the user. It usually contains rules and instructions of how to formalize the answer | `TBD`                                             |
-
-
-
-#### Search Plan Flow Name 
-
-
-
-#### Search Procedures Flow Name
-
-
-
-#### Tool MTable
-
-
-
-#### Subagents Tag
+| `toolMTable`               | The MTable name containing the tool tag list and their definitions, which shall be used. <br />It is used by the *Planner* and aimed for tightening and limiting which tools can be used, while Planner agent consider if/which tools to use | `Banking_tool_tags`                               |
+| `subagents_tag`            | Tag identifying available subagents for this flow. <br />This is used by both *Reflector*, for looking and identifying match sub-agent, as well as by the *Planner*, when considering if/which subagent to use | `Banking_subagent`                                |
+| `responderPrompt`          | Guidelines to ground the final response to the conversation caller (end user). It usually contains rules and instructions of how to formalize the answer | `TBD`                                             |
+| `searchProceduresFlowName` | Flow to retrieve corporate procedures. <br />Procedures are used by the *Planner*, where this flow is responsible to bring the relevant procedures to augment the Planner context prompt. Procedures are usually brought by using vector store search. | `Banking_searchProcedures`                        |
+| `searchPlanFlowName`       | Flow to retrieve sample plans. <br />These samples are used by the *Planner*, where this flow is responsible to bring the relevant them to augment the Planner context prompt, helping it to build a plan. Plans are usually brought by using vector store search. | `Banking_searchPlan`                              |
 
 
 
@@ -42,9 +26,9 @@ If a request requires gathering information or executing multiple steps but does
 
 The LLM is tasked with generating a step-by-step execution plan using several resources:
 
-1. **Sample Plans:** JSON files (e.g., `Banking_plans.json`) containing pre-built templates showing the LLM how to combine tools to accomplish similar objectives.
-2. **Tools List:** A full list of available Broadway flows, along with descriptions and remarks added to input parameters. The LLM uses these descriptions to choose the right tool and determine the required inputs. Tools can be also subagents. 
-3. **Corporate Procedures:** Documents indexed in the vector repository that define business rules or step-by-step instructions (e.g., verification criteria for credit limit reduction).
+1. **Tools and Agent List:** A list of available and relevant (by tags) Broadway flows, along with descriptions and remarks added to input parameters. The LLM uses these descriptions to choose the right tool and determine the required inputs. Relevant subagents (by tag) are also providers. 
+2. **Sample Plans** (Optional): JSON files (e.g., `Banking_plans.json`) containing pre-built templates showing the LLM how to combine tools to accomplish similar objectives.
+3. **Corporate Procedures** (Optional): Documents indexed in the vector repository that define business rules or step-by-step instructions (e.g., verification criteria for credit limit reduction).
 
 Once the plan steps are prepared, it executes them step-by-step. 
 
