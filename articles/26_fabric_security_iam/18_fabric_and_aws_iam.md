@@ -26,7 +26,7 @@ It allows a Kubernetes **ServiceAccount** to be mapped to an **IAM Role**, so po
 When you configure the S3 interface in Fabric/Studio:
 
 1. Fabric runs in a pod using a specific Kubernetes **ServiceAccount**.
-2. That ServiceAccount is mapped to an **IAM Role ARN** (as Miron mentioned).
+2. That ServiceAccount is mapped to an **IAM Role ARN**.
 3. Fabric automatically calls **AWS STS** to obtain temporary credentials.
 
 When leveraging IAM, because credentials are provided via the environment, when configuring, for example, an AWS S3 interface, the **Access Key and Secret Key fields can be left empty** in the interface's UI.
