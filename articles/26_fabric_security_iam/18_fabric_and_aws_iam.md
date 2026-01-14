@@ -16,11 +16,11 @@ It has:
 * A **Trust Policy** (who is allowed to assume the role)
 * A **Permissions Policy** (what the role can access, e.g., the S3 bucket)
 
-### AWS STS (Security Token Service) – Issues **temporary credentials**.
+#### AWS STS (Security Token Service) – Issues **temporary credentials**.
 
 When Fabric needs S3 access, it calls STS, which validates authorization and returns short-lived keys that expire automatically.
 
-### IRSA (IAM Roles for Service Accounts) – The Kubernetes ↔ AWS bridge.
+#### IRSA (IAM Roles for Service Accounts) – The Kubernetes ↔ AWS bridge.
 
 It allows a Kubernetes **ServiceAccount** to be mapped to an **IAM Role**, so pods can obtain AWS credentials without any keys stored in config or UI.
 
@@ -34,7 +34,7 @@ When you configure the S3 interface in Fabric/Studio:
 
 When leveraging IAM, because credentials are provided via the environment, when configuring, for example, an AWS S3 interface, the **Access Key and Secret Key fields can be left empty** in the interface's UI.
 
-## Cross-Account Scenario (Cluster in Account A, S3 in Account B)
+### Cross-Account Scenario (Cluster in Account A, S3 in Account B)
 
 There are two AWS accounts involved:
 
