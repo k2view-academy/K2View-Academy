@@ -1,6 +1,6 @@
 # Agent Framework Core Components
 
-The aifusion implementation relies on several key components that work alongside Fabric's Data Products (Logical Units) and their logical functionalities.
+The implementation of aifusion relies on several key components that work alongside Fabric's Data Products (Logical Units) and their logical functionalities.
 
 In addition to the below components, some of the stuff is located at Shared Objects LU, for cross LUs usage tools and utilities.
 
@@ -12,11 +12,11 @@ The **aifusion LU** is the main component of the aifusion extension. Each instan
 
 ### Session Management
 
-Each session (like a chat) creates a new aifusion LUI with the session ID as the instance identifier (IID).
+Each session (like a chat) creates a new aifusion LUI, with the session ID serving as the instance identifier (IID).
 
-As the conversation progresses, Fabric stores the user's questions and agent's responses within the dedicated instance. 
+As the conversation progresses, Fabric stores the user's questions and the agent's responses within the dedicated instance. 
 
-This mechanism maintains ongoing conversation context, enabling the AI agent to correctly interpret follow-up questions and references to earlier exchanges. Such capability also known as Short-Term Memory (STM), or as Working Memory, in the agentic AI terms.
+This mechanism maintains the ongoing conversation context, enabling the AI agent to correctly interpret follow-up questions and references to earlier exchanges. This capability is also known as Short-Term Memory (STM), or Working Memory, in agentic AI terminology.
 
 ### Data Stored Per Session
 
