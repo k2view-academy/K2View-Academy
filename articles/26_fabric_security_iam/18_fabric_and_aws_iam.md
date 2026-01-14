@@ -1,4 +1,3 @@
-
 # How Fabric Leverages AWS IAM in a Kubernetes Environment
 
 This article explains how Fabric leverages AWS IAM to authenticate and authorize access to AWS services such as AWS S3 in a Kubernetes environment.
@@ -32,18 +31,17 @@ When you configure the S3 interface in Fabric/Studio:
 2. That ServiceAccount is mapped to an **IAM Role ARN**.
 3. Fabric automatically calls **AWS STS** to obtain temporary credentials.
 
-When leveraging IAM, because credentials are provided via the environment, when configuring, for example, an AWS S3 interface, the **Access Key and Secret Key fields can be left empty** in the interface's UI.
+When using IAM, credentials are provided via the environment, so when configuring, for example, an AWS S3 interface, the **Access Key and Secret Key fields can be left empty** in the interface's UI.
 
 ### Cross-Account Scenario (Cluster in Account A, S3 in Account B)
 
 There are two AWS accounts involved:
 
-* **Account A – Compute:** Hosts the Kubernetes cluster and Fabric.
-* **Account B – Storage:** Hosts the S3 bucket and the IAM Role.
+* Account A – Compute: Hosts the Kubernetes cluster and Fabric.
+* Account B – Storage: Hosts the S3 bucket and the IAM Role.
 
 
 To enable access:
-
 
 * The **IAM Role is created in Account B** (same account as the S3 bucket).
 * The Role’s **Trust Policy allows the Kubernetes OIDC identity from Account A** to assume it.
