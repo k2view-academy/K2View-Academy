@@ -86,8 +86,8 @@ The Metrics DB collects data for tracking, analysis, and optimization across thr
 
 **Supported Databases:**
 
-- **SQLite** - For development environments
-- **PostgreSQL** - For production deployments
+- **SQLite** — for development environments
+- **PostgreSQL** — for production deployments
 
 
 
@@ -97,14 +97,14 @@ The collected data powers customizable dashboards for tracking and improving the
 
 ## aifusion Web Application
 
-The aifusion web app provides the tools that accompany the whole agent framework and builder lifecycle:
+The aifusion web app provides tools that accompany the full agent framework and builder lifecycle:
 
-* **Chat Playground**, a chat user interface, which enables developer a quick, out of the box way, to interact with their agents. it also includes a Trace Panel that enable viewing a detailed trace of what are inputs and outputs of each called agent and tool and how many tokens were consumed in each step.
+* **Chat Playground** — a chat user interface that provides developers with a quick, out-of-the-box way to interact with their agents. It also includes a Trace pane that displays a detailed view the inputs and outputs of each invoked agent and tool, as well as the token consumption at each step.
 
-  >  This Trace panel is available in addition to the comprehensive debugging capabilities and visibility at the Broadway flows and Java code within the Studio.
+  >  This Trace pane is available in addition to the comprehensive debugging capabilities and visibility provided by Broadway flows and Java code within the Studio.
 
-* **Evaluation workspace**, where testers can design and easily build, with a native chat interface, test cases for your agents, saving them into test suites, with all evaluation dimensions. Having it fully integrated with the Fabric, as data product platform leverage the capability to build reliable agents for C360 enterprises needs.
+* **Evaluation workspace** — where testers can design and easily build, with a native chat interface, test cases for your agents, saving them into test suites, with all evaluation dimensions. Having it fully integrated with the Fabric, as data product platform leverage the capability to build reliable agents for C360 enterprises needs.
 
   >  An accomplishing tool, for running regressions on these test cases, is the **Pipeline**.
 
-* **Observation**, a production monitoring and analytics platform providing visibility into agent behavior, performance metrics, and operational health, via flexible dashboards, as well as with the ability to drill down, by picking a specific conversation and see its details.
+* **Observation** — a production monitoring and analytics platform providing visibility into agent behavior, performance metrics, and operational health, via flexible dashboards, as well as with the ability to drill down, by picking a specific conversation and see its details.
