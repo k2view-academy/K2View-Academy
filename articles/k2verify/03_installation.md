@@ -1,5 +1,4 @@
-## Installation
-
+# Installation
 
 #### Requirements & Assumptions
   1. Fabric Version – Fabric version 8.2 or higher is required.

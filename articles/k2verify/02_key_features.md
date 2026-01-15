@@ -1,4 +1,4 @@
-## Key Features
+# Key Features
 
 - **Comprehensive Mismatch Detection:**
   

@@ -1,4 +1,4 @@
-## k2verify Monitoring
+# k2verify Monitoring
 
 #### Monitor the k2verify task
 Monitor the task execution from the page displayed after task initiation, or by clicking the Monitor icon on the task record in the main `Tasks` page

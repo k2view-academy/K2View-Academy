@@ -1,4 +1,4 @@
-## k2verify Execution
+# k2verify Execution
 
 #### Open the k2verify in the Web Framework
 In your Cloud Studio, Click menu at the top left of the screen (hamburger icon) and select **Verify** to open the page.

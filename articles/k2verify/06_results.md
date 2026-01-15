@@ -1,4 +1,5 @@
-## k2verify Execution Results
+# k2verify Execution Results
+
 The Results page provides a comprehensive, multi-level view of verification outcomes for a completed k2verify task. It is designed to help users quickly understand overall status, identify problematic tables, and drill down to individual record and field discrepancies.
 
 #### 1. Open the Results page
