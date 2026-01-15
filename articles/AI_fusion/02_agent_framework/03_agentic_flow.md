@@ -12,9 +12,9 @@ The flow's high-level steps are as follows (numbers and signs correspond to the 
 
   * Reflect on Query — determines the appropriate response path.
 
-  * Execute — Responsibility is delegated to the relevant execution sub-agent.
+  * Execute — responsibility is delegated to the relevant execution subagent.
 
-* [D] **Respond** — Crafting and formulating the final answer
+* [D] **Respond** — crafting and formulating the final answer.
 
 
 
