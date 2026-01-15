@@ -114,7 +114,7 @@ These files are distributed alongside the package and referenced in the Support 
 * **Successful verification** confirms the artifact is authentic and unmodified
 * **Any verification failure** indicates the artifact should not be trusted or deployed
 
-In the event of a failure, customers should stop the deployment and contact K2view Support.
+In the event of a failure, customers should stop using the image or package and contact K2view Support to inform us.
 
 ---
 
