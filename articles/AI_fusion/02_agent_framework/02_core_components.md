@@ -107,4 +107,4 @@ The aifusion web app provides tools that accompany the full agent framework and 
 
   >  An accomplishing tool, for running regressions on these test cases, is the **Pipeline**.
 
-* **Observation** — a production monitoring and analytics platform providing visibility into agent behavior, performance metrics, and operational health, via flexible dashboards, as well as with the ability to drill down, by picking a specific conversation and see its details.
+* **Observation** — a production monitoring and analytics platform that provides visibility into agent behavior, performance metrics, and operational health through flexible dashboards, with the ability to drill down, by picking a specific conversation and see its details.
