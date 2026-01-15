@@ -1,9 +1,6 @@
-# How To Use
+# k2verify Interfaces Configuration and validation
 
-## k2verify Configurations
-
-#### Configure and validate k2verify interfaces
-1. Configue and validate k2verify operational interface:
+1. Configure and validate k2verify operational interface:
     - In your Cloud Studio, Navigate to Implementation->Shared Objects->Interfaces->JDBC
     - Open `K2VERIFY_OPERATIONAL_DB` interface.
     - Enter the required connection details for your PostgreSQL operational database:
@@ -21,7 +18,7 @@
     - Open `K2VERIFY_SRC_CASS_DETAILS` interface.
     - Enter the required connection details for your Cassandra source database:
         * Host – Cassandra host of your cloud environment
-        * Port – Cassandra port of your cloud environnement
+        * Port – Cassandra port of your cloud environement
         * User – Cassandra user credentials
         * Password – Cassandra authentication password
     - Save the Interface configurations.

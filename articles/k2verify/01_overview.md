@@ -1,4 +1,4 @@
-# Fabric Verify (k2verify) Overview
+# k2verify Overview
 
 
 k2verify is a data verification library designed to validate data integrity, consistency, and privacy compliance between source and target systems during data movement, migration, or replication processes.

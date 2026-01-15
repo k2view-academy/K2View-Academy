@@ -1,8 +1,5 @@
-# How To Use
+# k2verify Globals Configuration
 
-## k2verify Configurations
-
-#### Configure k2verify Globals
 Configure the following Globals to ensure successful execution of the library.
 
 **REQUIRED GLOBALS:**
@@ -19,14 +16,14 @@ These Globals must be defined for k2verify to operate correctly.
 Define these Globals only when executing k2verify on Cassandra source or target tables.
 
 1. **K2VERIFY_CQLSH_BIN_DIR**:
-  Directory path to the CQLSH binary.
+    Directory path to the CQLSH binary.
 2. **K2VERIFY_KEYS_TABLE_NAME**:
-  Name of the table used to store the keys extracted from the Cassandra table.
+    Name of the table used to store the keys extracted from the Cassandra table.
 
 **ADVANCED GLOBALS:**
 
 These Globals provide advanced tuning and should be modified only when needed.
 1. **K2VERIFY_CONF_SEPARATOR**:
-  Delimiter used in MTable configuration definitions.
+    Delimiter used in MTable configuration definitions.
 2. **K2VERIFY_KEYS_FETCH_SIZE**:
-  Defines the fetch size (number of records per fetch) when retrieving keys from the database.
+    Defines the fetch size (number of records per fetch) when retrieving keys from the database.

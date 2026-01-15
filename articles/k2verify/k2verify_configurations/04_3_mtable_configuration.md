@@ -1,8 +1,5 @@
-# How To Use
+# k2verify MTable Configuration
 
-## k2verify Configurations
-
-#### Configure k2verify MTable
 The **k2verify_config** MTable defines the rules for the data verification, allowing customization of the verification logic per field.
 <br>The below customizations are supported:
 1. Execute a customized broadway flow to transform the value of a field before it is being compared.

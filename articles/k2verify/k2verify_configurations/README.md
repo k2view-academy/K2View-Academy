@@ -1,4 +1,4 @@
-<strong>Fabric Verify Configurations<strong>
+<strong>k2verify Configurations<strong>
 
 <ul>
 	<li><a href="/articles/k2verify/04_1_interfaces_configuration.md">Interfaces Configuration</a></li>
