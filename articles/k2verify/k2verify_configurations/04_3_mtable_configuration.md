@@ -181,11 +181,6 @@ Each record in the MTable defines one application table, together with its compa
     Alternatively, you can create a new Broadway flow that <strong>accepts the same input parameters</strong> and <strong>produces the same output structure</strong>. Once created, update the <code>Buckets_Method</code> value in the configuration MTable to reference the new flow.
   </td>
 </tr>
-
 </tbody>
 </table>
-
-                                                                                                                            |
-
-
  </div>
