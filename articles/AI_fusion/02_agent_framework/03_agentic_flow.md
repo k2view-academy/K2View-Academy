@@ -1,8 +1,8 @@
 # The Agentic Flow: Core Concepts and Execution Model
 
-An agentic workflow is usually built from several core steps. This article describes a recommended flow within the AI Fusion agent framework. an agentic workflow is built as Broadway flow at the project's implementation.
+An agentic workflow is typically composed of several core steps. This article describes a recommended flow within the AI Fusion agent framework. an agentic workflow is built as Broadway flow at the project's implementation.
 
-Following are the flow's steps in high level (numbers and signs refers to the below diagram):
+The flow's high-level steps are as follows (numbers and signs correspond to the below diagram):
 
 * [A] **Scoping** - Associate the base business entity and the specific AI Fusion conversation to the each session request/step.
 
