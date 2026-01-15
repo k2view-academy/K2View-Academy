@@ -1,7 +1,7 @@
 
 # Digital Signature Verification for K2view Fabric & Studio Artifacts
 
-K2view provides cryptographic signatures for all supported **Fabric and Studio container images** and **Fabric packages** to allow customers to independently verify:
+K2view provides cryptographic signatures for all supported Fabric and Studio container images and Fabric packages to allow customers to independently verify:
 
 * Authenticity – the artifact was produced and signed by K2view
 * Integrity – the artifact has not been altered after release
