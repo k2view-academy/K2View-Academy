@@ -4,17 +4,17 @@ An agentic workflow is typically composed of several core steps. This article de
 
 The flow's high-level steps are as follows (numbers and signs correspond to the below diagram):
 
-* [A] **Scoping** - Associate the base business entity and the specific AI Fusion conversation to the each session request/step.
+* [A] **Scoping** — Associate the base business entity and the specific AI Fusion conversation to the each session request/step.
 
-* [B] **Foundational Context** – Establish the deterministic, pre-AI context layer, including the base entity story and conversation history, which serves as the foundation for all subsequent reasoning and context expansion.
+* [B] **Foundational Context** — Establish the deterministic, pre-AI context layer, including the base entity story and conversation history, which serves as the foundation for all subsequent reasoning and context expansion.
 
 * [C] **AI Reasoning and Action**
 
-  * Reflect on Query - determines the appropriate response path.
+  * Reflect on Query — determines the appropriate response path.
 
-  * Execute - Responsibility is delegated to the relevant execution sub-agent.
+  * Execute — Responsibility is delegated to the relevant execution sub-agent.
 
-* [D] **Respond** - Crafting and formulating the final answer
+* [D] **Respond** — Crafting and formulating the final answer
 
 
 
