@@ -10,4 +10,4 @@ This capability supports enterprise security controls, supply-chain security req
 
 The detailed verification procedures are documented separately on the K2view Support Portal: https://support.k2view.com/signatures
 
-Please review link to understand what is signed, how the system works conceptually, and how customers should use the verification materials.
+Please review [Digital Signature Verification for K2view Fabric & Studio Artifacts](/articles/98_installation_and_upgrade/Image_DSig_Validation/validation.md)  to understand what is signed, how the system works conceptually, and how customers should use the verification materials.
