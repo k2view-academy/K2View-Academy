@@ -2,20 +2,20 @@
 
 ## Table of Contents
 
-  - [Purpose](#purpose)
-  - [What Is Signed](#what-is-signed)
-    - [Container Images](#container-images)
-    - [Fabric Packages](#fabric-packages)
-  - [Key Design Principles](#key-design-principles)
-    - [Digest-Based Signing](#digest-based-signing)
-    - [One Signature per Artifact](#one-signature-per-artifact)
-    - [Industry-Standard Tooling](#industry-standard-tooling)
-  - [How Customers Verify Artifacts](#how-customers-verify-artifacts)
-  - [Where Signature Metadata Comes From](#where-signature-metadata-comes-from)
-    - [Container Images](#container-images-1)
-    - [Fabric Packages](#fabric-packages-1)
-  - [Verification Outcomes](#verification-outcomes)
-  - [Key Takeaways](#key-takeaways)
+  * [Purpose](#purpose)
+  * [What Is Signed](#what-is-signed)
+    * [Container Images](#container-images)
+    * [Fabric Packages](#fabric-packages)
+  * [Key Design Principles](#key-design-principles)
+    * [Digest-Based Signing](#digest-based-signing)
+    * [One Signature per Artifact](#one-signature-per-artifact)
+    * [Industry-Standard Tooling](#industry-standard-tooling)
+  * [How Customers Verify Artifacts](#how-customers-verify-artifacts)
+  * [Where Signature Metadata Comes From](#where-signature-metadata-comes-from)
+    * [Container Images](#container-images-1)
+    * [Fabric Packages](#fabric-packages-1)
+  * [Verification Outcomes](#verification-outcomes)
+  * [Key Takeaways](#key-takeaways)
 
 ## Purpose
 
