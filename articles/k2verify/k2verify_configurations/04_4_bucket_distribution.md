@@ -1,10 +1,10 @@
 # Bucket Distribution (Optional)
 
-**What Are Buckets?**:
+**What Are Buckets?**
 
 To improve performance, k2verify splits large tables into smaller groups called buckets and processes them in parallel—similar to dividing a large task among multiple workers.
 
-**Default Bucket Distribution Method**:
+**Default Bucket Distribution Method**
 
 By default, k2verify assigns records to buckets based on the table’s key values using a deterministic and evenly distributed method:
 
@@ -27,11 +27,11 @@ By default, k2verify assigns records to buckets based on the table’s key value
     bucketId = hash(concatenatedKeys) % bucketsNum
     ```
 
-**When Should You Customize the Bucket Method?**:
+**When Should You Customize the Bucket Method?**
 
 You may consider customizing the bucket distribution logic when you need better control over how records are distributed across buckets.
 
-**When Can You Skip This Section?**:
+**When Can You Skip This Section?**
 
 You can safely skip bucket customization if:
 * The default even distribution provides acceptable performance
