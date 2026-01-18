@@ -1,4 +1,4 @@
-# k2verify Interfaces Configuration and validation
+# k2verify Interfaces Configuration and Validation
 
 1. Configure and validate k2verify operational interface:
     - In your Cloud Studio, Navigate to Implementation->Shared Objects->Interfaces->JDBC
