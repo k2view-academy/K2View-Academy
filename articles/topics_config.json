@@ -431,6 +431,25 @@
 					"value": "99_fabric_infras"
 				}
 			]
+		},
+		{
+			"group display name": "k2verify",
+			"group icon": "images/verify-icon.png",
+			"visible in main": true,
+			"topics": [
+				{
+					"display name": "Solution Overview",
+					"value": "k2verify"
+				},
+				{
+					"display name": "k2verify Configuration",
+					"value": "k2verify/k2verify_configurations"
+				},
+				{
+					"display name": "k2verify Execution & Results",
+					"value": "k2verify/k2verify_execution"
+				}
+			]
 		}
 	],
 	"RN": {
