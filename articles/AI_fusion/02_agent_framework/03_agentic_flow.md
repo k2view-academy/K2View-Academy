@@ -30,8 +30,8 @@ As a result, all subsequent reasoning and actions are constrained to a well-defi
 
 > Notes:
 >
-> * Along the flow, other LUs might be needed, usually by dedicated sub-agent worker. To ensure security, the LUI of the another LU shall be attached based on the base entity LUI. see below for more information.
-> * Session ID is set by the client side - the caller to the main conversation flow, and shall be handled carefully so that conversion history will be effective.
+> * Along the flow, other LUs might be needed, usually by dedicated subagent workers. To ensure security, the LUI of the another LU shall be attached based on the base entity LUI. See below for more information.
+> * The Session ID is set by the client side - the caller to the main conversation flow, and shall be handled carefully so that conversion history will be effective.
 
 
 
