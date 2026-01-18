@@ -37,15 +37,15 @@ The following example displays a Broadway flow template created to populate the 
   *  The **iid** output argument indicates the instance ID of the execution. The **parent_rows** output argument is an array of objects that iterate over parent rows. For example, when the CASES table is related to the ACTIVITY table in the LU Schema, the **iid** is a customer ID and the **parent_rows** includes the list of activity IDs of this customer.
 
     <studio>
-    
+
     <img src="images/07_14_03.PNG" alt="image" style="zoom:75%;" />
-    
+
     </studio>
-    
+
     <web>
-    
+
     <img src="images/web/14_parent_child.PNG" style="zoom:75%;" />
-    
+
     </web>
 
   * The purpose of **SyncDeleteMode** Actor is to set the population's Delete Mode. By default, the Actor sets the Delete Mode to OFF, which means the Delete Mode is taken from the LU table's properties. Additional values are All and NonUpdated.
@@ -71,7 +71,7 @@ The following example displays a Broadway flow template created to populate the 
     The SQL statement that will actually be executed in the server side is:
 
     ~~~sql
-    SELECT * FROM CASES WHERE ACTIVITY_ID IN (...)
+    SELECT * FROM CASES WHERE ACTIVITY_ID = ? OR ACTIVITY_ID = ? OR ACTIVITY_ID = ?
     ~~~
 
   * The **size** value determines the number of ACTIVITY_ID values included in the SQL statement.
