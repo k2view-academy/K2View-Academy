@@ -68,9 +68,9 @@ These extensions add all utilities required to implement GenAI agents and run re
 - Web Services and Shared Objects as cross-project utilities
 - Interface metadata, code and library JARs (located in the `lib` folder)
 
-### Metrics Database (Assurance)
+### Metrics/Assurance DB
 
-The metrics database (assurance) collects agents' functionality, token usage, and other metrics during agent sessions. SQLite (for development) and PostgreSQL databases are supported out-of-the-box. The Metrics database tables are created automatically during AI Fusion deployment. For more information, see [Metrics DB]().
+This database collects agents' functionality, token usage, and other metrics during agent sessions. SQLite (for development) and PostgreSQL databases are supported out-of-the-box. The Metrics database tables are created automatically during AI Fusion deployment. For more information, see [here]().
 
 
 
