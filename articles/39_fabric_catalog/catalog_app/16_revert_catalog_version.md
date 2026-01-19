@@ -20,6 +20,6 @@ The revert begins once the user confirms the action.
 
 When the revert is completed successfully, a new Catalog version is created. 
 
-When there are no differences between the selected versions, the user is notified about it and a new version is not created:
+If there are no differences between the selected versions, the user is notified, and a new version is not created:
 
 ![no-revert](../images/revert_no_changes.png)
