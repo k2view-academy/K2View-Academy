@@ -2,11 +2,11 @@
 
 ### Overview
 
-K2view's Catalog supports [versioning](06_catalog_versioning.md) - the ability to create a new Catalog version in the Neo4j Graph DB whenever the Discovery process runs and detects differences compared to the previous version.
+K2view's Catalog supports [versioning](06_catalog_versioning.md), allowing a new Catalog version to be created in the Neo4j Graph DB whenever the Discovery process identifies differences from the previous version.
 
-Once the new version is created, the user might realize that the changes are incorrect or irrelevant due to various reasons (e.g. regular expression is not precise). In this case, the user might want to go back to one of the previous Catalog versions.
+If these changes are found to be incorrect or irrelevant - perhaps due to an imprecise regular expression - the user may wish to revert to a previous Catalog version.
 
-The Catalog provides an ability to revert from the latest to one of the earlier versions. The revert can be applied to a selected data platform or the whole catalog. The revert activity creates a new Catalog version. 
+The Catalog allows reverting from the latest version to any earlier version. The revert can be applied to a selected data platform or the entire catalog, and it generates a new Catalog version. 
 
 ### How Can I Initiate Revert?
 
