@@ -15,7 +15,7 @@ The **schema**, **table**, **fields** and **sql** input arguments of **db** Acto
 
 Data writing Actors can work in a batch mode. When the **batch** input argument is set to true, the Actor accumulates statements and performs them as a batch for better performance. It needs to be run in a transaction and the errors are reported as the batch is committed (every X record or on commit). The default batch size is set to 1,000. 
 
-Starting from Fabric V8.2.3, the **DbErrorHandlerBatch** and **DbFlushBatch** Actors are introduced in order to set a batch error handler, to define how to handle the errors without failing the entire batch. See a detailed explanation and an example [further in this article](05_db_actors.md#batch-error-handling).
+Starting from Fabric V8.2.3, the **DbErrorHandlerBatch** and **DbFlushBatch** Actors are introduced to set a batch error handler and define how to handle errors without failing the entire batch. See a detailed explanation and example [further in this article](05_db_actors.md#batch-error-handling).
 
 If the DB command executed by the **db** Actor fails, the actual SQL statement is sent to the log file. For example:
 
