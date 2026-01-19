@@ -6,4 +6,4 @@ This framework enables AI agents to utilize context, plan actions, and orchestra
 
 The later articles explain the core components, architecture, agentic workflows and recommended development patterns for implementing AI agents.
 
-Agentic workflows are built as Broadway flows in the project's implementation, improving reliability and flexibility. It provides the organization and its implementors control over the process and the flexibility to use both logical parts, using Broadway and code parts, along with LLM calls, with full debugging capabilities.
+The agent framework consists of Agentic workflows, that are built as Broadway flows in the project's implementation, improving reliability and flexibility. This approach gives the organization and its implementors control over the process and greater flexibility. It allows them to combine Broadway-based logic, code parts, and LLM calls, with full debugging capabilities.
