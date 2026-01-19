@@ -119,7 +119,7 @@ In this example, **table** and **clm_name** are non-prepared statement parameter
 
 ### Batch Error Handling
 
-The **DbErrorHandlerBatch** and **DbFlushBatch** Actors are introduced for error handling when working in **batch** mode. 
+The **DbErrorHandlerBatch** and **DbFlushBatch** Actors are introduced for error handling when working on a given DB interface in **batch** mode. 
 
  * The **DbErrorHandlerBatch** sets a batch error handler on a given interface. The Actor's configuration allows to define actions in case of exception, such as suppressing an exception, writing into a log or invoking an inner flow.
 * The **DbFlushBatch** flushes a database batch and returns the batch statistics, including the total number of entries, how many succeeded, and how many failed. The statistics are broken down by each affected database table. This Actor should be used in conjunction with the **DBErrorHandlerBatch** Actor.
