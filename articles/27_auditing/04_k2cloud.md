@@ -1,6 +1,6 @@
 # K2cloud Auditing
 
-In a K2cloud SaaS deployment, the [persistence strategy](03_persistence_strategy.md) is set to be `com.k2view.fabric.auditing.persistence.AuditLog`. While written into logs, it is collected into a repository, for viewing it a K2cloud pages.
+In a K2cloud SaaS deployment, the [Auditing mechanism's persistence](03_persistence_strategy.md) feature is set to the 'Fabric log' strategy, `com.k2view.fabric.auditing.persistence.AuditLog`. While written into Fabric logs, audit data is also collected and sent into a certaing repository for viewing in K2cloud pages.
 
 >  Note: Customers using self-hosted K2cloud environments are not eligible for this capability.
 
