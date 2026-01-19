@@ -30,6 +30,10 @@ The monitor displays the execution progress by using various icons, as follows:
 
   <img src="../images/monitor_new.png" />
 
+* The following image shows that the job has been completed while one of the plugins failed:
+
+  <img src="../images/monitor_pluginerror.png" style="zoom:80%;" />
+
 * The following image shows that the job has been completed without creating a new version:
 
   <img src="../images/monitor_unchanged.png" style="zoom:80%;" />
