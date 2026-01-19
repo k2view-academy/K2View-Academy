@@ -87,17 +87,17 @@ Clicking on any dataset node opens its context menu, which includes the followin
 
 ### Menu Bar
 
-The menu bar is a toolbar located at the top of the window. It includes the following choices:
+The menu bar is a toolbar located at the top of the window, featuring the following options:
 
-* An **Actions** menu that allows to:
-  * **Build artifacts** - initiate building of the Catalog artifacts. Starting from Fabric V8.4, build artifacts can be done for the entire Catalog or for a selected data platform. In addition, you can follow the process progress and see when the action is completed. For more information about the Catalog artifacts click [here](09_build_artifacts.md).
-  * **Edit catalog** - switch the Catalog to Edit mode in order to perform manual overrides. For more information about the Manual overrides click [here](07_manual_overrides.md).
-  * **Revert** - initiate reverting either the entire Catalog or a selected data platform to an earlier version. Available in V8.4. For more information about the Revert click [here](16_revert_catalog_version.md). 
-  * **Delete** - initiate deleting either the entire Catalog or a selected data platform from the Neo4j Graph DB. Available in V8.4. For more information about the Delete click [here](17_delete_catalog.md).
-  * **Hidden nodes** - view the list of nodes, hidden from the Catalog's graph. Clicking a node in this list, unhides it and the node returns to the Catalog graph.
-* **Search** <img src="../images/search.png" style="zoom:90%;" /> the Catalog. For more information about the Catalog Search click [here](08_search_catalog.md). 
-* **Filter** <img src="../images/filter.png" style="zoom:90%;" /> the Catalog graph by property. When a filter is set, the icon changes its color to orange. Available in V8.1. For more information about the Catalog Filter click [here](08a_filter_catalog.md). 
-* **Bulk**  <img src="../images/bulk_icon.png" >, used to indicate whether there are entities in a bulk. When the bulk is not empty, the icon changes its color to orange. Available in V8.3. For more information about the Catalog Bulk click [here](14_1_bulk_creation.md). 
+* **Actions** menu:
+  * **Build artifacts**: Initiate the building of Catalog artifacts. Starting from Fabric V8.4, you can build artifacts for the entire Catalog or a selected data platform. You can track the progress and see when the action is completed. For more information about Catalog artifacts, click [here](09_build_artifacts.md).
+  * **Edit catalog**: Switch the Catalog to Edit mode to perform manual overrides. For more information about manual overrides, click [here](07_manual_overrides.md).
+  * **Revert**: Revert the entire Catalog or a selected data platform to an earlier version. Available in V8.4. For more information about reverting, click [here](16_revert_catalog_version.md). 
+  * **Delete**: Delete the entire Catalog or a selected data platform from the Neo4j Graph DB. Available in V8.4. For more information about deletion, click [here](17_delete_catalog.md).
+  * **Hidden nodes**: View the list of nodes, hidden from the Catalog's graph. Clicking a node in this list, unhides it and returns to the Catalog graph.
+* **Search** <img src="../images/search.png" style="zoom:90%;" /> the Catalog. For more information about the Catalog search, click [here](08_search_catalog.md). 
+* **Filter** <img src="../images/filter.png" style="zoom:90%;" /> the Catalog graph by property. When a filter is set, the icon changes its color to orange. Available in V8.1. For more information about the Catalog filter, click [here](08a_filter_catalog.md). 
+* **Bulk**  <img src="../images/bulk_icon.png" > indicates whether there are entities in bulk. When the bulk is not empty, the icon changes its color to orange. Available in V8.3. For more information about the Catalog bulk creation, click [here](14_1_bulk_creation.md). 
 * **Hide** <img src="../images/hide.png" style="zoom:80%;" />the node from the Catalog graph. Multiple element selection is supported.  
 * **Show only connected** <img src="../images/connected_only.png" style="zoom:80%;" />, used for focusing only on a selected node with its predecessors and successors. When clicked, all other nodes are hidden, and the icon changes its color to orange, indicating it is now in use. Clicking the icon again, unhides the other nodes and returns to the original view.
 * **Run Discovery** <img src="../images/run_discovery.png" style="zoom:75%;" />, used for running the Discovery Job on the selected data platform.
