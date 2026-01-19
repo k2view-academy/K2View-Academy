@@ -10,7 +10,7 @@ In a K2cloud SaaS deployment, the [Auditing mechanism's persistence](03_persiste
 
 ### Monitoring Page
 
-When auditing is enabled, audit entries are integrated into the logs shown on the Monitoring page, under the Fabric Monitor Logs pane. These entries are interspersed with standard logs and can be filtered using the search feature.
+When auditing is enabled, audit entries appear in the logs shown on the Monitoring page, under the Fabric Monitor Logs pane. These entries are interspersed with standard logs and can be filtered using the search feature.
 
 To view only audit records, enter `AUDIT` in the case-sensitive search bar.
 
@@ -30,7 +30,7 @@ Audit data can be downloaded in either **CSV** or **plain text** format using on
 
 ### Space Details Page
 
-When auditing is enabled, audit entries are integrated into the Audit Log pane on the Space Details page.
+When auditing is enabled, audit entries appear in the Audit Log pane on the Space Details page.
 
 To access it:
 
