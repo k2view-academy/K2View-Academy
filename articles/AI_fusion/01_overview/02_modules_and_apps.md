@@ -16,7 +16,7 @@ A low-code, Studio-integrated environment for creating agents, defining tools, a
 - LLM-agnostic architecture supporting multiple providers
 - Connectors for various LLM and vector search services
 - Built-in chat playground for testing apps and agents
-- Comprehensive Trace view showing agent and tool flows, token consumption, and response times at each level
+- Comprehensive Trace view showing agent and tool execution flows, token usage, and response times of each level within a conversation step
 
 ### 2. Evaluation
 
