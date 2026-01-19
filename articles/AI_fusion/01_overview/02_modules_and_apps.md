@@ -6,7 +6,7 @@ The platform streamlines the full lifecycle of enterprise GenAI agents, from des
 
 ## Core Modules
 
-The platform is structured around three core modules:
+The platform consists of three core modules:
 
 ### Agents Builder & Framework
 
