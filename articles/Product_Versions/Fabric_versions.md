@@ -47,6 +47,19 @@ Please check the release notes for component version support, such as Kafka, Neo
         </tr>
 		<tr>
             <td align="left">
+                <p><a href="/Release_Notes/V8.2/Fabric_Release_Notes_V8.2.13.pdf">8.2.13</a></p>
+                <p>Jan 19, 2026</p>
+            </td>
+            <td></td>
+            <td>
+                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.2.13_1</p>
+                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.2.13_1</p>
+            </td>
+            <td>15.12</td>
+            <td>4.1.8</td>
+        </tr>
+		<tr>
+            <td align="left">
                 <p><a href="/Release_Notes/V8.2/Fabric_Release_Notes_V8.2.12.pdf">8.2.12</a></p>
                 <p>Jan 14, 2026</p>
             </td>
