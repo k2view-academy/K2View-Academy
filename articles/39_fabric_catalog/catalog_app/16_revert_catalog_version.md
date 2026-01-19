@@ -10,9 +10,9 @@ The Catalog allows reverting from the latest version to any earlier version. The
 
 ### How Can I Initiate Revert?
 
-To initiate the revert, start from switching to the Catalog's comparison mode by clicking the comparison <img src="../images/compare.png" style="zoom:75%;" /> icon in the version's drop-down list. Then you can revert either the selected (or expanded) data platform or the entire Catalog. 
+To initiate the revert, start from switching to the Catalog's comparison mode by clicking the comparison <img src="../images/compare.png" style="zoom:75%;" /> icon in the version drop-down list. You can then choose to revert either the selected (or expanded) data platform or the entire Catalog.
 
-The revert is initiated after the user confirms his action. 
+The revert begins once the user confirms the action.
 
 ![revert](../images/revert_init.png)
 
