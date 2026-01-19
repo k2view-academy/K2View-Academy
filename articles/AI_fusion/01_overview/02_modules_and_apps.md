@@ -24,11 +24,11 @@ A comprehensive testing and assessment system for validating AI agent performanc
 
 - Multiple assessment methodologies, including LLM-as-judge with configurable thresholds
 - Multi-dimensional scoring (accuracy, relevance, clarity, politeness, and more)
-- End-to-end solution for testing multi-turn AI conversations
+- Robust testing solution for multi-turn AI conversations
 - Complete workflow covering test creation, regression testing and results analysis
 - Detailed drill-down views for thorough analysis
 
-This ensures agents and apps meet quality standards across various criteria before interacting with end users or production data.
+This core module ensures that agents and apps meet predefined quality standards across various criteria prior to production deployment.
 
 ### 3. Observation
 
@@ -45,7 +45,7 @@ This enables teams to identify issues, optimize costs, and continuously improve 
 
 ## Getting Started
 
-The platform is delivered as a solution built on K2view's Fabric framework. To get started in Studio:
+The AI Fusion platform is delivered as a solution built on K2view's Fabric framework. To get started in Studio:
 
 1. Install the **aifusion** extension from [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md#install-an-extension)
 2. Install the relevant LLM connector extension from K2exchange according to your organization's guidelines and licenses
