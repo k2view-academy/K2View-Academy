@@ -1,6 +1,6 @@
 # AI Data Fusion Modules and Apps
 
-K2view's GenAI Data Fusion platform, **AI Fusion**, is an enterprise-grade framework for building, testing, deploying, and governing AI-powered agents and applications. Designed to work seamlessly with Data Products and operational data at scale, AI Fusion delivers reliability, predictability, and observability to AI systems.
+K2view's GenAI Data Fusion platform, **AI Fusion**, is an enterprise-grade framework for building, testing, deploying, and governing AI-powered agents and apps. Designed to work seamlessly with Data Products and operational data at scale, AI Fusion delivers reliability, predictability, and observability to AI systems.
 
 The platform streamlines the full lifecycle of enterprise GenAI agents, from design and orchestration of complex multi-agent flows, through evaluation and testing for continuous monitoring of live executions. As a result, this lifecycle ensures accuracy, context-awareness, compliance, and cost efficiency in production environments.
 
@@ -8,7 +8,7 @@ The platform streamlines the full lifecycle of enterprise GenAI agents, from des
 
 The platform consists of three core modules:
 
-### Agents Builder & Framework
+### 1. Agents Builder & Framework
 
 A low-code, Studio-integrated environment for creating agents, defining tools, and orchestrating flows with Broadway. Key features include:
 
@@ -18,7 +18,7 @@ A low-code, Studio-integrated environment for creating agents, defining tools, a
 - Built-in chat playground for testing apps and agents
 - Comprehensive Trace view showing agent and tool flows, token consumption, and response times at each level
 
-### Evaluation
+### 2. Evaluation
 
 A comprehensive testing and assessment system for validating AI agent performance before production deployment. Capabilities include:
 
@@ -30,7 +30,7 @@ A comprehensive testing and assessment system for validating AI agent performanc
 
 This ensures agents and apps meet quality standards across various criteria before interacting with end users or production data.
 
-### Observation
+### 3. Observation
 
 A production monitoring and analytics platform providing visibility into agent behavior, performance metrics, and operational health. Features include:
 
