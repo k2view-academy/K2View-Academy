@@ -15,6 +15,8 @@ The **schema**, **table**, **fields** and **sql** input arguments of **db** Acto
 
 Data writing Actors can work in a batch mode. When the **batch** input argument is set to true, the Actor accumulates statements and performs them as a batch for better performance. It needs to be run in a transaction and the errors are reported as the batch is committed (every X record or on commit). The default batch size is set to 1,000. 
 
+Starting from Fabric V8.2.3, the **DbErrorHandlerBatch** and **DbFlushBatch** Actors are introduced in order to set a batch error handler, to define how to handle the errors without failing the entire batch. See a detailed explanation and an example [further in this article](05_db_actors.md#batch-error-handling).
+
 If the DB command executed by the **db** Actor fails, the actual SQL statement is sent to the log file. For example:
 
 ~~~sql
@@ -112,6 +114,21 @@ The following example shows the SQL statement which includes parameters to popul
 The new input arguments **table**, **clm_name** and **clm_value** are added to the **SourceDbQuery** Actor and are populated by 'cases', 'status' and 'Open' values respectively.
 
 In this example, **table** and **clm_name** are non-prepared statement parameters while **clm_value** is a prepared statement  **named** parameter.
+
+
+
+### Batch Error Handling
+
+The **DbErrorHandlerBatch** and **DbFlushBatch** Actors are introduced for error handling when working in **batch** mode. 
+
+ * The **DbErrorHandlerBatch** sets a batch error handler on a given interface. The Actor's configuration allows to define actions in case of exception, such as suppressing an exception, writing into a log or invoking an inner flow.
+* The **DbFlushBatch** flushes a database batch and returns the batch statistics, including the total number of entries, how many succeeded, and how many failed. The statistics are broken down by each affected database table. This Actor should be used in conjunction with the **DBErrorHandlerBatch** Actor.
+
+Note that to utilize batch error handling, the **batch** input argument of the **DbCommand** and **DbLoad** Actors should be set to **true**. 
+
+The following example illustrates the usage of the **DbErrorHandlerBatch** and **DbFlushBatch** Actors:
+
+![image](../images/99_05_batch_flush.png)
 
 
 
