@@ -90,7 +90,7 @@ Clicking on any dataset node opens its context menu, which includes the followin
 The menu bar is a toolbar located at the top of the window. It includes the following choices:
 
 * An **Actions** menu that allows to:
-  * **Build artifacts** - initiate building of the Catalog artifacts, which can be done for the entire Catalog or for a selected data platform. For more information about the Catalog artifacts click [here](09_build_artifacts.md).
+  * **Build artifacts** - initiate building of the Catalog artifacts. Starting from Fabric V8.4, build artifacts can be done for the entire Catalog or for a selected data platform. In addition, you can follow the process progress and see when the action is completed. For more information about the Catalog artifacts click [here](09_build_artifacts.md).
   * **Edit catalog** - switch the Catalog to Edit mode in order to perform manual overrides. For more information about the Manual overrides click [here](07_manual_overrides.md).
   * **Revert** - initiate reverting either the entire Catalog or a selected data platform to an earlier version. Available in V8.4. For more information about the Revert click [here](16_revert_catalog_version.md). 
   * **Delete** - initiate deleting either the entire Catalog or a selected data platform from the Neo4j Graph DB. Available in V8.4. For more information about the Delete click [here](17_delete_catalog.md).
