@@ -433,7 +433,7 @@
 			]
 		},
 		{
-			"group display name": "k2verify",
+			"group display name": "Verify",
 			"group icon": "images/verify-icon.png",
 			"visible in main": true,
 			"topics": [
