@@ -1,6 +1,6 @@
-# Discovery Job Execution Monitor
+# Discovery Execution Monitor
 
-The purpose of the Discovery job execution monitor is to track the progress of the Discovery process. The monitoring provides valuable insights that can help to follow-up the job execution, displaying the progress per each step. 
+The purpose of the Discovery execution monitor is to track the Discovery progress. The monitoring provides valuable insights that can help to follow-up the job execution, displaying the progress per each step. 
 
 Click Discovery in the top Catalog navigation bar to open the monitor:
 
@@ -8,14 +8,12 @@ Click Discovery in the top Catalog navigation bar to open the monitor:
 
 The monitor is split into the following areas:
 
-* The **Run** <img src="../images/run.png" style="zoom: 80%;" /> and **Stop** <img src="../images/stop.png" style="zoom: 80%;" /> icons are located at the top of the Monitor screen. The monitor enables starting the job execution for the selected Data Platform, and stopping the job, when it is in progress.
-* The **General Info** area allows to select the Data Platform in order to retrieve details of the monitoring.
-  * The monitor shows the last execution for the given Data Platform, either throughout its progress or when completed.
-* The **Execution Time** area shows the job's start time and its duration. If the job has been completed, the end time is displayed as well. 
-* The **Error / Warnings** area displays either the error (in case of a job failure) or the number of warnings received during the job execution, if any.
-* The **Execution Progress** is the monitor's main area. It shows the progress of the job, including the completion percentage of each step and the number of elements found.
+* The Data Platform selection drop-down together with **Run** <img src="../images/run.png" style="zoom: 80%;" /> and **Stop** <img src="../images/stop.png" style="zoom: 80%;" /> icons are located at the top of the Monitor screen. The monitor enables starting the job execution for the selected Data Platform, and stopping the job, when it is in progress.
+  * The monitor shows the last execution for the selected Data Platform, either throughout its progress or when completed.
+* The **General Info** area shows the job's start time and its duration, execution status and the version. If the job has been completed, the end time is displayed as well. 
+* The monitor's main area shows the Discovery steps progress, including the completion percentage of each step and the number of elements found.
   * The steps displayed in this area are dynamic, and they depend on the job configuration. The disabled plugins are not displayed.
-  * Each step has an indication whether it is in progress, not started or completed. 
+  * Each step has an indication whether it is in progress, not started, completed or failed. 
   * Upon completion of the job, the monitor displays the version number and indicates whether a new version has been created or not.
 
 The monitor displays the execution progress by using various icons, as follows:
