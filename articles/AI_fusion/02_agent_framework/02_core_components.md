@@ -32,13 +32,13 @@ The above data types not only provide the conversational context, but also suppo
 
 ### Core Flows and Actors
 
-The aifusion LU provides the actors and flows needed to orchestrate agent processing. Most components are located under the `aifusion/Broadway/ai` path.
+The aifusion LU provides the actors and flows needed to orchestrate agent processing. Most actor and flow components are located under the `aifusion/Broadway/ai` path.
 
 
 
 ## LLM Interfaces
 
-LLMs are invoked at various points in the agent workflow to handle different tasks:
+LLMs are invoked at various points in the agent workflow to perform different tasks:
 
 - Reflecting on user queries to determine the appropriate response path
 - Generating SQL queries based on natural-language requests
