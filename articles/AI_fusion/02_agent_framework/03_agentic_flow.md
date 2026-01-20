@@ -45,30 +45,30 @@ This step establishes the initial, deterministic context layer by fetching the r
 
 This step is typically composed of two main actions:
 
-### Retrieve the business entity story (Long Term Memory)
+### Retrieve the business entity story (Long-term memory)
 
 A concise profile of the business entity is retrieved to serve as foundational knowledge for the AI. This may include structured attributes, historical summaries, past events, or other relevant descriptors. The information can be such which can be considered as insights - some prediction, of why current conversation is happening, like why a customer is calling now.
 
-This information is also known, in the agentic AI terminology, as Long-Term Memory (LTM) or “Persistent Knowledge”.
+This information is also known, in the agentic AI terminology, as Long-term memory (LTM) or “Persistent Knowledge”.
 
 This retrieval is usually implemented through multiple queries across several LU tables. 
 
 It is important to perform this step selectively and efficiently, by bringing in only the data that is beneficial for reasoning while avoiding excessive or irrelevant information. Overloading the context can confuse or mislead LLMs and degrade response quality.
 
-### Retrieve conversation history (Short term Memory)
+### Retrieve conversation history (Short-term memory)
 
 Several prior steps of the current conversation are retrieved to preserve continuity and intent. When the conversation becomes long, older interactions can be summarized to maintain coherence while keeping the context compact.
 
-This information is also known in the agentic AI terms as Short-Term Memory (STM) or as “Working Memory”.
+This information is also known, in the agentic AI terminology, as Short-term memory (STM) or “Working Memory”.
 
 > NOTES:
 >
-> * A conversation lifetime should be carefully defined.
->   For example, in a CRM scenario, a new conversation may be started for each incoming customer call. In other cases, organizations may treat an entire day as a single conversational session, preserving context across multiple interactions.
+> * The conversation lifetime should be carefully defined.
+>   For example, in a CRM scenario, a new conversation may be initiated for each incoming customer call. In other cases, organizations may treat an entire day as a single conversational session, preserving context across multiple interactions.
 >
->   Similar considerations apply to non-chat and non-call-based sessions as well.
+>   Similar considerations also apply to non-chat and non-call-based sessions.
 >
-> * The number of prior steps can be set, usually 4-5 steps are enough for the context. When a conversion becomes long, it is used to sum up older steps and to add them to the context.
+> * The number of prior steps can be set; usually, 4–5 steps are sufficient for the context. When a conversation becomes long, it is used to sum up earlier steps and to add them to the context.
 
 
 
@@ -141,6 +141,6 @@ During the agent flows, the platform logs and collects information about the age
 
 The information is gathered into the aifusion LU tables, so that trace can be done a specific conversation session, as well into the Assurance metrics DB, for overall observation and insights.
 
-The information is also accessible at the **Trace panel** in the **Chat Playground**, which is part of the AI Fusion app, where you can make chats and see a detailed trace of what user asked, what are inputs and outputs of each called agent and tool and how many tokens were consumed in each step.
+The information is also accessible at the **Trace pane** in the **Chat Playground**, which is part of the AI Fusion app, where you can make chats and see a detailed trace of what user asked, what are inputs and outputs of each called agent and tool and how many tokens were consumed in each step.
 
-This Trace panel is available in addition to the comprehensive debugging capabilities and visibility at the Broadway flows and Java code within the Studio.
+This Trace pane is available in addition to the comprehensive debugging capabilities and visibility at the Broadway flows and Java code within the Studio.
