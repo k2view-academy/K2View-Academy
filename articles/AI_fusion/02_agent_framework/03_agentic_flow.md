@@ -49,11 +49,11 @@ This step is typically composed of two main actions:
 
 A concise profile of the business entity is retrieved to serve as foundational knowledge for the AI. This may include structured attributes, historical summaries, past events, or other relevant descriptors. The information can be such which can be considered as insights - some prediction, of why current conversation is happening, like why a customer is calling now.
 
-This information is also known in the agentic AI terms as Long-Term Memory (LTM) or as “Persistent Knowledge”.
+This information is also known, in the agentic AI terminology, as Long-Term Memory (LTM) or “Persistent Knowledge”.
 
-This retrieval is usually implemented through multiple queries across several LU's tables. 
+This retrieval is usually implemented through multiple queries across several LU tables. 
 
-It is important to perform this step selectively and efficiently, by bringing only the data that is beneficial for reasoning, while avoiding excessive or irrelevant information. Overloading the context can confuse or mislead LLMs and degrade response quality.
+It is important to perform this step selectively and efficiently, by bringing in only the data that is beneficial for reasoning while avoiding excessive or irrelevant information. Overloading the context can confuse or mislead LLMs and degrade response quality.
 
 ### Retrieve conversation history (Short term Memory)
 
