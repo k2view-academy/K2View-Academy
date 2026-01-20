@@ -1,4 +1,4 @@
-# Agent Framework Core Components
+# Agent Framework: Core Components
 
 The implementation of aifusion relies on several key components that work alongside Fabric's Data Products (Logical Units) and their logical functionalities.
 
