@@ -2,7 +2,7 @@
 
 The implementation of aifusion relies on several key components that work alongside Fabric's Data Products (Logical Units) and their logical functionalities.
 
-In addition to the below components, some of the stuff is located at Shared Objects LU, for cross LUs usage tools and utilities.
+In addition to the components described below, certain tools and utilities are stored in the Shared Objects LU for use across multiple LUs.
 
 
 
