@@ -6,13 +6,13 @@ In addition to the components described below, certain tools and utilities are s
 
 
 
-## aifusion Logical Unit
+## The aifusion Logical Unit
 
-The **aifusion LU** is the main component of the aifusion extension. Each instance (LUI) represents a single conversation session—typically a chat session that a user conducts through a web interface.
+The **aifusion LU** is the main component of the aifusion extension. Each LU Instance (LUI) represents a single conversation session — typically a chat session — conducted by a user.
 
 ### Session Management
 
-Each session (like a chat) creates a new aifusion LUI, with the session ID serving as the instance identifier (IID).
+Each session (such as a chat) creates a new aifusion LUI with the session ID serving as the instance identifier (IID).
 
 As the conversation progresses, Fabric stores the user's questions and the agent's responses within the dedicated instance. 
 
