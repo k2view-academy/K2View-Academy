@@ -28,7 +28,7 @@ The LUI tables capture:
 | **Execution Traces**     | Activated agents, tools, and their execution duration for each step |
 | **Token Usage**          | Detailed consumption metrics (stored in the assurance database) |
 
-This data provides the conversation context but also supports debugging, optimization, and compliance requirements.
+The above data types not only provide the conversational context, but also support debugging, optimization, and compliance requirements.
 
 ### Core Flows and Actors
 
