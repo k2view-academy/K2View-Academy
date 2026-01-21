@@ -17,7 +17,7 @@
 
 #### Validate Verify Library components are added to your Cloud Space
   1. Logical Units:
-      - k2verify.
+      - verify.
   2. Shared Objects
       - Broadway:
         * A new folder named `k2verify`: contains all Broadway flows provided by the k2verify library.
@@ -29,4 +29,14 @@
         * A new Interface under `Other` named `K2VERIFY_SRC_CASS_DETAILS`: holds connection details for the Cassandra source database.
         * A new Interface under `Other` named `K2VERIFY_TAR_CASS_DETAILS`: holds connection details for the Cassandra target database
   3. Libraries:
-      - A new jar file under `lib` named `json-20240303`.
+      - A new jar file under `lib` named `postgresql-42.7.4`.
+
+#### Integrate Verify Web Page
+
+Follow the steps below to merge the Verify application entry into the `apps.json` file
+
+1. In your Cloud Studio, navigate to the existing apps.json file.
+2. Open the file and copy the following JSON entry:
+   ` { "name": "Verify", "appId": "k2verify" }`
+3. Paste the copied JSON entry into your existing apps.json file.
+4. Save the file and ensure the JSON structure remains valid.

@@ -23,7 +23,6 @@ Each record in the MTable defines one application table, together with its compa
   <td valign="top" width="100pxl"><strong>Type</strong></td>
   <td valign="top" width="200pxl"><strong>Example</strong></td>
 </tr>
-
 <tr>
   <td valign="top">Source_Table_Name</td>
   <td valign="top">Source table name</td>
@@ -116,7 +115,7 @@ Each record in the MTable defines one application table, together with its compa
   <td valign="top">Customized_Key_Comparison</td>
   <td valign="top">
     Unique identifier of the record.<br/>
-    Used for matching source and target table's records. If left empty, the library extracts the PK columns from the Catalog (catalog_field_info mtable)
+    Used for matching source and target table's records. If left empty, the library extracts the PK columns from the Catalog (catalog_field_info mtable).
   </td>
   <td valign="top">Multiple</td>
   <td valign="top">customer_id<b>&#124;</b>ssn</td>
@@ -126,7 +125,8 @@ Each record in the MTable defines one application table, together with its compa
   <td valign="top">PII_Columns</td>
   <td valign="top">
     PII Columns names separated by a pipe delimiter.<br/>
-    Used for PII verification use case.
+    Used for PII verification use case. If left empty, the library extracts the PII columns from the Catalog (catalog_field_info mtable).
+
   </td>
   <td valign="top">Multiple</td>
   <td valign="top">first_name<b>&#124;</b>ssn</td>
@@ -137,6 +137,13 @@ Each record in the MTable defines one application table, together with its compa
   <td valign="top">List of Columns to exclude from the comparison.</td>
   <td valign="top">Multiple</td>
   <td valign="top">misc_details<b>&#124;</b>ignore_column_text</td>
+</tr>
+
+<tr>
+  <td valign="top">Excluded_Rows_Sql</td>
+  <td valign="top">SQL condition appended to the base query used to extract data from the source and target tables, allowing verification to be limited to a specific subset of records.</td>
+  <td valign="top">Single</td>
+  <td valign="top">customer_id < 50 (only records with customer_id > 50 will be included in the verification process).</td>
 </tr>
 
 <tr>

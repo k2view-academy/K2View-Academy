@@ -4,7 +4,7 @@
 In your Cloud Studio, Click menu at the top left of the screen (hamburger icon) and select **Verify** to open the page.
 
 #### Create a new Verify task
-Follow the steps below to create a new verification task using the k2verify web interface:
+Follow the steps below to create a new verification task using the Verify web interface:
 1. Click on **New Task**
 2. Provide the task details:
     * Task Title – A descriptive title for the task.
@@ -30,7 +30,7 @@ Follow the steps below to create a new verification task using the k2verify web 
 
 ![Extensions](https://raw.githubusercontent.com/k2view/libs-exchange-resources/main/d2d-images/newTaskScreen.png)
 
-#### Execute the k2verify task
+#### Execute the Verify task
 
 Follow the steps below to execute the verification task using the Verify web interface.
 **Steps**:
