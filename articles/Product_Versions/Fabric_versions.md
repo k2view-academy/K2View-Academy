@@ -387,8 +387,8 @@ Please check the release notes for component version support, such as Kafka, Neo
 			</td>
 			<td>
 			<p>HF34</p>
-            <p>Jan 21, 2026</p></td>td>
-            <td>312</td>
+            <p>Jan 22, 2026</p></td>td>
+            <td>314</td>
             <td></td>
             <td>4.1.10</td>            
         </tr>
