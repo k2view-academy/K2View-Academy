@@ -137,10 +137,10 @@ During the agent flows, the platform logs and collects information about the age
 
 - **Comprehensive Auditing** — ensures every agent interaction and processing step can be audited and traced.  
 - **Cost Management** — provides tracking and monitoring of token usage for cost control, in vast granularity information, by model and agents and for input, output and cached tokens.
-- **Maintainability and Continuous Improvement** — Each agent and tool call is logged so that later on can be analyzed and accordingly to improve agents performance. 
+- **Maintainability and Continuous Improvement** — each agent and tool call is logged so that later on can be analyzed and accordingly to improve agent performance. 
 
-The information is gathered into the aifusion LU tables, so that trace can be done a specific conversation session, as well into the Assurance metrics DB, for overall observation and insights.
+The information is gathered into the aifusion LU tables, so that trace can be done a specific conversation session, as well as into the Metrics/Assurance DB, for overall observation and insights.
 
-The information is also accessible at the **Trace pane** in the **Chat Playground**, which is part of the AI Fusion app, where you can make chats and see a detailed trace of what user asked, what are inputs and outputs of each called agent and tool and how many tokens were consumed in each step.
+The information is also accessible in the **Trace pane** of the **Chat Playground**, part of the AI Fusion app. Here, you can create chats and view a detailed trace showing what the user asked, the inputs and outputs of each called agent and tool, and the number of tokens consumed at each step.
 
 This Trace pane is available in addition to the comprehensive debugging capabilities and visibility at the Broadway flows and Java code within the Studio.
