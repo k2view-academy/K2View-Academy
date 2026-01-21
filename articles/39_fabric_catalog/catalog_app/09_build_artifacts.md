@@ -2,22 +2,26 @@
 
 ### Overview
 
-The Catalog provides the ability to build **artifacts** and save them in the Project tree as CSV files. The artifacts are also created as MTables, uploaded to the Fabric memory.
+Catalog artifacts are extracts of Catalog's metadata, created upon request and uploaded to Fabric memory. In addition to memory, the artifacts are also generated as CSV files in the Project tree.
 
-There are two kinds of artifacts: those of **Catalog fields** and those of **relations**.  
+There are two types of artifacts: artifacts of **Catalog fields** and artifacts of **relations**.  
 
-Artifacts are used by the masking and synthetic data generation mechanism, as explained [here](11_catalog_masking.md).
+Artifacts are used in the masking and synthetic data generation mechanisms, as explained [here](11_catalog_masking.md).
 
 ### Building Artifacts
 
-Catalog artifacts are created by clicking **Actions > Build Artifacts** in the Catalog application's [Menu bar](05_catalog_app.md#menu-bar). 
+Catalog artifacts creation is initiated by selecting **Actions > Build artifacts** in the [Menu bar](05_catalog_app.md#menu-bar). 
 
-The artifacts are uploaded to the Fabric memory as **catalog_field_info** and **catalog_relations_info** [MTables](/articles/09_translations/06_mtables_overview.md). 
+* Build artifact can be performed for a single data platform (which is either selected or expanded in the Project tree) or for the entire Catalog. 
+* Once started, the progress popup screen opens in the right-bottom part of the screen and it shows the process progress. See the details about the progress bar [further in this article](09_build_artifacts.md#build-artifacts-progress-bar).
+* Available starting from Fabric V8.4. 
 
-The following CSV-format files are created and saved in the Project under the  ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder:
+The artifacts are uploaded to Fabric memory as **catalog_field_info** and **catalog_relations_info** [MTables](/articles/09_translations/06_mtables_overview.md). 
 
-* **Field artifacts** files, with the following name format: ```catalog_field_info___<dataPlatform>_<schema>.csv```, (containing 3 underscores before the data platform name).
-* **Relation artifact** files, with the following name format: ```catalog_relations_info___<dataPlatform>_<schema>.csv```, (containing 3 underscores before the data platform name). It includes a list of *refersTo* relations with their properties (parent info, child info, origin). Note that these files are generated only from V8.3.1 onward.
+The following CSV-format files are created and saved under the  ```Implementation/SharedObjects/Interfaces/Discovery/MTable``` folder in the Project tree:
+
+* **Field artifact** files, named as: ```catalog_field_info___<dataPlatform>_<schema>.csv```, (with 3 underscores before the data platform name).
+* **Relation artifact** files, named as: ```catalog_relations_info___<dataPlatform>_<schema>.csv```, (with 3 underscores before the data platform name). These files include a list of *refersTo* relations with their properties (parent info, child info, origin). Note that these files are generated only from V8.3.1 onward.
 
 The below image is an example of a ```catalog_field_info___DB2_sakila.csv``` file:
 
@@ -37,9 +41,17 @@ Catalog artifacts can be split into separate files for each data platform and sc
 
 Starting from Fabric V8.3, all artifacts are split by default into separate files. The splitting or combining of artifacts is controlled by the SPLIT_CATALOG_ARTIFACTS parameter in the config.ini file.
 
-This capability allows to combine separate artifacts, created in different projects (or different spaces), into a single artifact. Hence, the artifact files can be copied from one project to another, and upon deployment, they will be combined into one MTable.
+This capability allows the combination of separate artifacts, created in different projects (or different spaces), into a single artifact. Hence, the artifact files can be copied from one project to another, and upon deployment, they will be combined into one MTable.
 
 Note that if either the ```catalog_field_info.csv``` or ```catalog_relations_info.csv``` file exists in the Project tree, it should be manually deleted.
+
+### Build Artifacts Progress Bar
+
+Starting from Fabric V8.4, once building of the artifacts has been started, the progress popup screen opens in the right-bottom part of the screen and it shows the process progress.
+
+<img src="../images/build_artifact_start.png" />
+
+
 
 
 
