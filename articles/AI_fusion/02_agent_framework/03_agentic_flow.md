@@ -143,4 +143,4 @@ The information is gathered into the aifusion LU tables, so that trace can be do
 
 The information is also accessible in the **Trace pane** of the **Chat Playground**, part of the AI Fusion app. Here, you can create chats and view a detailed trace showing what the user asked, the inputs and outputs of each called agent and tool, and the number of tokens consumed at each step.
 
-This Trace pane is available in addition to the comprehensive debugging capabilities and visibility at the Broadway flows and Java code within the Studio.
+The Trace pane is available in addition to the comprehensive debugging capabilities and visibility at the Broadway flows and Java code within the Studio.
