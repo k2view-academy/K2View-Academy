@@ -1,21 +1,23 @@
 # Installation
 
 #### Requirements & Assumptions
-  1. Fabric Version – Fabric version 8.2 or higher is required.
-  2. PostgreSQL Integration – The project must have PostgreSQL integrated and available for operational and reporting data.
-
+    1. Fabric Version – Fabric version 8.2 or higher is required.
+    2. PostgreSQL Integration – The project must have PostgreSQL integrated and available for operational and reporting data.
 
 #### Install from K2 Exchange
-  1. Click on the Extensions Icon in Fabric Studio Web
-  2. Search for `k2verify`
-  3. Click the install Button
 
-![Extensions](https://raw.githubusercontent.com/k2view/libs-exchange-resources/main/d2d-images/k2verifyExtention.png)
+    1. Click on the Extensions Icon in Fabric Studio Web
+    2. Search for `Verify`
+    3. Click the install Button
+
+![Extensions](https://raw.githubusercontent.com/k2view/libs-exchange-resources/main/d2d-images/verifyInstall.png)
 
 
-#### Validate k2verify Library components are added to your Cloud Space
-  1. Logical Units
-      - k2verify
+
+
+#### Validate Verify Library components are added to your Cloud Space
+  1. Logical Units:
+      - k2verify.
   2. Shared Objects
       - Broadway:
         * A new folder named `k2verify`: contains all Broadway flows provided by the k2verify library.
@@ -27,4 +29,4 @@
         * A new Interface under `Other` named `K2VERIFY_SRC_CASS_DETAILS`: holds connection details for the Cassandra source database.
         * A new Interface under `Other` named `K2VERIFY_TAR_CASS_DETAILS`: holds connection details for the Cassandra target database
   3. Libraries:
-      - A new jar file under `lib` named `json-20240303`
+      - A new jar file under `lib` named `json-20240303`.

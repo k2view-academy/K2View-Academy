@@ -2,11 +2,11 @@
 
 **What Are Buckets?**
 
-To improve performance, k2verify splits large tables into smaller groups called buckets and processes them in parallel—similar to dividing a large task among multiple workers.
+To improve performance, Verify splits large tables into smaller groups called buckets and processes them in parallel—similar to dividing a large task among multiple workers.
 
 **Default Bucket Distribution Method**
 
-By default, k2verify assigns records to buckets based on the table’s key values using a deterministic and evenly distributed method:
+By default, Verify assigns records to buckets based on the table’s key values using a deterministic and evenly distributed method:
 
 - **Single numeric key**
   - The record is assigned to a bucket using:
@@ -34,8 +34,8 @@ You may consider customizing the bucket distribution logic when you need better 
 **When Can You Skip This Section?**
 
 You can safely skip bucket customization if:
-* The default even distribution provides acceptable performance
-* You do not experience performance bottlenecks during execution
+* The default even distribution provides acceptable performance.
+* You do not experience performance bottlenecks during execution.
 
 For most environments, the default bucket distribution is sufficient.
 

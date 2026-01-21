@@ -1,7 +1,8 @@
-# k2verify MTable Configuration
+# Verify MTable Configuration
 
 The **k2verify_config** MTable defines the rules for the data verification, allowing customization of the verification logic per field.
 <br>The below customizations are supported:
+
 1. Execute a customized broadway flow to transform the value of a field before it is being compared.
    <br/>**Note:** Custom broadway flow must adhere to specific input and output parameters:
    - Input should be set as 'External' and named 'value' (to receive the original field value).
@@ -115,7 +116,7 @@ Each record in the MTable defines one application table, together with its compa
   <td valign="top">Customized_Key_Comparison</td>
   <td valign="top">
     Unique identifier of the record.<br/>
-    Used for matching source and target table's records.
+    Used for matching source and target table's records. If left empty, the library extracts the PK columns from the Catalog (catalog_field_info mtable)
   </td>
   <td valign="top">Multiple</td>
   <td valign="top">customer_id<b>&#124;</b>ssn</td>
@@ -177,7 +178,7 @@ Each record in the MTable defines one application table, together with its compa
   </td>
   <td valign="top">Single</td>
   <td valign="top">
-    bwGetBucketRows - is the default Broadway flow template used by the k2verify library to distribute table rows across verification buckets. You may override this flow to customize the row-to-bucket distribution logic based on your requirements.<br/>
+    bwGetBucketRows - is the default Broadway flow template used by the Verify library to distribute table rows across verification buckets. You may override this flow to customize the row-to-bucket distribution logic based on your requirements.<br/>
     Alternatively, you can create a new Broadway flow that <strong>accepts the same input parameters</strong> and <strong>produces the same output structure</strong>. Once created, update the <code>Buckets_Method</code> value in the configuration MTable to reference the new flow.
   </td>
 </tr>

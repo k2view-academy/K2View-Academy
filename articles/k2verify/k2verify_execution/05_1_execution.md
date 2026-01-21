@@ -1,9 +1,9 @@
-# k2verify Execution
+# Verify Execution
 
-#### Open the k2verify in the Web Framework
+#### Open the Verify in the Web Framework
 In your Cloud Studio, Click menu at the top left of the screen (hamburger icon) and select **Verify** to open the page.
 
-#### Create a new k2verify task
+#### Create a new Verify task
 Follow the steps below to create a new verification task using the k2verify web interface:
 1. Click on **New Task**
 2. Provide the task details:
@@ -25,22 +25,23 @@ Follow the steps below to create a new verification task using the k2verify web 
     * Concurrency threads per node - Defines the number of concurrent threads executed per table on each node. This setting can be tuned to improve performance through parallel processing or to limit resource usage when needed.
 3. Click on **Save**.
 
-![Extensions](https://raw.githubusercontent.com/k2view/libs-exchange-resources/main/d2d-images/clickNewTask.png)
+![Extensions](https://raw.githubusercontent.com/k2view/libs-exchange-resources/main/d2d-images/newTask.png)
 
 
-![Extensions](https://raw.githubusercontent.com/k2view/libs-exchange-resources/main/d2d-images/saveTask.png)
-
+![Extensions](https://raw.githubusercontent.com/k2view/libs-exchange-resources/main/d2d-images/newTaskScreen.png)
 
 #### Execute the k2verify task
-Follow the steps below to execute the verification task using the k2verify web interface.
+
+Follow the steps below to execute the verification task using the Verify web interface.
 **Steps**:
+
 1. Click on the **Play** icon.
 ![Extensions](https://raw.githubusercontent.com/k2view/libs-exchange-resources/main/d2d-images/playTask.png)
 
 2. Before the task initiation, a validation flow is executed to validate the inputs provided in the task:
-    * Verifies that source and target interfaces are accessible
-    * Confirms that the selected tables exist
-    * Validates that key fields are present in both source and target tables
-    * Checks that the task configuration is valid
+    * Verifies that source and target interfaces are accessible.
+    * Confirms that the selected tables exist.
+    * Validates that key fields are present in both source and target tables.
+    * Checks that the task configuration is valid.
     * In case of error you will be prompted with the relevant error on the screen.
-![Extensions](https://raw.githubusercontent.com/k2view/libs-exchange-resources/main/d2d-images/validationError.png)
+    ![Extensions](https://raw.githubusercontent.com/k2view/libs-exchange-resources/main/d2d-images/validationError.png)

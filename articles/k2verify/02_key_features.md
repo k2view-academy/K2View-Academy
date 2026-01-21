@@ -3,11 +3,11 @@
 - **Comprehensive Mismatch Detection:**
   
   Identifies and reports all types of data discrepancies, including:
-  - Value mismatches – Fields with differing values between source and target
-  - Missing records – Records present in the source but missing from the target
-  - Extra records – Records present in the target but not in the source
-  - Failed transformations – Data that was not transformed according to defined rules
-  - PII masking failures – Sensitive fields that are not properly masked in the target system
+  - Value mismatches – Fields with differing values between source and target.
+  - Missing records – Records present in the source but missing from the target.
+  - Extra records – Records present in the target but not in the source.
+  - Failed transformations – Data that was not transformed according to defined rules.
+  - PII masking failures – Sensitive fields that are not properly masked in the target system.
 
 - **User-Defined and Configurable Parameters:**
   - Allows users to configure verification parameters and adjust comparison behavior to fit different use cases.
@@ -37,4 +37,4 @@
   - Allows exporting results as PDF reports for table summaries and CSV files for record- and field-level analysis.
 
 - **Operational and Historical Tracking:**
-  - Stores execution metadata and historical results in PostgreSQL for auditing and analysis.
+  - Stores execution metadata and historical results in PostgreSQL for auditing and analysis

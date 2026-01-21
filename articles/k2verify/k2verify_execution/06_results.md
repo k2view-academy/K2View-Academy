@@ -1,11 +1,13 @@
-# k2verify Execution Results
+# Verify Execution Results
 
 The Results page provides a comprehensive, multi-level view of verification outcomes for a completed k2verify task. It is designed to help users quickly understand overall status, identify problematic tables, and drill down to individual record and field discrepancies.
 
 #### 1. Open the Results page
-1. go to the results page
-2. click on the execution ID of your task execution
-3. Review and analyze the results
+* Go to the results page.
+
+* Click on the execution ID of your task execution.
+
+* Review and analyze the results.
 
 #### 2. Review and analyze results
 
@@ -42,14 +44,14 @@ Displayed columns:
 * Customized Key – Composite business key identifying the record (based on task configuration).
 * Column Name – Column being validated.
 * Match Result – Validation outcome for the specific field (PASSED / NOT PASSED).
-* Source Column Value – Value retrieved from the source system.  
-* Target Column Value – Value retrieved from the target system.  
+* Source Column Value – Value retrieved from the source system.
+* Target Column Value – Value retrieved from the target system.
 
 *This section enables*:
 
-* Root-cause analysis of failed validations
-* Verification of PII masking behavior
-* Identification of schema, data, or transformation issues
+* Root-cause analysis of failed validations.
+* Verification of PII masking behavior.
+* Identification of schema, data, or transformation issues.
 
 **How PII Fields Are Displayed in Results**: 
 
@@ -57,11 +59,11 @@ To protect sensitive data, k2verify never exposes actual PII values in the resul
 
 Display Rules
   * Source Column Value:
-    * Always displayed as "*"
+    * Always displayed as "*".
 
   * Target Column Value:
-    * If verification PASSED → Displays the masked value (for example: XXX-XX-1234)
-    * If verification FAILED → Displays "*"
+    * If verification PASSED → Displays the masked value (for example: XXX-XX-1234).
+    * If verification FAILED → Displays "*".
 
 *Why This Matters:*
 
@@ -80,11 +82,12 @@ Use the Download Report option to export the task results for offline review and
 Two file formats are generated as part of the report download:
 
 1. PDF Report
-    * Contains the table-level summary of the verification results.
-    * Provides a high-level overview suitable for sharing, auditing, and reporting.
-
-2. ZIP Archive
-    * Contains CSV files per table for detailed analysis:
-      * Record-level summary CSV – Verification results per record.
-      * Field-level summary CSV – Verification results per field.
-    * These files enable detailed investigation, historical tracking, and external analysis of verification results.
+   * Contains the table-level summary of the verification results.
+   * Provides a high-level overview suitable for sharing, auditing, and reporting.
+2. CSV File
+   * Lists all PII columns included in the verification process for each table.
+3. ZIP Archive
+   * Contains CSV files per table for detailed analysis:
+     * Record-level summary CSV – Verification results per record.
+     * Field-level summary CSV – Verification results per field.
+   * These files enable detailed investigation, historical tracking, and external analysis of verification results.

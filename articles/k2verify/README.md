@@ -1,4 +1,4 @@
-<strong>k2verify<strong>    
+<strong>Verify<strong>    
 
 <ul>
 	<li><a href="01_overview.md">Verify Overview</a></li>

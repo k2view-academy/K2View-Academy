@@ -1,4 +1,4 @@
-<strong>k2verify Configurations<strong>
+<strong>Verify Configurations<strong>
 
 <ul>
 	<li><a href="04_1_interfaces_configuration.md">Interfaces Configuration</a></li>

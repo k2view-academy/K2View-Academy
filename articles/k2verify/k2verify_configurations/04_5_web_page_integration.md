@@ -1,8 +1,8 @@
 # Web Page Integration
 
-##### Integrate k2verify Web Page
+##### Integrate Verify Web Page
 If your Cloud Studio environment already uses an apps.json file, follow the steps below to merge the k2verify application entry.
-1. In your Cloud Studio, navigate to: Logical Units->k2verify->Web->apps.json
+1. In your Cloud Studio, navigate to: Logical Units->k2verify->Web->apps.json.
 2. Open the file and copy the following JSON entry:
     ` { "name": "Verify", "appId": "k2verify" }`
 3. Paste the copied JSON entry into your existing apps.json file.

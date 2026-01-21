@@ -1,19 +1,20 @@
-# k2verify Globals Configuration
+# Verify Globals Configuration
 
 Configure the following Globals to ensure successful execution of the library.
 
 **REQUIRED GLOBALS:**
 
-These Globals must be defined for k2verify to operate correctly.
+These Globals must be defined for Verify to operate correctly.
 1. **K2VERIFY_OPERATIONAL_INTERFACE**: Interface used to store k2verify operational tables, operational data, and report data.
     - In the current version, PostgreSQL is supported for the operational interface.
     - Default value: K2VERIFY_OPERATIONAL_DB (provided with the library).
     - To use a different interface, update this Global to an existing PostgreSQL interface. 
-2. **K2VERIFY_OPERATIONAL_SCHEMA**: Schema used for k2verify operational tables, operational data, and report data (for the interface defined in K2VERIFY_OPERATIONAL_INTERFACE).
+2. **K2VERIFY_OPERATIONAL_SCHEMA**: Schema used for Verify operational tables, operational data, and report data (for the interface defined in K2VERIFY_OPERATIONAL_INTERFACE).
+3. **K2VERIFY_RESULT_FILES_PATH**: Directory path where the operational files and generated result files are stored during execution.
 
 **OPTIONAL GLOBALS:**
 
-Define these Globals only when executing k2verify on Cassandra source or target tables.
+Define these Globals only when executing Verify on Cassandra source or target tables.
 
 1. **K2VERIFY_CQLSH_BIN_DIR**:
     Directory path to the CQLSH binary.

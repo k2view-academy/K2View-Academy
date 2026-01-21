@@ -1,6 +1,6 @@
-# k2verify Monitoring
+# Verify Monitoring
 
-#### Monitor the k2verify task
+#### Monitor the Verify task
 Monitor the task execution from the page displayed after task initiation, or by clicking the Monitor icon on the task record in the main `Tasks` page
 ![Extensions](https://raw.githubusercontent.com/k2view/libs-exchange-resources/main/d2d-images/monitorTask.png)
 
