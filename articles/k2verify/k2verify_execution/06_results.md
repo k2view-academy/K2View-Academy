@@ -1,6 +1,6 @@
 # Verify Execution Results
 
-The Results page provides a comprehensive, multi-level view of verification outcomes for a completed k2verify task. It is designed to help users quickly understand overall status, identify problematic tables, and drill down to individual record and field discrepancies.
+The Results page provides a comprehensive, multi-level view of verification outcomes for a completed Verify task. It is designed to help users quickly understand overall status, identify problematic tables, and drill down to individual record and field discrepancies.
 
 #### 1. Open the Results page
 * Go to the results page.
@@ -55,7 +55,7 @@ Displayed columns:
 
 **How PII Fields Are Displayed in Results**: 
 
-To protect sensitive data, k2verify never exposes actual PII values in the results view.
+To protect sensitive data, Verify never exposes actual PII values in the results view.
 
 Display Rules
   * Source Column Value:
