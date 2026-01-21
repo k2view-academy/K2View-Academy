@@ -438,15 +438,15 @@
 			"visible in main": true,
 			"topics": [
 				{
-					"display name": "k2verify Overview",
+					"display name": "Verify Overview",
 					"value": "k2verify"
 				},
 				{
-					"display name": "k2verify Configuration",
+					"display name": "Verify Configuration",
 					"value": "k2verify/k2verify_configurations"
 				},
 				{
-					"display name": "k2verify Execution & Results",
+					"display name": "Verify Execution & Results",
 					"value": "k2verify/k2verify_execution"
 				}
 			]
