@@ -1,6 +1,6 @@
 # The Agentic Flow: Core Concepts and Execution Model
 
-An agentic workflow is typically composed of several core steps. This article describes a recommended flow within the AI Fusion agent framework. an agentic workflow is built as Broadway flow at the project's implementation.
+An agentic workflow is typically composed of several core steps. This article describes a recommended flow within the AI Fusion agent framework. An agentic workflow is built as Broadway flow at the project's implementation.
 
 The flow's high-level steps are as follows (numbers and signs correspond to the below diagram):
 
@@ -86,7 +86,7 @@ At a high level, the framework performs the following steps:
 
 * **Decide** — Select the most suitable response path based on the request’s complexity and available information.
 
-* **Act** — Execute the selected path, which may involve calling tools, invoking sub-agents, or running multi-step plans.
+* **Act** — Execute the selected path, which may involve calling tools, invoking subagents, or running multi-step plans.
 
 As execution progresses, additional information may be retrieved or generated and added to the context, enabling more informed decisions in subsequent steps.
 
@@ -133,11 +133,11 @@ Here is a typical agentic flow illustration (numbers and signs refers to those m
 
 ## Debug, Trace and Control
 
-During the agent flows, the platform logs and collects information about the agents' usage with the agentic flow, for:
+During the agent flows, the platform logs and collects information about the agent usage with the agentic flow, for:
 
 - **Comprehensive Auditing** — ensures every agent interaction and processing step can be audited and traced.  
 - **Cost Management** — provides tracking and monitoring of token usage for cost control, in vast granularity information, by model and agents and for input, output and cached tokens.
-- **Maintainability and Continues Improvement** — Each agent and tool call is logged so that later on can be analyzed and accordingly to improve agents performance. 
+- **Maintainability and Continuous Improvement** — Each agent and tool call is logged so that later on can be analyzed and accordingly to improve agents performance. 
 
 The information is gathered into the aifusion LU tables, so that trace can be done a specific conversation session, as well into the Assurance metrics DB, for overall observation and insights.
 
