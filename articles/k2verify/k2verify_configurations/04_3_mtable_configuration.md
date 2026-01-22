@@ -115,7 +115,7 @@ Each record in the MTable defines one application table, together with its compa
   <td valign="top">Customized_Key_Comparison</td>
   <td valign="top">
     Unique identifier of the record.<br/>
-    Used for matching source and target table's records. If left empty, the library extracts the PK columns from the Catalog (catalog_field_info mtable).
+    Used for matching source and target table's records. If left empty, the PK columns are extracted from the Catalog (catalog_field_info mtable).
   </td>
   <td valign="top">Multiple</td>
   <td valign="top">customer_id<b>&#124;</b>ssn</td>
@@ -125,7 +125,7 @@ Each record in the MTable defines one application table, together with its compa
   <td valign="top">PII_Columns</td>
   <td valign="top">
     PII Columns names separated by a pipe delimiter.<br/>
-    Used for PII verification use case. If left empty, the library extracts the PII columns from the Catalog (catalog_field_info mtable).
+    Used for PII verification use case. If left empty, the PII columns are extracted from the Catalog (catalog_field_info mtable).
 
   </td>
   <td valign="top">Multiple</td>
@@ -185,7 +185,7 @@ Each record in the MTable defines one application table, together with its compa
   </td>
   <td valign="top">Single</td>
   <td valign="top">
-    bwGetBucketRows - is the default Broadway flow template used by the Verify library to distribute table rows across verification buckets. You may override this flow to customize the row-to-bucket distribution logic based on your requirements.<br/>
+    bwGetBucketRows - is the default Broadway flow template used by Verify to distribute table rows across verification buckets. You may override this flow to customize the row-to-bucket distribution logic based on your requirements.<br/>
     Alternatively, you can create a new Broadway flow that <strong>accepts the same input parameters</strong> and <strong>produces the same output structure</strong>. Once created, update the <code>Buckets_Method</code> value in the configuration MTable to reference the new flow.
   </td>
 </tr>
