@@ -1,13 +1,13 @@
 # Verify Globals Configuration
 
-Configure the following Globals to ensure successful execution of the library.
+Configure the following Globals to ensure a successful execution.
 
 **REQUIRED GLOBALS:**
 
 These Globals must be defined for Verify to operate correctly.
 1. **K2VERIFY_OPERATIONAL_INTERFACE**: Interface used to store k2verify operational tables, operational data, and report data.
     - In the current version, PostgreSQL is supported for the operational interface.
-    - Default value: K2VERIFY_OPERATIONAL_DB (provided with the library).
+    - Default value: K2VERIFY_OPERATIONAL_DB.
     - To use a different interface, update this Global to an existing PostgreSQL interface. 
 2. **K2VERIFY_OPERATIONAL_SCHEMA**: Schema used for Verify operational tables, operational data, and report data (for the interface defined in K2VERIFY_OPERATIONAL_INTERFACE).
 3. **K2VERIFY_RESULT_FILES_PATH**: Directory path where the operational files and generated result files are stored during execution.
