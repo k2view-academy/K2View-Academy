@@ -13,7 +13,7 @@
 
 ![Extensions](https://raw.githubusercontent.com/k2view/libs-exchange-resources/main/d2d-images/testConnection.png)
 
-2. In case one of the source or target databases is Cassandra, Configure the following custom interfaces provided by the library
+2. In case one of the source or target databases is Cassandra, Configure the following custom interfaces
     - In your Cloud Studio, Navigate to Implementation->Shared Objects->Interfaces->Other.
     - Open `K2VERIFY_SRC_CASS_DETAILS` interface..
     - Enter the required connection details for your Cassandra source database:
