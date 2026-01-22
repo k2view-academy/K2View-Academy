@@ -15,15 +15,15 @@
 
 
 
-#### Validate Verify Library components are added to your Cloud Space
+#### Validate Verify components are added to your Cloud Space
   1. Logical Units:
       - verify.
   2. Shared Objects
       - Broadway:
-        * A new folder named `k2verify`: contains all Broadway flows provided by the k2verify library.
+        * A new folder named `k2verify`: contains all Broadway flows provided by the product.
       - Java:
         * A new resource file under `recources` named `k2verify`: contains SQL create statements for operational and report tables.
-        * A new java folder under `common` named `k2verify`: contains the Java logic used by the k2verify library.
+        * A new java folder under `common` named `k2verify`: contains the Java logic used by the product.
       - Interfaces:
         * A new Interface under `JDBC` named `K2VERIFY_OPERATIONAL_DB`: operational interface used for k2verify operational tables and reporting data.
         * A new Interface under `Other` named `K2VERIFY_SRC_CASS_DETAILS`: holds connection details for the Cassandra source database.
