@@ -1,4 +1,4 @@
-# Library Deployment
+# LU Deployment
 
 Deploy the `verify` Logical Unit:
 1. In your Cloud Studio, navigate to: Logical Units->verify.

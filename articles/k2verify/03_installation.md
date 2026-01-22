@@ -36,7 +36,5 @@
 Follow the steps below to merge the Verify application entry into the `apps.json` file
 
 1. In your Cloud Studio, navigate to the existing apps.json file.
-2. Open the file and copy the following JSON entry:
-   ` { "name": "Verify", "appId": "k2verify" }`
-3. Paste the copied JSON entry into your existing apps.json file.
-4. Save the file and ensure the JSON structure remains valid.
+2. Paste the following JSON entry: ` { "name": "Verify", "appId": "k2verify" }` into your existing apps.json file.
+3. Save the file and ensure the JSON structure remains valid.

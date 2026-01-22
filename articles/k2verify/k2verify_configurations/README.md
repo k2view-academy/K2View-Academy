@@ -7,4 +7,3 @@
 	<li><a href="04_4_bucket_distribution.md">Bucket Distribution</a></li>
 	<li><a href="04_5_lu_deployment">Library Deployment</a></li>
 </ul>
-
