@@ -49,14 +49,14 @@ If you wish to implement custom logic for distributing table rows across buckets
     * bucketsNum – Total number of buckets.
     * bucketID – Identifier of the bucket to which rows should be assigned.
     * interfaceType – Type of the interface (PostgreSQL, Oracle, Cassandra, DB2).
-    * customizedKey – List of comparison key columns, separated by the library delimiter.
-    * delimiter – Delimiter defined by the library configuration.
+    * customizedKey – List of comparison key columns, separated by the defined delimiter.
+    * delimiter – Delimiter defined in K2VERIFY_CONF_SEPARATOR global.
     * excludeCondition – Condition defined in the Excluded_Rows_Sql field.
 
 3. Define Flow Output
     * bucketRows – An array of maps representing the rows assigned to the bucket.
     Each map entry uses customizedKey as the key.
-    The value is the combined customized key values, separated by the library delimiter. Example output:
+    The value is the combined customized key values, separated by the defined delimiter. Example output:
     `[
       { "CUSTOMER_ID|SSN": "3|948374937" },
       { "CUSTOMER_ID|SSN": "11|1706304573" },
