@@ -316,7 +316,7 @@ Please check the release notes for component version support, such as Kafka, Neo
 				<p>Feb 14, 2024</p>
 			</td>
 			 <td>
-                <p><a href="/Release_Notes/V8.2/Fabric_Release_Notes_V7.2.2_HF29.pdf">HF29</a></p>
+                <p><a href="/Release_Notes/V7.2/Fabric_Release_Notes_V7.2.2_HF29.pdf">HF29</a></p>
                 <p>Jan 26, 2026</p>
             </td>
             <td>369</td>
