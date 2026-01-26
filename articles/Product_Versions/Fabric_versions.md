@@ -317,9 +317,8 @@ Please check the release notes for component version support, such as Kafka, Neo
 			</td>
 			 <td>
                 <p><a href="/Release_Notes/V8.2/Fabric_Release_Notes_V7.2.2_HF29.pdf">HF29</a></p>
-                <p>Nov 14, 2025</p>
+                <p>Jan 26, 2026</p>
             </td>
-            <td>Jan 26, 2026</td>
             <td>369</td>
             <td>15.4</td>
             <td>4.1.8</td>            
