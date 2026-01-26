@@ -5,17 +5,17 @@ Fabric has a robust Auditing mechanism that logs various activities running on F
 ## Table of Contents
 
 1. [When to Enable Auditing in Production](#when-to-enable-auditing-in-production)  
-3. [When Auditing Should Not Be Enabled](#when-auditing-should-not-be-enabled)  
-4. [Turning Auditing On/Off](#turning-auditing-onoff)  
-7. [What Gets Audited](#what-gets-audited)  
-8. [Auditing Reporting Structure](#auditing-reporting-structure)  
-9. [Auditing Reporting Examples](#auditing-reporting-examples)  
+3. [When Should Auditing Not Be Enabled](#when-should-auditing-not-be-enabled)  
+4. [Turning Auditing ON/OFF](#turning-auditing-onoff)  
+7. [Activities Subject To Auditing](#activities-subject-to-auditing)  
+8. [Audit Report Structure](#audit-report-structure)  
+9. [Audit Report Examples](#audit-report-examples)  
 
 ## When to Enable Auditing in Production
 
 Auditing is particularly useful in production environments, where system integrity, accountability, and regulatory compliance are essential. Enabling auditing ensures that user actions and system events are accurately recorded for analysis, compliance, and troubleshooting purposes.
 
-Here’s a list of common activities audited in production:
+The following list presents common activities audited in production:
 
 <table border="1">
   <thead>
@@ -55,7 +55,7 @@ Here’s a list of common activities audited in production:
     </tr>
     <tr>
       <td></td>
-      <td>- Feature enablement/disabling (e.g., turning audit ON/OFF)</td>
+      <td>- Feature enablement/disabling (e.g., turning auditing ON/OFF)</td>
     </tr>
     <tr>
       <td>Deployment Actions</td>
@@ -83,7 +83,7 @@ Here’s a list of common activities audited in production:
     </tr>
     <tr>
       <td>Web Service Usage</td>
-      <td>- Web service calls via Fabric endpoints</td>
+      <td>- Web Service calls via Fabric endpoints</td>
     </tr>
     <tr>
       <td></td>
@@ -109,7 +109,7 @@ Here’s a list of common activities audited in production:
 </table>
 
 
-## When Auditing Should Not Be Enabled
+## When Should Auditing Not Be Enabled
 
 Auditing is not recommended in development environments, particularly when using Fabric Web Studio.
 
@@ -119,32 +119,32 @@ In development environments, Fabric Web Studio often executes actions on behalf 
 
 - Both user-driven actions and system-initiated background tasks by Web Studio will be logged.
 - This results in misleading or noisy audit records that do not accurately reflect user behavior.
-- There is no operational benefit, as this environment is typically used for prototyping or testing—not production governance or compliance.
+- There is no operational benefit, as this environment is typically used for prototyping or testing rather than for production governance or compliance.
 
 **Recommendation:**  
-Do not enable auditing in development environments where Fabric Web Studio is employed. It provides no added value and may introduce confusion in interpreting activity logs.
+Auditing should not be enabled in development environments that use Fabric Web Studio, since it is unnecessary. When auditing is directed to the logs, it may lead to confusion during log interpretation and cause information overload for users.
 
 
 
-## Turning Auditing On/Off
+## Turning Auditing ON/OFF
 
-By default, Auditing is set to OFF. To enable Auditing in Fabric, set **AUDIT=ON** using K2admin's Configuration panel and set a configuration override for AUDIT. You then need to restart the K2cloud space.
+By default, Auditing is set to OFF. To enable Auditing in Fabric, set **AUDIT=ON** using the [K2admin's Configuration tab](/articles/30_web_framework/03_web_admin_application.md) and set a configuration override to AUDIT. The K2cloud space must then be restarted.
 
 ~~~
 AUDIT=ON
 ~~~
 
 
-## What Gets Audited
+## Activities Subject To Auditing
 
 Fabric auditing tracks the following activity types:
 
 - System logins  
 - All executed Fabric commands  
-- Web-Service calls  
+- Web Service calls  
 - All executed data queries (read and write)
 
-## Auditing Reporting Structure
+## Audit Report Structure
 
 When an activity is captured by the Fabric Auditing mechanism, it is logged with the following fields:
 
@@ -200,7 +200,7 @@ When an activity is captured by the Fabric Auditing mechanism, it is logged with
 </table>
 
 
-## Auditing Reporting Examples
+## Audit Report Examples
 
 <table border="1" class="dataframe">
   <thead>
@@ -376,12 +376,12 @@ When an activity is captured by the Fabric Auditing mechanism, it is logged with
 
 ## Auditing Settings
 
-Two major Auditing features can be controlled:
+There are two major controllable features within the Auditing mechanism:
 
--  **Filtering strategies:** provides full flexibility over the type of activities that are introduced to the Auditing mechanism. For instance, you may audit the Web Service calls only, without impacting the performance of other activities but with saving a lot of disk space. Read [here](02_filtering_strategy.md) for more details.
--  **Persistence strategies:** defines the reporting channel of the Auditing mechanism. Examples for such channels are system_db (default), Kafka, files, etc. Read [here](03_persistence_strategy.md) for more details.
+-  **Filtering:** Through various strategies, this feature provides full control over which activities are tracked by the Auditing mechanism. For instance, you can audit only Web Service calls, minimizing impact on other activities while saving disk space. Read [here](02_filtering_strategy.md) for more details.
+-  **Persistence:** Through various strategies, this feature defines the reporting channels for the Auditing mechanism. Examples of these channels include System DB (default), Kafka, and Fabric log. Read [here](03_persistence_strategy.md) for more details.
 
-The Auditing mechanism can be configured via the **[audit]** and **[audit_kafka_producer]** sections of the **config.ini**. By default, the persistence strategy is system database, and the data is written into the **k2_auditing** table of the [k2audit](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) keyspace.
+The Auditing mechanism can be set in the **[audit]** and **[audit_kafka_producer]** sections of Fabric Configuration, using the [K2admin's Configuration tab](/articles/30_web_framework/03_web_admin_application.md). The default persistence strategy is set to System DB, where the data is written into the **k2_auditing** table of the [k2audit](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) keyspace.
 
 
 

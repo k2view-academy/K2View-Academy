@@ -1,24 +1,24 @@
-# Filtering Strategy
+# Auditing Mechanism — Filtering
 
 The list of activities reported by the Auditing mechanism can be controlled. 
 
-Once the AUDIT parameter is set to ON in **config.ini**, all Fabric activities are logged by the Fabric Auditing mechanism.
+Once the AUDIT parameter is set to ON, all Fabric activities are logged by the Fabric Auditing mechanism.
 
-In order to limit the auditing to a specific predefined list of activities, the AUDIT_FILTER_STRATEGY parameter in the **config.ini** should be populated with the full path of the class defining the filter strategy. 
+In order to refine auditing to a specific predefined list of activities, the AUDIT_FILTER_STRATEGY parameter should be populated with the full path of the class that defines the filtering strategy. 
 
 ###  How Can I Define the Auditing Filter?
 
-In order to define the auditing filter, start from the sample provided as part of the Fabric installation and modify it according to your needs. 
+Defining the auditing filter starts with the sample provided as part of the Fabric installation, which you can then modify as needed. 
 
-Alternatively, create a new class under the **com.k2view.external.fabric.audit.filters** folder. Note that the  filter class should implement the **com.k2view.external.fabric.audit.filters.AuditingFilter** interface.
+Alternatively, you can create a new class under the **com.k2view.external.fabric.audit.filters** folder. Note that the filter class should implement the **com.k2view.external.fabric.audit.filters.AuditingFilter** interface.
 
-Take the following steps in order to build the artifacts:
+Follow the following steps in order to build the artifacts:
 
 1. Copy the project located under $K2_HOME/fabric/samples/AuditCustomStrategies locally.  
 
    * For example, copy from **C:\K2View\Fabric_6.5\Server\fabric\samples\AuditCustomStrategies** to your local **AuditCustomStrategies** directory.
 
-2. Create a directory **k2view-libs** under **AuditCustomStrategies** directory.
+2. Create a directory named **k2view-libs** under the **AuditCustomStrategies** directory.
 
 3. Copy the files $K2_HOME/fabric/lib/fabric/fabric-common-[version-num].jar and auditing-[version-num].jar to your local **k2view-libs** folder. 
 
@@ -26,26 +26,26 @@ Take the following steps in order to build the artifacts:
 
 5. Import project **AuditCustomStrategies** via the IntelliJ menu **File > New > Project from Existing Source**.
 
-6. Choose libraries either via the IntelliJ menu **File > Project Structure** or by typing **CTRL+ALT+SHIFT+S**.
+6. Choose libraries using the IntelliJ menu: **File > Project Structure**, or by pressing **CTRL+ALT+SHIFT+S**.
 
-   * In the **Project Structure** screen, click **Libraries > the + sign > Java** and select the above two Jars.
+   * In the **Project Structure** window, click **Libraries > + icon > Java** and select the top two Jars.
 
      <img src="images/02_filter_select_lib.png" style="zoom:80%;" />
 
    * Click **OK**.
 
-7. In the **Project Structure** screen, click **Artifacts > the + sign > JAR > From modules with dependencies**.
+7. In the **Project Structure** window, click **Artifacts > + icon > JAR > From modules with dependencies...**
 
    <img src="images/02_choose_artifacts.png" style="zoom:80%;" />
 
    * Choose the **Main class**, which can be either All, filter strategies or persistency strategies. 
    * Click **OK**.
 
-8. Click **Build > Build Artifacts** in IntelliJ menu and select the **Build** action.
+8. Click **Build > Build Artifacts** in the IntelliJ menu and select the **Build** action.
 
 9. The artifacts are created under the AuditCustomStrategies/out/artifacts folder. 
 
-10. Copy the created artifact JARs to the **$K2_HOME/ExternalJars** directory. 
+10. Copy the created JARs artifact to the **$K2_HOME/ExternalJars** directory. 
 
 11. Update the **config.ini** file with the full path of the filtering class in the **AUDIT_FILTER_STRATEGY** parameter. 
 
@@ -61,9 +61,9 @@ Take the following steps in order to build the artifacts:
 
 13. Restart the Fabric node.
 
-### Example of Reporting Web Services Only
+###  Reporting on Web Services Only — Example
 
-The following example displays the filter class **com.k2view.external.fabric.audit.filters.SampleFilter** that performs auditing of the Web Service calls only.
+The following example displays the **com.k2view.external.fabric.audit.filters.SampleFilter** filter class, which audits only Web Service calls.
 
 ~~~java
    package com.k2view.external.fabric.audit.filters;
@@ -93,7 +93,7 @@ The following example displays the filter class **com.k2view.external.fabric.aud
    }
 ~~~
 
-The WS calls are populated in the  **k2_auditing** table in system DB as follows:
+The Web Service calls are populated in the **k2_auditing** table in system DB as follows:
 
 <studio>
 

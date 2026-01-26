@@ -348,6 +348,10 @@
 					"value": "98_installation_and_upgrade/K2cloud_Space_Profiles"
 				},
 				{
+					"display name": "Image Digital Signature Verification",
+					"value": "98_installation_and_upgrade/Image_DSig_Validation"
+				},
+				{
 					"display name": "Installation",
 					"sub-topics": [
 						{
@@ -430,6 +434,25 @@
 				{
 					"display name": "Infrastructure Security",
 					"value": "99_fabric_infras"
+				}
+			]
+		},
+		{
+			"group display name": "Verify",
+			"group icon": "images/verify-icon.png",
+			"visible in main": true,
+			"topics": [
+				{
+					"display name": "Verify Overview",
+					"value": "k2verify"
+				},
+				{
+					"display name": "Verify Configuration",
+					"value": "k2verify/k2verify_configurations"
+				},
+				{
+					"display name": "Verify Execution & Results",
+					"value": "k2verify/k2verify_execution"
 				}
 			]
 		}

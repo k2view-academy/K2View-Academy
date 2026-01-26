@@ -14,4 +14,5 @@
     <li><a href="/articles/26_fabric_security_iam/15_user_IAM_SAML_Okta_setup.md">Okta SAML Setup Guide</a></li>
     <li><a href="/articles/26_fabric_security_iam/16_user_IAM_auditing.md">User IAM Auditing</a></li>
     <li><a href="/articles/26_fabric_security_iam/17_user_IAM_custom_authenticator.md">User IAM Custom Authenticator</a></li>
+    <li><a href="/articles/26_fabric_security_iam/18_fabric_and_aws_iam.md">How Fabric Leverages AWS IAM in a Kubernetes Environment</a></li>
 </ul>

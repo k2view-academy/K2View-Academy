@@ -2,7 +2,15 @@
 
 The Amazon S3 Storage interface type is used to define the connections between S3 bucket and a data stream.
 
-When creating an [Interface Listener for a Broadway flow](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows), an Amazon S3 Storage interface is needed to detect new files added to the S3 storage.
+When creating an [Interface Listener for a Broadway flow](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows), an Amazon S3 Storage interface is required to detect new files added to S3.
+
+### Authentication
+
+The AWS S3 interface supports two modes of authentication: 1) use of an Access Key and Secret Access Key, and 2) short-lived credentials using AWS STS and IRSA. 
+
+To learn how Fabric leverages AWS STS and IRSA, please refer to the <a href="/articles/26_fabric_security_iam/18_fabric_and_aws_iam.md">How Fabric Leverages AWS IAM in a Kubernetes Environment</a> article. 
+
+### Creating the Interface
 
 To create a new Amazon S3 Storage interface, do the following:
 
@@ -67,11 +75,18 @@ To create a new Amazon S3 Storage interface, do the following:
 </tr>
 <tr>
 <td><strong>Access key ID</strong></td>
-<td>The AWS access key ID for authentication. This is a 20-character alphanumeric identifier that works with the secret access key to authenticate API requests to AWS services.</td>
+<td>The AWS access key ID for authentication. This is a 20-character alphanumeric identifier that works with the secret access key to authenticate API requests to AWS services.
+
+<br>If you are using AWS STS/IRSA-based authentication, leave this field blank.
+
+</td>
 </tr>
 <tr>
 <td><strong>Secret access key</strong></td>
-<td>The AWS secret access key paired with the access key ID. This is a 40-character base64-encoded string that must be kept secure and should not be shared or exposed in code.</td>
+<td>The AWS secret access key paired with the access key ID. This is a 40-character base64-encoded string that must be kept secure and should not be shared or exposed in code.
+
+<br>If you are using AWS STS/IRSA-based authentication, leave this field blank.
+</td>
 </tr>
 <tr>
 <td><strong>Region</strong></td>

@@ -41,8 +41,8 @@ In V7.2  the **jdbc-tester.sh** utility has been added to test the use of a JDBC
 </studio>
 
 <web>
-    
-    
+        
+
 1. Go to the **Top Menu**, then select > **Fabric** > **New Interface**.
 
 
@@ -58,8 +58,7 @@ The following screenshots display a list of available Interface Types.
 
 4. Populate the [**Connection Details**](/articles/05_DB_interfaces/03_DB_interfaces_overview.md#database-connection-settings).
 
-    * For DB Interface types other than Oracle, PostgreSQL or SQL Server, go to the project's **Lib directory** in Windows at:
-    **[Fabric Project's Directory]\\[Project Name]\lib** and add a **JDBC driver jar** of this DB type there.   
+    * For DB Interface types other than Oracle, PostgreSQL or SQL Server, go to the project's **Lib directory** and add a **JDBC driver jar** of this DB type there.   
     
     * To check if the connection settings are correct, click **Test Connection**:
        * If the connection is OK, the **Connection is OK** notification is displayed on the bottom of the window.
@@ -73,9 +72,17 @@ The following screenshots display a list of available Interface Types.
 6. Optional: Set the [**Post Connection Commands**](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md#post-connection-commands) to define multi commands to be executed post JDBC interface connection on the DB Interface.
 
 7. Select **File-> Save** or enter **CTRL-S** to save this interface. 
+
+
+
 </web>
 
+
 [Click for more information about the Database Types](/articles/05_DB_interfaces/10_database_types.md).
+
+
+
+<studio>
 
 ### DB Interface Window
 
@@ -83,7 +90,7 @@ The DB Interface window enables you to define DB interfaces for your project. By
 
 
 #### Generic Interface Definition
-<studio>
+
 ![image](images/05_04_03%20Generic%20Interface%20Definition.png)
 
 
