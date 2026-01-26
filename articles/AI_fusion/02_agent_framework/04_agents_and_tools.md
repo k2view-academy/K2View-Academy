@@ -55,8 +55,6 @@ A good practice for provisioning and maintaining it is to create an MTable at th
 
 
 
-
-
 ## Tools
 
 Tools are Broadway flows designed to perform specific actions. They can be fully automated or LLM-assisted.

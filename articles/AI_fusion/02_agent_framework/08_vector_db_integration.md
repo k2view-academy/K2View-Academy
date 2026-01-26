@@ -16,13 +16,36 @@ Accordingly, AI Fusion supports these two vector DBs - SQLite and PostgresSQL.
 
 
 
-The Vector DB integrations prerequisite and building blocks can be found at the GenAI [preparations and setup](). 
+## Setup
+
+### PostgresSQL
+
+* **Docker** use this pgvector image, a pre-built container that already includes PostgreSQL 16 with the pgvector extension installed and ready to use: https://hub.docker.com/r/pgvector/pgvector
+
+Read [here](https://github.com/pgvector/pgvector) for more information about PG vector installation and usage.
+
+## SQLite
+
+To enable vector usage within SQLite you shall set the SQLITE_EXTENSIONS at Fabric configuration.
+
+1. Update via Admin Pages → Configuration 
+   - Choose to show Hidden as well as Show All
+   - Filter attributes by `fabricdb` section 
+   - For the `SQLITE_EXTENSIONS` attribute key set the value to be `vec0`
+2. Alternatively, do it at the `config.ini` file:
+   - Set the following:   `SQLITE_EXTENSIONS = vec0`
+
+3. **Restart Fabric**.
+
+
+
+> Note: The relevant supportive library is part of the aifusion extension, located at *lib/SQLite_Vector* folder in the project tree
 
 
 
 ## The ingestion flow steps and utilities
 
-The ingestion flow is built from several steps. Below are utility actors and flows that you may consider using it. As usual, while building your flow, you may prefer use alternatives, in each of the steps. 
+The ingestion flow - the process of inserting content into a vector store - is built from several steps. Below are utility actors and flows that you may consider using it. As usual, while building your flow, you may prefer use alternatives, in each of the steps. 
 
 > You can use the AI Fusion examples, as reference.
 >
@@ -30,25 +53,25 @@ The ingestion flow is built from several steps. Below are utility actors and flo
 
 
 
-* **Initialize** - prepare the table. For this you can use the VectorInitializer flow (PgVectorInitializer or SqliteVectorInitializer) 
+* **Initialize** - prepare the table. For thisת you can use the *VectorInitializer* flow (`PgVectorInitializer` or `SqliteVectorInitializer`) 
 
 * **Grounding** - the initial sources processing. It is recommended to transform the resources, like documents and web-pages,  into a markdown format. 
-  During the agentic flow, those documents are provided to the AI to be part of its context. Markdown  format is a very useful, enabling adding simple tags, hinting about titles, sections, list and so on.  
+  During the agentic flow, those documents are provided to the AI to be part of its context. The markdown format is a very useful when working with AI models, enabling adding simple tags, hinting about titles, sections, list and so on.  
 
   > A very useful utility is ["markitdown"](https://github.com/microsoft/markitdown) - a Python library, which transforms many formats to markdown. Examples of file types formats it converts: PDF, PowerPoint, Word, Excel, Images (png, jpg), HTML, Text-based formats (CSV, JSON, XML) 
 
 * **Chunking** - slicing and splitting the processed document into smaller, semantically meaningful pieces , for better search.
 
-  For this purpose you can use the **chunker** actor.
+  For this purpose you can use the `chunker` actor.
 
 * **Embedding** - Converts the text chunks into numerical vector embeddings using an embedding model.
 
   * Use the embedding interface that you define at the project.
-  * During this process you shall loop on chunks and embed each chink using **embed** actor.
+  * During this process you shall loop on chunks and embed each chink using `embed` actor.
 
 * **Indexing:** The load phase, where those vectors are stored and organized in the vector database.
 
-  For this you can use the VectorLoader flow (PgVectorLoader or SqliteVectorLoader)
+  For this you can use the *VectorLoader* flow (`PgVectorLoader` or `SqliteVectorLoader`)
 
   
 
@@ -59,6 +82,12 @@ The search process is built from 2 steps:
 - **Embed** - transform the search term or sentence into vector.
   Use the **embed** actor for doing it.
 - **Query** - search for matched results at the Vector DB. Note that because this search is done by semantic similarity, then usually more than a single search result is being used. In addition each result is retrieved with its rate.
+
+
+
+## Examples
+
+Example flows that demonstrate the ingestion and retrieval processes can be found at `SharedObjects/Broadway/aifusion/vectors/examples/` - PgembedSearchExample and SqlitembedSearchExample flows
 
 
 
