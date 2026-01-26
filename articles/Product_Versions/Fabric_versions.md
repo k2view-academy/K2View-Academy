@@ -12,7 +12,8 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td width="150px"><p><strong>Latest HF # & Release Date</strong></p></td>
             <td width="300px"><p><strong>Harbor Download</strong></p></td>
             <td width="150px"><p><strong>Certified Postgres</strong></p></td>
-            <td width="150px"><p><strong>Certified Cassandra</strong></p></td>        </tr>
+            <td width="150px"><p><strong>Certified Cassandra</strong></p></td>        
+		</tr>
         <tr>
             <td align="left">
                 <p><a href="/Release_Notes/V8.3/Fabric_Release_Notes_V8.3.1.pdf">8.3.1</a></p>
@@ -390,7 +391,7 @@ Please check the release notes for component version support, such as Kafka, Neo
 			</td>
 			<td>
 			<p>HF34</p>
-            <p>Jan 22, 2026</p></td>td>
+            <p>Jan 22, 2026</p></td>
             <td>314</td>
             <td></td>
             <td>4.1.10</td>            
