@@ -119,10 +119,10 @@ In this example, **table** and **clm_name** are non-prepared statement parameter
 
 ### Batch Error Handling
 
-The **DbErrorHandlerBatch** and **DbFlushBatch** Actors are introduced for error handling when working on a given DB interface in **batch** mode. 
+The **DbErrorHandlerBatch** and **DbFlushBatch** Actors are introduced for error handling when working with a given DB interface in **batch** mode. 
 
- * The **DbErrorHandlerBatch** sets a batch error handler on a given interface. The Actor's configuration allows to define actions in case of exception, such as suppressing an exception, writing into a log or invoking an inner flow that will control the flow behavior in case of failure.
-* The **DbFlushBatch** flushes a database batch and returns the batch statistics, including the total number of entries, how many succeeded, and how many failed. The statistics are broken down by each affected database table. This Actor should be used in conjunction with the **DBErrorHandlerBatch** Actor.
+ * The **DbErrorHandlerBatch** Actor sets a batch error handler on a given interface. The Actor's configuration allows to define actions in case an exception is thrown. The actions include suppressing an exception, writing to a log or invoking an inner flow that will control the flow behavior in case of failure.
+* The **DbFlushBatch** Actor flushes the batch statistics, including the total number of entries, how many succeeded, and how many failed. The statistics are broken down by each affected database table. This Actor should be used in conjunction with the **DBErrorHandlerBatch** Actor.
 
 Note that to utilize batch error handling, the **batch** input argument of the **DbCommand** and **DbLoad** Actors should be set to **true**. 
 
@@ -130,15 +130,15 @@ The following example illustrates the usage of the **DbErrorHandlerBatch** and *
 
 ![image](../images/99_05_batch_flush.png)
 
-The inner flow, set on the **DbErrorHandlerBatch** actor, is triggered in case of exception in batch for each caught exception. The inner flow can receive the following input parameters:
+The inner flow, set on the **DbErrorHandlerBatch** Actor, is triggered in case of exception in the batch for each caught exception. The inner flow can receive the following input parameters:
 
 - **error** – the error object, assigned automatically by Broadway.
-- **table **– the name of the table which triggered the exception.
+- **table **– the name of the table that triggered the exception.
 
-In the inner flow you can introduce the business logic that will define how to continue: 
+In the inner flow, you can introduce the business logic that will define how to continue: 
 
-* When the inner flow returns **result = ‘true’**, the main flow can continue.
-* When it returns **result = ‘false’**, the main flow will fail.
+* When the inner flow returns **result = true**, the main flow can continue.
+* When it returns **result = false**, the main flow will fail.
 
 The below example illustrates the inner flow logic:
 
