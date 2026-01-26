@@ -315,10 +315,14 @@ Please check the release notes for component version support, such as Kafka, Neo
 				<p><a href="/Release_Notes/V7.2/Fabric_Release_Notes_V7.2.2.pdf">7.2.2</a></p>
 				<p>Feb 14, 2024</p>
 			</td>
-            <td>May 28, 2025</td>
-            <td>352</td>
+			 <td>
+                <p><a href="/Release_Notes/V8.2/Fabric_Release_Notes_V7.2.2_HF29.pdf">HF29</a></p>
+                <p>Nov 14, 2025</p>
+            </td>
+            <td>Jan 26, 2026</td>
+            <td>369</td>
             <td>15.4</td>
-            <td>4.1.3</td>            
+            <td>4.1.8</td>            
         </tr>
         <tr>
             <td align="left">
