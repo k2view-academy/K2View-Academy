@@ -46,6 +46,8 @@ This plugin scans the data of the data sample in order to calculate various data
 
 The purpose of this plugin is to identify fields with a limited number of distinct values (in the data sample) and save these values in a dedicated MTable, enabling their use in masking and synthetic data generation.
 
+In addition, when running discovery on JSON Schema files, the plugin can identify fields with `enum` property and save the values of `enum` in a dedicated MTable, enabling their use in masking and synthetic data generation. Note that in this case, the distinct values are not related to the data sample. This addition is available starting from Fabric V8.4.
+
 Once a field is identified as an Option Set, the property ```optionSet = true``` is created for it. A separate MTable is generated for each data platform and schema to store the distinct values (and their distribution) identified by the plugin in a field. The MTable has the following format: 
 
 ```catalog_field_option_set___<dataPlatform>_<schema>.csv```, (containing three underscores before the data platform name).
@@ -67,7 +69,7 @@ Additional rules apply based on the **plugin input parameters**, as explained be
 
 #### Property Name
 
-The property that will be created on a field if the plugin returns true. By default, the property is named optionSet.
+The property that will be created on a field if the plugin returns true. By default, the property is named `optionSet`.
 
 #### Absolute Threshold
 
@@ -79,9 +81,9 @@ This parameter defines the absolute threshold number of distinct values. If the 
 
 #### Field Type Include List
 
-The ```fieldTypeIncludeList``` plugin input parameter controls which field data types are considered when checking for distinct values. 
+This parameter controls which field data types are considered when checking for distinct values. 
 
-By default, this parameter is set to either the STRING or INTEGER data type for this plugin. The valid values are STRING, INTEGER, REAL, DATETIME, DATE and BOOLEAN.
+By default, ```fieldTypeIncludeList``` is set to STRING and INTEGER. The valid values are STRING, INTEGER, REAL, DATETIME, DATE and BOOLEAN.
 
 #### Field Name Include List
 
@@ -93,7 +95,7 @@ This parameter allows to set up an override list of field names. These fields wi
 
 #### Incremental Mode
 
-The ```incrementalMode``` parameter is introduced in Fabric V8.3.1. It defines whether the Option Set Analyzer plugin should be executed for the fields that already have the same property created by this plugin in a previous Discovery Job execution. It has the following modes:
+This parameter is introduced in Fabric V8.3.1. It defines whether the Option Set Analyzer plugin should be executed for the fields that already have the same property created by this plugin in a previous Discovery Job execution. It has the following modes:
 
 - ```"Keep All"``` (default) — if the plugin has already been executed for this field in a previous Discovery Job execution, do not invoke the plugin again (even if the field does not have the 'Option Set' property). The plugin will only be invoked for new fields.
 - ```"Keep Existing"``` — if the plugin has already been executed for this field in a previous Discovery Job execution and created a property, do not invoke it again. The plugin will only be invoked for new fields and for the fields without this property.
