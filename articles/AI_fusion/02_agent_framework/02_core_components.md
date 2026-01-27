@@ -64,9 +64,9 @@ Fabric's built-in vector store is mainly recommended for:
 * Unstructured data associated with the business entity LUI, such as personal contracts and agreements.
 * Framework operational tasks, such as plans, procedures and the base KB. 
 
-For complex documents like tariff plans, device support guides, or marketing materials, consider dedicated vector DB services such as AWS Bedrock Knowledge Base.
+For complex documents including tariff plans, device support guides, or marketing materials, consider using dedicated vector database services, such as AWS Bedrock Knowledge Bases.
 
-The platform provides actors and embedding interfaces that help you to interact with vector stores. 
+The GenAI Data Fusion platform, **aifusion**, provides actors and embedding interfaces to interact with vector stores. 
 
 For additional information, see [Vector Data Stores](07_vector_db_intro.md).
 
