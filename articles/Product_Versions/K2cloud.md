@@ -2,13 +2,13 @@
 
 ## Table of Contents
 
-- [K2cloud Releases](#k2cloud-releases)
-- [K2cloud Agent, Deployer, and Helm Chart Updates](#k2cloud-agent-deployer-and-helm-chart-updates)
-  - [Tracking Agent and Deployer Updates](#tracking-agent-and-deployer-updates)
-  - [Deployer Update Requirement](#deployer-update-requirement)
-  - [K2agent Releases](#k2agent-releases)
-  - [K2deployer Releases](#k2deployer-releases)
-  - [Helm Charts](#helm-charts)
+* [K2cloud Releases](#k2cloud-releases)
+* [K2cloud Agent, Deployer, and Helm Chart Updates](#k2cloud-agent-deployer-and-helm-chart-updates)
+  * [Tracking Agent and Deployer Updates](#tracking-agent-and-deployer-updates)
+  * [Deployer Update Requirement](#deployer-update-requirement)
+  * [K2agent Releases](#k2agent-releases)
+  * [K2deployer Releases](#k2deployer-releases)
+  * [Helm Charts](#helm-charts)
 
 
 # K2cloud Releases
