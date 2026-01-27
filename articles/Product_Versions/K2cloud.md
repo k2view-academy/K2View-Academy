@@ -1,5 +1,17 @@
+# K2cloud Updates
 
-## K2cloud Releases
+## Table of Contents
+
+- [K2cloud Releases](#k2cloud-releases)
+- [K2cloud Agent, Deployer, and Helm Chart Updates](#k2cloud-agent-deployer-and-helm-chart-updates)
+  - [Tracking Agent and Deployer Updates](#tracking-agent-and-deployer-updates)
+  - [Deployer Update Requirement](#deployer-update-requirement)
+  - [K2agent Releases](#k2agent-releases)
+  - [K2deployer Releases](#k2deployer-releases)
+  - [Helm Charts](#helm-charts)
+
+
+# K2cloud Releases
 <table>
   <thead>
     <tr>
@@ -22,6 +34,22 @@
     </tr>
   </tbody>
 </table>
+
+# K2cloud Agent, Deployer, and Helm Chart Updates
+
+## Tracking Agent and Deployer Updates
+
+Agent and Deployer images are updated periodically. Customers are responsible for keeping these components up to date.
+Current K2cloud versions, release notes, and recent Agent and Deployer image tags are published on this page. We recommend reviewing this information regularly to stay aligned with supported versions.
+
+## Deployer Update Requirement
+If you pull a new Deployer image and push it to your own OCI registry, you must notify K2view so K2cloud can reference the updated image.
+
+How to notify us:
+
+* Open a support ticket
+* Provide the Deployer image registry location and tag
+
 
 ## K2agent Releases
 <table>
@@ -57,7 +85,7 @@
 </table>
 
 **Pull Instructions**
-
+<br><br>
 docker pull docker.share.cloud.k2view.com/k2view/k2v-agent:[tag]
 
 ## K2deployer Releases
@@ -119,5 +147,21 @@ docker pull docker.share.cloud.k2view.com/k2view/k2v-agent:[tag]
 </table>
 
 **Pull Instructions**
+<br><br>
+docker pull docker.share.cloud.k2view.com/k2view/k2-cloud-deployer:[tag]
 
-docker pull docker.share.cloud.k2view.com/k2view/k2-cloud-deployer[tag]
+
+## Helm Charts
+
+K2cloud Helm charts are updated periodically and are maintained in GitHub:
+
+https://github.com/k2view/blueprints/tree/main/helm
+
+You can track Helm chart changes using:
+
+* Commit history & timestamps in GitHub
+* Commit activity graph: https://github.com/k2view/blueprints/graphs/commit-activity
+•	RSS feed (recommended): https://github.com/k2view/blueprints/commits/main.atom
+
+Customers should review Helm chart updates as part of regular K2cloud maintenance.
+
