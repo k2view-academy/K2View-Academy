@@ -161,7 +161,7 @@ You can track Helm chart changes using:
 
 * Commit history & timestamps in GitHub
 * Commit activity graph: https://github.com/k2view/blueprints/graphs/commit-activity
-•	RSS feed (recommended): https://github.com/k2view/blueprints/commits/main.atom
+* RSS feed (recommended): https://github.com/k2view/blueprints/commits/main.atom
 
 Customers should review Helm chart updates as part of regular K2cloud maintenance.
 
