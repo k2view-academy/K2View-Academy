@@ -20,9 +20,19 @@ A new version is also created whenever the Catalog is manually edited.
 
 By default, the Catalog application displays the latest available version. To view any version, open the version's drop-down list and click a version number: 
 
-<img src="../images/versions.png" style="zoom:75%;" />
+<img src="../images/versions.png" style="zoom:85%;" />
 
 The Catalog tree is then displayed using the standard coloring scheme, with nodes shown in blue and relations in orange. 
+
+The following version information is displayed in the version's drop-down:
+
+* Version number.
+* Version creation date and time.
+* Version origin, including one of the following options:
+  * Crawler, Revert or Manual
+* List of impacted data platforms.
+
+The version origin and a list of impacted data platforms are available starting from Fabric V8.4.
 
 ## Version Comparison
 
