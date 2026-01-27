@@ -17,7 +17,7 @@
       <td>2 November 2025, 11:UTC</td>
     </tr>
     <tr>
-      <td><a href="/Release_Notes/K2cloud/K2cloud_Release_Notes_Jan2026.pdf">K2cloud January 2025</a></td>
+      <td><a href="/Release_Notes/K2cloud/K2cloud_Release_Notes_Jan2025.pdf">K2cloud January 2025</a></td>
       <td>2 February 2025, 11:00 UTC</td>
     </tr>
   </tbody>
