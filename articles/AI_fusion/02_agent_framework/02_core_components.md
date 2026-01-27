@@ -40,10 +40,10 @@ The aifusion LU provides the actors and flows needed to orchestrate agent proces
 
 LLMs are invoked at various points in the agent workflow to perform different tasks:
 
-- Reflecting on user queries to determine the appropriate response path
-- Generating SQL queries based on natural-language requests
+- Evaluating user queries to determine the appropriate response path
+- Text-to-SQL query generation
 - Planning and executing multi-step execution strategies
-- Formulating natural-language answers for users
+- Generating natural-language responses for users
 
 LLM interfaces are installed via K2exchange, offering various LLM provides, like OpenAI, Anthropic, AWS Bedrock, Google/Gemini.
 
