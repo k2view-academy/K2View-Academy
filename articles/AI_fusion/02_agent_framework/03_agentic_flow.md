@@ -12,7 +12,7 @@ The flow's high-level steps are as follows (numbers and signs correspond to the 
 
   * Reflect on Query — determines the appropriate response path.
 
-  * Execute — responsibility is delegated to the relevant execution subagent.
+  * Execute — responsibility is delegated to the relevant execution sub-agent.
 
 * [D] **Respond** — crafting and formulating the final answer.
 
@@ -30,7 +30,7 @@ As a result, all subsequent reasoning and actions are constrained to a well-defi
 
 > Notes:
 >
-> * Along the flow, other LUs might be needed, usually by dedicated subagent workers. To ensure security, the LUI of the another LU shall be attached based on the base entity LUI. See below for more information.
+> * Along the flow, other LUs might be needed, usually by dedicated sub-agent workers. To ensure security, the LUI of the another LU shall be attached based on the base entity LUI. See below for more information.
 > * The Session ID is set by the client side - the caller to the main conversation flow, and shall be handled carefully so that conversion history will be effective.
 
 
@@ -86,7 +86,7 @@ At a high level, the framework performs the following steps:
 
 * **Decide** — Select the most suitable response path based on the request’s complexity and available information.
 
-* **Act** — Execute the selected path, which may involve calling tools, invoking subagents, or running multi-step plans.
+* **Act** — Execute the selected path, which may involve calling tools, invoking sub-agents, or running multi-step plans.
 
 As execution progresses, additional information may be retrieved or generated and added to the context, enabling more informed decisions in subsequent steps.
 
@@ -97,7 +97,7 @@ As part of the reasoning process, the framework determines the best response pat
 | Path                                      | Description                                                  | When to Use                                                  | Performance                   |
 | ----------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ----------------------------- |
 | **Have All Required Information** (1)     | Proceed directly to response formulation                     | Information exists in the business entity story, conversation history, or general knowledge | **Fastest**                   |
-| **Call Specialized Worker Subagent** (2)  | Route the request to a domain-specific subagent              | The request requires specialized knowledge or tools (e.g., billing, payments) | **Faster and more accurate**  |
+| **Call Specialized Worker Sub-agent** (2)  | Route the request to a domain-specific sub-agent              | The request requires specialized knowledge or tools (e.g., billing, payments) | **Faster and more accurate**  |
 | **Build and Execute a Plan** (3)          | Create and execute a multi-step plan involving multiple actions or agents | The request requires coordination of several steps or tool invocations | Most **flexible**, but slower |
 | **Clarify the Request** (4)               | Ask the user for additional information                      | The request cannot be resolved from the current context      | Fast                          |
 
@@ -106,7 +106,7 @@ As part of the reasoning process, the framework determines the best response pat
 Once a response path is selected, responsibility for handling the request is delegated to the appropriate execution logic, which is responsible for:
 
 - Executing the required actions
-- Expanding context as needed (via tools or subagents)
+- Expanding context as needed (via tools or sub-agents)
 - Producing a complete and coherent result
 
 Delegation ensures clear ownership and avoids overlapping responsibilities between agents.
@@ -115,7 +115,7 @@ Regardless of the selected path, all flows eventually converge at the Responder,
 
 ### Agentic Flow Agents
 
-The behaviors described above are implemented by a set of workflow orchestration agents and worker subagents, represented as Broadway actors and flows within the AI Fusion framework.
+The behaviors described above are implemented by a set of workflow orchestration agents and worker sub-agents, represented as Broadway actors and flows within the AI Fusion framework.
 
 Together, these flows implement the reasoning, decision-making, and execution semantics of the AI Reasoning and Action phase, while keeping the workflow modular, extensible, and easy to evolve. When used, implementor shall provide them the right inputs, like prompts and list of tags of tools and worker agents. Read [here]() for more information. 
 
