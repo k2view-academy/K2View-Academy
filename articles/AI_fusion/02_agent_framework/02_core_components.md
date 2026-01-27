@@ -45,7 +45,7 @@ LLMs are invoked at various points in the agent workflow to perform different ta
 - Planning and executing multi-step execution strategies
 - Generating natural-language responses for users
 
-LLM interfaces are installed via K2exchange, offering various LLM provides, like OpenAI, Anthropic, AWS Bedrock, Google/Gemini.
+LLM interfaces are installed via K2exchange, offering integrations with multiple LLM providers, such as OpenAI, Anthropic, AWS Bedrock, and Google’s Vertex AI.
 
 For more information on provisioning LLM interfaces, read [here](05_llm_interfaces.md).
 
@@ -57,7 +57,7 @@ The aifusion framework supports vector databases for semantic search, enabling R
 
 ### Vector Data Store in Fabric Storage
 
-You can use vector stores within Fabric storage, meaning as tables within LUIs. This is maintained SQLite-based vector stores with dedicated tables with a special form.
+Vector data stores can be used in Fabric storage, where where they will be embedded as tables inside LUIs. These vector stores are SQLite-based with dedicated tables in a special format.
 
 Fabric's built-in vector store is mainly recommended for: 
 
