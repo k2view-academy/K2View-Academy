@@ -4,17 +4,17 @@
 
 Catalog artifacts are extracts of Catalog's metadata, created upon request and uploaded to Fabric memory. In addition to memory, the artifacts are also generated as CSV files in the Project tree.
 
-There are two types of artifacts: artifacts of **Catalog fields** and artifacts of **relations**.  
+There are two types of artifacts: Catalog fields artifacts and relations artifacts.  
 
 Artifacts are used in the masking and synthetic data generation mechanisms, as explained [here](11_catalog_masking.md).
 
 ### Building Artifacts
 
-Catalog artifacts creation is initiated by selecting **Actions > Build artifacts** in the [Menu bar](05_catalog_app.md#menu-bar). 
+To create Catalog artifacts, select **Actions > Build artifacts** in the [Menu bar](05_catalog_app.md#menu-bar). 
 
-* Build artifact can be performed for a single data platform (which is either selected or expanded in the Project tree) or for the entire Catalog. 
-* Once started, the progress popup screen opens in the right-bottom part of the screen and it shows the process progress. See the details about the progress bar [further in this article](09_build_artifacts.md#build-artifacts-progress-bar).
-* Available starting from Fabric V8.4. 
+* You can build artifacts for a single data platform (either selected or expanded) or for the entire Catalog. 
+* Once initiated, a progress popup appears in the bottom-right corner of the screen, showing the process progress. Details about the progress bar can be found [further in this article](09_build_artifacts.md#build-artifacts-progress-bar).
+* Building artifacts for a selected data platform and the progress bar feature are available starting from Fabric V8.4. 
 
 The artifacts are uploaded to Fabric memory as **catalog_field_info** and **catalog_relations_info** [MTables](/articles/09_translations/06_mtables_overview.md). 
 
@@ -47,11 +47,21 @@ Note that if either the ```catalog_field_info.csv``` or ```catalog_relations_inf
 
 ### Build Artifacts Progress Bar
 
-Starting from Fabric V8.4, once building of the artifacts has been started, the progress popup screen opens in the right-bottom part of the screen and it shows the process progress.
+Starting from Fabric V8.4, once the artifact building has started, a progress popup appears in the bottom-right corner of the screen, showing the progress.
 
 <img src="../images/build_artifact_start.png" />
 
+The progress bar can be minimized or closed.
 
+<img src="../images/build_artifact_min.png" />
+
+To reopen the progress bar while artifact building is still underway, select **Actions > Build artifacts > Show progress** in the [Menu bar](05_catalog_app.md#menu-bar). 
+
+<img src="../images/build_artifact_progress.png" />
+
+Completed executions are displayed by selecting **Actions > Build artifacts > Show completed** in the [Menu bar](05_catalog_app.md#menu-bar). It shows only the last completed execution for each data platform or for the entire Catalog.
+
+<img src="../images/build_artifact_completed.png" />
 
 
 
