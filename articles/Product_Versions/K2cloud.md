@@ -10,7 +10,7 @@
   * [K2deployer Releases](#k2deployer-releases)
   * [Helm Charts](#helm-charts)
 
-
+<br><br>
 # K2cloud Releases
 <table>
   <thead>
@@ -85,7 +85,7 @@ How to notify us:
 </table>
 
 **Pull Instructions**
-<br><br>
+<br>
 docker pull docker.share.cloud.k2view.com/k2view/k2v-agent:[tag]
 
 ## K2deployer Releases
@@ -147,7 +147,7 @@ docker pull docker.share.cloud.k2view.com/k2view/k2v-agent:[tag]
 </table>
 
 **Pull Instructions**
-<br><br>
+<br>
 docker pull docker.share.cloud.k2view.com/k2view/k2-cloud-deployer:[tag]
 
 
