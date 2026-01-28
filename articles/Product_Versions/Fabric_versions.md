@@ -14,6 +14,20 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td width="150px"><p><strong>Certified Postgres</strong></p></td>
             <td width="150px"><p><strong>Certified Cassandra</strong></p></td>        
 		</tr>
+		<tr>
+            <td align="left">
+                <p><a href="/Release_Notes/V8.3/Fabric_Release_Notes_V8.3.2.pdf">8.3.2</a></p>
+                <p>Jan 29, 2026</p>
+            </td>
+            <td>
+			</td>
+            <td>
+                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.3.2_35</p>
+                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.3.2_35</p>
+            </td>
+            <td>17.5</td>
+            <td>4.1.8</td>
+        </tr>
         <tr>
             <td align="left">
                 <p><a href="/Release_Notes/V8.3/Fabric_Release_Notes_V8.3.1.pdf">8.3.1</a></p>
