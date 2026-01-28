@@ -47,7 +47,7 @@ Note that if either the ```catalog_field_info.csv``` or ```catalog_relations_inf
 
 ### Build Artifacts Progress Bar
 
-Starting from Fabric V8.4, once the artifact building has started, a progress popup appears in the bottom-right corner of the screen, showing the progress.
+Starting from Fabric V8.4, once the artifact building has started, a progress popup appears in the bottom-right corner of the screen, showing the progress and estimated remaining time to completion.
 
 <img src="../images/build_artifact_start.png" />
 
@@ -59,7 +59,7 @@ To reopen the progress bar while artifact building is still underway, select **A
 
 <img src="../images/build_artifact_progress.png" />
 
-Completed executions are displayed by selecting **Actions > Build artifacts > Show completed** in the [Menu bar](05_catalog_app.md#menu-bar). It shows only the last completed execution for each data platform or for the entire Catalog.
+Completed executions are displayed by selecting **Actions > Build artifacts > Show completed** in the [Menu bar](05_catalog_app.md#menu-bar). Only the last completed execution for each data platform or for the entire Catalog are shown here.
 
 <img src="../images/build_artifact_completed.png" />
 
