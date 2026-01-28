@@ -8,7 +8,7 @@ Click **Discovery** in the top Catalog navigation bar to open the monitor:
 
 The monitor includes the following areas:
 
-* The data platform selection drop-down, along with **Run** <img src="../images/run.png" style="zoom: 80%;" /> and **Stop** <img src="../images/stop.png" style="zoom: 80%;" /> icons, is located at the top of the monitor screen. The monitor enables starting the job execution for the selected data platform and stopping the job when it is in progress.
+* The data platform selection drop-down, along with **Run** <img src="../images/run.png" style="zoom: 70%;" /> and **Stop** <img src="../images/stop.png" style="zoom: 70%;" /> icons, is located at the top of the monitor screen. The monitor enables starting the job execution for the selected data platform and stopping the job when it is in progress.
   * The monitor shows the last execution for the selected data platform, either during its progress or when completed.
 * Three progress bars, each one representing a part of the discovery process:
   * Crawler over data platform.
