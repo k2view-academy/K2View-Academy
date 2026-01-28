@@ -12,7 +12,22 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td width="150px"><p><strong>Latest HF # & Release Date</strong></p></td>
             <td width="300px"><p><strong>Harbor Download</strong></p></td>
             <td width="150px"><p><strong>Certified Postgres</strong></p></td>
-            <td width="150px"><p><strong>Certified Cassandra</strong></p></td>        </tr>
+            <td width="150px"><p><strong>Certified Cassandra</strong></p></td>        
+		</tr>
+		<tr>
+            <td align="left">
+                <p><a href="/Release_Notes/V8.3/Fabric_Release_Notes_V8.3.2.pdf">8.3.2</a></p>
+                <p>Jan 29, 2026</p>
+            </td>
+            <td>
+			</td>
+            <td>
+                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.3.2_35</p>
+                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.3.2_35</p>
+            </td>
+            <td>17.5</td>
+            <td>4.1.8</td>
+        </tr>
         <tr>
             <td align="left">
                 <p><a href="/Release_Notes/V8.3/Fabric_Release_Notes_V8.3.1.pdf">8.3.1</a></p>
@@ -315,10 +330,13 @@ Please check the release notes for component version support, such as Kafka, Neo
 				<p><a href="/Release_Notes/V7.2/Fabric_Release_Notes_V7.2.2.pdf">7.2.2</a></p>
 				<p>Feb 14, 2024</p>
 			</td>
-            <td>May 28, 2025</td>
-            <td>352</td>
+			 <td>
+                <p><a href="/Release_Notes/V7.2/Fabric_Release_Notes_V7.2.2_HF29.pdf">HF29</a></p>
+                <p>Jan 26, 2026</p>
+            </td>
+            <td>369</td>
             <td>15.4</td>
-            <td>4.1.3</td>            
+            <td>4.1.8</td>            
         </tr>
         <tr>
             <td align="left">
@@ -387,7 +405,7 @@ Please check the release notes for component version support, such as Kafka, Neo
 			</td>
 			<td>
 			<p>HF34</p>
-            <p>Jan 22, 2026</p></td>td>
+            <p>Jan 22, 2026</p></td>
             <td>314</td>
             <td></td>
             <td>4.1.10</td>            
