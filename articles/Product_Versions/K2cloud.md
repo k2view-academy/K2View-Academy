@@ -150,6 +150,9 @@ docker pull docker.share.cloud.k2view.com/k2view/k2v-agent:[tag]
 <br>
 docker pull docker.share.cloud.k2view.com/k2view/k2-cloud-deployer:[tag]
 
+After you load the Deployer image to your OCI registry, remember to notify K2view of the new location. See  [Deployer Update Requirement](#deployer-update-requirement). 
+
+
 
 ## Helm Charts
 
