@@ -230,11 +230,11 @@ https://localhost:3213/api/catalog/1...latest/CRM_DB/main
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{dataPlatform}/{schema}/datasets`
 
-The API retrieves a list of datasets that belong to the **latest version** of the specified data platform and schema. This API is available starting from Fabric V8.3.
+The API retrieves a list of datasets that belong to the **latest version** of the specified data platform and schema. Available starting from Fabric V8.3.
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{dataPlatform}/{schema}/{dataset}/fields`
 
-The API retrieves a list of fields that belong to the **latest version** of the specified data platform, schema and dataset. This API is available starting from Fabric V8.3.
+The API retrieves a list of fields that belong to the **latest version** of the specified data platform, schema and dataset. Available starting from Fabric V8.3.
 
 Starting from Fabric V8.3.2, an optional input parameter ```primitiveTypeOnly``` has been added:
 
@@ -367,9 +367,7 @@ Example 2: When searching for node types with *PII = true* and *Classification =
 
 <span style="border-radius: 12em; background-color: #46B583; padding: 0 10px; color:white">POST</span>   `/api/catalog/{toVersion}/revert-catalog-version`
 
-The API reverts from the last Catalog version to a specified version. The revert can be performed either to the whole Catalog or to a selected data platform. The selected data platform is sent in the request body.
-
-This API is available starting from Fabric 8.4.
+The API reverts from the last Catalog version to a specified version. The revert can be performed either to the entire Catalog or to a selected data platform. The selected data platform is sent in the request body. Available starting from Fabric 8.4.
 
 <table>
 <thead>
@@ -419,7 +417,7 @@ https://localhost:3213/api/catalog/4/revert-catalog-version
 
 The API permanently deletes the Catalog's metadata from the Neo4j GraphDB, including all versions and data platforms with their associated information.
 
-Starting from Fabric 8.4, cleaning of the graph can be applied either on the whole Catalog or on a selected data platform.
+Starting from Fabric 8.4, cleaning of the graph can be applied either on the entire Catalog or on a selected data platform.
 
 <table>
 <thead>
