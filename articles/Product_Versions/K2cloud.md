@@ -35,6 +35,7 @@
   </tbody>
 </table>
 
+<br><br>
 # K2cloud Agent, Deployer, and Helm Chart Updates
 
 ## Tracking Agent and Deployer Updates
