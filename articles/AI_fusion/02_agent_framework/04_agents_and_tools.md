@@ -45,7 +45,7 @@ Read more practice information [here](04a_agentic_flow_agents.md) about the agen
 
 Domain list is useful when an LU contains many tables, which not all might be relevant for the current This attribute is used by the Reflector and is added to its context. 
 
-A good practice for provisioning and maintaining it is to create an MTable at the leading business entity LU, with the following recommended columns:
+A good practice for provisioning and maintaining it is to create an MTable at the leading business entity LU, including the following recommended columns:
 
 * Domain - name of domain 
 * Description
@@ -73,9 +73,9 @@ While the generic Data Retrieve agent handles most queries using schema descript
 
 Tools are identified by:
 
-- **Tags** - One or more tags for discoverability
-- **Description** - Clear explanation of the tool's purpose
-- **Parameter Remarks** - Documentation on input/output parameters
+- **Tags** — one or more tags for discoverability
+- **Description** — a clear explanation of the tool's purpose
+- **Parameter Remarks** — documentation on input/output parameters
 
 This information is passed to the LLM to aid in tool selection during plan execution.
 
@@ -93,7 +93,7 @@ This information is passed to the LLM to aid in tool selection during plan execu
 
 ## Utility Actors
 
-AI Fusion uses several utility actors for working with AI, like LLMConst, LLAppend and LLInvoke.
+AI Fusion uses several utility actors for working with AI, such as LLMConst, LLAppend and LLInvoke.
 
-For more information read [here](06_llm_calls_utility_actors.md).
+For more information, read [here](06_llm_calls_utility_actors.md).
 
