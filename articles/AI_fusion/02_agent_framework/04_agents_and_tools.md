@@ -18,7 +18,7 @@ The GenAI Data Fusion framework includes two categories of agents, both represen
 | ---------------- | ------------------------------------------------------------ |
 | **Orchestrator** | Manages the overall agentic flow and coordination            |
 | **Reflector**    | Evaluates the user’s request and selects the appropriate response path |
-| **Refiner**      | When sub-agent path is chosen, Refines the user’s request into a concise, actionable goal for a selected sub-agent |
+| **Refiner**      | When sub-agent path is chosen, it refines the user’s request into a concise, actionable goal for a selected sub-agent |
 | **Planner**      | Builds and executes multi-step task plans                    |
 
 #### Data Agents
@@ -29,15 +29,15 @@ The GenAI Data Fusion framework includes two categories of agents, both represen
 
 
 
-### Project Implementation Agents - Worker Sub-Agents
+### Project Implementation Agents — Worker Sub-Agents
 
-Implementation agents - taking the role of the worker sub-agents at the agentic workflow - are aimed to accomplish domain-specific goals. These are Broadway flows tagged to handle specific domains or request types.
+Implementation agents — taking the role of the worker sub-agents at the agentic workflow - are aimed to accomplish domain-specific goals. These are Broadway flows tagged to handle specific domains or request types.
 
-Example: A `loans_subagent` tag identifies an agent specialized for banking loan inquiries.
+Example: The `loans_subagent` tag identifies an agent specialized in banking loan inquiries.
 
 
 
-Read [here](04a_agentic_flow_agents.md) more practice information about the agentic workflow built-in agents as well as worker sub agents.
+Read more practice information [here](04a_agentic_flow_agents.md) about the agentic workflow's built-in agents and worker sub-agents.
 
 
 
