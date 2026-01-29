@@ -25,13 +25,13 @@ The GenAI Data Fusion framework includes two categories of agents, both represen
 
 | Agent             | Role                                                         |
 | ----------------- | ------------------------------------------------------------ |
-| **Data Retrieve** | Handles queries against Fabric Data Products using dynamic SQL generation |
+| **Data Retrieve** | Handles queries against Fabric Data Products by generating SQL dynamically |
 
 
 
 ### Project Implementation Agents — Worker Sub-Agents
 
-Implementation agents — taking the role of the worker sub-agents at the agentic workflow - are aimed to accomplish domain-specific goals. These are Broadway flows tagged to handle specific domains or request types.
+The implementation agents act as worker sub-agents in the agentic workflow, with the aim of accomplishing domain-specific goals. These are Broadway flows tagged to handle specific domains or request types.
 
 Example: The `loans_subagent` tag identifies an agent specialized in banking loan inquiries.
 
@@ -43,11 +43,11 @@ Read more practice information [here](04a_agentic_flow_agents.md) about the agen
 
 ## Data Retrieve & Domain List
 
-Domain list is useful when an LU contains many tables, which not all might be relevant for the current This attribute is used by the Reflector and is added to its context. 
+The **domain list** is useful when an LU contains many tables, not all of which may be relevant for the current request. This attribute is used by the Reflector agent and is added to its context.
 
-A good practice for provisioning and maintaining it is to create an MTable at the leading business entity LU, including the following recommended columns:
+A good practice for provisioning and maintaining the domain list is to create an MTable at the leading business entity LU, including the following recommended columns:
 
-* Domain - name of domain 
+* Domain — the domain's name 
 * Description
 * Rules
 * Tables
@@ -65,9 +65,9 @@ While the generic Data Retrieve agent handles most queries using schema descript
 
 | Scenario                         | Reason                                                       |
 | -------------------------------- | ------------------------------------------------------------ |
-| **Sophisticated Queries**        | Complex business rules requiring predefined SQL statements crafted by data specialists |
-| **Actions with Business Impact** | Controlled flows for operations involving monetization, compliance, or auditing requirements |
-| **External System Integration**  | Dedicated calls to services outside Fabric's responsibility  |
+| **Sophisticated queries**        | Complex business rules requiring predefined SQL statements crafted by data specialists |
+| **Actions with business impact** | Controlled flows for operations involving monetization, compliance, or auditing requirements |
+| **External system integration**  | Dedicated calls to services outside Fabric's responsibility  |
 
 ### Tool Identification
 
@@ -93,7 +93,7 @@ This information is passed to the LLM to aid in tool selection during plan execu
 
 ## Utility Actors
 
-AI Fusion uses several utility actors for working with AI, such as LLMConst, LLAppend and LLInvoke.
+The AI Fusion platform uses several utility actors for working with AI, such as LLMConst, LLAppend and LLInvoke.
 
 For more information, read [here](06_llm_calls_utility_actors.md).
 
