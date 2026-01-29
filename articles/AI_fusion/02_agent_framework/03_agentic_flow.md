@@ -4,23 +4,23 @@ An agentic workflow is typically composed of several core steps. This article de
 
 The flow's high-level steps are as follows (letters, numbers and labeled terms correspond to the below diagram):
 
-* [A] **Scoping** — Associate the base business entity and the specific AI Fusion conversation to the each session request/step.
+* [A] **Scoping** — associates the base business entity and the specific AI Fusion conversation with each session request/step.
 
-* [B] **Foundational Context** — Establish the deterministic, pre-AI context layer, including the base entity story and conversation history, which serves as the foundation for all subsequent reasoning and context expansion.
+* [B] **Foundational Context** — establishes the deterministic, pre-AI context layer — including the business entity story and conversation history — which forms the foundation for all subsequent reasoning and context expansion.
 
 * [C] **AI Reasoning and Action**
 
   * Reflect on Query — determines the appropriate response path.
 
-  * Execute — responsibility is delegated to the relevant execution sub-agent.
+  * Execute — delegates responsibilities to the relevant execution sub-agent.
 
-* [D] **Respond** — crafting and formulating the final answer.
+* [D] **Respond** — crafts and formulates the final response.
 
 
 
 ## Scoping
 
-The purpose of this step is to bind the session to a specific base business entity LUI and a specific AI Fusion conversation LUI, based on the leading LU IID and the session conversation ID.
+The purpose of this initial step is to bind the session to a specific base business entity LUI and a specific AI Fusion conversation LUI, based on the leading LU IID and the session conversation ID.
 
 By explicitly establishing this association (using the Fabric `GET` action), the system ensures that every request is strictly constrained to the relevant business entity and conversation scope. This prevents cross-entity data leakage, reduces the risk of context drift, and mitigates issues such as prompt hijacking or hallucinations caused by out-of-scope information.
 
@@ -31,7 +31,7 @@ As a result, all subsequent reasoning and actions are constrained to a well-defi
 > Notes:
 >
 > * Along the flow, other LUs might be needed, usually by dedicated sub-agent workers. To ensure security, the LUI of the another LU shall be attached based on the base entity LUI. See below for more information.
-> * The Session ID is set by the client side - the caller to the main conversation flow, and shall be handled carefully so that conversion history will be effective.
+> * The Session ID is provided by the client (the caller of the main conversation flow), who should carefully manage it to ensure continuity of the conversation history.
 
 
 
