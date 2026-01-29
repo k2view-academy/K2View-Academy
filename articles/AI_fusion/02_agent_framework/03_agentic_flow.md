@@ -125,7 +125,7 @@ Together, these flows implement the reasoning, decision-making, and execution se
 
 
 
-Here is a typical agentic flow illustration (numbers and signs refers to those mentioned above)
+The following diagram illustrates a typical agent flow; letters, numbers and labeled terms correspond to those mentioned at the beginning of this article:
 
 
 
@@ -137,14 +137,14 @@ Here is a typical agentic flow illustration (numbers and signs refers to those m
 
 ## Debug, Trace and Control
 
-During the agent flows, the platform logs and collects information about the agent usage with the agentic flow, for:
+While the agentic workflow is in process, the platform logs and collects information about the agent usage within it for:
 
 - **Comprehensive Auditing** — ensures every agent interaction and processing step can be audited and traced.  
-- **Cost Management** — provides tracking and monitoring of token usage for cost control, in vast granularity information, by model and agents and for input, output and cached tokens.
-- **Maintainability and Continuous Improvement** — each agent and tool call is logged so that later on can be analyzed and accordingly to improve agent performance. 
+- **Cost Management** — provides tracking and monitoring of token usage for cost control, in vast granularity information, by models and agents and for input, output and cached tokens.
+- **Maintainability and Continuous Improvement** — each agent and tool call is logged for later analysis, enabling improvements to agent performance. 
 
-The information is gathered into the aifusion LU tables, so that trace can be done a specific conversation session, as well as into the Metrics/Assurance DB, for overall observation and insights.
+The information is gathered into the aifusion LU tables, allowing tracing of a specific conversation session, as well as into the Metrics/Assurance DB, for overall monitoring and insights.
 
 The information is also accessible in the **Trace pane** of the **Chat Playground**, part of the AI Fusion app. Here, you can create chats and view a detailed trace showing what the user asked, the inputs and outputs of each called agent and tool, and the number of tokens consumed at each step.
 
-The Trace pane is available in addition to the comprehensive debugging capabilities and visibility at the Broadway flows and Java code within the Studio.
+The Trace pane is available in addition to the comprehensive debugging capabilities and visibility of Broadway flows and the Java code within the Studio.
