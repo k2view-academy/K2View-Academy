@@ -20,7 +20,7 @@ The flow's high-level steps are as follows (letters, numbers and labeled terms c
 
 ## Scoping
 
-The purpose of this initial step is to bind the session to a specific base business entity LUI and a specific AI Fusion conversation LUI, based on the leading LU IID and the session conversation ID.
+The purpose of this initial step is to bind the session to a specific base business entity LUI and a specific AI Fusion conversation LUI.
 
 By explicitly establishing this association (using the Fabric `GET` action), the system ensures that every request is strictly constrained to the relevant business entity and conversation scope. This prevents cross-entity data leakage, reduces the risk of context drift, and mitigates issues such as prompt hijacking or hallucinations caused by out-of-scope information.
 
