@@ -65,7 +65,7 @@ Several prior steps of the current conversation are retrieved to preserve contin
 
 This information is also known, in the agentic AI terminology, as Short-term memory (STM) or “Working Memory”.
 
-> NOTES:
+> Notes:
 >
 > * The conversation lifetime should be carefully defined.
 >   For example, in a CRM scenario, a new conversation may be initiated for each incoming customer call. In other cases, organizations may treat an entire day as a single conversational session, preserving context across multiple interactions.
