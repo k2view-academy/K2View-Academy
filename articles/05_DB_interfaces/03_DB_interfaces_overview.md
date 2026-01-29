@@ -92,10 +92,10 @@ The following fields are displayed for all types of DB interfaces:
 <studio>
 <tr>
 <td width="210">
-<p><strong>Custom Connection String</strong></p>
+<p><strong>Enable custom Connection String</strong></p>
 </td>
 <td width="433">
-<p>Default = False. When set to True, the Custom Connection string is editable.</p>
+<p><studio>Default = False. When set to True, the Custom Connection string is editable.</studio><web>Click on Edit pencil action icon for enable editing of the connection string</web></p>
 </td>
 </tr>
 </studio>
@@ -107,6 +107,16 @@ The following fields are displayed for all types of DB interfaces:
 <p>Connection string used by the client side. This is generated according to the database type. For example, for Oracle, the string consists of jdbc:oracle:thin:@:1521/</p>
 <p>For Cassandra interface: the consistency and serial consistency level parameters could be set using the server connection string.</p>
 <p>For example: consistency=QUORUM&serialConsistencyLevel=SERIAL</p>
+</td>
+</tr>
+<tr>
+<td width="210">
+<p><strong>Certificate</strong></p>
+</td>
+<td width="433">
+<p>Populate a certificate, as retrieved by the data source service owner, which will be then auto-associated to the truststore. <br/>
+This capability simplifies the deployment process further when handling several environments within a project, where Fabric auto-associates the certificate to the correct environment’s interface, as configured in the Environment interfaces UI.
+</p>
 </td>
 </tr>
 <tr>
@@ -155,6 +165,7 @@ The following fields are displayed for all types of DB interfaces:
 </tr>
 </tbody>
 </table>
+
 
 
 
