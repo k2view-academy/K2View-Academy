@@ -2,7 +2,7 @@
 
 An agentic workflow is typically composed of several core steps. This article describes a recommended flow within the AI Fusion agent framework, where the flow is built as a Broadway flow as part of the project implementation.
 
-The flow's high-level steps are as follows (numbers and signs correspond to the below diagram):
+The flow's high-level steps are as follows (letters, numbers and labeled terms correspond to the below diagram):
 
 * [A] **Scoping** — Associate the base business entity and the specific AI Fusion conversation to the each session request/step.
 
