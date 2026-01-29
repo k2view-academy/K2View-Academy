@@ -22,6 +22,10 @@ The flow's high-level steps are as follows (letters, numbers and labeled terms c
 
 The purpose of this initial step is to bind the session to a specific base business entity's LUI and a specific AI Fusion conversation LUI.
 
+> Note: *Base* refers to the leading LU, from which other LUs can be retrieved on demand.
+
+> For example, the base LU can be the customer LU. Later, during request processing, sub-agents may require additional LUs, such as the orders LU.
+
 By explicitly establishing this association (using the Fabric `GET` action), the system ensures that every request is strictly constrained to the relevant business entity and conversation scope. This prevents cross-entity data leakage, reduces the risk of context drift, and mitigates issues such as prompt hijacking or hallucinations caused by out-of-scope information.
 
 As a result, all subsequent reasoning and actions are constrained to a well-defined and isolated scope.
