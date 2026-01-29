@@ -4,11 +4,13 @@
 
 The Chat Playground is a core component of the aifusion web application that provides developers with an intuitive, ready-to-use chat interface for testing and interacting with their AI agents. 
 
+>  Chat Playground user interface and actions can be customized and branded, as explained [here](13_chat_playground_customize.md).
+
 ## Accessing the Chat Playground
 
 Navigate to the aifusion web application and select **Chat** from the top navigation menu. The Chat Playground sits alongside the **Evaluation** and **Observation** modules in the main navigation.
 
-## Interface Components
+## User Interface Components
 
 ### Header Section
 
