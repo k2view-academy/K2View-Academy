@@ -68,13 +68,13 @@ This information is also known, in the agentic AI terminology, as Short-term mem
 >
 >   Similar considerations also apply to non-chat and non-call-based sessions.
 >
-> * The number of prior steps can be set; usually, 4–5 steps are sufficient for the context. When a conversation becomes long, it is used to sum up earlier steps and to add them to the context.
+> * The number of prior steps can be set; usually, 4–5 steps provide sufficient context. When conversations grow long, earlier steps are summarized to maintain the context window without overloading it.
 
 
 
 ## AI Reasoning and Action
 
-The AI Reasoning and Action phase is responsible for the AI-driven decisions and executions within the agentic workflow. During this phase, the framework evaluates the user’s request, determines the most appropriate response strategy, dynamically expands context as needed, and executes the required actions to produce a final answer.
+The AI Reasoning and Action phase is responsible for AI-driven decision-making and executions within the agentic workflow. During this phase, the framework evaluates the user’s request, determines the most appropriate response strategy, dynamically expands context as needed, and executes the required actions to produce a final answer.
 
 This phase is not a single operation, but a controlled reasoning loop that combines reflection, decision-making, and execution.
 
@@ -82,11 +82,11 @@ This phase is not a single operation, but a controlled reasoning loop that combi
 
 At a high level, the framework performs the following steps:
 
-* **Reason** — Analyze the user’s request using the available foundational and accumulated context.
+* **Reason** — analyzes the user’s request using the available foundational and accumulated context.
 
-* **Decide** — Select the most suitable response path based on the request’s complexity and available information.
+* **Decide** — selects the most suitable response path based on the request’s complexity and available information.
 
-* **Act** — Execute the selected path, which may involve calling tools, invoking sub-agents, or running multi-step plans.
+* **Act** — executes the selected path, which may involve calling tools, invoking sub-agents, or running multi-step plans.
 
 As execution progresses, additional information may be retrieved or generated and added to the context, enabling more informed decisions in subsequent steps.
 
@@ -103,13 +103,13 @@ As part of the reasoning process, the framework determines the best response pat
 
 ### Flow Delegation and Ownership
 
-Once a response path is selected, responsibility for handling the request is delegated to the appropriate execution logic, which is responsible for:
+Once a response path is selected, handling of the request is delegated to the appropriate execution logic, which is responsible for:
 
 - Executing the required actions
 - Expanding context as needed (via tools or sub-agents)
 - Producing a complete and coherent result
 
-Delegation ensures clear ownership and avoids overlapping responsibilities between agents.
+Flow delegation ensures clear ownership and prevents overlapping responsibilities between agents.
 
 Regardless of the selected path, all flows eventually converge at the Responder, which aggregates outputs and formulates the final response. At this stage, organizations can enforce formatting, compliance, and legal rules according to business directives.
 
@@ -117,7 +117,7 @@ Regardless of the selected path, all flows eventually converge at the Responder,
 
 The behaviors described above are implemented by a set of workflow orchestration agents and worker sub-agents, represented as Broadway actors and flows within the AI Fusion framework.
 
-Together, these flows implement the reasoning, decision-making, and execution semantics of the AI Reasoning and Action phase, while keeping the workflow modular, extensible, and easy to evolve. When used, implementor shall provide them the right inputs, like prompts and list of tags of tools and worker agents. Read [here]() for more information. 
+Together, these flows implement the reasoning, decision-making, and execution semantics of the AI Reasoning and Action phase, while keeping the workflow modular, extensible, and easy to evolve.  
 
 
 
