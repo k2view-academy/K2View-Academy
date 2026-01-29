@@ -30,7 +30,7 @@ As a result, all subsequent reasoning and actions are constrained to a well-defi
 
 > Notes:
 >
-> * To ensure security, the LUI any additional LU should be attached based on the base business entity LUI. See below for more information.
+> * To ensure security, the LUI of any additional LU should be attached based on the base business entity's LUI. See below for more information.
 > * The Session ID is provided by the client (the caller of the main conversation flow), who should carefully manage it to ensure continuity of the conversation history.
 
 
@@ -47,7 +47,7 @@ This step is typically composed of two main actions:
 
 ### Retrieve the business entity story (Long-term memory)
 
-A concise profile of the business entity is retrieved to serve as foundational knowledge for the AI. This may include structured attributes, historical summaries, past events, or other relevant descriptors. The information can be such which can be considered as insights - some prediction, of why current conversation is happening, like why a customer is calling now.
+A concise profile of the business entity is retrieved to serve as foundational knowledge for the AI. This may include structured attributes, historical summaries, past events, or other relevant descriptors. The information may provide background for explaining the reason for the current conversation.
 
 This information is also known, in the agentic AI terminology, as Long-term memory (LTM) or “Persistent Knowledge”.
 
