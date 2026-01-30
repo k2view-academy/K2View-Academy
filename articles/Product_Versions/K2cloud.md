@@ -35,7 +35,7 @@
   </tbody>
 </table>
 
-<br><br>
+<br>
 # K2cloud Agent, Deployer, and Helm Chart Updates
 
 ## Tracking Agent and Deployer Updates
@@ -62,11 +62,6 @@ How to notify us:
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>latest</td>
-      <td>sha256:28fc3559264fc35945b85da44177bd52c27f5dbe06ff0d2d75e16a7ea38ead87</td>
-      <td>28 Jan 2026, 16:47 UTC</td>
-    </tr>
     <tr>
       <td>2.11.2</td>
       <td>sha256:28fc3559264fc35945b85da44177bd52c27f5dbe06ff0d2d75e16a7ea38ead87</td>
@@ -104,11 +99,6 @@ docker pull docker.share.cloud.k2view.com/k2view/k2v-agent:[tag]
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>latest</td>
-      <td>sha256:7e7be948861efa06ce4f9c10db04c81f8889333816bbc96dea74bf58f386d3f5</td>
-      <td>11 Jan 2026, 11:24 UTC</td>
-    </tr>
     <tr>
       <td>1.8.23</td>
       <td>sha256:7e7be948861efa06ce4f9c10db04c81f8889333816bbc96dea74bf58f386d3f5</td>
