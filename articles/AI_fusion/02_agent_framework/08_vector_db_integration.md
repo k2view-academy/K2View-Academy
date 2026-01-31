@@ -16,7 +16,7 @@ Accordingly, AI Fusion supports these two vector DBs - SQLite and PostgresSQL.
 
 
 
-Read [here](11_setup_and_operation.md) for setup information. 
+Read [here](11_setup_and_prerequisites.md) for setup information. 
 
 
 

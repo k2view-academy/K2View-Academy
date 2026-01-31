@@ -1,7 +1,5 @@
 # Agent Framework Components: Agents, Tools and Utilities
 
-
-
 An AI agent is a module that receives data, context, and resources, then uses an AI model for reasoning, planning, and decision-making to achieve specific goals.
 
 
@@ -35,15 +33,15 @@ The implementation agents act as worker sub-agents in the agentic workflow, with
 
 Example: The `loans_subagent` tag identifies an agent specialized in banking loan inquiries.
 
-
-
 Read more practice information [here](04a_agentic_flow_agents.md) about the agentic workflow's built-in agents and worker sub-agents.
 
 
 
-## Data Retrieve & Domain List
+## Data Retrieve Agent & Domain List
 
-The **domain list** is useful when an LU contains many tables, not all of which may be relevant for the current request. This attribute is used by the Reflector agent and is added to its context.
+While invoking a request to an AI model for generating SQL, as it is done at the Data Retrieve agent, it is important to provide it the right context, including the right scope, that is - only the relevant tables that shall be involved. 
+
+When an LU contains many tables, not all of which may be relevant for the current request, it is useful to separate them into groups - domains. 
 
 A good practice for provisioning and maintaining the domain list is to create an MTable at the leading business entity LU, including the following recommended columns:
 
@@ -52,6 +50,8 @@ A good practice for provisioning and maintaining the domain list is to create an
 * Rules
 * Tables
 * Goal_Description
+
+According to this list, during the agentic flow, you can use an MTable actor to lookup for a specific domain and its content, augmenting the AI context.
 
 
 

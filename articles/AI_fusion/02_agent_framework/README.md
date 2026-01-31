@@ -12,7 +12,9 @@
     <li><a href="/articles/AI_fusion/02_agent_framework/08_vector_db_integration.md">Vector Database Integration</a></li>
     <li><a href="/articles/AI_fusion/02_agent_framework/09_chat_playground.md">Chat Playground, Trace and Debug</a></li>
      <li><a href="/articles/AI_fusion/02_agent_framework/10_security_and_privacy.md">Privacy and Security</a></li>
-     <li><a href="/articles/AI_fusion/02_agent_framework/11_setup_and_operation.md">Setup and Operation</a></li>
+     <li><a href="/articles/AI_fusion/02_agent_framework/11_setup_and_prerequisites.md">Setup and Prerequisites</a></li>
+     <li><a href="/articles/AI_fusion/02_agent_framework/12_project_impl_checklist.md">Project Implementation Preparation Guidelines</a></li>
+     <li><a href="/articles/AI_fusion/13_chat_playground_customize.md">Chat Playground Branding and Customization</a></li>    
 
 
 
