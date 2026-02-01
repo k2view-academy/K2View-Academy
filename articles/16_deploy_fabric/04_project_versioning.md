@@ -79,7 +79,7 @@ The following is the recommended workflow:
      This case is valid: sometimes, two or more developers work on the same branch in parallel, on different capabilities, aimed at different phases. Thus, a version tag might contain specific developments made on that branch. 
 
 
-5. If you click to continue after examining the warnings (if any), the version tag is created in the project metadata file (k2proj.xml) and also as an annotated tag in GIT, where the tag message (if populated) is set. Both changes are committed and pushed into GIT.
+5. If you click to continue after examining the warnings (if any), the version tag is created in the project metadata file (.k2proj) and also as an annotated tag in GIT, where the tag message (if populated) is set. Both changes are committed and pushed into GIT.
 
    
 
