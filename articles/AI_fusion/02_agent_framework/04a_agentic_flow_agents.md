@@ -2,7 +2,7 @@
 
 This article provides a practical, implementation-focused guide to the agents that participate in the Agentic Flow within the AI Fusion framework.
 
-While [The Agentic Flow](04_agentic_flow.md) article explains the conceptual execution model - how decisions are made, how paths are selected, and how responsibility is delegated, this article reflects these concepts into actual agents and focuses on guiding on how to set the attributes of the built-in agents and how to create, configure, and reference sub-agents.
+While [The Agentic Flow](04_agentic_flow.md) article explains the conceptual execution model — how decisions are made, how paths are selected, and how responsibilities are delegated — this article translates these concepts into actual agents, focusing on how to set built-in agent attributes and how to create, configure, and reference sub-agents.
 
 Below is the illustrated agentic flow diagram, in the perspectives of AI Fusion agents and tools
 
