@@ -11,11 +11,11 @@ Additionally, due to differences between the data sources, some nodes' propertie
 
 ### Node Types
 
-<table style="width: 700px;">
+<table style="width: 900px;">
 <tbody>
 <tr>
-<td style="width: 150px;"><strong>Node Type</strong></td>
-<td style="width: 550px;"><strong>Description</strong></td>
+<td style="width: 250px;"><strong>Node Type</strong></td>
+<td style="width: 650px;"><strong>Description</strong></td>
 </tr>
 <tr>
 <td ><strong>dataPlatform</strong></td>
@@ -57,11 +57,11 @@ Additionally, due to differences between the data sources, some nodes' propertie
 
 ### Relation Types
 
-<table style="width: 700px;">
+<table style="width: 900px;">
 <tbody>
 <tr>
-<td style="width: 150px;"><strong>Relation Type</strong></td>
-<td style="width: 550px;"><strong>Description</strong></td>
+<td style="width: 250px;"><strong>Relation Type</strong></td>
+<td style="width: 650px;"><strong>Description</strong></td>
 </tr>
 <tr>
 <td><strong>contains</strong></td>
@@ -109,12 +109,12 @@ Each Catalog node has properties that provide additional information about the n
 
 The **Defined By** property is a mandatory property for every Catalog field. It specifies the field's Catalog Type and can include one of the following:
 
-<table style="width: 700px;">
+<table style="width: 900px;">
 <tbody>
 <tr>
 <td style="width: 150px;"><strong>Field Type</strong></td>
 <td style="width: 200px;"><strong>Property Definition</strong></td>
-<td style="width: 350px;"><strong>Description</strong></td>
+<td style="width: 550px;"><strong>Description</strong></td>
 </tr>
 <tr>
 <td><strong>Primitive</strong></td>
