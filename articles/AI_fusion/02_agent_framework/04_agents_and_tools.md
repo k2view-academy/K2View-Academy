@@ -21,11 +21,9 @@ The GenAI Data Fusion framework includes two categories of agents, both represen
 
 #### Data Agents
 
-| Agent             | Role                                                         |
-| ----------------- | ------------------------------------------------------------ |
-| **Data Retrieve** | Handles queries against Fabric Data Products by generating SQL dynamically |
-
-
+| Agent             | Role                                                        |
+| ----------------- | ----------------------------------------------------------- |
+| **Data Retrieve** | Explores Fabric Data Products by generating SQL dynamically |
 
 ### Project Implementation Agents — Worker Sub-Agents
 
@@ -37,27 +35,9 @@ Read more practice information [here](04a_agentic_flow_agents.md) about the agen
 
 
 
-## Data Retrieve Agent & Domain List
-
-While invoking a request to an AI model for generating SQL, as it is done at the Data Retrieve agent, it is important to provide it the right context, including the right scope, that is - only the relevant tables that shall be involved. 
-
-When an LU contains many tables, not all of which may be relevant for the current request, it is useful to separate them into groups - domains. 
-
-A good practice for provisioning and maintaining the domain list is to create an MTable at the leading business entity LU, including the following recommended columns:
-
-* Domain — the domain's name 
-* Description
-* Rules
-* Tables
-* Goal_Description
-
-According to this list, during the agentic flow, you can use an MTable actor to lookup for a specific domain and its content, augmenting the AI context.
-
-
-
 ## Tools
 
-Tools are Broadway flows designed to perform specific actions. They can be fully automated or LLM-assisted.
+Tools are Broadway flows designed to perform specific actions. 
 
 ### When to Use Tools
 
@@ -79,15 +59,17 @@ Tools are identified by:
 
 This information is passed to the LLM to aid in tool selection during plan execution.
 
-### Common Tools
+### Tool Types
 
-| Tool                   | Purpose                                            |
-| ---------------------- | -------------------------------------------------- |
-| `queryExecute`         | Runs structured data queries                       |
-| `searchKBDataRetrieve` | Retrieves knowledge base information               |
-| `describeDomain`       | Provides data model information for SQL generation |
+While there are several built-in tools like `queryExecute`, tools are usually built as part of the project Implementation.
 
-> **Note:** Tools typically do not involve AI unless an agent is tagged as a tool.
+It is recommended to build tools at the data products. At your agentic flow you shall specify these tools, where AI Fusion agentic flow can call them either directly - as Broadway flow - from aifusion or from the relevant the data product, or as MCP.
+
+Read [here]() more information about tools calling and consumption, according to tool tags naming conventions.
+
+
+
+> **Note:** Tools typically do not involve AI unless an agent is tagged as a tool. 
 
 
 
