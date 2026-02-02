@@ -2,9 +2,9 @@
 
 ### Overview
 
-Catalog artifacts are extracts of Catalog's metadata, created upon request and uploaded to Fabric memory. In addition to memory, the artifacts are also generated as CSV files in the Project tree.
+Catalog artifacts are extracts of Catalog's metadata, created upon request and uploaded to Fabric memory. Additionally, the artifacts are generated as CSV files in the Project tree.
 
-There are two types of artifacts: Catalog fields artifacts and relations artifacts.  
+There are two types of Catalog artifacts: fields artifacts and relations artifacts.  
 
 Artifacts are used in the masking and synthetic data generation mechanisms, as explained [here](11_catalog_masking.md).
 
@@ -47,7 +47,7 @@ Note that if either the ```catalog_field_info.csv``` or ```catalog_relations_inf
 
 ### Build Artifacts Progress Bar
 
-Starting from Fabric V8.4, once the artifact building has started, a progress popup appears in the bottom-right corner of the screen, showing the progress and estimated remaining time to completion.
+Starting from Fabric V8.4, once the artifact creation has started, a progress popup appears in the bottom-right corner of the screen, showing the progress and estimated remaining time to completion.
 
 <img src="../images/build_artifact_start.png" />
 
