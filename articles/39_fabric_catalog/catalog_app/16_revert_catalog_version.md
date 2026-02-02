@@ -6,7 +6,7 @@ K2view's Catalog supports [versioning](06_catalog_versioning.md) by creating a n
 
 If, after user verification, these changes are deemed irrelevant or incorrect, users may choose to revert to a previous Catalog version.
 
-The Catalog allows reverting from the latest version to any earlier version. The revert can be applied to a selected data platform or the entire catalog, generating a new Catalog version. 
+The Catalog allows reverting from the latest version to any earlier version. The revert can be applied to a selected data platform or the entire Catalog, generating a new version. 
 
 The revert is available starting Fabric V8.4.
 
