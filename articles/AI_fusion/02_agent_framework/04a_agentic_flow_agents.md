@@ -14,13 +14,13 @@ The following diagram illustrates a typical agentic flow, as viewed from the per
 
 ## The Orchestrator
 
-When the conversation entry-point flow calls the Orchestrator actor, it passes several inputs. These inputs and attributes are then used by the Orchestrator flow itself and by its complementors - Reflector, Refiner and the Planner. All these flows can be considered building blocks that you do not need to touch. 
+When the conversation entry-point flow calls the Orchestrator actor, it passes several input parameters. These inputs and attributes are then used by the Orchestrator flow itself and by its complementary agents — Reflector, Refiner and Planner. All these agents can be considered building blocks that you do not need to touch. 
 
 | Input                      | Description                                                  | Example                                           |
 | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------- |
 | `userQuery`                | The user's question or request                               | "What is my credit card balance?"                 |
 | `synopsis`                 | Business entity story/summary                                | "David Smith, Retail customer, 2 credit cards..." |
-| `toolMTable`               | The MTable name containing the tool tag list and their definitions, which shall be used. <br />It is used by the *Planner* to tighten and limit which tools can be used, while Planner agent evaluates whether and which tools to use. | `Banking_tool_tags`                               |
+| `toolMTable`               | The name of the MTable containing the list of tool tags and their definitions. <br />It is used by the *Planner* to tighten and limit which tools can be used, while Planner agent evaluates whether and which tools to use. | `Banking_tool_tags`                               |
 | `subagents_tag`            | A tag used for identifying the sub-agents available for this flow. <br />This is used by both the *Reflector*, to look for and identify matching sub-agents, and by the *Planner*, when evaluating whether and which sub-agent to use. | `Banking_subagent`                                |
 | `responderPrompt`          | Guidelines for grounding the final response to the conversation caller (end user). They usually include rules and instructions for formalizing the answer. | `TBD`                                             |
 | `searchProceduresFlowName` | A flow used for retrieving corporate procedures. <br />The procedures are used by the *Planner*, where this flow is responsible to bring the relevant procedures to augment the Planner context prompt. Procedures are usually brought by using vector store search. | `Banking_searchProcedures`                        |
