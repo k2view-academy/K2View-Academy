@@ -138,7 +138,7 @@ The following settings should be populated for each record:
 
 - **table_name** — populated with the table name. If this setting is empty, the customized flows will run on all the tables in the interface and schema.
 - **extract_flow** — populated with the customized extract flow.
-- **table_order** — a numeric value that defines the table’s execution priority. The table order specified in the TableLevelDefinitions MTable has the highest priority and can override the PK/FK relationships between task tables. If any table in a task has a table order defined in this MTable, then all tables in the task must have a table order defined as well. The TDM execution follows PK/FK relationships only when none of the task’s tables has a table order defined.
+- **table_order** — a numeric value or a flow name that defines the table’s execution priority. The table order specified in the TableLevelDefinitions MTable has the highest priority and can override the PK/FK relationships between task tables. If any table in a task has a table order defined in this MTable, then all tables in the task must have a table order defined as well. The TDM execution follows PK/FK relationships only when none of the task’s tables has a table order defined.
 - **delete_flow** — populated with the customized delete flow. 
 - **load_flow** — populated with the load flow.
 
