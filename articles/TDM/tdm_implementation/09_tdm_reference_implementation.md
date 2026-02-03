@@ -115,17 +115,6 @@ By default, this MTable is populated with the 'TDM' and 'POSTGRESQL_ADMIN' inter
 
 - **count_indicator** — this setting is set to **true** by default, enabling counting the number of records in the source or target, as a way to monitor task execution. Set this indicator to **false**, if required, to disable counting records in the target.
 
-- **order_flow** — an optional setting. Populate this setting to run a project's Broadway flow. The flow defines customized logic for determining the table execution order. The order flow must have an external output **Map** named **result**, which contains the list of tables and their order. An example of an output Map with the execution order:
-
-  ```json
-  {
-    "customer": 0,
-    "address": 1
-  }
-  ```
-
-  
-
 - **no_schema** — this indicator is used for interfaces without a DB schema, where the JDBC connector adds a schema for them. For example: CSV files. The **CSV JDBC Connector** extension concatenates the 'main' schema name to the file list. Setting this field to **true** would ignore the concatenated schema when accessing the files. 
 
 ### TableLevelDefinitions MTable — Customized Logic for Tables 
@@ -136,7 +125,7 @@ A customized flow can be added to a table's extract, load or delete processes. T
 
 - Custom masking for selected fields (not Catalog-based).
 
-- Extract or load large volumes of data that requires using third-party party tools, such as DB2move.
+- Extract or load large volumes of data that require using third-party tools, such as DB2move.
 
 - Impact the table execution order.
 
@@ -188,7 +177,7 @@ Setting customized masking logic on tables:
 
 ##### Customized Extract Flow — Example
 
-The below image depicts an example, which executes the following actions:
+The image below depicts an example, which executes the following actions:
 
 - Selecting records from the address table.
 - Opening a loop on the extracted records.
