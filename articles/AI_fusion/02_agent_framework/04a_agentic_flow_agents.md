@@ -40,7 +40,7 @@ The LLM is tasked with generating a step-by-step execution plan using several re
 
 Once the plan steps are prepared, it executes them step-by-step. 
 
-> Note: It is a best practice to rely on sub-agents for high-performance needs, as the Planner approach is slower and less predictable due to the required plan generation step.
+> Note: It is a best practice to rely on sub-agents for high-performance needs, as the Planner approach is slower and less predictable due to the required plan-generation step.
 
 
 
@@ -52,16 +52,16 @@ A worker sub-agent is a tagged Broadway flow (e.g., with `loans_subagent` tag) t
 
 The Reflector agent:
 
-1. Looks for flows with agent tags
-2. Examines their descriptions
+1. Searches for flows with agent tags
+2. Examines the flow descriptions
 3. Identifies the specialized agent best suited for the current task
 
-When an appropriate subagent is found, the Orchestrator then calls the Refiner agent to prepare the subagent's goal according to user request and context.
+When an appropriate sub-agent is found, the Orchestrator calls the Refiner agent to prepare the sub-agent's goal according to user request and context.
 
 ##### Notes:
 
-> 1. Use the sub-agent [Broadway flow's properties](/articles/19_Broadway/33_flow_properties.md) to add tags and description.
-> 2. Agent tags are specified as attribute of the *Orchestrator* agent. Providing it all flows which are tagged as sub-agents can confuse and overwhelmed the agent to choose the right sub-agent.
+> 1. Use the sub-agent [Broadway flow's properties](/articles/19_Broadway/33_flow_properties.md) to add tags and descriptions.
+> 2. Agent tags are specified as an attribute of the *Orchestrator* agent. Providing it with all flows tagged as sub-agents can confuse and overwhelm the agent when selecting the appropriate sub-agent.
 
 
 
