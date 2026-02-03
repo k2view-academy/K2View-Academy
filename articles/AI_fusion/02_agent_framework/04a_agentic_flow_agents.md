@@ -60,7 +60,7 @@ When an appropriate sub-agent is found, the Orchestrator calls the Refiner agent
 
 ##### Notes:
 
-> 1. Use the sub-agent [Broadway flow's properties](/articles/19_Broadway/33_flow_properties.md) to add tags and descriptions.
+> 1. Use the sub-agent [Broadway flow properties](/articles/19_Broadway/33_flow_properties.md) to add tags and descriptions.
 > 2. Agent tags are specified as an attribute of the *Orchestrator* agent. Providing it with all flows tagged as sub-agents can confuse and overwhelm the agent when selecting the appropriate sub-agent.
 
 
