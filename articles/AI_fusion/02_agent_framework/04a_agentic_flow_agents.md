@@ -34,19 +34,19 @@ If a request requires gathering information or executing multiple steps but does
 
 The LLM is tasked with generating a step-by-step execution plan using several resources:
 
-1. **Tools and Agent List:** A list of available and relevant (by tags) Broadway flows, along with descriptions and remarks added to input parameters. The LLM uses these descriptions to choose the right tool and determine the required inputs. Relevant sub-agents (by tag) are also providers. 
+1. **Tools and Agent List:** A list of available and relevant (by tags) Broadway flows, along with descriptions and remarks added to input parameters. The LLM uses these descriptions to choose the most-suitable tool and determine the required inputs. Relevant sub-agents (by tag) are also providers. 
 2. **Sample Plans** (Optional): JSON files (e.g., `Banking_plans.json`) — containing pre-built templates — that show the LLM how to combine tools to accomplish similar objectives.
-3. **Corporate Procedures** (Optional): Documents indexed in the vector repository that define business rules or step-by-step instructions (e.g., verification criteria for credit limit reduction).
+3. **Corporate Procedures** (Optional): Documents that define business rules or provide step-by-step instructions (e.g., verification criteria for credit limit reduction).
 
-Once the plan steps are prepared, it executes them step-by-step. 
+Once the plan steps are prepared, the Planner executes them step-by-step. 
 
-> Note: It is a best practice to rely on sub-agents for high-performance needs, as the Planner approach is slower and less predictable due to the required plan-generation step.
+> Note: It is a best practice to rely on sub-agents to achieve a higher performance, as the Planner approach is slower and less predictable due to the required plan-generation step.
 
 
 
 ## The Worker Sub-agents
 
-A worker sub-agent is a tagged Broadway flow (e.g., with `loans_subagent` tag) to handle a specific domain or request type (e.g., banking loans). 
+A worker sub-agent is a tagged Broadway flow (for example, `loans_subagent`) designed to handle a specific domain or category of requests, such as banking loans. 
 
 ### Sub-agent Discovery
 
@@ -56,7 +56,7 @@ The Reflector agent:
 2. Examines the flow descriptions
 3. Identifies the specialized agent best suited for the current task
 
-When an appropriate sub-agent is found, the Orchestrator calls the Refiner agent to prepare the sub-agent's goal according to user request and context.
+When an appropriate sub-agent is found, the Orchestrator calls the Refiner agent to prepare the sub-agent's goal based on the user request and context.
 
 ##### Notes:
 
