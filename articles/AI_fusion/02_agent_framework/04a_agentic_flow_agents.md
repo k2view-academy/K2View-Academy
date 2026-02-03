@@ -69,7 +69,7 @@ When an appropriate sub-agent is found, the Orchestrator calls the Refiner agent
 
 #### Input
 
-When invoking a subagent, it receives detailed context, including:
+When invoking a sub-agent, it receives detailed context, including:
 
 - Its **Role and Objectives** (as a system message).
 - **Domain Data** (details on relevant LUs, reference tables, column names, and descriptions) to enable dynamic SQL query construction.
@@ -77,16 +77,16 @@ When invoking a subagent, it receives detailed context, including:
 
 #### Logic 
 
-A typical sub-agent includes a combination of logic steps along with LLMAgent actor usage. In this way a better controlled and reliable flow is achieved.
+A typical sub-agent is composed of logic steps alongside LLMAgent actor usage, providing improved control and reliability.
 
-The LLMAgent decides on tools activation and response formulation according to:
+The LLMAgent decides which tools to activate and how to formulate responses based on:
 
-1. **Predefined Domain Data** - Retrieved using a DBCommand actor
-2. **Schema Information** - Relevant tables for SQL crafting
-3. **System Prompt** - Agent goals and behavioral guidelines
-4. **User Prompt** - The refined user query
-5. **Tool List** - Available tools the AI can invoke
+1. **Predefined Domain Data** — retrieved using a DBCommand actor
+2. **Schema Information** — tables relevant for SQL crafting
+3. **System Prompt** — agent goals and behavioral guidelines
+4. **User Prompt** — the refined user query
+5. **Tool List** — available tools that the AI can invoke
 
-> Use Broadway [flow properties](/articles/19_Broadway/33_flow_properties.md) to add tags and descriptions to subagent flows. The framework uses these to select the appropriate agent for each request.
+> Use Broadway [flow properties](/articles/19_Broadway/33_flow_properties.md) to add tags and descriptions to sub-agent flows. The framework uses these to select the appropriate agent for each request.
 
 
