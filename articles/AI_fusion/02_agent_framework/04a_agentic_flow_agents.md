@@ -23,14 +23,14 @@ When the conversation entry-point flow calls the Orchestrator actor, it passes s
 | `toolMTable`               | The name of the MTable containing the list of tool tags and their definitions. <br />It is used by the *Planner* to tighten and limit which tools can be used, while Planner agent evaluates whether and which tools to use. | `Banking_tool_tags`                               |
 | `subagents_tag`            | A tag used for identifying the sub-agents available for this flow. <br />This is used by both the *Reflector*, to look for and identify matching sub-agents, and by the *Planner*, when evaluating whether and which sub-agent to use. | `Banking_subagent`                                |
 | `responderPrompt`          | Guidelines for grounding the final response to the conversation caller (end user). They usually include rules and instructions for formalizing the answer. | `TBD`                                             |
-| `searchProceduresFlowName` | A flow used for retrieving corporate procedures. <br />The procedures are used by the *Planner*, where this flow is responsible to bring the relevant procedures to augment the Planner context prompt. Procedures are usually brought by using vector store search. | `Banking_searchProcedures`                        |
-| `searchPlanFlowName`       | A flow used for retrieving sample plans. <br />These samples are used by the *Planner*, where this flow is responsible to bring the relevant them to augment the Planner context prompt, helping it to build a plan. Plans are usually brought by using vector store search. | `Banking_searchPlan`                              |
+| `searchProceduresFlowName` | A flow used for retrieving corporate procedures. <br />The procedures are used by the *Planner*, where this flow is responsible to retrieve the relevant procedures to augment the Planner context prompt. Procedures are usually retrieved via a vector store search. | `Banking_searchProcedures`                        |
+| `searchPlanFlowName`       | A flow used for retrieving sample plans. <br />These samples are used by the *Planner*, where this flow is responsible to retrieve the relevant samples to augment the Planner context prompt, helping it to build a plan. Plans are usually retrieved via a vector store search. | `Banking_searchPlan`                              |
 
 
 
 ## The Planner
 
-If a request requires gathering information or executing multiple steps but does not fit a predefined sub-agent, the `orchestrator_planner` is triggered.
+If a request requires gathering information or executing multiple steps but does not match a predefined sub-agent, the `orchestrator_planner` is triggered.
 
 The LLM is tasked with generating a step-by-step execution plan using several resources:
 
