@@ -79,14 +79,14 @@ When invoking a sub-agent, it receives detailed context, including:
 
 A typical sub-agent is composed of logic steps alongside LLMAgent actor usage, providing improved control and reliability.
 
-The LLMAgent decides which tools to activate and how to formulate responses based on:
+The LLMAgent actor decides which tools to activate and how to formulate responses based on:
 
 1. **Predefined Domain Data** — retrieved using a DBCommand actor
 2. **Schema Information** — tables relevant for SQL crafting
-3. **System Prompt** — agent goals and behavioral guidelines
+3. **System Prompt** — contains agent goals and behavioral guidelines
 4. **User Prompt** — the refined user query
 5. **Tool List** — available tools that the AI can invoke
 
-> Use Broadway [flow properties](/articles/19_Broadway/33_flow_properties.md) to add tags and descriptions to sub-agent flows. The framework uses these to select the appropriate agent for each request.
+> Use Broadway [flow properties](/articles/19_Broadway/33_flow_properties.md) to add tags and descriptions to sub-agent flows. The framework uses these properties to select the appropriate agent for each request.
 
 
