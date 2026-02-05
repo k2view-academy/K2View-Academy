@@ -66,8 +66,8 @@ You can create multiple LLM interfaces for different purposes:
 
 | Scenario              | Approach                                                     |
 | --------------------- | ------------------------------------------------------------ |
-| **Cost Optimization** | Use a lighter model for simple tasks, powerful model for complex reasoning |
-| **Specialized Tasks** | Different models for SQL generation vs. natural language responses |
+| **Cost optimization** | Use a lighter model for simple tasks, powerful model for complex reasoning |
+| **Specialized tasks** | Different models for SQL generation vs. natural language responses |
 | **Fallback**          | Secondary interface if primary provider is unavailable       |
 | **Testing**           | Compare responses across different models                    |
 
