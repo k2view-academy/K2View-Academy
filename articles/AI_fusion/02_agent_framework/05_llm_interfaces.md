@@ -1,10 +1,10 @@
 # LLM Interfaces
 
-LLM interfaces are the connection layer between the aifusion framework and Large Language Model (LLM) providers. This article explains how to configure and use LLM interfaces effectively.
+LLM interfaces are the connection layer between the AI Fusion framework and Large Language Model (LLM) providers. This article explains how to configure and use LLM interfaces effectively.
 
 ## Overview
 
-The aifusion implementation calls LLMs at various points in the agent workflow to handle different tasks:
+The AI Fusion implementation calls LLMs at various points in the agent workflow to handle different tasks:
 
 | Task               | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
