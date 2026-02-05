@@ -13,11 +13,11 @@ The AI Fusion implementation calls LLMs at various points in the agent workflow 
 | **Planning**       | Creating step-by-step execution strategies                   |
 | **Answering**      | Formulating natural-language responses for users             |
 
-When an LLM task is triggered, Fabric looks up the configured LLM interface and uses it to communicate with the underlying model using the credentials defined in that interface.
+When an LLM task is triggered, Fabric looks up the configured LLM interface and uses it to communicate with the underlying model, using the credentials defined in that interface.
 
 ## Supported Providers
 
-LLM interfaces are installed via K2Exchange. Some of the foundation model providers, like AWS Bedrock and Google, behave like an infrastructure and host also models which they are not their owner.  Following are few examples. 
+LLM interfaces are installed via K2exchange. Some of the foundation model providers, such as AWS Bedrock and Google, behave like an infrastructure and host also models that they do not own. Following are few examples. 
 
 * OpenAI
 * Anthropic
@@ -30,12 +30,12 @@ LLM interfaces are installed via K2Exchange. Some of the foundation model provid
 
 ### Step 1: Install the Provider Extension
 
-1. Open K2Exchange in Fabric Studio
+1. Open K2exchange in Fabric Studio
 2. Choose the desired LLM connector extension
 3. Click **Install**
 4. Deploy all changes
 
-> Note: like for any installed extension ,which is added to your project, you shall add its files into your project GIT repository.
+> Note: As with any installed extension added to your project, you should add its files into your project's Git repository.
 
 ### Step 2: Create the Interface
 
