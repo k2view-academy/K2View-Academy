@@ -21,15 +21,15 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="/Release_Notes/K2cloud/K2cloud_Release_Notes_Jan2026.pdf">K2cloud January 2026</a></td>
+      <td><a href="/Release_Notes/K2cloud/K2cloud_Release_Notes_Jan2026.pdf" target="_blank">K2cloud January 2026</a></td>
       <td>19 January 2026, 22:00 UTC</td>
     </tr>
     <tr>
-      <td><a href="/Release_Notes/K2cloud/K2cloud_Release_Notes_Nov2025.pdf">K2cloud November 2025</a></td>
+      <td><a href="/Release_Notes/K2cloud/K2cloud_Release_Notes_Nov2025.pdf" target="_blank">K2cloud November 2025</a></td>
       <td>2 November 2025, 11:UTC</td>
     </tr>
     <tr>
-      <td><a href="/Release_Notes/K2cloud/K2cloud_Release_Notes_Jan2025.pdf">K2cloud January 2025</a></td>
+      <td><a href="/Release_Notes/K2cloud/K2cloud_Release_Notes_Jan2025.pdf" target="_blank">K2cloud January 2025</a></td>
       <td>2 February 2025, 11:00 UTC</td>
     </tr>
   </tbody>
