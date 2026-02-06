@@ -53,6 +53,16 @@ How to notify us:
 
 
 ## K2agent Releases
+
+**Change Log:** <a href="/articles/Product_Versions/ChangeLog_Agent.md">K2agent Change Log</a>
+
+
+**Pull Instructions** 
+<br>
+docker pull docker.share.cloud.k2view.com/k2view/k2v-agent:[tag]
+
+
+
 <table>
   <thead>
     <tr>
@@ -85,11 +95,20 @@ How to notify us:
   </tbody>
 </table>
 
-**Pull Instructions**
-<br>
-docker pull docker.share.cloud.k2view.com/k2view/k2v-agent:[tag]
+
 
 ## K2deployer Releases
+
+**Change Log:** <a href="/articles/Product_Versions/ChangeLog_Deployer.md">K2deployer Change Log</a>
+
+**Pull Instructions**
+<br>
+docker pull docker.share.cloud.k2view.com/k2view/k2-cloud-deployer:[tag]
+
+After you load the Deployer image to your OCI registry, remember to notify K2view of the new location. See  [Deployer Update Requirement](#deployer-update-requirement). 
+
+
+
 <table>
   <thead>
     <tr>
@@ -146,13 +165,6 @@ docker pull docker.share.cloud.k2view.com/k2view/k2v-agent:[tag]
     </tr>
   </tbody>
 </table>
-
-**Pull Instructions**
-<br>
-docker pull docker.share.cloud.k2view.com/k2view/k2-cloud-deployer:[tag]
-
-After you load the Deployer image to your OCI registry, remember to notify K2view of the new location. See  [Deployer Update Requirement](#deployer-update-requirement). 
-
 
 
 ## Helm Charts
