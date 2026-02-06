@@ -10,7 +10,7 @@
   * [K2deployer Releases](#k2deployer-releases)
   * [Helm Charts](#helm-charts)
 
-<br><br>
+<br>
 # K2cloud Releases
 <table>
   <thead>
