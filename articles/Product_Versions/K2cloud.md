@@ -54,7 +54,7 @@ How to notify us:
 
 ## K2agent Releases
 
-**Change Log:** <a href="/articles/Product_Versions/ChangeLog_Agent.md">K2agent Change Log</a>
+**Change Log:** <a href="/articles/Product_Versions/ChangeLog_Agent.md" target="_blank">K2agent Change Log</a>
 
 
 **Pull Instructions** 
@@ -99,7 +99,7 @@ docker pull docker.share.cloud.k2view.com/k2view/k2v-agent:[tag]
 
 ## K2deployer Releases
 
-**Change Log:** <a href="/articles/Product_Versions/ChangeLog_Deployer.md">K2deployer Change Log</a>
+**Change Log:** <a href="/articles/Product_Versions/ChangeLog_Deployer.md" target="_blank">K2deployer Change Log</a>
 
 **Pull Instructions**
 <br>
