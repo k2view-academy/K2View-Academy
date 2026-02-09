@@ -2,7 +2,7 @@
 
 While business-entity-oriented data is retrieved from Fabric, a Retrieval-Augmented Generation (RAG) mechanism is applied for non-personal data such as organizational unstructured content (for example, agreements, procedures, and knowledge bases). 
 
-At its core, RAG is built upon two critical pillars: **Indexing** and **Retrieval**. While **Indexing** prepares organizational documents for machine understanding by transforming raw documents into searchable vectors, **Retrieval** ensures the agent can pinpoint the exact context needed within milliseconds during an active workflow.
+At its core, RAG is built upon two critical pillars: **indexing** and **retrieval**. While **indexing** prepares organizational documents for machine understanding by transforming raw documents into searchable vectors, **retrieval** ensures the agent can pinpoint the exact context needed within milliseconds during an active workflow.
 
 
 
