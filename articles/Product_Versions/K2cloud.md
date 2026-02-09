@@ -10,7 +10,7 @@
   * [K2deployer Releases](#k2deployer-releases)
   * [Helm Charts](#helm-charts)
 
-<br><br>
+<br>
 # K2cloud Releases
 <table>
   <thead>
@@ -21,15 +21,15 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="/Release_Notes/K2cloud/K2cloud_Release_Notes_Jan2026.pdf">K2cloud January 2026</a></td>
+      <td><a href="/Release_Notes/K2cloud/K2cloud_Release_Notes_Jan2026.pdf" target="_blank">K2cloud January 2026</a></td>
       <td>19 January 2026, 22:00 UTC</td>
     </tr>
     <tr>
-      <td><a href="/Release_Notes/K2cloud/K2cloud_Release_Notes_Nov2025.pdf">K2cloud November 2025</a></td>
+      <td><a href="/Release_Notes/K2cloud/K2cloud_Release_Notes_Nov2025.pdf" target="_blank">K2cloud November 2025</a></td>
       <td>2 November 2025, 11:UTC</td>
     </tr>
     <tr>
-      <td><a href="/Release_Notes/K2cloud/K2cloud_Release_Notes_Jan2025.pdf">K2cloud January 2025</a></td>
+      <td><a href="/Release_Notes/K2cloud/K2cloud_Release_Notes_Jan2025.pdf" target="_blank">K2cloud January 2025</a></td>
       <td>2 February 2025, 11:00 UTC</td>
     </tr>
   </tbody>
@@ -53,6 +53,16 @@ How to notify us:
 
 
 ## K2agent Releases
+
+**Change Log:** <a href="/articles/Product_Versions/ChangeLog_Agent.md" target="_blank">K2agent Change Log</a>
+
+
+**Pull Instructions** 
+<br>
+docker pull docker.share.cloud.k2view.com/k2view/k2v-agent:[tag]
+
+
+
 <table>
   <thead>
     <tr>
@@ -85,11 +95,20 @@ How to notify us:
   </tbody>
 </table>
 
-**Pull Instructions**
-<br>
-docker pull docker.share.cloud.k2view.com/k2view/k2v-agent:[tag]
+
 
 ## K2deployer Releases
+
+**Change Log:** <a href="/articles/Product_Versions/ChangeLog_Deployer.md" target="_blank">K2deployer Change Log</a>
+
+**Pull Instructions**
+<br>
+docker pull docker.share.cloud.k2view.com/k2view/k2-cloud-deployer:[tag]
+
+After you load the Deployer image to your OCI registry, remember to notify K2view of the new location. See  [Deployer Update Requirement](#deployer-update-requirement). 
+
+
+
 <table>
   <thead>
     <tr>
@@ -100,6 +119,16 @@ docker pull docker.share.cloud.k2view.com/k2view/k2v-agent:[tag]
   </thead>
   <tbody>
     <tr>
+      <td>1.8.25</td>
+      <td>sha256:b0c395a8c331534b1fe74e29eb9830b310511a55e995a6bcc01497fca0f0d7f5/td>
+      <td>03 Feb 2026, 15:17 UTC</td>
+    </tr>
+    <tr>
+      <td>1.8.24</td>
+      <td> -- </td>
+      <td> Not released </td>
+    </tr>
+   <tr>
       <td>1.8.23</td>
       <td>sha256:7e7be948861efa06ce4f9c10db04c81f8889333816bbc96dea74bf58f386d3f5</td>
       <td>11 Jan 2026, 11:24 UTC</td>
@@ -141,13 +170,6 @@ docker pull docker.share.cloud.k2view.com/k2view/k2v-agent:[tag]
     </tr>
   </tbody>
 </table>
-
-**Pull Instructions**
-<br>
-docker pull docker.share.cloud.k2view.com/k2view/k2-cloud-deployer:[tag]
-
-After you load the Deployer image to your OCI registry, remember to notify K2view of the new location. See  [Deployer Update Requirement](#deployer-update-requirement). 
-
 
 
 ## Helm Charts
