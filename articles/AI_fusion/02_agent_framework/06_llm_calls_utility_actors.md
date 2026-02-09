@@ -4,16 +4,16 @@
 
 ## Invoking an LLM
 
-The `LLMInvoke` actor is the primary method for calling an LLM. It sends structured messages and receives responses.
+The `LLMInvoke` actor is the primary method through which requests are sent to an LLM. It sends structured messages and receives responses.
 
 ### Message Roles
 
-When sending a prompt to an LLM, messages are structured with different roles:
+When sending a prompt to an LLM, the messages are structured with distinct roles to indicate the purpose of each message:
 
 | Role          | Purpose                                                  | Example                                                      |
 | ------------- | -------------------------------------------------------- | ------------------------------------------------------------ |
 | **System**    | High-level instructions, tone, and behavioral guidelines | "You are an AI assistant for Elite Bank. Always answer in a friendly, professional tone." |
-| **User**      | The actual question or input from the end user           | "What is the interest rate on a 30-year fixed mortgage?"     |
+| **User**      | The actual question or input submitted by the end user           | "What is the interest rate on a 30-year fixed mortgage?"     |
 | **Assistant** | Previous model outputs for conversation continuity       | [Previous response in multi-turn conversation]. The assistance |
 
 ### LLMInvoke Actor Parameters
@@ -22,7 +22,7 @@ When sending a prompt to an LLM, messages are structured with different roles:
 | ----------- | ------- | -------------------------------------------- |
 | `interface` | string  | Interface identifier (e.g., `llm://default`) |
 | `messages`  | object  | Array of role-based messages                 |
-| `stream`    | boolean | Whether to stream the response               |
+| `stream`    | boolean | Determines whether the response is streamed during generation               |
 
 ### Output Parameters
 
