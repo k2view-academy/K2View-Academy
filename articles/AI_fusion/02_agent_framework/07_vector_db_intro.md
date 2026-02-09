@@ -16,7 +16,7 @@ When deciding how and where to store the data and execute these pillars, organiz
      It fits for large-scale datasets and high query volumes.
    - **Examples**: AWS Bedrock Knowledge Bases, Vertex AI Search.
 2. **Purpose-built dedicated vector databases** (managed storage)
-   - **The approach**: The database infrastructure is managed, but the organization remains responsible for the Indexing process (the pipeline that reads, chunks, and embeds the files).
+   - **The approach**: The database infrastructure is managed, but the organization remains responsible for the indexing process (the pipeline that reads, chunks, and embeds the files).
    - **Why choose this**: Organizations choose this model because it provides specialized high-performance indexing and hybrid search that can handle billions of vectors with sub-second latency, offering full architectural control without the burden of server maintenance.
    - **Examples**: Pinecone, Weaviate, Milvus, Qdrant.
 3. **Traditional databases with vector extensions** (non-managed)
