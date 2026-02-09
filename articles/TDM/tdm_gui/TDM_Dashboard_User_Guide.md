@@ -81,7 +81,7 @@ The 'Show all' link allows to drill-down to the detailed *Environments Summary* 
 
 ### General
 
-The reports data includes three levels: Main dashboard > Level 1 details (in each functional area) > Level 2 details (in each functional area). 
+The reports are built on three levels: Main dashboard > Level 1 details (in each functional area) > Level 2 details (in each functional area). 
 
 Below you can find the detailed description of several selected reports.
 
