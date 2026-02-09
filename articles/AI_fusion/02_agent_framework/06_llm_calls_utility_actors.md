@@ -39,21 +39,21 @@ When sending a prompt to an LLM, the messages are structured with distinct roles
 
 ## Prompt Construction Actors
 
-Fabric provides utility actors to construct prompts effectively:
+Fabric provides utility actors that simplify and streamline the process of building prompts:
 
 ### LLMConst
 
-Creates preset LLM prompt transcript messages for any role. Use this to define static portions of your prompt.
+This actor constructs LLM prompt messages for any role and is used for defining the static portions of a prompt.
 
 > The content can include parameter references in the form of ${value}.
 >
-> If the value key is not found, it will be left as is in the text for later phases.
+> If the value key is not found, the parameter reference will remain in the text for later phases.
 
 
 
 ### LLMAppend
 
-Merges multiple message arrays into a single array before passing to LLMInvoke.
+This actor merges multiple message arrays into a single array before passing them to the LLMInvoke actor.
 
 **Use Case:** Combine system instructions, few-shot examples, and user query into one prompt.
 
