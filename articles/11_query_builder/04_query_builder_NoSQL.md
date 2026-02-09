@@ -40,6 +40,8 @@ Additional optional parameters can be included such as: `fields`, `filter` or `s
 
 All external input parameters (except for the `interfaceName`) will be shown in the Query Builder screen.
 
+Note that if the Broadway flow has the external input parameter called `sql`, the Query Builder will be opened in a regular SQL Mode, ignoring any other external inputs except `limit`.
+
 **External Output Parameters**
 
 - `result` - The query results defined as an array of objects.
