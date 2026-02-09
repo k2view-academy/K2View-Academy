@@ -4,7 +4,7 @@ LLM interfaces are the connection layer between the AI Fusion framework and Larg
 
 ## Overview
 
-The AI Fusion implementation calls LLMs at various points in the agent workflow to handle different tasks:
+The AI Fusion implementation invokes LLMs at multiple points in the agent workflow to execute specific tasks:
 
 | Task               | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
@@ -17,12 +17,12 @@ When an LLM task is triggered, Fabric looks up the configured LLM interface and 
 
 ## Supported Providers
 
-LLM interfaces are installed via K2exchange. Some of the foundation model providers, such as AWS Bedrock and Google, behave like an infrastructure and host also models that they do not own. Following are few examples. 
+LLM interfaces are installed via K2exchange. Some of the foundation model providers function as infrastructure platforms and host also models that they do not own. The following are a few examples: 
 
 * OpenAI
 * Anthropic
 * AWS Bedrock
-* Google
+* Google’s Vertex AI
 
 
 
@@ -40,7 +40,7 @@ LLM interfaces are installed via K2exchange. Some of the foundation model provid
 ### Step 2: Create the Interface
 
 1. Navigate to **Shared Objects > Interfaces > Other**
-2. Create a new interface of the installed provider type
+2. Create a new interface of type AI LLM
 3. Configure the required parameters
 
 ### Interface Configuration Parameters
@@ -48,7 +48,7 @@ LLM interfaces are installed via K2exchange. Some of the foundation model provid
 | Parameter       | Description                              | Example                |
 | --------------- | ---------------------------------------- | ---------------------- |
 | **Tag**         | Identifier used to select this interface | `default`              |
-| **Model**       | The specific model to use                | `gpt-4.1`              |
+| **Model**       | The specific model to be used                | `gpt-4.1`              |
 | **Temperature** | Controls response randomness (0-1)       | `0`                    |
 | **Max Tokens**  | Maximum response length                  | `4096`                 |
 | **Host**        | API endpoint                             | `api.openai.com`       |
@@ -62,7 +62,7 @@ LLM interfaces are installed via K2exchange. Some of the foundation model provid
 
 You can create multiple LLM interfaces for different purposes:
 
-### Use Cases for Multiple Interfaces
+### Scenarios for Multiple Interfaces
 
 | Scenario              | Approach                                                     |
 | --------------------- | ------------------------------------------------------------ |
