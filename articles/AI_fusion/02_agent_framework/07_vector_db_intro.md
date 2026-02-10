@@ -8,7 +8,7 @@ At its core, RAG is built upon two critical pillars: **indexing** and **retrieva
 
 ## The Three Models of Implementation
 
-When deciding how and where to store the data and execute these pillars, organizations typically choose between three levels of service, ranging from full control to full automation.
+When deciding how and where to store data and execute these pillars, organizations typically choose between three service levels, ranging from full control to full automation.
 
 1. **RAG-as-a-Service** (fully managed)
    - **The approach**: The service provider - one of the major cloud providers - encapsulates the entire process, automating the synchronization between the data source and the vector store to remove the need for manual pipeline maintenance. You provide the files; the service provides the answers. 
