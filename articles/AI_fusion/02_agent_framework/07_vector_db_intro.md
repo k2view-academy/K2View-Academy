@@ -11,7 +11,7 @@ At its core, RAG is built upon two critical pillars: **indexing** and **retrieva
 When deciding how and where to store data and execute these pillars, organizations typically choose between three service levels, ranging from full control to full automation.
 
 1. **RAG-as-a-Service** (fully managed)
-   - **The approach**: The service provider - one of the major cloud providers - encapsulates the entire process, automating the synchronization between the data source and the vector store to remove the need for manual pipeline maintenance. You provide the files; the service provides the answers. 
+   - **The approach**: The service provider — one of the major cloud providers — encapsulates the entire process, automating synchronization between the data source and the vector store to remove the need for manual pipeline maintenance. You provide the files; the service provides the answers. 
    - **Why choose this**: This is the fastest route to production, designed for teams that want a fully automated "hands-off" pipeline where the service handles the parsing, chunking, and embedding logic automatically. 
      It fits for large-scale datasets and high query volumes.
    - **Examples**: AWS Bedrock Knowledge Bases, Vertex AI Search.
@@ -22,7 +22,7 @@ When deciding how and where to store data and execute these pillars, organizatio
 3. **Traditional databases with vector extensions** (non-managed)
    In this model, vector search is implemented as an extension to an existing relational database. Vectors are stored alongside structured data and accessed using standard database drivers and SQL-based queries.
    - **The approach:** Vector search is implemented as an extension to an existing relational database. Vectors are stored alongside structured data and accessed via standard SQL.
-   - **Why choose This**: This is ideal for operational simplicity, data locality, and keeping sensitive organizational data within your own controlled infrastructure.
+   - **Why choose this**: This is ideal for operational simplicity, data locality, and keeping sensitive organizational data within your own controlled infrastructure.
    - **Examples**: SQLite + `vec0`, PostgreSQL + `pgvector`.
 
 
