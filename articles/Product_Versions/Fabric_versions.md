@@ -363,8 +363,8 @@ Please check the release notes for component version support, such as Kafka, Neo
 				<p><a href="/Release_Notes/Archived%20Fabric%20Versions/Fabric_Release_Notes_V7.1.1.pdf">7.1.1</a></p>
 				<p>Jul 25, 2023</p>
 			</td>
-            <td>Jun 17, 2025</td>
-            <td>104</td>
+            <td>Feb 10, 2026</td>
+            <td>106</td>
             <td></td>
             <td>4.0.10</td>            
         </tr>
