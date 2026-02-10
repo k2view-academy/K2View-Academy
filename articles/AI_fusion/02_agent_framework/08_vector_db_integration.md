@@ -2,7 +2,7 @@
 
 The aifusion framework supports vector databases integrations for semantic search, enabling RAG, by providing set of actors and flows to build and use in-house vector database.
 
-In Fabric, PostgreSQL often serves as the system database. As a result, customers can leverage it for vector workloads without adding new infrastructure or learning new APIs. small or medium datasets can be cross reference documents or proceduresץ
+In Fabric, PostgreSQL often serves as the system database. As a result, customers can leverage it for vector workloads without adding new infrastructure or learning new APIs. small or medium datasets can be cross reference documents or procedures.
 
 SQLite, which is used as the core of LUI storage, can be beneficial for few use cases, like:
 
