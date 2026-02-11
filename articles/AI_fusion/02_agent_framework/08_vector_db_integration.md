@@ -9,7 +9,7 @@ SQLite, which is used as the core of LUI storage, can be beneficial for few use 
 * When LUI contains also unstructured data, like personal contracts and agreements. Vector tables can be then created as part of the business entity, in a way that such unstructured info can be processes and later semantic searches can done upon.
 * Create a dedicated LU for holding vectors, for cross reference documents or procedures.
 
-Accordingly, AI Fusion supports these two vector DBs - SQLite and PostgresSQL.
+Accordingly, AI Fusion supports two vector DBs: SQLite and PostgreSQL.
 
 > SQLite, aimed to be used inside Fabric storage, as LUIs tables, where each such table in the LUI is stands for vector index.
 > You can create a dedicated LU for holding vectors or add such tables/indexes in any LU in your project. 
