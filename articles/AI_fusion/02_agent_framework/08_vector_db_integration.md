@@ -16,13 +16,13 @@ Accordingly, AI Fusion supports two vector DBs: SQLite and PostgreSQL.
 
 
 
-Read [here](11_setup_and_prerequisites.md) for setup information. 
+Setup information is available [here](11_setup_and_prerequisites.md). 
 
 
 
-## The ingestion flow steps and utilities
+## Ingestion Flow Steps and Utilities
 
-The ingestion flow - the process of inserting content into a vector store - is built from several steps. Below are utility actors and flows that you may consider using it. As usual, while building your flow, you may prefer use alternatives, in each of the steps. 
+The ingestion flow — the process of inserting content into a vector store — consists of several steps. Below are utility actors and flows you may consider using. As always, when building your flow, you may prefer use alternatives, in each of the steps. 
 
 > You can use the AI Fusion examples, as reference.
 >
@@ -30,23 +30,23 @@ The ingestion flow - the process of inserting content into a vector store - is b
 
 
 
-* **Initialize** - prepare the table. For thisת you can use the *VectorInitializer* flow (`PgVectorInitializer` or `SqliteVectorInitializer`) 
+* **Initialize** — prepare the table. For thisת you can use the *VectorInitializer* flow (`PgVectorInitializer` or `SqliteVectorInitializer`) 
 
-* **Grounding** - the initial sources processing. It is recommended to transform the resources, like documents and web-pages,  into a markdown format. 
+* **Grounding** — the initial sources processing. It is recommended to transform the resources, like documents and web-pages,  into a markdown format. 
   During the agentic flow, those documents are provided to the AI to be part of its context. The markdown format is a very useful when working with AI models, enabling adding simple tags, hinting about titles, sections, list and so on.  
 
   > A very useful utility is ["markitdown"](https://github.com/microsoft/markitdown) - a Python library, which transforms many formats to markdown. Examples of file types formats it converts: PDF, PowerPoint, Word, Excel, Images (png, jpg), HTML, Text-based formats (CSV, JSON, XML) 
 
-* **Chunking** - slicing and splitting the processed document into smaller, semantically meaningful pieces , for better search.
+* **Chunking** — slicing and splitting the processed document into smaller, semantically meaningful pieces , for better search.
 
   For this purpose you can use the `chunker` actor.
 
-* **Embedding** - Converts the text chunks into numerical vector embeddings using an embedding model.
+* **Embedding** — Converts the text chunks into numerical vector embeddings using an embedding model.
 
   * Use the embedding interface that you define at the project.
   * During this process you shall loop on chunks and embed each chink using `embed` actor.
 
-* **Indexing:** The load phase, where those vectors are stored and organized in the vector database.
+* **Indexing** — The load phase, where those vectors are stored and organized in the vector database.
 
   For this you can use the *VectorLoader* flow (`PgVectorLoader` or `SqliteVectorLoader`)
 
@@ -54,11 +54,11 @@ The ingestion flow - the process of inserting content into a vector store - is b
 
 ## Retrieval / Search
 
-The search process is built from 2 steps:
+The search process is built from two steps:
 
-- **Embed** - transform the search term or sentence into vector.
+- **Embed** — transform the search term or sentence into vector.
   Use the **embed** actor for doing it.
-- **Query** - search for matched results at the Vector DB. Note that because this search is done by semantic similarity, then usually more than a single search result is being used. In addition each result is retrieved with its rate.
+- **Query** — search for matched results at the Vector DB. Note that because this search is done by semantic similarity, then usually more than a single search result is being used. In addition each result is retrieved with its rate.
 
 
 
