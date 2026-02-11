@@ -1,12 +1,12 @@
 # AI Fusion Integration with Vector Databases
 
-The aifusion framework supports vector databases integrations for semantic search, enabling RAG, by providing set of actors and flows to build and use in-house vector database.
+The AI Fusion framework supports vector database integrations for semantic search, enabling RAG, by providing a set of actors and flows to build and use an in-house vector database.
 
-In Fabric, PostgreSQL often serves as the system database. As a result, customers can leverage it for vector workloads without adding new infrastructure or learning new APIs. small or medium datasets can be cross reference documents or procedures.
+In Fabric, PostgreSQL often serves as the system database. As a result, customers can leverage it for vector workloads without adding new infrastructure or learning new APIs. Small to medium datasets can be cross-referenced documents or procedures.
 
 SQLite, which is used as the core of LUI storage, can be beneficial for few use cases, like:
 
-* When LUI contains also unstructured data, like personal contract and agreements. Vector tables can be then created as part of the business entity, so that such unstructured info can be processes and later semantic searches can done upon.
+* When LUI contains also unstructured data, like personal contracts and agreements. Vector tables can be then created as part of the business entity, in a way that such unstructured info can be processes and later semantic searches can done upon.
 * Create a dedicated LU for holding vectors, for cross reference documents or procedures.
 
 Accordingly, AI Fusion supports these two vector DBs - SQLite and PostgresSQL.
