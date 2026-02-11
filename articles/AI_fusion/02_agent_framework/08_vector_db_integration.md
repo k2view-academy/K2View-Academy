@@ -30,12 +30,12 @@ The ingestion flow — the process of inserting content into a vector store — 
 
 
 
-* **Initialize** — prepare the table. For thisת you can use the *VectorInitializer* flow (`PgVectorInitializer` or `SqliteVectorInitializer`) 
+* **Initialize** — prepare the table. For this, you can use the *VectorInitializer* flow (`PgVectorInitializer` or `SqliteVectorInitializer`). 
 
-* **Grounding** — the initial sources processing. It is recommended to transform the resources, like documents and web-pages,  into a markdown format. 
-  During the agentic flow, those documents are provided to the AI to be part of its context. The markdown format is a very useful when working with AI models, enabling adding simple tags, hinting about titles, sections, list and so on.  
+* **Grounding** — processing of the initial sources. It is recommended to transform resources, such as documents and web pages, into markdown format. 
+  During the agentic flow, these documents are provided to the AI to be part of its context. The markdown format is very useful when working with AI models, enabling adding simple tags, hinting about titles, sections, list and so on.  
 
-  > A very useful utility is ["markitdown"](https://github.com/microsoft/markitdown) - a Python library, which transforms many formats to markdown. Examples of file types formats it converts: PDF, PowerPoint, Word, Excel, Images (png, jpg), HTML, Text-based formats (CSV, JSON, XML) 
+  > A very useful utility is ["markitdown"](https://github.com/microsoft/markitdown) - a Python library, which transforms many formats to markdown. Examples of file types formats it converts: PDF, PowerPoint, Word, Excel, Images (png, jpg), HTML, Text-based formats (CSV, JSON, XML). 
 
 * **Chunking** — slicing and splitting the processed document into smaller, semantically meaningful pieces , for better search.
 
