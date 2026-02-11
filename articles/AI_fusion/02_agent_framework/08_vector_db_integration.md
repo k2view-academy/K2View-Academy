@@ -58,13 +58,13 @@ The search process consists of two steps:
 
 - **Embed** — transforms the search term or sentence into a vector.
   Use the **embed** actor to perform this step.
-- **Query** — search for matched results at the Vector DB. Note that because this search is done by semantic similarity, then usually more than a single search result is being used. In addition each result is retrieved with its rate.
+- **Query** — searches for matching results in the Vector database. Note that because this search is done by semantic similarity, then usually more than a single search result is being used. In addition each result is retrieved with its rate.
 
 
 
 ## Examples
 
-Example flows that demonstrate the ingestion and retrieval processes can be found at `SharedObjects/Broadway/aifusion/vectors/examples/` - PgembedSearchExample and SqlitembedSearchExample flows
+Example flows demonstrating the ingestion and retrieval processes can be found at `SharedObjects/Broadway/aifusion/vectors/examples/`: PgembedSearchExample and SqlitembedSearchExample.
 
 
 
@@ -72,9 +72,9 @@ Example flows that demonstrate the ingestion and retrieval processes can be foun
 
 * Embedding vector dimension
   * The Vector DB table schema definition includes the vector dimension. This must match the chosen embedding model. 
-  * Higher embedding dimensionality improves accuracy at increased computational cost. Tune dimension size based on model choice and performance constraints.
-* Search results return row identifiers and a distance score. Typical meaningful distances are around 0.4 to 0.6; values below 0.6 are often good matches.
-* To enable updating the vector DB content, with a controlled and tracked capabilities, use the Pipeline for the ingestion process. For example:
+  * Higher embedding dimensionality improves accuracy at increased computational cost. Adjust the dimension size according to your model choice and performance constraints.
+* Search results return row identifiers along with a distance score. Typical meaningful distances are around 0.4–0.6; values below 0.6 are usually considered good matches.
+* To enable updating the vector DB content, with controlled and tracked capabilities, use the pipeline for the ingestion process. For example:
   * Have a suite for each of the steps, where each can contain one or more cases. 
-  * When several documents are indexed into the same table, processing each can be handled by a separated case (have a loop on a directory and have cases built dynamically) so that each can be tracked.
+  * When several documents are indexed into the same table, each can be processed in a separate case (have a loop on a directory and have cases built dynamically) so that each can be tracked.
   * Use different pipelines or different suites for each table.
