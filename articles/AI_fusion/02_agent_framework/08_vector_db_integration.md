@@ -32,32 +32,32 @@ The ingestion flow — the process of inserting content into a vector store — 
 
 * **Initialize** — prepare the table. For this, you can use the *VectorInitializer* flow (`PgVectorInitializer` or `SqliteVectorInitializer`). 
 
-* **Grounding** — processing of the initial sources. It is recommended to transform resources, such as documents and web pages, into markdown format. 
-  During the agentic flow, these documents are provided to the AI to be part of its context. The markdown format is very useful when working with AI models, enabling adding simple tags, hinting about titles, sections, list and so on.  
+* **Grounding** — processing of the initial sources. It is recommended to transform resources, such as documents and web pages, into Markdown format. 
+  During the agentic flow, these documents are provided to the AI to be part of its context. The Markdown format is very useful when working with AI models, enabling adding simple tags, hinting about titles, sections, list and so on.  
 
-  > A very useful utility is ["markitdown"](https://github.com/microsoft/markitdown) - a Python library, which transforms many formats to markdown. Examples of file types formats it converts: PDF, PowerPoint, Word, Excel, Images (png, jpg), HTML, Text-based formats (CSV, JSON, XML). 
+  > A very useful utility is ["markitdown"](https://github.com/microsoft/markitdown), which is a Python library that transforms various file formats into Markdown. Examples of file formats it can convert include PDF, PowerPoint, Word, Excel, images (PNG, JPG), HTML, and text-based formats such as CSV, JSON, and XML. 
 
-* **Chunking** — slicing and splitting the processed document into smaller, semantically meaningful pieces , for better search.
+* **Chunking** — splitting the processed document into smaller, semantically meaningful pieces, for more effective search.
 
-  For this purpose you can use the `chunker` actor.
+  For this purpose, you can use the `chunker` actor.
 
-* **Embedding** — Converts the text chunks into numerical vector embeddings using an embedding model.
+* **Embedding** — converts text chunks into numerical vector embeddings using an embedding model.
 
-  * Use the embedding interface that you define at the project.
-  * During this process you shall loop on chunks and embed each chink using `embed` actor.
+  * Use the embedding interface that you defined in the project.
+  * During this process, you should loop over the chunks and embed each one using the `embed` actor.
 
-* **Indexing** — The load phase, where those vectors are stored and organized in the vector database.
+* **Indexing** — the load phase, during which vectors are stored and organized in the vector database.
 
-  For this you can use the *VectorLoader* flow (`PgVectorLoader` or `SqliteVectorLoader`)
+  For this you can use the *VectorLoader* flow (`PgVectorLoader` or `SqliteVectorLoader`).
 
   
 
 ## Retrieval / Search
 
-The search process is built from two steps:
+The search process consists of two steps:
 
-- **Embed** — transform the search term or sentence into vector.
-  Use the **embed** actor for doing it.
+- **Embed** — transforms the search term or sentence into a vector.
+  Use the **embed** actor to perform this step.
 - **Query** — search for matched results at the Vector DB. Note that because this search is done by semantic similarity, then usually more than a single search result is being used. In addition each result is retrieved with its rate.
 
 
