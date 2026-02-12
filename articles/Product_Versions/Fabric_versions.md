@@ -345,10 +345,10 @@ Please check the release notes for component version support, such as Kafka, Neo
 				<p>Feb 14, 2024</p>
 			</td>
 			 <td>
-                <p><a href="/Release_Notes/V7.2/Fabric_Release_Notes_V7.2.2_HF29.pdf">HF29</a></p>
-                <p>Jan 26, 2026</p>
+                <p><a href="/Release_Notes/V7.2/Fabric_Release_Notes_V7.2.2_HF30.pdf">HF30</a></p>
+                <p>Feb 12, 2026</p>
             </td>
-            <td>369</td>
+            <td>375</td>
             <td>15.4</td>
             <td>4.1.8</td>            
         </tr>
