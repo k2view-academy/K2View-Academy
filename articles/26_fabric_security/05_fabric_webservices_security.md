@@ -167,14 +167,14 @@ When activated, a browser pop-up will appear when the request is sent. The user 
 
 ## Generating API Key  
 
-There are two ways to generate an API key: either through the Web Framework Admin or with a Fabric command. In both cases, you can choose whether to digitally sign the API Key, as described below.
+There are two ways to generate an API key: either through the Web Framework Admin or with a Fabric command. In both cases, you can choose whether to use HMAC-based symmetric signing of the API Key, as described below.
 
 * Web Framework Admin: 
 
   1. Open the **Admin Panel** web page and select **Admin** > **Security** and then click the **API keys** tab.
   2. Click the **Add API Key +** button on the upper right of the window.
 
-  3. Fill in the Name (Mandatory) and choose if it shall be digitally signed (Optional) by using the checkbox on the page.
+  3. Fill in the Name (Mandatory) and choose if you need to perform HMAC-based symmetric signing (Optional) by using the checkbox on the page.
 
   4. Click  **Save**.
 
@@ -205,7 +205,7 @@ If the SECURED option has not been selected, the token name is used as the token
 
 ## Web Service Authorization & Permissions 
 
-Web service authentication is done either with a user or an API key, each of which can be assigned to roles and, accordingly, to permissions.
+Web service authentication is performed using a user or an API key, each of which can be assigned to roles and, accordingly, to permissions.
 
 
 Read this [article](/articles/26_fabric_security/01_fabric_security_overview.md#rbac-in-fabric) for the list of supported roles, and then click [here](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-ws_name-to-role-) to learn how to grant permissions to specific roles.
