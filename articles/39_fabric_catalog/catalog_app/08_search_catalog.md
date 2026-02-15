@@ -32,7 +32,9 @@ Click [here](/articles/39_fabric_catalog/20_catalog_APIs.md#search-catalog) for 
 
 <img src="../images/search_results.png" style="zoom:75%;" />
 
-The search results are presented in a list that can be exported into a CSV file. The result set returned to the client is limited to 750 nodes and 750 relations, meaning, one single search can yield a total of up to 1500 results.
+The search results are presented in a list that can be exported into a CSV file. The result set returned to the client is limited to 1000 results. 
+
+The search results can be exported to a CSV file. Starting from Fabric V8.4, the export of the results is performed via the server API and is not limited to 1000 results.  
 
 To navigate from the search results to a node in the Catalog tree, click the ![](../images/link.png) icon in the Name column. When navigating to a relation, the Catalog will focus on the FK column of the *refersTo* relation.
 
