@@ -2,7 +2,7 @@
 
 The TDM Portal is a web-based application that helps users to easily control and manage test data. It has 2 main functions:
 
-- TDM administrative activities - this function defines TDM Business Entities, system, environments and permissions.
+- TDM administrative activities - this function defines TDM Business Entities, system, environments, permissions and reports.
 - TDM copy activities - this function creates and executes TDM tasks that provide a selected subset of entities or tables to a selected environment.
 
 TDM settings and tasks are saved in the [TDM PostgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Each TDM activity, created by a user via the TDM Portal, updates the TDM DB. 
@@ -40,6 +40,8 @@ The following tabs are displayed when selecting the TDM option in the applicatio
 
 ​                             
 
+The **Reports** tab has been added in TDM 9.5. It displays [TDM usage reports](TDM_Dashboard_User_Guide.md) and is available for Admin and Environment Owner users.
+
 To move between sections, click the required tab. 
 
 The Settings tab contains the following sub-tabs:
@@ -52,7 +54,7 @@ The Settings tab contains the following sub-tabs:
 
 - To enable the full functionality with BE-based tasks: 
 
-  - Deploy at least one Logical Unit (LU) to Fabric to activate the Business Entities and Systems tabs.
+  - Deploy at least one Logical Unit (LU) to Fabric to activate the Business Entities tab.
 
   - Define at least one Business Entity (BE) to enable the creation of BE-based tasks.
 
