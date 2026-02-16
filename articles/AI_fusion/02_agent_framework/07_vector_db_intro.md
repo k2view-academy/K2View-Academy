@@ -8,12 +8,12 @@ At its core, RAG is built upon two critical pillars: **indexing** and **retrieva
 
 ## The Three Models of Implementation
 
-When deciding how and where to store data and execute these pillars, organizations typically choose between three service levels, ranging from full control to full automation.
+When deciding how and where to store data and implement these pillars, organizations typically choose between three models, ranging from full control to full automation.
 
 1. **RAG-as-a-Service** (fully managed)
-   - **The approach**: The service provider — one of the major cloud providers — encapsulates the entire process, automating synchronization between the data source and the vector store to remove the need for manual pipeline maintenance. You provide the files; the service provides the answers. 
-   - **Why choose this**: This is the fastest route to production, designed for teams that want a fully automated "hands-off" pipeline where the service handles the parsing, chunking, and embedding logic automatically. 
-     It fits for large-scale datasets and high query volumes.
+   - **The approach**: The service provider — one of the major cloud providers — encapsulates the entire process, automating synchronization between the data source and the vector store in order to remove the need for manual pipeline maintenance. You provide the files; the service provides the answers. 
+   - **Why choose this**: This model offers the fastest path to production and is ideal for teams seeking a fully automated, hands-off pipeline; the service manages parsing, chunking, and embedding. 
+     It is suitable for large-scale datasets and high query volumes.
    - **Examples**: AWS Bedrock Knowledge Bases, Vertex AI Search.
 2. **Purpose-built, dedicated vector databases** (managed storage)
    - **The approach**: The database infrastructure is managed, but the organization remains responsible for the indexing process — the pipeline that reads, chunks, and embeds the files.
