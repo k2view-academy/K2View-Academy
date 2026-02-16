@@ -34,9 +34,6 @@ The description of the TDM environment permission set should be entered in this 
 
 - When the Environment Type is set to 'Both', it can have both read and write accesses. Therefore, the TDM environment permission sets in such environments can include read access, write access, or both.
 
-
- 	 **Example:**
-
 - ENV1 can be a source or target environment. The environment has 2 permission sets:
 
   - Set1, enables read-only access. Testers with this permission set can select this environment only as a source environment in a TDM task.
@@ -72,7 +69,7 @@ Note: Although an environment permission set without testers cannot be used, the
 
 To enable the permission set for all TDM users, click the **Testers** field and select the **ALL** option.
 
-Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon next to the Testers field. The **User Settings** pop-up window appears (image below). Check the **All Users** checkbox:
+Alternatively, click the **Add Tester** next to the Testes field. The **User Settings** pop-up window appears (image below). Check the **All Users** checkbox:
 
 ![user setting](images/env_role_user_settings.png)
 
@@ -81,7 +78,7 @@ Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon ne
 #### Adding Selected TDM Users to the TDM Environment Permission Set
 
 1. Click the **Testers** field and select one of the displayed user IDs.
-2. Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon to open the **User Settings** pop-up window. Select a user ID from the drop-down list or manually type it. 
+2. Alternatively, click the **Add Tester** to open the **User Settings** pop-up window. Select a user ID from the drop-down list or manually type it. 
 3. Click the ADD button.
 4. Click the **Testers** field again and add another user in the same manner, or manually type a user ID, if needed.
 
@@ -89,9 +86,9 @@ Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon ne
 
 #### Adding Selected TDM User Groups to the TDM Environment Permission Set
 
-1. Click the ![plus icon](images/plus_icon_prod_version.png) icon to open the **User Settings** pop-up window. Select a User Group from the drop-down list.
+1. Click the **Add Tester**  to open the **User Settings** pop-up window. Select a User Group from the drop-down list.
 2. Click the ADD button.
-3. Click again the ![plus icon](images/plus_icon_prod_version.png) icon next to the **Testers** field and select another user group in the same manner, if needed.
+3. Click again the **Add Tester** next to the **Testers** field and select another user group in the same manner, if needed.
 
 #### TDM Environment Permission Set — Assignment Priorities
 

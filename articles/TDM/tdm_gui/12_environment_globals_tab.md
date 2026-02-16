@@ -18,7 +18,7 @@ A Global variable value can be set on the TDM environment level by an Admin user
 The Environment Variable window in the Environment window holds the following settings:
 
 - **Variable Name**, select a variable from the dropdown list. The dropdown list displays the list of Globals in the Fabric TDM implementation.
-- **Logical Unit**, can be populated with 'ALL' or with a specific LU name.
+- **Logical Unit**, can be populated with 'ALL'. 
 - **Variable Value**,  a Global variable can have a different value in each environment. 
 
 

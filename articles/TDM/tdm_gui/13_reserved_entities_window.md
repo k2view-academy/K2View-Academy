@@ -8,7 +8,7 @@ Each user can view the list of reserved entities on their environments:
 - Environment owners can view the list of reserved entities on their environments.
 - Testers can view the list of reserved entities on the environments that they are attached to. A tester can view the full list of reserved entities on their environment even if these entities are reserved by other users to avoid running functional tests on entities reserved by other users.
 
-The Reserved Entities window enables the user to view, update, or release the selected entities. The user can search for an entity or filter the entities by their attributes. For example- view entities of a selected environment:
+The Reserved Entities window enables the user to view, update, or release the selected entities. The user can search for an entity or filter the entities by their attributes. For example- view reserved customers of a selected environment:
 
 ![reserved entities window](images/reserve_entities_filter.png)
 
@@ -37,10 +37,6 @@ Admin users can release all entities in all the TDM environments.
 ## Reserved Entities - Activities
 
 Click the three dots next to three dots icon and select one of the following activities:
-
-![select all](images/reserved_entities_activities_popup.png)
-
-
 
 ### Release Entity
 

@@ -9,6 +9,8 @@ A TDM system has the following components:
 
 - **Logical Units** (LUs).
 
+- **Related Interfaces**: This optional setting was introduced in **TDM 9.5**. You can attach zero, one, or multiple Interfaces to a System. Attached interfaces inherit the **default affinity** and/or the **maximum number of workers** from the task’s environment when creating table-level tasks.
+
 ## BE and LU System Relationship
 
 Each BE and LU combination can be attached to one system only. However, a system can have LUs belonging to different BEs.
@@ -38,27 +40,30 @@ The System window displays information about a selected system. It has two main 
 
 The General Information section has the following settings:
 
-- Name, populated by the system name.
+- **Name**: populated by the system name.
 
-- Vendor and Description, optional settings.
+- **Vendor** and **Description**: optional settings.
 
-- Versions, system's versions which enable the TDM implementation to support multiple versions of the system.
-
+- **Versions**: system's versions which enable the TDM implementation to support multiple versions of the system.
   -  Each system version may have a different data source structure. For example, a development environment may have new tables and fields that are not in the production environment. 
   - At least one version must be set for a system. Multiple system versions can also be set. 
   - The relevant system version must be selected when adding a system to an [Environment](11_environment_products_tab.md).
 
-To add a version to a system, click ![delete](images/plus_icon_prod_version.png) next to the Versions setting and enter the version's value which is the logical identifier of the system's version. For example 1, 1.5, dev or prod. The values must be aligned to the TDM Fabric implementation. 
+​	To add a version to a system, click ![delete](images/plus_icon_prod_version.png) next to the Versions setting and enter the version's value which is the logical identifier of the system's version. 	For example 1, 1.5, dev or prod. The values must be aligned to the TDM Fabric implementation. 
 
-  [Click for more information about supporting multiple system versions via TDM](/articles/TDM/tdm_implementation/13_tdm_implementation_supporting_different_product_versions.md).
+   [Click for more information about supporting multiple system versions via TDM](/articles/TDM/tdm_implementation/13_tdm_implementation_supporting_different_product_versions.md).
+
+- **Related Interfaces**: Click the text box to open the dropdown list and select an interface. Repeat this step to add additional interfaces. To remove an interface, click the **X** next to the selected interface.
 
 ### Logical Units
 
 #### How Do I Add an LU to a System?
 
-Click ![plus](images/plus_icon.png) to open the **Add Logical Unit** dialog box.
+Click **Add Logical Unit** to open the dialog box:
 
-  ![add_lu](images/prod_add_lu.png)
+![Add lu to System](images/prod_add_lu.png)
+
+  
 
 - The **Business Entities** setting displays a list of BEs with available LUs that are not attached to the system.
 
