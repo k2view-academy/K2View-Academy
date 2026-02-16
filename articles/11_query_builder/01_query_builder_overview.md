@@ -1,6 +1,7 @@
 # Query Builder Overview
 
 The Query Builder is an embedded query building tool that allows you to build complex SQL queries on a selected [Interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) (an external data source) as well as on Fabric, using an intuitive interface. 
+This tool is enabled for exploring any interface, as well as inside project implementation modules like Broadway actors and Graphit SQL nodes.
 
 
 
@@ -32,17 +33,21 @@ The Query Builder is an embedded query building tool that allows you to build co
 
 1. [**Interface Explorer**](/articles/04_fabric_studio/25_web_data_explorer.md) - select the Interface Explorer icon <img src="../04_fabric_studio/images/web/datasource_explorer.png" style="zoom:67%;" /> in the **Activity Bar** on the left side of Web Studio and choose the relevant interface. Clicking the DB icon to the right of the chosen interface, opens the Query Builder. Read [here](/articles/04_fabric_studio/25_web_data_explorer.md#Open-the-Query-Builder) for more explanations. 
 
-   > Note: You can query several data source interfaces simultaneously. A new Query Builder tab opens for each interface. The name of the interface is stated in the name tab.
+   Alternatively, you can use the [Command Pallet](/articles/04_fabric_studio/20_web_command_keyboard_shortcuts.md) by choosing there the **Open Query builder...** command. Then, list of interfaces will appear, where you can choose one of them (also with the option to type and search) to open the Query Builder window for this interface.
+   
+    <img src="images/web/11_select_interface_via_pallet.jpg"> 
 
-2. **LU Schema** window > top toolbar > [**New Table**](/articles/03_logical_units/09_add_table_to_a_schema.md) action button > Create New > From Source With SQL Query. 
+    > Note: You can query several data source interfaces simultaneously. A new Query Builder tab opens for each interface. The name of the interface is stated in the name tab.
 
-3. [**Graphit window**](/articles/15_web_services_and_graphit/06_custom_ws_create_graphit_ws.md), click Query Builder icon in either the **SQL** or the **SQL non-prepared** node type. A pop-up window opens, where you should choose the Interface that you wish to query, build the query and test it. Upon closing, the SQL statement is populated into the Graphit node.
+3. **LU Schema** window > top toolbar > [**New Table**](/articles/03_logical_units/09_add_table_to_a_schema.md) action button > Create New > From Source With SQL Query. 
 
-4. [**Broadway**](/articles/19_Broadway/01_broadway_overview.md), click the QB icon in the **DbCommand actor**. A pop-up window opens, where you should choose the Interface that you wish to query, build the query and test it. Upon closing, the SQL is populated into the actor.
+4. [**Graphit window**](/articles/15_web_services_and_graphit/06_custom_ws_create_graphit_ws.md), click Query Builder icon in either the **SQL** or the **SQL non-prepared** node type. A pop-up window opens, where you should choose the Interface that you wish to query, build the query and test it. Upon closing, the SQL statement is populated into the Graphit node.
 
-5. [**Instance Groups**](/articles/20_jobs_and_batch_services/14_instances_groups.md), where you can choose the Interface that you wish to query, build the query and test it.
+5. [**Broadway**](/articles/19_Broadway/01_broadway_overview.md), click the QB icon in the **DbCommand actor**. A pop-up window opens, where you should choose the Interface that you wish to query, build the query and test it. Upon closing, the SQL is populated into the actor.
 
-6. [**Views**](/articles/06_LU_tables/06_LU_views.md), where you can choose the Interface that you wish to query, build the query and test it.
+6. [**Instance Groups**](/articles/20_jobs_and_batch_services/14_instances_groups.md), where you can choose the Interface that you wish to query, build the query and test it.
+
+7. [**Views**](/articles/06_LU_tables/06_LU_views.md), where you can choose the Interface that you wish to query, build the query and test it.
 
 </web>
 
