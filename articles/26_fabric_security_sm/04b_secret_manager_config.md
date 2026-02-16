@@ -181,10 +181,11 @@ TIMEOUT - default is 10000 ms.
 * BASE_URL - the base Akeyless APIs URL (e.g. https://api.akeyless.io) 
 
 **Authentication**  
-The supported authentication access type is `access-key` where thje following parameters are required:
+The supported authentication method is API Key, where the following parameters are required:
 * ACCESS_ID
 * ACCESS_KEY
 
+> See [here](https://tutorials.akeyless.io/docs/authentication-methods-and-api-key-authentication) a guide for creating API Key and geting these parameters. 
 
 ## Multi Secrets Management Services and Instances Support
 
