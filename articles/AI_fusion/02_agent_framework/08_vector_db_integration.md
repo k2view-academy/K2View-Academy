@@ -43,7 +43,7 @@ The ingestion flow — the process of inserting content into a vector store — 
 * **Embedding** — transforms text chunks into numerical vector embeddings using an embedding model.
 
   * Use the embedding interface that you defined in the project.
-  * During this process, you should loop over the chunks and embed each one using the `Embed` actor.
+  * During this process, you should loop through the chunks and embed each one using the `Embed` actor.
 
 * **Indexing** — the load phase, during which vectors are stored and organized in the vector database.
 
