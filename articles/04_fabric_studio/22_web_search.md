@@ -4,13 +4,16 @@
 
 The Fabric Web Studio allows you to quickly search terms and content over all **files** in the project.  Press `⇧⌘F / CTRL+Shift+F` or the Search icon ![search](images/web/search.png)at the Activity Bar to open the Search box, where you can enter your search term. 
 
-Search results are grouped into files containing the search term, with an indication of the hits, i.e. number of occurrences, in each file and its location. Click on the result to expand a file and see a preview of all of the hits within that file. Then single-click on one of the hits to view it in the editor.
+Search results are grouped into files containing the search term, with an indication of the hits, i.e. number of occurrences, in each file and its location. Click on the result to expand a file and see a preview of all of the hits within that file. Then single-click on one of the hits to view it in the editor. 
+
+>**Notes:**
+> * For opening complex editors, like Broadway flows (that is: non lnaguge langauge code based files like Java and JS), right-click and choose **Open**
+> * To see file's location in the project tree, right-click and choose **Reveal in Explorer**
 
 ![search base](images/web/22_1_search.png)
 
+
 >**Tip:** You can also use regular SQL expressions in the search box.
-
-
 
 ### Advanced Search Options
 
