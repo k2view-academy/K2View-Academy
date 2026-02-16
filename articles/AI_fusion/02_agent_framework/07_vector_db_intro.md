@@ -14,16 +14,16 @@ When deciding how and where to store data and implement these pillars, organizat
    - **The approach**: The service provider — one of the major cloud providers — encapsulates the entire process, automating synchronization between the data source and the vector store in order to remove the need for manual pipeline maintenance. You provide the files; the service provides the answers. 
    - **Why choose this**: This model offers the fastest path to production and is ideal for teams seeking a fully automated, hands-off pipeline; the service manages parsing, chunking, and embedding. 
      It is suitable for large-scale datasets and high query volumes.
-   - **Examples**: AWS Bedrock Knowledge Bases, Vertex AI Search.
+   - **Examples**: Amazon Bedrock Knowledge Bases, Vertex AI Search.
 2. **Purpose-built, dedicated vector databases** (managed storage)
    - **The approach**: The database infrastructure is managed, but the organization remains responsible for the indexing process — the pipeline that reads, chunks, and embeds the files.
-   - **Why choose this**: Organizations choose this model because it provides specialized high-performance indexing and hybrid search that can handle billions of vectors with sub-second latency, offering full architectural control without the burden of server maintenance.
+   - **Why choose this**: This model combines high-performance indexing and hybrid search of billions of vectors with sub-second latency. Overall, it offers full architectural control while eliminating server maintenance.
    - **Examples**: Pinecone, Weaviate, Milvus, Qdrant.
 3. **Traditional databases with vector extensions** (non-managed)
 
-   In this model, vector search is implemented as an extension to an existing relational database. Vectors are stored alongside structured data and accessed through standard database drivers and SQL-based queries.
+   
    - **The approach:** Vector search is implemented as an extension to an existing relational database. Vectors are stored alongside structured data and accessed via standard SQL.
-   - **Why choose this**: This is ideal for operational simplicity, data locality, and keeping sensitive organizational data within your own controlled infrastructure.
+   - **Why choose this**: This model offers operational simplicity the ability to keep the data locally within your own controlled infrastructure.
    - **Examples**: SQLite + `vec0`, PostgreSQL + `pgvector`.
 
 
