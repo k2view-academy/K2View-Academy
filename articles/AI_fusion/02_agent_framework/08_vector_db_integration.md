@@ -4,9 +4,9 @@ The AI Fusion framework supports vector database integrations for semantic searc
 
 In Fabric, PostgreSQL often serves as the system database. As a result, customers can leverage it for vector workloads without adding new infrastructure or learning new APIs. Small to medium datasets — such as cross-referenced documents or procedural guides — can be stored and queried directly within PostgreSQL.
 
-SQLite, which is used as the core of LUI storage, can be beneficial for few use cases, like:
+SQLite, which serves as the core of LUI storage, can be beneficial for use cases such as:
 
-* When LUI contains also unstructured data, like personal contracts and agreements. Vector tables can be then created as part of the business entity, in a way that such unstructured info can be processes and later semantic searches can done upon.
+* When LUI contains also unstructured data, like personal contracts and agreements. Vector tables can then be created as part of the business entity, in a way that such unstructured content can be processes and later queried using semantic search.
 * Create a dedicated LU for holding vectors, for cross reference documents or procedures.
 
 Accordingly, AI Fusion supports two vector DBs: SQLite and PostgreSQL.
