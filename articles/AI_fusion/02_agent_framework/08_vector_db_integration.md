@@ -73,7 +73,7 @@ Example flows demonstrating the ingestion and retrieval processes can be found a
   * The vector database table schema definition includes the vector dimension. This must match the chosen embedding model. 
   * Higher embedding dimensionality improves accuracy at increased computational cost. Adjust the dimension size according to your model choice and performance constraints.
 * Search results return row identifiers along with a distance score. Typical meaningful distances are around 0.4–0.6; values below 0.6 are usually considered good matches.
-* To enable updating the vector database content, with controlled and tracked capabilities, use the pipeline for the ingestion process. For example:
-  * Have a suite for each of the steps, where each can contain one or more cases. 
-  * When several documents are indexed into the same table, each can be processed in a separate case (have a loop on a directory and have cases built dynamically) so that each can be tracked.
-  * Use different pipelines or different suites for each table.
+* To enable updating the vector database content, with controlled and tracked operations, use the pipeline for the ingestion process. For example:
+  * Create a suite for every step, where each suite can include one or more cases. 
+  * When several documents are indexed into the same table, each can be processed in a separate case (e.g., looping through a directory and creating cases dynamically) in order to track the progress.
+  * Use separate pipelines or suites for each table.
