@@ -22,6 +22,7 @@ These are the Secrets Management service providers currently supported by Fabric
 - CyberArk CCP - [CyberArk CCP](https://docs.cyberark.com/credential-providers/Latest/en/Content/CCP/The-Central%20-Credential-Provider.htm)  [![link out](images/link-out-blue.png)](https://docs.cyberark.com/credential-providers/Latest/en/Content/CCP/The-Central%20-Credential-Provider.htm)
 - Google Cloud Secret Manager - [Google Cloud Secret Manager](https://cloud.google.com/security/products/secret-manager) [![link out](images/link-out-blue.png)](https://cloud.google.com/security/products/secret-manager)
 - One Identity Safeguard - [One Identity Safeguard](https://www.oneidentity.com/products/one-identity-safeguard-for-privileged-passwords/) [![link out](images/link-out-blue.png)](https://www.oneidentity.com/products/one-identity-safeguard-for-privileged-passwords/)
+- Akeyless Secrets Management - [Akeyless Secrets Management](https://www.akeyless.io/secrets-management/) [![link out](images/link-out-blue.png)](https://www.akeyless.io/secrets-management/)
 
 
 
