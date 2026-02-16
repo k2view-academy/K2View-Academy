@@ -7,7 +7,7 @@ In Fabric, PostgreSQL often serves as the system database. As a result, customer
 SQLite, which serves as the core of LUI storage, can be beneficial for use cases such as:
 
 * When LUI contains also unstructured data, like personal contracts and agreements. Vector tables can then be created as part of the business entity, in a way that such unstructured content can be processes and later queried using semantic search.
-* Create a dedicated LU for holding vectors, for cross reference documents or procedures.
+* Creation of a dedicated LU to hold vectors, for cross-referenced documents or procedures.
 
 Accordingly, AI Fusion supports two vector DBs: SQLite and PostgreSQL.
 
