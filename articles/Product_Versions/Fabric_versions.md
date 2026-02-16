@@ -16,6 +16,20 @@ Please check the release notes for component version support, such as Kafka, Neo
 		</tr>
 		<tr>
             <td align="left">
+                <p><a href="/Release_Notes/V8.3/Fabric_Release_Notes_V8.3.3.pdf">8.3.3</a></p>
+                <p>Feb 11, 2026</p>
+            </td>
+            <td>
+			</td>
+            <td>
+                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.3.3_10</p>
+                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.3.3_10</p>
+            </td>
+            <td>17.5</td>
+            <td>4.1.8</td>
+        </tr>
+		<tr>
+            <td align="left">
                 <p><a href="/Release_Notes/V8.3/Fabric_Release_Notes_V8.3.2.pdf">8.3.2</a></p>
                 <p>Jan 29, 2026</p>
             </td>
@@ -331,10 +345,10 @@ Please check the release notes for component version support, such as Kafka, Neo
 				<p>Feb 14, 2024</p>
 			</td>
 			 <td>
-                <p><a href="/Release_Notes/V7.2/Fabric_Release_Notes_V7.2.2_HF29.pdf">HF29</a></p>
-                <p>Jan 26, 2026</p>
+                <p><a href="/Release_Notes/V7.2/Fabric_Release_Notes_V7.2.2_HF30.pdf">HF30</a></p>
+                <p>Feb 12, 2026</p>
             </td>
-            <td>369</td>
+            <td>375</td>
             <td>15.4</td>
             <td>4.1.8</td>            
         </tr>
@@ -363,8 +377,8 @@ Please check the release notes for component version support, such as Kafka, Neo
 				<p><a href="/Release_Notes/Archived%20Fabric%20Versions/Fabric_Release_Notes_V7.1.1.pdf">7.1.1</a></p>
 				<p>Jul 25, 2023</p>
 			</td>
-            <td>Jun 17, 2025</td>
-            <td>104</td>
+            <td>Feb 10, 2026</td>
+            <td>106</td>
             <td></td>
             <td>4.0.10</td>            
         </tr>
@@ -404,9 +418,9 @@ Please check the release notes for component version support, such as Kafka, Neo
 				<p>Sep 2, 2022</p>
 			</td>
 			<td>
-			<p>HF34</p>
-            <p>Jan 22, 2026</p></td>
-            <td>314</td>
+			<p>HF35</p>
+            <p>Feb 15, 2026</p></td>
+            <td>318</td>
             <td></td>
             <td>4.1.10</td>            
         </tr>
