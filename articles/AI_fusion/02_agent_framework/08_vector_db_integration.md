@@ -29,10 +29,10 @@ The ingestion flow — the process of inserting content into a vector store — 
 
 
 
-* **Initialize** — prepare the table. For this, you can use the *VectorInitializer* flow (`PgVectorInitializer` or `SqliteVectorInitializer`). 
+* **Initialize** — prepares the table. For this step, you can use the *VectorInitializer* flow (`PgVectorInitializer` or `SqliteVectorInitializer`). 
 
 * **Grounding** — processing of the initial sources. It is recommended to transform resources, such as documents and web pages, into Markdown format. 
-  During the agentic flow, these documents are provided to the AI to be part of its context. The Markdown format is very useful when working with AI models, enabling adding simple tags, hinting about titles, sections, list and so on.  
+  During the agentic flow, these documents are provided to the AI as part of its context. Using Markdown is beneficial when working with AI models, as it allows adding simple tags that indicate titles, sections, lists and other structural elements.  
 
   > A very useful utility is ["markitdown"](https://github.com/microsoft/markitdown), which is a Python library that transforms various file formats into Markdown. Examples of file formats it can convert include PDF, PowerPoint, Word, Excel, images (PNG, JPG), HTML, and text-based formats such as CSV, JSON, and XML. 
 
@@ -40,14 +40,14 @@ The ingestion flow — the process of inserting content into a vector store — 
 
   For this purpose, you can use the `chunker` actor.
 
-* **Embedding** — converts text chunks into numerical vector embeddings using an embedding model.
+* **Embedding** — transforms text chunks into numerical vector embeddings using an embedding model.
 
   * Use the embedding interface that you defined in the project.
-  * During this process, you should loop over the chunks and embed each one using the `embed` actor.
+  * During this process, you should loop over the chunks and embed each one using the `Embed` actor.
 
 * **Indexing** — the load phase, during which vectors are stored and organized in the vector database.
 
-  For this you can use the *VectorLoader* flow (`PgVectorLoader` or `SqliteVectorLoader`).
+  For this step, you can use the *VectorLoader* flow (`PgVectorLoader` or `SqliteVectorLoader`).
 
   
 
@@ -56,24 +56,24 @@ The ingestion flow — the process of inserting content into a vector store — 
 The search process consists of two steps:
 
 - **Embed** — transforms the search term or sentence into a vector.
-  Use the **embed** actor to perform this step.
-- **Query** — searches for matching results in the Vector database. Note that because this search is done by semantic similarity, then usually more than a single search result is being used. In addition each result is retrieved with its rate.
+  Use the **Embed** actor to perform this step.
+- **Query** — searches for matching results in the vector database. As this search is based on semantic similarity, multiple matches are usually returned, each with an associated relevance score.
 
 
 
 ## Examples
 
-Example flows demonstrating the ingestion and retrieval processes can be found at `SharedObjects/Broadway/aifusion/vectors/examples/`: PgembedSearchExample and SqlitembedSearchExample.
+Example flows demonstrating the ingestion and retrieval processes can be found at `SharedObjects/Broadway/aifusion/vectors/examples/`: `PgembedSearchExample` and `SqlitembedSearchExample`.
 
 
 
 ## Guidelines and Best Practices
 
 * Embedding vector dimension
-  * The Vector DB table schema definition includes the vector dimension. This must match the chosen embedding model. 
+  * The vector database table schema definition includes the vector dimension. This must match the chosen embedding model. 
   * Higher embedding dimensionality improves accuracy at increased computational cost. Adjust the dimension size according to your model choice and performance constraints.
 * Search results return row identifiers along with a distance score. Typical meaningful distances are around 0.4–0.6; values below 0.6 are usually considered good matches.
-* To enable updating the vector DB content, with controlled and tracked capabilities, use the pipeline for the ingestion process. For example:
+* To enable updating the vector database content, with controlled and tracked capabilities, use the pipeline for the ingestion process. For example:
   * Have a suite for each of the steps, where each can contain one or more cases. 
   * When several documents are indexed into the same table, each can be processed in a separate case (have a loop on a directory and have cases built dynamically) so that each can be tracked.
   * Use different pipelines or different suites for each table.
