@@ -12,8 +12,9 @@ Fabric supports integration with Secrets Management services, as they provide se
    1.4 [CyberArk CCP](#cyberark-ccp)  
    1.5 [Google Cloud Secret Manager](#google-cloud-secret-manager)  
    1.6 [One Identity Safeguard](#one-identity-safeguard)  
+   1.7 [Akeyless Secrets Management](#akeyless-secrets-management)
 
-2. [Multi Secrets Management Services and Instances Support](#multi-secrets-management-services-and-instances-support)  
+3. [Multi Secrets Management Services and Instances Support](#multi-secrets-management-services-and-instances-support)  
    2.1 [Multi Secrets Management Service Systems](#multi-secrets-management-service-systems)  
    2.2 [Multi Secrets Management Service Instances](#multi-secrets-management-service-instances)  
 
@@ -169,6 +170,20 @@ TIMEOUT - default is 10000 ms.
 
 **Authentication** is performed through certifications and keys that must be applied.
 
+
+### Akeyless Secrets Management
+
+**Section name**: [encryption_akeyless_sm]
+
+**Properties**:
+
+* ENABLED=true
+* BASE_URL - the base Akeyless APIs URL (e.g. https://api.akeyless.io) 
+
+**Authentication**  
+The supported authentication access type is `access-key` where thje following parameters are required:
+* ACCESS_ID
+* ACCESS_KEY
 
 
 ## Multi Secrets Management Services and Instances Support
