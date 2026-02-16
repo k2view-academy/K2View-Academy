@@ -24,9 +24,8 @@ Setup information is available [here](11_setup_and_prerequisites.md).
 
 The ingestion flow — the process of inserting content into a vector store — consists of several steps. Below are utility actors and flows you may consider using. As always, when building your flow, you can choose alternatives for any of the steps. 
 
-> You can use the AI Fusion examples, as reference.
->
-> Examples are located at SharedObjects/Broadway/aifusion/vectors/examples
+> For reference, you can review the AI Fusion examples available at 
+> `SharedObjects/Broadway/aifusion/vectors/examples`.
 
 
 
