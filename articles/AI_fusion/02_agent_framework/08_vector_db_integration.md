@@ -7,12 +7,12 @@ In Fabric, PostgreSQL often serves as the system database. As a result, customer
 SQLite, which serves as the core of LUI storage, can be beneficial for use cases such as:
 
 * When LUI contains also unstructured data, like personal contracts and agreements. Vector tables can then be created as part of the business entity, in a way that such unstructured content can be processes and later queried using semantic search.
-* Creation of a dedicated LU to hold vectors, for cross-referenced documents or procedures.
+* Creation of a dedicated LU to hold vectors for cross-referenced documents or procedures.
 
-Accordingly, AI Fusion supports two vector DBs: SQLite and PostgreSQL.
+Accordingly, the AI Fusion framework supports two vector databases: SQLite and PostgreSQL.
 
-> SQLite, aimed to be used inside Fabric storage, as LUIs tables, where each such table in the LUI is stands for vector index.
-> You can create a dedicated LU for holding vectors or add such tables/indexes in any LU in your project. 
+> SQLite is designed to be used within Fabric storage as LUI tables, where each table represents a vector index.
+> You can either create a dedicated LU to hold vectors or add vector tables/indexes to any existing LU in your project. 
 
 
 
@@ -22,7 +22,7 @@ Setup information is available [here](11_setup_and_prerequisites.md).
 
 ## Ingestion Flow Steps and Utilities
 
-The ingestion flow — the process of inserting content into a vector store — consists of several steps. Below are utility actors and flows you may consider using. As always, when building your flow, you may prefer use alternatives, in each of the steps. 
+The ingestion flow — the process of inserting content into a vector store — consists of several steps. Below are utility actors and flows you may consider using. As always, when building your flow, you can choose alternatives for any of the steps. 
 
 > You can use the AI Fusion examples, as reference.
 >
