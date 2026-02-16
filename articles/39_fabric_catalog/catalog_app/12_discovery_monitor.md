@@ -8,13 +8,21 @@ Click **Discovery** in the top Catalog navigation bar to open the monitor:
 
 The monitor includes the following areas:
 
-* The data platform selection drop-down, along with **Run** <img src="../images/run.png" style="zoom: 70%;" /> and **Stop** <img src="../images/stop.png" style="zoom: 70%;" /> icons, is located at the top of the monitor screen. The monitor enables starting the job execution for the selected data platform and stopping the job when it is in progress.
+* The data platform selection drop-down, along with **Run** and **Stop** icons, is located at the top of the monitor screen:
+
+  ​	<img src="../images/monitor_run_stop.png"  />
+
+  * The monitor enables starting the discovery for the selected data platform. Once the discovery start, the spinner is displayed, indicating the progress.
+  * Discovery can be terminated when it is in progress, if needed.
   * The monitor shows the last execution for the selected data platform, either during its progress or when completed.
+
 * Three progress bars, each one representing a part of the discovery process:
-  * Crawler over data platform.
+  * Crawler over data platform, displaying the crawler progress.
   * Plugin execution pipeline, displaying the aggregated progress of all active plugins. 
-  * Version creation in Graph DB.
+  * Version creation in Graph DB, displaying the progress of writing into the Neo4j.
+
 * The General Info area shows the job's start time, duration, execution status and version. If the job is completed, the end time is displayed as well. 
+
 * The monitor's main area shows the progress of each step, including the completion percentage and the number of elements found.
   * Steps displayed in this area are dynamic and depend on job configuration. Disabled plugins are not displayed.
   * Each step has an indication whether it is in progress, not started, completed or failed. 
@@ -36,7 +44,7 @@ The execution progress is displayed by using various icons, as follows:
 
 * The following image shows that the job has been completed without creating a new version, since no changes were detected from the previous version:
 
-  <img src="../images/monitor_unchanged.png" style="zoom:80%;" />
+  <img src="../images/monitor_unchanged.png" />
 
 
 
