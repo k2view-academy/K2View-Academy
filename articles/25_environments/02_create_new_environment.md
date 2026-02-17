@@ -46,7 +46,9 @@ Click [here](/articles/99_fabric_infras/devops/01_fabric_security_overview.md) f
    * Enter a meaningful name for the environment in the **Name** field.
    * (Optional) In the **Description** field, add a description of the environment.
 
-The following activities can be done on each environment:
+
+
+The following activities can be done on each environment (new or existing):
 
 * Click the **Delete** <img src="images/delete_icon.png" style="zoom:90%;" />icon to delete the environment.
 
@@ -56,6 +58,8 @@ The following activities can be done on each environment:
 
   <img src="images/test_conn_results.png" alt="image" style="zoom:80%;" />
 
+* **Filter Interfaces** - Show all, only active, only inactive
+  <img src="images/25_02_WEB_filter_interfaces.png" alt="image" />
 
 </web>
 
@@ -206,6 +210,18 @@ Note that environments can be deployed to the Fabric Server either from the [Fab
 Once the environments' definition is completed, deploy them to the server by clicking the **Deploy Environments** <img src="images/deploy_button.png"  /> button. 
 
 The environments' saving is performed automatically, prior to their deployment. If at least one of the environments has an empty name, the deployment would fail.
+
+
+
+## Search for Environments
+
+In large projects, especially in TDM, organizations may have many environments. To quickly locate and manage specific ones, you can search and filter the environment list.
+
+Use the **Search Environment** box at the top. As you type, the list dynamically filters to show only environments that match your search.
+
+![image](images/25_02_WEB_search_filter_env.gif)
+
+
 
 
 
