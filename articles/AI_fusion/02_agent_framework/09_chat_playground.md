@@ -8,7 +8,7 @@ The Chat Playground is a core component of the AI Fusion web application that pr
 
 ## Accessing the Chat Playground
 
-Navigate to the aifusion web application and select **Chat** from the top navigation menu. The Chat Playground sits alongside the **Evaluation** and **Observation** modules in the main navigation.
+Navigate to the aifusion web application and select **Chat** from the top navigation menu. The Chat Playground is located alongside the **Evaluation** and **Observation** modules in the main navigation.
 
 ## User Interface Components
 
