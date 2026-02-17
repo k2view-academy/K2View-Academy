@@ -60,6 +60,19 @@ The following activities can be done on each environment (new or existing):
 
 * **Filter Interfaces** - Show all, only active, only inactive
   <img src="images/25_02_WEB_filter_interfaces.png" alt="image" />
+  
+  
+  
+* **Set interfaces as Active/Inactive**
+
+  By default, environment interfaces inherit their original activation settings. However, you can disable any interface that is not applicable to a specific environment.
+
+  You can change activation in either of these ways:
+
+  - **Interface Editor:** Toggle the **Active** switch for a specific interface.
+  - **Interfaces tree:** For faster actions, select or clear the checkbox next to each interface, or set all interfaces to active/inactive by type (*DB Interfaces* or *Generic Interfaces*). The later option can be useful when only few interfaces are being used for a specific environment, so you might inactivate all and then reactivate the few you need.
+
+  
 
 </web>
 
@@ -85,10 +98,6 @@ By default, all interfaces are enabled. However each interface can be disabled i
 <web>
 
 Once an environment is added (upper part of the window), all DB and non-DB interfaces in the project appear at the bottom left area of the window. You can go over them and populate their connection details, such as Host and Port. 
-
-By default, all interfaces are enabled. However each interface can be disabled if it is not applicable for the environment. This can be done by clicking the Active toggle in the interface.
-
-<img src="images/25_02_2_WEB.png" alt="image" style="zoom:80%;" />
 
 </web>
 
