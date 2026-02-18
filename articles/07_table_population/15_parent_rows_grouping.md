@@ -18,9 +18,9 @@ The following table describes each parameter settings and the result query struc
 <tbody>
 <tr>
 <td style="width: 230px;"><strong>Parameter Value</strong></td>
-<td style="width: 100px;"><strong>No. of Keys</strong></td>
-<td style="width: 350px;"><strong>Query</strong></td>
-<td style="width: 220px;"><strong>Comments</strong></td>
+<td style="width: 130px;"><strong>No. of Keys</strong></td>
+<td style="width: 340px;"><strong>Query</strong></td>
+<td style="width: 200px;"><strong>Comments</strong></td>
 </tr>
 <tr>
 <td rowspan="2"><strong>OR</strong></td>
@@ -28,9 +28,9 @@ The following table describes each parameter settings and the result query struc
 <td>SELECT * FROM PATIENT WHERE PATIENT_ID = ? OR PATIENT_ID = ?</td>
 <td rowspan="2">OR is default for all DB types except Cassandra</td>
 </tr>
-<tr style="height: 54px;">
-<td style="height: 54px; width: 102.297px;">&gt; 1</td>
-<td style="height: 54px; width: 328.547px;">SELECT * FROM PATIENT WHERE PATIENT_ID = ? AND VISIT_ID = ? OR PATIENT_ID = ? AND VISIT_ID = ?</td>
+<tr >
+<td>&gt; 1</td>
+<td>SELECT * FROM PATIENT WHERE PATIENT_ID = ? AND VISIT_ID = ? OR PATIENT_ID = ? AND VISIT_ID = ?</td>
 </tr>
 <tr>
 <td rowspan="2"><strong>IN</strong></td>
