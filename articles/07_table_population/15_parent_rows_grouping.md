@@ -64,7 +64,7 @@ The following table explains how each **Parent Rows Grouping** setting impacts t
 <tr>
 <td style="width: 130px;">&gt; 1 key</td>
 <td style="width: 320px;">SELECT * FROM PATIENT WHERE PATIENT_ID = ? AND VISIT_ID = ? OR PATIENT_ID = ? AND VISIT_ID = ?</td>
-<td style="width: 200px;">Used for composite keys;. Recommended for DBs that do not support Tupling, such as Aerospike.</td>
+<td style="width: 200px;">Used for composite keys. Recommended for DBs that do not support Tupling, such as Aerospike.</td>
 </tr>
 <tr>
 <td style="width: 250px;"><strong>NONE</strong></td>
