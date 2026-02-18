@@ -12,7 +12,7 @@ Starting from Fabric V8.4, the creation of the WHERE clause is impacted by the *
 
 ### Parent Rows Grouping Settings
 
-The following table describes each parameter settings and the result query structure, depending on the number of input keys, assuming each key can receive multiple input values:
+The following table describes the meaning of each setting of **Parent Rows Grouping** parameter by showing the result query structure. The query also depends on the number of input keys, assuming each key can receive multiple input values:
 
 <table style="width: 900px;">
 <tbody>
