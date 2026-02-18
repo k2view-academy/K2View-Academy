@@ -1,0 +1,63 @@
+# Parent Rows Grouping
+
+### Overview
+
+The **SourceDbQuery** Actor is used in the Broadway populations to query the source data. The Actor runs the query defined in the population flow with the addition of the WHERE clause generated in the server. The Actor's WHERE clause is generated automatically prior to query execution and it includes the keys and their values, passed in the `parent_rows` output object of the **PopulationArgs** Actor.
+
+![image](images/07_14_01.PNG)
+
+
+
+Starting from Fabric V8.4, the creation of the WHERE clause is impacted by the **Parent Rows Grouping** parameter in the Fabric properties section of JDBC  interface type definition. 
+
+### Parent Rows Grouping Settings
+
+The following table describes each parameter settings and the result query structure, depending on the number of input keys, assuming each key can receive multiple input values:
+
+<table style="width: 900px;">
+<tbody>
+<tr>
+<td style="width: 230px;"><strong>Parameter Value</strong></td>
+<td style="width: 100px;"><strong>No. of Keys</strong></td>
+<td style="width: 350px;"><strong>Query</strong></td>
+<td style="width: 220px;"><strong>Comments</strong></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>OR</strong></td>
+<td>1</td>
+<td>SELECT * FROM PATIENT WHERE PATIENT_ID = ? OR PATIENT_ID = ?</td>
+<td rowspan="2">OR is default for all DB types except Cassandra</td>
+</tr>
+<tr style="height: 54px;">
+<td style="height: 54px; width: 102.297px;">&gt; 1</td>
+<td style="height: 54px; width: 328.547px;">SELECT * FROM PATIENT WHERE PATIENT_ID = ? AND VISIT_ID = ? OR PATIENT_ID = ? AND VISIT_ID = ?</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>IN</strong></td>
+<td>1</td>
+<td>SELECT * FROM PATIENT WHERE VISIT_ID IN (?,?)</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>&gt; 1</td>
+<td>SELECT * FROM PATIENT WHERE (PATIENT_ID, VISIT_ID) IN ((?,?), (?,?))</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>IN_WITHOUT_TUPLING</strong><strong><br /></strong><strong>&nbsp;</strong></td>
+<td>1</td>
+<td>SELECT * FROM PATIENT WHERE VISIT_ID IN (?, ?)</td>
+<td rowspan="2">IN_WITHOUT_TUPLING is recommended for DBs that don't support Tupling, such as Aerospike</td>
+</tr>
+<tr>
+<td>&gt; 1</td>
+<td>SELECT * FROM PATIENT WHERE PATIENT_ID = ? AND VISIT_ID = ? OR PATIENT_ID = ? AND VISIT_ID = ?</td>
+</tr>
+<tr>
+<td><strong>NONE</strong></td>
+<td>Any</td>
+<td>SELECT * FROM PATIENT WHERE PATIENT_ID = ? AND VISIT_ID = ?</td>
+<td >NONE default for Cassandra, which requires separate calls to server for each value</td>
+</tr>
+</tbody>
+</table>
+

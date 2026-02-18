@@ -5,6 +5,7 @@
 <studio><li><a href="/articles/07_table_population/02_source_object_types.md">Source Object Types</a></li></studio>
 <li><a href="/articles/07_table_population/03_creating_a_new_table_population.md">Creating a New Table Population</a></li>
 <li><a href="/articles/07_table_population/14_table_population_based_Broadway.md">Table Population Based on a Broadway Flow</a></li>
+<li><a href="/articles/07_table_population/15_parent_rows_grouping.md">Parent Rows Grouping</a></li>
 <li><a href="/articles/07_table_population/13_LU_table_population_execution_order.md">Table Population Excecution Order</a></li>
 <li><a href="/articles/07_table_population/05_table_population_mode.md">Table Population Mode</a></li>
 <studio><li><a href="/articles/07_table_population/04_table_population_properties_tab.md">Table Population Properties Tab</a></li></studio>

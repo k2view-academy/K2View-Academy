@@ -73,14 +73,13 @@ The following example displays a Broadway flow template created to populate the 
     ~~~sql
     SELECT * FROM CASES WHERE ACTIVITY_ID = ? OR ACTIVITY_ID = ? OR ACTIVITY_ID = ?
     ~~~
+    Starting from Fabric V8.4, the creation of the WHERE clause in the Actor's SQL statement is impacted by the **Parent Rows Grouping** parameter in the Fabric properties section of JDBC  interface type definition. Click [here](15_parent_rows_grouping.md) for the detailed explanation about different parameter settings. 
 
   * The **size** value determines the number of ACTIVITY_ID values included in the SQL statement.
 
   * Additional parameters can be added to the WHERE clause if needed. For example, to filter cases by their status.
 
-  * The **SourceDbQuery** Actor supports non-prepared statement parameters. For example, to dynamically transfer a table or a column name to a query.
-
-  * [Click here for more information about parameters support and non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md).
+  * The **SourceDbQuery** Actor supports non-prepared statement parameters. For example, to dynamically transfer a table or a column name to a query. Click [here](/articles/19_Broadway/actors/05_db_actors.md) for more information about parameters support and non-prepared statement parameters.
 
 * **Stage 1**, a placeholder in the template that enables adding additional activities that can be performed on the data prior to loading it to the target DB. 
 
