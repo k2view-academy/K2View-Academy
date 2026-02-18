@@ -75,4 +75,14 @@ The following table explains how each **Parent Rows Grouping** setting impacts t
 </tbody>
 </table>
 
+### Performance Impact: OR vs. IN
+
+The choice between OR and IN significantly impacts how the database engine parses and executes a query. 
+
+Generally, the IN operator is more efficient for large datasets because many database optimizers treat it as a single operation that can be sorted or evaluated against an index more quickly than multiple OR conditions. 
+
+While OR is the default for most database types, it can lead to slower performance as the number of values increases, as the engine must evaluate each condition sequentially. 
+
+Using IN with "Tupling" allows for more concise filtering on composite keys, though it requires support from the underlying database.
+
 
