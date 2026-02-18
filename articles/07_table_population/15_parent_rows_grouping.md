@@ -18,8 +18,8 @@ The following table describes each parameter settings and the result query struc
 <tbody>
 <tr>
 <td style="width: 230px;"><strong>Parameter Value</strong></td>
-<td style="width: 130px;"><strong>No. of Keys</strong></td>
-<td style="width: 340px;"><strong>Query</strong></td>
+<td style="width: 130px;"><strong>Keys</strong></td>
+<td style="width: 340px;"><strong>Generated Query</strong></td>
 <td style="width: 200px;"><strong>Comments</strong></td>
 </tr>
 <tr>
@@ -56,7 +56,7 @@ The following table describes each parameter settings and the result query struc
 <td><strong>NONE</strong></td>
 <td>Any</td>
 <td>SELECT * FROM PATIENT WHERE PATIENT_ID = ? AND VISIT_ID = ?</td>
-<td >NONE default for Cassandra, which requires separate calls to server for each value</td>
+<td >NONE is default for Cassandra, which requires separate calls to server for each value</td>
 </tr>
 </tbody>
 </table>
