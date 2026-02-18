@@ -78,7 +78,7 @@ Each of the main workflow stages, representing agents, can be expanded to reveal
 
 ### Agentic Flow Visualization
 
-The Trace pane demonstrates how agents operate iteratively, making multiple tool calls to gather required information before formulating a response. For example, answering "Can I increase my credit card balance?" may involve:
+The Trace pane demonstrates how agents operate iteratively, making multiple tool calls to gather the required information before formulating a response. For example, answering "Can I increase my credit card balance?" may involve:
 
 1. Retrieving customer identification (using getSSN)
 2. Fetching credit score information (getCreditScore)
