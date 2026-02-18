@@ -19,13 +19,55 @@ When you set the Source component before the Target, the selected [Business enti
 
 ![target example2](images/task_target_component_load_entities1.png)
 
-Notes: 
-- You can edit the Business entity settings - change the selected Business entity or change the LUs' selection for the task's Business entity, but changing the task's Business entity will reset the Source and Subset components.
-- If the target environment contains [disabled systems](11_environment_products_tab.md#disabling-the-environments-systems) and the task performs load and/or delete actions on the target environment, you must uncheck the disabled systems. 
+## Business Entity 
+
+The **Business Entity (BE)** and its **Advanced** settings are available for both the **Source** and **Target** components. They display the systems and **Logical Units (LUs)** associated with the selected BE.
+
+When you populate the **Source** before the **Target**, the Source BE and its selected systems and LUs are automatically copied to the Target component.
+
+------
+
+### Important notes
+
+- You can change the BE; however, selecting a different BE for the task **resets the Source and Subset components**.
+- Changing the selected **LU and/or system** affects **both the Source and Target components**.
+- If the **target environment** contains [disabled systems](11_environment_products_tab.md#disabling-the-environments-systems) and the task performs **load and/or delete** actions on the target environment, you must **clear (uncheck) the disabled systems** before execution.
+
+### Advanced BE - Affinity and Max Number of Workers
+
+Starting with **TDM 9.5**, each LU in the **Advanced BE** view supports configuration of:
+
+- **Affinity**
+- **Maximum number of workers**
+
+You can expand each LU and configure these values **after selecting an environment**.
+
+By default, each LU inherits its values from:
+
+1. The environment’s system settings (if defined), or
+2. The TDM and Fabric configuration values
+
+You can **override these values per LU** to control and **optimize task execution** behavior:
 
 
 
-## Testing environment
+![affinity](C:\Users\TaliEinhorn\OneDrive - K2View\Documents\K2View-Academy\articles\TDM\tdm_gui\images\task_affinity_max_workers_example.png)
+
+
+
+When both **Source** and **Target** components are defined for the task (Load, Extract & Load, Generate & Load):
+
+- **Affinity**
+  - The task execution process runs using the **target** affinity
+  - The entity extraction runs using the **source** affinity
+- **Max number of workers**
+  - The task execution process uses the **target** maximum number of workers
+
+Click **[here]** for detailed information on how task execution determines the effective affinity and maximum number of workers.
+
+
+
+## Target environment
 
 Select one TDM environment from the drop-down list. This list displays the available target environments for the user. Only environments that contain [systems with the select task's BE](11_environment_products_tab.md) are displayed.
 
