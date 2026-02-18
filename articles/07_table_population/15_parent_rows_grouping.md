@@ -17,16 +17,16 @@ The following table describes each parameter settings and the result query struc
 <table style="width: 900px;">
 <tbody>
 <tr>
-<td style="width: 230px;"><strong>Parameter Value</strong></td>
+<td style="width: 250px;"><strong>Parameter Value</strong></td>
 <td style="width: 130px;"><strong>Keys</strong></td>
-<td style="width: 340px;"><strong>Generated Query</strong></td>
+<td style="width: 320px;"><strong>Generated Query</strong></td>
 <td style="width: 200px;"><strong>Comments</strong></td>
 </tr>
 <tr>
 <td rowspan="2"><strong>OR</strong></td>
 <td>1</td>
 <td>SELECT * FROM PATIENT WHERE PATIENT_ID = ? OR PATIENT_ID = ?</td>
-<td rowspan="2">OR is default for all DB types except Cassandra</td>
+<td rowspan="2">OR is a default value for all DB types except Cassandra</td>
 </tr>
 <tr >
 <td>&gt; 1</td>
@@ -36,7 +36,7 @@ The following table describes each parameter settings and the result query struc
 <td rowspan="2"><strong>IN</strong></td>
 <td>1</td>
 <td>SELECT * FROM PATIENT WHERE VISIT_ID IN (?,?)</td>
-<td rowspan="2">&nbsp;</td>
+<td rowspan="2">When the query should be based on a composite key, Tupling is used in SQL string within JDBC.</td>
 </tr>
 <tr>
 <td>&gt; 1</td>
@@ -56,7 +56,7 @@ The following table describes each parameter settings and the result query struc
 <td><strong>NONE</strong></td>
 <td>Any</td>
 <td>SELECT * FROM PATIENT WHERE PATIENT_ID = ? AND VISIT_ID = ?</td>
-<td >NONE is default for Cassandra, which requires separate calls to server for each value</td>
+<td >NONE is a default value for Cassandra, which requires separate calls to server for each value</td>
 </tr>
 </tbody>
 </table>
