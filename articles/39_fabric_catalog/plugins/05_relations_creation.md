@@ -91,7 +91,7 @@ The following matching rules are applied by the plugin. Note that each of these 
     </tbody>
     </table>
 
-- ```sameFieldNamesPk``` - common fields that are part of the PK in both datasets, and both datasets have the same number of PKs.
+- ```sameFieldsInBothPk``` - common fields that are part of the PK in both datasets, and both datasets have the same number of PKs.
 
   - The relation is created and its direction is random. 
 
@@ -122,7 +122,7 @@ The following matching rules are applied by the plugin. Note that the rule is ap
   * The relation *dataset2 refers to dataset1* is created.
 * ```commonFieldsInBothPk``` - common fields that are part of the PK in both datasets, where dataset2 has more PKs than dataset1.
   - The relation *dataset2 refers to dataset1* is created.
-* ```sameFieldNamesPk``` - common fields that are part of the PK in both datasets, and both datasets have the same number of PKs.
+* ```sameFieldsInBothPk``` - common fields that are part of the PK in both datasets, and both datasets have the same number of PKs.
   - The relation is created and its direction is random. 
 
 #### Field Type Include List
@@ -166,7 +166,7 @@ The following matching rules are applied by the plugin. Note that the rule is ap
   - The relation *dataset2 refers to dataset1* is created.
 - ```commonFieldsInBothPk``` - common fields that are part of the PK in both datasets, where dataset2 has more PKs than dataset1.
   - The relation *dataset2 refers to dataset1* is created.
-- ```sameFieldNamesPk``` - common fields that are part of the PK in both datasets, and both datasets have the same number of PKs.
+- ```sameFieldsInBothPk``` - common fields that are part of the PK in both datasets, and both datasets have the same number of PKs.
   - The relation is created and its direction is random. 
 
 #### Field Type Include List
