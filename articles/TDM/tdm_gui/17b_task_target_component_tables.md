@@ -31,12 +31,11 @@ You can clear the Delete action checkbox, but be aware that loading without a de
   ![tagret affinity](images/table_level_target_affinity.png)
 
 
-
 ### Source and Target execution behavior
 
 When both **Source** and **Target** components are defined for the task (Load, Extract & Load), the task execution uses the **Target** affinity and **Target** maximum number of workers.
 
-Click [here] for more details on how task execution determines the effective affinity and maximum number of workers.
+Click [here](/articles/TDM/tdm_architecture/03b_task_execution_affinity_and_workers_configuration.md) for more details on how task execution determines the effective affinity and maximum number of workers.
 
 
 
