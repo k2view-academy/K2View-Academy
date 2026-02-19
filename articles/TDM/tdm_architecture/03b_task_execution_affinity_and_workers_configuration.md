@@ -25,52 +25,7 @@
 
 An affinity can be on both task types - [entity-level](/articles/TDM/tdm_gui/14b_task_source_component_entities.md#system--logical-units-tab---affinity-and-max-number-of-workers) and [table-level](/articles/TDM/tdm_gui/14c_task_source_component_tables.md). The affinity can be set either on the Source or the Target component in the task. The table below describes which affinity is taken - source or target - for each task type and processed data:
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Affinity Execution Matrix</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 30px;
-      background-color: #f5f5f5;
-    }
-    h2 {
-      color: #2c3e50;
-      margin-bottom: 20px;
-    }
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      background-color: #ffffff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    thead tr {
-      background-color: #2c3e50;
-      color: #ffffff;
-      text-align: left;
-    }
-    th, td {
-      padding: 12px 16px;
-      border: 1px solid #dce1e7;
-      vertical-align: top;
-      font-size: 14px;
-    }
-    tbody tr:nth-child(even) {
-      background-color: #f0f4f8;
-    }
-    tbody tr:hover {
-      background-color: #dbeafe;
-    }
-    td {
-      color: #2c3e50;
-      white-space: pre-line;
-    }
-  </style>
+
 </head>
 <body>
   <table>
@@ -181,48 +136,6 @@ Starting with TDM 9.5, it is possible to set a different default value of number
 
 The table below describes which value is taken by the task execution for number of workers - source or target - for each task type and processed data:
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Workers Execution Matrix</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 30px;
-      background-color: #f5f5f5;
-    }
-    .table-wrapper {
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      width: 100%;
-    }
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      background-color: #ffffff;
-    }
-    thead tr {
-      background-color: #2c3e50;
-      color: #ffffff;
-      text-align: left;
-    }
-    th, td {
-      padding: 12px 16px;
-      border: 1px solid #dce1e7;
-      vertical-align: middle;
-      font-size: 14px;
-      color: #2c3e50;
-    }
-    tbody tr:nth-child(even) {
-      background-color: #f0f4f8;
-    }
-    tbody tr:hover {
-      background-color: #dbeafe;
-    }
-  </style>
 </head>
 <body>
   <div class="table-wrapper">
