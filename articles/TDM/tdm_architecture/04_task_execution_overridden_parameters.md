@@ -385,6 +385,5 @@ The [task execution process](/articles/TDM/tdm_architecture/03_task_execution_pr
 
 
 
-
-[![Previous](/articles/images/Previous.png)](03_task_execution_processes.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_tdmdb_cleanup_process.md)
+[![Previous](/articles/images/Previous.png)](03b_task_execution_affinity_and_workers_configuration.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_tdmdb_cleanup_process.md)
 

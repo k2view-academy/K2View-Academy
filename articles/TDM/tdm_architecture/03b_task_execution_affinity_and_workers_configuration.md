@@ -1,6 +1,6 @@
 # Affinity and Worker Configuration for Task Execution
 
-- Starting with **TDM 9.5**,  TDM now supports configuring **affinity** and/or **number of workers** at both the **TDM environment level** and the **task level**. These settings provide greater control over resource allocation and workload distribution.
+- Starting with **TDM 9.5**, TDM supports configuring **affinity** and/or **number of workers** at both the **TDM environment level** and the **task level**. These settings provide greater control over resource allocation and workload distribution.
 
 - This feature applies to:
 
@@ -9,25 +9,24 @@
 
   ## Affinity Configuration
 
-- *Affinity* refers to Fabric assigning a job or a batch process to a specific handling node within a Fabric Cluster. This is particularly handy when specific nodes are reserved for specific tasks or need to be dedicated to time-consuming or heavy processing executions.
+- *Affinity* refers to Fabric assigning a job or a batch process to a specific handling node within a Fabric cluster. This is particularly handy when specific nodes are reserved for specific tasks or need to be dedicated to time-consuming or heavy processing executions. 
 
   Click [here](Task affinity can include either a DC name or a cluster Logical ID.md) for more information about the batch affinity.
 
-- The task execution affinity can include either a DC name or a cluster Logical ID.
+- Task execution affinity can be specified using either a **DC name** or a **cluster Logical ID**.
 
-- An affinity can be defined either on the [Environment system](/articles/TDM/tdm_gui/11_environment_products_tab.md#affinity-and-maximum-number-of-workers) of on the Task level. 
+- An affinity can be defined either on the [Environment system](/articles/TDM/tdm_gui/11_environment_products_tab.md#affinity-and-maximum-number-of-workers) or on the **Task level**. 
 
-  The following diagram describes the priority of how the task execution gets the affinity:   
+- The following diagram illustrates the priority order used by task execution to determine affinity:
 
-  ![affinity priority](images/tdm_affinity_priority.png)
+![affinity priority](images/tdm_affinity_priority.png)
+
+
 
 ### Task Level Affinity Configuration  
 
-An affinity can be on both task types - [entity-level](/articles/TDM/tdm_gui/14b_task_source_component_entities.md#system--logical-units-tab---affinity-and-max-number-of-workers) and [table-level](/articles/TDM/tdm_gui/14c_task_source_component_tables.md). The affinity can be set either on the Source or the Target component in the task. The table below describes which affinity is taken - source or target - for each task type and processed data:
+An affinity can be set on both task types - [entity-level](/articles/TDM/tdm_gui/14b_task_source_component_entities.md#system--logical-units-tab---affinity-and-max-number-of-workers) and [table-level](/articles/TDM/tdm_gui/14c_task_source_component_tables.md). The affinity can be set either on the Source or the Target component in the task. The table below describes which affinity is taken - source or target - for each task type and processed data:
 
-
-</head>
-<body>
   <table>
     <thead>
       <tr>
@@ -113,29 +112,74 @@ The get LUI runs on the source affinity (remote get)</td>
       </tr>
     </tbody>
   </table>
-</body>
-</html>
-
 
 
 ## Workers Configuration
 
-The maximum number of workers allocated per Fabric node for the batch process execution, is limited by [Fabric config.ini file](/articles/20_jobs_and_batch_services/12_batch_sync_commands.html) parameter (MAX_WORKERS_PER_NODE). This is also the default number of workers set when running a batch process.
+The **maximum number of workers** allocated per Fabric node for batch process execution is controlled by the  [Fabric config.ini file](/articles/20_jobs_and_batch_services/12_batch_sync_commands.html) parameter: **`MAX_WORKERS_PER_NODE`**. This value also serves as the **default number of workers** when running a batch process.
 
-Starting with TDM 9.5, it is possible to set a different default value of number of workers per batch process:
+Starting with **TDM 9.5**, you can define a **different default number of workers** for TDM task execution. The effective value is determined based on the following configuration levels (listed from lowest to highest priority):
 
-- TDM_GENERAL_PARAMETERS TDM DB table - a new parameter has been added: MAX_NO_OF_WORKERS_FOR_EXECUTION. If this parameter value is -1, then ignore this parameter. Else, if this parameter value >0, use it as a default number of workers. 
+- **TDM DB – General Parameters**
+   A new parameter, **`MAX_NO_OF_WORKERS_FOR_EXECUTION`**, has been added to the **`TDM_GENERAL_PARAMETERS`** table.
+  - When set to **-1**, the parameter is ignored.
+  - When set to a value **greater than 0**, it is used as the default number of workers for TDM task executions.
+- **Environment**
+   You can configure the **maximum number of workers per system** in the [Environment](/articles/TDM/tdm_gui/11_environment_products_tab.md).
+- **Task**
+   You can define the **maximum number of workers** at the task level, either on the **Source** component or the **Target** component.
+   This setting is supported for both:
+  - [Entity-level tasks](/articles/TDM/tdm_gui/14b_task_source_component_entities.md#system--logical-units-tab---affinity-and-max-number-of-workers)
+  - [Table-level tasks](/articles/TDM/tdm_gui/14c_task_source_component_tables.md)
 
-- [Environment](/articles/TDM/tdm_gui/11_environment_products_tab.md) - you can set maximum number of workers per system. 
+The following diagram illustrates the priority order used to determine the effective maximum number of workers during task execution:
 
-- Task - you can set the maximum number of workers either on the Source component or on the Target component. The maximum number of workers can be set for [entity-level](/articles/TDM/tdm_gui/14b_task_source_component_entities.md#system--logical-units-tab---affinity-and-max-number-of-workers) and [table-level](/articles/TDM/tdm_gui/14c_task_source_component_tables.md) tasks.
+![workers priority](images/tdm_max_workers_priority.png)
 
-- The following diagram describes the priority of how the task execution gets the maximum number of workers:   
+The table below shows whether the task execution uses the source or target value for the number of workers, depending on the task type and the data being processed:
 
-  ![workers priority](images/tdm_max_workers_priority.png)
-
-The table below describes which value is taken by the task execution for number of workers - source or target - for each task type and processed data:
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workers Execution Matrix</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f5f5f5;
+    }
+    .table-wrapper {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 100%;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background-color: #ffffff;
+    }
+    thead tr {
+      background-color: #2c3e50;
+      color: #ffffff;
+      text-align: left;
+    }
+    th, td {
+      padding: 12px 16px;
+      border: 1px solid #dce1e7;
+      vertical-align: middle;
+      font-size: 14px;
+      color: #2c3e50;
+    }
+    tbody tr:nth-child(even) {
+      background-color: #f0f4f8;
+    }
+    tbody tr:hover {
+      background-color: #dbeafe;
+    }
+  </style>
 </head>
 <body>
   <div class="table-wrapper">
@@ -183,3 +227,10 @@ The table below describes which value is taken by the task execution for number 
   </div>
 </body>
 </html>
+
+
+
+[![Previous](/articles/images/Previous.png)](03a_task_execution_building_entity_list_on_tasks_LUs.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_task_execution_overridden_parameters.md)
+
+
+

@@ -153,7 +153,7 @@ Click for an [execution of hierarchical BEs](/articles/TDM/tdm_overview/03_busin
 
 
 
-[![Previous](/articles/images/Previous.png)](03_task_execution_processes.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_task_execution_overridden_parameters.md)
+[![Previous](/articles/images/Previous.png)](03_task_execution_processes.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03b_task_execution_affinity_and_workers_configuration.md)
 
 
 
