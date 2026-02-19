@@ -60,7 +60,7 @@ The **Table version** (shown in the above image) is the name of the task that ex
 
   - **Maximum number of workers**
 
-- By default, each interface its values from:
+- By default, each interface gets its values from:
 
   1. The environment’s system settings, if defined and if the [interface is attached to the environment's system](11_environment_products_tab.md#affinity-and-maximum-number-of-workers_) or
   2. The TDM and Fabric configuration values
@@ -75,7 +75,7 @@ You can configure **Affinity** and **Maximum number of workers** on the **Target
 
 When both **Source** and **Target** components are defined for the task (Load, Extract & Load), the task execution uses the **Target** affinity and **Target** maximum number of workers.
 
-Click [here] for more details on how task execution determines the effective affinity and maximum number of workers.
+Click [here](/articles/TDM/tdm_architecture/03b_task_execution_affinity_and_workers_configuration.md) for more details on how task execution determines the effective affinity and maximum number of workers.
 
 ### Disable Table Row Count
 
