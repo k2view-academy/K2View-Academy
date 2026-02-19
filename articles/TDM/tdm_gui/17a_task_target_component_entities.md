@@ -25,8 +25,6 @@ The **Business Entity (BE)** and its **Advanced** settings are available for bot
 
 When you populate the **Source** before the **Target**, the Source BE and its selected systems and LUs are automatically copied to the Target component.
 
-------
-
 ### Important notes
 
 - You can change the BE; however, selecting a different BE for the task **resets the Source and Subset components**.
@@ -63,7 +61,7 @@ When both **Source** and **Target** components are defined for the task (Load, E
 - **Max number of workers**
   - The task execution process uses the **target** maximum number of workers
 
-Click **[here]** for detailed information on how task execution determines the effective affinity and maximum number of workers.
+Click [here](/articles/TDM/tdm_architecture/03b_task_execution_affinity_and_workers_configuration.md) for detailed information on how task execution determines the effective affinity and maximum number of workers.
 
 
 
