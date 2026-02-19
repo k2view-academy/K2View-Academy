@@ -49,7 +49,7 @@ You can **override these values per LU** to control and **optimize task executio
 
 
 
-![affinity](C:\Users\TaliEinhorn\OneDrive - K2View\Documents\K2View-Academy\articles\TDM\tdm_gui\images\task_affinity_max_workers_example.png)
+![affinity](images/task_affinity_max_workers_example.png)
 
 
 
