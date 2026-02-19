@@ -1,6 +1,6 @@
 # Task — Source Component — Entities and Referential Data
 
-The Business Entities & referential data option enables to extract Business Entities from a source environment. This is the default option. It also enables the user to add selected tables to the Business Entities.
+The Business Entities & referential data option enables the extraction of Business Entities from a source environment. This is the default option. It also enables the user to add selected tables to the Business Entities.
 
 The following information needs to be set for the *Entities & referential data* option:
 
@@ -67,11 +67,11 @@ When both **Source** and **Target** components are defined for the task (Load, E
 - **Max number of workers**
   - The task execution process uses the **target** maximum number of workers
 
-Click **[here]** for detailed information on how task execution determines the effective affinity and maximum number of workers.
+Click [here](/articles/TDM/tdm_architecture/03b_task_execution_affinity_and_workers_configuration.md) for detailed information on how task execution determines the effective affinity and maximum number of workers.
 
 ### Advanced BE - Execution Mode Tab
 
-This tab enables to change the task execution mode:
+This tab enables changing the task execution mode:
 
 
 
