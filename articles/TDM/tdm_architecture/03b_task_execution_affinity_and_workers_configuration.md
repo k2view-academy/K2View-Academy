@@ -138,48 +138,6 @@ The following diagram illustrates the priority order used to determine the effec
 
 The table below shows whether the task execution uses the source or target value for the number of workers, depending on the task type and the data being processed:
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Workers Execution Matrix</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 30px;
-      background-color: #f5f5f5;
-    }
-    .table-wrapper {
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      width: 100%;
-    }
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      background-color: #ffffff;
-    }
-    thead tr {
-      background-color: #2c3e50;
-      color: #ffffff;
-      text-align: left;
-    }
-    th, td {
-      padding: 12px 16px;
-      border: 1px solid #dce1e7;
-      vertical-align: middle;
-      font-size: 14px;
-      color: #2c3e50;
-    }
-    tbody tr:nth-child(even) {
-      background-color: #f0f4f8;
-    }
-    tbody tr:hover {
-      background-color: #dbeafe;
-    }
-  </style>
 </head>
 <body>
   <div class="table-wrapper">
