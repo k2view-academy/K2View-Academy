@@ -50,28 +50,6 @@ A TDM task can provision selected tables with or without Business Entities. The 
   -  Replacing sequences to prevent a collision with the target environment.
   -  Masking sensitive data before loading it into the target environment. 
 
-### TDM - Multi-DCs Architecture
-
-An organization's systems and environments can be located in different geographic locations.  This topography requires data transmission between distant locations.
-
-**Example:**
-
-- The CRM and Billing Production systems are located in NY (DC1).
-- The Ordering and Ticketing Production systems are located in TX (DC2).
-- The testing environments are located in NY, TX, and CA (DC3). 
-- The testing environments in CA need to get the CRM and Billing data from NY, and the Ordering and Ticketing data from TX.
-
-One of the main challenges when  running data transmission over a network is ensuring the performance of the data transmission. Obtaining data from a remote location can be time-consuming.
-
-K2view TDM architecture ensures efficient and quick data transmission between different locations. The following diagram is an example of the TDM architecture in a multi-DC topography:
-
-![tdm multi DCs](images/tdm_multi_dc_architecture.png)
-
-- Each Data Center (DC) has its Fabric and Cassandra nodes. 
-- The data is extracted from the source **locally on each DC** and is stored in Fabric. Fabric uses Cassandra as a storage layer for the entities.
-- The data is distributed automatically by Cassandra between DCs.
-- The data **load** is executed in the **target’s DC** and accesses the entities in the **local Fabric nodes**. Note that if the entity needs to be synced from the source by the load task, the sync (extract) runs on the database of the source using a [remote GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#remote-get-and-getf-commands).
-
 ## TDM  - Data Provisioning Flow
 
 In general, data provisioning is divided into two main sections:
