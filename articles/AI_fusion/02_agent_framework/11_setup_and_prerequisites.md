@@ -1,8 +1,8 @@
 # Setup and Prerequisites
 
-In addition to implementation setup activities like extensions installs, there are setup activities that shall be done and verified on any deployment - Dev, QA and Production.
+In addition to implementation setup activities such as extension installations, there are other setup activities that should be done and verified on any deployment — Dev, QA, and Production.
 
-This article provides a checklist and guides you through the required components and their setup, in both infrastructure (for DevOps) and project setup (for implementors) perspectives, to ensure all components are properly configured.
+This article provides a checklist and guidance on the required components and their setup, for both infrastructure (DevOps) and project (implementation) perspectives, to ensure all components are properly configured.
 
 
 
