@@ -104,7 +104,7 @@ Run the Discovery job on the table's interfaces. Following the job completion, t
 
 ## Step 4: Optional — Special Handling  
 
-###  TableLevelInterfaces MTable
+###  Interface Level Special Handling
 
 The **TableLevelInterfaces** MTable enables implementors to exclude interfaces from the table-level tasks or define special handling rules for a given interface.
 
@@ -115,31 +115,15 @@ By default, this MTable is populated with the **TDM** and **POSTGRESQL_ADMIN** i
 - **truncate_indicator** — by default, TDM runs a delete on the table in the target environment before loading it. If you have permission to run a truncate on the target table and need to use the truncate instead of delete (e.g., the target DB is Cassandra), set this indicator to **true**.
 - **no_schema** — this indicator is used for interfaces without a DB schema, where the JDBC connector adds a schema for them. For example: CSV files. The **CSV JDBC Connector** extension concatenates the 'main' schema name to the file list. Setting this field to **true** would ignore the concatenated schema when accessing the files. 
 
-### TableLevelDefinitions MTable
+### Table Level Special Handling
 
-This MTable enables customizing the default task execution logic for a given interface type, interface, schema, or table:
+TDM enables customizing the default task execution logic for a given interface type, interface, schema, or table:
 
 - Adding [customized flows](09a_table_level_customized_flows_implementation.md).
 - Setting the **commit_size** in the TableLeveDeifinitions to define record size for task execution monitor (report every X records).
 - [Disable the records count or adding a flow to count the number of records](09a_table_level_customized_flows_implementation.md) and provide the total number of records for processing to the task execution monitor.
 - Starting with **TDM 9.5** onward, the TDM support a [concurrent processing of **table partitions**](09b_table_partitions_implementation.md).  
-- Supporting table-level tasks using **Connectors**.
-
-#### 
-
-#### 3. Supporting Table-Level Tasks Using Connectors — Update TableLevelDefinitions MTable 
-
-The installment of a K2exchange connector adds a dedicated TableLevelDefinitions file for the connector. 
-
-**Example — TableLevelDefinitions___mongodb**:
-
-![mongo example](images/mongo_tableleveldefinitions.png) 
-
-
-
-Note that you must set the task's retention period to *Do not retain*. This ensures that the tables are loaded directly to the target environment, without being saved to Fabric, when the data source is based on a connector. 
-
-- 
+- Supporting table-level tasks using [Connectors](09c_table_level_connectors.md), e.g. **MongoDB**.
 
 
 

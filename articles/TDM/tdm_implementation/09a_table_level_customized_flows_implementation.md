@@ -7,7 +7,7 @@ A customized Broadway flow can be added to a table's extract, load, delete proce
 - Impacting the table execution order or table count.
 - Custom logic for in-place masking.
 
-## Customized Table Flows — Implementation Guidelines
+## Table-Level Customized Flows — Implementation Guidelines
 
 The customized flows must be added under the Shared Objects in the Project tree.
 
@@ -54,10 +54,6 @@ See the loop on the selected address records:
 
 - The delete flow receives a list of input parameters from the TDM execution processes and deletes the table before the load. Duplicate the **DeleteTableByDBCommand** flow (located in the TDM_TableLevel LU)  to implement the delete template and customize the delete logic.
 
-### In-place Masking Flow
-
-- Starting with **TDM 9.5** onwards,  the TDM support in-place masking task that update the PII fields on the selected tables. The in-place masking flow  receives a list of input parameters from the TDM execution processes and update the table table: replaces the PII values with masking values. Duplicate the **UpdateTableByQuery**  flow (located in the TDM_TableLevel LU)  to implement the the customize the in-place masking flow.
-
 ### Customized Flows  — TableLevelDefinitions Fields
 
 The following **TableLevelDefinitions** fields should be populated for each record:
@@ -70,8 +66,30 @@ The following **TableLevelDefinitions** fields should be populated for each reco
 - **table_name** — populated with the table name. If this setting is empty, the customized flows will run on all the tables in the interface and schema.
 - **count_indicator**— by **default** the count indicator is **true**, enabling counting the number of records in the source or target, as a way to monitor task execution. Set this indicator to **false**, if required, to disable counting records in the target.
 - **record_count_flow** — populated with the name of a customized flow that counts the table records. 
-- **table_order** — a numeric value or a flow name that defines the table’s execution priority. The table order specified in the TableLevelDefinitions MTable has the highest priority and can override the PK/FK relationships between task tables. If any table in a task has a table order defined in this MTable, then all tables in the task must have a table order defined as well. The TDM execution follows PK/FK relationships only when none of the task’s tables has a table order defined.
+- **table_order** — a numeric value or a flow name that defines the table’s execution priority. The table order specified in the **TableLevelDefinitions** MTable has the highest priority and can override the PK/FK relationships between task tables. If any table in a task has a table order defined in this MTable, then all tables in the task must have a table order defined as well. The TDM execution follows PK/FK relationships only when none of the task’s tables has a table order defined.
 - **extract_flow** — populated with the customized extract flow name.
 - **delete_flow** — populated with the customized delete flow name. 
 - **load_flow** — populated with the load flow name.
+
+## In-place Masking Customization  — Implementation Guidelines
+
+### In-place Masking Flow
+
+- Starting with **TDM 9.5** onwards,  the TDM support in-place masking task that update the PII fields on the selected tables. The in-place masking flow  receives a list of input parameters from the TDM execution processes and update the table table: replaces the PII values with masking values. Duplicate the **UpdateTableByQuery**  flow (located in the TDM_TableLevel LU)  to implement the the customize the in-place masking flow.
+
+### In-place Masking - MTables
+
+#### TableLevelDefinitions
+
+The following field has been added for in-place masking:
+
 - **inplace_masking_update_flow** —  populated with the in-place masking flow name.
+
+#### TableLevelInPlaceMasking
+
+The **MTable** defines which table fields are used as **key fields** during table update operations.
+
+Each record in the MTable represents a single table field. When a **composite key** is required, multiple MTable records must be defined—one for each table field that participates in the composite key.
+
+
+
