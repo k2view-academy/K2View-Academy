@@ -65,7 +65,7 @@ An affinity can be set on both task types - [entity-level](/articles/TDM/tdm_gui
         <td>Defined</td>
         <td>Defined</td>
         <td>The batch process runs on the target env affinity.
-The get LUI runs on the source env affinity (remote get)</td>
+The get LUI runs on the source env affinity (<a href="/articles/02_fabric_architecture/04_fabric_commands.md#remote-get-and-getf-commands">remote get</a>)</td>
       </tr>
       <tr>
         <td>Entities</td>
