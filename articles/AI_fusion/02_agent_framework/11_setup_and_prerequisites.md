@@ -10,12 +10,12 @@ This article provides a checklist and guidance on the required components and th
 
 ### AI Model Readiness
 
-- [ ] Verify AI language model network accessibility is enabled. This is relevant either when working with foundation models providers or local models. 
-- [ ] If non-managed vector DB is being used - verify embedding model network accessibility is enabled.
+- [ ] Verify AI language model network accessibility is enabled. This is relevant when working with either foundation model providers or local models. 
+- [ ] If non-managed vector database is used, verify embedding model network accessibility is enabled.
 
-* Cloud Based / SaaS model providers:  
+* Cloud-based / SaaS model providers:  
   - [ ] Ensure credentials and access permissions, either as APIKEY or native cloud permissions (Like Amazon ARN)  
-  - [ ] Select the region, according to regulation and model's versions availability. Consider choosing cross-region model, for a better availability.
+  - [ ] Select the region according to regulations and the availability of the model versions. Consider choosing cross-region model for better availability.
 
 ### Pipeline DB
 
