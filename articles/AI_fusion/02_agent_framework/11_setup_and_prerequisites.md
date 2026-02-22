@@ -32,17 +32,17 @@ Evaluation and Observation results are collected and stored in the Metrics/Assur
 
 In Studio it might be defined as SQLite DB, while in non-Studio / non-dev (QA, Pre-Prod, Prod) it is in PostgreSQL.
 
-The steps and checklist are similar to those mentioned for Pipeline DB. 
+The steps and checklist are similar to those outlined in the Pipeline DB section. 
 
 ### LUI Snaps Storage
 
-As part of Evaluation and Observation processes, AI Data platform enable taking LUI snaps. These are samples that can be taken during conversations, so that later on can be evaluated.
+As part of the Evaluation and Observation processes, AI Data platform enable taking LUI snaps. These are samples that can be taken during conversations, so that later on can be evaluated.
 
 It is expected to have a file storage where these snaps can be stored and later on read.
 
 ### Vector DB
 
-When using an internal, non managed or as-a-service vector DB, AI Fusion can integrate and work with two vector DBs, which is part of a usual Fabric setup - SQLite and PostgresSQL.
+When using an internal, non-managed or as-a-service vector database, AI Fusion can integrate and work with two vector databases, which is part of a usual Fabric setup — SQLite and PostgreSQL.
 
 #### PostgresSQL
 
@@ -71,7 +71,7 @@ To enable vector usage within SQLite you shall set the SQLITE_EXTENSIONS at Fabr
 
 ### AI Models
 
-- [ ] **LLM**: Choose and install the GenAI language model connector extension from the K2Exchange.
+- [ ] **LLM**: Choose and install the GenAI language model connector extension from the K2exchange.
     * Create an interface upon the installed connector and set its values. read [here](05_llm_interfaces.md) for more information. 
 
       > While usually organizations have agreement with specific LLM service provider, or install locally a specific model with a single inference engine, AI Data Fusion is flexible in that you can use several LLMs, usually for different purposes.
