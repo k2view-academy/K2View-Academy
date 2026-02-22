@@ -23,12 +23,12 @@ Pipeline is a Fabric module, installed via extension, that enables evaluation re
 In Studio, it may be defined as an SQLite database, whereas in non-Studio / non-dev (QA, Pre-Prod, Prod) it is in PostgreSQL.
 
 - [ ] On the Postgres server, define a schema on which the Pipeline table will be located, e.g., `pipeline`.
-- [ ] Provide the project implementation team the credentials, so that Fabric will be able to access this DB and schema.
+- [ ] Provide the project implementation team with credentials to allow Fabric to access this database and schema.
 - [ ] Verify networking is opened between Fabric and this PostgreSQL. 
 
 ### Metrics/Assurance DB
 
-Evaluation and Observation results are collected and kept into the Metrics/Assurance DB.
+Evaluation and Observation results are collected and stored in the Metrics/Assurance database.
 
 In Studio it might be defined as SQLite DB, while in non-Studio / non-dev (QA, Pre-Prod, Prod) it is in PostgreSQL.
 
