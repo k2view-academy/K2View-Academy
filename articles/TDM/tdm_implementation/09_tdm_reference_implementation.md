@@ -117,13 +117,14 @@ By default, this MTable is populated with the **TDM** and **POSTGRESQL_ADMIN** i
 
 ### Table Level Special Handling
 
-TDM enables customizing the default task execution logic for a given interface type, interface, schema, or table:
+TDM enables customization of the default task execution logic for a specific **interface type**, **interface**, **schema**, or **table**, including the following capabilities:
 
 - Adding [customized flows](09a_table_level_customized_flows_implementation.md).
-- Setting the **commit_size** in the TableLeveDeifinitions to define record size for task execution monitor (report every X records).
-- [Disable the records count or adding a flow to count the number of records](09a_table_level_customized_flows_implementation.md) and provide the total number of records for processing to the task execution monitor.
-- Starting with **TDM 9.5** onward, the TDM support a [concurrent processing of **table partitions**](09b_table_partitions_implementation.md).  
-- Supporting table-level tasks using [Connectors](09c_table_level_connectors.md), e.g. **MongoDB**.
+- Configuring **commit_size** in **TableLevelDefinitions** to control the number of records reported to the task execution monitor (report every *X* records).
+- Disabling record counting, or adding a flow to count records, to provide the total number of records for processing to the task execution monitor Click [here](09a_table_level_customized_flows_implementation.md) for more details.
+- Starting with **TDM 9.5**, supporting [concurrent processing of **table partitions**](09b_table_partitions_implementation.md).
+- Starting with **TDM 9.5**, supporting [**in-place masking**](09d_in_place_masking_implementation.md) tasks on tables.
+- Supporting table-level tasks using [Connectors](09c_table_level_connectors.md), for example **MongoDB**.
 
 
 
