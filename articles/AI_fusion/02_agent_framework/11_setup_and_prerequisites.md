@@ -1,6 +1,6 @@
 # Setup and Prerequisites
 
-In addition to implementation setup activities such as extension installations, there are other setup activities that should be done and verified on any deployment — Dev, QA, and Production.
+In addition to implementation setup activities such as extension installations, there are other setup activities that should be completed and verified for every deployment — Dev, QA, and Production.
 
 This article provides a checklist and guidance on the required components and their setup, for both infrastructure (DevOps) and project (implementation) perspectives, to ensure all components are properly configured.
 
@@ -10,11 +10,11 @@ This article provides a checklist and guidance on the required components and th
 
 ### AI Model Readiness
 
-- [ ] Verify AI language model network accessibility is enabled. This is relevant when working with either foundation model providers or local models. 
-- [ ] If non-managed vector database is used, verify embedding model network accessibility is enabled.
+- [ ] Verify that network connectivity to the AI language model is enabled. This is relevant when working with either foundation model providers or local models. 
+- [ ] If non-managed vector database is used, verify that network access to the embedding model is enabled.
 
 * Cloud-based / SaaS model providers:  
-  - [ ] Ensure credentials and access permissions, either as APIKEY or native cloud permissions (Like Amazon ARN)  
+  - [ ] Ensure that credentials and access permissions are properly configured, either as an API key or as native cloud permissions (e.g., Amazon ARN).  
   - [ ] Select the region according to regulations and the availability of the model versions. Consider choosing cross-region model for better availability.
 
 ### Pipeline DB
