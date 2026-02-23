@@ -20,11 +20,11 @@ This article provides a checklist and guidance on the required components and th
 ### Pipeline DB
 
 Pipeline is a Fabric module, installed via extension, that enables evaluation regression tests.
-In Studio, it may be defined as an SQLite database, whereas in non-Studio / non-dev (QA, Pre-Prod, Prod) it is in PostgreSQL.
+In Studio, it may be defined as an SQLite database, whereas in non-Studio deployments (QA, Pre-Prod, Prod), it resides in PostgreSQL.
 
 - [ ] On the Postgres server, define a schema on which the Pipeline table will be located, e.g., `pipeline`.
 - [ ] Provide the project implementation team with credentials to allow Fabric to access this database and schema.
-- [ ] Verify networking is opened between Fabric and this PostgreSQL. 
+- [ ] Verify that the network is open between Fabric and PostgreSQL. 
 
 ### Metrics/Assurance DB
 
