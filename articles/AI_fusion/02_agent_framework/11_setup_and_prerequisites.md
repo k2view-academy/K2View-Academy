@@ -30,23 +30,23 @@ In Studio, it may be defined as an SQLite database, whereas in non-Studio deploy
 
 Evaluation and Observation results are collected and stored in the Metrics/Assurance database.
 
-In Studio it might be defined as SQLite DB, while in non-Studio / non-dev (QA, Pre-Prod, Prod) it is in PostgreSQL.
+In Studio, it may be defined as an SQLite database, whereas in non-Studio deployments (QA, Pre-Prod, Prod), it resides in PostgreSQL.
 
 The steps and checklist are similar to those outlined in the Pipeline DB section. 
 
 ### LUI Snaps Storage
 
-As part of the Evaluation and Observation processes, AI Data platform enable taking LUI snaps. These are samples that can be taken during conversations, so that later on can be evaluated.
+As part of the Evaluation and Observation processes, the platform enables capturing LUI snapshots. These snapshots are samples captured during conversations for later evaluation.
 
 It is expected to have a file storage where these snaps can be stored and later on read.
 
 ### Vector DB
 
-When using an internal, non-managed or as-a-service vector database, AI Fusion can integrate and work with two vector databases, which is part of a usual Fabric setup — SQLite and PostgreSQL.
+When using an internal, non-managed or as-a-service vector database, the AI Fusion platform can integrate and work with two vector databases that are part of a typical Fabric setup — SQLite and PostgreSQL.
 
 #### PostgreSQL
 
-* **Docker** use this pgvector image, a pre-built container that already includes PostgreSQL 16 with the pgvector extension installed and ready to use: https://hub.docker.com/r/pgvector/pgvector
+* In **Docker** deployment, use this pgvector image: https://hub.docker.com/r/pgvector/pgvector; it is a pre-built container that already includes PostgreSQL 16 with the pgvector extension installed and ready for usage. 
 
 ​	Read [here](https://github.com/pgvector/pgvector) for more information about PG vector installation and usage.
 
