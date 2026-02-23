@@ -2,13 +2,20 @@
 
 The **TDMDB_CleanUp** job is defined in the **TDM LU**. Its purpose is to clean up old inactive records from the [TDM DB](02_tdm_database.md). 
 
-The list of TDM tables to be cleaned-up and deleted is taken from the [TDMCleanup](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#tdm-cleanup-process) MTable object. The cleanup process gets all the records whose **cleanup_ind** field is **TRUE**, and it runs the Delete statement on each table. 
+The list of TDM tables to be cleaned and deleted is retrieved from the [TDMCleanup](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#tdm-cleanup-process) MTable object. The cleanup process gets all the records whose **cleanup_ind** field is **true**, and it runs a `DELETE` statement on each relevant table. 
 
-The following cleanup parameters are defined in [tdm_general_parameters](02_tdm_database.md#tdm_general_parameters):
+The following cleanup parameter is are defined in [tdm_general_parameters](02_tdm_database.md#tdm_general_parameters):
 
-- **cleanup_retention_period** - the number of months of the retention period of inactive records. The cleanup process deletes inactive records that are older than the retention period. By default, this value is set to 0.25, i.e., all inactive records updated over a week ago are deleted from the TDM DB by the cleanup process.
+- **cleanup_retention_period** – The retention period (in months) for inactive records. The cleanup process deletes inactive records that are older than this retention period.
+   By default, this value is set to **0.25** (approximately one week), meaning that inactive records updated more than a week ago are deleted from the TDM DB.
 
-Update this parameter to set a different retention period.
+Update this parameter to configure a different retention period.
+
+Starting with **TDM 9.5**  the **TDMCleanUp** MTable has been moved from the **TDM LU** to the **Reference LU**. In addition, a new field, **OVERRIDE_CLEANUP_RETENTION_PERIOD**, has been added to this MTable. This field allows **overriding the default cleanup retention period** for specific tables.
+
+**Note:** 
+
+- By default, the retention period is set to **6 months** for the **TASK_EXECUTION_SUMMARY** and **TASK_REF_EXE_STATS** tables. A longer retention period is required for these tables because their data is used by the [**TDM Usage Reports**](/articles/TDM/tdm_gui/TDM_Dashboard_User_Guide.md).
 
 ### How do I Run the TDM Cleanup Process?
 
