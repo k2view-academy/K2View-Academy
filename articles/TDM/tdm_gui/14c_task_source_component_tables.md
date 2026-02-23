@@ -89,6 +89,24 @@ To configure this setting, click the **settings** icon for the selected table to
 
 
 
+## In-Place Masking Task
+
+Starting with **TDM 9.5**, a table-level task can run **in-place masking**, meaning that PII fields are updated directly in the source tables by replacing the original values with masked values.
+
+Select the **In-place Masking** checkbox to create an in-place masking task. In this mode, the **Test Data Store** and **Target** components are disabled, since the same environment functions as both the source and the target:
+
+
+
+![in-place](images/task_in_place_masking.png)
+
+
+
+Notes:
+
+- The selected environment must be defined as **Both** (Source and Target) for an in-place masking task.
+
+- The **Policy of fetching data** must be set to **All data from [source environment name]** for an in-place masking task.
+
 
  [![Previous](/articles/images/Previous.png)](14_task_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](15_data_flux_task.md)
 
