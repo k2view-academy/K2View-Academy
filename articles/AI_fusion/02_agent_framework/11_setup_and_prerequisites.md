@@ -44,7 +44,7 @@ It is expected to have a file storage where these snaps can be stored and later 
 
 When using an internal, non-managed or as-a-service vector database, AI Fusion can integrate and work with two vector databases, which is part of a usual Fabric setup — SQLite and PostgreSQL.
 
-#### PostgresSQL
+#### PostgreSQL
 
 * **Docker** use this pgvector image, a pre-built container that already includes PostgreSQL 16 with the pgvector extension installed and ready to use: https://hub.docker.com/r/pgvector/pgvector
 
@@ -52,18 +52,18 @@ When using an internal, non-managed or as-a-service vector database, AI Fusion c
 
 #### SQLite
 
-To enable vector usage within SQLite you shall set the SQLITE_EXTENSIONS at Fabric configuration.
+To enable vector usage in SQLite, you should set the SQLITE_EXTENSIONS in the Fabric configuration.
 
 1. Update via Admin Pages → Configuration 
    - Choose to show Hidden as well as Show All
    - Filter attributes by `fabricdb` section 
-   - For the `SQLITE_EXTENSIONS` attribute key set the value to be `vec0`
+   - For the `SQLITE_EXTENSIONS` attribute key, set the value to be `vec0`
 2. Alternatively, do it at the `config.ini` file:
    - Set the following:   `SQLITE_EXTENSIONS = vec0`
 
 3. **Restart Fabric**.
 
-> Note: The relevant supportive library is part of the aifusion extension, located at *lib/SQLite_Vector* folder in the project tree
+> Note: The required support library is part of the aifusion extension and is located in the *lib/SQLite_Vector* folder in the Project tree.
 
 
 
