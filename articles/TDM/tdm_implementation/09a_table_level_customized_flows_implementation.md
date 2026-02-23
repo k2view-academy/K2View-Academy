@@ -58,18 +58,18 @@ See the loop on the selected address records:
 
 The following **TableLevelDefinitions** fields should be populated for each record:
 
-- **interface_name** — the interface name defined in the TDM project implementation. 
-- **schema_name** — the DB schema. Can be populated with either of the following options:
+- **interface_name** — The interface name defined in the TDM project implementation. 
+- **schema_name** — The DB schema. Can be populated with either of the following options:
   - Schema name
-  - From TDM V9.4 onwards, the schema name can also be populated with the Global name. Add a `@` sign before and after the Global name to indicate that the schema name should be taken from the Global's value. For example: `@CUSTOMER_SCHEMA_NAME@`. Using a Global to populate the schema is useful when different environments have different schema names. 
+  - Starting with TDM V9.4 onwards, the schema name can also be populated with the Global name. Add a `@` sign before and after the Global name to indicate that the schema name should be taken from the Global's value. For example: `@CUSTOMER_SCHEMA_NAME@`. Using a Global to populate the schema is useful when different environments have different schema names. 
 
-- **table_name** — populated with the table name. If this setting is empty, the customized flows will run on all the tables in the interface and schema.
-- **count_indicator**— by **default** the count indicator is **true**, enabling counting the number of records in the source or target, as a way to monitor task execution. Set this indicator to **false**, if required, to disable counting records in the target.
-- **record_count_flow** — populated with the name of a customized flow that counts the table records. 
-- **table_order** — a numeric value or a flow name that defines the table’s execution priority. The table order specified in the **TableLevelDefinitions** MTable has the highest priority and can override the PK/FK relationships between task tables. If any table in a task has a table order defined in this MTable, then all tables in the task must have a table order defined as well. The TDM execution follows PK/FK relationships only when none of the task’s tables has a table order defined.
-- **extract_flow** — populated with the customized extract flow name.
-- **delete_flow** — populated with the customized delete flow name. 
-- **load_flow** — populated with the load flow name.
+- **table_name** — Populated with the table name. If this setting is empty, the customized flows will run on all the tables in the interface and schema.
+- **count_indicator**— By **default** the count indicator is **true**, enabling counting the number of records in the source or target, as a way to monitor task execution. Set this indicator to **false**, if required, to disable counting records in the target.
+- **record_count_flow** — Populated with the name of a customized flow that returns the table record count. The flow must expose a single external output parameter named **tableCount**.
+- **table_order** — A numeric value or a flow name that defines the table’s execution priority. The table order specified in the **TableLevelDefinitions** MTable has the highest priority and can override the PK/FK relationships between task tables. If any table in a task has a table order defined in this MTable, then all tables in the task must have a table order defined as well. The TDM execution follows PK/FK relationships only when none of the task’s tables has a table order defined.
+- **extract_flow** — Populated with the customized extract flow name.
+- **delete_flow** — Populated with the customized delete flow name. 
+- **load_flow** — Populated with the load flow name.
 
 
 
