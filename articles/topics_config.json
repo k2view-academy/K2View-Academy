@@ -257,6 +257,10 @@
 							"display name": "Web Services",
 							"value": "15_web_services_and_graphit"
 						},
+												{
+							"display name": "MCP",
+							"value": "50_MCP"
+						},
 						{
 							"display name": "Fabric Change Data Capture",
 							"value": "18_fabric_cdc"
