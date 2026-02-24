@@ -4,6 +4,18 @@
 
 - Starting with **TDM 9.5** onwards,  the TDM support in-place masking task that update the PII fields on the selected tables. The in-place masking flow  receives a list of input parameters from the TDM execution processes and update the table table: replaces the PII values with masking values. Duplicate the **UpdateTableByQuery**  flow (located in the TDM_TableLevel LU)  to implement the the customize the in-place masking flow.
 
+#### In-place Masking Flow - Error Handler
+
+Starting with **TDM 9.5**, the [**DbErrorHandlerBatch** and **DbFlushBatch** Actors](/articles/19_Broadway/actors/05_db_actors.md) are added to the **UpdateTableByQuery** flow. These Actors provide enhanced batch-level error handling and enable task execution to **ignore predefined database errors**—such as unique constraint violations—while continuing to process subsequent records without interruption. In addition, **successfully processed records are committed to the target database even when some records fail**, preventing a full task rollback due to partial errors.
+
+Within the **UpdateTableByQuery** flow, the **DbErrorHandlerBatch** actor suppresses **unique constraint errors** and reports them to the TDM database using the **PopulatePartitionTableErrorsOnly** inner flow.
+
+To include error handling in a **customized load flow**, add a **DbErrorHandlerBatch** actor for each interface. The actor must be included in the same transaction as the **DbLoad** or **DbCommand** actor.
+
+See the example below:
+
+![updateTableByQuery](images/updateTableByQuery.png)
+
 ## In-place Masking - MTables
 
 ### TableLevelDefinitions
@@ -19,4 +31,6 @@ Click [here](09a_table_level_customized_flows_implementation.md) for more inform
 The **MTable** defines which table fields are used as **key fields** during table update operations.
 
 Each record in the MTable represents a single table field. When a **composite key** is required, multiple MTable records must be defined—one for each table field that participates in the composite key.
+
+
 

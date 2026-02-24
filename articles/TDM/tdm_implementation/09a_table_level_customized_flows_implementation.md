@@ -50,6 +50,20 @@ See the loop on the selected address records:
 - The load flow receives a list of input parameters from the TDM execution processes and returns the number of loaded records. Duplicate the **LoadTableByQuery** flow (located in the TDM_TableLevel LU) in order to implement the load template and customize the load logic.
 - Note that if you use **Fabric V8.1.6 and above**, you must manually add the **__active_environment input parameter** to the DbCommand and/or DbLoad Actors; set this parameter as *Const* and populate it with any value (e.g., *target*). Adding the **__active_environment** input parameter enables refreshing the environment, updating it to be the target environment in the load flow, and running the load in the target environment. This parameter is already included in the duplicated **LoadTableByQuery** flow (DbLoad Actor). 
 
+#### Load Flow - Error Handler
+
+Starting with **TDM 9.5**, the [**DbErrorHandlerBatch** and **DbFlushBatch** Actors](/articles/19_Broadway/actors/05_db_actors.md) are added to the **LoadTableByQuery** flow. These Actors provide enhanced batch-level error handling and enable task execution to **ignore predefined database errors**—such as unique constraint violations—while continuing to process subsequent records without interruption. In addition, **successfully processed records are committed to the target database even when some records fail**, preventing a full task rollback due to partial errors.
+
+Within the **LoadTableByQuery** flow, the **DbErrorHandlerBatch** actor suppresses **unique constraint errors** and reports them to the TDM database using the **PopulatePartitionTableErrorsOnly** inner flow.
+
+To include error handling in a **customized load flow**, add a **DbErrorHandlerBatch** actor for each interface. The actor must be included in the same transaction as the **DbLoad** or **DbCommand** actor.
+
+See the example below:
+
+![LoadTableByQuery](images/loadTableByQuery.png) 
+
+
+
 ### Delete Flow
 
 - The delete flow receives a list of input parameters from the TDM execution processes and deletes the table before the load. Duplicate the **DeleteTableByDBCommand** flow (located in the TDM_TableLevel LU)  to implement the delete template and customize the delete logic.
