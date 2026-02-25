@@ -82,26 +82,26 @@ To enable vector usage in SQLite, you should set the SQLITE_EXTENSIONS in the Fa
 
 ### Pipeline DB
 
-- [ ] **Pipeline Interface settings**: The Pipeline DB definitions shall be set according to Dev/Studio to non-Dev/Studio (like QA and Prod): in case your Studio System DB is SQLite, then accordingly you shall have 2 pipeline interfaces, per DB type for example: *pipeline* and *pipeline_pg*.
-- [ ] **Environments Settings** at the [Studio's Environments Editor](/articles/25_environments/01_environments_overview.md)
-  - [ ] Set pipeline interface properties values per deployment (for the non-dev you shall set the Postgres interface, if you have two, as described above).
-  - [ ] Set the Globals values: 
-    - [ ] PIPELINE_INTERFACE - the actual pipeline interface name to be used. For example, if you have 2 interfaces - *pipeline* and *pipeline_pg* type the relevant name for this deployment environment (*pipeline_pg* for QA and Prod)
-    - [ ] PIPELINE_SCHEMA - the name of the schema that was prepared at the dataabse (please refer to the *Infrastructure* section)
-    - [ ] PIPELINE_DIALECT - the actual type that is going to be used in this environment - `postgres`  or `sqlite` 
+- [ ] **Pipeline Interface settings**: The Pipeline DB definitions should be set according to Dev/Studio to non-Dev/Studio (like QA and Prod): in case your Studio System DB is SQLite, then accordingly you will have two pipeline interfaces, per DB type for example: *pipeline* and *pipeline_pg*.
+- [ ] **Environment Settings** in the [Studio's Environments Editor](/articles/25_environments/01_environments_overview.md)
+  - [ ] Set pipeline interface properties values per deployment (for the non-dev you should set the Postgres interface, if you have two, as described above).
+  - [ ] Set the Global values: 
+    - [ ] PIPELINE_INTERFACE — the actual pipeline interface name to be used. For example, if you have two interfaces — *pipeline* and *pipeline_pg* — type the relevant name for this deployment environment (*pipeline_pg* for QA and Prod).
+    - [ ] PIPELINE_SCHEMA — the name of the schema that was prepared in the database (please refer to the *Infrastructure* section).
+    - [ ] PIPELINE_DIALECT — the actual type that is going to be used in this environment — `postgres`  or `sqlite`. 
 
 ### Metrics/Assurance DB
 
-- [ ] Set the Metrics/Assurance DB, used by Evaluation and Observation - interfaces and Environments Globals, with relevant values, similar to those mentioned for the Pipeline DB. The Environments Globals that shall be set are: ASSURANCE_INTERFACE_TYPE , ASSURANCE_INTERFACE, ASSURANCE_SCHEMA
+- [ ] Set the Metrics/Assurance DB, used by Evaluation and Observation - interfaces and Environments Globals, with relevant values, similar to those mentioned for the Pipeline DB. The Environment Globals that should be set are: ASSURANCE_INTERFACE_TYPE, ASSURANCE_INTERFACE, ASSURANCE_SCHEMA
 
 ### LUI snaps Storage
 
 - [ ] Set the LUI snaps file type interface with relevant properties values.
-- [ ] Set the Environments Globals
-  - [ ] STORAGE_INTERFACE - name of the interface
-  - [ ] STORAGE_PATH - the path (folder) to be used at the defined interface file system.
+- [ ] Set the Environment Globals
+  - [ ] STORAGE_INTERFACE — name of the interface
+  - [ ] STORAGE_PATH — the path (folder) to be used in the defined interface file system.
 
-### Vector DB - Markdown
+### Vector DB — Markdown
 
 When using a non managed service vector DB, the ingestion process is done at AI Fusion. One of the recommended steps is to align the content into a grounded format, like markdown, which is very common and useful when working with GenAI models.
 
