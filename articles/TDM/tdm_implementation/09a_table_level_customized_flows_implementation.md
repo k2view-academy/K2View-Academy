@@ -29,7 +29,7 @@ Setting customized masking logic on tables:
 
 #### Customized Extract Flow — Example
 
-The image below depicts an example, which executes the following actions:
+The image below depicts an example that executes the following actions:
 
 - Selecting records from the address table.
 - Opening a loop on the extracted records.
@@ -62,7 +62,8 @@ See the example below:
 
 ![LoadTableByQuery](images/loadTableByQuery.png) 
 
-
+- **Note**:
+  - In databases that automatically abort a transaction when an error occurs (for example, PostgreSQL), further processing within the same transaction is not possible. As a result, the affected table partition is not loaded.
 
 ### Delete Flow
 
