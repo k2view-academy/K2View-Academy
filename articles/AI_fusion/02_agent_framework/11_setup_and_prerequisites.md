@@ -105,7 +105,7 @@ To enable vector usage in SQLite, you should set the SQLITE_EXTENSIONS in the Fa
 
 When using a non-managed service vector DB, the ingestion process is done at AI Fusion. One recommended step is to align the content into a grounded format, such as Markdown, which is commonly used and useful when working with GenAI models.
 
-A very useful utility is ["markitdown"](https://github.com/microsoft/markitdown) - a Python library, which transforms many formats to markdown. Examples of file types formats it converts: PDF, PowerPoint, Word, Excel, Images (png, jpg), HTML, Text-based formats (CSV, JSON, XML).
+A very useful utility is ["markitdown"](https://github.com/microsoft/markitdown), a Python library for transforming multiple formats into Markdown. Examples of file formats it can convert include: PDF, PowerPoint, Word, Excel, images (PNG, JPG), HTML, and text-based formats (CSV, JSON, XML).
 
 If you wish using it, check and verify where you can install this library. Please refer to the *install_py_dep* flow and other related flows located at SharedObjects/Broadway/aifusion/markitdown project folder.
 
