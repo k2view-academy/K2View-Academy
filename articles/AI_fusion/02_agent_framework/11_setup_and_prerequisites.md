@@ -78,7 +78,7 @@ To enable vector usage in SQLite, you should set the SQLITE_EXTENSIONS in the Fa
       >
       > In this case, you should install more than one connector extension and configure them. As explained [here](05_llm_interfaces.md), you should tag them in a way that allows you to decide, during implementation, which model will be used for the LLM invocation.
     
-- [ ] **Embedding** model: If internal vector database is being used, you shall define also an Interface for the embedding model, for both ingestion and retrieval phases. 
+- [ ] **Embedding** model: If an internal vector database is used, you should also define an Interface for the embedding model, covering both ingestion and retrieval phases. 
 
 ### Pipeline DB
 
