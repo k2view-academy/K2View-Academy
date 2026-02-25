@@ -38,7 +38,7 @@ The steps and checklist are similar to those outlined in the Pipeline DB section
 
 As part of the Evaluation and Observation processes, the platform enables capturing LUI snapshots. These snapshots are samples captured during conversations for later evaluation.
 
-It is expected to have a file storage where these snaps can be stored and later on read.
+It is expected to have file storage where these snapshots can be stored and later read.
 
 ### Vector DB
 
