@@ -92,7 +92,7 @@ To enable vector usage in SQLite, you should set the SQLITE_EXTENSIONS in the Fa
 
 ### Metrics/Assurance DB
 
-- [ ] Set the Metrics/Assurance DB, used by Evaluation and Observation - interfaces and Environments Globals, with relevant values, similar to those mentioned for the Pipeline DB. The Environment Globals that should be set are: ASSURANCE_INTERFACE_TYPE, ASSURANCE_INTERFACE, ASSURANCE_SCHEMA
+- [ ] Set the interfaces and Environment Globals for the Metrics/Assurance DB (used by Evaluation and Observation), with the relevant values, similar to those mentioned for the Pipeline DB. The Environment Globals that should be set are: ASSURANCE_INTERFACE_TYPE, ASSURANCE_INTERFACE, ASSURANCE_SCHEMA
 
 ### LUI snaps Storage
 
