@@ -72,13 +72,13 @@ To enable vector usage in SQLite, you should set the SQLITE_EXTENSIONS in the Fa
 ### AI Models
 
 - [ ] **LLM**: Choose and install the GenAI language model connector extension from the K2exchange.
-    * Create an interface upon the installed connector and set its values. read [here](05_llm_interfaces.md) for more information. 
+    * Create an interface upon the installed connector and set its values. Read [here](05_llm_interfaces.md) for more information. 
 
       > While usually organizations have agreement with specific LLM service provider, or install locally a specific model with a single inference engine, AI Data Fusion is flexible in that you can use several LLMs, usually for different purposes.
       >
       > In this case, you shall install more than a single connector extension and configure them. As explained [here](05_llm_interfaces.md) you shall tag them, so that later, at implementation, you will be able to decide which model shall be used in the LLM invocation.
     
-- [ ] **Embedding** model: If internal vector DB is being used, you shall define also an Interface for the embedding model, for both ingestion and retrieval phases. 
+- [ ] **Embedding** model: If internal vector database is being used, you shall define also an Interface for the embedding model, for both ingestion and retrieval phases. 
 
 ### Pipeline DB
 
