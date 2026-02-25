@@ -1,8 +1,9 @@
-# In-place Masking Customization  — Implementation Guidelines
+# In-Place Masking Customization  — Implementation Guidelines
 
 ## In-place Masking Flow
 
-- Starting with **TDM 9.5** onwards,  the TDM supports in-place masking task updates the PII fields on the selected tables. The in-place masking flow  receives a list of input parameters from the TDM execution processes and updates the table: replaces the PII values with masking values. Duplicate the **UpdateTableByQuery**  flow (located in the TDM_TableLevel LU)  to implement the customization of the in-place masking flow.
+- Starting with **TDM 9.5** onwards,  the TDM supports in-place masking task updates the PII fields on the selected tables. The in-place masking flow  receives a list of input parameters from the TDM execution processes and updates the table: replaces the PII values with masking values.
+- Duplicate the **UpdateTableByQuery**  flow (located in the TDM_TableLevel LU)  to implement the customization of the in-place masking flow.
 
 #### In-place Masking Flow - Error Handler
 
