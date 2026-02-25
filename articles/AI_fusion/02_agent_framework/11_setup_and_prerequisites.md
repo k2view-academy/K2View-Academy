@@ -107,5 +107,5 @@ When using a non-managed service vector DB, the ingestion process is done at AI 
 
 A very useful utility is ["markitdown"](https://github.com/microsoft/markitdown), a Python library for transforming multiple formats into Markdown. Examples of file formats it can convert include: PDF, PowerPoint, Word, Excel, images (PNG, JPG), HTML, and text-based formats (CSV, JSON, XML).
 
-If you wish using it, check and verify where you can install this library. Please refer to the *install_py_dep* flow and other related flows located at SharedObjects/Broadway/aifusion/markitdown project folder.
+If you wish to use it, verify where this library can be installed. Please refer to the *install_py_dep* flow and other related flows located in the SharedObjects/Broadway/aifusion/markitdown project folder.
 
