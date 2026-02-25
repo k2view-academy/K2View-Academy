@@ -58,7 +58,7 @@ To enable vector usage in SQLite, you should set the SQLITE_EXTENSIONS in the Fa
    - Choose to show Hidden as well as Show All
    - Filter attributes by `fabricdb` section 
    - For the `SQLITE_EXTENSIONS` attribute key, set the value to be `vec0`
-2. Alternatively, do it at the `config.ini` file:
+2. Alternatively, configure it in the `config.ini` file:
    - Set the following:   `SQLITE_EXTENSIONS = vec0`
 
 3. **Restart Fabric**.
