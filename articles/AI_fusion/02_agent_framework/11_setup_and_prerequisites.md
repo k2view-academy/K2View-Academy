@@ -96,14 +96,14 @@ To enable vector usage in SQLite, you should set the SQLITE_EXTENSIONS in the Fa
 
 ### LUI snaps Storage
 
-- [ ] Set the LUI snaps file type interface with relevant properties values.
+- [ ] Set the LUI snaps file-type interface with the relevant property values.
 - [ ] Set the Environment Globals
-  - [ ] STORAGE_INTERFACE — name of the interface
-  - [ ] STORAGE_PATH — the path (folder) to be used in the defined interface file system.
+  - [ ] STORAGE_INTERFACE — the name of the interface
+  - [ ] STORAGE_PATH — the path (folder) to be used in the defined interface file system
 
 ### Vector DB — Markdown
 
-When using a non managed service vector DB, the ingestion process is done at AI Fusion. One of the recommended steps is to align the content into a grounded format, like markdown, which is very common and useful when working with GenAI models.
+When using a non-managed service vector DB, the ingestion process is done at AI Fusion. One recommended step is to align the content into a grounded format, such as Markdown, which is commonly used and useful when working with GenAI models.
 
 A very useful utility is ["markitdown"](https://github.com/microsoft/markitdown) - a Python library, which transforms many formats to markdown. Examples of file types formats it converts: PDF, PowerPoint, Word, Excel, Images (png, jpg), HTML, Text-based formats (CSV, JSON, XML).
 
