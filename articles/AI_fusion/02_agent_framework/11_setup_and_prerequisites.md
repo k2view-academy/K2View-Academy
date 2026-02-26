@@ -34,7 +34,7 @@ In Studio, it may be defined as an SQLite database, whereas in non-Studio deploy
 
 The steps and checklist are similar to those outlined in the Pipeline DB section. 
 
-### LUI Snaps Storage
+### LUI Snapshots Storage
 
 As part of the Evaluation and Observation processes, the platform enables capturing LUI snapshots. These snapshots are samples captured during conversations for later evaluation.
 
@@ -88,22 +88,22 @@ To enable vector usage in SQLite, you should set the SQLITE_EXTENSIONS in the Fa
   - [ ] Set the Global values: 
     - [ ] PIPELINE_INTERFACE — the actual pipeline interface name to be used. For example, if you have two interfaces — *pipeline* and *pipeline_pg* — type the relevant name for this deployment environment (*pipeline_pg* for QA and Prod).
     - [ ] PIPELINE_SCHEMA — the name of the schema that was prepared in the database (please refer to the *Infrastructure* section).
-    - [ ] PIPELINE_DIALECT — the actual type that is going to be used in this environment — `postgres`  or `sqlite`. 
+    - [ ] PIPELINE_DIALECT — the actual database type that is going to be used in this environment — `postgres`  or `sqlite`. 
 
 ### Metrics/Assurance DB
 
-- [ ] Set the interfaces and Environment Globals for the Metrics/Assurance DB (used by Evaluation and Observation), with the relevant values, similar to those mentioned for the Pipeline DB. The Environment Globals that should be set are: ASSURANCE_INTERFACE_TYPE, ASSURANCE_INTERFACE, ASSURANCE_SCHEMA
+- [ ] Set the interfaces and Environment Globals for the Metrics/Assurance DB (which is used by Evaluation and Observation), with the relevant values, similar to those mentioned in the Pipeline DB section. The Environment Globals that should be set are: ASSURANCE_INTERFACE_TYPE, ASSURANCE_INTERFACE, ASSURANCE_SCHEMA
 
 ### LUI snaps Storage
 
-- [ ] Set the LUI snaps file-type interface with the relevant property values.
+- [ ] Set the LUI snapshots file-type interface with the relevant property values.
 - [ ] Set the Environment Globals
   - [ ] STORAGE_INTERFACE — the name of the interface
   - [ ] STORAGE_PATH — the path (folder) to be used in the defined interface file system
 
 ### Vector DB — Markdown
 
-When using a non-managed service vector DB, the ingestion process is done at AI Fusion. One recommended step is to align the content into a grounded format, such as Markdown, which is commonly used and useful when working with GenAI models.
+When using a non-managed vector database, the ingestion process is performed by the AI Fusion platform. One recommended step is to align the content into a grounded format, such as Markdown, which is commonly used and useful when working with GenAI models.
 
 A very useful utility is ["markitdown"](https://github.com/microsoft/markitdown), a Python library for transforming multiple formats into Markdown. Examples of file formats it can convert include: PDF, PowerPoint, Word, Excel, images (PNG, JPG), HTML, and text-based formats (CSV, JSON, XML).
 
