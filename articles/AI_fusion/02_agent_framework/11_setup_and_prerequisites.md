@@ -48,14 +48,14 @@ When using an internal, non-managed or as-a-service vector database, the AI Fusi
 
 * In **Docker** deployment, use this pgvector image: https://hub.docker.com/r/pgvector/pgvector; it is a pre-built container that already includes PostgreSQL 16 with the pgvector extension installed and ready for usage. 
 
-​	Read [here](https://github.com/pgvector/pgvector) for more information about PG vector installation and usage.
+​	Read [here](https://github.com/pgvector/pgvector) for more information about pgvector installation and usage.
 
 #### SQLite
 
 To enable vector usage in SQLite, you should set the SQLITE_EXTENSIONS in the Fabric configuration.
 
 1. Update via Admin Pages → Configuration 
-   - Choose to show Hidden as well as Show All
+   - Select both 'Hidden Parameters' and 'Show All'
    - Filter attributes by `fabricdb` section 
    - For the `SQLITE_EXTENSIONS` attribute key, set the value to be `vec0`
 2. Alternatively, configure it in the `config.ini` file:
@@ -71,8 +71,8 @@ To enable vector usage in SQLite, you should set the SQLITE_EXTENSIONS in the Fa
 
 ### AI Models
 
-- [ ] **LLM**: Choose and install the GenAI language model connector extension from the K2exchange.
-    * Create an interface upon the installed connector and set its values. Read [here](05_llm_interfaces.md) for more information. 
+- [ ] **LLM**: From K2exchange, select and install a GenAI language model connector extension.
+    * Create an interface based on the installed connector and set its values. Read [here](05_llm_interfaces.md) for more information. 
 
       > While organizations usually have an agreement with a specific LLM service provider, or install locally a specific model with a single inference engine, AI Data Fusion is flexible in that you can use several LLMs, usually for different purposes.
       >
