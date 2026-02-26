@@ -82,7 +82,7 @@ To enable vector usage in SQLite, you should set the SQLITE_EXTENSIONS in the Fa
 
 ### Pipeline DB
 
-- [ ] **Pipeline Interface settings**: The Pipeline DB definitions should be configured based on whether the deployment is Studio or non-Studio (e.g., QA and Prod). For a non-Studio deployment, the pipeline interface should be Postgres. in case your Studio System DB is SQLite, then accordingly you will have two pipeline interfaces, per DB type for example: *pipeline* and *pipeline_pg*.
+- [ ] **Pipeline Interface settings**: The Pipeline DB definitions should be configured based on whether the deployment is Studio or non-Studio (e.g., QA and Prod). For a non-Studio deployment, the pipeline interface should be Postgres. If your Studio System DB is SQLite, then two pipeline interfaces are needed — one for Postgres (non-Studio deployments) and one for SQLite (Studio deployment).
 - [ ] **Environment Settings** in the [Studio's Environments Editor](/articles/25_environments/01_environments_overview.md)
   - [ ] Set the values of the pipeline interface properties per the deployment type, as described above.
   - [ ] Set the Global values: 
