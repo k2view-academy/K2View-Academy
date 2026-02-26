@@ -44,11 +44,20 @@ This plugin scans the data of the data sample in order to calculate various data
 
 ## Option Set Analyzer
 
-The purpose of this plugin is to identify fields with a limited number of distinct values **in the data sample** and save these values in a dedicated MTable, enabling their use in masking and synthetic data generation.
+The purpose of this plugin is to identify fields with a limited number of distinct values **within a data sample**. It saves these values into a dedicated MTable, enabling their use in data masking and synthetic data generation.
 
-In addition, when running discovery on JSON Schema files (using the [File Cataloging solution](/articles/39_fabric_catalog/05_cataloging_of_files.md)), the plugin can identify fields with `enum` property and save the values of `enum` in a dedicated MTable, enabling their use in masking and synthetic data generation. Note that in this case, the distinct values are not related to the data sample but simply taken from the 'enum' property values. This addition is available starting from Fabric V8.4.
+Starting with Fabric V8.4, when running discovery on JSON Schema files (using the [File Cataloging solution](/articles/39_fabric_catalog/05_cataloging_of_files.md)), the plugin identifies fields with `enum` property and extracts those values directly from the schema rather than a data sample. 
 
-Once a field is identified as an Option Set, the property ```optionSet = true``` is created for it. A separate MTable is generated for each data platform and schema to store the distinct values (and their distribution) identified by the plugin in a field. The MTable has the following format: 
+To identify fields with limited distinct values, consider these guidelines:
+
+1. Ensure the field is non-PII to comply with privacy regulations and avoid the exposure of sensitive data. 
+2. The number of distinct values should be below either a plugin’s threshold (e.g., 0.05) or the Absolute Threshold input parameter, which defaults to 15.
+
+Additional rules apply based on the **plugin input parameters**, as explained further in this article.
+
+Once a field is identified as an Option Set, the property ```optionSet = true``` is created for it. Starting from Fabric V8.3.1, the ```classification = OPTION_SET``` is assigned to this field, unless it has already been classified. In the Catalog Settings, the OPTION_SET classification is mapped to the **RandomOptionSet** Actor for masking and synthetic data generation. The actor randomly selects a value from the catalog_field_option_set MTable, based on the input data platform, schema, dataset, class and field.
+
+A separate MTable is generated for each data platform and schema to store the distinct values (and their distribution) identified by the plugin in a field. The MTable name format is: 
 
 ```catalog_field_option_set___<dataPlatform>_<schema>.csv```, (containing three underscores before the data platform name).
 
@@ -56,57 +65,22 @@ The below image is an example of such MTable:
 
 <img src="../images/option_set_mtable_ex.png" />
 
-Starting from Fabric V8.3.1, the **OPTION_SET** classification is assigned to this field, unless it has already been classified. In the Catalog Settings, the OPTION_SET classification is mapped to the **RandomOptionSet** Actor for masking and synthetic data generation. The actor randomly selects a value from the catalog_field_option_set MTable, based on the input data platform, schema, dataset, class and field.
+The plugin's input parameters are described below:
 
-To identify fields with limited distinct values, consider these guidelines:
+* ```propertyName``` is a column's property that should be created by the plugin on a field if the plugin returns true. By default, the property is named `optionSet`.
+* ```absoluteThreshold``` defines the maximum number of distinct values allowed. If the proportion of distinct values in a sample exceeds the plugin’s threshold (0.05), the plugin checks the count against this absolute value (15). For example:
+  * In a sample of 100 records, a field has 10 distinct values (0.1 proportion). While 0.1 exceeds the 0.05 threshold, the field still qualifies as an **Option Set** because 10 is less than the **Absolute Threshold** (15).
+* ```fieldTypeIncludeList``` controls which field data types should be analyzed. 
+  * By default, ```fieldTypeIncludeList``` is set to STRING and INTEGER. 
+  * Supported values are: STRING, INTEGER, REAL, DATETIME, DATE and BOOLEAN.
+* ```fieldNameIncludeList``` is an override list of field names to be **included** in the plugin's validation algorithm, even if they are identified as PII or belong to a small table (see the ```minSampleSize``` property).
+* `fieldNameExcludeList` is an override list of field names to be **excluded** from the plugin's validation algorithm.
+* ```incrementalMode``` (introduced in Fabric V8.3.1) defines how the plugin handles fields analyzed in previous Discovery Job executions. It has the following modes:
 
-1. Ensure the field is non-PII to comply with privacy regulations and avoid the exposure of sensitive data. 
-
-2. The number of distinct values should be below either a plugin’s threshold (e.g., 0.05) or the Absolute Threshold input parameter, which defaults to 15.
-
-
-Additional rules apply based on the **plugin input parameters**, as explained below.
-
-#### Property Name
-
-The property that will be created on a field if the plugin returns true. By default, the property is named `optionSet`.
-
-#### Absolute Threshold
-
-This parameter defines the absolute threshold number of distinct values. If the relative number of distinct values per field, found in a data sample, exceeds the plugin’s threshold (0.05), it is then validated against the absolute threshold (15). For example:
-
-* The sample size is 100 and a field includes 10 distinct values, thus the proportion of distinct values equals to 0.1. This figure exceeds the plugin's threshold (0.05).
-* In this case, the result is validated against the absolute threshold to verify whether it qualifies as an **Option Set**. 
-* Since 10 distinct values are below the absolute threshold (15), the field qualifies as an **Option Set**.
-
-#### Field Type Include List
-
-This parameter controls which field data types are considered when checking for distinct values. 
-
-By default, ```fieldTypeIncludeList``` is set to STRING and INTEGER. The valid values are STRING, INTEGER, REAL, DATETIME, DATE and BOOLEAN.
-
-#### Field Name Include List
-
-This parameter allows to set up an override list of field names. These fields will be included in the plugin's validation algorithm, even if they are identified as PII or belong to a small table (see the ```minSampleSize``` property).
-
-#### Field Name Exclude List
-
-This parameter allows to set up an override list of field names. These fields will be excluded from the plugin's validation algorithm.
-
-#### Incremental Mode
-
-This parameter is introduced in Fabric V8.3.1. It defines whether the Option Set Analyzer plugin should be executed for the fields that already have the same property created by this plugin in a previous Discovery Job execution. It has the following modes:
-
-- ```"Keep All"``` (default) — if the plugin has already been executed for this field in a previous Discovery Job execution, do not invoke the plugin again (even if the field does not have the 'Option Set' property). The plugin will only be invoked for new fields.
-- ```"Keep Existing"``` — if the plugin has already been executed for this field in a previous Discovery Job execution and created a property, do not invoke it again. The plugin will only be invoked for new fields and for the fields without this property.
-- ```"Evaluate All"``` — the plugin will be invoked for all fields.
-
-#### Max String Length
-
-This parameter sets a limit on STRING size to prevent handling text files or complex structures within a field. The default value is 512 bytes.
-
-#### Min Sample Size
-
-This parameter allows to skip small tables by defining the minimum sample size required to determine whether a field qualifies as an **Option Set**. The default value is 100.
+  * ```"Keep All"``` (default) — the plugin will not analyze the field that have already been analyzed in a previous Discovery Job execution (even if the field does not have the 'Option Set' property). The plugin will only analyze new fields.
+  * ```"Keep Existing"``` — the plugin will not analyze the field that have already been analyzed in a previous Discovery Job execution and an 'Option Set' property was created for it. The plugin will analyze new fields and the existing fields that do not have this property.
+  * ```"Evaluate All"``` — the plugin will analyze all fields.
+* `maxStringLength` sets a limit on STRING size to prevent handling text files or complex structures within a field. The default value is 512 bytes.
+* `minSampleSize` allows to skip small tables by defining the minimum sample size required to determine whether a field qualifies as an **Option Set**. The default value is 100.
 
 ## 

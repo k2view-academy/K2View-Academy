@@ -26,7 +26,7 @@ The plugin's input parameters are:
   - For example, if the Metadata Regex Classifier plugin created a classification property with score = 0.8 (above the threshold), the LLM Profiling plugin will not run on this column.
 - ```propertyName``` is a column's property that should be created by the plugin. 
   - By default,  ```"propertyName": "classification"```, which aims to accommodate the LLM Profiling use case.
-- ```"userPrompt"``` is an LLM prompt definition. It is a dynamic string, comprised of several parts that are combined at run time. Some of these parts are taken from the framework and some are taken from the plugin's definition, as follows:
+- ```userPrompt``` is an LLM prompt definition. It is a dynamic string, comprised of several parts that are combined at run time. Some of these parts are taken from the framework and some are taken from the plugin's definition, as follows:
   - ```${tableName} ```, ```${columns}``` and ```${columnName}``` are, respectively, a table and a column being profiled, as well as the names of all other columns in this table. These 3 parameters are passed to the plugin by the framework.
   - The ```userPrompt``` should be updated to fit the required use case and project's needs. 
 - ```possibleValues``` is a list of possible property values. 
@@ -40,8 +40,8 @@ The plugin's input parameters are:
 - ```samplePrompt``` defines a part of the user prompt related to the sample data. It is included in the user prompt when the ```sampleSize``` > 0 and if the column is not empty in the data snapshot. 
   - The ```${sampleData}``` is the source data retrieved in the Snapshot step and added to the prompt. 
 - ```incrementalMode``` defines whether the plugin should be executed for the fields that already have the same property created by the same LLM plugin in a previous Discovery Job execution. This parameter is set in order to minimize the number of calls to the LLM. It has the following modes:
-  - ```"Keep All"``` (default) - if the plugin has already been executed for this field in a previous Discovery Job execution, don’t invoke the plugin again (even if the field has no LLM-created property). The plugin will only be invoked for the new fields.
-  - ```"Keep Existing"``` - if the plugin has already been executed for this field in a previous Discovery Job execution and created a property, don’t invoke it again. The plugin will only be invoked for the new fields and for the fields without this property (e.g., "classification").
+  - ```"Keep All"```  - if the plugin has already been executed for this field in a previous Discovery Job execution, don’t invoke the plugin again (even if the field has no LLM-created property). The plugin will only be invoked for the new fields.
+  - ```"Keep Existing"``` (default) - if the plugin has already been executed for this field in a previous Discovery Job execution and created a property, don’t invoke it again. The plugin will only be invoked for the new fields and for the fields without this property (e.g., "classification").
   - ```"Evaluate All"``` - the plugin will be invoked for all fields.
 - ```llmInterface``` is an optional parameter. It allows overriding the default project's LLM AI interface, to be used by the LLM plugin. This parameter should include the interface's name.
   - When the ```llmInterface``` parameter is not set in the plugin definition, the plugin will search for an LLM AI interface tagged as 'discovery'. If non of the LLM AI interfaces are tagged as 'discovery', an interface with a 'default' tag will be used.
