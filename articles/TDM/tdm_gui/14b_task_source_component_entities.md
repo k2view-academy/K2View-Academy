@@ -1,16 +1,22 @@
 # Task — Source Component — Entities and Referential Data
 
-The Business Entities & referential data option enables to extract Business Entities from a source environment. This is the default option. It also enables the user to add selected tables to the Business Entities.
+The Business Entities & referential data option enables the extraction of Business Entities from a source environment. This is the default option. It also enables the user to add selected tables to the Business Entities.
 
 The following information needs to be set for the *Entities & referential data* option:
 
 ![source-entities](images/task_source_settings_entities.png)
 
-### Business Entity
+## Business Entity
 
-This is the task's [BE](04_tdm_gui_business_entity_window.md). Select a BE from the drop-down list that contains all TDM BEs. The **Advanced** setting is **optional** and it enables either a partial selection of the systems and/or the LUs in the task, or overriding the [task execution mode](04_tdm_gui_business_entity_window.md#task-execution-mode) for the task. When clicking **Advanced**, a pop-up window opens:
+This field defines the task’s [Business Entity (BE)](04_tdm_gui_business_entity_window.md). Select a BE from the drop-down list, which includes all TDM BEs.
 
+The **Advanced** option is **optional** and allows you to:
 
+- Select only specific **systems** and/or **Logical Units (LUs)** for the task.
+- Define the **affinity** and **maximum number of workers** per LU.
+- Override the task’s default [execution mode](04_tdm_gui_business_entity_window.md#task-execution-mode)
+
+When you click **Advanced**, a pop-up window opens:
 
 
 
@@ -20,15 +26,52 @@ This is the task's [BE](04_tdm_gui_business_entity_window.md). Select a BE from 
 
 
 
-#### Advanced BE - Systems & Logical units Tab
+### Advanced BE - Systems & Logical units Tab
 
-This tab displays the selected BE's systems and LUs. Note that if the selected source environment does not contain all the BE's systems and LUs, the TDM portal automatically removes the LUs that are not included in the source environment and displays a warning to the user.  You can remove a System or one of its LUs from the task.
+This tab is available for both **Source** and **Target** components and displays the systems and LUs associated with the selected BE.
 
-Note that if the selected environment contains [disabled systems](11_environment_products_tab.md#disabling-the-environments-systems) and the **Policy for Fetching Data** extracts the data from the source environment, the disabled systems are removed from the task. 
+#### Selected Systems and/or LUs
 
-#### Advanced BE - Execution Mode Tab
+- If the selected **source environment** does not contain all systems or LUs defined in the BE, the Task window automatically removes the missing LUs and displays a warning.
+- You can manually remove an entire **system** or specific **LUs** from the task.
 
-This tab enables to change the task execution mode:
+If the selected environment includes [disabled systems](11_environment_products_tab.md#disabling-the-environments-systems) and the **Policy for Fetching Data** extracts data from the source environment, those disabled systems are automatically excluded from the task. 
+
+#### System & Logical Units Tab - Affinity and Max Number of Workers
+
+Starting with **TDM 9.5**, each LU in the **Advanced BE** view supports configuration of:
+
+- **Affinity**
+- **Maximum number of workers**
+
+You can expand each LU and configure these values **after selecting an environment**.
+
+By default, each LU inherits its values from:
+
+1. The environment’s system settings (if defined), or
+2. The TDM and Fabric configuration values
+
+You can **override these values per LU** to control and **optimize task execution** behavior:
+
+
+
+![affinity](images/task_affinity_max_workers_example.png)
+
+
+
+When both **Source** and **Target** components are defined for the task (Load, Extract & Load, Generate & Load):
+
+- **Affinity**
+  - The task execution process runs using the **target** affinity
+  - The entity extraction runs using the **source** affinity
+- **Max number of workers**
+  - The task execution process uses the **target** maximum number of workers
+
+Click [here](/articles/TDM/tdm_architecture/03b_task_execution_affinity_and_workers_configuration.md) for detailed information on how task execution determines the effective affinity and maximum number of workers.
+
+### Advanced BE - Execution Mode Tab
+
+This tab enables changing the task execution mode:
 
 
 

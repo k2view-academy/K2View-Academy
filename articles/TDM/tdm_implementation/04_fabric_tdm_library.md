@@ -202,8 +202,19 @@ The following MTables have been added to the **References** by the TDM Library. 
 </tr>     
 <tr>
     <td><h5>AI configuration tables</h5></td>
-    <td>Configration settings for AI-based data generation.</td>
+    <td> Configuration settings for AI-based data generation.</td>
     <td>Click for more information about <a href>AI-based data generation implementation</a></td>
+    </tr>
+<tr>
+    <td valign="top" width="200pxl">
+    <p><h5>TDMCleanUp</p>
+    </td>
+    <td>Defines the list of the TDM DB tables to be cleaned up by the TDM cleaning-up process. This table defines the Delete statement on each table and a cleanup indicator indicates whether the table should be cleaned up by the TDM cleaning-up process.</td> 
+     <td>
+         <p>Set the cleanup_ind field to FALSE to exclude a table from the cleanup process.</p>
+        <p>Edit the OVERRIDE_CLEANUP_RETENTION_PERIOD parameter for the relevant TDM tables to override the default cleanup retention period.</p>
+        <p>Additional TDM tables can be added to the cleanup configuration, and the corresponding DELETE statements can be customized as needed.</p>
+     </td> 
     </tr>    
 </tbody>
 </table>
@@ -232,36 +243,6 @@ TDM enables setting TTL (Time To Live) on the TDM LUIs. The default TTL period i
 
 - **TDM_LU_RETENTION_PERIOD_TYPE** — by default, it is populated by 'Days'. This Global can have one of the following values: Minutes, Hours, Days, Weeks or Years.
 - **TDM_LU_RETENTION_PERIOD_VALUE** — by default, it is populated with the value 10. **Populate this Global with either zero or an empty value to avoid setting a TTL on the TDM LUIs**.
-
-### TDM Cleanup Process
-
-<table width="900pxl">
-<tbody>
-<tr>
-<td valign="top" width="200pxl">
-<p><strong>Item&nbsp;</strong></p>
-</td>
-<td valign="top" width="300pxl">
-<p><strong>Description&nbsp;</strong></p>
-</td>
-<td valign="top" width="400pxl">
-<p><strong>Instructions&nbsp;</strong></p>
-</td>
-</tr>
-    <tr>
-<td valign="top" width="200pxl">
-    <p><h5>TDMCleanUp</p>
-        </td>
-<td valign="top" width="300pxl">
-    Defines the list of the TDM DB tables to be cleaned up by the TDM cleaning-up process. This table defines the Delete statement on each table and a cleanup indicator indicates whether the table should be cleaned up by the TDM cleaning-up process.
-        </td>
-  <td valign="top" width="400pxl">
-      Set the cleanup_ind field to FALSE to remove a table from the cleaning-up process. TDM tables can be added, and Delete statements can be edited.
-        </td>
-    </tr>
-    </tbody>
-</table>
-
 ​    
 
 ### TDM Deploy Flow

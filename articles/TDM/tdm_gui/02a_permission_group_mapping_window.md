@@ -48,11 +48,11 @@ Click for more information about [Fabric User IAM Configuration](/articles/26_fa
 
 ### Edit a Permission Group Mapping
 
-Click the ![edit](images/permission_group_edit_icon.png) icon next to the Permission Group mapping record. A popup window is opened.  Edit the Permission Group, Role, or Description settings if needed and save the changes.
+Click the **Edit** icon next to the Permission Group mapping record. A pop-up window opens, allowing you to edit the **Permission Group**, **Role**, or **Description** as needed. Save the changes when finished.
 
 ### Delete a Permission Group Mapping
 
-Click the ![delete](images/permission_group_delete_icon.png) icon next to the Permission Group mapping record to delete the Permission Group mapping. The delete activity deletes the record from permission_groups_mapping TDM DB table.
+Click the **Trash** icon next to the Permission Group mapping record to delete the mapping. This action permanently removes the record from the `permission_groups_mapping` table in the TDM database.
 
 
 
