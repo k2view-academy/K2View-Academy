@@ -44,9 +44,9 @@ This plugin scans the data of the data sample in order to calculate various data
 
 ## Option Set Analyzer
 
-The purpose of this plugin is to identify fields with a limited number of distinct values (in the data sample) and save these values in a dedicated MTable, enabling their use in masking and synthetic data generation.
+The purpose of this plugin is to identify fields with a limited number of distinct values **in the data sample** and save these values in a dedicated MTable, enabling their use in masking and synthetic data generation.
 
-In addition, when running discovery on JSON Schema files, the plugin can identify fields with `enum` property and save the values of `enum` in a dedicated MTable, enabling their use in masking and synthetic data generation. Note that in this case, the distinct values are not related to the data sample. This addition is available starting from Fabric V8.4.
+In addition, when running discovery on JSON Schema files (using the [File Cataloging solution](/articles/39_fabric_catalog/05_cataloging_of_files.md)), the plugin can identify fields with `enum` property and save the values of `enum` in a dedicated MTable, enabling their use in masking and synthetic data generation. Note that in this case, the distinct values are not related to the data sample but simply taken from the 'enum' property values. This addition is available starting from Fabric V8.4.
 
 Once a field is identified as an Option Set, the property ```optionSet = true``` is created for it. A separate MTable is generated for each data platform and schema to store the distinct values (and their distribution) identified by the plugin in a field. The MTable has the following format: 
 
