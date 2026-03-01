@@ -20,7 +20,7 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <td>Mar 01, 2026</td>
             <td></td>
             <td>8.3.4</td>
-            <td>3.11.14, 4.0.3, or 4.1.3</td>
+            <td>4.1.8</td>
             <td>N/A</td>
             <td>17.5</td>
         </tr>
