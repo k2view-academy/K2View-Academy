@@ -43,7 +43,7 @@ The TDM Dashboard displays the main key metrics and visualizations organized int
 
 Identifies which environments have the highest task execution activity. Up to 5 top environments are shown in this chart. For each environment in the chart, the relevant bar displays a number of executions broken down by environment type: Source, Target or Source & target.
 
-The 'Show all' link opens the *Task Execution per Environment* report. By clicking on each bar of the chart, the same report opens filtering the data by the environment name.
+The 'Show all' link opens the *Task Execution per Environment* report. By **clicking on each bar** of the chart, the same report opens filtering the data by the environment name.
 
 ### Tasks Execution Over Time
 
@@ -92,6 +92,10 @@ Below you can find the detailed description of several selected reports.
 **Purpose**: Detailed analysis of task executions with multiple perspectives.
 
 ![](images/TaskExecutionSummary1.png)
+
+![](images/TaskExecutionSummary2.png)
+
+![](images/TaskExecutionSummary3.png)
 
 **Sections include:**
 
@@ -198,5 +202,4 @@ Below you can find the detailed description of several selected reports.
 - Lists all system connections and their associated interfaces.
 
 ---
-
 

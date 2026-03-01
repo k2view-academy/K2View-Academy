@@ -17,11 +17,12 @@ An Admin can execute all activities in the TDM Portal application.
 
 Admins usually also define the [TDM implementation in Fabric](/articles/TDM/tdm_implementation/03_tdm_fabric_implementation_flow.md). They can execute all activities in the TDM Portal and are responsible for the following activities:
 
-- Create, edit or delete [systems](05_tdm_gui_product_window.md).
 - Create, edit or delete [Business Entities](04_tdm_gui_business_entity_window.md) and attach Logical Units or post-execution processes to each Business Entity.
+- Create, edit or delete [systems](05_tdm_gui_product_window.md).
 - Create, edit or delete [environments](07_tdm_gui_environment_overview.md).
 - Attach [environment owners](08_environment_window_general_information.md#environment-owners) to each environment.
 - Define [permission sets](10_environment_roles_tab.md) in each environment and define permissions per permission set.
+- View and download the [TDM reports](TDM_Dashboard_User_Guide.md).
 
 ## Owner 
 
@@ -30,12 +31,18 @@ An Owner can be assigned to a specific TDM testing environment. Admins can defin
 Environment Owners can execute the following activities in their environment:
 
 - Edit the environment details.
+
 - Add or remove [systems](11_environment_products_tab.md) from the environment.
+
 - Set [environment variables](12_environment_globals_tab.md).
+
 - Create, edit or delete [permission sets](10_environment_roles_tab.md) and define permissions per permission set.
+
+- View and download the [TDM reports](TDM_Dashboard_User_Guide.md).
+
 - Attach users to TDM environment's permission sets.
 
-Environment Owners cannot add or delete an environment and cannot add or remove Environment Owners from the environment.
+  Environment Owners cannot add or delete an environment and cannot add or remove Environment Owners from the environment.
 
 ## Tester User
 

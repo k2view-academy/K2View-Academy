@@ -4,7 +4,7 @@ The TDM DB **tdm_general_parameters** table holds the name of each parameter (pa
 
 ## Table of Contents
 
-* [TDM VERSION](#tdm-version)
+* [TDM Version](#tdm-version)
 * [TDM Cleanup Parameters](#tdm-cleanup-parameters)
 * [LUI Separator Parameters](#lui-separator-parameters)
 * [Maximum Reservation Period for Testers](#maximum-reservation-period-for-testers)
@@ -18,7 +18,7 @@ The TDM DB **tdm_general_parameters** table holds the name of each parameter (pa
 
 
 
-## TDM VERSION
+## TDM Version
 
 The **TDM_VERSION** parameter is populated with the TDM version that is displayed in the TDM portal.
 
@@ -28,10 +28,22 @@ The cleanup parameters are automatically created in **tdm_general_parameters** b
 
 - The **cleanup_retention_period** defines the number of months of the retention period for inactive records. The cleanup process deletes inactive records that are older than the retention period; the default period is set to 1 week (0.25 months).
 
+## [Default Maximum Number of Workers](/articles/TDM/tdm_architecture/03b_task_execution_affinity_and_workers_configuration.md)
+
+Starting with **TDM 9.5**, a new parameter, **`MAX_NO_OF_WORKERS_FOR_EXECUTION`**, has been introduced. This parameter allows overriding the **`MAX_WORKERS_PER_NODE`** setting defined in the [Fabric config.ini file](/articles/20_jobs_and_batch_services/12_batch_sync_commands.html) , and serves as the **default number of workers** for TDM task executions.
+
+- When this parameter is set to **-1**, it is ignored.
+
+- When set to a value **greater than 0**, it is used as the default number of workers for TDM task executions.
+
+  > Note: The specified value cannot exceed the **`MAX_WORKERS_PER_NODE`** value defined in the Fabric `config.ini` file.
+
+- The default maximum number of workers can be overridden either at the [environment](/articles/TDM/tdm_gui/11_environment_products_tab.md) level or at the **task level**.
+
 ## [LUI Separator Parameters](/articles/TDM/tdm_implementation/01_tdm_set_instance_per_env_and_version.md)  
 
 - To create different LUIs per environment and per data version, the TDM concatenates additional identifiers to each IID: environment name (for all tasks) and version identifier for Data Versioning tasks. By default, the LUI parts are separated by an underscore, e.g., ENV1_45773.
-- However, if the source entity ID already contains an underscore, another separator must be set on the LUI. Insert a **new record** to the tdm_general_parameters table in order to set an LUI separator that is different from the defaultive (underscore) value.
+- However, if the source entity ID already contains an underscore, another separator must be set on the LUI. Insert a **new record** to the tdm_general_parameters table in order to set an LUI separator that is different from the default (underscore) value.
   
 - The **param_name** of the LUI separator is **iid_separator**.  
 

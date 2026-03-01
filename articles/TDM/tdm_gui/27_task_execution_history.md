@@ -132,12 +132,13 @@ To display the Task Execution - Detailed Statistics window (shown below), click 
 
 #### Successful Tables Tab
 
-The following information is displayed for each successful table:
+The **Successful Tables** tab displays execution details for each table that completed successfully, including:
 
 - Table name
-- Number of records
+- Number of successfully processed records
+- Number of failed records
 
-View the below example:
+View the example below:
 
 ![table list](images/task_execution_table_list.png)
 

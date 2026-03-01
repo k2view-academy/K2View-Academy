@@ -52,7 +52,7 @@ To use a BE in a TDM task, it must have one or more LUs assigned to it.
      - Populate the following optional settings for each selected LU:
        - **Logical Unit Description**.
        - **Parent Logical Unit** - set a parent LU to build a [hierarchy in the BE](/articles/TDM/tdm_overview/03_business_entity_overview.md). 
-3. Click **ADD LOGICAL UNITS** to add the selected LUs to the BE.
+3. Click **Add Logical Units** to add the selected LUs to the BE.
 
 Notes:
  - Both Parent and Child LUs must be attached to the same BE.
@@ -62,7 +62,8 @@ Notes:
 
 #### Editing LU Settings
 
-Click <img src="images/be_edit_icon.png" alt="be_edit" style="zoom:80%;" /> to edit or <img src="images/be_delete_icon.png" alt="be_delete" style="zoom:80%;" /> to delete the LU from the BE. Note that the LU is deleted from the BE in the TDM DB. 
+Click the **Edit** icon to modify an LU, or the **Trash** icon to remove the LU from the BE.
+ Note that deleting an LU removes it from the BE in the TDM DB. 
 
 Click for more information about [TDM DB tables that hold the BE and LU relationship](06_be_product_tdmdb_tables.md).
 
@@ -92,7 +93,7 @@ Note that the pre and post execution processes must be populated in the [PostAnd
 2. Click the **Process Name** and select a flow from the drop-down list that holds all pre/post execution processes deployed to Fabric.
 3. Populate the **Execution Order** field with a numeric value to set the execution order. Processes with Execution Order 1 run first, followed by processes with Execution Order 2, etc. Note that an execution order can be set for several processes that are executed simultaneously.
 4. Populate the **Description** field (optional).
-5. Click **ADD PRE/POST EXECUTION PROCESS** to add the process to the BE.
+5. Click **ADD Pre/Post Eexecution Process** to add the process to the BE.
 6. Repeat steps 1-5 to add additional pre/post execution processes, if needed.
 
   
