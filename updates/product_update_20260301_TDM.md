@@ -13,6 +13,6 @@ TDM 9.5 has just been released and it includes the following new features/capabi
 - **TDM App modernization**, migration of major TDM App components from Angular to React.
 - **AI-based SDG improvements**.
 
-To get the full list of features and fixes, refer to the [Release Notes](/Release_Notes/TDM-V9.5/TDM_Release_Notes_V9.5.pdf.html) and [TDM Upgrade Procedure to 9.5](/articles/98_installation_and_upgrade/Upgrade_TDM/TDM_Upgrade_Procedure_to_V9.5.pdf).
+To get the full list of features and fixes, refer to the [Release Notes](https://support.k2view.com/Academy/Release_Notes/TDM-V9.5/TDM_Release_Notes_V9.5.pdf.html) and [TDM Upgrade Procedure to 9.5](https://support.k2view.com/Academy/articles/98_installation_and_upgrade/Upgrade_TDM/TDM_Upgrade_Procedure_to_V9.5.pdf).
 
 <img src="images/img.png" alt="image" style="zoom: 80%;" />
