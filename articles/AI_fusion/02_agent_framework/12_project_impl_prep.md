@@ -4,17 +4,17 @@ The following checklist guides you through building a new aifusion implementatio
 
 The implementation phase can be done on top of the [setup](11_setup_and_prerequisites.md) phase.
 
-## Data Product Setup - AI-Data Ready
+## Data Product Setup — AI-Data Ready
 
 ### Add Schema Description
 
-Schema descriptions help the LLM understand your data model and generate accurate SQL queries. You shall verify that schema descriptions exist or add them.
+Schema descriptions help the LLM understand your data model and generate accurate SQL queries. Verify that schema descriptions exist or add them.
 
 **Option A: Catalog Discovery (Recommended)**
 
-- [ ] Run catalog discovery on your source database
+- [ ] Run Catalog discovery on your source database
 - [ ] Use the LLM plugin to generate descriptions
-- [ ] Build the LU from catalog discovery results
+- [ ] Build the LU from Catalog discovery results
 
 **Option B: Manual in Fabric Studio**
 
@@ -26,15 +26,15 @@ Schema descriptions help the LLM understand your data model and generate accurat
   - Relationships to other tables
   - Business context
 
-For either of options, add also the overall LU schema description, via the Schema Properties pane.
+For either option, also add the overall LU schema description using the Schema Properties pane.
 
-> Note: Even if option A is used, you can then accomplish, tune and change it in the LU itself, as mentioned at option B
+> Note: Even if Option A is used, you can then accomplish, tune and change it in the LU itself, as described in Option B.
 
 ### Configure Domains Data
 
 You can organize a data product into *domains*, where each domain represents a logical group of tables. 
 
-This structure is especially useful for AI agents that generate SQL dynamically. When AI agents aimed to generate SQL dynamically it’s important to limit the scope to only the tables that are relevant to the user’s request. Domain-based separation enables this by allowing the agent to operate on a focused subset of the data product rather than the entire schema.
+This structure is especially useful for AI agents that dynamically generate SQL. When AI agents aimed to generate SQL dynamically it’s important to limit the scope to only the tables that are relevant to the user’s request. Domain-based separation enables this by allowing the agent to operate on a focused subset of the data product rather than the entire schema.
 
 For example, a banking data product (*customer_bank*) might be divided into domains such as *DDA* (Demand Deposit Accounts), *LOAN* (Loans and Mortgages), and *CC* (Credit Card Management). If a user asks a question related to credit cards, only the tables in the *CC* domain are included in the LLM invocation context.
 
