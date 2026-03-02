@@ -1,8 +1,8 @@
 # Project Implementation Preparation Guidelines
 
-This checklist guides you through building a new aifusion implementation from scratch. Use it to ensure that components are properly configured.
+The following checklist guides you through building a new aifusion implementation from scratch. Use it to ensure that components are properly configured.
 
-The implementation phase can be done on top [setup](11_setup_and_prerequisites.md) phase.
+The implementation phase can be done on top of the [setup](11_setup_and_prerequisites.md) phase.
 
 ## Data Product Setup - AI-Data Ready
 
