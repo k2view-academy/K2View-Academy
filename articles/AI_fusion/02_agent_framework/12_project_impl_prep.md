@@ -46,7 +46,7 @@ A good practice is to provision and maintain a domain list by creating an MTable
 * Tables
 * Goal_Description
 
-According to this list, during an agentic flow, you can use an MTable actor to lookup for a specific domain and its content, augmenting the AI context. In case you are running an external agent, this information can be exposed as tool (via API or MCP).
+According to this list, during an agentic flow, you can use an MTable actor to look up a specific domain and its content, and thus augment the AI context. In case you are running an external agent, this information can be exposed as a tool via API or MCP.
 
 
 
