@@ -34,11 +34,11 @@ For either option, also add the overall LU schema description using the Schema P
 
 You can organize a data product into *domains*, where each domain represents a logical group of tables. 
 
-This structure is especially useful for AI agents that dynamically generate SQL. When AI agents aimed to generate SQL dynamically it’s important to limit the scope to only the tables that are relevant to the user’s request. Domain-based separation enables this by allowing the agent to operate on a focused subset of the data product rather than the entire schema.
+This structure is especially useful for AI agents that dynamically generate SQL. When AI agents are intended to generate SQL dynamically, it is important to limit the scope to only the tables relevant to the user’s request. Domain-based separation enables this by allowing the agent to operate on a focused subset of the data product rather than the entire schema.
 
 For example, a banking data product (*customer_bank*) might be divided into domains such as *DDA* (Demand Deposit Accounts), *LOAN* (Loans and Mortgages), and *CC* (Credit Card Management). If a user asks a question related to credit cards, only the tables in the *CC* domain are included in the LLM invocation context.
 
-A good practice is to provision and maintain a domain list by creating an MTable at the data product LU, including the following recommended columns:
+A good practice is to provision and maintain a domain list by creating an MTable in the data product LU, including the following recommended columns:
 
 * Domain 
 * Description
