@@ -67,7 +67,7 @@ In addition to the prompt context scoping sone by the domain list, it is importa
 - [ ] Create `questions.json` in `customer_bank/Java/resources/` 
   
   > * Use *UserCode loadResource* method for consuming it.
-  > * As an alternative, you can have it is a const actor at a Broadway flow. 
+  > * As an alternative, you can have it is a const actor in a Broadway flow. 
 - [ ] Add question-SQL pairs for each domain. For example:
 
 	```json
