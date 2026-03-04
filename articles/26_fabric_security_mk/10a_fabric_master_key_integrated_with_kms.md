@@ -1,4 +1,4 @@
-# External KMS-managed Master Key
+# External KMS-Managed Master Key
 
 Fabric master key management mechanism can be integrated with external KMS, since the Fabric v6.5.9 release, as described [here](/articles/26_fabric_security/02_fabric_entities_design.md#kms).
 
