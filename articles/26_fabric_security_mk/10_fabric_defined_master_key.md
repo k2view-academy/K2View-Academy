@@ -1,4 +1,10 @@
-# Master Key Protection with KeyStore
+# Fabric-Managed Master Key
+
+Fabric Master Key Management defines how the platform generates, protects, and controls the master encryption key used to secure data encryption keys in Fabric, either through Fabric’s internal key management or through integration with an external enterprise KMS.
+
+Using the Fabric-Managed Master Key model, the Fabric platform manages the master encryption key internally. Fabric generates the master key and securely stores it within the platform environment, where it is used to protect the encryption keys that secure sensitive data stored by Fabric.
+
+This approach is appropriate for deployments where an external enterprise Key Management Service (KMS) is not required. It provides strong encryption with minimal operational complexity, as Fabric handles the lifecycle of the master key within the platform while maintaining the encryption hierarchy used to protect data at rest.
 
 
 ### Generate Master Key Without KeyStore
