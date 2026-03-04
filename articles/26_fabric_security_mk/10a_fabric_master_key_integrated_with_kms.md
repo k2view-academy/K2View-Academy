@@ -1,9 +1,11 @@
-# Fabric Master Key Integrated with External KMS
+# External KMS-managed Master Key
 
 Fabric master key management mechanism can be integrated with external KMS, since the Fabric v6.5.9 release, as described [here](/articles/26_fabric_security/02_fabric_entities_design.md#kms).
 
-To define Fabric to work with KMS, the information should first be acquired from KMS and then set in Fabric.
-> By default, Fabric uses its internal master key mechanism. 
+In this model, the Fabric Master Key is protected by an external Key Management Service (KMS) rather than being stored directly within the Fabric platform. Fabric integrates with the external KMS to obtain or unwrap the master key, which is then used within Fabric’s encryption hierarchy to protect the data encryption keys that secure sensitive data.
+
+This approach enables organizations to align Fabric deployments with enterprise security policies by centralizing key governance, audit, and lifecycle management in an external KMS such as AWS KMS, Azure Key Vault, Google Cloud KMS, or KMIP-compatible systems. By externalizing control of the master key, organizations can enforce stronger separation of duties and integrate Fabric encryption with existing enterprise key-management and compliance frameworks.
+
 
 ## Table of Contents
 
@@ -20,6 +22,9 @@ To define Fabric to work with KMS, the information should first be acquired from
 6. [Symmetric and Asymmetric Master Key Encryption Types](#symmetric-and-asymmetric-master-key-encryption-types)
 
    
+
+To define Fabric to work with KMS, the information should first be acquired from KMS and then set in Fabric.
+> By default, Fabric uses its internal master key mechanism.
 
 
 ## Integration with AWS KMS
