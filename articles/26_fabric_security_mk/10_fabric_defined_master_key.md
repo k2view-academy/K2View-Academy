@@ -6,6 +6,8 @@ Using the Fabric-Managed Master Key model, the Fabric platform manages the maste
 
 This approach is appropriate for deployments where an external enterprise Key Management Service (KMS) is not required. It provides strong encryption with minimal operational complexity, as Fabric handles the lifecycle of the master key within the platform while maintaining the encryption hierarchy used to protect data at rest.
 
+For more information about Fabric master key management, please review this [topic](/articles/26_fabric_security/02_fabric_entities_design.md#kms).
+
 
 ### Generate Master Key Without KeyStore
 
