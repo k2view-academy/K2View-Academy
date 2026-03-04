@@ -109,11 +109,11 @@ Create these standard tools for your implementation:
 
 #### Vector Database Tools
 
-- [ ] When using vector database create the tool for searching there. 
+- [ ] When using vector database, create the tool for searching there. 
 
-- [ ] In case self hosted with Fabric (SQLite or Postgres) have a tool also to load the data.
+- [ ] In case self-hosted with Fabric (SQLite or Postgres) have a tool also to load the data.
 
-  > Consider weather to run the load to vector also in QA and production deployment. You might prefer preparing it during implementation and insert it into a CSV file, already vectorized and then use it at the non dev deployments (as SQLite vector). 
+  > Consider whether to run the load to vector also in QA and production deployment. You may prefer to prepare it during implementation, insert it into a CSV file already vectorized, and then use it in non-dev deployments (as SQLite vector). 
   > This is beneficial as you can track changes at GIT and also make testing before using it. 
 
 ### Customized Tools
