@@ -137,11 +137,11 @@ When building and maintaining a tool, it is recommended to follow this checklist
 
 AI Fusion supports three types of tool calling, which you can choose from. When specifying their names, such as for a specialized sub-agent, ensure that you follow the naming conventions:
 
-* `LU__<luName>__<toolName>` - Call to to a Broadway flow (`toolName`) located at an LU (`luName`) other than aifusion, usually tools which are built at data products, as recommended. for example: `LU__customer_bank__getTransactionsByCategory`
+* `LU__<luName>__<toolName>` — calls a Broadway flow (`toolName`) located at an LU (`luName`) other than aifusion, usually tools which are built at data products, as recommended. Example: `LU__customer_bank__getTransactionsByCategory`
 
-* `<toolname>`  - Call to to a Broadway flow located at aifusion LU.
+* `<toolname>`  — calls a Broadway flow located at aifusion LU.
 
-* `MCP__<mcpInterfaceName>__<toolName>` - call to a tool via MCP protocol by an MCP connector. The interface (`mcpInterfaceName`) which is of MCP connector type, holds the MCP server information, and the tool (`toolName`) is the MCP tool name at that server.
+* `MCP__<mcpInterfaceName>__<toolName>` — calls a tool via MCP protocol by an MCP connector. The interface (`mcpInterfaceName`) which is of MCP connector type, holds the MCP server information, and the tool (`toolName`) is the MCP tool name in that server.
 
 
 
