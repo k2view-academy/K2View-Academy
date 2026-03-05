@@ -28,8 +28,7 @@ The following version information is displayed in the version's drop-down:
 
 * Version number.
 * Version creation date and time.
-* Version origin, including one of the following options:
-  * Crawler, Revert or Manual
+* Version origin, including one of the following options: Crawler, Revert or Manual.
 * List of impacted data platforms.
 
 The version origin and a list of impacted data platforms are available starting from Fabric V8.4.
