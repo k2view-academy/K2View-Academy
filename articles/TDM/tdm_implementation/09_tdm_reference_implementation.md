@@ -5,10 +5,12 @@ TDM enables users to provision tables in a TDM task. To do this, users can selec
 1. Business Entities and referential data. The included tables are related to the task's Business Entities (BEs) and are required in the testing environment.
 2. Tables — starting with TDM V9.X, the TDM provides the option to select a list of independent tables from multiple DBs that relate to the source environment, without any relation to a Business Entity. This option is useful when processing standalone tables rather than business-driven entities.
 
-Users can either store the extracted tables in Fabric for later use, or set the task retention period to **Do not retain** in order to load the tables directly into the target environment without persisting them in Fabric.
+Users can either store the extracted tables in Fabric for later use, or set the task retention period to **Do not retain** to load the tables directly into the target environment without persisting them in Fabric.
 
 Each table is stored in Fabric within the **TDM_TableLevel** LU. Each task execution stores every table as a **separate LU Instance (LUI)**, representing an independent data snapshot.
  For example, running two executions of a task that extracts the `Product_Mapping` table results in two separate LUIs in the **TDM_TableLevel** LU.
+
+ Click [here](/articles/TDM/tdm_architecture/03_task_execution_processes.md) for more information about table processing during task execution
 
 ## Tables - LUI Format 
 
