@@ -18,7 +18,7 @@ A new version is also created whenever the Catalog is manually edited.
 
 ## Version View
 
-By default, the Catalog application displays the latest available version. To view any version, open the version's drop-down list and click a version number: 
+By default, the Catalog application displays the latest available version. To switch to any earlier version, open the version's drop-down list and click a version number: 
 
 <img src="../images/versions.png" style="zoom:85%;" />
 
