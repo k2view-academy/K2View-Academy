@@ -1,14 +1,18 @@
 # K2deployer Change Log
 
+**Version 1.8.27**
+* This release incorporates the latest version of the K2cloud Helm charts
+* Includes also an operating system patch
+
 **Version 1.8.26**
-- Enhancements
-  - **Azure App Registration Support**  
+* Enhancements
+  * **Azure App Registration Support**  
     Added support for Azure App Registration integration.
-  - **Federated Credentials for Multi-Tenant Applications**  
+  * **Federated Credentials for Multi-Tenant Applications**  
     Introduced federated credential binding for multi-tenant Azure App Registrations, while preserving backward compatibility with existing logic.
 
-- Fixes
-  - **Offline Helm Chart Fix**  
+* Fixes
+  * **Offline Helm Chart Fix**  
     Resolved an issue in offline Helm deployments related to the `storage.allocated_amount` configuration parameter.
 
 **Version 1.8.25**

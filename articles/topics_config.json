@@ -409,10 +409,6 @@
 					"display name": "Concepts and Methods",
 					"value": "26_fabric_security"
 				},
-				{
-					"display name": "Capabilities",
-					"sub-topics": [
-
 						{
 							"display name": "User & Access Management",
 							"value": "26_fabric_security_iam"
@@ -422,15 +418,13 @@
 							"value": "26_fabric_security_sm"
 						},
 						{
-							"display name": "Master Key Protection",
+							"display name": "Fabric Master Key Management",
 							"value": "26_fabric_security_mk"
 						},
 						{
 							"display name": "Auditing",
 							"value": "27_auditing"
-						}					
-					]
-				},
+						},					
 				{
 					"display name": "Authorization",
 					"value": "17_fabric_credentials"
