@@ -22,7 +22,7 @@ Prior to performing the revert, the process gathers all changes between the late
 
 The revert can remove an entire data platform. For example, if CRM_DB was created in the Catalog V5 and the user chooses to revert the entire Catalog to V4, the CRM_DB will be removed from the Catalog tree. 
 
-Reverting a revert version cancels the last changes. For example, when running a revert from V4 to V3, a Revert version V5 is created. Now, running revert from V5 to V4 will created a Revert version V6. After the revert, V6 is identical to V4.
+Reverting a revert version cancels the last changes. For example, when running a revert from V4 to V3, a Revert version V5 is created. Now, running revert from V5 to V4 will created a Revert version V6 which is identical to V4.
 
 ### How Can I Initiate Revert?
 
