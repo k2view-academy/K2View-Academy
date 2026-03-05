@@ -1,4 +1,4 @@
-#  Concurrency Processing of  Table Partitions 
+#  Concurrent Processing of  Table Partitions 
 
 - Starting with **TDM 9.5** onwards, the  performance of table-level tasks has been improved by processing table partitions in parallel, significantly reducing execution time for large tables.
 
