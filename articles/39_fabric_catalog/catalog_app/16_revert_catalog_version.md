@@ -8,7 +8,7 @@ If, after user verification, these changes are deemed irrelevant or incorrect, u
 
 The Catalog allows reverting from the latest version to any earlier version. The revert can be applied to a selected data platform or the entire Catalog, generating a new version. 
 
-Reverting is available starting in Fabric V8.4.
+Reverting is available starting Fabric V8.4.
 
 ### What is Revert?
 
