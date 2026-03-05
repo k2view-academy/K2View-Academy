@@ -16,7 +16,7 @@ Reverting a Catalog version involves creating a new version using a reverted lis
 
 * If a node (e.g. table, field, property) was deleted, this node is added back.
 * If a property value was updated, the property is assigned the previous (old) value.
-* If the change was due to a manual override, this manual override becomes obsolete (expired). 
+* If the change was due to a manual override, this manual override is removed. 
 
 Prior to performing the revert, the process gathers all changes between the latest and the selected versions.  When there are no changes to revert between these versions, the revert is not performed and a new version is not created. 
 
