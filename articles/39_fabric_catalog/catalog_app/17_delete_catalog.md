@@ -11,7 +11,7 @@ During the Catalog lifecycle some data platforms may become irrelevant or obsole
 
 ### How Can I Initiate Delete?
 
-To initiate a delete, click **Actions > Delete** in the menu bar. You can choose to delete either the selected (or expanded) data platform or the entire Catalog.
+To initiate a delete, navigate to the menu bar and **Actions > Delete**. You can choose to delete either the selected (or expanded) data platform or the entire Catalog.
 
 ![revert](../images/delete_init.png)
 
