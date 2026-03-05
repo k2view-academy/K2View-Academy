@@ -147,13 +147,13 @@ AI Fusion supports three types of tool calling, which you can choose from. When 
 
 ## Worker Sub-Agents
 
-As explained in other articles like [here](04_agents_and_tools.md) and [here](04a_agentic_flow_agents.md) it is very recommended to create sub agent specified on specific topics, usually according to data product domains.
+As explained in other articles (see [here](04_agents_and_tools.md) and [here](04a_agentic_flow_agents.md)), it is highly recommended to create sub-agents focused on specific topics, usually aligned with to data product domains.
 
 
 
 ## AI Applications 
 
-An organization might have several AI based applications, aimed for different purposes and/or audiences . For example, apps for CRM, for technicians teams, and for end-customers. Some might share LUs, sub-agents and tools, while others are fully separated. 
+An organization might have several AI-based applications aimed at different purposes and/or audiences. For example, apps for CRM, for technician teams, and for end customers. Some might share LUs, sub-agents, and tools, while others are fully separated. 
 
 AI Data Fusion platform provides the ability to define several apps, so that can be managed and tested along whole lifecycle, like Chat flows and Evaluation.
 
