@@ -11,7 +11,7 @@
   - [Basic Authentication](#basic-authentication)
     - [Browser Calls Helper](#browser-calls-helper)
 - [Generating API Key](#generating-api-key)
-- [Web Service Authorization & Permissions](#web-service-authorization--permissions)
+- [Authorization & Permissions](#authorization--permissions)
 
 
 ## Authentication Methods
@@ -192,7 +192,7 @@ There are two ways to generate an API key: either through the Web Framework Admi
 
   ```text
   create token 'Secured1' SECURED;
-
+  
   |Secretkey                           |
   +------------------------------------+
   |c55a86d1-9de6-4aaa-bf9e-cedf1391c95b|
@@ -203,14 +203,14 @@ If the SECURED option has not been selected, the token name is used as the token
 
 
 
-## Web Service Authorization & Permissions 
+## Authorization & Permissions 
 
-Web service authentication is performed using a user or an API key, each of which can be assigned to roles and, accordingly, to permissions.
-
-
-Read this [article](/articles/26_fabric_security/01_fabric_security_overview.md#rbac-in-fabric) for the list of supported roles, and then click [here](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-ws_name-to-role-) to learn how to grant permissions to specific roles.
+Web service authorization is performed using the roles attached to the API call. This can be either a user or an API key, each of which can be assigned to roles, or by roles which provided in the JWT. Permissions are granted according to the attached roles.
 
 
+Read this [article](/articles/26_fabric_security/01_fabric_security_overview.md#rbac-in-fabric) for the list of supported roles, and then [here](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-ws_name-to-role-) to learn how to grant permissions to specific roles.
+
+In addition, IID-Based access control can be applied, restricting a session to a single LUI. Read [here]() for more information.
 
 
 
