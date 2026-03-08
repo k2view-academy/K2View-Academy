@@ -185,7 +185,7 @@ The apps are managed at `Implementation/LogicalUnits/aifusion/Mtable/apps.csv`, 
 
 This settings table is being used in several places:
 
-* Chat - calling to the default chat API, this information shall be provided, so that right flows and tools will used. 
+* Chat — calling the default chat API, this information should be provided in order for the correct flows and tools will used. 
 
   > At the Chat playground 
   >
@@ -196,9 +196,9 @@ This settings table is being used in several places:
 
   * On creating tests, the Evaluation Editor suggests user to create test of apps according to this list.
   * The evaluation analysis is executed for the specific app, as saved into the test case.
-  * Auto test creation capability  is using the synopsis flow info to generate test case questions.
+  * Auto test creation capability is using the synopsis flow info to generate test case questions.
 
-* Observation - information is collected with the app ID information, so that can separate dashboard widgets and views per app.  
+* Observation — information is collected with the app ID information, so that can separate dashboard widgets and views per app.  
 
 ### Configure Apps JSON
 
