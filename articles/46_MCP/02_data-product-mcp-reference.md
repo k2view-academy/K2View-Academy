@@ -6,13 +6,13 @@ This article covers the MCP protocol objects exposed by each K2view Fabric Data 
 
 ## MCP Resources
 
-Resources expose LU table metadata in **markdown format**. Use the `resources/read` method with `fabric://` URIs:
+Resources expose LU table metadata. Use the `resources/read` method with `fabric://` URIs:
 
 | Resource URI | Returns |
 |---|---|
 | `fabric://{data_product}` | Full schema metadata, includes all tables with their descriptions, columns, data types, primary keys, and constraints |
 | `fabric://{data_product}/tables` | Table list with names and descriptions |
-| `fabric://{data_product}/table/{table_name}` | Specific table metadata |
+| `fabric://{data_product}/tables/{table_name}` | Specific table metadata, following [Resource Template](https://modelcontextprotocol.io/specification/2025-03-26/server/resources#resource-templates) mechanism, including the [Completion](https://modelcontextprotocol.io/specification/2025-03-26/server/utilities/completion) capability, where Fabric returns table list options based on partial table name provided by the the client |
 
 **Example request:**
 
@@ -41,9 +41,7 @@ Content-Type: application/json
 ]
 ```
 
-Requesting a non-existent data product resource (e.g., `fabric://invalid_name`) returns a "Resource not found" error.
-
-
+Requesting a non-existent data product resource (e.g., `fabric://invalid_name`) returns a "Resource not found" error. 
 
 ## MCP Tools
 
@@ -181,6 +179,8 @@ If your Broadway flow tool requires a Fabric `GET` command to read or update the
 
 ### Built-in Prompts
 
+#### queryAssistant prompt 
+
 The built-in `queryAssistant` prompt returns a comprehensive guide for interacting with the data product. It takes no arguments. Its content is generated dynamically on the server side from the current session context (data product name and attached IID):
 
 ```json
@@ -188,10 +188,10 @@ The built-in `queryAssistant` prompt returns a comprehensive guide for interacti
 ```
 
 The `queryAssistant` prompt includes:
-- **MicroDB explanation** — How the Fabric MicroDB works (private SQLite database, data pre-scoped to the entity instance)
-- **Workflow guide** — Step-by-step instructions: (1) discover tables with `listTables`, (2) query data with `readTable` or `query`, (3) use URL query parameters to pass session variables
-- **Best practices** — When to use `readTable` vs. `query`, no need for entity ID filtering, using session variables
-- **Current context** — The data product name and instance ID
+- MicroDB explanation - How the Fabric MicroDB works (private SQLite database, data pre-scoped to the entity instance)
+- Workflow guide - Step-by-step instructions: (1) discover tables with `listTables`, (2) query data with `readTable` or `query`, (3) use URL query parameters to pass session variables
+- Best practices - When to use `readTable` vs. `query`, no need for entity ID filtering, using session variables
+- Current context - The data product name and instance ID
 
 ### Custom Prompts
 
