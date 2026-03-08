@@ -34,9 +34,9 @@ The **execution order** of the related task's components is as follows:
 
 2. Running of the post-execution processes after the execution of the LUs ends. Post-execution processes are executed according to their [execution order](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md#post-execution-processes-tab) as defined in the task's BE.
 
-The following diagram describes the main **TDM task execution process on Business Entities and referential tables**:
+The following diagram describes the main **TDM task execution process on Business Entities with and referential tables**:
 
-![task execution job](images/tdmExcuteTask_job_flow.png)
+![task execution job](images/tdmExcuteTask_job_flow_BE.png)
 
 The execution is implemented in an asynchronous mode. The **tdmExecuteTask** job starts the execution on each Batch process in an asynchronous mode, and a separate TDM job - **checkMigrateAndUpdateTDMDB** - checks and updates the execution status of each process.
 
@@ -54,9 +54,9 @@ Both jobs must be executed in parallel.
 
 
 
-The following diagram describes the main **TDM task execution process on a task with tables only**:
+The following diagram describes the main **TDM task execution process on a table-level tasks**:
 
-![task execution job](images/task_execution_flow_tables_only.png)
+![task execution job](images/tdmExecuteTask_table_level.png)
 
 
 
