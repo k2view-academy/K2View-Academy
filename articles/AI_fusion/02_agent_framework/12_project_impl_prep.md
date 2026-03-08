@@ -161,9 +161,9 @@ AI Data Fusion platform provides the ability to define several apps, so that can
 
 For each app, you should create the following flows. Their objectives and usage are described later in this article: 
 
-- [ ] The main entry point flow (the chat flow)
-- [ ] Customer Story Flow
-- [ ] Synopsis Flow
+- [ ] The main entry-point flow (the chat flow)
+- [ ] Customer Story flow
+- [ ] Synopsis flow
 
 ### Register Apps in apps.csv
 
@@ -171,7 +171,7 @@ The apps are managed at `Implementation/LogicalUnits/aifusion/Mtable/apps.csv`, 
 
 | Parameter           | Description                                                  | Example                 |
 | ------------------- | ------------------------------------------------------------ | ----------------------- |
-| app_id              | The app ID.                                                  | banking                 |
+| app_id              | The app ID                                                  | banking                 |
 | app_name            | Display name for the application                             | Banking                 |
 | chat_flow           | Name of the Broadway flow used for chat interactions         | Banking_Chat            |
 | synopsis_flow       | Broadway flow for generating customer synopses/summaries     | Banking_Synopsis        |
