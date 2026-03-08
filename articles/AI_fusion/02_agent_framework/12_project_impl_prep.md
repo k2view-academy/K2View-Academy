@@ -159,7 +159,7 @@ AI Data Fusion platform provides the ability to define several apps, so that can
 
 ### App Flows
 
-Per app, you shall create the following flows. Their objective and usage are described later on: 
+For each app, you should create the following flows. Their objectives and usage are described later in this article: 
 
 - [ ] The main entry point flow (the chat flow)
 - [ ] Customer Story Flow
