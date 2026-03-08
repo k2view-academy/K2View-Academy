@@ -196,17 +196,17 @@ This settings table is being used in several places:
 
   * On creating tests, the Evaluation Editor suggests user to create test of apps according to this list.
   * The evaluation analysis is executed for the specific app, as saved into the test case.
-  * Auto test creation capability is using the synopsis flow info to generate test case questions.
+  * The auto-test creation capability uses the synopsis flow info to generate test case questions.
 
 * Observation — information is collected with the app ID information, so that can separate dashboard widgets and views per app.  
 
 ### Configure Apps JSON
 
-Configure the *apps.json*, which is used at your project, for example and as recommended: `Implementation/LogicalUnits/k2_ws/web/apps.json` to set
+Configure the *apps.json*, which is used in your project, for example and as recommended: `Implementation/LogicalUnits/k2_ws/web/apps.json` to set
 
-* The order of sub-apps - Chat playground, Observation and Evaluation
+* The order of sub-apps — Chat playground, Observation and Evaluation
 * The app and sub-apps names
-* The active app-id of the Chat playground - change the *aifusionAppId* according  to the IDs at the apps csv
+* The active app-id of the Chat playground — change the *aifusionAppId* according to the IDs at the apps csv
 
 ```json
 {
@@ -228,5 +228,5 @@ Configure the *apps.json*, which is used at your project, for example and as rec
 
 ## Best Practices
 
-* **Cache utilization** - At LLMConst actor, locate the dynamic information of the system prompt, at the end. This will enable the usage of cache mechanism at the LLM providers, for saving input tokens. This mechanism reuses latest system prompts, where any dyanmic information breaks it 
+* **Cache utilization** — in the LLMConst actor, locate the dynamic system prompt information at the end. This will enable the usage of cache mechanism at the LLM providers, for saving input tokens. This mechanism reuses the latest system prompts, where any dyanmic information breaks it. 
 
