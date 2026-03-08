@@ -167,19 +167,19 @@ For each app, you should create the following flows. Their objectives and usage 
 
 ### Register Apps in apps.csv
 
-The apps are managed at `Implementation/LogicalUnits/aifusion/Mtable/apps.csv`, where you shall set the following, so that  AI Fusion platform apps - Chat playground, Evaluation, and Observation - can use and act upon: 
+The apps are managed at `Implementation/LogicalUnits/aifusion/Mtable/apps.csv`, where you shall set the following, so that  AI Fusion platform apps — Chat playground, Evaluation, and Observation — can use and act upon: 
 
 | Parameter           | Description                                                  | Example                 |
 | ------------------- | ------------------------------------------------------------ | ----------------------- |
 | app_id              | The app ID                                                  | banking                 |
-| app_name            | Display name for the application                             | Banking                 |
+| app_name            | Displays the name for the application                             | Banking                 |
 | chat_flow           | Name of the Broadway flow used for chat interactions         | Banking_Chat            |
 | synopsis_flow       | Broadway flow for generating customer synopses/summaries     | Banking_Synopsis        |
 | instances_flow      | Broadway flow for retrieving available instances             | customers_banking       |
-| story_flow          | Broadway flow for generating customer profile which is displayed in the Chat playground UI | Banking_CustomerProfile |
+| story_flow          | Broadway flow for generating the customer profile displayed in the Chat playground UI | Banking_CustomerProfile |
 | lu_name             | The base business entity LU (Data Product) associated with this app | customer_bank           |
-| search_instance_api | API endpoint path for searching LUIs by IID. It is used when Search User option is turned on at the Chat playground app | /lu/customer_bank/      |
-| description         | Human-readable description of the app                        | Banking App             |
+| search_instance_api | API endpoint path for searching LUIs by IID. It is used when Search User option is enabled in the Chat playground app | /lu/customer_bank/      |
+| description         | A human-readable description of the app                        | Banking App             |
 
 #### Usage
 
