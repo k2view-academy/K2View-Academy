@@ -190,7 +190,7 @@ This settings table is being used in several places:
   > At the Chat playground 
   >
   > * The client side knows to consume the app-id as defined in the Apps JSON (see below) and to send it to the API. 
-  > * The app-id value also affects on which chat playground customization files (CSS and texts) are loaded. Read [here](13_chat_playground_customize.md) for more information.
+  > * The app-id value also affects on which chat playground customization files (CSS and text) are loaded. Read [here](13_chat_playground_customize.md) for more information.
 
 * Evaluation
 
