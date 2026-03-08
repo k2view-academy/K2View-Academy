@@ -24,12 +24,36 @@ Fabric JWTs have a set of reserved internal claim keys that are always excluded 
 
 * Any JWT claim not in the list above is treated as a custom claim. 
 * Claim keys can be excluded via the `JWT_EXCLUDED_CLAIMS` configuration setting.
-* The `sessionUser` object at `UserCode`exposes the claims, allowing implementor to read them and act upon. 
 * The claims can be set at the JWT by its issuer:
   * An OAuth authorization server which provides the client the JWT that is sent to Fabric.
   * During Signed JWT generation
   * Using Fabric's `/authenticate` endpoint, where initiator can add and declare such claims
 
+### Custom Claims Usage 
+
+As described below, custom claims are used for session's IID-based access restriction as part of Fabric's core capabilities. 
+
+Beyond that, they can also be used in project implementation code by examining the values of the `sessionUser().claims()` map, available at `UserCode`.
+
+**Example:**
+
+The following web service code looks for a claim named `subStatus` and returns `true` if its value is `"VIP"`:
+
+```
+  public static boolean isVipUser() throws Exception {
+        Map<String, Object> claims = userSessionImp();
+        Object subStatus = claims.get("subStatus");
+        return "VIP".equals(subStatus);
+    }
+```
+Here is an JWT payload example that match it:
+```
+{
+  "unm":"test",
+  "apk": "test-claims",
+  "subStatus" :"VIP"
+}
+```
 
 
 
@@ -112,14 +136,7 @@ Then ensure that any JWT issued with the `customer_viewer` role includes:
 >   * "customer" is the main/leading LU and it is restricted by IID, using the claim and `READ_WITH_CLAIM` permission method. 
 >   * "orders" LU is also being used, but it is not known ahead on which order user might ask. Accordingly, `READ` permission method shall be applied and granted on "order" resource.
 >   
-> * Other claims can be used also for access restriction, on top on this, for example using [field level authorization](/articles/17_fabric_credentials/04_fields_level_authorization.md):
->   
->     * Have a [table's view](/articles/06_LU_tables/06_LU_views.md) which one of its fields retrieval's conditions is based on such claim's value. 
->   
->     * Have a [security profile]() associated to the API client's role and to that view. 
->   
->     * On client request, reading that table, the field will be retrieved according to this definitions. 
->   
+
 
 
 
