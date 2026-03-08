@@ -90,6 +90,7 @@ A single Fabric server hosts multiple MCP servers (one per deployed LU) and rout
 | **Standard (recommended)** | `/mcp/{data_product}/{iid}` | Entity ID in the URL path — most secure |
 | **IID as query parameter** | `/mcp/{data_product}?iid={iid}` | IID extracted from query param |
 | **Without IID** | `/mcp/{data_product}` | Only tools that don't require an instance will work; entity-scoped operations return errors. To associate an IID, use the `attach` command with the IID as variable |
+| **Without IID, with JWT claim** | `/mcp/{data_product}`<br>JWT claim with patten: `k2_data_product_<lu_name>: "<instance_id>"` | Fabric extracts the IID from the user’s JWT claims and set it as the MCP session IID. Read [here](/articles/26_fabric_security/06_jwt-custom-claims-and-iid-access-control.md") for more information about JWT claims |
 
 ### Discovery Endpoint
 
