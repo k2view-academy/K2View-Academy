@@ -30,11 +30,11 @@ For either option, also add the overall LU schema description using the Schema P
 
 > Note: Even if Option A is used, you can modify and fine-tune it directly in the LU, as described in Option B.
 
-### Configure Domains Data
+### Configure Domain Data
 
 You can organize a data product into *domains*, where each domain represents a logical group of tables. 
 
-This structure is especially useful for AI agents that dynamically generate SQL. When AI agents are intended to generate SQL dynamically, it is important to limit the scope to only the tables relevant to the user’s request. Domain-based separation enables this by allowing the agent to operate on a focused subset of the data product rather than the entire schema.
+This structure is especially useful for AI agents that dynamically generate SQL. When AI agents are intended to generate SQL dynamically, it is important to limit the scope to only the tables relevant to the user’s request. Domain-based separation enables this intention by allowing the agent to operate on a focused subset of the data product rather than the entire schema.
 
 For example, a banking data product (*customer_bank*) might be divided into domains such as *DDA* (Demand Deposit Accounts), *LOAN* (Loans and Mortgages), and *CC* (Credit Card Management). If a user asks a question related to credit cards, only the tables in the *CC* domain are included in the LLM invocation context.
 
@@ -54,15 +54,15 @@ Here is an example:
 
 | Domain | Description            | Rules                                                        | Tables                                                       | Goal_Description                                             |
 | ------ | ---------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| DDA    | Deposit Demand Account | If information about the customer's savings and current accounts is required | DDA_TRANSACTIONS, DDA_OVERDRAFTS, DDA_FEES, DDA_ACH_Transfers, DDA_ACCOUNTS, DDA_BRANCHES, DDA_Virtual_Accounts | gather data regarding the customer DDA accounts, including account types, balance, limits, overdraft transactions,  Fees, ACH transfers, virtual accounts, DDA transactions. Information about the DDA accounts is found in tables that their name start with DDA_. The main table is called DDA_Accounts and it includes all the accounts this customer has. All the accounts in this table belong to the customer that is chatting with you. |
-| LOAN   | Loan and Mortgage      | If information about the customer's loans and mortgages is required | Loan_Escrow_Transactions, Loan_Interest_Transactions, Loan_Servicer_Changes, Loan_Covenant_Reviews, Loan_Payments, Loan_Interest_Rates, Loan_Accounts | gather data regarding the customer Loans including the loan terms, payments, interest transactions, escrow transaction, servicer changes and covenant reports. Note that a customer can have multiple loans, each with a different loan_account_id, but all of them related to the customer you are chatting with. |
-| CC     | Credit Card Management | If information about the customer's credit card is required  | CCMS_Credit_Cards, CCMS_Credit_Card_Statements, CCMS_Credit_Card_Transactions, CCMS_Credit_Card_Payments | gather data regarding the customer credit cards, transactions, statements and payments. |
+| DDA    | Deposit Demand Account | If information about the customer's savings and current accounts is required | DDA_TRANSACTIONS, DDA_OVERDRAFTS, DDA_FEES, DDA_ACH_Transfers, DDA_ACCOUNTS, DDA_BRANCHES, DDA_Virtual_Accounts | Gather data regarding the customer's DDA accounts, including account types, balances, limits, overdraft transactions,  Fees, ACH transfers, virtual accounts, DDA transactions. Information about the DDA accounts is found in tables that their name start with DDA_. The main table is called DDA_Accounts and it includes all accounts held by this customer. All accounts in this table belong to the customer currently interacting with you. |
+| LOAN   | Loan and Mortgage      | If information about the customer's loans and mortgages is required | Loan_Escrow_Transactions, Loan_Interest_Transactions, Loan_Servicer_Changes, Loan_Covenant_Reviews, Loan_Payments, Loan_Interest_Rates, Loan_Accounts | Gather data regarding the customer's loans, including loan terms, payments, interest transactions, escrow transactions, servicer changes, and covenant reports. Note that a customer can have multiple loans, each identified by a unique loan_account_id, all linked to the customer currently interacting with you. |
+| CC     | Credit Card Management | If information about the customer's credit cards is required  | CCMS_Credit_Cards, CCMS_Credit_Card_Statements, CCMS_Credit_Card_Transactions, CCMS_Credit_Card_Payments | Gather data regarding the customer's credit cards, transactions, bank statements, and payments. |
 
 ### Create Sample Questions and SQL Queries
 
-Sample questions help the LLM generate accurate SQL for data retrieval.
+Sample questions help the LLM generate accurate SQL queries for data retrieval.
 
-In addition to the prompt context scoping sone by the domain list, it is important to provide, per domain, set of examples of user questions and SQL queries that can answer to them. 
+In addition to prompt context scoping defined by the domain list, it is important to provide, for each domain, a set of example user questions along with the corresponding SQL queries that can answer them. 
 
 - [ ] Create `questions.json` in `customer_bank/Java/resources/` 
   
@@ -92,19 +92,19 @@ In addition to the prompt context scoping sone by the domain list, it is importa
 
 
 
-## Tools Configuration
+## Tool Configuration
 
 ### Create Core Tools
 
-Create these standard tools for your implementation:
+Create the following standard tools for your implementation:
 
 #### Domain Description Tool
 
-- [ ] Create or update a `<describeDomain>.flow`.
-- [ ] Input: Have the domain as input parameter
-- [ ] Output: 
-  - [ ] The specific domain's info from the domains MTable (name, description, rules, tables, goals)
-  - [ ] Schema description (you can use *LLMSchema* actor)
+- [ ] Create a `<describeDomain>.flow` or update an existing one.
+- [ ] Input: Use the domain as input parameter
+- [ ] Output includes: 
+  - [ ] The specific domain's information from the domain's MTable (name, description, rules, tables, goals)
+  - [ ] Schema description (you can use the *LLMSchema* actor)
   - [ ] Sample Questions and SQL Queries
 
 #### Vector Database Tools
