@@ -1,4 +1,4 @@
-# Data Product MCP Server — Operations Guide
+# Data Product MCP Server - Operations Guide
 
 This article covers security, configuration, observability, runtime behavior, and error handling for K2view Fabric MCP servers.
 
