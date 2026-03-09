@@ -189,24 +189,24 @@ The above table is used in several places:
 
   > In the Chat Playground 
   >
-  > * The client side knows to consume the app-id as defined in the Apps JSON (see below) and to send it to the API. 
-  > * The app-id value also affects on which chat playground customization files (CSS and text) are loaded. Read [here](13_chat_playground_customize.md) for more information.
+  > * The client side uses the app-id as defined in the Apps JSON (see below) and sends it to the API. 
+  > * The app-id value also affects which Chat Playground customization files (CSS and text) are loaded. Read [here](13_chat_playground_customize.md) for more information.
 
 * Evaluation
 
-  * On creating tests, the Evaluation Editor suggests user to create test of apps according to this list.
-  * The evaluation analysis is executed for the specific app, as saved into the test case.
-  * The auto-test creation capability uses the synopsis flow info to generate test case questions.
+  * When creating tests, the Evaluation Editor offers the user to create tests for apps that appear in the CSV file.
+  * Evaluation analysis is performed on the specific app saved in the test case.
+  * The auto-test creation capability uses the synopsis flow data to generate test case questions.
 
-* Observation — information is collected with the app ID information, so that can separate dashboard widgets and views per app.  
+* Observation — information is collected with the app ID, allowing dashboard widgets and views to be separated for each app.  
 
-### Configure Apps JSON
+### Configure the Apps JSON File
 
-Configure the *apps.json*, which is used in your project, for example and as recommended: `Implementation/LogicalUnits/k2_ws/web/apps.json` to set
+Configure the *apps.json* file used in your project. It is recommended to locate the apps JSON in the WS LU (`Implementation/LogicalUnits/k2_ws/web/apps.json`).
 
 * The order of sub-apps — Chat playground, Observation and Evaluation
 * The app and sub-apps names
-* The active app-id of the Chat playground — change the *aifusionAppId* according to the IDs at the apps csv
+* The active app-id of the Chat Playground — change the *aifusionAppId* according to the IDs that appear in the apps csv file.
 
 ```json
 {
@@ -222,11 +222,11 @@ Configure the *apps.json*, which is used in your project, for example and as rec
 
 
 
-- [ ] Verify that you at least one app entry at the apps csv
+- [ ] Verify that there is at least one app entry in the apps.csv file.
 
 
 
 ## Best Practices
 
-* **Cache utilization** — in the LLMConst actor, locate the dynamic system prompt information at the end. This will enable the usage of cache mechanism at the LLM providers, for saving input tokens. This mechanism reuses the latest system prompts, where any dyanmic information breaks it. 
+* **Cache utilization** — in the LLMConst actor, locate the dynamic system prompt information at the end. This allows LLM providers to use their cache mechanism for storing input tokens. This mechanism reuses the latest system prompts; however, any dynamic information will break it. 
 
