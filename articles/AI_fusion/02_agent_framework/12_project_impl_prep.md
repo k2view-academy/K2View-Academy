@@ -206,7 +206,7 @@ Configure the *apps.json* file used in your project. It is recommended to locate
 
 * The order of sub-apps — Chat playground, Observation and Evaluation
 * The app and sub-apps names
-* The active app-id of the Chat Playground — change the *aifusionAppId* according to the IDs that appear in the apps csv file.
+* The active app-id of the Chat Playground — change the *aifusionAppId* according to the IDs that appear in the apps.csv file.
 
 ```json
 {
