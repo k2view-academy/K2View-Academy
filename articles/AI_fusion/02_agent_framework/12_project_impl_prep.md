@@ -155,7 +155,7 @@ As explained in other articles (see [here](04_agents_and_tools.md) and [here](04
 
 An organization might have several AI-based applications aimed at different purposes and/or audiences. For example, apps for CRM, for technician teams, and for end customers. Some apps may share LUs, sub-agents, and tools, while others may not. 
 
-AI Data Fusion platform provides the ability to define several apps, so that can be managed and tested along whole lifecycle, like Chat flows and Evaluation.
+The AI Data Fusion framework allows you to define multiple applications, enabling them to be managed and tested throughout their entire lifecycle, including their Chat flows and Evaluation.
 
 ### App Flows
 
@@ -165,29 +165,29 @@ For each app, you should create the following flows. Their objectives and usage 
 - [ ] Customer Story flow
 - [ ] Synopsis flow
 
-### Register Apps in apps.csv
+### Register Apps in the apps.csv File
 
-The apps are managed at `Implementation/LogicalUnits/aifusion/Mtable/apps.csv`, where you shall set the following, so that  AI Fusion platform apps — Chat playground, Evaluation, and Observation — can use and act upon: 
+The apps are managed in the `Implementation/LogicalUnits/aifusion/Mtable/apps.csv` file, where you should set the following parameters. This will enable the AI Fusion platform apps to use these parameters and operate accordingly: 
 
 | Parameter           | Description                                                  | Example                 |
 | ------------------- | ------------------------------------------------------------ | ----------------------- |
 | app_id              | The app ID                                                  | banking                 |
-| app_name            | Displays the name for the application                             | Banking                 |
+| app_name            | Displays the name of the application                             | Banking                 |
 | chat_flow           | Name of the Broadway flow used for chat interactions         | Banking_Chat            |
 | synopsis_flow       | Broadway flow for generating customer synopses/summaries     | Banking_Synopsis        |
 | instances_flow      | Broadway flow for retrieving available instances             | customers_banking       |
-| story_flow          | Broadway flow for generating the customer profile displayed in the Chat playground UI | Banking_CustomerProfile |
+| story_flow          | Broadway flow for generating the customer profile displayed in the Chat Playground UI | Banking_CustomerProfile |
 | lu_name             | The base business entity LU (Data Product) associated with this app | customer_bank           |
-| search_instance_api | API endpoint path for searching LUIs by IID. It is used when Search User option is enabled in the Chat playground app | /lu/customer_bank/      |
+| search_instance_api | API endpoint path for searching LUIs by IID. It is used when Search User option is enabled in the Chat Playground app | /lu/customer_bank/      |
 | description         | A human-readable description of the app                        | Banking App             |
 
 #### Usage
 
-This settings table is being used in several places:
+The above table is used in several places:
 
-* Chat — calling the default chat API, this information should be provided in order for the correct flows and tools will used. 
+* Chat — calls the default chat API; this information should be provided in order for the appropriate flows and tools to be used. 
 
-  > At the Chat playground 
+  > In the Chat Playground 
   >
   > * The client side knows to consume the app-id as defined in the Apps JSON (see below) and to send it to the API. 
   > * The app-id value also affects on which chat playground customization files (CSS and text) are loaded. Read [here](13_chat_playground_customize.md) for more information.
