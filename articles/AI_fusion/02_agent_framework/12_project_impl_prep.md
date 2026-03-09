@@ -109,11 +109,11 @@ Create the following standard tools for your implementation:
 
 #### Vector Database Tools
 
-- [ ] When using vector database, create the tool for searching there. 
+- [ ] When using vector database, create a tool for searching it. 
 
-- [ ] In case self-hosted with Fabric (SQLite or Postgres) have a tool also to load the data.
+- [ ] In case the vector database is self-hosted with Fabric (SQLite or Postgres), implement an additional tool for loading the data.
 
-  > Consider whether to run the load to vector also in QA and production deployment. You may prefer to prepare it during implementation, insert it into a CSV file already vectorized, and then use it in non-dev deployments (as SQLite vector). 
+  > Consider whether to run the vector load process in QA and production deployments as well. You may prefer to take action during implementation: Store the content in a CSV file that is already vectorized, and then use that file in non-Studio deployments (as an SQLite vector database). 
   > This approach is beneficial as it allows you to track changes in GIT and well as perform testing before using it. 
 
 ### Customized Tools
@@ -135,7 +135,7 @@ When building and maintaining a tool, it is recommended to follow this checklist
 
 #### Tool Calling
 
-AI Fusion supports three types of tool calling, which you can choose from. When specifying their names, such as for a specialized sub-agent, ensure that you follow the naming conventions:
+The AI Fusion framework supports three types of tool calling, which you can choose from. When specifying their names, such as for a specialized sub-agent, ensure that you follow the naming conventions:
 
 * `LU__<luName>__<toolName>` — calls a Broadway flow (`toolName`) located at an LU (`luName`) other than aifusion, usually tools which are built at data products, as recommended. Example: `LU__customer_bank__getTransactionsByCategory`
 
