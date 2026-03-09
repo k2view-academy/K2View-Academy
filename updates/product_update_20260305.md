@@ -1,6 +1,7 @@
 ### The Fabric 8.4.0 Official Release
 
-We are excited to announce the release of Fabric 8.4.0, which introduces significant enhancements to Fabric, Catalog and Web Studio, highlighted by the built-in support for MCP (Model Context Protocol). The release highlights are:
+We are excited to announce the release of Fabric 8.4.0, which introduces significant enhancements to Fabric, Catalog and Web Studio, highlighted by the built-in support for MCP (Model Context Protocol). 
+The release highlights are:
 
 * **MCP Server Support**: Fabric now automatically exposes each Logical Unit (LU) and Data Product as an MCP server, providing built-in resources and tools for AI integration.
 * The **Catalog** enhancements include among others the following new features:
