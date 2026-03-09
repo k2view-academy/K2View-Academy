@@ -17,16 +17,52 @@ Since each Logical Unit Instance (LUI) represents a specific business entity (e.
 
 ### Key Concepts
 
-| Fabric Concept | MCP Mapping | Description |
-|---|---|---|
-| Logical Unit (LU/LUT) | MCP Server | The data product definition becomes the server |
-| LU Tables | MCP Resources | Table metadata exposed as readable resources (markdown format) |
-| Broadway Flows (tagged `mcp-tool`) | MCP Tools | Flows tagged with `mcp-tool` become callable tools |
-| Broadway Flows (tagged `mcp-prompt`) | MCP Prompts | Flows tagged with `mcp-prompt` become callable prompts |
-| Built-in Operations | MCP Tools | query, readTable, describeTables, listTables, attach |
-| Prompts | MCP Prompts | Predefined prompts (e.g., `queryAssistant`) |
-| LUI (entity instance) | MCP Session Scope | Each session is scoped to a specific LU + entity ID |
-
+<table>
+  <thead>
+    <tr>
+      <th>Fabric Concept</th>
+      <th>MCP Mapping</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Logical Unit (LU/LUT)</td>
+      <td>MCP Server</td>
+      <td>The data product definition becomes the server</td>
+    </tr>
+    <tr>
+      <td>LU Tables</td>
+      <td>MCP Resources</td>
+      <td>Table metadata exposed as readable resources (markdown format)</td>
+    </tr>
+    <tr>
+      <td>Broadway Flows (tagged <code>mcp-tool</code>)</td>
+      <td>MCP Tools</td>
+      <td>Flows tagged with <code>mcp-tool</code> become callable tools</td>
+    </tr>
+    <tr>
+      <td>Broadway Flows (tagged <code>mcp-prompt</code>)</td>
+      <td>MCP Prompts</td>
+      <td>Flows tagged with <code>mcp-prompt</code> become callable prompts</td>
+    </tr>
+    <tr>
+      <td>Built-in Operations</td>
+      <td>MCP Tools</td>
+      <td>query, readTable, describeTables, listTables, attach</td>
+    </tr>
+    <tr>
+      <td>Prompts</td>
+      <td>MCP Prompts</td>
+      <td>Predefined prompts (e.g., <code>queryAssistant</code>)</td>
+    </tr>
+    <tr>
+      <td>LUI (entity instance)</td>
+      <td>MCP Session Scope</td>
+      <td>Each session is scoped to a specific LU + entity ID</td>
+    </tr>
+  </tbody>
+</table>
 
 
 ## How It Works
@@ -85,12 +121,37 @@ A single Fabric server hosts multiple MCP servers (one per deployed LU) and rout
 
 #### Alternative Access Modes
 
-| Mode | URL Pattern | Notes |
-|---|---|---|
-| **Standard (recommended)** | `/mcp/{data_product}/{iid}` | Entity ID in the URL path — most secure |
-| **IID as query parameter** | `/mcp/{data_product}?iid={iid}` | IID extracted from query param |
-| **Without IID** | `/mcp/{data_product}` | Only tools that don't require an instance will work; entity-scoped operations return errors. To associate an IID, use the `attach` command with the IID as variable |
-| **Without IID, with JWT claim** | `/mcp/{data_product}`<br>JWT claim with patten: `k2_data_product_<lu_name>: "<instance_id>"` | Fabric extracts the IID from the user’s JWT claims and set it as the MCP session IID. Read [here](/articles/26_fabric_security/06_jwt-custom-claims-and-iid-access-control.md") for more information about JWT claims |
+<table>
+  <thead>
+    <tr>
+      <th>Mode</th>
+      <th>URL Pattern</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Standard (recommended)</strong></td>
+      <td><code>/mcp/{data_product}/{iid}</code></td>
+      <td>Entity ID in the URL path — most secure</td>
+    </tr>
+    <tr>
+      <td><strong>IID as query parameter</strong></td>
+      <td><code>/mcp/{data_product}?iid={iid}</code></td>
+      <td>IID extracted from query param</td>
+    </tr>
+    <tr>
+      <td><strong>Without IID</strong></td>
+      <td><code>/mcp/{data_product}</code></td>
+      <td>Only tools that don't require an instance will work; entity-scoped operations return errors. To associate an IID, use the <code>attach</code> command with the IID as variable</td>
+    </tr>
+    <tr>
+      <td><strong>Without IID, with JWT claim</strong></td>
+      <td><code>/mcp/{data_product}</code><br>JWT claim with patten: <code>k2_data_product_{lu_name}: "{instance_id}"</code></td>
+      <td>Fabric extracts the IID from the user’s JWT claims and set it as the MCP session IID. Read <a href="/articles/26_fabric_security/06_jwt-custom-claims-and-iid-access-control.md">here</a> for more information about JWT claims</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Discovery Endpoint
 

@@ -8,11 +8,28 @@ This article covers the MCP protocol objects exposed by each K2view Fabric Data 
 
 Resources expose LU table metadata. Use the `resources/read` method with `fabric://` URIs:
 
-| Resource URI | Returns |
-|---|---|
-| `fabric://{data_product}` | Full schema metadata, includes all tables with their descriptions, columns, data types, primary keys, and constraints |
-| `fabric://{data_product}/tables` | Table list with names and descriptions |
-| `fabric://{data_product}/tables/{table_name}` | Specific table metadata, following [Resource Template](https://modelcontextprotocol.io/specification/2025-03-26/server/resources#resource-templates) mechanism, including the [Completion](https://modelcontextprotocol.io/specification/2025-03-26/server/utilities/completion) capability, where Fabric returns table list options based on partial table name provided by the the client |
+<table>
+  <thead>
+    <tr>
+      <th>Resource URI</th>
+      <th>Returns</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>fabric://{data_product}</code></td>
+      <td>Full schema metadata, includes all tables with their descriptions, columns, data types, primary keys, and constraints</td>
+    </tr>
+    <tr>
+      <td><code>fabric://{data_product}/tables</code></td>
+      <td>Table list with names and descriptions</td>
+    </tr>
+    <tr>
+      <td><code>fabric://{data_product}/tables/{table_name}</code></td>
+        <td>Specific table metadata, following <a href="https://modelcontextprotocol.io/specification/2025-03-26/server/resources#resource-templates">Resource Template</a> mechanism, including the <a href="https://modelcontextprotocol.io/specification/2025-03-26/server/utilities/completion">Completion</a> capability, where Fabric returns table list options based on partial table name provided by the the client</td>
+    </tr>
+  </tbody>
+</table>
 
 **Example request:**
 
@@ -53,10 +70,24 @@ Every data product MCP server includes the following built-in tools:
 
 Execute custom SQL queries against the entity's MicroDB.
 
-| Parameter | Type | Required | Description |
-|---|---|---|---|
-| `sqlQuery` | string | Yes | SQL query to execute against the LU |
-
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>sqlQuery</code></td>
+      <td>string</td>
+      <td>Yes</td>
+      <td>SQL query to execute against the LU</td>
+    </tr>
+  </tbody>
+</table>
 ```json
 {"name": "query", "arguments": {"sqlQuery": "SELECT * FROM TAX_PAYMENTS"}}
 ```
@@ -67,13 +98,42 @@ Returns a JSON array of result rows. Returns an error message for syntax errors,
 
 Read rows from a specific table with optional filtering.
 
-| Parameter | Type | Required | Description |
-|---|---|---|---|
-| `tableName` | string | Yes | Name of the table to read from |
-| `whereClause` | string | No | SQL WHERE condition (without the `WHERE` keyword) |
-| `fields` | string | No | Comma-separated list of fields to select (default: `*`) |
-| `limit` | integer | No | Maximum number of rows to return (default: 1000, 0 for unlimited) |
-
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>tableName</code></td>
+      <td>string</td>
+      <td>Yes</td>
+      <td>Name of the table to read from</td>
+    </tr>
+    <tr>
+      <td><code>whereClause</code></td>
+      <td>string</td>
+      <td>No</td>
+      <td>SQL WHERE condition (without the <code>WHERE</code> keyword)</td>
+    </tr>
+    <tr>
+      <td><code>fields</code></td>
+      <td>string</td>
+      <td>No</td>
+      <td>Comma-separated list of fields to select (default: <code>*</code>)</td>
+    </tr>
+    <tr>
+      <td><code>limit</code></td>
+      <td>integer</td>
+      <td>No</td>
+      <td>Maximum number of rows to return (default: 1000, 0 for unlimited)</td>
+    </tr>
+  </tbody>
+</table>
 ```json
 {"name": "readTable", "arguments": {"tableName": "ORDERS", "whereClause": "status='ACTIVE'", "fields": "order_id,amount", "limit": 100}}
 ```
@@ -82,11 +142,30 @@ Read rows from a specific table with optional filtering.
 
 Describe table columns in the data product. At least one parameter must be provided.
 
-| Parameter | Type | Required | Description |
-|---|---|---|---|
-| `pattern` | string | No | Pattern with `%` wildcard to filter tables (e.g., `customer%`) |
-| `tables` | string | No | Comma-separated list of explicit table names |
-
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>pattern</code></td>
+      <td>string</td>
+      <td>No</td>
+      <td>Pattern with <code>%</code> wildcard to filter tables (e.g., <code>customer%</code>)</td>
+    </tr>
+    <tr>
+      <td><code>tables</code></td>
+      <td>string</td>
+      <td>No</td>
+      <td>Comma-separated list of explicit table names</td>
+    </tr>
+  </tbody>
+</table>
 ```json
 {"name": "describeTables", "arguments": {"pattern": "CCMS%"}}
 ```
@@ -103,10 +182,24 @@ Get a list of all tables with their names and descriptions. No parameters requir
 
 Attach to a specific entity instance for subsequent data operations. When a URL already contains an IID, the URL IID takes precedence.
 
-| Parameter | Type | Required | Description |
-|---|---|---|---|
-| `iid` | string | Yes | Instance ID to attach to |
-
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>iid</code></td>
+      <td>string</td>
+      <td>Yes</td>
+      <td>Instance ID to attach to</td>
+    </tr>
+  </tbody>
+</table>
 ```json
 {"name": "attach", "arguments": {"iid": "1"}}
 ```

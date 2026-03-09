@@ -40,12 +40,32 @@ Because each MCP session is scoped to a specific LU and IID, data isolation is e
 
 MCP server behavior can be controlled via `config.ini` settings:
 
-| Setting | Description | Default |
-|---|---|---|
-| `ENABLE_MCP_SERVLET` | Enable or disable MCP servlet creation. When set to `false`, no MCP servers are created on Fabric startup. | `true` |
-| `MCP_SESSION_CACHE_SIZE` | Maximum number of active MCP sessions held in cache. When exceeded, oldest sessions are evicted (cause: SIZE). | `10000` |
-| `MCP_SESSION_EXPIRATION_MINUTES` | Session expiration time in minutes. Idle sessions are automatically removed after this period (cause: EXPIRED). | `30` |
-
+<table>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ENABLE_MCP_SERVLET</code></td>
+      <td>Enable or disable MCP servlet creation. When set to <code>false</code>, no MCP servers are created on Fabric startup.</td>
+      <td><code>true</code></td>
+    </tr>
+    <tr>
+      <td><code>MCP_SESSION_CACHE_SIZE</code></td>
+      <td>Maximum number of active MCP sessions held in cache. When exceeded, oldest sessions are evicted (cause: SIZE).</td>
+      <td><code>10000</code></td>
+    </tr>
+    <tr>
+      <td><code>MCP_SESSION_EXPIRATION_MINUTES</code></td>
+      <td>Session expiration time in minutes. Idle sessions are automatically removed after this period (cause: EXPIRED).</td>
+      <td><code>30</code></td>
+    </tr>
+  </tbody>
+</table>
 Changes to these settings require a Fabric restart to take effect.
 
 
@@ -56,17 +76,42 @@ Fabric provides observability for MCP server activity.
 
 ### Statistics (JMX)
 
-MCP activity is tracked via JMX statistics:
+MCP activity is tracked via JMX statistics:	
 
-| Metric | Description |
-|---|---|
-| `mcpActiveSessions` | Number of active MCP sessions |
-| `mcpSessionDuration` | Duration of MCP sessions |
-| `mcpToolCalls` | Duration and count of MCP tool invocations |
-| `mcpToolErrors` | Count of failed MCP tool invocations |
-| `mcpResourceReads` | Duration and count of MCP resource reads |
-| `mcpPromptRequests` | Duration and count of MCP prompt requests |
-
+<table>
+  <thead>
+    <tr>
+      <th>Metric</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>mcpActiveSessions</code></td>
+      <td>Number of active MCP sessions</td>
+    </tr>
+    <tr>
+      <td><code>mcpSessionDuration</code></td>
+      <td>Duration of MCP sessions</td>
+    </tr>
+    <tr>
+      <td><code>mcpToolCalls</code></td>
+      <td>Duration and count of MCP tool invocations</td>
+    </tr>
+    <tr>
+      <td><code>mcpToolErrors</code></td>
+      <td>Count of failed MCP tool invocations</td>
+    </tr>
+    <tr>
+      <td><code>mcpResourceReads</code></td>
+      <td>Duration and count of MCP resource reads</td>
+    </tr>
+    <tr>
+      <td><code>mcpPromptRequests</code></td>
+      <td>Duration and count of MCP prompt requests</td>
+    </tr>
+  </tbody>
+</table>
 
 
 ## MCP Runtime Behavior
@@ -75,10 +120,22 @@ MCP activity is tracked via JMX statistics:
 
 Fabric's MCP server sends standard MCP protocol notifications to connected clients when server state changes. Clients will receive these automatically and react accordingly (e.g., refreshing the tool list).
 
-| Notification | When sent | Client behavior |
-|---|---|---|
-| `notifications/tools/list_changed` | When Broadway tools are added or removed during LU redeployment | Client should re-fetch `tools/list` |
-
+<table>
+  <thead>
+    <tr>
+      <th>Notification</th>
+      <th>When sent</th>
+      <th>Client behavior</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>notifications/tools/list_changed</code></td>
+      <td>When Broadway tools are added or removed during LU redeployment</td>
+      <td>Client should re-fetch <code>tools/list</code></td>
+    </tr>
+  </tbody>
+</table>
 Notifications are only sent for tools. Prompt and resource change notifications are intentionally disabled, so that prompt changes on redeployment are not broadcast to connected clients.
 
 The `tools/list_changed` capability is declared in the server's MCP capabilities on initialization, so compliant clients know to expect it. When an LU is redeployed and tagged Broadway flows change, every `addTool` or `removeTool` operation on an active session triggers this notification to all connected clients.
@@ -93,27 +150,74 @@ MCP separates errors into two layers: **transport-level errors** (HTTP status co
 
 Transport-level errors indicate that the request did not reach the MCP tool logic. These are returned as standard HTTP error codes with no JSON-RPC body.
 
-| Scenario | HTTP Response |
-|---|---|
-| No authentication token provided | 401 Unauthorized |
-| Invalid or expired token | 401 Unauthorized |
-| Unknown or unauthorized data product | 403 Forbidden |
-| Insufficient permissions | 403 Forbidden |
-| No MCP server registered for the data product | 404 Not Found |
-| Malformed JSON-RPC request | 400 Bad Request |
-
+<table>
+  <thead>
+    <tr>
+      <th>Scenario</th>
+      <th>HTTP Response</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>No authentication token provided</td>
+      <td>401 Unauthorized</td>
+    </tr>
+    <tr>
+      <td>Invalid or expired token</td>
+      <td>401 Unauthorized</td>
+    </tr>
+    <tr>
+      <td>Unknown or unauthorized data product</td>
+      <td>403 Forbidden</td>
+    </tr>
+    <tr>
+      <td>Insufficient permissions</td>
+      <td>403 Forbidden</td>
+    </tr>
+    <tr>
+      <td>No MCP server registered for the data product</td>
+      <td>404 Not Found</td>
+    </tr>
+    <tr>
+      <td>Malformed JSON-RPC request</td>
+      <td>400 Bad Request</td>
+    </tr>
+  </tbody>
+</table>
 ### Application-Level Errors
 
 Application-level errors occur when the HTTP request is valid and the MCP server successfully processes it, but the tool execution itself fails. These always return **HTTP 200 OK** with a JSON-RPC response containing `isError: true`.
 
-| Scenario | Error Message |
-|---|---|
-| Non-existent tool name | `Unknown tool: {tool_name}` |
-| Invalid or missing tool arguments | `Error: {param} parameter is required`, or error with validation details |
-| SQL syntax error | `Error executing SQL query: [SQLITE_ERROR] ...` |
-| No instance in context | `Error: No instance in context` |
-| Non-existent resource URI | `Resource not found` |
-
+<table>
+  <thead>
+    <tr>
+      <th>Scenario</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Non-existent tool name</td>
+      <td><code>Unknown tool: {tool_name}</code></td>
+    </tr>
+    <tr>
+      <td>Invalid or missing tool arguments</td>
+      <td><code>Error: {param} parameter is required</code>, or error with validation details</td>
+    </tr>
+    <tr>
+      <td>SQL syntax error</td>
+      <td><code>Error executing SQL query: [SQLITE_ERROR] ...</code></td>
+    </tr>
+    <tr>
+      <td>No instance in context</td>
+      <td><code>Error: No instance in context</code></td>
+    </tr>
+    <tr>
+      <td>Non-existent resource URI</td>
+      <td><code>Resource not found</code></td>
+    </tr>
+  </tbody>
+</table>
 **Example:** Application-Level Error Response (HTTP 200 OK):
 
 ```json
