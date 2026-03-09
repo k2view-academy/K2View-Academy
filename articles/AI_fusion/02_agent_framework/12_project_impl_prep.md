@@ -137,9 +137,9 @@ When building and maintaining a tool, it is recommended to follow this checklist
 
 The AI Fusion framework supports three types of tool calling, which you can choose from. When specifying their names, such as for a specialized sub-agent, ensure that you follow the naming conventions:
 
-* `LU__<luName>__<toolName>` — calls a Broadway flow (`toolName`) located in an LU (`luName`) rather than in the aifusion LU. As recommended, this tool calling type is usually built inside data products. Example: `LU__customer_bank__getTransactionsByCategory`
-
 * `<toolname>`  — calls a Broadway flow located in the aifusion LU.
+
+* `LU__<luName>__<toolName>` — calls a Broadway flow (`toolName`) located in an LU (`luName`) rather than in the aifusion LU. As recommended, this tool calling type is usually built inside data products. Example: `LU__customer_bank__getTransactionsByCategory`
 
 * `MCP__<mcpInterfaceName>__<toolName>` — calls a tool via the MCP protocol using an MCP connector. The interface (`mcpInterfaceName`), which is of MCP connector type, stores the MCP connection details, and `toolName` is the MCP tool name defined on that server.
 
@@ -153,7 +153,7 @@ As explained in other articles (see [here](04_agents_and_tools.md) and [here](04
 
 ## AI Applications 
 
-An organization might have several AI-based applications aimed at different purposes and/or audiences. For example, apps for CRM, for technician teams, and for end customers. Some might share LUs, sub-agents, and tools, while others are fully separated. 
+An organization might have several AI-based applications aimed at different purposes and/or audiences. For example, apps for CRM, for technician teams, and for end customers. Some apps may share LUs, sub-agents, and tools, while others may not. 
 
 AI Data Fusion platform provides the ability to define several apps, so that can be managed and tested along whole lifecycle, like Chat flows and Evaluation.
 
