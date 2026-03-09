@@ -12,16 +12,44 @@ Fabric extends its JWT-based session tokens to support custom (non-standard) cla
 
 Fabric JWTs have a set of reserved internal claim keys that are always excluded from the custom claims mechanism:
 
-| Claim key  | Meaning                  |
-| ---------- | ------------------------ |
-| `unm`      | Username                 |
-| `bgr`      | Roles/groups             |
-| `apk`      | API key                  |
-| `authname` | Authenticator name       |
-| `authtype` | Authentication type      |
-| `authtime` | Authentication timestamp |
-| `kid`      | OAuth2 key ID            |
-
+<table>
+  <thead>
+    <tr>
+      <th>Claim key</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>unm</code></td>
+      <td>Username</td>
+    </tr>
+    <tr>
+      <td><code>bgr</code></td>
+      <td>Roles/groups</td>
+    </tr>
+    <tr>
+      <td><code>apk</code></td>
+      <td>API key</td>
+    </tr>
+    <tr>
+      <td><code>authname</code></td>
+      <td>Authenticator name</td>
+    </tr>
+    <tr>
+      <td><code>authtype</code></td>
+      <td>Authentication type</td>
+    </tr>
+    <tr>
+      <td><code>authtime</code></td>
+      <td>Authentication timestamp</td>
+    </tr>
+    <tr>
+      <td><code>kid</code></td>
+      <td>OAuth2 key ID</td>
+    </tr>
+  </tbody>
+</table>
 * Any JWT claim not in the list above is treated as a custom claim. 
 * Claim keys can be excluded via the `JWT_EXCLUDED_CLAIMS` configuration setting.
 * The claims can be set at the JWT by its issuer:
@@ -63,13 +91,37 @@ The `POST /authenticate` endpoint accepts an optional `claims` JSON parameter. W
 
 **Endpoint:** `POST /authenticate`
 
-| Parameter  | Type         | Description                                      |
-|------------|--------------|--------------------------------------------------|
-| `username` | String       | Fabric username                                  |
-| `password` | String       | Fabric password                                  |
-| `apikey`   | String       | API key (alternative to username/password)       |
-| `claims`   | JSON object  | Custom claims to embed in the resulting JWT      |
-
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>username</code></td>
+      <td>String</td>
+      <td>Fabric username</td>
+    </tr>
+    <tr>
+      <td><code>password</code></td>
+      <td>String</td>
+      <td>Fabric password</td>
+    </tr>
+    <tr>
+      <td><code>apikey</code></td>
+      <td>String</td>
+      <td>API key (alternative to username/password)</td>
+    </tr>
+    <tr>
+      <td><code>claims</code></td>
+      <td>JSON object</td>
+      <td>Custom claims to embed in the resulting JWT</td>
+    </tr>
+  </tbody>
+</table>
 **Example request:**
 
 ```http
@@ -101,29 +153,16 @@ Content-Type: application/json
 
 A new Fabric permission, `READ_WITH_CLAIM`, enables **claim-gated instance access**. When a role carries this permission on a Logical Unit, Fabric verifies that the user's JWT contains a matching claim before allowing access to any instance of that LU.
 
-The claim format is:
-```
-k2_data_product_<lu_name>: "<instance_id>"
-```
+The claim format is: `k2_data_product_<lu_name>: "<instance_id>"`
 
-For example, if the LU is named `Customer`, the expected claim is:
-```json
-"k2_data_product_customer": "12345"
-```
-
-This ties the JWT bearer to instance `12345` of the `Customer` LU. Any attempt to read a different instance fails.
+For example, if the LU is named `Customer`, the expected claim is: `"k2_data_product_customer": "12345"`. This ties the JWT bearer to instance `12345` of the `Customer` LU. Any attempt to read a different instance fails.
 
 ### Setting up the permission
 
-To grant READ_WITH_CLAIM permission method on a specific LU (.e.g. "customer") to a role (e.g. "customer_viewer"), use the GRANT permission command, for example:
-```sql
-GRANT READ_WITH_CLAIM ON customer TO customer_viewer;
-```
+To grant READ_WITH_CLAIM permission method on a specific LU (.e.g. "customer") to a role (e.g. "customer_viewer"), use the GRANT permission command, for example: `GRANT READ_WITH_CLAIM ON customer TO customer_viewer;`
 
-Then ensure that any JWT issued with the `customer_viewer` role includes:
-```json
-"k2_data_product_customer": "<their_instance_id>"
-```
+Then ensure that  JWT includes this claim: `"k2_data_product_customer": "<instance_id>"`
+
 
 
 
