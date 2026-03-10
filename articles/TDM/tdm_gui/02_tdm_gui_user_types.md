@@ -60,7 +60,7 @@ The user groups are defined in the organization's service provider and must be d
 
 Our assumption is a **one-to-one relation between a Fabric role and a user group in the organization's service provider**.
 
-[Click for more information about Fabric's User Identification and Access Management](/articles/26_fabric_security/07_user_IAM_overview.md).
+[Click for more information about Fabric's User Identification and Access Management](/articles/26_fabric_security_iam/07_user_IAM_overview.md).
 
 The mapping of each Fabric role to a TDM Permission Group is done by the [Permission Groups Mapping](02a_permission_group_mapping_window.md) TDM window and is kept in the [permission_groups_mapping TDM DB table](/articles/TDM/tdm_architecture/02_tdm_database.md#permission_groups_mapping).
 
