@@ -15,14 +15,15 @@ The following fields have been added to the **TableLevelDefinitions** MTable to 
 - **partition_flow_inputs** - Defines the input parameters passed to the partition flows. Must be populated with a valid JSON object in the following format:
 
     ```json
-    {"param_name": "param_value"}
+    {"param_name1": "param_value1", "param_name2": "param_value2"}
     ```
     
-    **Example:**
+    **Examples:**
     
     ```json
     {"columnName": "ALLERGY_ID"}
     ```
+    If the partition flow has input parameters, the entire JSON is passed to the **flowInputs** external parameter. The partition flow can then use the relevant parameters from this JSON.
 
 ## TableLevelDefinitionsInterfacesTypesDefaults MTable
 
