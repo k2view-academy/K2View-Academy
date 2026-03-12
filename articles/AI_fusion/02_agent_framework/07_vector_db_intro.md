@@ -1,0 +1,36 @@
+# Vector Database and RAG — Introduction
+
+While business-entity-oriented data is retrieved from Fabric, a Retrieval-Augmented Generation (RAG) mechanism is applied for non-personal data such as organizational unstructured content (for example, agreements, procedures, and knowledge bases). 
+
+At its core, RAG is built upon two critical pillars: **indexing** and **retrieval**. While **indexing** prepares organizational documents for machine understanding by transforming raw documents into searchable vectors, **retrieval** ensures the agent can pinpoint the exact context needed within milliseconds during an active workflow.
+
+
+
+## The Three Models of Implementation
+
+When deciding how and where to store data and implement these pillars, organizations typically choose between three models, ranging from full control to full automation.
+
+1. **RAG-as-a-Service** (fully managed)
+   - **The approach**: The service provider — one of the major cloud providers — encapsulates the entire process, automating synchronization between the data source and the vector store in order to remove the need for manual pipeline maintenance. You provide the files; the service provides the answers. 
+   - **Why choose this**: This model offers the fastest path to production and is ideal for teams seeking a fully automated, hands-off pipeline; the service manages parsing, chunking, and embedding. 
+     It is suitable for large-scale datasets and high query volumes.
+   - **Examples**: Amazon Bedrock Knowledge Bases, Vertex AI Search.
+2. **Purpose-built, dedicated vector databases** (managed storage)
+   - **The approach**: The database infrastructure is managed, but the organization remains responsible for the indexing process — the pipeline that reads, chunks, and embeds the files.
+   - **Why choose this**: This model combines high-performance indexing and hybrid search of billions of vectors with sub-second latency. Overall, it offers full architectural control while eliminating server maintenance.
+   - **Examples**: Pinecone, Weaviate, Milvus, Qdrant.
+3. **Traditional databases with vector extensions** (non-managed)
+
+   
+   - **The approach:** Vector search is implemented as an extension to an existing relational database. Vectors are stored alongside structured data and accessed via standard SQL.
+   - **Why choose this**: This model offers operational simplicity the ability to keep the data locally within your own controlled infrastructure.
+   - **Examples**: SQLite + `vec0`, PostgreSQL + `pgvector`.
+
+
+
+## Which Approach to Use and When
+
+No single option is optimal for all scenarios.
+
+- For large collections, high query volumes, or strict performance requirements, managed vector databases or fully managed vector services are often the better fit.
+- For small to medium datasets, and where databases with vector extensions or native vector support are already in use, enabling vector functionality within such databases can be a natural and efficient choice.
