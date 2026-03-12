@@ -6,7 +6,7 @@ The installment of a K2exchange connector adds a dedicated TableLevelDefinitions
 
 **Example — TableLevelDefinitions___mongodb**:
 
-![mongo example](C:\Users\TaliEinhorn\OneDrive - K2View\Documents\K2View-Academy\articles\TDM\tdm_implementation\images\mongo_tableleveldefinitions.png) 
+![mongo example](images/mongo_tableleveldefinitions.png) 
 
 
 
