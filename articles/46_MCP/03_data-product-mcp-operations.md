@@ -51,7 +51,7 @@ MCP server behavior can be controlled via `config.ini` settings:
   <tbody>
     <tr>
       <td><code>ENABLE_MCP_SERVLET</code></td>
-      <td>Enable or disable MCP servlet creation. When set to <code>false</code>, no MCP servers are created on Fabric startup.</td>
+      <td>Enable or disable the MCP capability. When set to <code>false</code>, no MCP servers are created or exposed.</td>
       <td><code>true</code></td>
     </tr>
     <tr>
