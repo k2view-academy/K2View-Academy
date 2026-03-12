@@ -1,9 +1,9 @@
-# Creating Your First Test
+# Creating a Test
 
 ## Accessing the Evaluation Interface
 
 1. Open your web browser
-2. Navigate to: `/app/aifusion/evaluation/`
+2. Navigate to: `/static/aifusion/evaluation`
 3. You'll see the Evaluation Dashboard with three main areas:
    - **Left panel**: Test suite tree (your collections of tests)
    - **Center panel**: Test creation and details
@@ -167,13 +167,6 @@ Specify what type of customer to simulate.
 
 **Leave blank** for neutral persona.
 
-#### Language
-Select the language for the conversation.
-- English (default)
-- Spanish
-- French
-- Other configured languages
-
 #### Max Steps
 How many question/answer turns to generate (default: 15).
 
@@ -223,53 +216,6 @@ You can edit the generated conversation:
 The system auto-generates a name, but you can rename it to something more descriptive.
 
 Click **Save** to add it to your test suite.
-
----
-
-## Bulk Auto-Generation
-
-Need many tests quickly? You can generate multiple tests at once.
-
-### When to Use Bulk Generation
-
-- Building initial test coverage (generate 20-50 tests)
-- Regression testing (diverse scenarios)
-- Exploring edge cases
-- Stress testing
-
-### How to Bulk Generate
-
-1. Navigate to test creation
-2. Select **"Bulk Auto-Generate"**
-3. Configure:
-   - **Number of tests**: How many to generate (e.g., 20)
-   - **Application**: Which agent
-   - **Customer ID**: Which customer data
-   - **Suite Name**: Where to save
-   - **Focus Area** (optional): Topic to emphasize
-   - **Persona** (optional): Customer type
-
-4. Click **"Generate"**
-5. System generates all tests in the background
-6. Review results when complete
-
-### Reviewing Bulk-Generated Tests
-
-After bulk generation:
-
-1. Browse through all generated tests
-2. Run a few to see quality
-3. **Keep** tests that:
-   - Cover unique scenarios
-   - Are realistic
-   - Test important functionality
-
-4. **Remove** tests that:
-   - Duplicate existing tests
-   - Are unrealistic
-   - Test trivial scenarios
-
-**Rule of thumb:** Generate 20, keep the best 10-12.
 
 ---
 
@@ -341,4 +287,4 @@ Now that you've created your first test, you're ready to:
 2. **Create more tests** - Build coverage of different scenarios
 3. **Organize tests** - Group related tests into suites (see article: Organizing Test Suites)
 
-**Next Article:** [Running Tests and Understanding Results](./03-running-tests-and-results.md)
+**Next Article:** [Running Tests and Understanding Results](./04-running-tests-and-results.md)

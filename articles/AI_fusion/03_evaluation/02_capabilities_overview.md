@@ -1,14 +1,12 @@
 # Capabilities Overview
 
-This article covers what the Evaluation Framework can do. 
-
 
 
 ## Test Creation
 
-* **Easily create tests using a chat experience** - Creating a test feels like having a conversation - you interact with the agent through a chat interface similar your customers use, and save the result as a test case.
+* **Create tests through a chat experience** - Creating a test feels like having a conversation - you interact with the agent through a chat interface similar your customers use, and save the result as a test case.
 
-* **Manual and AI-assisted** - Create tests by writing your own questions and expected answers, or let the AI Copilot generate realistic multi-turn conversations automatically. The Copilot can run a full conversation on autopilot, simulate specific customer personas (confused, tech-savvy, frustrated), focus on topics you choose (billing, loans, account inquiries), and work in multiple languages.
+* **Manual and AI-assisted** - Create tests by writing your own questions and expected answers, or let the AI Copilot generate realistic multi-turn conversations automatically. The Copilot can run a full conversation on autopilot, simulate specific customer personas (confused, tech-savvy, frustrated), and focus on topics you choose (billing, loans, account inquiries).
 
 * **Multi-turn conversations** - Tests support multiple question-answer turns, validating that the agent maintains context, handles follow-ups correctly, and provides consistent information across the conversation.
 
@@ -39,7 +37,7 @@ This article covers what the Evaluation Framework can do.
 
 
 
-## Tests Management
+## Test Management
 
 * **Reusable and iterative** - Saved tests are not static. Load any test case, examine it as a live chat, edit questions or expected answers, continue the conversation with additional turns, or duplicate it as a starting point for a new test.
 
@@ -80,3 +78,4 @@ This article covers what the Evaluation Framework can do.
 ## Production Integration
 
 **Import production conversations** - Bring real conversations from production into the evaluation workspace. Evaluate them against quality criteria, and optionally save them as new test cases. This bridges the gap between production monitoring and design-time testing.
+

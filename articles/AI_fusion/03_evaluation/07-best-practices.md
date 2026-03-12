@@ -753,7 +753,8 @@ You've got this! 🎯
 
 ## Related Articles
 
-- [Introduction to Evaluation](./01-introduction-to-evaluation.md) - Why testing matters
+- [Why Evaluate Your AI Agent](./00-why-evaluate-your-ai-agent.md) - Why testing matters
+- [Capabilities Overview](./01-capabilities-overview.md) - What the framework can do
 - [Creating Your First Test](./02-creating-your-first-test.md) - Get started
 - [Understanding Quality Criteria](./03-understanding-quality-criteria.md) - Set standards
 - [Running Tests and Results](./04-running-tests-and-results.md) - Execute and interpret

@@ -8,7 +8,7 @@
 
 **Steps:**
 
-1. **Navigate** to the Evaluation interface (`/app/aifusion/evaluation/`)
+1. **Navigate** to the Evaluation interface (`/static/aifusion/evaluation`)
 
 2. **Browse** the test suite tree in the left panel
 
@@ -36,7 +36,7 @@
 
 1. **Navigate** to the Pipeline menu in your K2view Fabric interface
 
-2. **Select:** `GenAITesting.evaluatorPipeline`
+2. **Select:** `aifusion.evaluatorPipeline`
 
 3. **Execute** the pipeline
 
@@ -419,7 +419,7 @@ Run same test with different customer IDs:
 - Color-coded results
 - Interactive exploration
 
-**URL format:** `/app/aifusion/evaluation/?sessionid=<session-id>`
+**URL format:** `/static/aifusion/evaluation/?sessionid=<session-id>`
 
 ### Method 2: Via Results History
 
@@ -430,10 +430,9 @@ Run same test with different customer IDs:
 
 ### Method 3: Export Results
 
-- Download results as CSV or PDF
-- Share with stakeholders
-- Archive for compliance
-- Analyze in Excel
+- Export test cases as JSON
+- Export test cases with data snapshots as ZIP
+- Share with stakeholders or import into other environments
 
 ---
 

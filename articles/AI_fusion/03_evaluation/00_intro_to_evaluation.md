@@ -1,65 +1,164 @@
 # AI Fusion Evaluation Framework Introduction
 
-The AI Fusion Evaluation Framework is an automated quality assurance system for your AI agents. It lets you define what "good" looks like for your agent's responses, run tests against real customer data, and get scored, explainable results, all through a web interface that requires no coding or technical skills.
+## Overview
 
-This framework is built for anyone responsible for AI agent quality, including QA teams, business analysts, customer service managers, domain experts, and product managers who need measurable, business-aligned evaluation of agent performance.
+The **AI Fusion Evaluation Framework** provides a structured way to test, measure, and continuously improve the quality of AI agents and conversational applications.
 
+Unlike traditional software, AI systems are **non-deterministic**. The same prompt may produce slightly different responses, model versions change frequently, and agentic flows may involve multiple LLM calls, classifications, and reasoning steps. This creates new quality risks that traditional testing approaches cannot handle.
 
+The Evaluation Framework enables QA teams, domain experts, and product teams to **systematically test AI agents using realistic conversations**, score the results across multiple quality dimensions, and detect regressions before changes reach production.
 
-## Why AI Agents Need a Different Kind of Testing
-
-Traditional software gives the same output every time for the same input. AI agents don't. They generate natural-language responses that can vary in wording, structure, and completeness,  even when answering the same question twice.
-
-**Manual spot-checking doesn't scale.** A person can review a handful of conversations a day. Reviewers are inconsistent. There's no systematic record of what was checked or against what standard.
-
-**Standard automation tests miss the point.** Traditional tests check for exact string matches. But a balance inquiry might return "Your balance is $1,234.56" or "You currently have $1,234.56 in your checking account" - both correct, both different. Rule-based checks can't evaluate whether a response is complete, well-organized, or actually answers what was asked.
-
-**What's needed** is a system that understands the *meaning* of a response, scores quality across multiple dimensions, explains why a score was given, and runs consistently at scale. That is what this framework provides.
+The entire workflow is accessible through a **web-based interface**, allowing both technical and non-technical users to create tests, execute evaluations, and analyze results.
 
 
 
-## Objectives
+## Why AI Agents Require a Different Testing Approach
 
-1. **Ensure quality before customers see it** - catch accuracy problems, incomplete answers, and tone issues in a controlled environment rather than in production.
+Traditional software testing assumes deterministic behavior: the same input always produces the same output.
 
-2. **Measure quality across multiple dimensions** - a response can be correct but confusing, or clearly written but off-topic. The framework scores Accuracy, Relevance, Clarity, and Politeness independently, plus any custom criteria you define.
+AI agents behave differently:
 
-3. **Provide explainable, actionable results** - every score comes with a written explanation: "The response correctly identified the account but omitted the balance amount." This makes it clear what to fix.
+- **Responses are generated dynamically**, not retrieved from predefined logic.
+- **Different models or model versions** may produce different answers.
+- **Agentic workflows** often involve multiple reasoning steps and tool calls.
+- **Prompt changes** can significantly affect outcomes.
 
-4. **Enable continuous monitoring** - run the same tests on a schedule, track scores over time, and spot regressions early.
+As a result, traditional testing methods fall short.
 
-5. **Make testing accessible to business users** - the entire workflow happens through a web interface. Domain experts can create and manage tests without writing code.
+### Manual review does not scale
+
+Human reviewers can inspect only a limited number of conversations, results may be subjective, and findings are difficult to track systematically.
+
+### Exact-match testing is ineffective
+
+Rule-based tests compare responses as exact strings. AI responses, however, may vary in wording while still being correct.
+
+For example:
+
+- "Your balance is $1,234.56."
+- "You currently have $1,234.56 in your checking account."
+
+Both answers are correct, but traditional tests would treat them as different.
+
+### What is needed instead
+
+AI systems must be evaluated based on **meaning and quality**, not just text matching.
+
+The Evaluation Framework addresses this by:
+
+- Running **realistic conversational test scenarios**
+- Evaluating responses across **multiple quality dimensions**
+- Using **LLM-as-a-Judge evaluation** to assess meaning and correctness
+- Providing **explainable scoring and detailed analysis**
+- Enabling **regression testing as agents evolve**
+
+This allows organizations to **build trust and confidence in their GenAI applications**.
 
 
 
-## How It Works
+## Objectives of the Evaluation Framework
 
-### Step 1: Define test conversations
+The framework is designed to help organizations adopt AI safely and effectively.
 
-Create test cases with questions a customer would ask, expected answers describing what a good response should include (the **ground truth**), and quality criteria with minimum score thresholds. Tests use real customer data for realistic scenarios.
+### Validate AI quality before deployment
 
-### Step 2: Execute the tests
+Test conversations in a controlled environment and detect issues such as:
 
-The framework sends each question to your AI agent and collects its responses, exactly as if a real customer were chatting. By this, you can test the entire application end-to-end.
+- incorrect answers
+- incomplete information
+- poor conversational tone
+- inconsistent multi-turn responses
 
-### Step 3: Evaluate with an AI judge
+before customers encounter them.
 
-A separate AI evaluator reviews each response against the expected answer and scores it on every quality dimension you selected - a numeric score (1-5) plus a written explanation for each. This is the **LLM-as-a-Judge** approach: more nuanced than rule-based checking because the evaluator understands meaning, not just keywords.
+### Measure quality across multiple dimensions
 
-### Step 4: Review results and act
+A response may be factually correct but unclear, or polite but irrelevant.
 
-Results appear in the Pipeline web interface app,with pass/fail status, per-criterion score breakdowns, color-coded conversation views, and detailed explanations for every score.
+The framework evaluates responses across dimensions such as:
+
+- Accuracy  
+- Relevance  
+- Clarity  
+- Politeness  
+
+Organizations can also define **custom evaluation dimensions** aligned with their business needs.
+
+### Enable explainable evaluation
+
+Each score includes an explanation describing why the response passed or failed, helping teams understand exactly what needs improvement.
+
+### Support regression testing for AI systems
+
+As prompts, models, or agent flows evolve, the same test suites can be re-executed to ensure that quality does not regress.
+
+### Enable collaboration between QA and business teams
+
+Tests are created and managed through a **chat-based interface**, making them accessible to:
+
+- QA teams
+- business analysts
+- customer service experts
+- product managers
+- domain specialists
+
+
+
+## How the Evaluation Framework Works
+
+The evaluation process follows a structured workflow.
+
+### Step 1: Create test conversations
+
+Users create **test cases representing realistic user interactions**.
+
+A test case includes:
+
+- a conversation scenario (single or multi-turn)
+- expected answers (**ground truth**)
+- evaluation criteria and thresholds
+
+Tests can be created manually or generated using AI assistance.
+
+### Step 2: Execute evaluations
+
+During execution, the framework runs the conversation against the AI agent exactly as a real user would.
+
+This enables **end-to-end testing of the entire application**, including agent reasoning and tool usage.
+
+Tests can be executed individually or as part of **regression suites**.
+
+### Step 3: Evaluate responses using an AI judge
+
+A separate LLM evaluates each response against the expected answer using the **LLM-as-a-Judge** approach.
+
+For each response it produces:
+
+- a **numeric score** per evaluation dimension
+- a **written explanation** describing the reasoning
+
+This allows evaluation based on **semantic correctness rather than exact wording**.
+
+### Step 4: Analyze results
+
+Results are presented in the evaluation interface with:
+
+- pass/fail status
+- per-dimension scores
+- conversation-level breakdown
+- detailed explanations
+
+Teams can investigate failures, refine prompts or agents, and re-run tests to validate improvements.
 
 
 
 ## Terminology
 
-| Concept              | Definition                                                   |
-| -------------------- | ------------------------------------------------------------ |
-| **Test Case**        | A conversation scenario with questions, expected answers, and quality criteria |
-| **Test Suite**       | A named collection of related test cases                     |
-| **Ground Truth**     | The expected answers that define what a correct response looks like |
-| **Quality Criteria** | The dimensions used to score responses (Accuracy, Relevance, Clarity, Politeness, or custom) |
-| **Threshold**        | The minimum acceptable score for a criterion, enforced as MIN (per-response) or AVERAGE (across conversation) |
-| **Evaluator**        | The AI judge that scores agent responses against expected answers |
-
+| Concept                  | Definition                                                   |
+| ------------------------ | ------------------------------------------------------------ |
+| **Test Case**            | A conversational scenario with questions, expected answers, and evaluation criteria |
+| **Test Suite**           | A collection of related test cases used for regression testing |
+| **Ground Truth**         | The expected answer describing what a correct response should contain |
+| **Evaluation Dimension** | A quality criterion used to score responses (e.g., Accuracy, Clarity) |
+| **Threshold**            | Minimum score required for a dimension                       |
+| **Evaluator**            | The AI judge that scores responses against the ground truth  |
