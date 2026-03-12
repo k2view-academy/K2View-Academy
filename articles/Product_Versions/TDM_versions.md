@@ -1,6 +1,6 @@
 # TDM Versions Table
 
-The below table displays the various TDM versions, each with its compatible Fabric and certified 3rd parties versions. Please consult with us in regards to the latest available and compatible Fabric version. However, concerning the Cassandra and Postgres versions, they may be upgraded when a backward compatibility is supported. 
+The table below displays the various TDM versions, each with its compatible Fabric and certified 3rd parties versions. Please consult with us in regards to the latest available and compatible Fabric version. However, concerning the Cassandra and Postgres versions, they may be upgraded when backward compatibility is supported. 
 
 <table>
     <thead>
@@ -14,7 +14,16 @@ The below table displays the various TDM versions, each with its compatible Fabr
             <th>Postgres Version</th>
         </tr>
     </thead>
-    <tbody>  
+    <tbody>
+        <tr>
+            <td align="left"><a href="/Release_Notes/TDM-V9.5/TDM_Release_Notes_V9.5.1.pdf">9.5.1</a></td>
+            <td>Mar 12, 2026</td>
+            <td></td>
+            <td>8.4.0</td>
+            <td>4.1.8</td>
+            <td>N/A</td>
+            <td>17.5</td>
+        </tr>
         <tr>
             <td align="left"><a href="/Release_Notes/TDM-V9.5/TDM_Release_Notes_V9.5.pdf">9.5.0</a></td>
             <td>Mar 01, 2026</td>
