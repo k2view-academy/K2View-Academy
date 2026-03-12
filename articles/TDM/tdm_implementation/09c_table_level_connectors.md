@@ -2,7 +2,7 @@
 
 ## Update TableLevelDefinitions MTable 
 
-The installment of a K2exchange connector adds a dedicated TableLevelDefinitions file for the connector. 
+Installing a K2exchange connector adds a dedicated TableLevelDefinitions file for the connector. 
 
 **Example — TableLevelDefinitions___mongodb**:
 
