@@ -110,8 +110,16 @@
 			"topics": [
 				{
 					"display name": "GenAI Fusion Overview",
-					"value": "AI_fusion"
-				}
+					"value": "AI_fusion/01_overview"
+				},
+				{
+					"display name": ">Agent Builder and Framework",
+					"value": "AI_fusion/02_agent_framework"
+				},
+				{
+					"display name": "Evaluation Framework",
+					"value": "AI_fusion/03_evaluation"
+				}				
 			]
 		},
 		{
