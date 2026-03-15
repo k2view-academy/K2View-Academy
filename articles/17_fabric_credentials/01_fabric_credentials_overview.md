@@ -103,7 +103,7 @@ Roles are assigned with many or all of the following permissions:
 <p><strong>SET_ENVIRONMENT / SET_GLOBAL_ENVIRONMENT / SET_GLOBAL_GLOBAL</strong></p>
 </td>
 <td width="600pxl">
-<p>Used for setting the environment or Globals for the current session onto which a role is defined/p>
+<p>Used for setting the environment or Globals for the current session onto which a role is defined</p>
 </td></tr>
 <tr>
 <td width="300pxl">
@@ -242,6 +242,5 @@ By default, Fabric creates the **admin** user as the initial superuser when it i
 
 - There is no need to provide a password on **adminInitialCredentials** file when the users are maintained outside of Fabric (when the **READ_ONLY_AUTHENTICATORS** parameter in the config.ini is set to true).
 
-  
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/17_fabric_credentials/09_fabric_replace_admin_password.md)

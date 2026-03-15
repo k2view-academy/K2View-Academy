@@ -16,18 +16,18 @@ For example, the following image shows that the user navigated to **Admin > Proc
   * Tasks, Job and Batches, displays running processes. Set the filter to show a list of processes that are currently active, or run today, 3 days ago, etc. To start a job or a batch, select the LU name and set the relevant parameters.
 
 * **Objects**, display various Project level objects such as:
-  
+
   * Interfaces, displayed with their connection status.
   * List of [CommonDB reference tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md). To initiate a sync of the reference tables, select either the LU or a specific table.
   * List of the implementation LU objects with the option to download their implementation's zip.
   * List of [Environments](/articles/25_environments/01_environments_overview.md) and their active status, as well as the option to switch to another environment.
-  
+
 * **Security**, manage a user's access control and restrictions via the [Fabric credentials mechanism](/articles/17_fabric_credentials/01_fabric_credentials_overview.md):
   * Roles, view existing roles and create new roles.
   * Permissions, grant access to a role on a resource or revoke it.
   * Users, view existing users, delete or create new users, assign roles to users or revoke them.
   * API Keys, view existing security tokens, generate new ones, assign roles to API keys, remove or delete them.
-  
+
 * **Commands**, write and execute one or more existing Fabric commands. 
 
   * Write the command in the command line. Click the command in the list to display its description and usage.
@@ -37,7 +37,7 @@ For example, the following image shows that the user navigated to **Admin > Proc
   * Click ![image](images/30_03_icon.PNG) to add a line to run several commands. 
 
     <img src="images/30_03_3.PNG" alt="image"  />
-    
+
   * Click Execute to run the commands.
 
 * **Terminal,** bringing fabric console experience to a web application. 
@@ -48,7 +48,7 @@ For example, the following image shows that the user navigated to **Admin > Proc
    * Indication of a parameters' change, which requires a restart via the GUI.
    * View hidden parameters.
    * Revert to default option.
-   * A new role permission was added, called SET_GLOBAL_CONFIG_OVERRIDES, to allow only authorized users to override the configuration parameter.
+   * A new role permission was added, called `SET_GLOBAL_CONFIG_OVERRIDES`, to allow only authorized users to override the configuration parameter. Note that you also need to grant the `SET_GLOBAL_GLOBAL` permission to complete the parameter's override.
 
   ![configuration](./images/configuration.png)
 
