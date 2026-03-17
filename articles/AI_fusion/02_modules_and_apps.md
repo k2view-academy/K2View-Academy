@@ -75,10 +75,3 @@ These extensions add all utilities required to implement GenAI agents and run re
 This database collects agents' functionality, token usage, and other metrics during agent sessions. SQLite (for development) and PostgreSQL databases are supported out-of-the-box. The Metrics database tables are created automatically during aifusion LU deployment. For more information, see [here]().
 
 
-
-## Next Steps
-
-- 
-- [Agent Framework: Core Components](/articles/AI_fusion/02_agent_framework/02_core_components.md)
-- [Building Agentic Workflow](/articles/AI_fusion/05_examples/01_agent_workflow_example.md) 
-
