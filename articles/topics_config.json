@@ -110,7 +110,7 @@
 			"topics": [
 				{
 					"display name": "GenAI Fusion Overview",
-					"value": "AI_fusion/01_overview"
+					"value": "AI_fusion"
 				},
 				{
 					"display name": "Agent Builder and Framework",
@@ -119,7 +119,7 @@
 				{
 					"display name": "Evaluation Framework",
 					"value": "AI_fusion/03_evaluation"
-				}				
+				}
 			]
 		},
 		{
@@ -265,7 +265,7 @@
 							"display name": "Web Services",
 							"value": "15_web_services_and_graphit"
 						},
-												{
+						{
 							"display name": "MCP",
 							"value": "46_MCP"
 						},
@@ -307,7 +307,7 @@
 				{
 					"display name": "Fabric Monitoring",
 					"value": "34_JMX_statistics"
-				}				
+				}
 			]
 		},
 		{
@@ -373,7 +373,7 @@
 						{
 							"display name": "Fabric on a Linux Host",
 							"value": "98_installation_and_upgrade/Install_on_Linux"
-						},			
+						},
 						{
 							"display name": "Fabric on Kubernetes",
 							"value": "98_installation_and_upgrade/Install_on_Kubernetes"
@@ -381,13 +381,12 @@
 						{
 							"display name": "TDM Installation",
 							"value": "98_installation_and_upgrade/Install_TDM"
-						}					
+						}
 					]
 				},
 				{
 					"display name": "Upgrade",
 					"sub-topics": [
-
 						{
 							"display name": "Upgrade Fabric",
 							"value": "98_installation_and_upgrade/Upgrade_Fabric"
@@ -399,9 +398,9 @@
 						{
 							"display name": "Upgrade a Fabric Kubernetes Space",
 							"value": "98_installation_and_upgrade/Upgrade"
-						}					
+						}
 					]
-				},				
+				},
 				{
 					"display name": "Software Maintenance and Support",
 					"value": "98_installation_and_upgrade/Maintenance"
@@ -417,22 +416,22 @@
 					"display name": "Concepts and Methods",
 					"value": "26_fabric_security"
 				},
-						{
-							"display name": "User & Access Management",
-							"value": "26_fabric_security_iam"
-						},
-						{
-							"display name": "Secret Manager Integration",
-							"value": "26_fabric_security_sm"
-						},
-						{
-							"display name": "Fabric Master Key Management",
-							"value": "26_fabric_security_mk"
-						},
-						{
-							"display name": "Auditing",
-							"value": "27_auditing"
-						},					
+				{
+					"display name": "User & Access Management",
+					"value": "26_fabric_security_iam"
+				},
+				{
+					"display name": "Secret Manager Integration",
+					"value": "26_fabric_security_sm"
+				},
+				{
+					"display name": "Fabric Master Key Management",
+					"value": "26_fabric_security_mk"
+				},
+				{
+					"display name": "Auditing",
+					"value": "27_auditing"
+				},
 				{
 					"display name": "Authorization",
 					"value": "17_fabric_credentials"
