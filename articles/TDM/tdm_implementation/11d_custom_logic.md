@@ -19,10 +19,10 @@ TDM supports **two execution modes** for running Custom Logic flows: **Direct Ca
 
 ## Custom Logic Flow — Implementation Steps
 
-1. Create the Custom Logic Broadway flow.
-2. Add the flow to **CustomLogicFlows** Actor.
-
-
+1. [Create the Custom Logic Broadway flow](#1-create-the-custom-logic-flow).
+2. [Register the flow in *Implementation/SharedObjects/Broadway/TDM/TDMImplementorActors/CustomLogicFlows* Actor](#2-add-the-flow-to-customlogicflows-actor).
+3. Re-deploy the TDM project to Fabric.
+4. The custom logic flow is now available for selection when defining an entity subset in a [TDM task](/articles/TDM/tdm_gui/15a_entity_subset.md#predefined-custom-logic).
 
 ## 1. Create the Custom Logic Flow
 
@@ -169,9 +169,9 @@ The CustomLogicSql flow runs in a **direct call** mode.
 
 ## 2. Add the Flow to **CustomLogicFlows** Actor
 
-Add the LU name and Custom Logic flow name to the **CustomLogicFlows** constTable TDM Actor (imported from the TDM library).
+Add the LU name and Custom Logic flow name to the **Implementation/SharedObjects/Broadway/TDM/TDMImplementorActors/CustomLogicFlows** constTable TDM Actor (imported from the TDM library).
 
-View the below example:
+View the example below:
 
 ![custom logic](images/custom_logic_table_example.png)
 
@@ -179,7 +179,7 @@ View the below example:
 
 Check the **DIRECT_FLOW** checkbox to enable Direct Call of the Custom Logic flow.
 
-Redeploy the Web Services.
+Then redeploy the Web Services.
 
 
 
