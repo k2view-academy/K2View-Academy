@@ -130,7 +130,7 @@ Defining Broadway flows or Actors for customized data generation logic is possib
 
 ### Customized Data Generators - Supporting [Data Consistency Using Seed](/articles/41_masking/02_data_masking_flow.md#data-consistency-using-seed)
 
-The data generator must support generating a random value using a seed and must contain the **seed** external input parameter.
+The data generator must support generating a random value from a seed and include the **seed** as **external input parameter** to enable the Data Consistency Using Seed method.
 
 #### Creating new Data Generator Actor
 
@@ -152,11 +152,13 @@ The data generator must support generating a random value using a seed and must 
   public Object generate(Data input, MaskingRandom maskingRandom) {
   ```
 
+- Add the **seed** as an input parameter to the Actor. The Masking actor sends the seed and original values to the **generate** method in the **Data input** parameter.
 
-- The new Actor must contain the **seed** as an input. The Masking actor sends the seed and original values to the data generator Actor.
+- Use the **seed** value taken from the **Data input** parameter to generate the masked value. Example:
 
-- Use the **MaskingRandom** methods in the **generate** method in order to get a consistent value based on the input seed. 
-
+  ```java    
+  input.string("seed")
+  ```
 
 #### Customized Data Generator Flow
 
@@ -164,7 +166,7 @@ The data generator must support generating a random value using a seed and must 
 
   ![seeded random example](../images/example_seeded_random_flow.png)
 
-
+- Alternatively, you can implement a **Java function** that generates a deterministic value based on a seed and invoke it from the flow using the **LuFunction** Actor. The function must accept the seed as an input parameter. Configure the seed as an **external** input parameter.
 
 [![Previous](/articles/images/Previous.png)](07_masking_and_sequence_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_sequence_implementation_guide.md)
 
