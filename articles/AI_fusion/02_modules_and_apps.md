@@ -60,10 +60,22 @@ These extensions add all utilities required to implement GenAI agents and run re
 
 #### Logical Units
 
-| LU Name | Description |
-|-----------|-------------|
-| **aifusion** | This is the main LU. It contains AI-related flows, actors, and utilities. LU tables store chat memory, traces, and token usage, where each LUI represents a single AI session (e.g., a chat). |
-| **PipelineLu** | This LU provides a framework for organizing and executing Broadway flows in a structured hierarchy: pipelines → suites → cases. It includes utility actors for dynamic loading, file scanning, labeling, and linking. |
+<table>
+<tbody>
+<tr>
+<td><strong>LU Name</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr>
+<td><strong>aifusion</strong></td>
+<td>This is the main LU. It contains AI-related flows, actors, and utilities. LU tables store chat memory, traces, and token usage, where each LUI represents a single AI session (e.g., a chat).</td>
+</tr>
+<tr>
+<td><strong>PipelineLu</strong></td>
+<td>This LU provides a framework for organizing and executing Broadway flows in a structured hierarchy: pipelines → suites → cases. It includes utility actors for dynamic loading, file scanning, labeling, and linking.</td>
+</tr>
+</tbody>
+</table>
 
 #### Additional Components
 
@@ -72,6 +84,7 @@ These extensions add all utilities required to implement GenAI agents and run re
 
 ### Metrics/Assurance DB
 
-This database collects agents' functionality, token usage, and other metrics during agent sessions. SQLite (for development) and PostgreSQL databases are supported out-of-the-box. The Metrics database tables are created automatically during aifusion LU deployment. For more information, see [here]().
+This database collects agents' functionality, token usage, and other metrics during agent sessions. SQLite (for development) and PostgreSQL databases are supported out-of-the-box. The Metrics database tables are created automatically during aifusion LU deployment.
+
 
 

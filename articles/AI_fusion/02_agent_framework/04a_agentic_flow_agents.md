@@ -16,26 +16,61 @@ The following diagram illustrates a typical agentic flow, as viewed from the per
 
 When the conversation entry-point flow calls the Orchestrator actor, it passes several input parameters. These inputs and attributes are then used by the Orchestrator flow itself and by its complementary agents — Reflector, Refiner and Planner. All these agents can be considered building blocks that you do not need to touch. 
 
-| Input                      | Description                                                  | Example                                           |
-| -------------------------- | ------------------------------------------------------------ | ------------------------------------------------- |
-| `userQuery`                | The user's question or request                               | "What is my credit card balance?"                 |
-| `synopsis`                 | Business entity story/summary                                | "David Smith, Retail customer, 2 credit cards..." |
-| `toolMTable`               | The name of the MTable containing the list of tool tags and their definitions. <br />It is used by the *Planner* to tighten and limit which tools can be used, while Planner agent evaluates whether and which tools to use. | `Banking_tool_tags`                               |
-| `subagents_tag`            | A tag used for identifying the sub-agents available for this flow. <br />This is used by both the *Reflector*, to look for and identify matching sub-agents, and by the *Planner*, when evaluating whether and which sub-agent to use. | `Banking_subagent`                                |
-| `responderPrompt`          | Guidelines for grounding the final response to the conversation caller (end user). They usually include rules and instructions for formalizing the answer. | `TBD`                                             |
-| `searchProceduresFlowName` | A flow used for retrieving corporate procedures. <br />The procedures are used by the *Planner*, where this flow is responsible to retrieve the relevant procedures to augment the Planner context prompt. Procedures are usually retrieved via a vector store search. | `Banking_searchProcedures`                        |
-| `searchPlanFlowName`       | A flow used for retrieving sample plans. <br />These samples are used by the *Planner*, where this flow is responsible to retrieve the relevant samples to augment the Planner context prompt, helping it to build a plan. Plans are usually retrieved via a vector store search. | `Banking_searchPlan`                              |
+<table>
+<tbody>
+<tr>
+<td><strong>Input</strong></td>
+<td><strong>Description</strong></td>
+<td><strong>Example</strong></td>
+</tr>
+<tr>
+<td><code>userQuery</code></td>
+<td>The user's question or request</td>
+<td>"What is my credit card balance?"</td>
+</tr>
+<tr>
+<td><code>synopsis</code></td>
+<td>Business entity story/summary</td>
+<td>"David Smith, Retail customer, 2 credit cards..."</td>
+</tr>
+<tr>
+<td><code>toolMTable</code></td>
+<td>The name of the MTable containing the list of tool tags and their definitions. <br/>It is used by the <em>Planner</em> to tighten and limit which tools can be used, while Planner agent evaluates whether and which tools to use.</td>
+<td><code>Banking_tool_tags</code></td>
+</tr>
+<tr>
+<td><code>subagents_tag</code></td>
+<td>A tag used for identifying the sub-agents available for this flow. <br/>This is used by both the <em>Reflector</em>, to look for and identify matching sub-agents, and by the <em>Planner</em>, when evaluating whether and which sub-agent to use.</td>
+<td><code>Banking_subagent</code></td>
+</tr>
+<tr>
+<td><code>responderPrompt</code></td>
+<td>Guidelines for grounding the final response to the conversation caller (end user). They usually include rules and instructions for formalizing the answer.</td>
+<td><code>TBD</code></td>
+</tr>
+<tr>
+<td><code>searchProceduresFlowName</code></td>
+<td>A flow used for retrieving corporate procedures. <br/>The procedures are used by the <em>Planner</em>, where this flow is responsible to retrieve the relevant procedures to augment the Planner context prompt. Procedures are usually retrieved via a vector store search.</td>
+<td><code>Banking_searchProcedures</code></td>
+</tr>
+<tr>
+<td><code>searchPlanFlowName</code></td>
+<td>A flow used for retrieving sample plans. <br/>These samples are used by the <em>Planner</em>, where this flow is responsible to retrieve the relevant samples to augment the Planner context prompt, helping it to build a plan. Plans are usually retrieved via a vector store search.</td>
+<td><code>Banking_searchPlan</code></td>
+</tr>
+</tbody>
+</table>
 
 
 
 ## The Planner
 
-If a request requires gathering information or executing multiple steps but does not match a predefined sub-agent, the `orchestrator_planner` is triggered.
+If a request requires gathering information or executing multiple steps but does not match a predefined sub-agent, the \`orchestrator_planner\` is triggered.
 
 The LLM is tasked with generating a step-by-step execution plan using several resources:
 
 1. **Tools and Agent List:** A list of available and relevant (by tags) Broadway flows, along with descriptions and remarks added to input parameters. The LLM uses these descriptions to choose the most-suitable tool and determine the required inputs. Relevant sub-agents (by tag) are also providers. 
-2. **Sample Plans** (Optional): JSON files (e.g., `Banking_plans.json`) — containing pre-built templates — that show the LLM how to combine tools to accomplish similar objectives.
+2. **Sample Plans** (Optional): JSON files (e.g., \`Banking_plans.json\`) — containing pre-built templates — that show the LLM how to combine tools to accomplish similar objectives.
 3. **Corporate Procedures** (Optional): Documents that define business rules or provide step-by-step instructions (e.g., verification criteria for credit limit reduction).
 
 Once the plan steps are prepared, the Planner executes them step-by-step. 
@@ -46,7 +81,7 @@ Once the plan steps are prepared, the Planner executes them step-by-step.
 
 ## The Worker Sub-agents
 
-A worker sub-agent is a tagged Broadway flow (for example, `loans_subagent`) designed to handle a specific domain or category of requests, such as banking loans. 
+A worker sub-agent is a tagged Broadway flow (for example, \`loans_subagent\`) designed to handle a specific domain or category of requests, such as banking loans. 
 
 ### Sub-agent Discovery
 
@@ -88,5 +123,4 @@ The LLMAgent actor decides which tools to activate and how to formulate response
 5. **Tool List** — available tools that the AI can invoke
 
 > Use Broadway [flow properties](/articles/19_Broadway/33_flow_properties.md) to add tags and descriptions to sub-agent flows. The framework uses these properties to select the appropriate agent for each request.
-
 

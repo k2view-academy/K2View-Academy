@@ -185,12 +185,45 @@ Scores:
 
 Shows aggregated statistics across the entire conversation:
 
-| Criterion  | Average | MIN | Threshold | Status |
-|------------|---------|-----|-----------|--------|
-| Accuracy   | 4.3     | 3.5 | MIN 4.0   | ❌ FAIL |
-| Relevance  | 5.0     | 5.0 | MIN 4.0   | ✅ PASS |
-| Clarity    | 4.2     | 4.0 | AVG 4.0   | ✅ PASS |
-| Politeness | 3.8     | 3.5 | AVG 3.5   | ✅ PASS |
+<table>
+<tbody>
+<tr>
+<td><strong>Criterion</strong></td>
+<td><strong>Average</strong></td>
+<td><strong>MIN</strong></td>
+<td><strong>Threshold</strong></td>
+<td><strong>Status</strong></td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>4.3</td>
+<td>3.5</td>
+<td>MIN 4.0</td>
+<td>❌ FAIL</td>
+</tr>
+<tr>
+<td>Relevance</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>MIN 4.0</td>
+<td>✅ PASS</td>
+</tr>
+<tr>
+<td>Clarity</td>
+<td>4.2</td>
+<td>4.0</td>
+<td>AVG 4.0</td>
+<td>✅ PASS</td>
+</tr>
+<tr>
+<td>Politeness</td>
+<td>3.8</td>
+<td>3.5</td>
+<td>AVG 3.5</td>
+<td>✅ PASS</td>
+</tr>
+</tbody>
+</table>
 
 **Reading this table:**
 - **Average:** Mean score across all conversation turns
@@ -300,14 +333,38 @@ Look at each failed response:
 
 **Common causes and solutions:**
 
-| Cause | Solution |
-|-------|----------|
-| Agent lacks data access | Fix data configuration/permissions |
-| Agent misunderstands question | Improve agent instructions/examples |
-| Expected answer too strict | Adjust expected answer to be realistic |
-| Threshold too high | Lower threshold to appropriate level |
-| Agent needs more context | Provide better system instructions |
-| Bug in agent logic | Fix the bug in agent configuration |
+<table>
+<tbody>
+<tr>
+<td><strong>Cause</strong></td>
+<td><strong>Solution</strong></td>
+</tr>
+<tr>
+<td>Agent lacks data access</td>
+<td>Fix data configuration/permissions</td>
+</tr>
+<tr>
+<td>Agent misunderstands question</td>
+<td>Improve agent instructions/examples</td>
+</tr>
+<tr>
+<td>Expected answer too strict</td>
+<td>Adjust expected answer to be realistic</td>
+</tr>
+<tr>
+<td>Threshold too high</td>
+<td>Lower threshold to appropriate level</td>
+</tr>
+<tr>
+<td>Agent needs more context</td>
+<td>Provide better system instructions</td>
+</tr>
+<tr>
+<td>Bug in agent logic</td>
+<td>Fix the bug in agent configuration</td>
+</tr>
+</tbody>
+</table>
 
 ### Step 4: Take Action
 
@@ -360,12 +417,50 @@ Individual test results are useful, but trends tell the real story:
 
 Create a simple spreadsheet:
 
-| Week | Tests Run | Pass Rate | Avg Accuracy | Avg Clarity | Notes |
-|------|-----------|-----------|--------------|-------------|-------|
-| W1   | 50        | 78%       | 4.1          | 4.0         | Initial baseline |
-| W2   | 50        | 82%       | 4.2          | 4.1         | Improved instructions |
-| W3   | 50        | 80%       | 4.3          | 3.9         | Clarity regression |
-| W4   | 50        | 88%       | 4.4          | 4.2         | Fixed formatting |
+<table>
+<tbody>
+<tr>
+<td><strong>Week</strong></td>
+<td><strong>Tests Run</strong></td>
+<td><strong>Pass Rate</strong></td>
+<td><strong>Avg Accuracy</strong></td>
+<td><strong>Avg Clarity</strong></td>
+<td><strong>Notes</strong></td>
+</tr>
+<tr>
+<td>W1</td>
+<td>50</td>
+<td>78%</td>
+<td>4.1</td>
+<td>4.0</td>
+<td>Initial baseline</td>
+</tr>
+<tr>
+<td>W2</td>
+<td>50</td>
+<td>82%</td>
+<td>4.2</td>
+<td>4.1</td>
+<td>Improved instructions</td>
+</tr>
+<tr>
+<td>W3</td>
+<td>50</td>
+<td>80%</td>
+<td>4.3</td>
+<td>3.9</td>
+<td>Clarity regression</td>
+</tr>
+<tr>
+<td>W4</td>
+<td>50</td>
+<td>88%</td>
+<td>4.4</td>
+<td>4.2</td>
+<td>Fixed formatting</td>
+</tr>
+</tbody>
+</table>
 
 **Look for:**
 - ↗️ Upward trends (good!)
@@ -513,6 +608,6 @@ Now that you understand how to run tests and interpret results, you're ready to:
 **Next Article:** [Building Effective Test Conversations](./05-building-effective-tests.md)
 
 **Related Articles:**
-- [Understanding Quality Criteria](./03-understanding-quality-criteria.md) - Deep dive into evaluation dimensions
+- [Understanding Quality Criteria](./03_quality_criteria.md) - Deep dive into evaluation dimensions
 - [Organizing Test Suites](./06-organizing-test-suites.md) - Managing multiple tests
 - [Best Practices](./07-best-practices.md) - Advanced tips for testing success

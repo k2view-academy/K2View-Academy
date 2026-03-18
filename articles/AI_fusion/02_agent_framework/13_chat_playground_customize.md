@@ -4,98 +4,235 @@ The AI Fusion chat application supports customization through CSS variables, tex
 
 ## Configuration Files Location
 
-```
+\`\`\`
 Implementation/LogicalUnits/aifusion/web/chat/
 ├── styles/
-│   ├── style.css						# Base styles (do not modify)
-│   ├── customize-style.css				# Default customization styling (Use it as a reference)
-│   ├── myappid-customize-style.css		# your app customized styling definitions
+│   ├── style.css# Base styles (do not modify)
+│   ├── customize-style.css# Default customization styling (Use it as a reference)
+│   ├── myappid-customize-style.css# your app customized styling definitions
 ├── img/
-│   ├── logo.png                       	# Default logo
-│   ├── myappid-logo.png				# your app logo
-│   ├── myappid-mini-logo.png			# your app badge
-└── translations.json                  	# UI text phrases 
-```
+│   ├── logo.png                       # Default logo
+│   ├── myappid-logo.png# your app logo
+│   ├── myappid-mini-logo.png# your app badge
+└── translations.json                  # UI text phrases 
+\`\`\`
 
 
 
 ## Create Custom CSS File
 
-Create a file named `styles/{aifusionAppId}-customize-style.css`. 
+Create a file named \`styles/{aifusionAppId}-customize-style.css\`. 
 
-The app will automatically load this file based on the configured `aifusionAppId`. If not found, it falls back to `customize-style.css`.
+The app will automatically load this file based on the configured \`aifusionAppId\`. If not found, it falls back to \`customize-style.css\`.
 
 >  The *aifusionAppId* is the one you defined in the apps.csv and referred to at the apps.json. Read [here](12_project_impl_prep.md) for more setup information.
 
 ### CSS Variables Reference
 
-| Variable                   | Description              | Example Values                             |
-| -------------------------- | ------------------------ | ------------------------------------------ |
-| **Branding**               |                          |                                            |
-| `--main-bg-color`          | Primary theme color      | `#3b82f6`                                  |
-| `--main-logo`              | Header logo image        | `url("../img/banking-logo.png")`           |
-| `--assistant-badge`        | Assistant message icon   | `url('../chat/img/banking-mini-logo.png')` |
-| `--user-badge`             | User message icon        | SVG data URL or image path                 |
-| `--ai-badge`               | AI badge icon            | `url(../img/mycompany-logo.png)`           |
-| `--llm-badge`              | LLM indicator icon       | SVG data URL                               |
-| `--tool-badge`             | Tool execution icon      | SVG data URL                               |
-| **Top Bar Buttons**        |                          |                                            |
-| `--button-bg`              | Button background        | `white`                                    |
-| `--button-border-color`    | Button border            | `#3b82f6`                                  |
-| `--button-hover-bg`        | Button hover state       | `#1976d20a`                                |
-| `--button-active-bg`       | Active button background | `#3b82f6`                                  |
-| `--button-active-hover-bg` | Active button hover      | `#1274d6`                                  |
-| **Side Boxes**             |                          |                                            |
-| `--sidebox-title-color`    | Side panel title color   | `#3b82f6`                                  |
-| **Trace Panel**            |                          |                                            |
-| `--trace-resizer-hover-bg` | Resizer hover color      | `#b2d1ef`                                  |
-| `--trace-panel-bg`         | Trace panel background   | `#f2f2f2`                                  |
-| `--trace-panel-header-bg`  | Trace header background  | `rgb(219 234 254 / 1)`                     |
+<table>
+<tbody>
+<tr>
+<td><strong>Variable</strong></td>
+<td><strong>Description</strong></td>
+<td><strong>Example Values</strong></td>
+</tr>
+<tr>
+<td colspan="3"><strong>Branding</strong></td>
+</tr>
+<tr>
+<td><code>--main-bg-color</code></td>
+<td>Primary theme color</td>
+<td><code>#3b82f6</code></td>
+</tr>
+<tr>
+<td><code>--main-logo</code></td>
+<td>Header logo image</td>
+<td><code>url("../img/banking-logo.png")</code></td>
+</tr>
+<tr>
+<td><code>--assistant-badge</code></td>
+<td>Assistant message icon</td>
+<td><code>url('../chat/img/banking-mini-logo.png')</code></td>
+</tr>
+<tr>
+<td><code>--user-badge</code></td>
+<td>User message icon</td>
+<td>SVG data URL or image path</td>
+</tr>
+<tr>
+<td><code>--ai-badge</code></td>
+<td>AI badge icon</td>
+<td><code>url(../img/mycompany-logo.png)</code></td>
+</tr>
+<tr>
+<td><code>--llm-badge</code></td>
+<td>LLM indicator icon</td>
+<td>SVG data URL</td>
+</tr>
+<tr>
+<td><code>--tool-badge</code></td>
+<td>Tool execution icon</td>
+<td>SVG data URL</td>
+</tr>
+<tr>
+<td colspan="3"><strong>Top Bar Buttons</strong></td>
+</tr>
+<tr>
+<td><code>--button-bg</code></td>
+<td>Button background</td>
+<td><code>white</code></td>
+</tr>
+<tr>
+<td><code>--button-border-color</code></td>
+<td>Button border</td>
+<td><code>#3b82f6</code></td>
+</tr>
+<tr>
+<td><code>--button-hover-bg</code></td>
+<td>Button hover state</td>
+<td><code>#1976d20a</code></td>
+</tr>
+<tr>
+<td><code>--button-active-bg</code></td>
+<td>Active button background</td>
+<td><code>#3b82f6</code></td>
+</tr>
+<tr>
+<td><code>--button-active-hover-bg</code></td>
+<td>Active button hover</td>
+<td><code>#1274d6</code></td>
+</tr>
+<tr>
+<td colspan="3"><strong>Side Boxes</strong></td>
+</tr>
+<tr>
+<td><code>--sidebox-title-color</code></td>
+<td>Side panel title color</td>
+<td><code>#3b82f6</code></td>
+</tr>
+<tr>
+<td colspan="3"><strong>Trace Panel</strong></td>
+</tr>
+<tr>
+<td><code>--trace-resizer-hover-bg</code></td>
+<td>Resizer hover color</td>
+<td><code>#b2d1ef</code></td>
+</tr>
+<tr>
+<td><code>--trace-panel-bg</code></td>
+<td>Trace panel background</td>
+<td><code>#f2f2f2</code></td>
+</tr>
+<tr>
+<td><code>--trace-panel-header-bg</code></td>
+<td>Trace header background</td>
+<td><code>rgb(219 234 254 / 1)</code></td>
+</tr>
+</tbody>
+</table>
 
 ### Display Toggle Variables
 
-| Variable                                | Values                  | Description                                                  |
-| --------------------------------------- | ----------------------- | ------------------------------------------------------------ |
-| `--user-search-display`                 | `flex` / `none`         | Show search popup for LLU IID (`flex`) or LUI list (`none`). <br />**Note**: The alterative for the search LUI popup is a popup window, divided to boxes, where each show short LUI synopsis. This option is useful for demo or for development/QA stages, where you have ongoing LUIs for testing. |
-| `--user-profile-button-display`         | `inline-block` / `none` | Show/hide User Profile button at the top bar                 |
-| `--chat-summary-button-display`         | `inline-block` / `none` | Show/hide Chat Summary button at the top bar                 |
-| `--user-profile-sidebox-display-onload` | `flex` / `none`         | Auto-show profile panel on page loading                      |
-| `--chat-summary-sidebox-display-onload` | `flex` / `none`         | Auto-show summary panel on page loading                      |
-| `--trace-button-display`                | `block` / `none`        | Show/hide Trace button                                       |
-| `--trace-info-header-display`           | `block` / `none`        | Show/hide trace info header                                  |
+<table>
+<tbody>
+<tr>
+<td><strong>Variable</strong></td>
+<td><strong>Values</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr>
+<td><code>--user-search-display</code></td>
+<td><code>flex</code> / <code>none</code></td>
+<td>Show search popup for LLU IID (<code>flex</code>) or LUI list (<code>none</code>). <br/><strong>Note</strong>: The alternative for the search LUI popup is a popup window, divided to boxes, where each show short LUI synopsis. This option is useful for demo or for development/QA stages, where you have ongoing LUIs for testing.</td>
+</tr>
+<tr>
+<td><code>--user-profile-button-display</code></td>
+<td><code>inline-block</code> / <code>none</code></td>
+<td>Show/hide User Profile button at the top bar</td>
+</tr>
+<tr>
+<td><code>--chat-summary-button-display</code></td>
+<td><code>inline-block</code> / <code>none</code></td>
+<td>Show/hide Chat Summary button at the top bar</td>
+</tr>
+<tr>
+<td><code>--user-profile-sidebox-display-onload</code></td>
+<td><code>flex</code> / <code>none</code></td>
+<td>Auto-show profile panel on page loading</td>
+</tr>
+<tr>
+<td><code>--chat-summary-sidebox-display-onload</code></td>
+<td><code>flex</code> / <code>none</code></td>
+<td>Auto-show summary panel on page loading</td>
+</tr>
+<tr>
+<td><code>--trace-button-display</code></td>
+<td><code>block</code> / <code>none</code></td>
+<td>Show/hide Trace button</td>
+</tr>
+<tr>
+<td><code>--trace-info-header-display</code></td>
+<td><code>block</code> / <code>none</code></td>
+<td>Show/hide trace info header</td>
+</tr>
+</tbody>
+</table>
 
 ### RTL (Right-to-Left) Support
 
-| Variable                    | LTR Value      | RTL Value     |
-| --------------------------- | -------------- | ------------- |
-| `--sidebox-title-direction` | `row`          | `row-reverse` |
-| `--sidebox-text-direction`  | `start`        | `end`         |
-| `--trace-direction`         | `auto` (right) | `0` (left)    |
-| `--sideboxes-direction`     | `row`          | `row-reverse` |
+<table>
+<tbody>
+<tr>
+<td><strong>Variable</strong></td>
+<td><strong>LTR Value</strong></td>
+<td><strong>RTL Value</strong></td>
+</tr>
+<tr>
+<td><code>--sidebox-title-direction</code></td>
+<td><code>row</code></td>
+<td><code>row-reverse</code></td>
+</tr>
+<tr>
+<td><code>--sidebox-text-direction</code></td>
+<td><code>start</code></td>
+<td><code>end</code></td>
+</tr>
+<tr>
+<td><code>--trace-direction</code></td>
+<td><code>auto</code> (right)</td>
+<td><code>0</code> (left)</td>
+</tr>
+<tr>
+<td><code>--sideboxes-direction</code></td>
+<td><code>row</code></td>
+<td><code>row-reverse</code></td>
+</tr>
+</tbody>
+</table>
 
 
 
 ## Add Images
 
-Place your logo and badge images in the `img/` folder:
+Place your logo and badge images in the \`img/\` folder:
 
-- **Main logo**: `{aifusionAppId}-logo.png` - Displayed in the header
-- **Mini logo**: `{aifusionAppId}-mini-logo.png` - Used as assistant badge in chat messages
+- **Main logo**: \`{aifusionAppId}-logo.png\` - Displayed in the header
+- **Mini logo**: \`{aifusionAppId}-mini-logo.png\` - Used as assistant badge in chat messages
 
 Reference them in your CSS:
 
-```css
+\`\`\`css
 --main-logo: url("../img/myappid-logo.png");
 --assistant-badge: url('../chat/img/myappid-mini-logo.png');
-```
+\`\`\`
 
 
 
 ## Configure Texts
 
-Add entries to `translations.json` with your `aifusionAppId` prefix (e.g. *myappid*):
+Add entries to \`translations.json\` with your \`aifusionAppId\` prefix (e.g. *myappid*):
 
-```json
+\`\`\`json
 {
     "myappid-summary_button": "Chat Summary",
     "myappid-user_profile_button": "User Profile",
@@ -111,4 +248,4 @@ Add entries to `translations.json` with your `aifusionAppId` prefix (e.g. *myapp
     "myappid-chat_input_placeholder": "Ask me anything...",
     "myappid-chat_initial_message": "Hello! How can I assist you today?"
 }
-```
+\`\`\`

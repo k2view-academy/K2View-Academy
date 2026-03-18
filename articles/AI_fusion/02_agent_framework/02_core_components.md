@@ -22,11 +22,26 @@ This mechanism maintains the ongoing conversation context, enabling the AI agent
 
 The LUI tables capture:
 
-| Data Type                | Description                                                  |
-| ------------------------ | ------------------------------------------------------------ |
-| **Conversation History** | User questions and agent responses                           |
-| **Execution Traces**     | Activated agents, tools, and their execution duration for each step |
-| **Token Usage**          | Detailed consumption metrics (stored in the assurance database) |
+<table>
+<tbody>
+<tr>
+<td><strong>Data Type</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr>
+<td><strong>Conversation History</strong></td>
+<td>User questions and agent responses</td>
+</tr>
+<tr>
+<td><strong>Execution Traces</strong></td>
+<td>Activated agents, tools, and their execution duration for each step</td>
+</tr>
+<tr>
+<td><strong>Token Usage</strong></td>
+<td>Detailed consumption metrics (stored in the assurance database)</td>
+</tr>
+</tbody>
+</table>
 
 The above data types not only provide the conversational context, but also support debugging, optimization, and compliance requirements.
 
@@ -78,11 +93,26 @@ The Metrics/Assurance DB collects data for tracking, analysis, and optimization 
 
 ### Data Categories
 
-| Category        | Metrics Collected                                            |
-| --------------- | ------------------------------------------------------------ |
-| **Operational** | LLM calls, models used, prompts sent, responses received, timing, tool calls and agents usage |
-| **Financial**   | Token usage and cost tracking                                |
-| **Behavioral**  | Agent triggering sequences, context, compliance, and satisfaction indicators |
+<table>
+<tbody>
+<tr>
+<td><strong>Category</strong></td>
+<td><strong>Metrics Collected</strong></td>
+</tr>
+<tr>
+<td><strong>Operational</strong></td>
+<td>LLM calls, models used, prompts sent, responses received, timing, tool calls and agents usage</td>
+</tr>
+<tr>
+<td><strong>Financial</strong></td>
+<td>Token usage and cost tracking</td>
+</tr>
+<tr>
+<td><strong>Behavioral</strong></td>
+<td>Agent triggering sequences, context, compliance, and satisfaction indicators</td>
+</tr>
+</tbody>
+</table>
 
 **Supported Databases:**
 

@@ -154,11 +154,35 @@ Teams can investigate failures, refine prompts or agents, and re-run tests to va
 
 ## Terminology
 
-| Concept                  | Definition                                                   |
-| ------------------------ | ------------------------------------------------------------ |
-| **Test Case**            | A conversational scenario with questions, expected answers, and evaluation criteria |
-| **Test Suite**           | A collection of related test cases used for regression testing |
-| **Ground Truth**         | The expected answer describing what a correct response should contain |
-| **Evaluation Dimension** | A quality criterion used to score responses (e.g., Accuracy, Clarity) |
-| **Threshold**            | Minimum score required for a dimension                       |
-| **Evaluator**            | The AI judge that scores responses against the ground truth  |
+<table>
+<tbody>
+<tr>
+<td><strong>Concept</strong></td>
+<td><strong>Definition</strong></td>
+</tr>
+<tr>
+<td><strong>Test Case</strong></td>
+<td>A conversational scenario with questions, expected answers, and evaluation criteria</td>
+</tr>
+<tr>
+<td><strong>Test Suite</strong></td>
+<td>A collection of related test cases used for regression testing</td>
+</tr>
+<tr>
+<td><strong>Ground Truth</strong></td>
+<td>The expected answer describing what a correct response should contain</td>
+</tr>
+<tr>
+<td><strong>Evaluation Dimension</strong></td>
+<td>A quality criterion used to score responses (e.g., Accuracy, Clarity)</td>
+</tr>
+<tr>
+<td><strong>Threshold</strong></td>
+<td>Minimum score required for a dimension</td>
+</tr>
+<tr>
+<td><strong>Evaluator</strong></td>
+<td>The AI judge that scores responses against the ground truth</td>
+</tr>
+</tbody>
+</table>
