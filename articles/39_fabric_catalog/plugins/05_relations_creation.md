@@ -26,17 +26,17 @@ The following matching rules are applied by the plugin. Note that each of these 
 - ```fieldNameIsIdAndPk``` - Parent Dataset ('DS1') has a PK field 'ID'; Child Dataset has a field 'DS1ID' (normalized).
 
   - Example: *customer.ID (PK) and activity.customer_id*
-  - Relation: *activity refers to customer (ID)*
+  - Relation: *ACTIVITY refers to CUSTOMER (ID)*
 
 - ```fieldNameIsIdAndNotPk``` - Parent Dataset ('DS1') has a PK field 'ID'; Child Dataset has a field 'DS1ID' (normalized); both are non-PK.
 
   - Example: *customer.ID (non-PK) and* *activity.customer_id*
-  - Relation: *activity refers to customer (ID)*
+  - Relation: *ACTIVITY refers to CUSTOMER (ID)*
 
 - ```singleFieldPkAndNotPk``` - Single PK field in a Parent Dataset and non-PK field in Child Dataset.
 
   - Example: *customer.customer_id (PK) and* *activity.customer_id* 
-  - Relation: *activity refers to customer (customer_id)*
+  - Relation: *ACTIVITY refers to CUSTOMER (customer_id)*
 
 - ```commonFieldsInBothPk``` - Common fields in PK of both datasets, but Child Dataset has additional PKs.
 
@@ -44,7 +44,8 @@ The following matching rules are applied by the plugin. Note that each of these 
 
   - Some examples of the matching rules are:
 
-    <table style="width: 900px;"><tbody>
+    <table style="width: 900px;">
+    <tbody>
     <tr>
     <td style="width: 300px;" colspan="2"><strong>Input: Two Datasets</strong></td>
     <td style="width: 600px;">
@@ -53,43 +54,41 @@ The following matching rules are applied by the plugin. Note that each of these 
     </tr>
     <tr>
     <td style="width: 150px;">
-    <p><strong>DS1</strong></p>
+    <p><strong>Parent_DS</strong></p>
     </td>
     <td style="width: 150px;">
-    <p><strong>DS2</strong></p>
+    <p><strong>Child_DS</strong></p>
     </td>
     <td style="width: 600px;" colspan="2">
     <p><strong>Relation direction and FK</strong></p>
     </td>
     </tr>
     <tr>
-    <td >
+    <td>
     <p>field_1 PK</p>
     </td>
-    <td >
+    <td>
     <p>field_1 PK</p>
-    <p>field_2&nbsp;PK</p>
+    <p>field_2PK</p>
     </td>
-    <td >
-    <p><em>DS2 refers to DS1</em></p>
-    <p>FK: DS2 (field_1)</p>
+    <td>
+    <p><em>Child_DS refers to Parent_DS</em></p>
+    <p>FK: Child_DS (field_1)</p>
     </td>
     </tr>
     <tr>
-    <td >
+    <td>
     <p>field_1 PK</p>
-    <p>field_2&nbsp;PK</p>
+    <p>field_2PK</p>
     </td>
-    <td >
+    <td>
     <p>field_1 PK</p>
-    <p>field_2&nbsp;PK</p>
-
-    <p>field_3&nbsp;PK</p>
-
+    <p>field_2PK</p>
+    <p>field_3PK</p>
     </td>
-    <td >
-    <p><em>DS2 refers to DS1</em></p>
-    <p>FK: DS2 (field_1, field_2)</p>
+    <td>
+    <p><em>Child_DS refers to Parent_DS</em></p>
+    <p>FK: Child_DS (field_1, field_2)</p>
     </td>
     </tr>
     </tbody>
@@ -126,7 +125,8 @@ The following matching rules are applied by the plugin. Note that the rule is ap
   * The relation *Child refers to Parent* is created.
 * `joinOnlyNoPkCheck` - PKs are not checked. FK is based on JOIN only: left side of condition is the Parent Dataset, right side is the Child Dataset.:
   * The old syntax is also supported, having WHERE and '=' instead of the JOIN.
-  * Note that in case of the LEFT JOIN or LEFT OUTER JOIN the relation direction is **opposite**: the left side should be considered a Child Dataset, the right side → a Parent Dataset.
+  * in case of the LEFT JOIN or LEFT OUTER JOIN the relation direction is **opposite**: the left side should be considered a Child Dataset, the right side → a Parent Dataset.
+  * the `joinOnlyNoPkCheck` matching rule is only available in the ANTLR mode.
 * ```commonFieldsInBothPk``` - Common fields in PK of both datasets, but Child Dataset has additional PKs.
   * The relation *Child refers to Parent* is created.
 * ```sameFieldsInBothPk``` - Part of PK in both datasets, and both datasets have an identical number of PKs.
