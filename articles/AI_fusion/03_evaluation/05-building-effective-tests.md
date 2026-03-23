@@ -592,6 +592,6 @@ Now that you know how to build effective tests, you're ready to:
 **Next Article:** [Organizing Test Suites](./06-organizing-test-suites.md)
 
 **Related Articles:**
-- [Creating Your First Test](./02-creating-your-first-test.md) - Apply these principles
-- [Understanding Quality Criteria](./03-understanding-quality-criteria.md) - Set appropriate thresholds
+- [Creating Your First Test](./02_creating_your_first_test.md) - Apply these principles
+- [Understanding Quality Criteria](./03_quality_criteria.md) - Set appropriate thresholds
 - [Running Tests and Results](./04-running-tests-and-results.md) - Validate your effective tests

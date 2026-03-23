@@ -98,12 +98,40 @@ As execution progresses, additional information may be retrieved or generated an
 
 As part of the reasoning process, the framework determines the best response path for the current request:
 
-| Path                                      | Description                                                  | When to Use                                                  | Performance                   |
-| ----------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ----------------------------- |
-| **Have All Required Information** (1)     | Proceed directly to response formulation                     | Information exists in the business entity story, conversation history, or general knowledge | **Fastest**                   |
-| **Call Specialized Worker Sub-agent** (2)  | Route the request to a domain-specific sub-agent              | The request requires specialized knowledge or tools (e.g., billing, payments) | **Faster and more accurate**  |
-| **Build and Execute a Plan** (3)          | Create and execute a multi-step plan involving multiple actions or agents | The request requires coordination of several steps or tool invocations | Most **flexible**, but slower |
-| **Clarify the Request** (4)               | Ask the user for additional information                      | The request cannot be resolved from the current context      | Fast                          |
+<table>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><strong>Description</strong></td>
+<td><strong>When to Use</strong></td>
+<td><strong>Performance</strong></td>
+</tr>
+<tr>
+<td><strong>Have All Required Information</strong> (1)</td>
+<td>Proceed directly to response formulation</td>
+<td>Information exists in the business entity story, conversation history, or general knowledge</td>
+<td><strong>Fastest</strong></td>
+</tr>
+<tr>
+<td><strong>Call Specialized Worker Sub-agent</strong> (2)</td>
+<td>Route the request to a domain-specific sub-agent</td>
+<td>The request requires specialized knowledge or tools (e.g., billing, payments)</td>
+<td><strong>Faster and more accurate</strong></td>
+</tr>
+<tr>
+<td><strong>Build and Execute a Plan</strong> (3)</td>
+<td>Create and execute a multi-step plan involving multiple actions or agents</td>
+<td>The request requires coordination of several steps or tool invocations</td>
+<td>Most <strong>flexible</strong>, but slower</td>
+</tr>
+<tr>
+<td><strong>Clarify the Request</strong> (4)</td>
+<td>Ask the user for additional information</td>
+<td>The request cannot be resolved from the current context</td>
+<td>Fast</td>
+</tr>
+</tbody>
+</table>
 
 ### Flow Delegation and Ownership
 

@@ -6,12 +6,30 @@ LLM interfaces are the connection layer between the AI Fusion framework and Larg
 
 The AI Fusion implementation invokes LLMs at multiple points in the agent workflow to execute specific tasks:
 
-| Task               | Description                                                  |
-| ------------------ | ------------------------------------------------------------ |
-| **Reflecting**     | Analyzing user queries to determine the appropriate response path |
-| **SQL Generation** | Building database queries from natural language requests     |
-| **Planning**       | Creating step-by-step execution strategies                   |
-| **Answering**      | Formulating natural-language responses for users             |
+<table>
+<tbody>
+<tr>
+<td><strong>Task</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr>
+<td><strong>Reflecting</strong></td>
+<td>Analyzing user queries to determine the appropriate response path</td>
+</tr>
+<tr>
+<td><strong>SQL Generation</strong></td>
+<td>Building database queries from natural language requests</td>
+</tr>
+<tr>
+<td><strong>Planning</strong></td>
+<td>Creating step-by-step execution strategies</td>
+</tr>
+<tr>
+<td><strong>Answering</strong></td>
+<td>Formulating natural-language responses for users</td>
+</tr>
+</tbody>
+</table>
 
 When an LLM task is triggered, Fabric looks up the configured LLM interface and uses it to communicate with the underlying model, using the credentials defined in that interface.
 
@@ -22,7 +40,7 @@ LLM interfaces are installed via K2exchange. Some of the foundation model provid
 * OpenAI
 * Anthropic
 * AWS Bedrock
-* Google’s Vertex AI
+* Google's Vertex AI
 
 
 
@@ -45,16 +63,55 @@ LLM interfaces are installed via K2exchange. Some of the foundation model provid
 
 ### Interface Configuration Parameters
 
-| Parameter       | Description                              | Example                |
-| --------------- | ---------------------------------------- | ---------------------- |
-| **Tag**         | Identifier used to select this interface | `default`              |
-| **Model**       | The specific model to be used                | `gpt-4.1`              |
-| **Temperature** | Controls response randomness (0-1)       | `0`                    |
-| **Max Tokens**  | Maximum response length                  | `4096`                 |
-| **Host**        | API endpoint                             | `api.openai.com`       |
-| **Port**        | API port                                 | `443`                  |
-| **Path**        | API path                                 | `/v1/chat/completions` |
-| **Token**       | API authentication token                 | `sk-...`               |
+<table>
+<tbody>
+<tr>
+<td><strong>Parameter</strong></td>
+<td><strong>Description</strong></td>
+<td><strong>Example</strong></td>
+</tr>
+<tr>
+<td><strong>Tag</strong></td>
+<td>Identifier used to select this interface</td>
+<td><code>default</code></td>
+</tr>
+<tr>
+<td><strong>Model</strong></td>
+<td>The specific model to be used</td>
+<td><code>gpt-4.1</code></td>
+</tr>
+<tr>
+<td><strong>Temperature</strong></td>
+<td>Controls response randomness (0-1)</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><strong>Max Tokens</strong></td>
+<td>Maximum response length</td>
+<td><code>4096</code></td>
+</tr>
+<tr>
+<td><strong>Host</strong></td>
+<td>API endpoint</td>
+<td><code>api.openai.com</code></td>
+</tr>
+<tr>
+<td><strong>Port</strong></td>
+<td>API port</td>
+<td><code>443</code></td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td>API path</td>
+<td><code>/v1/chat/completions</code></td>
+</tr>
+<tr>
+<td><strong>Token</strong></td>
+<td>API authentication token</td>
+<td><code>sk-...</code></td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -64,12 +121,30 @@ You can create multiple LLM interfaces for different purposes:
 
 ### Scenarios for Multiple Interfaces
 
-| Scenario              | Consider                                                     |
-| --------------------- | ------------------------------------------------------------ |
-| **Cost optimization** | The use of a lighter model for simple tasks and a more powerful model for complex reasoning |
-| **Specialized tasks** | The use of different models for SQL generation and natural language responses |
-| **Fallback**          | Secondary interface if primary provider is unavailable       |
-| **Testing**           | Comparing responses across different models                    |
+<table>
+<tbody>
+<tr>
+<td><strong>Scenario</strong></td>
+<td><strong>Consider</strong></td>
+</tr>
+<tr>
+<td><strong>Cost optimization</strong></td>
+<td>The use of a lighter model for simple tasks and a more powerful model for complex reasoning</td>
+</tr>
+<tr>
+<td><strong>Specialized tasks</strong></td>
+<td>The use of different models for SQL generation and natural language responses</td>
+</tr>
+<tr>
+<td><strong>Fallback</strong></td>
+<td>Secondary interface if primary provider is unavailable</td>
+</tr>
+<tr>
+<td><strong>Testing</strong></td>
+<td>Comparing responses across different models</td>
+</tr>
+</tbody>
+</table>
 
 ### Configuring Interface Selection
 
@@ -78,4 +153,3 @@ To use a specific interface in your flow:
 1. Create the interface with a unique tag (e.g., `sql-generator`)
 2. In your Broadway flow, configure the LLM actor's `interface` parameter
 3. Use the format `llm://[tag]` (e.g., `llm://sql-generator`)
-

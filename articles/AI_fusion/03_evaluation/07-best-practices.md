@@ -99,12 +99,40 @@ Cases to test:
 
 **By criterion:**
 
-| Criterion  | Start With | Raise To | Maintain At |
-|------------|------------|----------|-------------|
-| Accuracy   | 4.0        | 4.2-4.5  | 4.0-4.5     |
-| Relevance  | 4.0        | 4.0-4.2  | 4.0         |
-| Clarity    | 3.5-4.0    | 4.0-4.2  | 4.0         |
-| Politeness | 3.5        | 3.5-4.0  | 3.5         |
+<table>
+<tbody>
+<tr>
+<td><strong>Criterion</strong></td>
+<td><strong>Start With</strong></td>
+<td><strong>Raise To</strong></td>
+<td><strong>Maintain At</strong></td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>4.0</td>
+<td>4.2-4.5</td>
+<td>4.0-4.5</td>
+</tr>
+<tr>
+<td>Relevance</td>
+<td>4.0</td>
+<td>4.0-4.2</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>Clarity</td>
+<td>3.5-4.0</td>
+<td>4.0-4.2</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>Politeness</td>
+<td>3.5</td>
+<td>3.5-4.0</td>
+<td>3.5</td>
+</tr>
+</tbody>
+</table>
 
 **Adjustment strategy:**
 1. Start conservative (4.0)
@@ -199,14 +227,45 @@ First week of month:
 
 **Common causes:**
 
-| Symptom | Likely Cause | Solution |
-|---------|--------------|----------|
-| Accuracy failures | Wrong data or no data access | Fix data configuration |
-| Relevance failures | Misunderstood question | Improve agent instructions |
-| Clarity failures | Poor formatting | Fix response templates |
-| Politeness failures | Tone issues | Adjust personality settings |
-| Random failures | Threshold too tight | Review threshold setting |
-| All tests failing | System issue | Check agent is running |
+<table>
+<tbody>
+<tr>
+<td><strong>Symptom</strong></td>
+<td><strong>Likely Cause</strong></td>
+<td><strong>Solution</strong></td>
+</tr>
+<tr>
+<td>Accuracy failures</td>
+<td>Wrong data or no data access</td>
+<td>Fix data configuration</td>
+</tr>
+<tr>
+<td>Relevance failures</td>
+<td>Misunderstood question</td>
+<td>Improve agent instructions</td>
+</tr>
+<tr>
+<td>Clarity failures</td>
+<td>Poor formatting</td>
+<td>Fix response templates</td>
+</tr>
+<tr>
+<td>Politeness failures</td>
+<td>Tone issues</td>
+<td>Adjust personality settings</td>
+</tr>
+<tr>
+<td>Random failures</td>
+<td>Threshold too tight</td>
+<td>Review threshold setting</td>
+</tr>
+<tr>
+<td>All tests failing</td>
+<td>System issue</td>
+<td>Check agent is running</td>
+</tr>
+</tbody>
+</table>
 
 #### Step 3: Fix the Right Thing
 
@@ -275,12 +334,45 @@ Trend: ↗ +2% from last week
 
 Create a simple sheet to track weekly:
 
-| Week | Pass Rate | Avg Accuracy | Avg Clarity | Notes |
-|------|-----------|--------------|-------------|-------|
-| Dec 3 | 84% | 4.2 | 4.0 | Fixed balance formatting |
-| Nov 26 | 82% | 4.2 | 3.9 | Added 5 new tests |
-| Nov 19 | 86% | 4.1 | 4.0 | Improved instructions |
-| Nov 12 | 78% | 4.0 | 3.8 | Initial baseline |
+<table>
+<tbody>
+<tr>
+<td><strong>Week</strong></td>
+<td><strong>Pass Rate</strong></td>
+<td><strong>Avg Accuracy</strong></td>
+<td><strong>Avg Clarity</strong></td>
+<td><strong>Notes</strong></td>
+</tr>
+<tr>
+<td>Dec 3</td>
+<td>84%</td>
+<td>4.2</td>
+<td>4.0</td>
+<td>Fixed balance formatting</td>
+</tr>
+<tr>
+<td>Nov 26</td>
+<td>82%</td>
+<td>4.2</td>
+<td>3.9</td>
+<td>Added 5 new tests</td>
+</tr>
+<tr>
+<td>Nov 19</td>
+<td>86%</td>
+<td>4.1</td>
+<td>4.0</td>
+<td>Improved instructions</td>
+</tr>
+<tr>
+<td>Nov 12</td>
+<td>78%</td>
+<td>4.0</td>
+<td>3.8</td>
+<td>Initial baseline</td>
+</tr>
+</tbody>
+</table>
 
 **Look for:**
 - ↗ Upward trends (good!)
@@ -753,10 +845,10 @@ You've got this! 🎯
 
 ## Related Articles
 
-- [Why Evaluate Your AI Agent](./00-why-evaluate-your-ai-agent.md) - Why testing matters
-- [Capabilities Overview](./01-capabilities-overview.md) - What the framework can do
-- [Creating Your First Test](./02-creating-your-first-test.md) - Get started
-- [Understanding Quality Criteria](./03-understanding-quality-criteria.md) - Set standards
+- [Evaluation Framework Introduction](./00_intro_to_evaluation.md) - Why testing matters
+- [Capabilities Overview](./02_capabilities_overview.md) - What the framework can do
+- [Creating Your First Test](./02_creating_your_first_test.md) - Get started
+- [Quality Criteria and Thresholds](./03_quality_criteria.md) - Set standards
 - [Running Tests and Results](./04-running-tests-and-results.md) - Execute and interpret
 - [Building Effective Tests](./05-building-effective-tests.md) - Best practices
 - [Organizing Test Suites](./06-organizing-test-suites.md) - Structure your tests

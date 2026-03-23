@@ -17,20 +17,50 @@ Several standard criteria are provided out of the box. You can use them or defin
 
   Example: "What's my checking account balance?"
 
-  |          | Response                                                     | Score |
-  | -------- | ------------------------------------------------------------ | ----- |
-  | **High** | "Your checking account (ending in 1234) has a balance of $1,234.56 as of today." | 5     |
-  | **Low**  | "Your checking account has about $1,200." (wrong amount, no details) | 2     |
+<table>
+<tbody>
+<tr>
+<td></td>
+<td><strong>Response</strong></td>
+<td><strong>Score</strong></td>
+</tr>
+<tr>
+<td><strong>High</strong></td>
+<td>"Your checking account (ending in 1234) has a balance of $1,234.56 as of today."</td>
+<td>5</td>
+</tr>
+<tr>
+<td><strong>Low</strong></td>
+<td>"Your checking account has about $1,200." (wrong amount, no details)</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
 
   
 
 * **Relevance** - Measures whether the response actually answers the customer's question.
   Example: "What's my checking account balance?"
 
-  |          | Response                                                     | Score |
-  | -------- | ------------------------------------------------------------ | ----- |
-  | **High** | "Your checking account (ending in 1234) has a balance of $1,234.56 as of today." | 5     |
-  | **Low**  | "We offer many types of accounts including checking, savings, and CDs. Checking accounts are great for everyday transactions..." | 1     |
+<table>
+<tbody>
+<tr>
+<td></td>
+<td><strong>Response</strong></td>
+<td><strong>Score</strong></td>
+</tr>
+<tr>
+<td><strong>High</strong></td>
+<td>"Your checking account (ending in 1234) has a balance of $1,234.56 as of today."</td>
+<td>5</td>
+</tr>
+<tr>
+<td><strong>Low</strong></td>
+<td>"We offer many types of accounts including checking, savings, and CDs. Checking accounts are great for everyday transactions..."</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -62,10 +92,25 @@ Several standard criteria are provided out of the box. You can use them or defin
 
   Example: "What's my checking account balance?"
 
-  |          | Response                                                     | Score |
-  | -------- | ------------------------------------------------------------ | ----- |
-  | **High** | "I'd be happy to help! Your checking account currently has $1,234.56. Is there anything else I can assist you with?" | 5     |
-  | **Low**  | "Your balance is $1234.56. Next question."                   | 1     |
+<table>
+<tbody>
+<tr>
+<td></td>
+<td><strong>Response</strong></td>
+<td><strong>Score</strong></td>
+</tr>
+<tr>
+<td><strong>High</strong></td>
+<td>"I'd be happy to help! Your checking account currently has $1,234.56. Is there anything else I can assist you with?"</td>
+<td>5</td>
+</tr>
+<tr>
+<td><strong>Low</strong></td>
+<td>"Your balance is $1234.56. Next question."</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -89,13 +134,40 @@ When creating a custom criterion, provide:
 
 ## Scoring Scale Reference
 
-| Score | Meaning     | Description                               |
-|-------|-------------|-------------------------------------------|
-| 5     | Excellent   | Exceptional quality, exceeds expectations |
-| 4     | Good        | Solid quality, meets expectations         |
-| 3     | Fair        | Below expectations, needs improvement     |
-| 2     | Poor        | Significant issues                        |
-| 1     | Failing     | Unacceptable quality                      |
+<table>
+<tbody>
+<tr>
+<td><strong>Score</strong></td>
+<td><strong>Meaning</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Excellent</td>
+<td>Exceptional quality, exceeds expectations</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Good</td>
+<td>Solid quality, meets expectations</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Fair</td>
+<td>Below expectations, needs improvement</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Poor</td>
+<td>Significant issues</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Failing</td>
+<td>Unacceptable quality</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -117,12 +189,35 @@ Use for stylistic qualities where some variation is acceptable: clarity, politen
 
 ### Recommended Starting Points
 
-| Criterion  | Recommended | Critical Systems |
-| ---------- | ----------- | ---------------- |
-| Accuracy   | MIN 4.0     | MIN 4.5          |
-| Relevance  | MIN 4.0     | MIN 4.0          |
-| Clarity    | AVG 3.5-4.0 | AVG 4.0          |
-| Politeness | AVG 3.5     | AVG 3.5          |
+<table>
+<tbody>
+<tr>
+<td><strong>Criterion</strong></td>
+<td><strong>Recommended</strong></td>
+<td><strong>Critical Systems</strong></td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>MIN 4.0</td>
+<td>MIN 4.5</td>
+</tr>
+<tr>
+<td>Relevance</td>
+<td>MIN 4.0</td>
+<td>MIN 4.0</td>
+</tr>
+<tr>
+<td>Clarity</td>
+<td>AVG 3.5-4.0</td>
+<td>AVG 4.0</td>
+</tr>
+<tr>
+<td>Politeness</td>
+<td>AVG 3.5</td>
+<td>AVG 3.5</td>
+</tr>
+</tbody>
+</table>
 
 These are defaults — adjust based on actual scores once you start running tests. If your agent consistently scores 3.8 on accuracy, either improve the agent or lower the threshold temporarily and raise it gradually.
 
@@ -142,11 +237,39 @@ These are defaults — adjust based on actual scores once you start running test
 
 **Threshold check:**
 
-| Criterion  | Score | Threshold  | Result |
-|------------|-------|------------|--------|
-| Accuracy   | 5.0   | MIN 4.0    | PASS   |
-| Relevance  | 5.0   | MIN 4.0    | PASS   |
-| Clarity    | 4.5   | AVG 4.0    | PASS   |
-| Politeness | 4.0   | AVG 3.5    | PASS   |
+<table>
+<tbody>
+<tr>
+<td><strong>Criterion</strong></td>
+<td><strong>Score</strong></td>
+<td><strong>Threshold</strong></td>
+<td><strong>Result</strong></td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>5.0</td>
+<td>MIN 4.0</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Relevance</td>
+<td>5.0</td>
+<td>MIN 4.0</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Clarity</td>
+<td>4.5</td>
+<td>AVG 4.0</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Politeness</td>
+<td>4.0</td>
+<td>AVG 3.5</td>
+<td>PASS</td>
+</tr>
+</tbody>
+</table>
 
 **Overall: PASS**

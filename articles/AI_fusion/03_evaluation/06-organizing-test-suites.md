@@ -641,6 +641,6 @@ Now that you know how to organize test suites, you're ready to:
 **Next Article:** [Best Practices and Maintenance](./07-best-practices.md)
 
 **Related Articles:**
-- [Creating Your First Test](./02-creating-your-first-test.md) - Where to save new tests
+- [Creating Your First Test](./02_creating_your_first_test.md) - Where to save new tests
 - [Running Tests and Results](./04-running-tests-and-results.md) - Running entire suites
 - [Building Effective Tests](./05-building-effective-tests.md) - What tests to organize

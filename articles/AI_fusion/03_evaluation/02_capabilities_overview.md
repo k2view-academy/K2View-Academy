@@ -15,12 +15,31 @@
 ## Quality Scoring
 
 * **Multi-dimensional evaluation.** Every response is scored independently on each quality dimension:
-  | Criterion     | What it measures                                   |
-  |---------------|----------------------------------------------------|
-  | **Accuracy**  | Is the information factually correct and complete?    |
-  | **Relevance** | Does the response answer what was asked?            |
-  | **Clarity**   | Is it well-organized and easy to understand?        |
-  | **Politeness**| Is the tone professional and appropriate?           |
+
+<table>
+<tbody>
+<tr>
+<td><strong>Criterion</strong></td>
+<td><strong>What it measures</strong></td>
+</tr>
+<tr>
+<td><strong>Accuracy</strong></td>
+<td>Is the information factually correct and complete?</td>
+</tr>
+<tr>
+<td><strong>Relevance</strong></td>
+<td>Does the response answer what was asked?</td>
+</tr>
+<tr>
+<td><strong>Clarity</strong></td>
+<td>Is it well-organized and easy to understand?</td>
+</tr>
+<tr>
+<td><strong>Politeness</strong></td>
+<td>Is the tone professional and appropriate?</td>
+</tr>
+</tbody>
+</table>
 
 * **Custom criteria** - Define additional dimensions for your domain, like Compliance, Security Awareness, HIPAA adherence, Empathy, or anything your business requires.
 
@@ -55,11 +74,30 @@
 
 * **Three modes:**
 
-  | Mode           | How it works                                                    | Best for                              |
-  |----------------|-----------------------------------------------------------------|---------------------------------------|
-  | **Interactive**| Run a single test on demand, watch results in real time         | Debugging, validating new tests       |
-  | **Batch**      | Execute all enabled tests across all suites via pipeline        | Regression testing, pre-deployment    |
-  | **Scheduled**  | Automated execution on a recurring schedule (nightly, weekly)   | Continuous monitoring, CI/CD          |
+<table>
+<tbody>
+<tr>
+<td><strong>Mode</strong></td>
+<td><strong>How it works</strong></td>
+<td><strong>Best for</strong></td>
+</tr>
+<tr>
+<td><strong>Interactive</strong></td>
+<td>Run a single test on demand, watch results in real time</td>
+<td>Debugging, validating new tests</td>
+</tr>
+<tr>
+<td><strong>Batch</strong></td>
+<td>Execute all enabled tests across all suites via pipeline</td>
+<td>Regression testing, pre-deployment</td>
+</tr>
+<tr>
+<td><strong>Scheduled</strong></td>
+<td>Automated execution on a recurring schedule (nightly, weekly)</td>
+<td>Continuous monitoring, CI/CD</td>
+</tr>
+</tbody>
+</table>
 
 * **Status tracking at all levels.** Monitor pass/fail status across suites and individual test cases.
 

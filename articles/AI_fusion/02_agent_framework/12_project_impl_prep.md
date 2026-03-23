@@ -52,11 +52,38 @@ According to this list, during an agentic flow, you can use an MTable actor to l
 
 Here is an example:
 
-| Domain | Description            | Rules                                                        | Tables                                                       | Goal_Description                                             |
-| ------ | ---------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| DDA    | Deposit Demand Account | If information about the customer's savings and current accounts is required | DDA_TRANSACTIONS, DDA_OVERDRAFTS, DDA_FEES, DDA_ACH_Transfers, DDA_ACCOUNTS, DDA_BRANCHES, DDA_Virtual_Accounts | Gather data regarding the customer's DDA accounts, including account types, balances, limits, overdraft transactions,  Fees, ACH transfers, virtual accounts, DDA transactions. Information about the DDA accounts is found in tables that their name start with DDA_. The main table is called DDA_Accounts and it includes all accounts held by this customer. All accounts in this table belong to the customer currently interacting with you. |
-| LOAN   | Loan and Mortgage      | If information about the customer's loans and mortgages is required | Loan_Escrow_Transactions, Loan_Interest_Transactions, Loan_Servicer_Changes, Loan_Covenant_Reviews, Loan_Payments, Loan_Interest_Rates, Loan_Accounts | Gather data regarding the customer's loans, including loan terms, payments, interest transactions, escrow transactions, servicer changes, and covenant reports. Note that a customer can have multiple loans, each identified by a unique loan_account_id, all linked to the customer currently interacting with you. |
-| CC     | Credit Card Management | If information about the customer's credit cards is required  | CCMS_Credit_Cards, CCMS_Credit_Card_Statements, CCMS_Credit_Card_Transactions, CCMS_Credit_Card_Payments | Gather data regarding the customer's credit cards, transactions, bank statements, and payments. |
+<table>
+<tbody>
+<tr>
+<td><strong>Domain</strong></td>
+<td><strong>Description</strong></td>
+<td><strong>Rules</strong></td>
+<td><strong>Tables</strong></td>
+<td><strong>Goal_Description</strong></td>
+</tr>
+<tr>
+<td>DDA</td>
+<td>Deposit Demand Account</td>
+<td>If information about the customer's savings and current accounts is required</td>
+<td>DDA_TRANSACTIONS, DDA_OVERDRAFTS, DDA_FEES, DDA_ACH_Transfers, DDA_ACCOUNTS, DDA_BRANCHES, DDA_Virtual_Accounts</td>
+<td>Gather data regarding the customer's DDA accounts, including account types, balances, limits, overdraft transactions, Fees, ACH transfers, virtual accounts, DDA transactions. Information about the DDA accounts is found in tables that their name start with DDA_. The main table is called DDA_Accounts and it includes all accounts held by this customer. All accounts in this table belong to the customer currently interacting with you.</td>
+</tr>
+<tr>
+<td>LOAN</td>
+<td>Loan and Mortgage</td>
+<td>If information about the customer's loans and mortgages is required</td>
+<td>Loan_Escrow_Transactions, Loan_Interest_Transactions, Loan_Servicer_Changes, Loan_Covenant_Reviews, Loan_Payments, Loan_Interest_Rates, Loan_Accounts</td>
+<td>Gather data regarding the customer's loans, including loan terms, payments, interest transactions, escrow transactions, servicer changes, and covenant reports. Note that a customer can have multiple loans, each identified by a unique loan_account_id, all linked to the customer currently interacting with you.</td>
+</tr>
+<tr>
+<td>CC</td>
+<td>Credit Card Management</td>
+<td>If information about the customer's credit cards is required</td>
+<td>CCMS_Credit_Cards, CCMS_Credit_Card_Statements, CCMS_Credit_Card_Transactions, CCMS_Credit_Card_Payments</td>
+<td>Gather data regarding the customer's credit cards, transactions, bank statements, and payments.</td>
+</tr>
+</tbody>
+</table>
 
 ### Create Sample Questions and SQL Queries
 
@@ -169,17 +196,60 @@ For each app, you should create the following flows. Their objectives and usage 
 
 The apps are managed in the `Implementation/LogicalUnits/aifusion/Mtable/apps.csv` file, where you should set the following parameters. This will enable the AI Fusion platform apps to use these parameters and operate accordingly: 
 
-| Parameter           | Description                                                  | Example                 |
-| ------------------- | ------------------------------------------------------------ | ----------------------- |
-| app_id              | The app ID                                                  | banking                 |
-| app_name            | Displays the name of the application                             | Banking                 |
-| chat_flow           | Name of the Broadway flow used for chat interactions         | Banking_Chat            |
-| synopsis_flow       | Broadway flow for generating customer synopses/summaries     | Banking_Synopsis        |
-| instances_flow      | Broadway flow for retrieving available instances             | customers_banking       |
-| story_flow          | Broadway flow for generating the customer profile displayed in the Chat Playground UI | Banking_CustomerProfile |
-| lu_name             | The base business entity LU (Data Product) associated with this app | customer_bank           |
-| search_instance_api | API endpoint path for searching LUIs by IID. It is used when Search User option is enabled in the Chat Playground app | /lu/customer_bank/      |
-| description         | A human-readable description of the app                        | Banking App             |
+<table>
+<tbody>
+<tr>
+<td><strong>Parameter</strong></td>
+<td><strong>Description</strong></td>
+<td><strong>Example</strong></td>
+</tr>
+<tr>
+<td>app_id</td>
+<td>The app ID</td>
+<td>banking</td>
+</tr>
+<tr>
+<td>app_name</td>
+<td>Displays the name of the application</td>
+<td>Banking</td>
+</tr>
+<tr>
+<td>chat_flow</td>
+<td>Name of the Broadway flow used for chat interactions</td>
+<td>Banking_Chat</td>
+</tr>
+<tr>
+<td>synopsis_flow</td>
+<td>Broadway flow for generating customer synopses/summaries</td>
+<td>Banking_Synopsis</td>
+</tr>
+<tr>
+<td>instances_flow</td>
+<td>Broadway flow for retrieving available instances</td>
+<td>customers_banking</td>
+</tr>
+<tr>
+<td>story_flow</td>
+<td>Broadway flow for generating the customer profile displayed in the Chat Playground UI</td>
+<td>Banking_CustomerProfile</td>
+</tr>
+<tr>
+<td>lu_name</td>
+<td>The base business entity LU (Data Product) associated with this app</td>
+<td>customer_bank</td>
+</tr>
+<tr>
+<td>search_instance_api</td>
+<td>API endpoint path for searching LUIs by IID. It is used when Search User option is enabled in the Chat Playground app</td>
+<td>/lu/customer_bank/</td>
+</tr>
+<tr>
+<td>description</td>
+<td>A human-readable description of the app</td>
+<td>Banking App</td>
+</tr>
+</tbody>
+</table>
 
 #### Usage
 
