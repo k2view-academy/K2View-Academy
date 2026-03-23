@@ -4,7 +4,7 @@
 
 ## Invoking an LLM
 
-The \`LLMInvoke\` actor is the primary method through which requests are sent to an LLM. It sends structured messages and receives responses.
+The `LLMInvoke` actor is the primary method through which requests are sent to an LLM. It sends structured messages and receives responses.
 
 ### Message Roles
 
@@ -121,10 +121,10 @@ This actor merges multiple message arrays into a single array before passing the
 
 **Example Flow:**
 
-\`\`\`
+```
 LLMConst (System) ────┐
                       │
 LLMConst (Examples) ──┼──▶ LLMAppend ──▶ LLMInvoke
                       │
 LLMConst (User) ──────┘
-\`\`\`
+```

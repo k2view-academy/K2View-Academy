@@ -4,7 +4,7 @@ The AI Fusion chat application supports customization through CSS variables, tex
 
 ## Configuration Files Location
 
-\`\`\`
+```
 Implementation/LogicalUnits/aifusion/web/chat/
 ├── styles/
 │   ├── style.css# Base styles (do not modify)
@@ -15,15 +15,15 @@ Implementation/LogicalUnits/aifusion/web/chat/
 │   ├── myappid-logo.png# your app logo
 │   ├── myappid-mini-logo.png# your app badge
 └── translations.json                  # UI text phrases 
-\`\`\`
+```
 
 
 
 ## Create Custom CSS File
 
-Create a file named \`styles/{aifusionAppId}-customize-style.css\`. 
+Create a file named `styles/{aifusionAppId}-customize-style.css`. 
 
-The app will automatically load this file based on the configured \`aifusionAppId\`. If not found, it falls back to \`customize-style.css\`.
+The app will automatically load this file based on the configured `aifusionAppId`. If not found, it falls back to `customize-style.css`.
 
 >  The *aifusionAppId* is the one you defined in the apps.csv and referred to at the apps.json. Read [here](12_project_impl_prep.md) for more setup information.
 
@@ -214,25 +214,25 @@ The app will automatically load this file based on the configured \`aifusionAppI
 
 ## Add Images
 
-Place your logo and badge images in the \`img/\` folder:
+Place your logo and badge images in the `img/` folder:
 
-- **Main logo**: \`{aifusionAppId}-logo.png\` - Displayed in the header
-- **Mini logo**: \`{aifusionAppId}-mini-logo.png\` - Used as assistant badge in chat messages
+- **Main logo**: `{aifusionAppId}-logo.png` - Displayed in the header
+- **Mini logo**: `{aifusionAppId}-mini-logo.png` - Used as assistant badge in chat messages
 
 Reference them in your CSS:
 
-\`\`\`css
+```css
 --main-logo: url("../img/myappid-logo.png");
 --assistant-badge: url('../chat/img/myappid-mini-logo.png');
-\`\`\`
+```
 
 
 
 ## Configure Texts
 
-Add entries to \`translations.json\` with your \`aifusionAppId\` prefix (e.g. *myappid*):
+Add entries to `translations.json` with your `aifusionAppId` prefix (e.g. *myappid*):
 
-\`\`\`json
+```json
 {
     "myappid-summary_button": "Chat Summary",
     "myappid-user_profile_button": "User Profile",
@@ -248,4 +248,4 @@ Add entries to \`translations.json\` with your \`aifusionAppId\` prefix (e.g. *m
     "myappid-chat_input_placeholder": "Ask me anything...",
     "myappid-chat_initial_message": "Hello! How can I assist you today?"
 }
-\`\`\`
+```

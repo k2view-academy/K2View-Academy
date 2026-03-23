@@ -150,6 +150,6 @@ You can create multiple LLM interfaces for different purposes:
 
 To use a specific interface in your flow:
 
-1. Create the interface with a unique tag (e.g., \`sql-generator\`)
-2. In your Broadway flow, configure the LLM actor's \`interface\` parameter
-3. Use the format \`llm://[tag]\` (e.g., \`llm://sql-generator\`)
+1. Create the interface with a unique tag (e.g., `sql-generator`)
+2. In your Broadway flow, configure the LLM actor's `interface` parameter
+3. Use the format `llm://[tag]` (e.g., `llm://sql-generator`)

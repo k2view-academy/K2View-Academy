@@ -65,12 +65,12 @@ When the conversation entry-point flow calls the Orchestrator actor, it passes s
 
 ## The Planner
 
-If a request requires gathering information or executing multiple steps but does not match a predefined sub-agent, the \`orchestrator_planner\` is triggered.
+If a request requires gathering information or executing multiple steps but does not match a predefined sub-agent, the `orchestrator_planner` is triggered.
 
 The LLM is tasked with generating a step-by-step execution plan using several resources:
 
 1. **Tools and Agent List:** A list of available and relevant (by tags) Broadway flows, along with descriptions and remarks added to input parameters. The LLM uses these descriptions to choose the most-suitable tool and determine the required inputs. Relevant sub-agents (by tag) are also providers. 
-2. **Sample Plans** (Optional): JSON files (e.g., \`Banking_plans.json\`) — containing pre-built templates — that show the LLM how to combine tools to accomplish similar objectives.
+2. **Sample Plans** (Optional): JSON files (e.g., `Banking_plans.json`) — containing pre-built templates — that show the LLM how to combine tools to accomplish similar objectives.
 3. **Corporate Procedures** (Optional): Documents that define business rules or provide step-by-step instructions (e.g., verification criteria for credit limit reduction).
 
 Once the plan steps are prepared, the Planner executes them step-by-step. 
@@ -81,7 +81,7 @@ Once the plan steps are prepared, the Planner executes them step-by-step.
 
 ## The Worker Sub-agents
 
-A worker sub-agent is a tagged Broadway flow (for example, \`loans_subagent\`) designed to handle a specific domain or category of requests, such as banking loans. 
+A worker sub-agent is a tagged Broadway flow (for example, `loans_subagent`) designed to handle a specific domain or category of requests, such as banking loans. 
 
 ### Sub-agent Discovery
 

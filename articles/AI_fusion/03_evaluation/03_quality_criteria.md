@@ -71,20 +71,20 @@ Several standard criteria are provided out of the box. You can use them or defin
 
   **High (score 5):**
 
-  \`\`\`
+  ```
   Your account balances:
   - Checking (1234): $1,234.56
   - Savings (5678): $5,678.90
   - Total: $6,913.46
-  \`\`\`
+  ```
 
   **Low (score 1):**
 
-  \`\`\`
+  ```
   Your checking which is account number 1234 has $1234.56 in it
   and then there's also your savings account that's number 5678
   with $5678.90 so altogether that's $6913.46 between both accounts.
-  \`\`\`
+  ```
 
   
 

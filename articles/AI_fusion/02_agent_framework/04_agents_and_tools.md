@@ -56,7 +56,7 @@ The GenAI Data Fusion framework includes two categories of agents, both represen
 
 The implementation agents act as worker sub-agents in the agentic workflow, with the aim of accomplishing domain-specific goals. These are Broadway flows tagged to handle specific domains or request types.
 
-Example: The \`loans_subagent\` tag identifies an agent specialized in banking loan inquiries.
+Example: The `loans_subagent` tag identifies an agent specialized in banking loan inquiries.
 
 Read more practice information [here](04a_agentic_flow_agents.md) about the agentic workflow's built-in agents and worker sub-agents.
 
@@ -103,7 +103,7 @@ This information is passed to the LLM to aid in tool selection during plan execu
 
 ### Tool Types
 
-While there are several built-in tools like \`queryExecute\`, tools are usually built as part of the project Implementation.
+While there are several built-in tools like `queryExecute`, tools are usually built as part of the project Implementation.
 
 It is recommended to build tools at the data products. At your agentic flow you shall specify these tools, where AI Fusion agentic flow can call them either directly - as Broadway flow - from aifusion or from the relevant the data product, or as MCP.
 
