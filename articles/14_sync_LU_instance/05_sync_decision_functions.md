@@ -12,7 +12,9 @@ A Decision function is a Java [project function](/articles/07_table_population/0
   * If the decision function returns the same result for each population, it is recommended to set it on the Root Table’s population. Then invoke the [skipSync() method](/articles/14_sync_LU_instance/09_skip_sync.md) in the Decision function's code to skip the sync of the LUI if the conditions of the sync are not met. This way, Fabric performs a one-time execution of the Decision function on each LUI instead of executing the Decision function on each population. 
   * When defined for a Table Population, the Decision function runs on the defined population.
 
-[Click for more information about Creating a Decision Function.](/articles/14_sync_LU_instance/05_sync_decision_functions.md#how-can-i-create-a-decision-function)
+<studio>
+
+[Click for more information about Creating a Decision Function.](/articles/14_sync_LU_instance/05_sync_decision_functions.md#how-can-i-create-a-decision-function) </studio>
 
 [Click for more information about Sync Levels.](/articles/14_sync_LU_instance/07_sync_levels.md)
 
@@ -65,20 +67,20 @@ Run a sync during off-peak hours.
 A Decision function can check the current date and time. 
 * If the current date and time = off-peak, return True to Sync the LUI.
 * If the current date and time = peak, return False to skip the Sync.\
-In this example, it is recommended to use the [skipSync() method](/articles/14_sync_LU_instance/09_skip_sync.md) in the Decision function to perform a one-time execution of the Decision function per LUI.
+  In this example, it is recommended to use the [skipSync() method](/articles/14_sync_LU_instance/09_skip_sync.md) in the Decision function to perform a one-time execution of the Decision function per LUI.
 
 <studio>
 
 ### How Can I Create a Decision Function?
 
 1.	Go to the **Project Tree**, click the **LU** or **Shared Objects** and then right click the **Java folder**.
-2.	Click **New Function** and set the **Function Type** to **Decision Function**.
-3.	Define the **Name** of the **Function**.
-4.	To define the **Category** of the **Function** either:\
+  2.Click **New Function** and set the **Function Type** to **Decision Function**.
+  3.Define the **Name** of the **Function**.
+  4.To define the **Category** of the **Function** either:\
      a. Select a **Category** from the dropdown list.\
      b. Type in a **New Category**.
-5.	Write the **Function Code** and return **True** or **False**. The **Decision Function** overrides the **Sync Mode** also when it is defined as **FORCE**. 
-6.	Click **Save**.
+  5.Write the **Function Code** and return **True** or **False**. The **Decision Function** overrides the **Sync Mode** also when it is defined as **FORCE**. 
+  6.Click **Save**.
 
 </studio>
 
@@ -94,7 +96,7 @@ In this example, it is recommended to use the [skipSync() method](/articles/14_s
 
 [Click for more information about Decision Function Code Examples.](/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md#decision-functions---code-examples)
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](/articles/14_sync_LU_instance/04_sync_methods.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md)
+[![Previous](/articles/images/Previous.png)](/articles/14_sync_LU_instance/04_sync_methods.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md)
 
 
 
