@@ -16,7 +16,7 @@ A Decision function is a Java [project function](/articles/07_table_population/0
 
 <studio>[Click for more information about Creating a Decision Function.](/articles/14_sync_LU_instance/05_sync_decision_functions.md#how-can-i-create-a-decision-function) </studio>
 
-<web>[Click for more information about Creating a Project Function.](/articles/107_table_population/10_creating_a_project_function.md) </web>
+<web>[Click for more information about Creating a Project Function.](/articles/07_table_population/10_creating_a_project_function.md) </web>
 
 [Click for more information about Sync Levels.](/articles/14_sync_LU_instance/07_sync_levels.md)
 
