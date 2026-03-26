@@ -12,9 +12,11 @@ A Decision function is a Java [project function](/articles/07_table_population/0
   * If the decision function returns the same result for each population, it is recommended to set it on the Root Table’s population. Then invoke the [skipSync() method](/articles/14_sync_LU_instance/09_skip_sync.md) in the Decision function's code to skip the sync of the LUI if the conditions of the sync are not met. This way, Fabric performs a one-time execution of the Decision function on each LUI instead of executing the Decision function on each population. 
   * When defined for a Table Population, the Decision function runs on the defined population.
 
-<studio>
 
-[Click for more information about Creating a Decision Function.](/articles/14_sync_LU_instance/05_sync_decision_functions.md#how-can-i-create-a-decision-function) </studio>
+
+<studio>[Click for more information about Creating a Decision Function.](/articles/14_sync_LU_instance/05_sync_decision_functions.md#how-can-i-create-a-decision-function) </studio>
+
+<web>[Click for more information about Creating a Project Function.](/articles/107_table_population/10_creating_a_project_function.md) </web>
 
 [Click for more information about Sync Levels.](/articles/14_sync_LU_instance/07_sync_levels.md)
 
