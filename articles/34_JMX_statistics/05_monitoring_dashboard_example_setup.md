@@ -17,7 +17,7 @@ The monitoring tools used for the dashboard example are: [Grafana](https://grafa
   - Promtail should be installed and should run on all machines.
   - Loki should be installed on the monitoring machine and should listen to all Promtail instances.
   - Promtail instances should send the application's log files to Loki to be monitored.
-- Promtheus and Loki should be added as data sources in Grafana.
+- Prometheus and Loki should be added as data sources in Grafana.
 - When you start running Promtail, Loki should already be running.
 - The Dashboard example assumes that the Fabric log files are located on the Fabric cluster nodes at "/opt/apps/k2view/logs/k2fabric.log". If your deployment is located in a different location, modify the Fabric Log metric's query. A similar change may be needed in the Promtail config file.
 
@@ -33,7 +33,7 @@ After making the changes and adjustments, as per your deployment, locate the fil
 
 ### Promtail 
 
-To illustrate a Fabric cluster with two nodes, you can find Promtail config example files [here](/articles/34_JMX_statistics/resources/promtail-config-example-fabric1.yaml) for node 1 and [here](/articles/34_JMX_statistics/resources/promtail-config-example-fabric1.yaml) for node 2.
+To illustrate a Fabric cluster with two nodes, you can find Promtail config example files [here](/articles/34_JMX_statistics/resources/promtail-config-example-fabric1.yaml) for node 1 and [here](/articles/34_JMX_statistics/resources/promtail-config-example-fabric2.yaml) for node 2.
 
 After making the changes and adjustments as per your deployment, locate the Promtail config file in the Promtail installation directory and rename it to "promtail-fabric-config.yaml".
 
