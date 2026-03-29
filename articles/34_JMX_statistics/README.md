@@ -2,7 +2,6 @@
 
 K2view Fabric exposes runtime and application telemetry through JMX MBeans and a bundled Prometheus JMX Exporter. This documentation set covers the monitoring architecture, how to enable and verify metric collection, and how to deploy and configure the observability stack for Kubernetes and VM / bare-metal environments.
 
-<strong>Start Here</strong>
 <ul>
   <li><a href="/articles/34_JMX_statistics/K2view_Fabric_Observability_Guide_to_the_Guide.md">K2view Fabric Observability — Guide to 
   <li><a href="/articles/34_JMX_statistics/03_monitoring.md">Fabric Monitoring</a></li>
