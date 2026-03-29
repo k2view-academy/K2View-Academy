@@ -155,14 +155,7 @@
 				{
 					"display name": "Infrastructure Components",
 					"value": "45_infrastructure_components"
-				}
-			]
-		},
-		{
-			"group display name": "Fabric Implementation",
-			"group icon": "images/implementation-icon.png",
-			"visible in main": true,
-			"topics": [
+				},
 				{
 					"display name": "Fabric Studio",
 					"value": "04_fabric_studio"
@@ -307,8 +300,19 @@
 				{
 					"display name": "Fabric Monitoring",
 					"value": "34_JMX_statistics"
-				}
+				}				
 			]
+		},
+		{
+			"group display name": "Synthetic Data Management",
+			"group icon": "images/implementation-icon.png",
+			"visible in main": true,
+			"topics": [
+				{
+					"display name": "SDG Solution",
+					"value": "TDM/sdg_overview"
+				}				
+			]			
 		},
 		{
 			"group display name": "Fabric Catalog",
