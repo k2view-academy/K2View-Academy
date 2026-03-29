@@ -104,6 +104,17 @@
 			]
 		},
 		{
+			"group display name": "Synthetic Data Management",
+			"group icon": "images/implementation-icon.png",
+			"visible in main": true,
+			"topics": [
+				{
+					"display name": "SDG Solution",
+					"value": "TDM/sdg_overview"
+				}				
+			]			
+		},		
+		{
 			"group display name": "GenAI Data Fusion",
 			"group icon": "images/ai-icon.png",
 			"visible in main": true,
@@ -302,17 +313,6 @@
 					"value": "34_JMX_statistics"
 				}				
 			]
-		},
-		{
-			"group display name": "Synthetic Data Management",
-			"group icon": "images/implementation-icon.png",
-			"visible in main": true,
-			"topics": [
-				{
-					"display name": "SDG Solution",
-					"value": "TDM/sdg_overview"
-				}				
-			]			
 		},
 		{
 			"group display name": "Fabric Catalog",
