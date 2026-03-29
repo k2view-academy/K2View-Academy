@@ -6,6 +6,7 @@
 
 * [Introduction](#introduction)
 * [How to Use This Guide](#how-to-use-this-guide)
+* [The Content Journey](#the-content-journey)
 * [The Document Map](#the-document-map)
 * [Reading Path Summary](#reading-path-summary)
 * [What This Documentation Does Not Cover](#what-this-documentation-does-not-cover)
