@@ -6,14 +6,7 @@
 
 * [Introduction](#introduction)
 * [How to Use This Guide](#how-to-use-this-guide)
-* [The Complete Document Map](#the-complete-document-map)
-  * [Stage 0 — Why Monitoring Matters *— context for all readers*](#stage-0-why-monitoring-matters-context-for-all-readers)
-  * [Stage 1 — Understand the Architecture *— choose your path here*](#stage-1-understand-the-architecture-choose-your-path-here)
-  * [Stage 2 — Understand What Fabric Exposes *— the metric surface*](#stage-2-understand-what-fabric-exposes-the-metric-surface)
-  * [Stage 3 — Enable and Verify *— get metrics flowing*](#stage-3-enable-and-verify-get-metrics-flowing)
-  * [Stage 4 — Deploy and Configure *— paths diverge again here*](#stage-4-deploy-and-configure-paths-diverge-again-here)
-  * [Stage 5 — Control Metric Volume *— for all deployment models*](#stage-5-control-metric-volume-for-all-deployment-models)
-  * [Stage 6 — Extend to Third-Party Platforms *— optional — if not using the K2view default stack*](#stage-6-extend-to-third-party-platforms-optional-if-not-using-the-k2view-default-stack)
+* [The Document Map](#the-document-map)
 * [Reading Path Summary](#reading-path-summary)
 * [What This Documentation Does Not Cover](#what-this-documentation-does-not-cover)
 * [Key Concepts Quick Reference](#key-concepts-quick-reference)
@@ -49,105 +42,52 @@ Most readers will need one of three paths:
 
 * Path D — I am on an air-gapped Kubernetes cluster without K2cloud Orchestrator
 
-All three paths share a common foundation in Stages 0 and 1. After that, they diverge. The paths reconverge in Stages 4 and 5 for configuration tuning and third-party integration.
 
-# The Complete Document Map
+# The Content Journey
+<strong>Start Here</strong>
+<ul>
+  <li><a href="/articles/34_JMX_statistics/K2view_Fabric_Observability_Guide_to_the_Guide.md">K2view Fabric Observability — Guide to the Documentation</a></li>
+</ul>
 
-The following table lists every document in this set, its type, and the deployment model it covers. Use it as a quick reference index.
+<strong>Concepts and Architecture</strong>
+<ul>
+  <li><a href="/articles/34_JMX_statistics/03_monitoring.md">Fabric Monitoring</a></li>
+  <li><a href="/articles/34_JMX_statistics/01_JMX_overview.md">JMX Overview</a></li>
+  <li><a href="/articles/34_JMX_statistics/K2view_Observability_Architecture_for_Fabric.md">K2view Observability Architecture for Fabric</a></li>
+  <li><a href="/articles/34_JMX_statistics/K2view_VM_Bare-Metal_Monitoring_Stack_for_Fabric.md">K2view VM / Bare-Metal Monitoring Stack for Fabric</a></li>
+  <li><a href="/articles/34_JMX_statistics/K2view_Kubernetes_Monitoring_Stack_for_Fabric.md">K2view Kubernetes Monitoring Stack for Fabric</a></li>
+  <li><a href="/articles/34_JMX_statistics/Fabric_Monitoring_Air-Gapped_Kubernetes.md">Fabric Monitoring in Air-Gapped Kubernetes Deployments</a></li>
+</ul>
 
-<table>
-  <thead>
-    <tr>
-      <th>Document</th>
-      <th>Type</th>
-      <th>Covers</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Fabric Monitoring</td>
-      <td>Concept</td>
-      <td>Why monitoring matters for Fabric in production</td>
-    </tr>
-    <tr>
-      <td>JMX Overview</td>
-      <td>Concept</td>
-      <td>What JMX and MBeans are, why Fabric uses them</td>
-    </tr>
-    <tr>
-      <td>JMX Format</td>
-      <td>Reference</td>
-      <td>The metric format Fabric exposes — names, labels, types</td>
-    </tr>
-    <tr>
-      <td>JMX Custom Statistics</td>
-      <td>How-to</td>
-      <td>How to add custom metrics to the Fabric JMX surface</td>
-    </tr>
-    <tr>
-      <td>K2view Observability Architecture for Fabric</td>
-      <td>Reference</td>
-      <td>All — full architecture across K8s and VM/bare-metal</td>
-    </tr>
-    <tr>
-      <td>K2view VM / Bare-Metal Monitoring Stack for Fabric</td>
-      <td>Reference</td>
-      <td>VM only — components, data flow, configuration</td>
-    </tr>
-    <tr>
-      <td>K2view Kubernetes Monitoring Stack for Fabric</td>
-      <td>Reference</td>
-      <td>K8s only — Grafana Agent, Thanos, enablement chain</td>
-    </tr>
-    <tr>
-      <td>Fabric Monitoring in Air-Gapped Kubernetes Deployments</td>
-      <td>Reference + How-to</td>
-      <td>K8s only — customer-owned clusters without K2cloud Orchestrator</td>
-    </tr>    
-    <tr>
-      <td>How to Enable the JMX Exporter for Fabric</td>
-      <td>How-to</td>
-      <td>All — K8s automated path and VM manual path</td>
-    </tr>
-    <tr>
-      <td>How to Verify That Fabric Is Exposing Metrics</td>
-      <td>How-to</td>
-      <td>All — validation procedure for both models</td>
-    </tr>
-    <tr>
-      <td>How to Configure the Collection Layer to Scrape Fabric Metrics</td>
-      <td>How-to</td>
-      <td>All — Grafana Agent (K8s) and Prometheus (VM)</td>
-    </tr>
-    <tr>
-      <td>How to Control Metric Volume with Filtering and Relabeling</td>
-      <td>How-to</td>
-      <td>All — River pipeline (K8s) and Prometheus YAML (VM)</td>
-    </tr>
-    <tr>
-      <td>How to Use the Shipped JMX Exporter with Third-Party Platforms</td>
-      <td>How-to</td>
-      <td>All — integration patterns for non-K2view monitoring stacks</td>
-    </tr>
-    <tr>
-      <td>Deploying the K2view Monitoring Stack on Kubernetes</td>
-      <td>How-to</td>
-      <td>K8s only — Terraform/Helm for Azure, GCP, AWS</td>
-    </tr>
-    <tr>
-      <td>Monitoring Dashboard Example</td>
-      <td>Reference</td>
-      <td>VM — the reference Grafana dashboard panels and queries</td>
-    </tr>
-    <tr>
-      <td>Monitoring Dashboard Example Setup</td>
-      <td>How-to</td>
-      <td>VM — setting up Prometheus, Loki, and Grafana for the dashboard</td>
-    </tr>
-  </tbody>
-</table>
+<strong>Metric Format and Custom Statistics</strong>
+<ul>
+  <li><a href="/articles/34_JMX_statistics/02_JMX_format.md">JMX Format</a></li>
+  <li><a href="/articles/34_JMX_statistics/03_JMX_custom.md">JMX Custom Statistics</a></li>
+</ul>
 
-## Stage 0 — Why Monitoring Matters *— context for all readers*
+<strong>Enable, Verify, and Deploy</strong>
+<ul>
+  <li><a href="/articles/34_JMX_statistics/How_to_Enable_the_JMX_Exporter_for_Fabric.md">How to Enable the JMX Exporter for Fabric</a></li>
+  <li><a href="/articles/34_JMX_statistics/How_to_Verify_That_Fabric_Is_Exposing_Metrics.md">How to Verify That Fabric Is Exposing Metrics</a></li>
+  <li><a href="/articles/34_JMX_statistics/05_monitoring_dashboard_example_setup.md">Monitoring Dashboard Example Setup</a></li>
+  <li><a href="/articles/34_JMX_statistics/04_monitoring_dashboard_example.md">Monitoring Dashboard Example</a></li>
+  <li><a href="/articles/34_JMX_statistics/Deploying_the_K2view_Monitoring_Stack_on_Kubernetes.md">Deploying the K2view Monitoring Stack on Kubernetes</a></li>
+</ul>
+
+<strong>Configure and Tune</strong>
+<ul>
+  <li><a href="/articles/34_JMX_statistics/How_to_Configure_the_Collection_Layer_to_Scrape_Fabric_Metrics.md">How to Configure the Collection Layer to Scrape Fabric Metrics</a></li>
+  <li><a href="/articles/34_JMX_statistics/How_to_Control_Metric_Volume_with_Filtering_and_Relabeling.md">How to Control Metric Volume with Filtering and Relabeling</a></li>
+</ul>
+
+<strong>Third-Party Integration</strong>
+<ul>
+  <li><a href="/articles/34_JMX_statistics/How_to_Use_the_Shipped_JMX_Exporter_with_Third_Party_Platforms.md">How to Use the Shipped JMX Exporter with Third-Party Monitoring Platforms</a></li>
+</ul>
+
+# The Document Map
+
+## Why Monitoring Matters *— context for all readers*
 
 > **[ All deployment models ]** Read these first, regardless of your deployment model. They take 10 minutes and frame everything that follows.
 
@@ -163,9 +103,9 @@ Before diving into setup and configuration, it helps to understand what Fabric m
 
 After reading these two articles you will understand why the JMX Exporter exists and what problem it solves. Everything in the rest of the documentation builds on this foundation.
 
-## Stage 1 — Understand the Architecture *— choose your path here*
+## Understand the Architecture *— choose your path here*
 
-Stage 1 is where the reading paths diverge. Start with the full architecture overview, then read the stack document that matches your deployment model.
+This is where the reading paths diverge. Start with the full architecture overview, then read the stack document that matches your deployment model.
 
 > **[ All deployment models ]** Read this first — it covers both models and is the anchor for all other documents.
 >
@@ -193,9 +133,9 @@ For air-gapped Kubernetes deployments on customer-owned clusters without K2cloud
 >
 > *This document applies to air-gapped Kubernetes deployments on customer-owned AKS, GKE, or EKS clusters that do not use K2cloud Orchestrator or space profiles. For K2cloud SaaS and K2cloud Self-hosted customers, see K2view Kubernetes Monitoring Stack for Fabric. For VM and bare-metal deployments, see K2view VM / Bare-Metal Monitoring Stack for Fabric.*
 
-After Stage 1 you will have a clear mental model of the monitoring system for your environment. Stages 2 onward are hands-on.
+After reading this content you will have a clear mental model of the monitoring system for your environment. 
 
-## Stage 2 — Understand What Fabric Exposes *— the metric surface*
+## Understand What Fabric Exposes *— the metric surface*
 
 > **[ All deployment models ]** These documents cover what Fabric actually exposes and how to read it. Both deployment models.
 
@@ -211,11 +151,9 @@ Before configuring any collection layer, understand what the Fabric JMX Exporter
 
 These are reference articles — you do not need to memorize them before proceeding. Return to JMX Format when you are writing filtering rules and need to know which metric families exist.
 
-## Stage 3 — Enable and Verify *— get metrics flowing*
+## Enable and Verify *— get metrics flowing*
 
-> **[ All deployment models ]** This stage is hands-on. The procedure differs between K8s and VM but the validation step is the same.
-
-This is the first operational stage. By the end of Stage 3, Fabric will be actively exposing metrics and you will have confirmed that the endpoint is working.
+> **[ All deployment models ]** The procedure differs between K8s and VM but the validation step is the same.
 
 > **How-to How to Enable the JMX Exporter for Fabric**
 >
@@ -225,17 +163,17 @@ This is the first operational stage. By the end of Stage 3, Fabric will be activ
 >
 > *How to confirm the JMX Exporter is active and serving metrics. Covers where to run the curl command (from inside the pod in Kubernetes, or on the host for VMs), what a successful response looks like, and a full set of common failure modes and their causes.*
 
-After Stage 3, you should be able to run:
+You should be able to run:
 
 ```
 curl http://localhost:7170/metrics
 ```
 
-and receive Prometheus-format output. Do not proceed to Stage 4 until this is working.
+and receive Prometheus-format output. 
 
-## Stage 4 — Deploy and Configure *— paths diverge again here*
+## Deploy and Configure *— paths diverge again here*
 
-Stage 4 is where you set up the collection layer that will scrape Fabric metrics and make them available in Prometheus and Grafana. The steps are very different between VM and Kubernetes deployments.
+This is where you set up the collection layer that scrapes Fabric metrics and makes them available in Prometheus and Grafana. The steps are very different between VM and Kubernetes deployments.
 
 > **[ VM / Bare-Metal ]** VM / Bare-Metal path:
 
@@ -265,7 +203,7 @@ On Kubernetes, you use the Terraform blueprints to provision Grafana Agent and t
 >
 > *How to configure Grafana Agent to discover and scrape Fabric pods: annotation-based autodiscovery vs. explicit River pipeline. Includes filtering rules to apply before forwarding to Prometheus, and how to validate that scraping is working.*
 
-## Stage 5 — Control Metric Volume *— for all deployment models*
+## Control Metric Volume *— for all deployment models*
 
 > **[ All deployment models ]** Read this after Stage 4 is working. It applies to both VM and Kubernetes.
 
@@ -277,7 +215,7 @@ Once metrics are flowing, the next step is making sure you are collecting the ri
 
 The key principle: the Fabric exporter exposes broadly by default. The collection layer decides what to retain. Filtering is not an optional afterthought — it is part of the core design.
 
-## Stage 6 — Extend to Third-Party Platforms *— optional — if not using the K2view default stack*
+## Extend to Third-Party Platforms *— optional — if not using the K2view default stack*
 
 > **[ All deployment models ]** Read this only if you are integrating with a platform other than the K2view standard Prometheus/Grafana/Loki stack.
 
@@ -289,56 +227,7 @@ If your organization uses a different observability platform — such as Datadog
 
 The core message of this document: the durable architectural asset is the /metrics endpoint, not any specific downstream tool. K2view provides and documents the endpoint. The platform team owns how it is consumed.
 
-# Reading Path Summary
 
-Use the table below to find the fastest path to your goal.
-
-<table>
-  <thead>
-    <tr>
-      <th>Your situation</th>
-      <th>Recommended reading path</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>I am new to Fabric monitoring and want to understand the overall picture</td>
-      <td>Stage 0 → Stage 1 (architecture overview only) → return here to choose a path</td>
-    </tr>
-    <tr>
-      <td>I need to set up monitoring on VMs or bare-metal hosts</td>
-      <td>Stage 0 → Stage 1 (VM stack doc) → Stage 2 → Stage 3 → Stage 4 (VM path) → Stage 5</td>
-    </tr>
-    <tr>
-      <td>I need to deploy a new Kubernetes cluster with monitoring on Azure, GCP, or AWS</td>
-      <td>Stage 0 → Stage 1 (K8s stack doc) → Stage 2 → Stage 3 → Stage 4 (K8s path) → Stage 5</td>
-    </tr>
-    <tr>
-      <td>I am on an air-gapped Kubernetes cluster without K2cloud Orchestrator</td>
-      <td>Stage 1 (Air-Gapped doc) → Stage 3 → connect your own observability stack to port 7170</td>
-    </tr>
-    <tr>
-      <td>I have an existing Kubernetes cluster and want to add or improve Fabric monitoring</td>
-      <td>Stage 1 (K8s stack doc) → Stage 3 → Stage 4 (K8s path, start at 'Connecting Fabric Metrics') → Stage 5</td>
-    </tr>
-    <tr>
-      <td>I need to integrate Fabric metrics with a third-party platform</td>
-      <td>Stage 3 (verify endpoint is working) → Stage 6</td>
-    </tr>
-    <tr>
-      <td>I need to reduce Prometheus storage or improve retention</td>
-      <td>Stage 5 directly — How to Control Metric Volume with Filtering and Relabeling</td>
-    </tr>
-    <tr>
-      <td>I want to add custom metrics to Fabric</td>
-      <td>Stage 2 (JMX Custom Statistics) → Stage 3 to confirm they appear in the output</td>
-    </tr>
-    <tr>
-      <td>Something is broken and I need to troubleshoot</td>
-      <td>Stage 3 (How to Verify) → Stage 4 (How to Configure, troubleshooting section)</td>
-    </tr>
-  </tbody>
-</table>
 
 # What This Documentation Does Not Cover
 
