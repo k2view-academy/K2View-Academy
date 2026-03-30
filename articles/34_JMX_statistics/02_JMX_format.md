@@ -19,6 +19,9 @@ To access the Admin panel, click the **Globe** icon on the top left corner of th
 
 Enter your Admin credentials, then click **Statistics** in the left panel.
 
+![Fabric Statistics Page](images/JMX-pic1.PNG)
+
+
 The following statistics sections are available:
 
 ### Process
