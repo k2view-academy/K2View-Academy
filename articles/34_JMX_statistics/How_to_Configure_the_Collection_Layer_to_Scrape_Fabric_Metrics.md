@@ -37,7 +37,6 @@
 This topic explains how to configure the metrics collection layer to scrape Fabric metrics from the bundled JMX Exporter. The collection layer differs between Kubernetes and VM / bare-metal deployments:
 
 * Kubernetes: Grafana Agent is the local collector. It scrapes Fabric pods and remote-writes to a per-cluster Prometheus instance.
-
 * VM / Bare-Metal: Prometheus scrapes Fabric hosts directly using static scrape targets.
 
 Both paths result in Fabric and JVM metrics being available in Prometheus for dashboards, alerting, and Thanos federation.
@@ -47,13 +46,9 @@ Both paths result in Fabric and JVM metrics being available in Prometheus for da
 This how-to covers:
 
 * How the collection layer finds Fabric endpoints in each deployment model
-
 * Kubernetes: configuring Grafana Agent to scrape Fabric pods
-
 * VM / Bare-Metal: configuring Prometheus static scrape targets
-
 * Filtering and relabeling to control metric volume
-
 * Validation and common problems for both models
 
 It does not cover dashboard creation, alert rules, Thanos configuration, or Loki log collection. Those are covered in related topics.
@@ -73,9 +68,7 @@ If this does not return metrics, resolve that first. See How to Enable the JMX E
 You should also know:
 
 * The Fabric metrics port — default 7170 for Fabric, 7270 for iid_finder
-
 * The host or pod name(s) running Fabric
-
 * Which collection layer applies to your deployment (Grafana Agent or Prometheus)
 
 # 2. Kubernetes — Grafana Agent
@@ -87,7 +80,6 @@ You should also know:
 Grafana Agent uses Kubernetes service discovery to find pods and services in the cluster. It does not use static target lists. There are two ways to configure it to scrape Fabric metrics:
 
 * Annotation-based autodiscovery — Fabric pods are annotated to signal that they should be scraped
-
 * Explicit River pipeline — a custom discovery and scrape component is added to the Grafana Agent configuration
 
 The K2view Grafana Agent Helm chart (k8s-monitoring) supports both patterns. Annotation-based autodiscovery is disabled by default in the chart and must be explicitly enabled.
@@ -253,9 +245,7 @@ A target showing State: DOWN means Prometheus can see the target in its configur
 The Fabric JMX Exporter exposes all available metrics by default. Without filtering, Prometheus can ingest far more data than is operationally useful. Filtering and relabeling should be applied at the collection layer to:
 
 * Drop low-value metric families that are not used in dashboards or alerts
-
 * Reduce label explosion on useful metrics to keep active series manageable
-
 * Control storage growth and protect configured retention windows
 
 ## 4.1 What to Filter
@@ -263,11 +253,8 @@ The Fabric JMX Exporter exposes all available metrics by default. Without filter
 Start from a known useful set and drop everything else. For Fabric, the typically useful families are:
 
 * fabric_* — Fabric product metrics
-
 * jvm_* — JVM memory, GC, threads, class loading
-
 * tomcat_* — where applicable
-
 * process_* — process-level CPU and file descriptors
 
 The families most commonly worth dropping are high-volume exporters that produce many series with little operational value. Node Exporter in particular exposes a very large number of metric families — review which ones are actually used in your dashboards and drop the rest.
@@ -390,19 +377,14 @@ prometheus_tsdb_head_series
 ## Target is UP but no Fabric metrics appear
 
 * Filtering rules may be too restrictive — confirm the regex covers the fabric_* and jvm_* families
-
 * The wrong endpoint may be configured — confirm port 7170 is used, not 9100 (Node Exporter) or another port
-
 * Fabric may still be initializing — wait for full startup and retry
 
 ## Too many active series
 
 * Node Exporter is the most common culprit — it exposes many high-cardinality families by default
-
 * Apply metric filtering to drop families not used in dashboards or alerts
-
 * Review label sets on high-volume metrics and apply labeldrop rules where labels are not needed
-
 * See How to Control Metric Volume with Filtering and Relabeling for a systematic approach
 
 # 7. Quick Checklist
@@ -410,37 +392,23 @@ prometheus_tsdb_head_series
 **Kubernetes:**
 
 * Fabric /metrics endpoint verified from inside the pod
-
 * Grafana Agent chart deployed with correct values
-
 * Annotation autodiscovery enabled OR explicit River pipeline added
-
 * Fabric pods annotated with scrape annotation (if using Option A)
-
 * River pipeline label selector matches Fabric pod labels (if using Option B)
-
 * Grafana Agent logs show scrape activity for Fabric
-
 * Prometheus shows Fabric and JVM metrics in query
-
 * Filtering applied to control active series
 
 **VM / Bare-Metal:**
 
 * Fabric /metrics endpoint verified from Fabric host
-
 * Prometheus scrape job added for fabric-jmx (port 7170)
-
 * Prometheus scrape job added for iidfinder-jmx (port 7270, if applicable)
-
 * Prometheus scrape job added for node-exporter (port 9100)
-
 * Prometheus reloaded after configuration change
-
 * Prometheus Targets UI shows fabric-jmx job with State: UP
-
 * Prometheus query returns Fabric and JVM metrics
-
 * metric_relabel_configs applied to filter low-value metric families
 
 # Related Topics
