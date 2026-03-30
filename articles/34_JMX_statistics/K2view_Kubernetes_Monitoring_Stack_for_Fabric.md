@@ -79,15 +79,10 @@ A second JMX Exporter instance is attached to the iid_finder JVM and serves metr
 All other observability components run outside the Fabric pod, in the cluster observability layer:
 
 * Grafana Agent — deployed in the observability namespace, scrapes Fabric pods and other metrics sources, collects logs, and remote-writes to Prometheus
-
 * Prometheus — deployed in the observability namespace, receives remote-write from Grafana Agent, stores time-series data, exposes data to Thanos sidecar
-
 * Thanos sidecar — runs alongside Prometheus in the observability namespace, exposes local Prometheus data to the central Thanos Query layer
-
 * node-exporter — deployed as a DaemonSet, one instance per worker node, collects operating-system and kernel metrics from the host
-
 * kube-state-metrics — deployed as a cluster-level singleton, collects Kubernetes object and workload state metrics from the control plane
-
 * Loki — receives log streams from Grafana Agent, indexes and stores them for querying
 
 # 4. Fabric Metrics Exposure
@@ -99,7 +94,7 @@ Fabric metrics exposure begins with JMX. Fabric and the JVM emit runtime telemet
 The exporter is bundled with Fabric under the monitor directory:
 
 ```
-\$K2_HOME/monitor/jmx_exporter/
+$K2_HOME/monitor/jmx_exporter/
    jmx_prometheus_javaagent-1.5.0.jar
    fabric_config.yaml # Fabric exporter configuration
    iidfinder_config.yaml # iid_finder exporter configuration
@@ -133,7 +128,7 @@ K2cloud Orchestrator injects MONITORING=default
 docker-entrypoint.sh → init_monitoring() in cloud_common.sh
   ↓
 monitor_setup.sh runs:
-  setup_monitor() — copies monitor/ dir to \$FABRIC_HOME
+  setup_monitor() — copies monitor/ dir to $FABRIC_HOME
   init_monitor() — calls fabric_7_monitor.sh
   start_monitor() — starts background processes (see note below)
   ↓
@@ -161,13 +156,9 @@ Grafana Agent does not store metrics locally. It scrapes metrics from configured
 ## 6.1 What Grafana Agent Scrapes
 
 * Fabric JMX Exporter — port 7170 on each Fabric pod
-
 * iid_finder JMX Exporter — port 7270 on each Fabric pod (where running)
-
 * node-exporter — port 9100 on each worker node (via DaemonSet)
-
 * kube-state-metrics — cluster-level service
-
 * Grafana Agent itself — for agent health metrics (optional)
 
 ## 6.2 How Fabric Endpoints Are Discovered
@@ -175,7 +166,6 @@ Grafana Agent does not store metrics locally. It scrapes metrics from configured
 Grafana Agent uses Kubernetes service discovery. It does not use static target lists. There are two supported approaches for discovering Fabric pods:
 
 * Annotation-based autodiscovery — Fabric pods annotated with k8s.grafana.com/scrape: "true" and k8s.grafana.com/metrics.portNumber: "7170" are automatically discovered and scraped. This is disabled by default in the chart and must be explicitly enabled.
-
 * Explicit River pipeline — a custom discovery.relabel and prometheus.scrape component configuration targets Fabric pods by label selector and port number. This gives more control over discovery rules, filtering, and label transformations.
 
 For configuration details, see How to Configure the Collection Layer to Scrape Fabric Metrics.
@@ -202,15 +192,10 @@ node-exporter collects operating-system and kernel metrics from each Kubernetes 
 node-exporter is not part of the Fabric pod. It is a separate cluster observability component that runs on the worker node itself, providing host-level signals:
 
 * CPU utilization and saturation
-
 * Memory usage and pressure
-
 * Filesystem consumption and availability
-
 * Disk I/O
-
 * Network throughput and errors
-
 * Operating system and kernel counters
 
 These signals allow operators to distinguish between a Fabric-level problem and a node-level resource constraint — a distinction that is not possible from JVM metrics alone.
@@ -226,13 +211,9 @@ kube-state-metrics runs as a cluster-level singleton. It does not need to run on
 Key signals from kube-state-metrics:
 
 * Pod readiness and phase state
-
 * Pod restart counts
-
 * Deployment convergence and replica status
-
 * Node readiness and conditions
-
 * Drift between desired and actual state
 
 This is the layer that explains why an apparently healthy Fabric JVM may still be part of an unhealthy service from Kubernetes' perspective — for example, a pod in a restart loop or a deployment that has not converged.
@@ -265,11 +246,8 @@ Each monitored Kubernetes cluster has a dedicated observability namespace. This 
 The observability namespace typically contains:
 
 * Grafana Agent — metrics scraping and log collection
-
 * Prometheus — time-series storage, receives remote-write from Grafana Agent
-
 * Thanos sidecar — exposes local Prometheus data to central Thanos Query
-
 * Loki — log storage and query backend (may be central or per-cluster)
 
 This bundle is deployed per monitored cluster. When a new cluster is added, the same observability namespace pattern is deployed into it and enrolled in the Thanos federation. Observability coverage is repeatable and consistent across clusters.
@@ -284,12 +262,9 @@ The K2view model keeps the Fabric exporter configuration minimal and applies obs
 
 Key principles:
 
-* Filter by metric family: keep only the families used in dashboards and alerts (fabric\_*, jvm\_*, tomcat\_*, node CPU/memory/disk families, key kube-state-metrics families)
-
+* Filter by metric family: keep only the families used in dashboards and alerts (fabric_*, jvm_*, tomcat_*, node CPU/memory/disk families, key kube-state-metrics families)
 * Reduce label cardinality: drop labels that are not used in aggregations or alert conditions
-
 * Monitor active series: prometheus_tsdb_head_series is the primary Prometheus health signal — it reflects true storage and query footprint
-
 * Review retention: effective retention depends on both the configured time window and storage capacity — filter aggressively enough that the time window is not cut short by storage pressure
 
 For detailed guidance and River pipeline syntax, see How to Control Metric Volume with Filtering and Relabeling.
@@ -301,11 +276,8 @@ Each monitored cluster has a local Prometheus instance with a Thanos sidecar. A 
 The model preserves local collection:
 
 * Grafana Agent scrapes within the cluster
-
 * Prometheus stores and indexes locally
-
 * Thanos sidecar exposes the local store to the central query layer
-
 * Thanos Query federates without duplicating or centralizing ingestion
 
 This means local observability — cluster-local dashboards, per-cluster troubleshooting, per-cluster alert rules — remains fully functional without a dependency on the central Thanos layer. Thanos provides the additional cross-cluster view above that.
@@ -321,27 +293,18 @@ The following sequence describes the setup for each monitored Kubernetes cluster
 ## 13.1 Per Cluster — Observability Stack
 
 1.  Deploy the Grafana Agent k8s-monitoring Helm chart into the observability namespace
-
 2.  Configure the Grafana Agent values file with the Prometheus remote-write endpoint and Loki endpoint
-
 3.  Configure Grafana Agent to discover and scrape Fabric pods on port 7170 (annotation-based or explicit River pipeline)
-
 4.  Confirm Grafana Agent is scraping by checking pod logs
-
 5.  Confirm metrics are flowing to Prometheus
-
 6.  Deploy or confirm Thanos sidecar is running alongside Prometheus
-
 7.  Enroll the cluster's Thanos sidecar in the central Thanos Query layer
 
 ## 13.2 Per Space — Fabric Monitoring
 
 8.  Confirm with K2view that monitoring is enabled in your space profile
-
 9.  Confirm MONITORING=default is present in the Fabric pod environment
-
 10. Confirm fabric_7_monitor.sh has run and the javaagent line is present in jvm.options
-
 11. Validate the Fabric metrics endpoint from inside the pod:
 
 ```
@@ -355,13 +318,9 @@ kubectl exec -it <fabric-pod> -n <namespace> -- curl http://localhost:7170/metri
 A consuming Grafana environment sees the output of the full observability stack, not just the Fabric exporter in isolation:
 
 * Fabric and JVM metrics — application health, memory, GC, threads, Fabric product counters
-
 * Host and node metrics — CPU, memory, filesystem, network from node-exporter
-
 * Kubernetes workload and state metrics — pod health, restarts, deployment state from kube-state-metrics
-
 * Logs — detailed event context from Grafana Agent log collection via Loki
-
 * Cross-cluster views — fleet-level health across AKS, GKE, and EKS via Thanos Query
 
 In Grafana, this allows operators to move from a product-level metric anomaly to node-level resource pressure to pod state changes to the underlying log evidence — all within one operational view, without switching between tools.
@@ -375,15 +334,10 @@ The same metrics surface can also be consumed by third-party platforms. See How 
 The monitoring model is local-first. If metrics are missing from a higher-level view, the first checks should be local:
 
 * Is the JMX Exporter active? Curl localhost:7170/metrics from inside the pod
-
 * Is MONITORING=default set in the pod? kubectl exec <pod> -- env | grep MONITORING
-
 * Is Grafana Agent discovering the pod? Check Grafana Agent logs
-
 * Is Grafana Agent remote-writing successfully? Check for remote-write errors in agent logs
-
 * Is Prometheus receiving and storing the metrics? Query Prometheus directly
-
 * Is the Thanos sidecar healthy? Check sidecar pod status in the observability namespace
 
 ## 15.2 Metrics and Logs Are Complementary
@@ -460,19 +414,14 @@ K2view defines the metrics surface and the architecture. The consuming monitorin
 # Appendix B: Key Ports
 
 * 7170 — Fabric JMX Exporter (/metrics)
-
 * 7270 — iid_finder JMX Exporter (/metrics)
-
 * 9100 — node-exporter (/metrics)
-
 * 9090 — Prometheus
-
 * 3100 — Loki
 
 # Appendix C: Key Environment Variables
 
-* MONITORING — Set to \'default\' or \'true\' to enable the monitor setup chain at container startup. Injected by K2cloud Orchestrator when monitoring is enabled in the space profile (managed by K2view). You can verify its presence in a running pod with: kubectl exec <pod> -- env | grep MONITORING.
-
+* MONITORING — Set to 'default' or 'true' to enable the monitor setup chain at container startup. Injected by K2cloud Orchestrator when monitoring is enabled in the space profile (managed by K2view). You can verify its presence in a running pod with: kubectl exec <pod> -- env | grep MONITORING.
 * LOKI_HOST — Not used in Kubernetes deployments. Grafana Agent handles log forwarding; standalone Promtail is not used.
 
 # Related Topics
