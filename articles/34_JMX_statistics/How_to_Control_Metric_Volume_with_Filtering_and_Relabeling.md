@@ -40,9 +40,7 @@
 Prometheus can collect far more data than is operationally useful. Without deliberate control, storage fills faster than expected, queries slow down, and effective retention falls below the configured target. The goal of filtering and relabeling is to keep:
 
 * The right metric families
-
 * The right labels
-
 * A manageable number of active series
 
 This is how K2view keeps the monitoring system sustainable as environments grow. The principles are the same for both Kubernetes and VM / bare-metal deployments. The syntax for applying them differs between Grafana Agent (Kubernetes) and Prometheus YAML (VM).
@@ -52,15 +50,10 @@ This is how K2view keeps the monitoring system sustainable as environments grow.
 This how-to covers:
 
 * Why metric volume must be controlled
-
 * The two main levers: filtering and relabeling
-
 * Where to apply control in each deployment model
-
 * Syntax examples for Grafana Agent (River) and Prometheus (YAML)
-
 * Which exporters need the most attention
-
 * How to validate that changes are working
 
 It does not define a fixed allowlist. The exact rules should reflect the environment and the operational questions you need to answer.
@@ -72,7 +65,6 @@ It does not define a fixed allowlist. The exact rules should reflect the environ
 The standard K2view model is:
 
 * Fabric exposes broadly — the JMX Exporter publishes all available metrics by default
-
 * The collection layer decides what to retain — filtering and relabeling happen in Grafana Agent or Prometheus, not in the exporter configuration itself
 
 This keeps the Fabric-side exporter configuration simple and stable. Observability policy is centralized in the collection layer, where storage and retention effects are directly visible and can be adjusted without restarting Fabric or rebuilding the container image.
@@ -84,9 +76,7 @@ This keeps the Fabric-side exporter configuration simple and stable. Observabili
 Without filtering and relabeling, the collection layer can ingest:
 
 * Too many metric families, most of which are never used in dashboards or alerts
-
 * Too many labels, which multiply the number of distinct time series
-
 * Too many active series, which drive storage consumption and query cost
 
 The result is faster storage consumption, slower queries, and a Prometheus instance where configured retention is never fully achieved because storage fills sooner than the time window.
@@ -120,19 +110,14 @@ Filtering decides which metric families to keep and which to drop entirely.
 Use filtering when:
 
 * A metric family has no operational value — it is not used in any dashboard or alert
-
 * An exporter exposes far more than you need
-
 * A noisy metric family is driving storage growth
 
 Ask these questions about each metric family:
 
 * Do we use this in any dashboard?
-
 * Do we use this in any alert?
-
 * Does it support troubleshooting a real operational problem?
-
 * Is the storage cost worth the benefit?
 
 If the answer to all four is no, drop the family.
@@ -144,17 +129,13 @@ Relabeling decides which labels to keep, normalize, or drop on metrics that are 
 Use relabeling when:
 
 * The metric itself is useful
-
 * The default label set is too large
-
 * Some labels are creating too many distinct time series
 
 Ask these questions about each label on a high-volume metric:
 
 * Is this label used in any dashboard filter or aggregation?
-
 * Is this label used in any alert condition?
-
 * Is this label value stable, or does it change frequently (high cardinality)?
 
 Labels that encode ephemeral or overly detailed dimensions — such as individual pod names, request IDs, or content-addressed hashes — are typical candidates for removal.
@@ -231,27 +212,18 @@ metric_relabel_configs runs after the scrape and controls what gets written to t
 Node Exporter exposes dozens of metric families covering every aspect of the operating system. A practical starting point is to keep only the families directly useful for infrastructure monitoring:
 
 * node_cpu_seconds_total — CPU utilization
-
 * node_memory_* — memory usage and pressure
-
 * node_filesystem_* — disk usage and availability
-
 * node_disk_* — disk I/O
-
 * node_network_* — network throughput
-
 * node_load* — system load averages
-
 * node_up — availability signal
 
 Families that are rarely needed and worth dropping first:
 
 * node_scrape_collector_* — internal exporter metrics
-
 * node_textfile_* — unless you are actively using textfile collectors
-
 * node_nfs_* — unless NFS is relevant to your environment
-
 * node_xfs_*, node_zfs_* — unless these filesystems are in use
 
 ## 5.2 kube-state-metrics
@@ -263,19 +235,14 @@ kube-state-metrics exposes Kubernetes object state metrics. The volume depends o
 Focus on retaining the families that support workload health monitoring:
 
 * kube_pod_status_* — pod readiness and state
-
 * kube_deployment_status_* — deployment convergence
-
 * kube_pod_container_status_restarts_total — restart tracking
-
 * kube_node_status_* — node health
 
 Consider dropping or limiting:
 
 * kube_*_labels — these can have very high cardinality if pods carry many labels
-
 * kube_*_annotations — similarly high cardinality
-
 * kube_*_created — creation timestamps rarely needed in dashboards
 
 ## 5.3 Fabric JMX Exporter
@@ -285,15 +252,10 @@ Consider dropping or limiting:
 The core families worth retaining for operational monitoring:
 
 * fabric_* — Fabric product counters and gauges
-
 * jvm_memory_* — heap and non-heap memory
-
 * jvm_gc_* — garbage collection behavior
-
 * jvm_threads_* — thread pool health
-
 * tomcat_* — connector and request metrics where applicable
-
 * process_* — process-level CPU and file descriptor usage
 
 Review your dashboards and alerts to determine which specific metric names within these families are actually used, and consider tightening the regex further.
@@ -345,13 +307,9 @@ After stabilizing active series, review whether the configured retention target 
 > **[ K8s + VM ]** Applies to both deployment models.
 
 * Do not rely on the exporter config as the main control point. Keep exporter config minimal and apply policy in the collection layer.
-
 * Do not keep every metric just in case. This leads to storage pressure and weaker retention without operational benefit.
-
 * Do not drop labels blindly. Verify that labels being dropped are not used in any current alert, dashboard, or aggregation rule.
-
 * Do not evaluate success only by counting metric names. The real measure is the number of active series and the storage growth rate.
-
 * Do not make multiple filtering changes at the same time. Change one thing, observe the effect, then proceed. This makes it easy to identify what caused an unexpected dashboard break.
 
 # 8. Troubleshooting
@@ -359,27 +317,20 @@ After stabilizing active series, review whether the configured retention target 
 ## Storage is still growing too quickly after filtering
 
 * Check which jobs contribute the most series: sum by (job) (scrape_series_added)
-
 * Confirm the filtering rules are actually being applied — check the active series before and after a scrape
-
 * Look for high-cardinality labels on retained metrics — a single label with thousands of unique values can dominate series count
-
 * Check whether any new exporters or workloads have been added that are not yet covered by filtering rules
 
 ## Dashboard panels broke after filtering
 
 * A required metric family was dropped — check the panel query against the filter regex and add the family back
-
 * A required label was dropped — check the panel's groupBy or filter expressions against the labeldrop regex
-
 * Recording rules or alert rules may reference dropped metrics — review all rules after changing filters
 
 ## Active series did not decrease as expected
 
 * The filtering change may have targeted metric names but not the labels driving cardinality
-
 * A high-cardinality label on a retained metric may be dominating — use sum by (__name__) (scrape_series_added) to find which metric names have the most series
-
 * New workloads or namespaces may have added series at the same rate as the filtering removed others
 
 # 9. Quick Checklist
@@ -387,33 +338,23 @@ After stabilizing active series, review whether the configured retention target 
 **Both deployment models:**
 
 * Baseline active series recorded before changes
-
 * Highest-volume exporters identified
-
 * Keep rules applied for Fabric, JVM, and operational infrastructure families
-
 * Low-value families dropped from Node Exporter
-
 * High-cardinality labels reviewed and dropped where not needed
-
 * Active series count confirmed as lower after changes
-
 * Storage growth rate confirmed as improved
-
 * All dashboards and alerts verified as still working
-
 * Retention target reassessed against new ingestion rate
 
 **Kubernetes only:**
 
 * kube-state-metrics label and annotation families reviewed for cardinality
-
 * Grafana Agent River pipeline updated and redeployed
 
 **VM / Bare-Metal only:**
 
 * metric_relabel_configs added to each affected scrape job
-
 * Prometheus reloaded after configuration change
 
 # Related Topics
