@@ -1,16 +1,8 @@
-
 # JMX Overview
 
 ## What is JMX?
 
-Fabric is tightly integrated with JMX (Java Management Extensions), a Java technology that enables comprehensive monitoring and management of applications at runtime. JMX uses objects called MBeans (Managed Beans) to expose data and resources from the Fabric runtime.
-
-
-## Why Enable JMX Monitoring in Fabric?
-
-When working with Fabric nodes in production, enabling JMX allows you to monitor resource consumption per service, identify performance bottlenecks, and make informed decisions about resource allocation and implementation optimization.
-
-JMX data also provides valuable insight into the behavior of specific objects in your project — including LUIs, Web Services, Jobs, Broadway flows, and other functions that you need to monitor operationally.
+Fabric is tightly integrated with JMX (Java Management Extensions), a Java technology that enables monitoring and management of applications at runtime. JMX uses objects called MBeans (Managed Beans) to expose data and resources from the Fabric runtime.
 
 
 ## What Can I Monitor with JMX?
@@ -28,13 +20,17 @@ The following categories of statistics are available through JMX:
 
 ## Two Ways to Access JMX Data
 
-JMX data can be accessed in two distinct ways. They serve different purposes and are used in different contexts.
+JMX data can be accessed in two distinct ways, serving different purposes and used in different contexts.
 
 ### 1. The Fabric Statistics Page
 
 The Fabric Admin panel includes a Statistics page that provides a live, human-readable view of JMX counters. This is useful for development-time inspection and ad-hoc troubleshooting of a running Fabric instance.
 
-To access it, select the **Statistics** in the left panel. This view presents data in a tabular format that is suited for direct inspection but is not designed for automated collection, alerting, or long-term trending. See [JMX Format](/articles/34_JMX_statistics/02_JMX_format.md) for a full description of what each statistics section contains.
+To access it, select **Statistics** in the left panel. This view presents data in a tabular format suited for direct inspection but is not designed for automated collection, alerting, or long-term trending.
+
+![Fabric Statistics Page](images/JMX-pic1.PNG)
+
+See [JMX Format](/articles/34_JMX_statistics/02_JMX_format.md) for a full description of what each statistics section contains.
 
 ### 2. The Prometheus HTTP Endpoint
 
@@ -49,6 +45,7 @@ This is the endpoint that Prometheus, Grafana Agent, and other compatible monito
 The exporter is included with Fabric and requires activation. How it is activated depends on your deployment model:
 
 * **Kubernetes (K2cloud SaaS / Self-hosted)** — activation is managed by K2view through the K2cloud space profile. Recent profiles have monitoring enabled by default. Confirm with K2view that your space profile includes this setting. K2cloud Orchestrator injects the `MONITORING=default` environment variable, which triggers the full monitor setup chain at container startup.
+* **Kubernetes (Air-Gapped)** — for customer-owned clusters without K2cloud Orchestrator, activation is manual. Set the `MONITORING` environment variable in the Fabric pod spec. See [Fabric Monitoring in Air-Gapped Kubernetes Deployments](/articles/34_JMX_statistics/Fabric_Monitoring_Air-Gapped_Kubernetes.md).
 * **VM / Bare-Metal** — activation is manual, either by running `fabric_7_monitor.sh` or by adding the `-javaagent` line to `jvm.options` directly.
 
 See [How to Enable the JMX Exporter for Fabric](/articles/34_JMX_statistics/How_to_Enable_the_JMX_Exporter_for_Fabric.md) for the full procedure.
@@ -70,6 +67,3 @@ Once the Prometheus endpoint is active, it can be consumed by any compatible mon
 * [How to Enable the JMX Exporter for Fabric](/articles/34_JMX_statistics/How_to_Enable_the_JMX_Exporter_for_Fabric.md)
 * [How to Verify That Fabric Is Exposing Metrics](/articles/34_JMX_statistics/How_to_Verify_That_Fabric_Is_Exposing_Metrics.md)
 * [K2view Fabric Observability — Guide to the Documentation](/articles/34_JMX_statistics/K2view_Fabric_Observability_Guide_to_the_Guide.md)
-
-
-
