@@ -42,11 +42,8 @@ http://localhost:7270/metrics # iid_finder metrics
 This how-to covers:
 
 * What the JMX Exporter is and where it lives
-
 * How enabling works in Kubernetes (automated)
-
 * How enabling works on VMs and bare-metal (manual or script-driven)
-
 * How to validate that the exporter is active
 
 It does not cover Prometheus scrape configuration, dashboard creation, or alert setup. Those are covered in related topics.
@@ -114,13 +111,11 @@ The K2cloud space profile is the K2view-managed configuration that controls moni
 When MONITORING=default, the following run inside the Fabric container or on the same host:
 
 * JMX Exporter — via the Fabric JVM (port 7170)
-
 * iid_finder JMX Exporter — via the iid_finder JVM (port 7270)
 
 The following run outside the Fabric container on the worker node:
 
 * Node Exporter — deployed as a DaemonSet on the Kubernetes worker node, not inside the Fabric pod
-
 * kube-state-metrics — cluster singleton, not inside the Fabric pod
 
 > **Note:** The monitor directory inside the Fabric image contains node_exporter and promtail binaries. These are present due to legacy VM-era packaging. In Kubernetes, start_monitor() does attempt to start node_exporter as a background process inside the container. However, node-level metrics in Kubernetes are collected by the DaemonSet node-exporter on the worker node, which is the authoritative infrastructure metrics source. The in-container node_exporter should not be relied on for Kubernetes deployments.
@@ -146,13 +141,9 @@ $K2_HOME/monitor/jmx_exporter/fabric_7_monitor.sh
 This script performs all of the following automatically:
 
 * Checks whether the javaagent line is already present in jvm.options — safe to run more than once
-
 * Appends the javaagent line for Fabric metrics at port 7170
-
 * Appends the javaagent line for iid_finder metrics at port 7270
-
 * Enables JMX remote management settings in jvm.options
-
 * Sets correct file permissions on JMX credential files if present
 
 Alternatively, if running Fabric as a container on a VM (non-Kubernetes), set the MONITORING environment variable before starting the container:
@@ -202,9 +193,7 @@ curl http://localhost:7170/metrics
 A successful response returns Prometheus-format text. The output includes:
 
 * JVM metrics (memory, GC, threads, class loading)
-
 * Fabric product metrics (reads, writes, API activity, MBean-backed counters)
-
 * Tomcat metrics where applicable
 
 To validate iid_finder metrics:
@@ -218,25 +207,18 @@ To validate iid_finder metrics:
 After successful enablement:
 
 * The JMX Exporter JAR is loaded into the Fabric JVM as a Java agent
-
 * Fabric and JVM metrics are served at localhost:7170/metrics
-
 * iid_finder metrics are served at localhost:7270/metrics
-
 * The /metrics endpoint returns Prometheus-format text
-
 * The endpoint is ready to be scraped by Prometheus (VM) or Grafana Agent (Kubernetes)
 
 # 6. Troubleshooting
 
-## /metrics returns nothing or connection refused
+## /metrics returns nothing, or connection refused
 
 * Confirm the javaagent line was written to jvm.options — check the file directly
-
 * Confirm Fabric was restarted after the javaagent line was added
-
 * Confirm the port in the curl command matches the port in jvm.options (default: 7170)
-
 * Confirm the exporter JAR exists at the expected path
 
 ## jvm.options does not contain the javaagent line
@@ -245,54 +227,39 @@ After successful enablement:
 
 **VM:** Run fabric_7_monitor.sh manually, or add the javaagent line to jvm.options directly. Restart Fabric after.
 
-## Exporter active but Prometheus or Grafana Agent is not scraping
+## Exporter is active but Prometheus or Grafana Agent is not scraping
 
 This means the Fabric-side exposure is working correctly. The problem is in the collection layer:
 
 * Kubernetes: confirm the Grafana Agent is configured to discover and scrape port 7170 on Fabric pods
-
 * VM: confirm the Prometheus static scrape target lists the correct host and port
-
 * Both: check for network reachability between the collector and the Fabric host or pod
-
 * Both: check for metric filtering rules that may be dropping the series
 
-## Metrics endpoint works but output seems incomplete
+## Metrics endpoint works, but the output seems incomplete
 
 * The exporter exposes all MBeans by default — no filtering is applied at the exporter level
-
 * If expected Fabric metrics are missing, the MBeans may not be registered yet (Fabric may still be initializing)
-
-* If metrics are being dropped before reaching dashboards, check filtering rules in Prometheus or Grafana Agent
+* If metrics are being dropped before reaching dashboards, check the filtering rules in Prometheus or Grafana Agent
 
 # 7. Quick Checklist
 
 **Kubernetes:**
 
 * Monitoring is enabled in the space profile (confirm with K2view if unsure)
-
 * MONITORING=default is present in the pod environment
-
 * fabric_7_monitor.sh has run (check jvm.options for the javaagent line)
-
 * Fabric has started with the javaagent active
-
 * curl http://localhost:7170/metrics returns Prometheus-format output
-
 * Grafana Agent is configured to scrape port 7170
 
 **VM / Bare-Metal:**
 
 * fabric_7_monitor.sh has been run OR javaagent line added to jvm.options manually
-
 * Fabric has been restarted
-
 * curl http://localhost:7170/metrics returns Prometheus-format output
-
 * Node Exporter running on the Fabric host (port 9100)
-
 * Promtail running on the Fabric host (if Loki is configured)
-
 * Prometheus static scrape target added for this host
 
 # Related Topics
