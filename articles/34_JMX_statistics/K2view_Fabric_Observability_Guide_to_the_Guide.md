@@ -4,12 +4,12 @@
 
 ## Table of Contents
 
-- [Introduction](https://claude.ai/chat/7fee4fd2-d075-4023-a8ba-a3f0eb21408b#introduction)
-- [How to Use This Guide](https://claude.ai/chat/7fee4fd2-d075-4023-a8ba-a3f0eb21408b#how-to-use-this-guide)
-- [The Content Journey](https://claude.ai/chat/7fee4fd2-d075-4023-a8ba-a3f0eb21408b#the-content-journey)
-- [What This Documentation Does Not Cover](https://claude.ai/chat/7fee4fd2-d075-4023-a8ba-a3f0eb21408b#what-this-documentation-does-not-cover)
-- [Key Concepts Quick Reference](https://claude.ai/chat/7fee4fd2-d075-4023-a8ba-a3f0eb21408b#key-concepts-quick-reference)
-- [Version Note](https://claude.ai/chat/7fee4fd2-d075-4023-a8ba-a3f0eb21408b#version-note)
+* [Introduction](#introduction)
+* [How to Use This Guide](#how-to-use-this-guide)
+* [The Content Journey](#the-content-journey)
+* [What This Documentation Does Not Cover](#what-this-documentation-does-not-cover)
+* [Key Concepts Quick Reference](#key-concepts-quick-reference)
+* [Version Note](#version-note)
 
 # Introduction
 
