@@ -41,13 +41,9 @@ This document is platform-agnostic. Third-party platforms are referenced only as
 This how-to covers:
 
 * What the JMX Exporter produces and why it is broadly reusable
-
 * How the endpoint is accessed in Kubernetes vs. VM / bare-metal contexts
-
 * Four integration patterns for third-party consumption
-
 * What K2view provides vs. what the platform team provides
-
 * What not to do
 
 It does not cover vendor-specific dashboard design, alert content, or retention policy in third-party platforms. Those are owned by the platform team consuming the metrics.
@@ -65,7 +61,6 @@ curl http://localhost:7170/metrics
 A successful response returns Prometheus-format text. If this does not work, the exporter is not yet active. Resolve that first using the appropriate path for your deployment:
 
 * Kubernetes (K2cloud SaaS / Self-hosted): monitoring enablement is managed through the space profile by K2view — confirm with K2view that monitoring is enabled for your space. For air-gapped Kubernetes deployments, follow the manual enablement path
-
 * VM / Bare-Metal: run fabric_7_monitor.sh or add the javaagent line manually to jvm.options, then restart Fabric
 
 See How to Enable the JMX Exporter for Fabric for the full procedure.
@@ -84,9 +79,7 @@ http://localhost:7270/metrics # iid_finder metrics (if iid_finder is running)
 The response from port 7170 includes:
 
 * JVM metrics — memory, garbage collection, threads, class loading
-
 * Fabric product metrics — reads, writes, API activity, MBean-backed counters
-
 * Tomcat metrics — where applicable to the Fabric runtime
 
 The format is the standard Prometheus text exposition format — plain HTTP, no authentication required by default, no special client library needed. Any tool that can make an HTTP GET request and parse the Prometheus text format can consume it.
@@ -104,11 +97,8 @@ This is the most important practical difference between deployment models. The e
 In Kubernetes, a third-party platform or collector must use one of these access models:
 
 * Pod annotation-based scraping — if the platform's agent or collector supports Kubernetes pod autodiscovery, annotate the Fabric pod with the scrape endpoint and port. The collector discovers and scrapes the pod directly from within the cluster.
-
 * Kubernetes Service — expose the JMX Exporter port (7170) as a named port on a Kubernetes Service. The third-party collector can then scrape the Service endpoint.
-
 * In-cluster collector — deploy the third-party collector or agent as a DaemonSet or Deployment in the same cluster. It can then reach Fabric pods via the Kubernetes pod network.
-
 * Port-forward — for temporary validation only, not for production use: kubectl port-forward <pod> 7170:7170
 
 > **Note:** The Fabric JMX Exporter binds to localhost (127.0.0.1) by default. For a third-party collector running in a different pod to reach it, the Fabric pod must expose port 7170 in its container spec and a Kubernetes Service or direct pod IP must be used.
@@ -120,7 +110,6 @@ In Kubernetes, a third-party platform or collector must use one of these access 
 On VMs, the access models are simpler:
 
 * Same-host collector — if the third-party agent or collector runs on the same host as Fabric, it can scrape localhost:7170 directly. This is the cleanest and most secure approach.
-
 * Remote scrape — if the platform scrapes from a remote location, use the Fabric host IP: http://<FABRIC_HOST_IP>:7170/metrics. Ensure the port is reachable through any firewall or security group rules between the platform and the Fabric host.
 
 > **Note:** Keep the endpoint as local as possible where feasible. A collector agent running on the same Fabric host avoids exposing the metrics port broadly and reduces network-level attack surface.
@@ -156,7 +145,6 @@ This pattern is common when the platform uses a push model (data must be sent to
 **Common collector options:**
 
 * OpenTelemetry Collector with the Prometheus receiver — scrapes the Fabric /metrics endpoint and exports to the platform using OTLP or remote-write. Vendor-neutral and widely supported. (https://opentelemetry.io/docs/collector/)
-
 * Vendor-specific agents — most major platforms ship their own agent that can be configured to scrape Prometheus endpoints and forward data to the platform backend. Consult the platform's agent documentation for the Prometheus scraping configuration.
 
 **K8s consideration:** deploy the collector or agent as a DaemonSet (one per node) or as a Deployment in the same cluster. Configure it to discover Fabric pods using Kubernetes service discovery and scrape port 7170.
@@ -192,13 +180,9 @@ Understanding the boundary between what K2view provides and what the platform te
 ## 5.1 What K2view Provides
 
 * The JMX Exporter JAR (jmx_prometheus_javaagent-1.5.0.jar), bundled with Fabric
-
 * The exporter configuration (fabric_config.yaml), intentionally minimal
-
 * The activation mechanism — jvm.options modification via fabric_7_monitor.sh, or automated via MONITORING=default in Kubernetes
-
 * The metrics endpoint at localhost:7170 (Fabric) and localhost:7270 (iid_finder)
-
 * Documentation of what the endpoint exposes and how to validate it
 
 K2view's responsibility ends at the metrics endpoint. The endpoint is stable, documented, and follows the Prometheus standard. Beyond that, K2view does not own how external platforms consume, store, or visualize the data.
@@ -206,17 +190,11 @@ K2view's responsibility ends at the metrics endpoint. The endpoint is stable, do
 ## 5.2 What the Platform Team Provides
 
 * Scrape configuration or collector setup in the third-party platform
-
 * Selection of which metric families to retain (filtering)
-
 * Label normalization or enrichment rules specific to the platform
-
 * Dashboards, monitors, alerts, and SLOs in the third-party tool
-
 * Retention policy and storage governance in the platform
-
 * Any network configuration needed to reach the Fabric endpoint from the platform's collection infrastructure
-
 * Validation that the platform is receiving and correctly interpreting the metrics
 
 > **Note:** This division is intentional. K2view keeps the exporter configuration stable and minimal. The platform team applies their own observability policy — what to keep, how long to keep it, and what to alert on — in their own tool, where they have full control.
@@ -234,7 +212,6 @@ Logs are more tightly coupled to the chosen logging stack. In the K2view standar
 This means a full third-party platform migration typically requires:
 
 * Reconfigure the scrape target or deploy a collector bridge for metrics — relatively straightforward
-
 * Replace or reconfigure the log forwarding pipeline for logs — more involved, platform-specific
 
 # 7. What Not To Do
@@ -262,39 +239,28 @@ The fabric_config.yaml exporter configuration should remain minimal. Apply metri
 **Before starting:**
 
 * JMX Exporter is active and curl http://localhost:7170/metrics returns valid output
-
 * Deployment model is clear (Kubernetes or VM / bare-metal)
-
 * Integration pattern has been selected (Pattern 1, 2, 3, or 4)
-
 * Network path from the collector or platform to the Fabric endpoint has been confirmed
 
 **Kubernetes:**
 
 * Fabric pod exposes port 7170 in its container spec
-
 * Kubernetes Service or pod annotations configured for scrape discovery
-
 * Third-party collector or agent deployed in-cluster
-
 * Collector configured to discover Fabric pods and scrape port 7170
 
 **VM / Bare-Metal:**
 
 * Collector agent running on the Fabric host (preferred) or reachable from a remote location
-
 * Collector configured to scrape localhost:7170 or <FABRIC_HOST_IP>:7170
-
 * Firewall or security group allows the collection path if scraping remotely
 
 **Both:**
 
 * Metric families filtered to a useful subset in the collector or platform
-
 * Expected metrics visible in the third-party platform
-
 * Dashboards or monitors can be built from the ingested metrics
-
 * Log forwarding path reviewed separately if logs are also required
 
 # Related Topics
