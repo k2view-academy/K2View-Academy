@@ -35,7 +35,7 @@
 
 # 1. Purpose
 
-This document explains how to enable and validate the Fabric metrics interface in air-gapped Kubernetes deployments where K2view K2cloud Orchestrator is not present. It describes what K2view provides, how to activate it, and how your observability infrastructure can connect to it.
+This document explains how to enable and validate the Fabric metrics interface in air-gapped Kubernetes deployments where the K2view K2cloud Orchestrator is not present. It describes what K2view provides, how to activate it, and how your observability infrastructure can connect to it.
 
 In air-gapped deployments, the customer owns and operates the Kubernetes cluster and all supporting infrastructure. K2view provides the Fabric platform and the metrics interface. What you do with that interface — which monitoring stack you connect to it, how you store and visualize the data — is your decision and your responsibility.
 
@@ -250,9 +250,7 @@ https://github.com/k2view/blueprints
 include a Grafana Agent k8s-monitoring Helm chart deployment that represents one way to implement the collection layer. The blueprints deploy:
 
 * Grafana Agent — scrapes metrics and collects logs, remote-writes to an external Prometheus endpoint
-
 * prometheus-node-exporter — host metrics from each worker node (DaemonSet)
-
 * kube-state-metrics — Kubernetes object and workload state
 
 You can use these blueprints as-is, adapt them, or replace them entirely with your own observability tooling. The Fabric metrics endpoint at port 7170 is the stable interface regardless of which collection layer you choose.
@@ -264,19 +262,14 @@ You can use these blueprints as-is, adapt them, or replace them entirely with yo
 At minimum, your collector needs to:
 
 1.  Discover the Fabric pods — by label selector, annotation, or static IP, depending on your collector's discovery model
-
 2.  Scrape port 7170 on each Fabric pod at your chosen interval
-
 3.  Apply metric filtering before storage — the exporter exposes all available metrics by default. See How to Control Metric Volume with Filtering and Relabeling for guidance on which families to retain and how to reduce cardinality.
 
 The core useful metric families to retain:
 
 * fabric\_* — Fabric product metrics
-
 * jvm\_* — JVM memory, GC, threads
-
 * tomcat\_* — web layer throughput and errors
-
 * process\_* — process-level CPU and file descriptors
 
 ## 6.3 Log Collection
@@ -284,11 +277,8 @@ The core useful metric families to retain:
 Fabric logs are written to $K2_HOME/logs/k2fabric.log inside the container. Your options for collection include:
 
 * Cloud-native log collection — Azure Monitor, AWS CloudWatch Logs, GCP Cloud Logging — using the node-level log agents provided by your cloud platform
-
 * Sidecar log agent — deploy a log shipping container alongside the Fabric container in the same pod
-
 * DaemonSet log collector — deploy a log collection DaemonSet across worker nodes
-
 * Promtail to Loki — the K2view blueprints include Promtail configuration templates; the Grafana Agent in the k8s-monitoring chart also handles pod log collection
 
 The Fabric log path assumed by the K2view reference configurations is:
@@ -314,15 +304,12 @@ For an overview of how the Thanos federation model works in the context of K2vie
 ## MONITORING env var is missing from the pod
 
 * Check the pod spec or deployment template — confirm the MONITORING environment variable is defined
-
 * If using a Kubernetes Secret, confirm the Secret exists and is referenced correctly in the pod spec
-
 * Redeploy the pod after adding the environment variable — the monitor setup runs only at container startup
 
 ## jvm.options does not contain the javaagent line
 
 * Confirm MONITORING=default is present in the pod environment (Section 5.1)
-
 * Check Fabric startup logs for errors in the monitor setup scripts:
 
 ```
@@ -334,11 +321,8 @@ kubectl logs <fabric-pod> -n <namespace> | grep -i monitor
 ## Port 7170 is not reachable from the collector
 
 * Confirm port 7170 is declared in the container spec (Section 4.2)
-
 * If using a Kubernetes Service, confirm the Service exposes port 7170 and selects the correct pods
-
 * Check network policies — if your cluster uses NetworkPolicy resources, ensure the collector namespace is permitted to reach the Fabric pod namespace on port 7170
-
 * Test reachability from a pod in the collector's namespace:
 
 ```
@@ -348,13 +332,11 @@ kubectl run test --image=curlimages/curl --restart=Never --rm -it -- curl http:/
 ## Metrics endpoint responds but output is very sparse
 
 * Fabric may still be initializing — the JVM starts before all MBeans are registered. Wait for full Fabric startup and retry.
-
 * Confirm the javaagent line is correctly formed in jvm.options (Section 5.2)
 
 ## Custom metrics are not appearing
 
 * Confirm the LU function using statsCount or statsDuration has been executed at least once since Fabric started
-
 * Query the endpoint and filter by the custom metric name:
 
 ```
@@ -366,36 +348,27 @@ kubectl exec -it <fabric-pod> -- curl -s http://localhost:7170/metrics | grep <m
 **Enabling:**
 
 * MONITORING=default is set in the Fabric pod spec
-
 * Port 7170 is declared in the container spec
-
 * Port 7270 is declared in the container spec (if iid_finder is running)
-
 * Pod has been deployed or restarted with the new environment variable
 
 **Validating:**
 
 * kubectl exec confirms MONITORING=default in pod environment
-
 * jvm.options contains the jmx_prometheus_javaagent-1.5.0.jar javaagent line
-
 * curl http://localhost:7170/metrics from inside the pod returns Prometheus-format output
-
 * fabric\_* and jvm\_* metrics are present in the output
 
 **Connecting:**
 
-* Collector can reach port 7170 on Fabric pods from its namespace
-
+* The collector can reach port 7170 on Fabric pods from its namespace
 * Scrape job or discovery rule configured in your collector
-
 * Metric filtering applied to retain useful families and control cardinality
-
-* Log collection configured separately using your preferred approach
+* Log collection is configured separately using your preferred approach
 
 # Related Topics
 
-* [K2view Observability Architecture for Fabric](/articles/34_JMX_statistics/K2view_Observability_Architecture_for_Fabric.md) — full architecture overview including Thanos federation
+* [K2view Observability Architecture for Fabric](/articles/34_JMX_statistics/K2view_Observability_Architecture_for_Fabric.md) — full architecture overview, including Thanos federation
 * [K2view Kubernetes Monitoring Stack for Fabric](/articles/34_JMX_statistics/K2view_Kubernetes_Monitoring_Stack_for_Fabric.md) — the K2cloud equivalent of this document
 * [How to Enable the JMX Exporter for Fabric](/articles/34_JMX_statistics/How_to_Enable_the_JMX_Exporter_for_Fabric.md) — detailed enablement procedure
 * [How to Verify That Fabric Is Exposing Metrics](/articles/34_JMX_statistics/How_to_Verify_That_Fabric_Is_Exposing_Metrics.md) — validation procedure
