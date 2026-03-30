@@ -128,7 +128,7 @@ Promtail (background process) ──────────────► Loki
 The Prometheus JMX Exporter is bundled with Fabric under the monitor directory:
 
 ```
-\$K2_HOME/monitor/jmx_exporter/
+$K2_HOME/monitor/jmx_exporter/
 jmx_prometheus_javaagent-1.5.0.jar
 fabric_config.yaml # Fabric exporter configuration
 iidfinder_config.yaml # iid_finder exporter configuration
@@ -156,7 +156,7 @@ There are two ways to activate it on a VM:
 If the monitor directory is present on the Fabric host, run:
 
 ```
-\$K2_HOME/monitor/jmx_exporter/fabric_7_monitor.sh
+$K2_HOME/monitor/jmx_exporter/fabric_7_monitor.sh
 ```
 
 This script:
@@ -174,15 +174,15 @@ This script:
 The line appended to jvm.options is:
 
 ```
--javaagent:\$K2_HOME/monitor/jmx_exporter/jmx_prometheus_javaagent-1.5.0.jar=7170:\$K2_HOME/monitor/jmx_exporter/fabric_config.yaml
+-javaagent:$K2_HOME/monitor/jmx_exporter/jmx_prometheus_javaagent-1.5.0.jar=7170:$K2_HOME/monitor/jmx_exporter/fabric_config.yaml
 ```
 
 ### Option B — Edit jvm.options manually
 
-Add the following line to \$K2_HOME/config/jvm.options:
+Add the following line to $K2_HOME/config/jvm.options:
 
 ```
--javaagent:\$K2_HOME/monitor/jmx_exporter/jmx_prometheus_javaagent-1.5.0.jar=7170:\$K2_HOME/monitor/jmx_exporter/fabric_config.yaml
+-javaagent:$K2_HOME/monitor/jmx_exporter/jmx_prometheus_javaagent-1.5.0.jar=7170:$K2_HOME/monitor/jmx_exporter/fabric_config.yaml
 ```
 
 **Note:** Fabric must be restarted after either option for the javaagent line to take effect. The exporter is loaded at JVM startup — changes to jvm.options have no effect on a running Fabric process.
@@ -203,13 +203,13 @@ http://localhost:9100/metrics
 
 The monitor_setup.sh script orchestrates the full monitor initialization on a Fabric host. It performs three steps in sequence:
 
-* setup_monitor: copies the monitor directory from the Fabric image to \$FABRIC_HOME (persistent volume) if not already present
+* setup_monitor: copies the monitor directory from the Fabric image to $FABRIC_HOME (persistent volume) if not already present
 
 * init_monitor: calls fabric_7_monitor.sh to configure jvm.options, and calls promtail_config.sh if LOKI_HOST is set
 
 * start_monitor: starts Node Exporter and Promtail as background processes, if the monitor directory is present and MONITORING is not set to NONE
 
-On a host where Fabric runs as a container (even in a non-Kubernetes context), monitor_setup.sh is called automatically at container startup when the MONITORING environment variable is set to \'default\' or \'true\'. On a native bare-metal installation without containerization, the script can be run manually.
+On a host where Fabric runs as a container (even in a non-Kubernetes context), monitor_setup.sh is called automatically at container startup when the MONITORING environment variable is set to 'default' or 'true'. On a native bare-metal installation without containerization, the script can be run manually.
 
 ## 4.5 Prometheus Scrape Configuration
 
@@ -253,7 +253,7 @@ Promtail runs on each Fabric host as a background process started by monitor_set
 The Fabric log file tailed by Promtail is:
 
 ```
-\$K2_HOME/logs/k2fabric.log
+$K2_HOME/logs/k2fabric.log
 ```
 
 Promtail is configured at startup by promtail_config.sh, which substitutes the Loki host, hostname, and log path into the configuration template. Promtail only starts if the LOKI_HOST environment variable is set. If LOKI_HOST is not set, Promtail is skipped and no logs are shipped.
@@ -280,7 +280,7 @@ scrape_configs:
            job: fabriclogs
            App: fabric
            host: <FABRIC_HOST_NAME>
-           \_\_path\_\_: /opt/apps/fabric/workspace/logs/k2f*.log
+           __path__: /opt/apps/fabric/workspace/logs/k2f*.log
    - job_name: iidfinder
      static_configs:
        - targets:
@@ -289,7 +289,7 @@ scrape_configs:
            job: iidfinderlogs
            app: iidfinder
            host: <FABRIC_HOST_NAME>
-           \_\_path\_\_: /opt/apps/fabric/workspace/logs/iid*.log
+           __path__: /opt/apps/fabric/workspace/logs/iid*.log
 ```
 
 **Note:** Replace <LOKI_HOST> with the IP address or hostname of your Loki server. Replace <FABRIC_HOST_NAME> with a meaningful identifier for the Fabric host (used as a label in Loki queries).
@@ -343,16 +343,16 @@ curl http://localhost:7170/metrics
 4.  Start Node Exporter as a background process:
 
 ```
-nohup \$K2_HOME/monitor/node_exporter/node_exporter >/dev/null 2>&1 &
+nohup $K2_HOME/monitor/node_exporter/node_exporter >/dev/null 2>&1 &
 ```
 
 5.  Configure and start Promtail (if Loki is available):
 
 ```
-\$K2_HOME/monitor/promtail/promtail_config.sh -lk <LOKI_HOST> -s fabric
+$K2_HOME/monitor/promtail/promtail_config.sh -lk <LOKI_HOST> -s fabric
 ```
 
-**Alternatively:** If the monitor directory is present and the MONITORING environment variable is set to \'default\' or \'true\', running monitor_setup.sh performs all of the above steps automatically.
+**Alternatively:** If the monitor directory is present and the MONITORING environment variable is set to 'default' or 'true', running monitor_setup.sh performs all of the above steps automatically.
 
 ## 6.2 On the Monitoring Machine
 
@@ -422,21 +422,21 @@ All four data types are presented together in Grafana. This supports the key ope
 
 # Appendix B: Key Files
 
-* \$K2_HOME/monitor/jmx_exporter/jmx_prometheus_javaagent-1.5.0.jar — JMX Exporter JAR
+* $K2_HOME/monitor/jmx_exporter/jmx_prometheus_javaagent-1.5.0.jar — JMX Exporter JAR
 
-* \$K2_HOME/monitor/jmx_exporter/fabric_config.yaml — Fabric exporter config
+* $K2_HOME/monitor/jmx_exporter/fabric_config.yaml — Fabric exporter config
 
-* \$K2_HOME/monitor/jmx_exporter/iidfinder_config.yaml — iid_finder exporter config
+* $K2_HOME/monitor/jmx_exporter/iidfinder_config.yaml — iid_finder exporter config
 
-* \$K2_HOME/monitor/jmx_exporter/fabric_7_monitor.sh — configures jvm.options and enables JMX
+* $K2_HOME/monitor/jmx_exporter/fabric_7_monitor.sh — configures jvm.options and enables JMX
 
-* \$K2_HOME/monitor/node_exporter/node_exporter — Node Exporter binary
+* $K2_HOME/monitor/node_exporter/node_exporter — Node Exporter binary
 
-* \$K2_HOME/monitor/promtail/promtail_config.sh — configures and starts Promtail
+* $K2_HOME/monitor/promtail/promtail_config.sh — configures and starts Promtail
 
-* \$K2_HOME/monitor/promtail/promtail-fabric-config.yaml — Promtail config template
+* $K2_HOME/monitor/promtail/promtail-fabric-config.yaml — Promtail config template
 
-* \$K2_HOME/config/jvm.options — Fabric JVM options (javaagent line is appended here)
+* $K2_HOME/config/jvm.options — Fabric JVM options (javaagent line is appended here)
 
 # Appendix C: Validation Checks
 
@@ -466,7 +466,7 @@ curl http://<MONITORING_MACHINE>:9090/api/v1/targets
 
 # Appendix D: Environment Variables
 
-* MONITORING — Controls whether the monitoring stack is initialized. Set to \'default\' or \'true\' to enable. Set to \'NONE\' to suppress. If unset, monitoring is not started.
+* MONITORING — Controls whether the monitoring stack is initialized. Set to 'default' or 'true' to enable. Set to 'NONE' to suppress. If unset, monitoring is not started.
 
 * LOKI_HOST — The hostname or IP address of the Loki server. Promtail only starts if this variable is set.
 
