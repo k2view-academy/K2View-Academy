@@ -52,13 +52,9 @@ deploy_grafana_agent = true
 When this flag is true, Terraform deploys the Grafana k8s-monitoring Helm chart into the cluster. This chart installs:
 
 * Grafana Agent — the local metrics collector and log forwarder
-
 * prometheus-node-exporter — host metrics from each worker node (DaemonSet)
-
 * kube-state-metrics — Kubernetes object and workload state
-
 * Prometheus Operator CRDs — required by the monitoring stack
-
 * OpenCost — Kubernetes cost monitoring (enabled by default in GCP and AWS)
 
 Grafana Agent is configured to remote-write metrics to an external Prometheus endpoint and forward logs to an external Loki endpoint. Both endpoints are provided as Terraform input variables. The cluster name, credentials, and endpoint URLs are the three things you must supply before running.
@@ -74,11 +70,8 @@ Before running the Terraform deployment, confirm the following:
 ## 3.1 Tools
 
 * Terraform >= 1.0 installed and configured
-
 * kubectl configured to access the target cluster (or will be configured after cluster creation)
-
 * Helm 3 installed
-
 * Cloud CLI authenticated: az (Azure), gcloud (GCP), aws (AWS)
 
 ## 3.2 Grafana Cloud or Compatible Endpoints
@@ -86,19 +79,14 @@ Before running the Terraform deployment, confirm the following:
 The Grafana Agent requires two external endpoints to send data to:
 
 * A Prometheus remote-write endpoint (metrics destination)
-
 * A Loki push endpoint (logs destination)
 
 These can be Grafana Cloud endpoints or self-hosted Prometheus and Loki instances. You will need:
 
 * The Prometheus host URL
-
 * The Prometheus basic auth username
-
 * The Loki host URL
-
 * The Loki basic auth username
-
 * An access token or password for both (typically a single Grafana Cloud access policy token)
 
 > **Note:** The GCP and AWS modules also support a Tempo (distributed tracing) endpoint. Tracing is disabled by default. If not using Tempo, the token placeholder is still required in the Terraform variable but traces will not be sent.
@@ -108,7 +96,6 @@ These can be Grafana Cloud endpoints or self-hosted Prometheus and Loki instance
 The blueprints also deploy the K2view Agent (k2v_agent), which connects the cluster to K2view K2cloud Orchestrator via a mailbox ID. This is separate from monitoring but is deployed in the same Terraform run. You will need:
 
 * A mailbox ID from K2view K2cloud Orchestrator
-
 * The mailbox URL (default: https://cloud.k2view.com/api/mailbox)
 
 # 4. Deployment Procedure
@@ -149,18 +136,18 @@ Replace all placeholder tokens:
 
 ```yaml
 cluster:
-   name: \<YOUR_CLUSTER_NAME>
+   name: <YOUR_CLUSTER_NAME>
 externalServices:
    prometheus:
-      host: \<PROMETHEUS_URL>
+      host: <PROMETHEUS_URL>
       basicAuth:
-         username: \<PROMETHEUS_USER>
-         password: \<GRAFANA_TOKEN>
+         username: <PROMETHEUS_USER>
+         password: <GRAFANA_TOKEN>
    loki:
-      host: \<LOKI_URL>
+      host: <LOKI_URL>
       basicAuth:
-         username: \<LOKI_USER>
-         password: \<GRAFANA_TOKEN>
+         username: <LOKI_USER>
+         password: <GRAFANA_TOKEN>
 
 **Note:** The Azure blueprint uses a local copy of the k8s-monitoring chart from blueprints/Azure/helm/charts/grafana-agent/k8s-monitoring/. GCP and AWS pull from the published Grafana Helm registry. The chart behavior is the same.
 ```
@@ -201,13 +188,13 @@ grafana_token = "your-grafana-access-policy-token"
 mailbox_id = "your-k2view-mailbox-id"
 ```
 
-The Prometheus and Loki host URLs and usernames are pre-populated in the module variables with Grafana Cloud defaults. If using a different endpoint, override them in the tfvars file:
+The Prometheus and Loki host URLs and usernames are pre-populated in the module variables with Grafana Cloud defaults. If using a different endpoint, override it in the tfvars file:
 
-> \# Only needed if NOT using the Grafana Cloud defaults
-> \# externalservices_prometheus_host = "https://\<your-prometheus>"
-> \# externalservices_prometheus_username = \<your-username>
-> \# externalservices_loki_host = "https://\<your-loki>"
-> \# externalservices_loki_username = \<your-username>
+> # Only needed if NOT using the Grafana Cloud defaults
+> # externalservices_prometheus_host = "https://<your-prometheus>"
+> # externalservices_prometheus_username = <your-username>
+> # externalservices_loki_host = "https://<your-loki>"
+> # externalservices_loki_username = <your-username>
 
 ### Step 2 — Initialize and apply
 
@@ -222,7 +209,7 @@ terraform apply
 
 > **[ AWS / EKS ]** Blueprint path: blueprints/aws/terraform/EKS/
 
-The AWS blueprint deploys an EKS cluster and, optionally, Grafana Agent. The pattern is the same as GCP — all configuration is passed as Terraform variables.
+The AWS blueprint deploys an EKS cluster and, optionally, Grafana Agent. The pattern is the same as GCP — all configurations are passed as Terraform variables.
 
 ### Step 1 — Configure the tfvars file
 
@@ -354,12 +341,12 @@ Create a River configuration file (e.g., fabric-scrape.river):
 discovery.relabel "fabric_pods" {
    targets = discovery.kubernetes.pods.targets
    rule {
-      source_labels = ["\_\_meta_kubernetes_pod_label_app"]
+      source_labels = ["__meta_kubernetes_pod_label_app"]
       regex = "fabric"
       action = "keep"
     }
     rule {
-       source_labels = ["\_\_meta_kubernetes_pod_container_port_number"]
+       source_labels = ["__meta_kubernetes_pod_container_port_number"]
        regex = "7170"
        action = "keep"
     }
@@ -368,8 +355,8 @@ discovery.relabel "fabric_pods" {
 // Filter to useful metric families before forwarding
 prometheus.relabel "fabric_filter" {
    rule {
-      source_labels = ["\_\_name\_\_"]
-      regex = "fabric\_.*|jvm\_.*|tomcat\_.*|process\_.*"
+      source_labels = ["__name__"]
+      regex = "fabric_.*|jvm_.*|tomcat_.*|process_.*"
       action = "keep"
    }
       forward_to = [prometheus.relabel.metrics_service.receiver]
@@ -392,15 +379,15 @@ For Azure (values file):
 ```
 # In grafana-agent-values.yaml, add:
 extraConfig: |
-\<paste River config inline here>
+<paste River config inline here>
 ```
 
 Or pass it as a file during Helm upgrade:
 
 ```
-helm upgrade grafana-k8s-monitoring . \\
---namespace grafana-agent \\
---values grafana-agent-values.yaml \\
+helm upgrade grafana-k8s-monitoring . 
+--namespace grafana-agent 
+--values grafana-agent-values.yaml 
 --set-file extraConfig=fabric-scrape.river
 ```
 
@@ -427,9 +414,7 @@ kubectl logs -n grafana-agent -l app.kubernetes.io/name=grafana-agent --tail=50
 Look for:
 
 * Successful remote-write connections to the Prometheus and Loki endpoints
-
 * Scrape activity for fabric-jmx job (if Fabric scraping is configured)
-
 * No authentication errors against the remote endpoints
 
 ## 7.3 Confirm Metrics Are Reaching Prometheus
@@ -457,7 +442,7 @@ fabric_read_total
 In Grafana, query Loki for recent logs from the cluster:
 
 ```
-{cluster="\<YOUR_CLUSTER_NAME>"}
+{cluster="<YOUR_CLUSTER_NAME>"}
 ```
 
 Pod logs should appear within one scrape interval (default 60 seconds) of Grafana Agent starting.
@@ -523,46 +508,34 @@ Pod logs should appear within one scrape interval (default 60 seconds) of Grafan
 
 ## Grafana Agent pods not starting
 
-* Check events: kubectl describe pod -n grafana-agent \<pod-name>
-
+* Check events: kubectl describe pod -n grafana-agent <pod-name>
 * Authentication failure against the Prometheus or Loki endpoint — verify the token value in the values file or Terraform variable
-
 * Incorrect endpoint URL — confirm the Prometheus and Loki host URLs are reachable from inside the cluster
-
 * Azure private cluster: Helm-based deployments fail on private clusters — deploy Grafana Agent manually
 
 ## Metrics not appearing in Prometheus
 
-* Confirm Grafana Agent pods are Running with no crash loops
-
+* Confirm Grafana Agent pods are running with no crash loops
 * Check Grafana Agent logs for remote-write errors
-
 * Confirm the Prometheus endpoint URL and credentials are correct
-
 * Check firewall or security group rules between the cluster and the Prometheus endpoint
 
 ## Fabric metrics not appearing
 
 * Fabric scraping is not configured by default — Section 6 must be completed
-
-* If using annotation-based autodiscovery, confirm autoDiscover.enabled: true is set and Fabric pods have the scrape annotation
-
+* If using annotation-based autodiscovery, confirm autoDiscover.enabled: true is set, and Fabric pods have the scrape annotation
 * If using an explicit River pipeline, confirm the label selector matches the actual labels on Fabric pods
-
-* Confirm the Fabric JMX Exporter is active: kubectl exec -it \<fabric-pod> -- curl http://localhost:7170/metrics
-
-* Confirm MONITORING=default is present in the Fabric pod environment: kubectl exec \<pod> -- env | grep MONITORING. If absent, contact K2view to confirm monitoring is enabled in your space profile.
+* Confirm the Fabric JMX Exporter is active: kubectl exec -it <fabric-pod> -- curl http://localhost:7170/metrics
+* Confirm MONITORING=default is present in the Fabric pod environment: kubectl exec <pod> -- env | grep MONITORING. If absent, contact K2view to confirm monitoring is enabled in your space profile.
 
 ## Node metrics missing
 
 * Confirm prometheus-node-exporter DaemonSet is running: kubectl get ds -n grafana-agent
-
 * If metrics.node-exporter.enabled is false in the chart values, re-enable it
 
 ## kube-state-metrics missing
 
 * Confirm kube-state-metrics deployment is running: kubectl get deploy -n grafana-agent
-
 * If kube-state-metrics.enabled is false in the chart values, re-enable it
 
 # 10. Quick Checklist
@@ -570,37 +543,25 @@ Pod logs should appear within one scrape interval (default 60 seconds) of Grafan
 **Before deployment:**
 
 * Grafana Cloud or compatible Prometheus and Loki endpoints available
-
 * Access token or credentials for both endpoints
-
 * K2view mailbox ID available
-
 * terraform.tfvars configured for the target cloud
-
 * grafana-agent-values.yaml populated (Azure) or Terraform variables set (GCP/AWS)
 
 **After deployment:**
 
 * kubectl get pods -n grafana-agent — all pods Running
-
 * Grafana Agent logs show no authentication or connection errors
-
 * node_cpu_seconds_total visible in Prometheus
-
 * kube_pod_status_ready visible in Prometheus
-
 * Pod logs visible in Loki
 
 **After adding Fabric scraping:**
 
 * Fabric JMX Exporter active: curl http://localhost:7170/metrics from inside pod
-
 * Monitoring is enabled in the space profile (confirm with K2view)
-
 * Fabric pods annotated OR River pipeline configured
-
-* jvm_memory_bytes_used and fabric\_* metrics visible in Prometheus
-
+* jvm_memory_bytes_used and fabric_* metrics visible in Prometheus
 * Metric filtering rules applied to control volume
 
 # Related Topics
