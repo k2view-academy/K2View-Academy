@@ -19,5 +19,5 @@ K2view Fabric exposes runtime and application telemetry through JMX MBeans and a
   <li><a href="/articles/34_JMX_statistics/Deploying_the_K2view_Monitoring_Stack_on_Kubernetes.md">Deploying Monitoring on Kubernetes</a></li>
   <li><a href="/articles/34_JMX_statistics/How_to_Configure_the_Collection_Layer_to_Scrape_Fabric_Metrics.md">Configuring Fabric Metrics Collection</a></li>
   <li><a href="/articles/34_JMX_statistics/How_to_Control_Metric_Volume_with_Filtering_and_Relabeling.md">Metric Filtering and Relabeling</a></li>
-  <li><a href="/articles/34_JMX_statistics/How_to_Use_the_Shipped_JMX_Exporter_with_Third_Party_Platforms.md">Shipped JMX Exporter with Third-Party Monitoring </a></li>
+  <li><a href="/articles/34_JMX_statistics/How_to_Use_the_Shipped_JMX_Exporter_with_Third_Party_Platforms.md">JMX Exporter with Third-Party Monitoring </a></li>
 </ul>
