@@ -17,6 +17,7 @@
 <studio><li><a href="/articles/04_fabric_studio/30_build_web_apps.md">Building Web Apps</a></li></studio>  
 <studio><li><a href="/articles/99_fabric_infras/12_fabric_studio_activation.md">Fabric Studio Online and Offline Activation</a></li></studio>    
 <web><li><a href="/articles/04_fabric_studio/21_web_file_explorer_and_navigation.md">Exploring, Navigating and Managing Files</a></li></web>
+<web><li><a href="/articles/04_fabric_studio/31_logical_units_groups.md">Logical Units Groups</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/22_web_search.md">Search for Terms and Content</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/08_fabric_project_tree.md">Fabric Project Tree</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/09_logic_files_and_categories.md">Logic Files and Categories</a></li></web>
@@ -28,4 +29,6 @@
 <web><li><a href="/articles/04_fabric_studio/28_web_k2exchange.md">K2exchange</a></li></web>    
 <web><li><a href="/articles/04_fabric_studio/30_build_web_apps.md">Building Web Apps</a></li></web>    
 <web><li><a href="/articles/04_fabric_studio/27_web_productivity_tips.md">Productivity Tips</a></li></web>
+<web><li><a href="/articles/04_fabric_studio/studio_ai/README.md">Studio AI</a></li></web>
 </ul>
+
