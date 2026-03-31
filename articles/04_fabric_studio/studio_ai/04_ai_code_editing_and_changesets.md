@@ -61,7 +61,7 @@ When using @Coder in Agent Mode, three optional capability toggles are available
 - **GitHub**, lets @Coder delegate GitHub-related work to @GitHub: reading issues, querying the repository, and creating pull request descriptions.
 - **AppTester**, after @Coder finishes an implementation, it automatically hands off to the AppTester agent to run end-to-end UI verification. If tests fail, the agents iterate to fix the issues.
 
-All three capabilities are off by default. For full details, see [Agent Capabilities](10_agent_capabilities.md).
+All three capabilities are off by default.
 
 ## Fixing Diagnostics
 

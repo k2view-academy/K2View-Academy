@@ -27,13 +27,36 @@ Slash commands can also accept arguments. Refer to the specific command's descri
 
 Studio AI includes a set of built-in slash commands for common development workflows:
 
-| Command | Description |
-|---|---|
-| `/remember` | Saves a piece of information — a convention, a preference, or a fact about the project — for the current agent to retain across the session. Useful for establishing context once without repeating it in every message. |
-| `/with-apptester` | Triggers the current task with the AppTester capability enabled, equivalent to enabling the AppTester chip before sending your message. |
-| `/analyze-gh-ticket` | Fetches a GitHub issue and asks the agent to analyze it in the context of your current project — summarizing the problem, identifying affected files, and suggesting an implementation approach. |
-| `/fix-gh-ticket` | Fetches a GitHub issue and instructs @Coder to implement the fix directly, starting from the issue description. |
-| `/address-gh-review` | Takes a GitHub pull request review and instructs @Coder to address each review comment in the codebase. |
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>/remember</code></td>
+      <td>Saves a piece of information — a convention, a preference, or a fact about the project — for the current agent to retain across the session. Useful for establishing context once without repeating it in every message.</td>
+    </tr>
+    <tr>
+      <td><code>/with-apptester</code></td>
+      <td>Triggers the current task with the AppTester capability enabled, equivalent to enabling the AppTester chip before sending your message.</td>
+    </tr>
+    <tr>
+      <td><code>/analyze-gh-ticket</code></td>
+      <td>Fetches a GitHub issue and asks the agent to analyze it in the context of your current project — summarizing the problem, identifying affected files, and suggesting an implementation approach.</td>
+    </tr>
+    <tr>
+      <td><code>/fix-gh-ticket</code></td>
+      <td>Fetches a GitHub issue and instructs @Coder to implement the fix directly, starting from the issue description.</td>
+    </tr>
+    <tr>
+      <td><code>/address-gh-review</code></td>
+      <td>Takes a GitHub pull request review and instructs @Coder to address each review comment in the codebase.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Creating Custom Skills
 

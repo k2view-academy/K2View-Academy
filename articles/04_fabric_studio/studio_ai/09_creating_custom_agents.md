@@ -16,13 +16,42 @@ The new agent is immediately available in the AI Chat.
 
 ## Agent Definition Fields
 
-| Field | Required | Description |
-|---|---|---|
-| **ID** | Yes | A unique identifier used internally. Use lowercase with hyphens (e.g., `my-agent`). Must not conflict with existing agent IDs. |
-| **Name** | Yes | The display name shown in the chat and in AI Configuration. This is also the `@Name` used to address the agent in the chat. |
-| **Description** | Yes | A one-line summary of what the agent does. Appears in the agent list and on the AI Chat welcome screen. |
-| **Prompt** | Yes | The system prompt that defines the agent's behavior, persona, and knowledge. Supports `{{variable}}` and `~{function}` syntax — see [Customizing Agent Prompts](07_ai_configuration_and_prompts.md). |
-| **Default LLM** | No | The model or model alias the agent uses. If omitted, the agent uses the workspace default. |
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Required</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>ID</strong></td>
+      <td>Yes</td>
+      <td>A unique identifier used internally. Use lowercase with hyphens (e.g., <code>my-agent</code>). Must not conflict with existing agent IDs.</td>
+    </tr>
+    <tr>
+      <td><strong>Name</strong></td>
+      <td>Yes</td>
+      <td>The display name shown in the chat and in AI Configuration. This is also the <code>@Name</code> used to address the agent in the chat.</td>
+    </tr>
+    <tr>
+      <td><strong>Description</strong></td>
+      <td>Yes</td>
+      <td>A one-line summary of what the agent does. Appears in the agent list and on the AI Chat welcome screen.</td>
+    </tr>
+    <tr>
+      <td><strong>Prompt</strong></td>
+      <td>Yes</td>
+      <td>The system prompt that defines the agent's behavior, persona, and knowledge. Supports <code>{{variable}}</code> and <code>~{function}</code> syntax — see <a href="07_ai_configuration_and_prompts.md">Customizing Agent Prompts</a>.</td>
+    </tr>
+    <tr>
+      <td><strong>Default LLM</strong></td>
+      <td>No</td>
+      <td>The model or model alias the agent uses. If omitted, the agent uses the workspace default.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Global vs Workspace-Specific Agents
 
