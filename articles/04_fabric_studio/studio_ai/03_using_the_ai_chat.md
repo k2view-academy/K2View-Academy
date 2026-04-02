@@ -165,4 +165,4 @@ For more on AI history and token monitoring, see [Viewing Token Consumption and 
 
 When an agent finishes a task, particularly when running in Agent Mode in the background, a notification appears in the Studio. The notification includes the agent name, the session it completed, and a **"Show Chat"** button that takes you directly to that session to review the result.
 
-You can configure whether each agent sends completion notifications from the [AI Configuration](07_ai_configuration_and_prompts.md) view.
+You can configure whether each agent sends completion notifications from the [AI Configuration](06_ai_configuration_and_settings.md) view.

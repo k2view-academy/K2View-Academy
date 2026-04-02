@@ -23,14 +23,40 @@ The tab shows a list of all configured servers. Each entry displays the server n
 
 Click **Add MCP Server**. Fill in the following fields:
 
-| Field | Description |
-|---|---|
-| **Name** | A display name for the server, shown in the list and in agent responses |
-| **Type** | `stdio` for a local process, or `HTTP/SSE` for a remote server |
-| **Command** *(stdio only)* | The command to launch the local MCP server process (e.g., `node /path/to/server.js`) |
-| **URL** *(HTTP/SSE only)* | The full URL of the remote MCP endpoint |
-| **Arguments** *(optional)* | Additional command-line arguments passed to the server process |
-| **Environment variables** *(optional)* | Key-value pairs injected into the server process's environment (useful for API keys and secrets) |
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Name</strong></td>
+      <td>A display name for the server, shown in the list and in agent responses</td>
+    </tr>
+    <tr>
+      <td><strong>Type</strong></td>
+      <td><code>stdio</code> for a local process, or <code>HTTP/SSE</code> for a remote server</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> <em>(stdio only)</em></td>
+      <td>The command to launch the local MCP server process (e.g., <code>node /path/to/server.js</code>)</td>
+    </tr>
+    <tr>
+      <td><strong>URL</strong> <em>(HTTP/SSE only)</em></td>
+      <td>The full URL of the remote MCP endpoint</td>
+    </tr>
+    <tr>
+      <td><strong>Arguments</strong> <em>(optional)</em></td>
+      <td>Additional command-line arguments passed to the server process</td>
+    </tr>
+    <tr>
+      <td><strong>Environment variables</strong> <em>(optional)</em></td>
+      <td>Key-value pairs injected into the server process's environment (useful for API keys and secrets)</td>
+    </tr>
+  </tbody>
+</table>
 
 Click **Save** to connect the server. Studio AI immediately attempts to connect and lists the tools it discovers.
 
