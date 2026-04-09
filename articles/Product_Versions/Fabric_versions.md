@@ -474,9 +474,9 @@ Please check the release notes for component version support, such as Kafka, Neo
 				<p>Sep 2, 2022</p>
 			</td>
 			<td>
-			<p>HF36</p>
-            <p>April 1, 2026</p></td>
-            <td>318</td>
+			<p>HF37</p>
+            <p>April 7, 2026</p></td>
+            <td>322</td>
             <td></td>
             <td>4.1.10</td>            
         </tr>
