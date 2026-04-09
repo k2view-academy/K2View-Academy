@@ -32,12 +32,12 @@ Note that this link is internal. If you don't have permissions to the folder, op
 
 #### Untar the package:
 ```bash
-tar -zxvf k2view-neo4j-enterprise-5.26.19-unix.tar.gz
+tar -zxvf k2view-neo4j-enterprise-5.26.24-unix.tar.gz
 ```
 
 #### Remove tar.gz file:
 ```bash
-rm -rf k2view-neo4j-enterprise-5.26.19-unix.tar.gz
+rm -rf k2view-neo4j-enterprise-5.26.24-unix.tar.gz
 ```
 
 #### Source bash profile:
