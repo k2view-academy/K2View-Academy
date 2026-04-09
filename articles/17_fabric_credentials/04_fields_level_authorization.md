@@ -1,14 +1,16 @@
-# Declarative Field Level Authorization
+# Declarative Field Level Authorization with Instance-Level Access Control
 
 ### Overview
 
 The purpose of the **Declarative Field-Level Authorization** mechanism is to restrict access to sensitive data, using Role-Based Access Control (RBAC). Fabric can expose either the original or manipulated data to Fabric users based on their predefined roles. This mechanism applies to all channels that query Fabric data: Web Services, GraphIt and Broadway actors.
 
-For example, the Customer Details web service retrieves an SSN, which is considered sensitive data. Most user roles are not permitted to view a customer's SSN, whereas some roles (such as administrators) are. The Declarative Field-Level Authorization mechanism allows to define a [security profile](05_security_profiles.md) that can redirect the web service to retrieve a masked SSN instead of the original one. The following section describes how to set up the **Declarative Field-Level Authorization** mechanism.
+For example, the Customer Details web service retrieves an SSN, which is considered sensitive data. Most user roles are not permitted to view a customer's SSN, whereas some roles (such as administrators) are. The Declarative Field-Level Authorization mechanism allows to define a [security profile](05_security_profiles.md) that can redirect the web service to retrieve a masked SSN instead of the original one.
 
-Starting from Fabric V8.3, a new feature validates during the sync process whether a user is authorized to view LU instance data based on their role, security profile and defined root table view, and throws an unauthorized exception if access is denied. The Search command has been enhanced to return only the IID when the user is unauthorized. The Web Service/GraphIt functionality has been enhanced to consider security profile definitions.
+Beyond field-level masking, security profiles also support **instance-level access control**: during the sync process, Fabric validates whether a user is authorized to view an LU instance based on their role, security profile, and defined root table view, throwing an unauthorized exception if access is denied. The Search command returns only the IID when the user is unauthorized, and Web Service/GraphIt responses are similarly filtered according to security profile definitions.
 
-For example, to restrict certain users from accessing VIP customers, it is possible to add a new field to the root table called vip_ind and mark the VIP customers with 'Y'. All other customers will remain with vip_ind set to null. Afterwards, it is required to define a view called customers_vip that runs select * from root_table where vip_ind is null. Users with a role linked to a security profile that contains this view will not have access to the VIP customers, as the sync activity will throw unauthorized exception.
+For example, to restrict certain users from accessing VIP customers, you can add a `vip_ind` field to the root table and mark VIP customers with `'Y'` (all other customers remain `null`). Then define a view called `customers_vip` with the query `SELECT * FROM root_table WHERE vip_ind IS NULL`. Users whose role is linked to a security profile containing this view will be blocked from accessing VIP customer instances — the sync activity will throw an unauthorized exception.
+
+The following section describes how to set up the **Declarative Field-Level Authorization** mechanism.
 
 ### End-to-End Definition of Field-Level Authorization
 
@@ -42,8 +44,9 @@ For example, to restrict certain users from accessing VIP customers, it is possi
 
    * Each LU view can be attached to more than one LU table.
 
-<studio>
+   * To enforce **instance-level access control**, assign a root table view to the security profile. Users whose role is linked to this profile will be blocked from syncing unauthorized instances entirely, rather than only having fields masked.
 
+<studio>
 
 <img src="images/security_profile_1.PNG" style="zoom:80%;" />
 
@@ -54,6 +57,7 @@ For example, to restrict certain users from accessing VIP customers, it is possi
 <img src="images/security_profile_1_web.PNG" style="zoom:80%;" />
 
 </web>
+
 
 [Click to get more information about the security profiles](05_security_profiles.md). 
 
@@ -67,14 +71,12 @@ For example, to restrict certain users from accessing VIP customers, it is possi
 
   ![](images/assign_security_profile_1.PNG)
 
-  
 
   Multiple security profiles can be assigned to the same role. 
 
 
 
 Note: If the same LU table is defined under several security profiles assigned to the same role, Fabric will select the first security profile that appears in Studio.
-
 
 
 
