@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Fabric Catalog solution includes a list of product plugins. When needed, the core solution can be extended with project-specific functionality. it is particularly useful when you need to tailor the core discovery process to specific business requirements, extending the Catalog's capabilities beyond the baseline configuration.
+The Fabric Catalog solution includes a list of product plugins. When needed, the core solution can be extended with project-specific functionality. It is particularly useful when you need to tailor the core discovery process to specific business requirements, extending the Catalog's capabilities beyond the baseline configuration.
 
 You can create plugins to add custom properties, define new relationships, or implement entirely custom behavior. Creating a custom discovery plugin involves two stages:
 
