@@ -2,9 +2,9 @@
 
 ## Overview
 
-The Fabric Catalog solution includes a list of product plugins. When needed, the core solution can be extended with project-specific functionality. It is particularly useful when you need to tailor the core discovery process to specific business requirements, extending the Catalog's capabilities beyond the baseline configuration.
+The Fabric Catalog solution includes a list of product plugins. When needed, the core solution can be extended with project-specific functionality. It is particularly useful when you need to tailor the core discovery process to specific business requirements, extending the Catalog's capabilities beyond the baseline configuration: to add custom properties, to define new relationships, or to implement entirely custom behavior. 
 
-You can create plugins to add custom properties, define new relationships, or implement entirely custom behavior. Creating a custom discovery plugin involves two stages:
+Creating a custom discovery plugin involves two stages:
 
 * [Plugin Development in Fabric Studio](06_creating_custom_discovery_plugin.md#plugin-development): Create and deploy a Java class within your Logical Unit.
 * [Plugin Setup in Catalog](06_creating_custom_discovery_plugin.md#plugin-setup-in-catalog): Add the plugin to the Discovery Pipeline and execute the discovery process.
