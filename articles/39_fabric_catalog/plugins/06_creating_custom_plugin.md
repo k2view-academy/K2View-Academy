@@ -38,7 +38,7 @@ Extend the appropriate base class based on your plugin's intended purpose:
   }
   ~~~
 
-* For fully custom logic, implement `Plugin` interface:
+* For fully custom logic, implement the `Plugin` interface:
 
   ```java
   public class MyFullCustomPlugin implements Plugin {
@@ -48,7 +48,7 @@ Extend the appropriate base class based on your plugin's intended purpose:
 
 ### Step 3: Add Monitor Support
 
-To ensure plugin's progress is visible in the Discovery Monitor, add status updates to your class:
+To ensure the plugin's progress is visible in the Discovery Monitor, add status updates to your class:
 
 * **For PropertyPlugin or RelationPlugin:** The platform handles progress tracking automatically. Use the following to update found items:
 
@@ -68,7 +68,7 @@ After implementing the plugin class, **Deploy** the Logical Unit to make the plu
 
 ## Plugin Setup in Catalog
 
-Follow these steps to setup the new plugin within the Catalog's pipeline:
+Follow these steps to set up the new plugin within the Catalog's pipeline:
 
 1. Navigate to **Catalog app > Settings > Discovery Pipeline**.
 
@@ -78,13 +78,13 @@ Follow these steps to setup the new plugin within the Catalog's pipeline:
 
    ![](../images/discovery_pipeline_override_baseline.png)
 
-4. Click **Add Plugin**, enter a name and press TAB.
+4. Click **Add Plugin**, enter a name, then press TAB.
 
    * The plugin name is a free-text string and does not have to match the class name. 
    * New plugins are added to the end of the list by default. You can reorder them using **drag & drop**.
 
 5. Populate the **Class** field using the following format: `<LU_NAME>:<Full_Class_Path>`
-   * For example: ```Customer:com.k2view.discovery.plugins.MyPrimaryKeyPlugin```.
+   * For example: `Customer:com.k2view.discovery.plugins.MyPrimaryKeyPlugin`.
 
 6. Enter a **Discovery Description**. This text will appear in the Discovery Monitor.
 
@@ -92,9 +92,9 @@ Follow these steps to setup the new plugin within the Catalog's pipeline:
 
 7. Click **Save** to apply the changes. 
 
-Once the plugin configuration is completed, run the discovery process to execute your custom plugin in action. 
+Once the plugin configuration is completed, run the discovery process to execute your custom plugin. 
 
-For more information about the Discovery Pipeline settings and how to add a new plugin, click [here](https://support.k2view.com/Academy/articles/39_fabric_catalog/catalog_app/13_discovery_pipeline_settings.html).
+For more information about how to add a new plugin, see the [Discovery Pipeline settings](/articles/39_fabric_catalog/catalog_app/13_discovery_pipeline_settings.md).
 
 
 
