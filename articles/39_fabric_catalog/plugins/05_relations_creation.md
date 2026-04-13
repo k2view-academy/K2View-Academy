@@ -188,7 +188,7 @@ By default, this parameter is set to the STRING, INTEGER or REAL data type for t
 
 The factor refers to score multiplication, applied only when comparing columns defined by non-GUID data types. By default, the factor is set to 0.85 as it aims to reduce the score of potential matches between non-GUID columns.
 
-## Trim Extra Relations Plugin
+## Trim Extra Relations
 
 The **Trim Extra Relations** plugin identifies and removes redundant *refersTo* relationships between the schema datasets to maintain only the essential connections. The plugin exclusively inspects *refersTo* relations created by Catalog plugins, while keeping the Crawler and Manual relations untouched. This optimization simplifies the data model and improves overall clarity.
 
