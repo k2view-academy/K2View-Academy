@@ -142,7 +142,14 @@ The **Conversation Details** table lists individual sessions for the selected pe
 <tr>
 <td><strong>Resolution</strong></td>
 <td>RESOLUTION_STATUS</td>
-<td>Colored badge: <strong>Resolved</strong> (green), <strong>Pending</strong> (yellow), <strong>Escalated</strong> (red)</td>
+<td>Colored badge reflecting the LLM-assigned resolution signal:
+<ul>
+<li><strong>Resolved</strong> — green; conversation reached a successful conclusion</li>
+<li><strong>Pending</strong> — amber; issue was not fully resolved</li>
+<li><strong>Escalated</strong> — red; conversation was escalated</li>
+<li><strong>Unknown</strong> — gray; session has not yet been analyzed</li>
+</ul>
+Session lifecycle states (OPEN, CLOSED, FAILED) may also appear if the session record is surfaced directly.</td>
 </tr>
 <tr>
 <td><strong>Risk</strong></td>
