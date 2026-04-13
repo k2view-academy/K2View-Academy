@@ -130,7 +130,12 @@
 				{
 					"display name": "Evaluation Framework",
 					"value": "AI_fusion/03_evaluation"
+				},
+				{
+					"display name": "Observation",
+					"value": "AI_fusion/04_observation"
 				}
+
 			]
 		},
 		{
