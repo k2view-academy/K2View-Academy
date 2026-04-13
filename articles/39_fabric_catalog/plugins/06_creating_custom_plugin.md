@@ -6,8 +6,8 @@ The Fabric Catalog solution includes a list of product plugins. When needed, the
 
 Creating a custom discovery plugin involves two stages:
 
-* [Plugin Development in Fabric Studio](06_creating_custom_discovery_plugin.md#plugin-development): Create and deploy a Java class within your Logical Unit.
-* [Plugin Setup in Catalog](06_creating_custom_discovery_plugin.md#plugin-setup-in-catalog): Add the plugin to the Discovery Pipeline and execute the discovery process.
+* [Plugin Development in Fabric Studio](06_creating_custom_plugin.md#plugin-development-in-fabric-studio): Create and deploy a Java class within your Logical Unit.
+* [Plugin Setup in Catalog](06_creating_custom_plugin.md#plugin-setup-in-catalog): Add the plugin to the Discovery Pipeline and execute the discovery process.
 
 ## Plugin Development in Fabric Studio
 
