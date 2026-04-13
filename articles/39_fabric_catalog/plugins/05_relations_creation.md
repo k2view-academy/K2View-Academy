@@ -194,7 +194,7 @@ The **Trim Extra Relations** plugin identifies and removes redundant *refersTo* 
 
 **The Problem: Redundant Relationships**
 
-Consider a scenario with three tables - **Customers**, **Orders**, and **Products** - and the following links:
+Consider a scenario with three tables - **Customer**, **Order**, and **Product** - and the following links:
 
 ~~~
 Customer ──────────────────────────────────> Product
@@ -207,7 +207,7 @@ Customer ───────────────────────�
 - **Order** → **Product** (Order contains products)
 - **Customer** → **Product** (Direct link - **REDUNDANT**)
 
-The **Customer → Product** relationship is unnecessary because the path to **Products** is already established through **Orders**: 
+The **Customer → Product** relationship is unnecessary because the path to **Product** is already established through **Orders**: 
 
 * **Customer → Order → Product**. 
 
@@ -223,8 +223,8 @@ Customer ────────> Order ────────> Product
 
 The resulting model is cleaner and accurately reflects business logic:
 
-- Customers place Orders.
-- Orders contain Products.
+- Customer place Order.
+- Order contain Product.
 
 #### How Trim Plugin Works
 
