@@ -7,11 +7,6 @@
     </a>
   </li>
   <li>
-    <a href="/articles/98_installation_and_upgrade/Install_on_Kubernetes/02_K2cloud_on-prem_K8s_Installation.md">
-      On-premises Kubernetes Cluster Installation
-    </a>
-  </li>
-  <li>
     <a href="/articles/98_installation_and_upgrade/Install_on_Kubernetes/04_fabric_scale_kubernetes.md">
       Fabric Cluster Scaling on Kubernetes
     </a>
