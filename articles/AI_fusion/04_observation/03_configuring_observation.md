@@ -6,20 +6,10 @@ Observation works out of the box once enabled, but several aspects can be config
 
 ## Enabling Observation
 
-Observation is enabled or disabled per AI Fusion application in the application configuration file (`appConfig.js`).
-
-Set the `observation` flag to `true` to enable collection and tagging for that application:
-
-```js
-// appConfig.js
-module.exports = {
-  appId: "banking",
-  observation: true,
-  // ... other config
-};
-```
-
-When `observation` is `false` (or omitted), no conversation data is collected for that application, and it does not appear in the Observation dashboard.
+Observation is enabled or disabled in the web menu configuration file - `apps.json`
+1. look for "aifusion" appid entry
+2. Add/remove the Observation entry in the apps array.
+   like `{ "displayName": "Observation", "pathName": "observation" }`
 
 
 
@@ -27,9 +17,9 @@ When `observation` is `false` (or omitted), no conversation data is collected fo
 
 The auto-tagging system produces a standard set of tags for every conversation (Topic, Sentiment, Resolution Status, Risk Level, Follow-up Required). These are stored in the **INSIGHTS** table in the Observation database.
 
-Custom tags can be added by extending the LLM-as-a-Judge prompt and adding corresponding columns to the INSIGHTS table. This allows domain-specific classification - for example, a compliance flag, a product area tag, or a customer tier indicator.
+The signals extracted from each conversation are defined in the **`chat_signals.csv`** MTable. Each row defines one signal with its name, allowed values, and whether multiple values can be assigned (multi-select).
 
-> **Note:** Contact your K2View implementation team for guidance on extending the INSIGHTS schema, as changes require coordinated updates to the tagging prompt and the database schema.
+Default signals include: Topic, Sentiment, Resolution Status, Urgency Level, Follow-up, Complaint Severity, Upsell Opportunity, and others. Edit the MTable in Fabric Studio to add, remove, or modify signals for your domain.
 
 
 
@@ -118,54 +108,11 @@ The database type is configured at the Fabric interface level. SQLite is used au
 
 ## Running the Analysis
 
-Conversation tagging and signal extraction do not run automatically. Analysis must be triggered by running one of two Broadway flows.
+Conversation tagging and signal extraction do not run automatically. Analysis must be triggered by running the RunAnalyze.flow or by the related Pipeline.
 
-### RunAnalyze.flow (standard mode)
-
-Processes all sessions with OPEN status from the last N days, calling `LLMChatAnalyze.flow` for each session individually.
-
-**Trigger options:**
-
-Via REST API:
-```
-GET /run-analytics?day=7
-```
-
-Via Broadway CLI:
 ```
 broadway aifusion.RunAnalyze 'day'='7'
 ```
 
 The `day` parameter controls how far back to look. Sessions already analyzed (status `CLOSED`) are skipped.
 
-### runBatchChatAnalyzePipeline.flow (batch mode)
-
-Uses the OpenAI Batch API to process multiple sessions in a single API call, reducing cost by approximately 50%. Recommended for high-volume production environments.
-
-The pipeline runs in three stages:
-1. **submitBatchSuite** - creates the batch and queues all open sessions
-2. **waitBatchSuite** - polls until the batch job completes
-3. **insertOutputBatchSuite** - writes results to the INSIGHTS table
-
-**Trigger:**
-```
-broadway aifusion.runBatchChatAnalyzePipeline
-```
-
-### Scheduling
-
-To keep dashboard data current, configure a Fabric scheduled job to run `RunAnalyze.flow` (or the batch pipeline) at a regular interval - for example, nightly or after each peak usage period.
-
-### Customizing Signals
-
-The signals extracted from each conversation are defined in the **`chat_signals.csv`** MTable. Each row defines one signal with its name, allowed values, and whether multiple values can be assigned (multi-select).
-
-Default signals include: Topic, Sentiment, Resolution Status, Urgency Level, Follow-up, Complaint Severity, Upsell Opportunity, and others. Edit the MTable in Fabric Studio to add, remove, or modify signals for your domain.
-
-> **Note:** *Screenshot needed:* Open the `chat_signals.csv` MTable in Fabric Studio. Capture the table showing several signal rows with their name, values, and multi-select columns. Save as `images/observation_chat_signals_mtable.png`.
-
-<img src="images/observation_chat_signals_mtable.png" alt="chat_signals MTable" style="zoom:80%;" />
-
-
-
-**Next article:** [Best Practices](04_observation_best_practices.md)

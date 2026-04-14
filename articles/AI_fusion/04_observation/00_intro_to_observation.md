@@ -58,13 +58,40 @@ The full conversation is stored and enriched with quality signals:
 
 After each conversation completes, and the data was collected, as explained above, an LLM analyzes it and assigns a set of structured tags. These tags power the dashboard filters and allow teams to find specific conversation types without reading every session.
 
-| Tag | Values | What it captures |
-|-----|--------|-----------------|
-| **Topic** | Free-text label | The primary subject of the conversation |
-| **Sentiment** | Satisfied / Neutral / Dissatisfied | The user's apparent emotional state |
-| **Resolution Status** | Resolved / Not Resolved | Whether the user's need was met |
-| **Risk Level** | Scored indicator | Potential compliance, accuracy, or reputational risk |
-| **Follow-up Required** | Yes / No | Whether the conversation needs human follow-up |
+<table>
+<tbody>
+<tr>
+<td><strong>Tag</strong></td>
+<td><strong>Values</strong></td>
+<td><strong>What it captures</strong></td>
+</tr>
+<tr>
+<td><strong>Topic</strong></td>
+<td>Free-text label</td>
+<td>The primary subject of the conversation</td>
+</tr>
+<tr>
+<td><strong>Sentiment</strong></td>
+<td>Satisfied / Neutral / Dissatisfied</td>
+<td>The user's apparent emotional state</td>
+</tr>
+<tr>
+<td><strong>Resolution Status</strong></td>
+<td>Resolved / Not Resolved</td>
+<td>Whether the user's need was met</td>
+</tr>
+<tr>
+<td><strong>Risk Level</strong></td>
+<td>Scored indicator</td>
+<td>Potential compliance, accuracy, or reputational risk</td>
+</tr>
+<tr>
+<td><strong>Follow-up Required</strong></td>
+<td>Yes / No</td>
+<td>Whether the conversation needs human follow-up</td>
+</tr>
+</tbody>
+</table>
 
 ### Operation
 
