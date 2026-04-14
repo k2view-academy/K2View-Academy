@@ -1,8 +1,8 @@
 # Assurance Database Schema Reference
 
-AI Fusion stores observation data in the **Assurance database** — a relational database that BI tools, reporting systems, and data pipelines can query directly. This article describes the table schemas, their relationships, and provides example queries for common reporting use cases.
+AI Fusion stores observation data in the **Assurance database** - a relational database that BI tools, reporting systems, and data pipelines can query directly. This article describes the table schemas, their relationships, and provides example queries for common reporting use cases.
 
-The Assurance database holds session-level and aggregate data. Detailed per-turn data (individual messages, tool calls, execution traces) is stored in Fabric LU storage and is accessed via the AI Fusion REST API, not by direct SQL — this is described separately at the end of this article.
+The Assurance database holds session-level and aggregate data. Detailed per-turn data (individual messages, tool calls, execution traces) is stored in Fabric LU storage and is accessed via the Fabric AI Fusion REST API, not by direct SQL - this is described separately at the end of this article.
 
 
 
@@ -42,7 +42,7 @@ This is the central table for monitoring, holding one row per conversation sessi
 <tr>
 <td><code>customer_id</code></td>
 <td>TEXT</td>
-<td>Customer identifier (IID — Logical Unit Instance ID). Correlates with CRM records.</td>
+<td>Customer identifier (IID - Logical Unit Instance ID). Correlates with CRM records.</td>
 </tr>
 <tr>
 <td><code>chat_summary</code></td>
@@ -333,10 +333,10 @@ Aggregation of token consumption, grouped by LLM interface and model. Updated co
 
 ```
 ACTVSESSION (session_id)
-    └── INSIGHTS (session_id)         — LLM-assigned tags, one row per tag per session
+    └── INSIGHTS (session_id)         - LLM-assigned tags, one row per tag per session
 
-INVOKE_OBSERVATION                    — per-invocation telemetry (correlate via timestamp)
-MODEL_TOKEN_USAGE                     — cumulative totals by interface + model
+INVOKE_OBSERVATION                    - per-invocation telemetry (correlate via timestamp)
+MODEL_TOKEN_USAGE                     - cumulative totals by interface + model
 ```
 
 
@@ -490,4 +490,3 @@ The following tables are stored inside the Fabric LU - one LUI per session (not 
 </tr>
 </tbody>
 </table>
-
