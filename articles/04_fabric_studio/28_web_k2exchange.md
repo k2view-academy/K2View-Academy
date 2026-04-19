@@ -174,11 +174,15 @@ To download an extension, at Studio:
 
 ### Project VSIX files as extensions repository
 
-As mentioned, as part of installing and embedding an extension into your project files, the extension and its files are logged into *installed_extensions.json*. On another space/environment setup, Studio looks for extensions and access to the K2Exchange to get additional info or files, which are not part of the project files, like editors, templates or scripts (optional). This also accomplishes the process of showing the extension as installed in this space.
+As mentioned, as part of installing and embedding an extension into your project files, the extension and its files are logged into *installed_extensions.json*. On another space/environment setup, Studio looks for extensions and accesses K2Exchange to get additional info or files, which are not part of the project files, like editors, templates or scripts (optional). This also accomplishes the process of showing the extension as installed in this space.
 
- In such cases, the above process cannot be accomplished.
+In such cases, the above process cannot be accomplished.
 
-For this, you can add the extension's VSIX file to your project
+For this, you can add the extensions' VSIX files to your project, which will be used like an extensions repository, from which other environments will consume, by default, the extensions, rather than from the K2Exchange.
+
+The location of VSIX extensions in the project can be set in the Settings: Settings > Fabric > Exchange > **Vsix Folder Path**. This is a relative path (to the project root) pointing to the folder containing VSIX files. By default, it is *project-resources*. 
+
+Accordingly, when Studio finds candidate extensions in the *installed_extensions* file, it looks first for their files at this VSIX folder path and installs them from there. If they are not found, it tries installing them from K2Exchange.
 
  
 
