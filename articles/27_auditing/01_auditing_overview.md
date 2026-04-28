@@ -75,7 +75,7 @@ The following list presents common activities audited in production:
     </tr>
     <tr>
       <td>Data Access</td>
-      <td>- Executed queries (read/write) on LU Tables or external DBs</td>
+      <td>- Executed queries (read/write) on LU Tables</td>
     </tr>
     <tr>
       <td></td>
@@ -142,7 +142,6 @@ Fabric auditing tracks the following activity types:
 - System logins  
 - All executed Fabric commands  
 - Web Service calls  
-- All executed data queries (read and write)
 
 ## Audit Report Structure
 
@@ -186,7 +185,7 @@ When an activity is captured by the Fabric Auditing mechanism, it is logged with
     </tr>
     <tr>
       <td>Query</td>
-      <td>Activity details such as query, schema info, or auth provider.</td>
+      <td>Activity details such as Fabric command's query, schema info, or auth provider.</td>
     </tr>
     <tr>
       <td>Result</td>

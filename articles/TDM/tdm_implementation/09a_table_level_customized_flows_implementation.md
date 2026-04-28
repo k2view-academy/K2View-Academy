@@ -39,11 +39,11 @@ The image below depicts an example that executes the following actions:
   - Accumulating the merged record with the masked fields into an array. The accumulated array is the external **result** field of the flow.
 
 
-![table extract](C:\Users\TaliEinhorn\OneDrive - K2View\Documents\K2View-Academy\articles\TDM\tdm_implementation\images\table_leve_custom_ext_flow.png)
+![table extract](images/table_leve_custom_ext_flow.png)
 
 See the loop on the selected address records:
 
-![table extract](C:\Users\TaliEinhorn\OneDrive - K2View\Documents\K2View-Academy\articles\TDM\tdm_implementation\images\table_leve_custom_ext_flow2.png)
+![table extract](images/table_leve_custom_ext_flow2.png)
 
 ### Load Flow
 
