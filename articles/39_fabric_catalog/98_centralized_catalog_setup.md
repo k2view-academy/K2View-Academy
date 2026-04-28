@@ -2,7 +2,7 @@
 
 ### Overview
 
-Starting from V8.2, you can now configure a centralized Catalog for multiple Fabric instances, offering significant advantages for collaborative projects. This setup is particularly useful when multiple users need to work on the same project simultaneously. By operating on separate Fabric instances, users can define different Catalog settings—such as unique regular expressions for data classification—and run Discovery processes independently, each accessing distinct data sources.
+Starting from V8.2, you can now configure a centralized Catalog for multiple Fabric instances, offering significant advantages for collaborative projects. This setup is particularly useful when multiple users need to work on the same project simultaneously. By operating on separate Fabric instances, users can define different Catalog settings - such as unique regular expressions for data classification - and run Discovery processes independently, each accessing distinct data sources.
 
 **Note**: All Fabric instances linked to a single Neo4j GraphDB must have **the same Fabric version**. Pointing different Fabric versions to the same Neo4j instance is not supported.
 
