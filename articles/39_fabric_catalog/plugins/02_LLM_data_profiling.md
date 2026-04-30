@@ -2,27 +2,25 @@
 
 ## Overview
 
-Starting from V8.2, the Catalog includes a data and metadata profiling plugin powered by LLM. The plugin invokes an LLM model via an LLM AI interface defined in the project. Note that prior to an AI interface creation in a project, it is required to install the relevant [extension](/articles/04_fabric_studio/28_web_k2exchange.md) (e.g. OpenAI Connector). 
+Starting from V8.2, the Catalog includes a data and metadata profiling plugin powered by LLM. The plugin invokes an LLM via an LLM AI interface defined in the project. Before creating an AI interface, you must install the relevant [extension](/articles/04_fabric_studio/28_web_k2exchange.md) (e.g. OpenAI Connector). The Discovery process will use a designated LLM AI interface tagged as 'discovery'; if no such interface exists, it will fall back to one tagged as 'default'. 
 
 The LLM plugin performs profiling of each column's metadata and data. The LLM plugin's response depends on the user prompt, which is defined in the plugin's configuration. The pre-defined user prompt can be modified per the project's needs; this user prompt should correspond to use cases as explained further in this article. 
 
-The LLM plugin can perform various different tasks. The following two use cases are pre-configured in the product's Discovery Pipeline:
+The LLM plugin can perform various tasks. The following two use cases are pre-configured in the product's Discovery Pipeline:
 
 - [Use Case 1](02_LLM_data_profiling.md#use-case-1-llm-profiling): Profiling and classification of columns based on column name and values, by the **LLM Profiling** plugin.
 - [Use Case 2](02_LLM_data_profiling.md#use-case-2-llm-description): Creation of each column's short description using the **LLM Description** plugin.
 
-In addition to the above use cases, you can use the same plugin to achieve your own use cases by updating the **user prompt** and other plugin's input parameters. The article includes two additional use cases with configuration examples:
+In addition to the above use cases, you can use the same plugin to implement your own use cases by updating the **user prompt** and other plugin's input parameters. The article includes two additional use cases with configuration examples:
 
 - [Use Case 3](02_LLM_data_profiling.md#use-case-3-llm-profiling-by-property): Profiling and classification of columns based on the column's description.
-- [Use Case 4](/02_LLM_data_profiling.md#use-case-4-creating-new-business-dimention): Creating a new business dimension (a new property). 
-
-The prerequisite of working with an LLM plugin is a creation of an LLM AI interface in the project. The Discovery can use a designated LLM AI interface (tagged as 'discovery'). If none of the LLM AI interfaces are tagged as 'discovery', an interface with a 'default' tag will be used.
+- [Use Case 4](02_LLM_data_profiling.md#use-case-4-creating-new-business-dimension): Creating a new business dimension (a new property). 
 
 ## LLM Profiling Plugin Definition
 
 The plugin's input parameters are:
 
-- ```threshold``` is the score above which the plugin should not be executed. The threshold is set in order to minimize the number of calls to the LLM. It applies to cases where the column already has **the same property** created by another plugin during the same Discovery Job execution. 
+- ```threshold``` is the minimum score at or above which the plugin skips a column. The threshold is set in order to minimize the number of calls to the LLM. It applies to cases where the column already has **the same property** created by another plugin during the same Discovery Job execution. 
   - By default, ```threshold``` is set to 0.7. 
   - For example, if the Metadata Regex Classifier plugin created a classification property with score = 0.8 (above the threshold), the LLM Profiling plugin will not run on this column.
 - ```propertyName``` is a column's property that should be created by the plugin. 
@@ -35,27 +33,27 @@ The plugin's input parameters are:
   - When you don't intend or need to provide a list of possible values to the LLM, it is recommended to edit the ```userPrompt``` by removing the text that refers to the possible values. 
 - ```possibleMTableValues``` is an alternative way to provide the possible property values. It allows the values to be retrieved from a project's MTable. The ```"possibleMTableValues"``` should be populated using the following format:  ```"<MTable name>.<Column name>"```. 
   - For example, ```"possibleMTableValues" : "pii_profiling.name"```
-  - It is recommended for a relatively short list of possible valid values.
-  - Either ```possibleValues``` or ```possibleMTableValues``` should be populated in the plugin's definition, but not both. The ```userPropmt``` should be updated accordingly. 
+  - This approach is recommended when the list of possible values is relatively short.
+  - Either ```possibleValues``` or ```possibleMTableValues``` should be populated in the plugin's definition, but not both. The ```userPrompt``` should be updated accordingly. 
 - ```sampleSize``` defines a sample size to be used by the LLM. By default, it is set to 10.  If you don't intend to send any sample data to the LLM, set the sample size to 0. 
 - ```samplePrompt``` defines a part of the user prompt related to the sample data. It is included in the user prompt when the ```sampleSize``` > 0 and if the column is not empty in the data snapshot. 
   - The ```${sampleData}``` is the source data retrieved in the Snapshot step and added to the prompt. 
 - ```incrementalMode``` defines whether the plugin should be executed for the fields that already have the same property created by the same LLM plugin in a previous Discovery Job execution. This parameter is set in order to minimize the number of calls to the LLM. It has the following modes:
-  - ```"Keep All"```  - if the plugin has already been executed for this field in a previous Discovery Job execution, don’t invoke the plugin again (even if the field has no LLM-created property). The plugin will only be invoked for the new fields.
+  - ```"Keep All"```  - if the plugin has already been executed for this field in a previous Discovery Job execution, don’t invoke the plugin again. This applies regardless of whether the previous execution created a property — once a field has been processed, it will not be processed again. The plugin will only be invoked for new fields.
   - ```"Keep Existing"``` (default) - if the plugin has already been executed for this field in a previous Discovery Job execution and created a property, don’t invoke it again. The plugin will only be invoked for the new fields and for the fields without this property (e.g., "classification").
   - ```"Evaluate All"``` - the plugin will be invoked for all fields.
 - ```llmInterface``` is an optional parameter. It allows overriding the default project's LLM AI interface, to be used by the LLM plugin. This parameter should include the interface's name.
-  - When the ```llmInterface``` parameter is not set in the plugin definition, the plugin will search for an LLM AI interface tagged as 'discovery'. If non of the LLM AI interfaces are tagged as 'discovery', an interface with a 'default' tag will be used.
+  - When the ```llmInterface``` parameter is not set in the plugin definition, the plugin will search for an LLM AI interface tagged as 'discovery'. If none of the LLM AI interfaces are tagged as 'discovery', an interface with a 'default' tag will be used.
 
 ### Use Case 1: LLM Profiling
 
 The Catalog includes 2 built-in plugins that perform profiling and classification of the columns using the regular expressions [Data Regex Classifier and Metadata Regex Classifier](02_classification_plugins.md). 
 
-However, these plugins might miss some columns with sensitive data, for various reasons. For example, when a column doesn't have a meaningful name and the regular expression cannot be applied on the column's values (e.g., names of people or geographic locations), the regex-driven plugins will not classify such columns. 
+However, these plugins might miss some columns with sensitive data, for various reasons. For example, when a column doesn't have a meaningful name and the regular expression cannot be applied to the column's values (e.g., names of people or geographic locations), the regex-driven plugins will not classify such columns. 
 
-LLM-based plugins help to improve the classification task by analyzing the column's data, in a context of table and column names. 
+LLM-based plugins improve classification by analyzing column data in the context of table and column names. 
 
-This is a product default definition of the LLM Profiling:
+The following is the default product configuration for LLM Profiling:
 
 ```json
 {
@@ -86,7 +84,7 @@ This is a product default definition of the LLM Profiling:
 
 The LLM plugin can be used for various tasks. One of them is to generate a free-text description of the Catalog fields. To achieve that, the user prompt and other input parameters should be updated to include the required task. 
 
-This is a product default definition of the LLM Description plugin that will generate a short description of each data source's field in the Catalog:
+The following is the default product configuration of the LLM Description plugin, which generates a short description for each field in the Catalog:
 
 ~~~json
 {
@@ -99,7 +97,7 @@ This is a product default definition of the LLM Description plugin that will gen
 		"propertyName": "description",
 		"userPrompt": "Given the following table ${tableName} which includes the following columns ${columns}.\nPlease provide a one-line description of ${columnName} with a minimum of 5 words to be used in technical documentation.\n${samplePrompt}\nDo not include table or column names in your response.",
 		"sampleSize": 10,
-		"samplePrompt": "Here is a data sample from the column ${columnName} to help you classify the column: ${sampleData}.",
+		"samplePrompt": "Here is a data sample from the column ${columnName} to help you describe the column: ${sampleData}.",
       	"incrementalMode":"KEEP_ALL"
 	}
 }
@@ -107,7 +105,7 @@ This is a product default definition of the LLM Description plugin that will gen
 
 ### Use Case 3: LLM Profiling by Description
 
-Running the LLM Profiling plugin can be effective when either the columns have meaningful names or the column values provide some insight or the combination of both. However, this is not always the case. Sometimes the table and column names are not meaningful and there is no data in them. On the other hand, some field properties can shed more light on how to profile a column. The LLM plugin can use a field property's values to perform the profiling. 
+The LLM Profiling plugin is most effective when column names are meaningful, column values provide contextual insight, or both. However, this is not always the case. Sometimes the table and column names are not meaningful and there is no data in them. On the other hand, some field properties can shed more light on how to profile a column. The LLM plugin can use a field property's values to perform the profiling. 
 
 For example, when the table and column names are not meaningful, the **descriptions** (or remarks) might have been included in the data source for each table and/or column explaining what is stored in them.
 
@@ -140,13 +138,11 @@ Below is an LLM plugin configuration to support this use case:
 }
 ~~~
 
-### Use Case 4: Creating New Business Dimention
+### Use Case 4: Creating New Business Dimension
 
-The LLM plugin facilitates flexibility to define our own use cases, such as discovering new business parameters in a data source by setting up the relevant user prompt and other input parameters. 
+The LLM plugin is not limited to the pre-configured use cases above. By customizing the user prompt and input parameters, you can define any use case that fits your project's needs. The following example demonstrates how to identify columns containing medical information — such as a medical condition, treatment, or drug — and tag them with a new property ```medicalInfo = true```.
 
-For example, it may be required to identify all the data source's columns that include medical information, such as a medical condition, a medical treatment or a drug, and to create a new property ```medicalInfo = true``` . 
-
-This requirement can be achieved by setting up the relevant user prompt and updating the input parameters as follows:
+This can be achieved by setting up the relevant user prompt and updating the input parameters as follows:
 
 ~~~json
 {
