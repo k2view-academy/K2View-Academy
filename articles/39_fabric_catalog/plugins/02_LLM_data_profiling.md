@@ -6,16 +6,17 @@ Starting from V8.2, the Catalog includes a data and metadata profiling plugin po
 
 The LLM plugin performs profiling of each column's metadata and data. The LLM plugin's response depends on the user prompt, which is defined in the plugin's configuration. The pre-defined user prompt can be modified per the project's needs; this user prompt should correspond to use cases as explained further in this article. 
 
-The product includes 2 LLM-based plugins that accommodate for the following use cases:
+The LLM plugin can perform various different tasks. The following two use cases are pre-configured in the product's Discovery Pipeline:
 
-- Use Case 1: **LLM Profiling** - profiling and classification of columns with sensitive / PII data. 
-- Use Case 2: **LLM Description** - a creation of each column's short description.
+- [Use Case 1](02_LLM_data_profiling.md#use-case-1-llm-profiling): Profiling and classification of columns based on column name and values, by the **LLM Profiling** plugin.
+- [Use Case 2](02_LLM_data_profiling.md#use-case-2-llm-description): Creation of each column's short description using the **LLM Description** plugin.
 
-Both of these plugins are inactive by default and must be activated via Discovery Pipeline if needed. 
+In addition to the above use cases, you can use the same plugin to achieve your own use cases by updating the **user prompt** and other plugin's input parameters. The article includes two additional use cases with configuration examples:
+
+- [Use Case 3](02_LLM_data_profiling.md#use-case-3-llm-profiling-by-property): Profiling and classification of columns based on the column's description.
+- [Use Case 4](/02_LLM_data_profiling.md#use-case-4-creating-new-business-dimention): Creating a new business dimension (a new property). 
 
 The prerequisite of working with an LLM plugin is a creation of an LLM AI interface in the project. The Discovery can use a designated LLM AI interface (tagged as 'discovery'). If none of the LLM AI interfaces are tagged as 'discovery', an interface with a 'default' tag will be used.
-
-In addition to the above use cases, you can use the same plugin to achieve your own use cases via updating the user prompt and other plugin's input parameters. For example, a new business dimension (a new property) can be created via an advanced plugin setup. An explanation and an example are provided at the end of this article. 
 
 ## LLM Profiling Plugin Definition
 
@@ -104,11 +105,11 @@ This is a product default definition of the LLM Description plugin that will gen
 }
 ~~~
 
-### Use Case 3: LLM Profiling by Property (experimental)
+### Use Case 3: LLM Profiling by Description
 
 Running the LLM Profiling plugin can be effective when either the columns have meaningful names or the column values provide some insight or the combination of both. However, this is not always the case. Sometimes the table and column names are not meaningful and there is no data in them. On the other hand, some field properties can shed more light on how to profile a column. The LLM plugin can use a field property's values to perform the profiling. 
 
-For example, when the table and column names are not meaningful, the descriptions (or remarks) might have been included in the data source for each table and/or column explaining what is stored in them.
+For example, when the table and column names are not meaningful, the **descriptions** (or remarks) might have been included in the data source for each table and/or column explaining what is stored in them.
 
 To include the value of the ```description``` property in the LLM analysis, use the following syntax in the ```userPrompt```: ```${property.description}```.
 
@@ -139,7 +140,7 @@ Below is an LLM plugin configuration to support this use case:
 }
 ~~~
 
-### Custom Use Case Definition
+### Use Case 4: Creating New Business Dimention
 
 The LLM plugin facilitates flexibility to define our own use cases, such as discovering new business parameters in a data source by setting up the relevant user prompt and other input parameters. 
 
