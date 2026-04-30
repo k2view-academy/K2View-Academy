@@ -16,5 +16,6 @@
 	<li><a href="/articles/39_fabric_catalog/catalog_app/15_override_actor_input.md">Override Actor Input</a></li>
 	<li><a href="/articles/39_fabric_catalog/catalog_app/16_revert_catalog_version.md">Revert Catalog Version</a></li>
 	<li><a href="/articles/39_fabric_catalog/catalog_app/17_delete_catalog.md">Delete Catalog</a></li>
+	<li><a href="/articles/39_fabric_catalog/catalog_app/18_large_schema_navigation.md">Large Schema Navigation</a></li>
 
 </ul>

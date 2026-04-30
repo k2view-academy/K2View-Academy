@@ -36,7 +36,7 @@ Starting from Fabric V8.4, version source (Crawler, Manual or Revert) and a list
 https://localhost:3213/api/catalog
 ```
 
-## Get Details of Catalog Version 
+## Get Version 
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}`
 
@@ -88,7 +88,7 @@ https://localhost:3213/api/catalog/1...latest
 
 
 
-## Get Details of Catalog Data Platform 
+## Get Data Platform Metadata 
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/{dataPlatform}`
 
@@ -157,11 +157,16 @@ https://localhost:3213/api/catalog/1...latest/CRM_DB
 
 
 
-## Get Details of Catalog Schema 
+## Get Schema Metadata 
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/{dataPlatform}/{schema}`
 
 The API retrieves all metadata elements that belong to the specified Catalog version, data platform and schema, including datasets, fields with their properties, and the *refersTo* relations between dataset nodes. 
+
+Starting from Fabric V8.5, an optional input parameter `fieldsIncluded` has been added:
+
+- When set to `true` (default) - the API returns all metadata of the specified schema.
+- When set to `false` - the API returns **dataset** objects only (with dataset properties and relations). The dataset fields with their properties are not included in the API response.
 
 The API has two modes — ***view*** and ***compare*** — that are interchangeably invoked based on the **version** input parameter, as explained below:
 
@@ -232,6 +237,90 @@ https://localhost:3213/api/catalog/1...latest/CRM_DB/main
 
 The API retrieves a list of datasets that belong to the **latest version** of the specified data platform and schema. Available starting from Fabric V8.3.
 
+
+
+## Get Dataset Metadata
+
+<span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/{dataPlatform}/{schema}/{dataset}`
+
+The API retrieves all metadata elements that belong to the specified dataset, including its fields with their properties, and the *definedBy* relations to embedded classes. Available starting from Fabric V8.5.
+
+The API has two modes — ***view*** and ***compare*** — that are interchangeably invoked based on the **version** input parameter, as explained below:
+
+ <table>
+<thead>
+<tr>
+<th style="text-align: left;" width="100pxl"><strong>Component</strong></th>
+<th style="text-align: left;" width="100pxl"><strong>Mandatory</strong></th>
+<th style="text-align: left;" width="700pxl"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>version</td>
+<td>Y</td>
+<td>
+<p>Populate either the version number or the word <strong>latest</strong> to retrieve data for that version.</p>
+<p>Populate <strong>{base version}...{compare version}</strong> to retrieve a comparison between the versions. In the response, each node indicates whether it has been added, deleted, updated or unchanged.</p>
+<p>To view recent changes, set <strong>{base version}</strong> to an older version number, and <strong>{compare version}</strong> to a more recent version number or to the word <strong>latest</strong>.</p>
+</td>
+</tr>
+<tr>
+<td>dataPlatform</td>
+<td>Y</td>
+<td>
+<p>The data platform name.</p>
+</td>
+</tr>
+<tr>
+<td>schema</td>
+<td>Y</td>
+<td>
+<p>The schema name.</p>
+</td>
+</tr>
+<tr>
+
+<tr>
+<td>dataset</td>
+<td>Y</td>
+<td>
+<p>The dataset name.</p>
+</td>
+</tr>
+<tr>
+
+<td>propertiesToInclude</td>
+<td>N</td>
+<td>
+<p>Coma-separated list of properties to be included in the output. When empty, all properties are included. </p><p>E.g.: propertiesToInclude=pii,pk</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Examples of an API call in *view* mode:**
+
+```
+https://localhost:3213/api/catalog/latest/CRM_DB/main/CUSTOMER
+```
+
+```
+https://localhost:3213/api/catalog/1/CRM_DB/main/CUSTOMER
+```
+
+**Examples of an API call in *compare* mode:**
+
+```
+https://localhost:3213/api/catalog/1...5/CRM_DB/main/CUSTOMER
+```
+
+```
+https://localhost:3213/api/catalog/1...latest/CRM_DB/main/CUSTOMER
+```
+
+
+
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{dataPlatform}/{schema}/{dataset}/fields`
 
 The API retrieves a list of fields that belong to the **latest version** of the specified data platform, schema and dataset. Available starting from Fabric V8.3.
@@ -240,6 +329,8 @@ Starting from Fabric V8.3.2, an optional input parameter ```primitiveTypeOnly```
 
 * When set to ```false``` (default) - the API returns all fields of the specified dataset.
 * When set to ```true``` - the API filters out fields with complex type and returns primitive-type fields only.
+
+
 
 
 ## Building Catalog Artifacts
@@ -303,7 +394,7 @@ https://localhost:3213/api/catalog/latest/build-catalog-artifacts?refersTo=true&
 
 
 
-## Catalog Search 
+## Search Catalog Node 
 
 <span style="border-radius: 12em; background-color: #46B583; padding: 0 10px; color:white">POST</span>   `/api/catalog/{version}/search-graph`
 
@@ -312,15 +403,16 @@ The API retrieves all elements that belong to the specified Catalog version, bas
 The syntax of the request body definition is as follows:
 
 * **input** is an array of keywords 
-  * Keyword is a string included in the node (or relation) name
+  * Keyword is a string included in the node (or relation) name.
 
 * **type** specifies which object types will be searched
-  * The valid values are: dataPlatform, schema, dataset, field, relation
-  * Send an empty array in case of no limitation on object type
+  * The valid values are: dataPlatform, schema, dataset, field, relation.
+  * Send an empty array in case of no limitation on object type.
 * **advanced** includes a list of additional search parameters, such as:
-  * **pii** is a PII property with a value of either **true** or **false**
-  * **classification** is a Classification property with one of its valid values
-  * **score** represents the maximum score among the searched object types (nodes or relations)
+  * **dataPlatform** and **schema** parameters allow to limit the search to the specified Data Platform and Schema. When **dataPlatform** is sent, **schema** can be sent as well. These search criteria are supported starting from Fabric V8.5.
+  * **pii** is a PII property with a value of either **true** or **false**.
+  * **classification** is a Classification property with one of its valid values.
+  * **score** represents the maximum score among the searched object types (nodes or relations).
 
 At least one of the search parameters must be provided in the request body. 
 
@@ -332,12 +424,12 @@ https://localhost:3213/api/catalog/4/search-graph
 
 **Examples of the request body:**
 
-Example 1: When searching for Data Platform and Schema nodes, whose names include the keyword *customer*, the request body is as follows:
+Example 1: When searching for Data Platform and Schema nodes, whose names include the keyword *CRM*, the request body is as follows:
 
 ~~~json
 {
     "input": [
-        "customer"
+        "CRM"
     ],
     "type": [
         "dataPlatform",
@@ -348,7 +440,7 @@ Example 1: When searching for Data Platform and Schema nodes, whose names includ
 }
 ~~~
 
-Example 2: When searching for node types with *PII = true* and *Classification = EMAIL* properties, the request body is as follows:
+Example 2: When searching for node types with *PII = true* and *Classification = EMAIL* properties in the entire Catalog, the request body is as follows:
 
 ~~~json
 {
@@ -356,6 +448,20 @@ Example 2: When searching for node types with *PII = true* and *Classification =
     "type": [],
     "advanced": {
         "pii": "true",
+        "classification": "EMAIL"
+    }
+}
+~~~
+
+Example 3: When searching for the same nodes as in example 2, but limited to the CRM_DB - the request body is as below. Note that this is only available starting from Fabric V8.5.
+
+~~~json
+{
+    "input": [],
+    "type": [],
+    "advanced": {
+     	"dataPlatform": "CRM_DB",
+     	"pii": "true",
         "classification": "EMAIL"
     }
 }
@@ -411,7 +517,7 @@ https://localhost:3213/api/catalog/4/revert-catalog-version
 
 
 
-## Clean Graph
+## Clean Catalog Graph
 
 <span style="border-radius: 12em; background-color: #F93E3E; padding: 0 10px; color:white">DELETE</span>   `/api/catalog/clean-graph`
 
