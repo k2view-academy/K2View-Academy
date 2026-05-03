@@ -1,38 +1,35 @@
 # Verify Monitoring
 
-#### Monitor the Verify task
-Monitor the task execution from the page displayed after task initiation, or by clicking the Monitor icon on the task record in the main `Tasks` page
-![Extensions](https://raw.githubusercontent.com/k2view/libs-exchange-resources/main/d2d-images/monitorTask.png)
+After initiating a task, you are taken to the monitoring page. You can also reach it by clicking the **Monitor** icon on the task in the Tasks page.
 
-The Execution Details (Monitor) screen provides real-time visibility into the progress of a running k2verify task, at both table level and bucket level.
+![Monitor Task](https://raw.githubusercontent.com/k2view/libs-exchange-resources/main/d2d-images/monitorTask.png)
 
-**Table-Level Execution Summary**:
+**Table-Level Execution Summary:**
 
-The upper section displays the execution status for each table included in the task.
+| Column | Description |
+|:---|:---|
+| Table Name | Source/target table pair being verified |
+| Batch ID | Unique identifier for the execution batch |
+| Status | Current state: In Progress, Completed, Failed |
+| Start Time | When verification for the table began |
+| End Time | When verification for the table completed |
+| Partition Completion Summary | Progress: completed/total partitions (e.g., `4/10`) |
+| Processed Records | Records processed so far |
+| Failed Records | Records whose verification failed |
 
-Displayed columns:
-* Table Name – Name of the source/target table pair being verified.
-* Batch ID – Unique identifier for the execution batch of the table.
-* Status – Current execution state (e.g., In Progress, Completed, Failed).
-* Start Time – Timestamp when verification for the table started.
-* End Time – Timestamp when verification for the table completed.
-* Bucket Completion Summary – Progress indicator showing completed buckets out of total buckets (e.g., 0/10).
-* Processed Records – Number of records processed so far.
-* Failed Records – Number of records that their verification process failed.
+Click the **ℹ** icon next to a table to drill into the Partition-Level view.
 
-Clicking the “i” (information) icon next to a table opens the detailed bucket-level view for that table.
+**Partition-Level Execution Details:**
 
-**Bucket-Level Execution Details**:
+| Column | Description |
+|:---|:---|
+| Partition ID | Identifier of the partition |
+| Status | Current state of the partition |
+| Start Time | When partition processing began |
+| End Time | When partition processing completed |
+| Total Records | Records assigned to this partition |
+| Processed Records | Records processed within this partition |
+| Failed Records | Records that failed verification |
+| Error Info | Error details, if any |
 
-The lower section displays execution details per bucket for the selected table.
-Displayed columns:
-* Bucket ID – Identifier of the bucket.
-* Status – Current execution state of the bucket.
-* Start Time – Timestamp when processing of the bucket started.
-* End Time – Timestamp when processing of the bucket completed.
-* Total Records – Total number of records assigned to the bucket.
-* Processed Records – Number of records processed within the bucket.
-* Failed Records – Number of records that failed verification in the bucket.
-* Error Info – Error details, if any occurred during bucket execution.
-
-![Extensions](https://raw.githubusercontent.com/k2view/libs-exchange-resources/main/d2d-images/monitorTable.png)
+![Monitor Table](https://raw.githubusercontent.com/k2view/libs-exchange-resources/main/d2d-images/monitorTable.png)

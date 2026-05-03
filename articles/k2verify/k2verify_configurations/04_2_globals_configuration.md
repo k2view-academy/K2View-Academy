@@ -20,7 +20,9 @@ Define these Globals only when executing Verify on Cassandra source or target ta
     Directory path to the CQLSH binary.
 2. **K2VERIFY_KEYS_TABLE_NAME**:
     Name of the table used to store the keys extracted from the Cassandra table.
-
+3. **EXECUTE_VERIFY_TASK_ID**:
+	Specifies the Verify task ID for TDM post-execution. Use an existing task ID or NEW_TASK to create one.
+	
 **ADVANCED GLOBALS:**
 
 These Globals provide advanced tuning and should be modified only when needed.
@@ -28,3 +30,5 @@ These Globals provide advanced tuning and should be modified only when needed.
     Delimiter used in MTable configuration definitions.
 2. **K2VERIFY_KEYS_FETCH_SIZE**:
     Defines the fetch size (number of records per fetch) when retrieving keys from the database.
+3. **LOG_PROGRESS_EVERY_N_RECORDS**: 
+	Defines how often progress is updated (log or DB), in number of records.

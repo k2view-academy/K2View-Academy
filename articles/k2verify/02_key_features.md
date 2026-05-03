@@ -1,40 +1,78 @@
 # Key Features
 
-- **Comprehensive Mismatch Detection:**
+1. **Comprehensive Mismatch Detection:**
+
+    Identifies and reports:
+    - Value mismatches
+    - Missing records (in target)
+    - Extra records (in target)
+    - Failed transformations
+    - PII masking failures
+
+2. **Environment-Aware Comparisons:**
   
-  Identifies and reports all types of data discrepancies, including:
-  - Value mismatches – Fields with differing values between source and target.
-  - Missing records – Records present in the source but missing from the target.
-  - Extra records – Records present in the target but not in the source.
-  - Failed transformations – Data that was not transformed according to defined rules.
-  - PII masking failures – Sensitive fields that are not properly masked in the target system.
+    Select source and target databases using Fabric-defined environments. Supports comparing interfaces within the same environment or across different environments (e.g., Prod vs. UAT). Each environment includes an indicator to specify whether it contains sensitive data.
 
-- **User-Defined and Configurable Parameters:**
-  - Allows users to configure verification parameters and adjust comparison behavior to fit different use cases.
+3. **PII Comparison Logic:**
+  
+    Verify applies different comparison rules based on data sensitivity flags:
 
-- **Selective Data Comparison:**
-  - Enables users to choose which tables, records, and fields to verify, providing flexibility and control.
+    * If **both Source and Target contain sensitive data** → values must match exactly → PASSED
+    * If **neither contains sensitive data** → values must match exactly → PASSED
+    * If **only one contains sensitive data** → target is expected to be masked → PASSED without direct equality check
 
-- **User-Friendly Web-Based Execution:**
-  - Supports task creation, execution, and monitoring through a web-based UI, with no need for scripts or command-line operations.
+4. **User-Defined and Configurable Parameters:**
+  
+    Configure verification parameters and adjust comparison behavior per table, including column mappings, transformation functions, PII columns, excluded columns, and partition settings — all managed through the Settings page.
 
-- **Parallel Data Verification:**
-  - Improves performance by verifying multiple tables concurrently and processing records in parallel within each table.
+5. **Selective Data Comparison:**
+  
+    Choose which tables, records, and fields to verify. Add new table pairs at runtime from a JDBC source or the Catalog, without requiring pre-configured settings.
 
-- **Post-Transformation Data Comparison:**
-  - Verifies data after transformation logic has been applied, ensuring transformations were executed correctly.
+6. **User-Friendly Web-Based Execution:**
+  
+    Create, execute, and monitor tasks through a web-based UI with no need for scripts or command-line operations.
 
-- **Extensible Bucket Distribution Logic:**
-  - Uses a default method to distribute records across parallel buckets and allows custom logic when needed.
+7. **Parallel Data Verification:**
+  
+    Improves performance by verifying multiple tables concurrently and processing records in parallel within each table using configurable partition counts—with support for automatic partition calculation.
 
-- **Real-Time Execution Monitoring:**
-  - Provides visibility into task progress with table-level and bucket-level execution details.
+8. **Post-Transformation Data Comparison:**
+  
+    Verifies data after transformation logic has been applied, ensuring transformations were executed correctly.
 
-- **Multi-Level Results Summarization:**
-  - Displays clear hierarchical results, from high-level summaries to detailed record and field views.
+9. **Extensible Partition Distribution Logic:**
+  
+    Uses a default method to distribute records across parallel partitions and allows custom logic when needed.
 
-- **Summary Results Export:**
-  - Allows exporting results as PDF reports for table summaries and CSV files for record- and field-level analysis.
+10. **Pre/Post Execution Flows:**
+  
+    Extend verification tasks with configurable Broadway flows that run before and after the core verification logic, without modifying the verification engine.
 
-- **Operational and Historical Tracking:**
-  - Stores execution metadata and historical results in PostgreSQL for auditing and analysis
+11. **Enhanced Error Handling:**
+  
+    A two-tier error model distinguishes physical infrastructure failures (which stop execution immediately) from data/comparison errors (which are evaluated against configurable thresholds).
+
+12. **Retry Failed Partitions:**
+  
+    Re-execute only the failed partitions of a previous run from the Task History view, without creating a new task execution.
+
+13. **Real-Time Execution Monitoring:**
+  
+    Provides visibility into task progress with table-level and Partition-level execution details.
+
+14. **Multi-Level Results Summarization:**
+  
+    Displays clear hierarchical results, from high-level summaries to detailed record and field views.
+
+15. **Summary Results Export:**
+  
+    Export results as PDF reports for table summaries and CSV files for record- and field-level analysis.
+
+16. **TDM and API Integration:**
+  
+    Trigger Verify tasks automatically as a TDM post-execution process, or manage tasks programmatically via dedicated API endpoints.
+
+17. **Operational and Historical Tracking:**
+  
+    Stores execution metadata and historical results in PostgreSQL for auditing and analysis.
