@@ -13,7 +13,7 @@ The LLM plugin can perform various tasks. The following two use cases are pre-co
 
 In addition to the above use cases, you can use the same plugin to implement your own use cases by updating the **user prompt** and other plugin's input parameters. The article includes two additional use cases with configuration examples:
 
-- [Use Case 3](02_LLM_data_profiling.md#use-case-3-llm-profiling-by-property): Profiling and classification of columns based on the column's description.
+- [Use Case 3](02_LLM_data_profiling.md#use-case-3-llm-profiling-by-description): Profiling and classification of columns based on the column's description.
 - [Use Case 4](02_LLM_data_profiling.md#use-case-4-creating-new-business-dimension): Creating a new business dimension (a new property). 
 
 ## LLM Profiling Plugin Definition

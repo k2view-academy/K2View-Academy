@@ -1,13 +1,37 @@
-# Verify Overview
+**Verify** is a data verification library that validates integrity, consistency, and privacy compliance between source and target systems during data movement, migration, platform upgrades, or replication.
 
-Verify is a data verification product designed to validate data integrity, consistency, and privacy compliance between source and target systems during data movement, migration, platform upgrades or replication processes.
+It compares data at three levels — **tables/files**, **records**, and **fields** — and is PII-aware, meaning it applies different comparison rules depending on whether data has been masked. Tasks are created and executed through a **web-based GUI** — no scripting or command-line work is needed.
 
-Verify provides an end-to-end, user-friendly verification solution that compares data at multiple levels (tables, records, and fields), while being PII-aware and performance-optimized through parallel execution. Verification tasks are defined and executed through a web-based GUI, eliminating the need for custom scripting or manual validation.
+### Core Capabilities
 
-Verify supports:
-  * Exact matching for regular (non-PII) fields.
-  * Masking validation for PII-designated fields, ensuring sensitive data is protected and compliant.
-  * Parallel execution across multiple tables and record buckets for scalability.
-  * Detailed operational tracking and multi-level reporting for audit and troubleshooting.
+| Capability | Details |
+|:---|:---|
+| Exact field matching | For non-PII columns |
+| Masking validation | For PII-designated fields |
+| Parallel execution | Across tables and record partitions |
+| Wide datatype support | Including BLOB and CLOB |
+| CSV file comparison | Via File System interfaces |
+| Multi-level reporting | From execution summary to individual field mismatches |
+| Export | PDF (summary), CSV (record/field detail) |
 
-Verification results are presented through intuitive monitoring and reporting screens, with the ability to drill down from high-level summaries to individual field discrepancies, and to export results for offline analysis and compliance reporting.
+### What Verify Detects
+
+- Value mismatches
+- Missing records (present in source, absent in target)
+- Extra records (present in target, absent in source)
+- Failed transformations
+- PII masking failures
+
+### PII Comparison Logic
+
+| Source Sensitive | Target Sensitive | Expected Result |
+|:---:|:---:|:---|
+| ✅ | ✅ | Values must match exactly → **PASSED** |
+| ❌ | ❌ | Values must match exactly → **PASSED** |
+| ✅ | ❌ | Target is expected to be masked → **PASSED** without direct equality check |
+| ❌ | ✅ | Source is expected to be masked → **PASSED** without direct equality check |
+
+### Verify Process Architecture
+
+![Verify Execution Flow](https://raw.githubusercontent.com/k2view/libs-exchange-resources/main/d2d-images/VerifyArchitecture.png)
+
