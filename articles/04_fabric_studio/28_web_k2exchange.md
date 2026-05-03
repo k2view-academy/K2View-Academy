@@ -111,11 +111,80 @@ For example:
 
 
 
+## Air-gapped environments
+
+There are cases where K2Exchange is not accessible to all or some of the Studio deployments (like air-gapped environments).
+
+For such cases, the following is recommended:
+
+1. Download the VSIX from your browser and locate it in the project tree
+2. Install extension from VSIX
+3. Add VSIX to be part of other project files (version control / GIT)
+
+For more information - see below sections
+
+
+
 ## Install from a VSIX
 
 You can manually install an extension packaged in a `.vsix` file. Using the **Install from VSIX** command in the Extensions view command drop-down - ellipsis menu, or the **Extensions: Install from VSIX** command in the **Command Palette**. Navigate to the `.vsix` file location in the pop-up window that will appear, and choose it.
 
 
+
+Installing from VSIX is useful for several cases:
+
+* Air-gapped environments 
+* When you do not want to share it in K2Exchange, for example when it is still in testing or when it is dedicated or developed by organization or project teams for their usage.
+* When organization regulations require scanning on any deployed module. 
+  In such case you may download first the VSIX, scan and verify it, and then use this physical scanned package.
+
+
+
+### Download Extension VSIX files 
+
+To download an extension, at Studio:
+
+1. Navigate to Extensions View and look for the required extension.
+
+   1. Right-click and then click on copy
+      ![](images/web/copy-ext-syn.png)
+
+2. When pasting the copied info -  extension's synopsis - you will find the `Download URL` attribute, where you can download the extension from.
+
+   An extension's synopsis example:
+
+   ```
+   Name: MCP Client
+   Id: k2view.mcp
+   Description: Adds support for MCP client actors
+   Version: 1.0.1
+   Publisher: K2View
+   Download URL: https://k2exchange.k2view.com/api/K2View/mcp/1.0.1/file/K2View.mcp-1.0.1.vsix
+   ```
+
+   
+
+> **Notes:**
+>
+> * The provided download URL link, as part of the extension's synopsis, is of its latest version. If other versions, change the URL to the required or consult K2View on which version to use. 
+> * If your browser, where you access to the Studio, is also blocked to external connection, then either use browser with access or ask the K2View team to provide it. 
+>   Usually only the environment is blocked or limited for external network connection but not the user's browser. The native extensions installation is done by Studio itself as server to server.
+
+
+
+### Project VSIX files as extensions repository
+
+As mentioned, as part of installing and embedding an extension into your project files, the extension and its files are logged into *installed_extensions.json*. On another space/environment setup, Studio looks for extensions and accesses K2Exchange to get additional info or files, which are not part of the project files, like editors, templates or scripts (optional). This also accomplishes the process of showing the extension as installed in this space.
+
+In such cases, the above process cannot be accomplished.
+
+For this, you can add the extensions' VSIX files to your project, which will be used like an extensions repository, from which other environments will consume, by default, the extensions, rather than from the K2Exchange.
+
+The location of VSIX extensions in the project can be set in the Settings: Settings > Fabric > Exchange > **Vsix Folder Path**. This is a relative path (to the project root) pointing to the folder containing VSIX files. By default, it is *project-resources*. 
+
+Accordingly, when Studio finds candidate extensions in the *installed_extensions* file, it looks first for their files at this VSIX folder path and installs them from there. If they are not found, it tries installing them from K2Exchange.
+
+ 
 
 ## Productivity Tips
 
