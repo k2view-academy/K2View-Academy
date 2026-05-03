@@ -23,7 +23,7 @@ The Schema Explorer supports the following actions:
 
 * **Filter datasets** - to limit the displayed dataset list:
 
-  * **Click** ![](../images/search.png)in the upper-right corner and start typing the dataset name. The list of datasets is then limited to those which contain the typed string.
+  * **Click** ![](../images/filter.png)in the upper-right corner and start typing the dataset name. The list of datasets is then limited to those which contain the typed string.
   * Very useful when working with a large schema which might include thousand of datasets. It helps finding quickly the required dataset without scrolling a long list.
 
 
