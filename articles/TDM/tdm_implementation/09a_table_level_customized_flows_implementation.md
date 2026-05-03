@@ -13,7 +13,9 @@ The customized flows must be added under the Shared Objects in the Project tree.
 
 ### Extract Flow
 
-- The extract flow receives a list of input parameters from the TDM execution processes and returns the number of records in the table and an object's array for the result. Duplicate the **GetSourceDataByQuery** flow (located in the TDM_TableLevel LU) in order to implement the extract template and customize the extract logic. 
+- The extract flow receives a list of input parameters from the TDM execution processes and returns both the number of records in the table and an array of result objects. To implement the extract template and customize the extraction logic, duplicate the **GetSourceDataByQuery** flow (located in the TDM_TableLevel LU).
+- Note that the generic/custom extract flow is executed only for tables without partitions (i.e., tables with a single partition). For [partitioned tables](09b_table_partitions_implementation.md), you must define a custom flow that retrieves records per partition in order to apply customized extraction logic.
+
 
 #### Customized Masking Logic
 
