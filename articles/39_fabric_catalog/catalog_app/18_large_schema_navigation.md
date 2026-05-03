@@ -39,6 +39,8 @@ The Schema Explorer supports the following actions:
 
 * **View dataset fields with their properties** by expanding the dataset in the Schema Explorer and clicking any of the fields in the list.
 
-  * Complex fields can also be expanded within the Schema Explorer. 
-
   ![](../images/schema_explorer_view_fields.png)
+
+  * Complex fields can also be expanded within the Schema Explorer:
+
+  ![](../images/schema_explorer_view_complex_fields.png)
