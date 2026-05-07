@@ -4,15 +4,44 @@ It compares data at three levels — **tables/files**, **records**, and **fields
 
 ### Core Capabilities
 
-| Capability | Details |
-|:---|:---|
-| Exact field matching | For non-PII columns |
-| Masking validation | For PII-designated fields |
-| Parallel execution | Across tables and record partitions |
-| Wide datatype support | Including BLOB and CLOB |
-| CSV file comparison | Via File System interfaces |
-| Multi-level reporting | From execution summary to individual field mismatches |
-| Export | PDF (summary), CSV (record/field detail) |
+<table>
+  <thead>
+    <tr>
+      <th align="left">Capability</th>
+      <th align="left">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td valign="top">Exact field matching</td>
+      <td valign="top">For non-PII columns</td>
+    </tr>
+    <tr>
+      <td valign="top">Masking validation</td>
+      <td valign="top">For PII-designated fields</td>
+    </tr>
+    <tr>
+      <td valign="top">Parallel execution</td>
+      <td valign="top">Across tables and record partitions</td>
+    </tr>
+    <tr>
+      <td valign="top">Wide datatype support</td>
+      <td valign="top">Including BLOB and CLOB</td>
+    </tr>
+    <tr>
+      <td valign="top">CSV file comparison</td>
+      <td valign="top">Via File System interfaces</td>
+    </tr>
+    <tr>
+      <td valign="top">Multi-level reporting</td>
+      <td valign="top">From execution summary to individual field mismatches</td>
+    </tr>
+    <tr>
+      <td valign="top">Export</td>
+      <td valign="top">PDF (summary), CSV (record/field detail)</td>
+    </tr>
+  </tbody>
+</table>
 
 ### What Verify Detects
 
