@@ -4,11 +4,35 @@
 
 Verify splits large tables/files into **partitions** processed in parallel — similar to dividing work across multiple workers. The default method distributes records based on key values:
 
-| Key Type | Method |
-|:---|:---|
-| Single numeric key | `PartitionId = keyValue % PartitionsNum` |
-| Single string key | `PartitionId = hash(keyValue) % PartitionsNum` |
-| Multiple key columns | Keys concatenated, then `hash(concatenatedKeys) % PartitionsNum` |
+<table>
+  <thead>
+    <tr>
+      <th align="left">Key Type</th>
+      <th align="left">Method</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td valign="top">Single numeric key</td>
+      <td valign="top">
+        <code>PartitionId = keyValue % PartitionsNum</code>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">Single string key</td>
+      <td valign="top">
+        <code>PartitionId = hash(keyValue) % PartitionsNum</code>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">Multiple key columns</td>
+      <td valign="top">
+        Keys concatenated, then
+        <code>hash(concatenatedKeys) % PartitionsNum</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 **For CSV files:**
 - Single file → split into the configured number of partitions.
@@ -19,17 +43,58 @@ Verify splits large tables/files into **partitions** processed in parallel — s
 1. Create a new Broadway flow.
 2. Define the following **External** flow inputs:
 
-   | Input | Description |
-   |:---|:---|
-   | `interface` | Interface where the table is located |
-   | `schema` | Schema name |
-   | `table` | Table name |
-   | `PartitionsNum` | Total number of partitions |
-   | `PartitionID` | The partition to which rows should be assigned |
-   | `interfaceType` | DB type: PostgreSQL, Oracle, Cassandra, DB2, MySQL |
-   | `customizedKey` | Key columns separated by the library delimiter |
-   | `delimiter` | Library delimiter |
-   | `excludeCondition` | Condition from the `Excluded_Rows_Sql` field |
+	<table>
+	  <thead>
+		<tr>
+		  <th align="left">Input</th>
+		  <th align="left">Description</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td valign="top"><code>interface</code></td>
+		  <td valign="top">Interface where the table is located</td>
+		</tr>
+		<tr>
+		  <td valign="top"><code>schema</code></td>
+		  <td valign="top">Schema name</td>
+		</tr>
+		<tr>
+		  <td valign="top"><code>table</code></td>
+		  <td valign="top">Table name</td>
+		</tr>
+		<tr>
+		  <td valign="top"><code>PartitionsNum</code></td>
+		  <td valign="top">Total number of partitions</td>
+		</tr>
+		<tr>
+		  <td valign="top"><code>PartitionID</code></td>
+		  <td valign="top">The partition to which rows should be assigned</td>
+		</tr>
+		<tr>
+		  <td valign="top"><code>interfaceType</code></td>
+		  <td valign="top">
+			DB type: PostgreSQL, Oracle, Cassandra, DB2, MySQL
+		  </td>
+		</tr>
+		<tr>
+		  <td valign="top"><code>customizedKey</code></td>
+		  <td valign="top">
+			Key columns separated by the library delimiter
+		  </td>
+		</tr>
+		<tr>
+		  <td valign="top"><code>delimiter</code></td>
+		  <td valign="top">Library delimiter</td>
+		</tr>
+		<tr>
+		  <td valign="top"><code>excludeCondition</code></td>
+		  <td valign="top">
+			Condition from the <code>Excluded_Rows_Sql</code> field
+		  </td>
+		</tr>
+	  </tbody>
+	</table>
 
 3. Define flow output `bucketRows` — an array of maps where each map uses `customizedKey` as the key and the combined key values as the value:
    ```json
