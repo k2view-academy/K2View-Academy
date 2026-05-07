@@ -53,12 +53,37 @@ It compares data at three levels — **tables/files**, **records**, and **fields
 
 ### PII Comparison Logic
 
-| Source Sensitive | Target Sensitive | Expected Result |
-|:---:|:---:|:---|
-| ✅ | ✅ | Values must match exactly → **PASSED** |
-| ❌ | ❌ | Values must match exactly → **PASSED** |
-| ✅ | ❌ | Target is expected to be masked → **PASSED** without direct equality check |
-| ❌ | ✅ | Source is expected to be masked → **PASSED** without direct equality check |
+<table>
+  <thead>
+    <tr>
+      <th align="center">Source Sensitive</th>
+      <th align="center">Target Sensitive</th>
+      <th align="left">Expected Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">✅</td>
+      <td align="center">✅</td>
+      <td>Values must match exactly → <strong>PASSED</strong></td>
+    </tr>
+    <tr>
+      <td align="center">❌</td>
+      <td align="center">❌</td>
+      <td>Values must match exactly → <strong>PASSED</strong></td>
+    </tr>
+    <tr>
+      <td align="center">✅</td>
+      <td align="center">❌</td>
+      <td>Target is expected to be masked → <strong>PASSED</strong> without direct equality check</td>
+    </tr>
+    <tr>
+      <td align="center">❌</td>
+      <td align="center">✅</td>
+      <td>Source is expected to be masked → <strong>PASSED</strong> without direct equality check</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Verify Process Architecture
 
