@@ -1,3 +1,5 @@
+## Verify
+
 **Verify** is a data verification library that validates integrity, consistency, and privacy compliance between source and target systems during data movement, migration, platform upgrades, or replication.
 
 It compares data at three levels — **tables/files**, **records**, and **fields** — and is PII-aware, meaning it applies different comparison rules depending on whether data has been masked. Tasks are created and executed through a **web-based GUI** — no scripting or command-line work is needed.
