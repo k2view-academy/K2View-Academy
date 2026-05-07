@@ -9,22 +9,99 @@
 
 3. Fill in the task details:
 
-   | Field | Description |
-   |:---|:---|
-   | Task Title | Descriptive name for the task |
-   | Task Description | Short description (optional) |
-   | Source Environment | Source environment — `_dev` selected by default |
-   | Target Environment | Target environment — `_dev` selected by default |
-   | Source Interface | Interfaces deployed in the selected source environment |
-   | Target Interface | Interfaces deployed in the selected target environment |
-   | Source & Target Table Selection | Choose **From Settings** (predefined configs) or **Add Tables at Runtime** (JDBC or Catalog) |
-   | Verify PII Fields Only | Runs verification only on PII fields, skipping regular columns |
-   | Source Contains Sensitive Data | Indicates source has unmasked PII — affects comparison logic |
-   | Target Contains Sensitive Data | Indicates target has unmasked PII — affects comparison logic |
-   | Include Passed Verifications in Report | Adds passed records to the final report alongside failures |
-   | Concurrency Threads per Node | Number of concurrent threads per table per node |
-   | Pre-Execution Flows | Broadway flows (tagged `verify_pre_execution`) to run before verification |
-   | Post-Execution Flows | Broadway flows (tagged `verify_post_execution`) to run after verification |
+	<table>
+	  <thead>
+		<tr>
+		  <th align="left">Field</th>
+		  <th align="left">Description</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td valign="top">Task Title</td>
+		  <td valign="top">Descriptive name for the task</td>
+		</tr>
+		<tr>
+		  <td valign="top">Task Description</td>
+		  <td valign="top">Short description (optional)</td>
+		</tr>
+		<tr>
+		  <td valign="top">Source Environment</td>
+		  <td valign="top">
+			Source environment — <code>_dev</code> selected by default
+		  </td>
+		</tr>
+		<tr>
+		  <td valign="top">Target Environment</td>
+		  <td valign="top">
+			Target environment — <code>_dev</code> selected by default
+		  </td>
+		</tr>
+		<tr>
+		  <td valign="top">Source Interface</td>
+		  <td valign="top">
+			Interfaces deployed in the selected source environment
+		  </td>
+		</tr>
+		<tr>
+		  <td valign="top">Target Interface</td>
+		  <td valign="top">
+			Interfaces deployed in the selected target environment
+		  </td>
+		</tr>
+		<tr>
+		  <td valign="top">Source &amp; Target Table Selection</td>
+		  <td valign="top">
+			Choose <strong>From Settings</strong> (predefined configs) or
+			<strong>Add Tables at Runtime</strong> (JDBC or Catalog)
+		  </td>
+		</tr>
+		<tr>
+		  <td valign="top">Verify PII Fields Only</td>
+		  <td valign="top">
+			Runs verification only on PII fields, skipping regular columns
+		  </td>
+		</tr>
+		<tr>
+		  <td valign="top">Source Contains Sensitive Data</td>
+		  <td valign="top">
+			Indicates source has unmasked PII — affects comparison logic
+		  </td>
+		</tr>
+		<tr>
+		  <td valign="top">Target Contains Sensitive Data</td>
+		  <td valign="top">
+			Indicates target has unmasked PII — affects comparison logic
+		  </td>
+		</tr>
+		<tr>
+		  <td valign="top">Include Passed Verifications in Report</td>
+		  <td valign="top">
+			Adds passed records to the final report alongside failures
+		  </td>
+		</tr>
+		<tr>
+		  <td valign="top">Concurrency Threads per Node</td>
+		  <td valign="top">
+			Number of concurrent threads per table per node
+		  </td>
+		</tr>
+		<tr>
+		  <td valign="top">Pre-Execution Flows</td>
+		  <td valign="top">
+			Broadway flows (tagged <code>verify_pre_execution</code>)
+			to run before verification
+		  </td>
+		</tr>
+		<tr>
+		  <td valign="top">Post-Execution Flows</td>
+		  <td valign="top">
+			Broadway flows (tagged <code>verify_post_execution</code>)
+			to run after verification
+		  </td>
+		</tr>
+	  </tbody>
+	</table>
 
    ![New Task Screen](https://raw.githubusercontent.com/k2view/libs-exchange-resources/main/d2d-images/newTaskScreen.png)
    ![Pre/Post Processes](https://raw.githubusercontent.com/k2view/libs-exchange-resources/main/d2d-images/PrePostProcesses.png)
