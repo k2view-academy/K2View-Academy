@@ -4,10 +4,24 @@
 
 Before installing Verify, ensure the following requirements are met:
 
-| Requirement | Details |
-|:---|:---|
-| **Fabric version** | 8.2 or higher (certified on 8.3.4) |
-| **PostgreSQL** | Integrated and available in your project (certified on PostgreSQL 17) |
+<table>
+  <thead>
+    <tr>
+      <th align="left">Requirement</th>
+      <th align="left">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td valign="top"><strong>Fabric version</strong></td>
+      <td valign="top">8.2 or higher (certified on 8.3.4)</td>
+    </tr>
+    <tr>
+      <td valign="top"><strong>PostgreSQL</strong></td>
+      <td valign="top">Integrated and available in your project (certified on PostgreSQL 17)</td>
+    </tr>
+  </tbody>
+</table>
 
 > ⚠️ **Important:** The project must have a working PostgreSQL integration before deploying Verify. This is used to store all operational data and report results.
 
@@ -40,12 +54,33 @@ After installation, confirm the following components are present in your Cloud S
       - Java folder `common/k2verify` — Java logic used by the product.
 
    - **Interfaces:**
-
-      | Interface | Type | Purpose |
-      |:---|:---|:---|
-      | `K2VERIFY_OPERATIONAL_DB` | JDBC | Operational tables and reporting data |
-      | `K2VERIFY_SRC_CASS_DETAILS` | Other | Cassandra source connection details |
-      | `K2VERIFY_TAR_CASS_DETAILS` | Other | Cassandra target connection details |
+	  
+	  <table>
+	  <thead>
+		<tr>
+		  <th align="left">Interface</th>
+		  <th align="left">Type</th>
+		  <th align="left">Purpose</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td valign="top"><code>K2VERIFY_OPERATIONAL_DB</code></td>
+		  <td valign="top">JDBC</td>
+		  <td valign="top">Operational tables and reporting data</td>
+		</tr>
+		<tr>
+		  <td valign="top"><code>K2VERIFY_SRC_CASS_DETAILS</code></td>
+		  <td valign="top">Other</td>
+		  <td valign="top">Cassandra source connection details</td>
+		</tr>
+		<tr>
+		  <td valign="top"><code>K2VERIFY_TAR_CASS_DETAILS</code></td>
+		  <td valign="top">Other</td>
+		  <td valign="top">Cassandra target connection details</td>
+		</tr>
+	  </tbody>
+	</table>
 
 3. Libraries
    - `lib/postgresql-42.7.10.jar`

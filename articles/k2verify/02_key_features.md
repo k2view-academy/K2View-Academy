@@ -37,9 +37,9 @@
   
     Improves performance by verifying multiple tables concurrently and processing records in parallel within each table using configurable partition counts—with support for automatic partition calculation.
 
-8. **Post-Transformation Data Comparison:**
+8. **Pre-Comparison Transformation:**
   
-    Verifies data after transformation logic has been applied, ensuring transformations were executed correctly.
+    Applies predefined rules to source or target data before comparison, accommodating known structural or format differences between systems to ensure accurate validation.
 
 9. **Extensible Partition Distribution Logic:**
   
