@@ -77,6 +77,8 @@ Click **New Configuration** to add a table or file pair. The fields you need to 
   </tbody>
 </table>
 
+  > **Note:** When comparing database tables, both the source and target must use the same database engine. Cross-database comparisons — for example, verifying an Oracle source against a PostgreSQL target — are not supported in this version.
+  
 **For CSV file comparisons:**
 
 <table>
@@ -134,6 +136,15 @@ Click **New Configuration** to add a table or file pair. The fields you need to 
     </tr>
   </tbody>
 </table>
+
+   > **Note:** In this version, only CSV files are supported for file-based comparison. Other file formats are not supported at this time.
+
+   > **Note:** Each CSV file must include a header row. Verify uses the column names in the header to match fields between source and target. Files without a header row are not supported.
+
+   > **Note:** In this version, CSV file names must match between source and target. Verify expects each source file to have a counterpart with the same name in the target. If your target files use different names, you must provide a pre-execution Broadway flow to rename or remap them before Verify runs. See `Pre/Post execution flows` for how to set this up.
+   
+
+**Advanced comparison configurations:**
 
 You can expand **Advanced Fields** to fine-tune the comparison behavior for each configuration. These apply to both JDBC and CSV unless noted otherwise.
 
@@ -221,6 +232,10 @@ Click **Submit** to save the configuration. To edit an existing configuration, c
 
 The **Advanced Settings** tab on the Settings page controls global parameters that apply across all tasks. These govern how Verify handles errors and how it sizes partitions.
 
+**Error Handling Thresholds:**
+
+These parameters control how Verify responds when records fail during execution. Rather than stopping immediately at the first failure, Verify evaluates failures against configurable thresholds, giving you the flexibility to tolerate a certain level of discrepancy before halting the process. This is useful when verifying large datasets where a small percentage of mismatches is acceptable and should not interrupt the full run, or conversely, when a certain percentage of records are failing due to comparison failures and you want to stop execution early rather than continue processing a fundamentally flawed dataset.
+
 <table>
   <thead>
     <tr>
@@ -256,6 +271,23 @@ The **Advanced Settings** tab on the Settings page controls global parameters th
       <td valign="top">0–100</td>
     </tr>
     <tr>
+  </tbody>
+</table>
+
+**Partitioning Parameters:**
+
+These parameters control how Verify divides a table into smaller chunks that are processed in parallel. Configuring the right partition size and count helps optimize execution time based on your dataset size and available infrastructure.
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Parameter</th>
+      <th align="left">Category</th>
+      <th align="left">Description</th>
+      <th align="left">Range</th>
+    </tr>
+  </thead>
+  <tbody>
       <td valign="top"><code>PARTITION_SIZE</code></td>
       <td valign="top">Partitioning</td>
       <td valign="top">
