@@ -9,17 +9,17 @@ All of the above makes navigating a large schema quite challenging, for the foll
 * Expanding the schema in the Catalog App requires retrieving a large amount of data from the server to the client and then rendering it on the client side. This process may become unresponsive and cause the browser to crash.
 * Even if the schema eventually expands without crashing the browser, navigating a large schema is very difficult since the zoom level must be reduced significantly to see the full schema.
 
-To improve the user experience when working with large schemas, Catalog introduces the Schema Explorer view. Schema Explorer displays the datasets in a list (instead of the tree view), allowing users to filter by dataset name and drill into individual datasets on demand. The list view is displayed automatically upon expanding a schema that contains more than 100 datasets; schemas with 100 or fewer datasets continue to display the standard tree view.
+To improve the user experience when working with large schemas, Catalog introduces the Schema Dataset List view. This view displays the datasets in a list (instead of the tree view), allowing users to filter by dataset name and drill into individual datasets on demand. The list view is displayed automatically upon expanding a schema whose size exceeds any of the predefined thresholds; otherwise, the standard tree view is displayed.
 
 This feature is available starting from Fabric V8.5. 
 
-## Schema Explorer View
+## Schema Dataset List View
 
-When the discovery process runs, the total number of datasets is calculated for each schema, along with two other properties - total fields and total relations. 
+When the discovery process runs, the total number of datasets is calculated for each schema, along with two other properties - total fields and total relations.
 
-Upon expansion, if the schema contains more than 100 datasets, the Schema Explorer opens automatically, displaying the full list of dataset names in alphabetical order.
+Upon expansion of the schema, these calculated properties are compared against predefined thresholds to determine whether to open the standard tree view or the Schema Dataset List. If **total number of datasets > 100 OR total fields > 5000 OR total relations > 500**, the Schema Dataset List opens automatically, displaying the full list of dataset names in alphabetical order.
 
-The Schema Explorer supports the following actions:
+The Schema Dataset List supports the following actions:
 
 * **Filter datasets** - to limit the displayed dataset list:
 
@@ -29,18 +29,18 @@ The Schema Explorer supports the following actions:
 
   ![](../images/schema_explorer_view_filter.png)
 
-* **Resize the list view** by dragging the orange dot in the lower-right corner of the Schema Explorer. This is useful when some datasets have long names that don't fit within the default width of the Schema Explorer.
+* **Resize the list view** by dragging the orange dot in the lower-right corner of the Schema Dataset List. This is useful when some datasets have long names that don't fit within the default width.
 
   ![](../images/schema_explorer_view.png)
 
-* **View dataset properties and the *refersTo* relations** by clicking the dataset name in the Schema Explorer.
+* **View dataset properties and the *refersTo* relations** by clicking the dataset name in the Schema Dataset List.
 
   ![](../images/schema_explorer_view_properties.png)
 
-* **View dataset fields with their properties** by expanding the dataset in the Schema Explorer and clicking any of the fields in the list.
+* **View dataset fields with their properties** by expanding the dataset in the Schema Dataset List and clicking any of the fields in the list.
 
   ![](../images/schema_explorer_view_fields.png)
 
-  * Complex fields can also be expanded within the Schema Explorer:
+  * Complex fields can also be expanded within the Schema Dataset List view:
 
   ![](../images/schema_explorer_view_complex_fields.png)
