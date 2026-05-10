@@ -49,11 +49,32 @@ The General Information section has the following settings:
   - At least one version must be set for a system. Multiple system versions can also be set. 
   - The relevant system version must be selected when adding a system to an [Environment](11_environment_products_tab.md).
 
-​	To add a version to a system, click ![delete](images/plus_icon_prod_version.png) next to the Versions setting and enter the version's value which is the logical identifier of the system's version. 	For example 1, 1.5, dev or prod. The values must be aligned to the TDM Fabric implementation. 
+​	To add a version to a system, click ![delete](images/plus_icon_prod_version.png) next to the Versions setting and enter the version's value, which is the logical identifier of the system's version. For example: 1, 1.5, dev, or prod. The values must be aligned with the TDM Fabric implementation. 
 
    [Click for more information about supporting multiple system versions via TDM](/articles/TDM/tdm_implementation/13_tdm_implementation_supporting_different_product_versions.md).
 
-- **Related Interfaces**: Click the text box to open the dropdown list and select an interface. Repeat this step to add additional interfaces. To remove an interface, click the **X** next to the selected interface.
+### Related Interfaces
+Starting with TDM 9.5, you can configure **affinity** and the **maximum number** of workers at both the [environment level](11_environment_products_tab.md) and the [task level](14c_task_source_component_tables.md). These settings provide greater control over resource allocation and workload distribution, and apply to both:
+
+- Entity-based tasks
+- Table-level tasks
+
+#### Default Configuration
+
+Default values for affinity and maximum number of workers are defined at the [environment system level](11_environment_products_tab.md).
+
+#### Interface Inheritance
+
+When you attach interfaces to a system, the system inherits the default affinity and maximum number of workers from the associated table-level task environments.
+
+#### Adding Interfaces to a System
+
+To add or remove interfaces:
+
+- Click the interface field to open the dropdown list
+- Select one or more interfaces
+- Repeat to add additional interfaces
+- To remove an interface, click the X next to it
 
 ### Logical Units
 
