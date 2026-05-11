@@ -462,11 +462,15 @@
 				},
 				{
 					"display name": "Verify Configuration",
-					"value": "k2verify/k2verify_configurations"
+					"value": "k2verify/k2verify_01_configurations"
+				},
+				{
+					"display name": "Verify Customized Implementation",
+					"value": "k2verify/k2verify_02_customized_implementation"
 				},
 				{
 					"display name": "Verify Execution & Results",
-					"value": "k2verify/k2verify_execution"
+					"value": "k2verify/k2verify_03_execution"
 				}
 			]
 		}
