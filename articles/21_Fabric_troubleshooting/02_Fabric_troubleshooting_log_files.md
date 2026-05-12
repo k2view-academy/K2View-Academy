@@ -7,7 +7,7 @@ All activities performed in Fabric are written into log files in the server and 
 Logs are configured in the **logback.xml** file which is located on the Fabric server in:
 
 ~~~
-    $K2_HOME/config/logback.xml
+    $FABRIC_HOME/config/logback.xml
 ~~~
 
 Settings like the [log files location and rolling policy](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-files-location--rolling-policy) and the [log level](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-level) can be updated in the **logback.xml** file.  
@@ -16,24 +16,12 @@ For additional information, refer to http://logback.qos.ch/manual/configuration.
 
 ### Log Files 
 
-Fabric log files are located in [$K2_HOME/logs](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homelogs) directory.
+Fabric log files are located in [$FABRIC_HOME/logs](/articles/02_fabric_architecture/02_fabric_directories.md#fabric_homelogs) directory.
 The location of a log file can be configured in the [logback.xml](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-files-location--rolling-policy) log configuration file. 
 
 The latest log is always named **k2fabric.log**, and is [rolled to a new file](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-files-location--rolling-policy) as soon as it reaches a specific size. 
 
 The ***.err** and ***.** **out** log files are created during [Fabric restart]( /articles/02_fabric_architecture/03_fabric_basics_getting_started.md#k2fabric-restart) and are not rolled to a new file. Always Check these files when an error occurs. 
-
-#### **IID Finder Log Files**
-
-The IID Finder has a separate log and configuration files:
-
-~~~
-    $K2_HOME/config/logback-iid_finder.xml
-    $K2_HOME/config/logback-init_finder.xml
-    $K2_HOME/logs/iidfinder.log
-~~~
-**logback-iid_finder.xml** is a configuration file for IID Finder log files, while **logback-init_finder.xml** is responsible for the creation of IID Finder tables in Cassandra.
-<!--Click for more information about the IID Finder. -- Drop 3 -> add a link to IID Finder -->
 
 ### **Log Files Location & Rolling Policy**
 
@@ -53,7 +41,7 @@ While log files convey useful information, they grow bigger over time, and event
     </appender>
 ~~~
 
-The above configuration defines the **k2fabric.log** log file located in the Fabric server under the **$K2_HOME/logs** directory. The rolling policy of the above appender is based on a combination of size and date/time. A new file is created every day. The maximum size of a log file is 20 MB and the total size of the files is 3 GB. History is saved for 10 days. 
+The above configuration defines the **k2fabric.log** log file located in the Fabric server under the **$FABRIC_HOME/logs** directory. The rolling policy of the above appender is based on a combination of size and date/time. A new file is created every day. The maximum size of a log file is 20 MB and the total size of the files is 3 GB. History is saved for 10 days. 
 
 Note that to define the maxHistory in hours rather than in days, edit the fileNamePattern tag to include the following pattern: {yyyy-MM-dd-hh}.
 
@@ -71,7 +59,7 @@ When required, a new log file can be created by configuring a new **appender** i
     </appender>
 ~~~
 
-The above configuration defines the **monitoring.log** file located in the Fabric server under the **$K2_HOME/logs** directory. The rolling policy of the above appender is based on date/time. A new file is created every day. History is saved for 7 days. 
+The above configuration defines the **monitoring.log** file located in the Fabric server under the **$FABRIC_HOME/logs** directory. The rolling policy of the above appender is based on date/time. A new file is created every day. History is saved for 7 days. 
 
 ### **Log Level**
 The log level parameter defines which messages are written into the log file. There are four log levels (from the least severe to the most severe): DEBUG, INFO, WARN and ERROR. 

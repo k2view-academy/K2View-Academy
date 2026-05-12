@@ -195,8 +195,8 @@ Define credentials by either Admin UI (Security tab) or Fabric commands, as foll
 
 ### Bootstrap Credentials
 Fabric can also be started with predefined API keys, roles, and permissions. This is available since Fabric 7.2.1.
-- Turn on this capability by adding a new line containing "rolespermissions" to the *modules* file, located at [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
-- Create a file named **rolesPrivileges.json** at [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
+- Turn on this capability by adding a new line containing "rolespermissions" to the *modules* file, located at [$FABRIC_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
+- Create a file named **rolesPrivileges.json** at [$FABRIC_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
 - Edit the file with the required values. It is built from two main independent objects: "roles" and "apikeys", where each can be set or skipped independently of the other.
    - Define roles' associated operations, per role, at the "roles" array object.
    - Define API keys association to roles, per API key, at the `"apikeys"` array object.

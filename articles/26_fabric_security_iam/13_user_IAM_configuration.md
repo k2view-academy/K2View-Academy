@@ -183,19 +183,10 @@ Obtain the following values from your IdP’s administration interface:
   The IdP’s public key certificate. Import it into the Fabric truststore with the following command:
 
   ```bash
-  keytool -importcert \
-    -alias <ALIAS-NAME> \
-    -file <full-path-to-downloaded-cert-file> \
-    -storetype JKS \
-    -keystore <full-path-to-truststore-file>
+  $FABRIC_HOME/fabric/scripts/certificates.sh addtrust <ALIAS-NAME> <full-path-to-downloaded-cert-file>
   ```
 
-The truststore path and related parameters are defined in the `jvm.options` file.  
-In the **TLS/SSL SETTINGS** section, check the property:
-
-   ```bash
-   $K2_HOME/.cassandra_ssl/cassandra.truststore
-   ```
+The default truststore path is `$FABRIC_HOME/config/.truststore`.
 The chosen alias name must also be set in the configuration for the IDP_CERT_ALIAS property.
 (You may use any alias name, as long as it matches here and in the configuration.)
 
@@ -214,7 +205,7 @@ The chosen alias name must also be set in the configuration for the IDP_CERT_ALI
       -keystore <full-path-to-keystore-file>
    ```
 
-   The keystore path and related parameters are set in the `jvm.options` file. In the TLS/SSL SETTINGS section, review the `javax.net.ssl.keyStore` property. These values are configured for a hardened environment. For example: `$K2_HOME/.cassandra_ssl/keystore.jks`.
+   The default keystore path is `$FABRIC_HOME/config/.keystore`.
 
   The specified alias name must be used for the *SP_CERT_ALIAS* property in your configuration. `fabric_cert` is used by default in the config.ini. Ensure that you use the alias of the already stored certificate. Please verify the alias using the keytool list command.
 
@@ -287,7 +278,7 @@ When Fabric is running on a Windows OS, typically during project implementation 
 
 ##### Admin Role Settings
 
-When LDAP is used as an authenticator, an admin role is automatically created for Fabric Bootstrap. The admin role's name should be configured in the *admin_privileges* configuration file (Use $K2_HOME/config.template/admin_privileges.template file as reference). 
+When LDAP is used as an authenticator, an admin role is automatically created for Fabric Bootstrap. The admin role's name should be configured in the *admin_privileges* configuration file (Use $FABRIC_HOME/config.template/admin_privileges.template file as reference). 
 
 The LDAP owner should provide the name of the role.
 

@@ -68,7 +68,7 @@ To build the artifacts and the deployment together, in one step, from the server
 </studio>
 
 ### Build and Deploy Scripts Syntax and Options
-The following table describes the syntax and the mandatory/optional parameters for calling the deployment scripts. The scripts are located under **$K2_HOME/fabric/scripts** in the Fabric server.
+The following table describes the syntax and the mandatory/optional parameters for calling the deployment scripts. The scripts are located under **$FABRIC_HOME/fabric/scripts** in the Fabric server.
 
 
 
