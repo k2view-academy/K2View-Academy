@@ -23,18 +23,6 @@ The latest log is always named **k2fabric.log**, and is [rolled to a new file](/
 
 The ***.err** and ***.** **out** log files are created during [Fabric restart]( /articles/02_fabric_architecture/03_fabric_basics_getting_started.md#k2fabric-restart) and are not rolled to a new file. Always Check these files when an error occurs. 
 
-#### **IID Finder Log Files**
-
-The IID Finder has a separate log and configuration files:
-
-~~~
-    $FABRIC_HOME/config/logback-iid_finder.xml
-    $FABRIC_HOME/config/logback-init_finder.xml
-    $FABRIC_HOME/logs/iidfinder.log
-~~~
-**logback-iid_finder.xml** is a configuration file for IID Finder log files, while **logback-init_finder.xml** is responsible for the creation of IID Finder tables in Cassandra.
-<!--Click for more information about the IID Finder. -- Drop 3 -> add a link to IID Finder -->
-
 ### **Log Files Location & Rolling Policy**
 
 While log files convey useful information, they grow bigger over time, and eventually their size can become an issue. This problem is addressed in the **logback.xml** configuration file. To prevent unwanted downtime, **rolling file appenders** automatically archive the current log file and resume logging in a new file when specific predefined conditions occur. Log files can be rolled based on size, date/time and a combination of size and date/time. In addition, you can configure to automatically compress and later delete old log files.
