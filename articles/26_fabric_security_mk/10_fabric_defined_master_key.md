@@ -17,34 +17,27 @@ Set the ``MASTERKEY_KEY_STORE_ENABLED`` parameter of the config.ini file to **fa
 ### Generate Master Key Using KeyStore
 Set the ``MASTERKEY_KEY_STORE_ENABLED`` parameter of the config.ini file to **true**.
 
-#### Create KeyStore Directory 
-After adding the encryption module to the fabric-server-start.sh module, create the Keystore folder under the k2view home directory for all nodes:
-```bash
-cd $K2_HOME
-mkdir .keystore
-```
-
 #### Run the keytool
 Run the ```keytool``` command on the coordinator node:
 
 ~~~bash
-keytool -genseckey -alias masterkey_key_name -keyalg aes -keysize 256 -storepass <password> -keystore  $K2_HOME/.keystore/fabric.keystore -storetype PKCS12
+
+keytool -genseckey -alias masterkey_key_name -keyalg aes -keysize 256 -storepass <password> -keystore  $FABRIC_HOME/config/.keystore -storetype PKCS12
 ~~~
 
 - Copy the key to all other nodes:
 
 ~~~bash
-scp $K2_HOME/.keystore/fabric.keystore fabric@10.10.10.10:/$K2_HOME/.keystore/
+scp $FABRIC_HOME/config/.keystore fabric@10.10.10.10:/$FABRIC_HOME/config/.keystore
 ~~~
 
 
-
-#### Edit Config.ini Script
+#### Edit Config.ini
 - Edit the **KEY_STORE_PASSWORD** parameter in the config.ini to the password used in the Keytool command, and enable the **KEY_STORE_LOCATION** parameter and set it to point to the correct path for all Fabric nodes:
 
 ```bash
-sed -i "s@#KEY_STORE_LOCATION=.*@KEY_STORE_LOCATION=$K2_HOME/.keystore/fabric.keystore@" $K2_HOME/config/config.ini
-sed -i 's@#KEY_STORE_PASSWORD=.*@KEY_STORE_PASSWORD= <password>@' $K2_HOME/config/config.ini
+$FABRIC_HOME/fabric/scripts/merge-config.sh -s encryption -k KEY_STORE_LOCATION -v $FABRIC_HOME/config/.keystore -f $FABRIC_HOME/config/config.ini
+$FABRIC_HOME/fabric/scripts/merge-config.sh -s encryption -k KEY_STORE_PASSWORD -v <password> -f $FABRIC_HOME/config/config.ini
 ```
 
 ### Restart Fabric Nodes

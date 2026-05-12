@@ -77,7 +77,7 @@ It compares data at three levels — **tables/files**, **records**, and **fields
     <tr>
       <td align="center">✅</td>
       <td align="center">❌</td>
-      <td>Target is expected to be masked — values must be unequal → **PASSED**</td>
+      <td>Target is expected to be masked — values must be unequal → <strong>PASSED</strong></td>
     </tr>
   </tbody>
 </table>

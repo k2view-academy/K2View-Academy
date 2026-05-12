@@ -23,7 +23,7 @@ It implements 3 methods:
 
 ### How to pack and deploy a custom authenticator
 
-Pack the authenticator into a JAR file and locate it under the $K2_HOME/ExternalJars directory.
+Pack the authenticator into a JAR file and locate it under the $FABRIC_HOME/ExternalJars directory.
 
 The JAR should be copied to each node in the cluster.
 

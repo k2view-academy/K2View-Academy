@@ -2,7 +2,7 @@
 
 Fabric enables adding templates for Search fields when the default settings do not match a search's needs. For example, to search by fields that contain special characters like an email address. 
 -  Each template is in JSON format and creates index settings in the Search provider.
--  All templates must be saved in the Fabric server under the **$K2_HOME/config/cdc-tags** directory.
+-  All templates must be saved in the Fabric server under the **$FABRIC_HOME/config/cdc-tags** directory.
 -  Fabric has  **default templates** that are saved under the **cdc-tags** directory:
 
 <table width="900pxl">
