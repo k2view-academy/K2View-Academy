@@ -262,7 +262,7 @@ The following prerequisites apply to both deployment models:
     - After creation, set CREATE_TDMDB Global back to false.
     - Build and deploy the remaining TDM components.
 6.	Offline Deployment
-    - Refer to [Offline Deployment Instructions](/articles/16_deploy_fabric/03_offline_deploy.md).
+    - Refer to [Deploy a Project](/articles/16_deploy_fabric/04_deploy_project.md).
 
 
 ### K2cloud Installation
