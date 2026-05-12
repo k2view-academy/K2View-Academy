@@ -7,11 +7,11 @@ To prevent data loss and speed up the setup process, it is recommended to create
 ### Example of Exporting Data
 
 ~~~bash
-echo "COPY k2auth.roles TO '$K2_HOME/k2auth.roles.csv' WITH HEADER = TRUE ;"|cqlsh -u[user] -p[password]
-echo "COPY k2auth.credentials TO '$K2_HOME/k2auth.credentials.csv' WITH HEADER = TRUE ;"|cqlsh -u[user] -p[password]
-echo "COPY k2auth.permissions TO '$K2_HOME/k2auth.permissions.csv' WITH HEADER = TRUE ;"|cqlsh -u[user] -p[password]
-echo "COPY k2auth.user_credentials TO '$K2_HOME/k2auth.user_credentials.csv' WITH HEADER = TRUE ;"|cqlsh -u[user] -p[password]
-echo "COPY system_auth.roles TO '$K2_HOME/system_auth.roles.csv' WITH HEADER = TRUE ;"|cqlsh -u[user] -p[password] 
+echo "COPY k2auth.roles TO '$FABRIC_HOME/k2auth.roles.csv' WITH HEADER = TRUE ;"|cqlsh -u[user] -p[password]
+echo "COPY k2auth.credentials TO '$FABRIC_HOME/k2auth.credentials.csv' WITH HEADER = TRUE ;"|cqlsh -u[user] -p[password]
+echo "COPY k2auth.permissions TO '$FABRIC_HOME/k2auth.permissions.csv' WITH HEADER = TRUE ;"|cqlsh -u[user] -p[password]
+echo "COPY k2auth.user_credentials TO '$FABRIC_HOME/k2auth.user_credentials.csv' WITH HEADER = TRUE ;"|cqlsh -u[user] -p[password]
+echo "COPY system_auth.roles TO '$FABRIC_HOME/system_auth.roles.csv' WITH HEADER = TRUE ;"|cqlsh -u[user] -p[password] 
 ~~~
 
 
@@ -19,11 +19,11 @@ echo "COPY system_auth.roles TO '$K2_HOME/system_auth.roles.csv' WITH HEADER = T
 ### Example of Importing Data
 
 ~~~bash
-echo "COPY k2auth.roles FROM '$K2_HOME/k2auth.roles.csv' WITH HEADER = TRUE ;"|cqlsh -u[user] -p[password]
-echo "COPY k2auth.credentials FROM '$K2_HOME/k2auth.credentials.csv' WITH HEADER = TRUE ;"|cqlsh -u[user] -p[password]
-echo "COPY k2auth.permissions FROM '$K2_HOME/k2auth.permissions.csv' WITH HEADER = TRUE ;"|cqlsh -u[user] -p[password]
-echo "COPY k2auth.user_credentials FROM '$K2_HOME/k2auth.user_credentials.csv' WITH HEADER = TRUE ;"|cqlsh -u[user] -p[password]
-echo "COPY system_auth.roles FROM '$K2_HOME/system_auth.roles.csv' WITH HEADER = TRUE ;"|cqlsh -u[user] -p[password]
+echo "COPY k2auth.roles FROM '$FABRIC_HOME/k2auth.roles.csv' WITH HEADER = TRUE ;"|cqlsh -u[user] -p[password]
+echo "COPY k2auth.credentials FROM '$FABRIC_HOME/k2auth.credentials.csv' WITH HEADER = TRUE ;"|cqlsh -u[user] -p[password]
+echo "COPY k2auth.permissions FROM '$FABRIC_HOME/k2auth.permissions.csv' WITH HEADER = TRUE ;"|cqlsh -u[user] -p[password]
+echo "COPY k2auth.user_credentials FROM '$FABRIC_HOME/k2auth.user_credentials.csv' WITH HEADER = TRUE ;"|cqlsh -u[user] -p[password]
+echo "COPY system_auth.roles FROM '$FABRIC_HOME/system_auth.roles.csv' WITH HEADER = TRUE ;"|cqlsh -u[user] -p[password]
 ~~~
 
 

@@ -42,7 +42,7 @@ Where:
 
   To see the profiling information:
 
-  * Open the [Fabric Logs](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-files) of the Fabric session that processed the Web Service in the $K2_HOME/logs/k2fabric.log. At the Studio, the Log files are accessible from the log viewer.
+  * Open the [Fabric Logs](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-files) of the Fabric session that processed the Web Service in the $FABRIC_HOME/logs/k2fabric.log. At the Studio, the Log files are accessible from the log viewer.
   * Search for the lines containing 'Starting webservice':
 
 

@@ -22,7 +22,7 @@ The Fabric command ```version fips``` returns the FIPS version currently used an
 #### FIPS with mode set to **ON**
 
 To switch on FIPS mode, carry out the following steps:
-- Go to the **$K2_HOME/config/** directory,
+- Go to the **$FABRIC_HOME/config/** directory,
 - Open the **modules.ini** file
 - Modify the fips entry to reflect the following value: ```fips:mode=on```
 

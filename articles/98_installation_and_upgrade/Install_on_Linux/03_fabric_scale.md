@@ -53,7 +53,7 @@ Ensure all necessary certificates are imported into the keystore and truststore 
 
 ## Project Files
 
-As mentioned above, Fabric nodes obtain the project deployment from the system DB when they start up. Nevertheless, if you are using additional files in your project, such as JAR libraries, copy them to the node's Fabric home folder (e.g., $K2_HOME/ExternalJars).
+As mentioned above, Fabric nodes obtain the project deployment from the system DB when they start up. Nevertheless, if you are using additional files in your project, such as JAR libraries, copy them to the node's Fabric home folder (e.g., $FABRIC_HOME/ExternalJars).
 
 ## Start Fabric
 
