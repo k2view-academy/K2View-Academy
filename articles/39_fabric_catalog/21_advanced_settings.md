@@ -20,7 +20,22 @@ The ```Implementation/SharedObjects/Interfaces/Discovery/``` folder in the Proje
 
 ### Catalog Application Configuration
 
-The **properties-info.json** is a configuration file used by the Catalog application to determine the view and the behavior of various Catalog UI elements. The following settings can be performed:
+The **properties-info.json** is a configuration file used by the Catalog application to determine the view and the behavior of various Catalog UI elements. This file is located in the ```fabric/staticWeb/catalog``` folder.
+
+In order to perform the project-level overrides in the **properties-info.json** file:
+
+- Create a **catalog** folder under the **Web** folder of the **Web Services** LU, and copy the file into it. 
+
+  <web>
+
+![](images/web_catalog.png)
+
+</web>
+
+- After updating the file, save it and deploy the LUs.
+
+The following settings updates can be performed:
+
 * ```"editable": true``` — the property is editable via the [Edit Catalog capabililty](/articles/39_fabric_catalog/catalog_app/07_manual_overrides.md).
 * ```"deletable": true``` — the property can be deleted via the [Edit Catalog capabililty.](/articles/39_fabric_catalog/catalog_app/07_manual_overrides.md)
 * ```"searchable": true``` — the Catalog can be searched using this property in the [Advanced Search](/articles/39_fabric_catalog/catalog_app/08_search_catalog.md#advanced-search) screen.
@@ -29,20 +44,7 @@ The **properties-info.json** is a configuration file used by the Catalog applica
 * ```"allow_custom_values": true``` defines the ability to populate a custom value for a property that includes a drop-down list. 
 * ```"hidden": true``` — the property is hidden from the Catalog's Properties tab.
 
-The properties-info.json file is located in the ```fabric/staticWeb/catalog``` folder.
-
-In order to perform the project-level overrides in the **properties-info.json** file:
-
-* Create a **catalog** folder under the **Web** folder of the **Web Services** LU, and copy the file into it. 
-
-  <web>
-
-![](images/web_catalog.png)
-
-</web>
-
-* After updating the file, save it and deploy the LUs.
-
+Starting from Fabric V8.5, the `"largeSchemaThreshold"` tag is added to enable overriding the thresholds for opening the Schema Dataset List view instead of a tree view for large schemas, as described [here](/articles/39_fabric_catalog/catalog_app/18_large_schema_navigation.md).
 
 
 ### General
