@@ -51,10 +51,11 @@ You will find along with the .VERSION file, the .env file. This file configures,
 
 Excerprt from the .env file
 
-> \# Images
-> FABRIC_IMAGE=docker.share.cloud.k2view.com/k2view-images/fabric-studio
-> FABRIC_VERSION=8.3.3_10
-
+```bash
+ # Images
+ FABRIC_IMAGE=docker.share.cloud.k2view.com/k2view-images/fabric-studio
+ FABRIC_VERSION=8.3.3_10
+```
 
 ## **Upgrade Procedure**
 
@@ -91,7 +92,9 @@ The upgrade process:
 
 ## **Supported Upgrade Flags**
 
-### **`--fabric-version`**
+```bash
+**`--fabric-version`**
+```
 
 Updates the Fabric/Studio image version.
 
@@ -101,7 +104,9 @@ Example:
 ./k2space.sh upgrade myspace --fabric-version=8.4.2_28
 ```
 
-### **`--heap`**
+```bash
+**`--heap`**
+```
 
 Overrides the configured JVM heap size.
 
@@ -111,7 +116,9 @@ Example:
 ./k2space.sh upgrade myspace --heap=16G
 ```
 
-### **`--port`**
+```bash
+**`--port`**
+```
 
 Overrides the exposed UI port.
 
@@ -121,7 +128,9 @@ Example:
 ./k2space.sh upgrade myspace --port=8443
 ```
 
-### **`--safety-bypass`**
+```bash
+**`--safety-bypass`**
+```
 
 Bypasses the working-directory safety validation.
 
