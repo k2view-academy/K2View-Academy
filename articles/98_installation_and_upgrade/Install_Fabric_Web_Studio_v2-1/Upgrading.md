@@ -92,6 +92,8 @@ The upgrade process:
 
 ## **Supported Upgrade Flags**
 
+----
+
 ```bash
 **`--fabric-version`**
 ```
@@ -103,6 +105,8 @@ Example:
 ```bash
 ./k2space.sh upgrade myspace --fabric-version=8.4.2_28
 ```
+
+----
 
 ```bash
 **`--heap`**
@@ -116,6 +120,8 @@ Example:
 ./k2space.sh upgrade myspace --heap=16G
 ```
 
+----
+
 ```bash
 **`--port`**
 ```
@@ -127,6 +133,7 @@ Example:
 ```bash
 ./k2space.sh upgrade myspace --port=8443
 ```
+----
 
 ```bash
 **`--safety-bypass`**
@@ -172,8 +179,8 @@ After upgrade:
 docker ps
 ```
 
-1. Verify Studio accessibility.
-2. Verify Fabric startup completed successfully.
-3. Verify project deployment succeeds.
-4. Verify interfaces and environments load correctly and test them.
+2. Verify Studio accessibility.
+3. Verify Fabric startup completed successfully.
+4. Verify project deployment succeeds.
+5. Verify interfaces and environments load correctly and test them.
 
