@@ -15,7 +15,7 @@ This feature is available starting from Fabric V8.5.
 
 ## Schema Dataset List View
 
-When the discovery process runs, the total number of datasets is calculated for each schema, along with two other properties - total fields and total relations.
+When the discovery process scans the data source, the total number of datasets is calculated for each schema, along with two other properties - total fields and total relations.
 
 Upon expansion of the schema, these calculated properties are compared against predefined thresholds to determine whether to open the standard tree view or the Schema Dataset List as follows:
 
