@@ -13,17 +13,46 @@ I. [Sequence handling based on Catalog](11a_tdm_sequence_implementation_based_on
 
 II. [Sequence handling without Catalog](11b_tdm_sequence_implementation_without_catalog.md). 
 
-## How to Set the Sequence Method for Each LU
+## Configuring the Sequence Method per LU
 
-A new shared Global — **TDM_USING_CATALOG_SEQUENCES** — was introduced in TDM V9.3. It sets the default **sequence handling behavior** of TDM to either Catalog-based or without Catalog. This Global (set to either **true** or **false**) can be **added to an LU** for controlling the **LU's behavior**.
+A new **shared Global** variable, **TDM_USING_CATALOG_SEQUENCES**, was introduced in TDM V9.3.
 
-Example:
+This Global is defined in the following file:
 
-- A TDM project contains CRM, Billing and Ordering LUs.
-- By default, the sequences are handled without Catalog, except for the Billing LU, in which they are Catalog-based.
-- The TDM_USING_CATALOG_SEQUENCES Global must be set as follows:
-  - Shared Global — set to **false**.
-  - Billing LU — set to **true**.
+*Implementation/SharedObjects/Java/src/com/k2view/cdbms/usercode/common/TDM/SharedGlobals.java*
+
+It controls the default sequence handling method for all LUs in the project:
+
+- **true** — Use Catalog-based sequences
+- **false** — Use sequences without a Catalog
+
+You can **override the default behavior for a specific LU** by defining the same Global in the LU’s *Globals.java* file and setting it to the required value.
+
+**Example LU-specific path:**
+
+Implementation/LogicalUnits/Billing/Java/src/com/k2view/cdbms/usercode/lu/Billing/Globals.java
+
+**Example Scenario:**
+
+A TDM project contains the following LUs:
+
+- CRM
+- Billing
+- Ordering
+
+The project requirement is:
+
+- CRM and Ordering use sequences without a Catalog
+- Billing uses Catalog-based sequences
+
+Configuration:
+
+- In SharedGlobals.java: TDM_USING_CATALOG_SEQUENCES = false
+
+- In Billing's Globals.java: TDM_USING_CATALOG_SEQUENCES = true
+
+This configuration sets the default behavior for all LUs to non-Catalog sequences while overriding the behavior for the Billing LU only.
+
 
 ## Generating Sequence Flows and Actors
 
