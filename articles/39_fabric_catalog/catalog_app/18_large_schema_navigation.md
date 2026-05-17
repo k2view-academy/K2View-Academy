@@ -9,7 +9,11 @@ All of the above makes navigating a large schema quite challenging, for the foll
 * Expanding the schema in the Catalog App requires retrieving a large amount of data from the server to the client and then rendering it on the client side. This process may become unresponsive and cause the browser to crash.
 * Even if the schema eventually expands without crashing the browser, navigating a large schema is very difficult since the zoom level must be reduced significantly to see the full schema.
 
-To improve the user experience when working with large schemas, Catalog introduces the Schema Dataset List view. This view displays the datasets in a list (instead of the tree view), allowing users to filter by dataset name and drill into individual datasets on demand. The list view is displayed automatically upon expanding a schema whose size exceeds any of the predefined thresholds; otherwise, the standard tree view is displayed.
+To improve the user experience when working with large schemas, Catalog introduces the Schema Dataset List view. 
+
+![](../images/schema_explorer_view_general.png)
+
+This view displays the list of datasets instead of the tree view, saving a lot of time to render the nodes in UI. The list view is displayed automatically upon expanding a schema whose size exceeds any of the predefined thresholds (as explained further in this article); otherwise, the tree view is displayed.
 
 This feature is available starting from Fabric V8.5. 
 
@@ -21,7 +25,7 @@ Upon expansion of the schema, these calculated properties are compared against p
 
 *  If total number of datasets > 100 OR total fields > 5000 OR total relations > 500, the Schema Dataset List opens automatically, displaying the full list of dataset names in alphabetical order.
 
-Note that the thresholds can be updated using the `"largeSchemaThreshold"` tag of the **properties-info.json** as explained [here](/articles/39_fabric_catalog/21_advanced_settings.html#catalog-application-configuration). 
+Note that the thresholds can be updated using the `"largeSchemaThreshold"` tag of the **properties-info.json** as explained [here](/articles/39_fabric_catalog/21_advanced_settings.md#catalog-application-configuration). 
 
 ### Schema Dataset List Actions
 
@@ -33,7 +37,7 @@ The following actions are available in the Schema Dataset List view:
   * This is especially useful when working with a large schema that might include thousands of datasets. It helps users quickly find the required dataset without scrolling through a long list.
 
 
-    ![](../images/schema_explorer_view_filter.png)
+  ![](../images/schema_explorer_view_filter.png)
 
 * **Filter fields** - to limit the displayed fields of the selected dataset:
 
