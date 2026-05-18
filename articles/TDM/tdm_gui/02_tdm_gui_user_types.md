@@ -13,9 +13,7 @@ Below are more detailed descriptions of the Permission Groups:
 
 ## Admin 
 
-An Admin can execute all activities in the TDM Portal application. 
-
-Admins usually also define the [TDM implementation in Fabric](/articles/TDM/tdm_implementation/03_tdm_fabric_implementation_flow.md). They can execute all activities in the TDM Portal and are responsible for the following activities:
+An Admin user can execute all activities in the TDM Portal application and is responsible for the following activities:
 
 - Create, edit or delete [Business Entities](04_tdm_gui_business_entity_window.md) and attach Logical Units or post-execution processes to each Business Entity.
 - Create, edit or delete [systems](05_tdm_gui_product_window.md).
@@ -23,6 +21,8 @@ Admins usually also define the [TDM implementation in Fabric](/articles/TDM/tdm_
 - Attach [environment owners](08_environment_window_general_information.md#environment-owners) to each environment.
 - Define [permission sets](10_environment_roles_tab.md) in each environment and define permissions per permission set.
 - View and download the [TDM reports](TDM_Dashboard_User_Guide.md).
+
+The Admin user can also create, delete, edit, and execute [TDM tasks](14_task_overview.md) 
 
 ## Owner 
 
