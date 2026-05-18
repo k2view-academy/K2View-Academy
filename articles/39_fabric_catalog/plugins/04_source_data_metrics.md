@@ -26,9 +26,6 @@ The Catalog schema is then created without the discarded tables.
 
 This plugin scans the data sample to calculate various data quality metrics. These metrics can then be used for masking and synthetic data generation.
 
-* **Dataset Row Count** — the number of rows in the source dataset (**not** in the sample). 
-  * This property is created on **the first column of the dataset**, only when the source dataset contains data.
-  * Available starting from Fabric V8.5.
 * **Data Sample Size** — the actual number of values per column in the data sample.
   * The data sample is retrieved per the Catalog settings. For example, the default sample is 10% of the table size, with a minimum of 100 and a maximum of 500. However, the actual size of the data sample can vary depending on the table size.
 * **Distinct Values** — the count of distinct values per column in the data sample. 
@@ -46,6 +43,9 @@ This plugin scans the data sample to calculate various data quality metrics. The
 
 
 Starting with Fabric V8.5, the following enhancements have been added to the plugin algorithm:
+
+* **Dataset Row Count** is calculated for each dataset. It shows the number of rows in the source dataset (**not** in the data sample). 
+  * This property is created on **the first column of the dataset**, only when the source dataset contains data.
 
 * When a field is marked as PII, the Minimum and Maximum values are not calculated to avoid revealing the field's sensitive data. Average and Standard Deviation continue to be calculated. In addition, the following parameters have been added to the plugin's input parameters:
   * `fieldNameIncludeList` is an override list of field names to be **included** in the plugin's algorithm, even if they are identified as PII.
