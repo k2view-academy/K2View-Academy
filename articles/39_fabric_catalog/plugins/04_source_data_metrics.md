@@ -5,7 +5,7 @@ This article describes plugins that analyze source systems and calculate various
 The plugins are:
 
 * [Empty Datasets Discard](04_source_data_metrics.md#empty-datasets-discard) — excludes empty tables based on the data snapshot results. This plugin is available starting from Fabric V8.3.1.
-* [Data Quality Metrics](04_source_data_metrics.md#data-quality-metrics) — calculates various data quality metrics as described below. These metrics can then be applied for data masking and synthetic data generation.
+* [Data Quality Metrics](04_source_data_metrics.md#data-quality-metrics) — calculates various data quality metrics as described below. These metrics can then be applied for data masking and synthetic data generation. This plugin has been enhanced in Fabric V8.5, as described further in this article. 
 * [Option Set Analyzer](04_source_data_metrics.md#option-set-analyzer) — identifies fields that contain a limited number of distinct values (within a data sample) and saves them in an MTable. These metrics can then be applied for data masking and synthetic data generation. This plugin is available starting from Fabric V8.3.
 
 All of the above plugins are inactive by default and must be activated through the Discovery Pipeline if needed. 
@@ -26,6 +26,9 @@ The Catalog schema is then created without the discarded tables.
 
 This plugin scans the data sample to calculate various data quality metrics. These metrics can then be used for masking and synthetic data generation.
 
+* **Dataset Row Count** — the number of rows in the source dataset (**not** in the sample). 
+  * This property is created on **the first column of the dataset**, only when the source dataset contains data.
+  * Available starting from Fabric V8.5.
 * **Data Sample Size** — the actual number of values per column in the data sample.
   * The data sample is retrieved per the Catalog settings. For example, the default sample is 10% of the table size, with a minimum of 100 and a maximum of 500. However, the actual size of the data sample can vary depending on the table size.
 * **Distinct Values** — the count of distinct values per column in the data sample. 
@@ -41,6 +44,12 @@ This plugin scans the data sample to calculate various data quality metrics. The
   * This percentage is calculated for each column in non-empty tables. The **Null Percentage** property is added to the field's properties when the calculated value exceeds the plugin's threshold. 
   * For example, when 30% of the values in a given field are null, the Null Percentage property will be added to the field with the value = 0.3. However, if 20% or fewer of the values in this field are null, then this property will not be added.
 
+
+Starting with Fabric V8.5, the following enhancements have been added to the plugin algorithm:
+
+* When a field is marked as PII, the Minimum and Maximum values are not calculated to avoid revealing the field's sensitive data. Average and Standard Deviation continue to be calculated. In addition, the following parameters have been added to the plugin's input parameters:
+  * `fieldNameIncludeList` is an override list of field names to be **included** in the plugin's algorithm, even if they are identified as PII.
+  * `fieldNameExcludeList` is an override list of field names to be **excluded** from the plugin's algorithm.
 
 ## Option Set Analyzer
 
