@@ -6,12 +6,11 @@
 
 The ```Implementation/SharedObjects/Interfaces/Discovery/``` folder in the Project tree is a folder that holds all Catalog and Discovery process-related configuration files: 
 
-<img src="images/discovery_folder.png" style="zoom:70%;" />
+<img src="images/discovery_folder.png" style="zoom:60%;" />
 
-* The **MTable** subfolder holds the MTables used by the Catalog's various processes. Additionally, when the [Build Artifacts](/articles/39_fabric_catalog/catalog_app/09_build_artifacts.md) action is performed, the Catalog artifact — **catalog_field_info.csv** — is created in this folder.
-  * Starting from V8.3, the splitting of artifacts is enabled by default. Click [here](/articles/39_fabric_catalog/catalog_app/09_build_artifacts.md#splitting-and-combining-artifacts) for more information about it.
-* The **pluginsOverride.discovery** is a configuration file that defines the prospective overrides in the Crawler and the plugins configuration (starting from V8.2). Click [here](/articles/39_fabric_catalog/catalog_app/13_discovery_pipeline_settings.md#overview) for more information about it.
-  * Note that prior to V8.2, the project-level overrides file was called **plugins.discovery**. 
+* The **MTable** subfolder holds the Catalog MTables used by the Catalog's various processes. Additionally, when the Build Artifacts action is performed, the Catalog artifacts —  `catalog_field_info.csv` or `catalog_relations_info.csv` — are created in this folder.
+  * Starting from V8.3, the artifacts are split to multiple files per each data platform and schema. Click [here](/articles/39_fabric_catalog/catalog_app/09_build_artifacts.md) for more information about the building of the Catalog artifacts.
+* The **pluginsOverride.discovery** is a configuration file created as a result of the Discovery Pipeline Settings overrides. Click [here](/articles/39_fabric_catalog/catalog_app/13_discovery_pipeline_settings.md#overview) for more information about the default rules and how to override them.
 
 *Show Catalog Commands* is a Web Studio setting that either shows or hides the Catalog's related commands — **Run Discovery Job** and **Open in Catalog** — in the Web Studio. 
 

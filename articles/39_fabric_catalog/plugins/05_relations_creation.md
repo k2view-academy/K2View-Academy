@@ -94,12 +94,32 @@ The following matching rules are applied by the plugin. Note that each of these 
     </tbody>
     </table>
 
-- ```sameFieldsInBothPk``` - Part of PK in both datasets, and both datasets have an identical number of PKs.
+- ```fieldNameCompare``` - Creates an FK based on field name comparison. No PK check required.
 
-  - The relation is created and its direction is random. 
+  - This rule is available starting from Fabric V8.5. 
 
 
-Note that the ```sameFieldNamesNotPk``` rule to create relations between non-FK fields has been removed as of Fabric V8.3
+The `fieldNameCompare` rule is based on the Jaro-Winkler similarity algorithm that calculates how close two strings are to each other, producing a score between 0 (completely different) and 1 (identical).
+
+When the plugin compares 2 field names, each field name is logically split into 3 parts:
+
+*  `[prefix][delimiter][suffix]`
+*  E.g., when the field name is customer_id: `customer` is a prefix, `_` is a delimiter, `id` is a suffix.
+
+Valid suffixes are limited to the strings defined in the plugin's `suffixList` input parameter.
+
+Valid delimiters are limited to the strings defined in the plugin's `delimiter` input parameter. The `$NONE$` value defines no delimiter between prefix and suffix, e.g., to support field names like `CustomerId`.
+
+Field prefixes are compared using the Jaro-Winkler similarity algorithm, while suffixes are only validated against the `suffixList` input parameter and are not required to match. The score produced by the similarity algorithm should be above the plugin threshold to qualify for relation creation. The rule does not check whether the fields are PK or non-PK.
+
+The relation direction is based on the property `datasetRowCount`, calculated by the [Data Quality Metrics plugin](04_source_data_metrics.md#data-quality-metrics) and created on the first column of each dataset with data. 
+
+- The dataset with fewer rows (based on the `datasetRowCount` property) is considered the parent dataset of this relation.
+- When the `datasetRowCount` parameter is not available, the relation direction is random.
+
+
+
+Note that the rules `sameFieldsInBothPk` and `sameFieldNamesNotPk` of this plugin have been deprecated. 
 
 #### Field Type Include List
 
