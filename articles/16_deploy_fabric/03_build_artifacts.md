@@ -9,9 +9,9 @@ These artifacts are the input for the deployment phase. They can be built and de
 
 > CI/CD pipelines should build artifacts on a dedicated build server using a Docker image that contains Fabric. Fabric itself does not need to be running to build artifacts.
 
-## Build from Fabric Studio
-
 <studio>
+
+## Build from Fabric Studio
 
 To build artifacts in the Fabric Studio:
 
