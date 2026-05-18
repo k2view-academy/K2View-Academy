@@ -47,7 +47,9 @@ Starting with Fabric V8.5, the following enhancements have been added to the plu
 * **Dataset Row Count** is calculated for each dataset. It shows the number of rows in the source dataset (**not** in the data sample). 
   * This property is created on **the first column of the dataset**, only when the source dataset contains data.
 
-* When a field is marked as PII, the Minimum and Maximum values are not calculated to avoid revealing the field's sensitive data. Average and Standard Deviation continue to be calculated. In addition, the following parameters have been added to the plugin's input parameters:
+* When a field is marked as PII, the Minimum and Maximum values are not calculated to avoid revealing the field's sensitive data. Average and Standard Deviation continue to be calculated.
+
+* The following parameters have been added to the plugin's input parameters:
   * `fieldNameIncludeList` is an override list of field names to be **included** in the plugin's algorithm, even if they are identified as PII.
   * `fieldNameExcludeList` is an override list of field names to be **excluded** from the plugin's algorithm.
 
