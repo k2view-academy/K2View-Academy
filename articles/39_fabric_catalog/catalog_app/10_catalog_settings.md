@@ -6,8 +6,8 @@ The Settings tab includes the following sections:
 
 * [Classifier Regex](10_catalog_settings.md#classifier-regex-tab)
 * [PII & Masking](10_catalog_settings.md#pii--masking-tab)
-* [Sequences](10_catalog_settings.md#sequences-tab), available from Fabric V8.1
-* [Discovery Pipeline](13_discovery_pipeline_settings.md), available from Fabric V8.2
+* [Sequences](10_catalog_settings.md#sequences-tab)
+* [Discovery Pipeline](13_discovery_pipeline_settings.md)
 
 ## Classifier Regex Tab
 
