@@ -21,11 +21,13 @@ This feature is available starting from Fabric V8.5.
 
 Datasets are presented in a Schema Dataset List instead of the tree view for large schemas only. A schema is considered large if it meets any of the following thresholds: 
 
-* Total number of datasets > 100 OR total fields > 5000 OR total relations > 500
+* Total number of datasets > 100, or
+* Total fields > 5000, or
+* Total relations > 500
 
-When the discovery process scans the data source, the total number of datasets is calculated for each schema, along with two other properties - total fields and total relations. Then, upon expansion of the schema, these calculated properties are compared against predefined thresholds to determine whether to open the standard tree view or the Schema Dataset List.
+When the discovery process scans the data source, the total number of datasets is calculated for each schema, along with two other properties - total fields and total relations. Then, upon expansion of the schema, these calculated properties are compared against predefined thresholds to determine whether to open the standard tree view or the list view.
 
-The default thresholds are set using the `"largeSchemaThreshold"` tag of the **properties-info.json** as explained [here](/articles/39_fabric_catalog/21_advanced_settings.md#catalog-application-configuration), and can be updated per project needs.
+The default thresholds are defined by the `"largeSchemaThreshold"` tag of the **properties-info.json** and can be updated per project needs as explained [here](/articles/39_fabric_catalog/21_advanced_settings.md#catalog-application-configuration).
 
 ### Schema Dataset List Actions
 
@@ -34,25 +36,13 @@ The following actions are available in the Schema Dataset List view:
 * **Filter datasets** - to limit the displayed dataset list:
 
   * **Click** ![](../images/filter.png) in the upper-right corner and start typing the required string. The list of datasets is then limited to those that contain the typed string. Click **X** to clear the filter.
-  * This is especially useful when working with a large schema that might include thousands of datasets. It helps users quickly find the required dataset without scrolling through a long list.
+  * The filter helps users quickly find the required dataset without scrolling through a long list.
 
   ![](../images/schema_explorer_view_filter.png)
 
-
-
-* **Filter fields** - to limit the displayed fields of the selected dataset:
-
-  * Click the ![](../images/dots.png) context menu icon (visible when a dataset is selected) and click **Filter dataset fields**.
-
-  ![](../images/schema_explorer_view_filter_fields_1.png)
-
-  * Once the dataset fields are expanded, type the required string. The list of fields is then limited to those that contain the typed string. Click **X** to clear the filter.
-
-  ![](../images/schema_explorer_view_filter_fields_2.png)
-
 * **View dataset properties and the *refersTo* relations**:
 
-  * Click the dataset name in the Schema Dataset List to open the properties tab that displays the *refersTo* relations between the selected and other datasets. The related dataset names are clickable hyperlinks. Clicking on each of them allows you to jump to the relevant dataset.
+  * Click the dataset name in the Schema Dataset List to open the Properties tab that displays the *refersTo* relations between the selected and other datasets. The related dataset names are clickable hyperlinks. Clicking on each of them allows you to jump to the relevant dataset.
 
   ![](../images/schema_explorer_view_properties.png)
 
@@ -66,11 +56,21 @@ The following actions are available in the Schema Dataset List view:
 
   ![](../images/schema_explorer_view_complex_fields.png)
 
+* **Filter fields** - to limit the displayed fields of the selected dataset:
+
+  * Click the ![](../images/dots.png) context menu icon (visible when a dataset is selected) and click **Filter dataset fields** to trigger the expansion of the dataset fields.
+
+  ![](../images/schema_explorer_view_filter_fields_1.png)
+
+  * Once the dataset fields are expanded, type the required string. The list of fields is then limited to those that contain the typed string. Click **X** to clear the filter.
+
+  ![](../images/schema_explorer_view_filter_fields_2.png)
+
 * **Resize the list view** by dragging the orange dot in the lower-right corner of the Schema Dataset List. This is useful when some datasets have long names that don't fit within the default width.
 
   ![](../images/schema_explorer_view.png)
 
-* **Add relation** to another dataset:
+* **Add relation** to another dataset (available in Edit mode only):
 
   * Switch to **Edit catalog** mode and go to the required dataset.
   * Click the ![](../images/dots.png) context menu icon (visible when a dataset is selected), then click **Add relation**.
