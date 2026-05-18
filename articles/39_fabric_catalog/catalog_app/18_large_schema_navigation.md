@@ -13,7 +13,7 @@ To improve the user experience when working with large schemas, Catalog introduc
 
 ![](../images/schema_explorer_view_general.png)
 
-This view displays the list of datasets instead of the tree view, significantly reducing the time needed to render nodes in the UI. The list view is displayed automatically upon expanding a schema whose size exceeds any of the predefined thresholds (as explained further in this article); otherwise, the tree view is displayed.
+This view displays the datasets in a list instead of the tree view, significantly reducing the time needed to render nodes in the UI. The list view is displayed automatically upon expanding a schema whose size exceeds any of the predefined thresholds (as explained further in this article); otherwise, the tree view is displayed.
 
 This feature is available starting from Fabric V8.5. 
 
