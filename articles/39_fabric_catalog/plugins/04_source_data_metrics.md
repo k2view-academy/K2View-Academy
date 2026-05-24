@@ -49,7 +49,7 @@ Starting with Fabric V8.5, the following enhancements have been added to the plu
 
 * When a field is marked as PII, the Minimum and Maximum values are not calculated to avoid revealing the field's sensitive data. Average and Standard Deviation continue to be calculated.
 
-* The following parameters have been added to the plugin's input parameters:
+* The following parameters have been added to the plugin's input parameters in Fabric V8.5:
   * `fieldNameIncludeList` is an override list of field names to be **included** in the plugin's algorithm, even if they are identified as PII.
   * `fieldNameExcludeList` is an override list of field names to be **excluded** from the plugin's algorithm.
 

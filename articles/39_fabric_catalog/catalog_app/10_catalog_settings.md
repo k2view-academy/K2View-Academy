@@ -18,12 +18,12 @@ The **Classifier Regex** tab enables viewing and updating of the regular express
 The columns of this tab are:
 
 * **Classification** — defines the value of a Classification property added to the Catalog's fields as a result of the Profiling plugins. 
-
 * **Type** — can be either **Field Name** or **Field Value**:
   * Entries defined as **Field Name** type are used by the *Metadata Regex Classifier* plugin.
   * Entries defined as **Field Value** type are used by the *Data Regex Classifier* plugin.
 * **Regular Expression** — specifies the expression applied to the field, either to its name or its value, depending on the **Type**.
 * **Score** — defines the confidence level that the current rule is true. 
+* **Enabled** — allows disabling unused classification rules (instead of deleting them). Available in V8.5.
 
 Each **Classification** can have several definitions, with either the same or different **Types**.
 

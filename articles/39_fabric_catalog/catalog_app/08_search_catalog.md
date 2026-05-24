@@ -13,7 +13,7 @@ Advanced Search allows to narrow the search results by specifying one or more of
 * Search the selected object type(s) only, such as field, dataset, schema, data platform or relation. Multiple types can be selected.
 * Search by PII and Classification properties. For example, when marking PII = true in the advanced search, the results list will include all nodes marked as PII.
 * Search by score. For example, when the user enters 0.8,  the results list will return all Catalog objects with score 0.8 and below.
-* Search a node that belong to a specified hierarchy - a data platform and optionally a schema. Available in V8.5.
+* Search a node that belong to a specified Catalog hierarchy - a data platform and optionally a schema. Available in V8.5.
 
 <img src="../images/advanced_search.png"  />
 
