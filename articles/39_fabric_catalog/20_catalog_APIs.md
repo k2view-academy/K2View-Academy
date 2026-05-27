@@ -243,7 +243,7 @@ The API retrieves a list of datasets that belong to the **latest version** of th
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/{version}/{dataPlatform}/{schema}/{dataset}`
 
-The API retrieves all metadata elements that belong to the specified dataset, including its fields with their properties, and the *definedBy* relations to embedded classes. Available starting from Fabric V8.5.
+The API retrieves all metadata elements that belong to the specified dataset, including its fields with their properties, complex structures and the *definedBy* relations to embedded classes. Available starting from Fabric V8.5.
 
 The API has two modes — ***view*** and ***compare*** — that are interchangeably invoked based on the **version** input parameter, as explained below:
 
