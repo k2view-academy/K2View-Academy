@@ -119,6 +119,11 @@ After you load the Deployer image to your OCI registry, remember to notify K2vie
   </thead>
   <tbody>
     <tr>
+      <td>1.8.31</td>
+      <td>sha256:9a0817b0a49009f9af668189edb034f6755b9914b5a2423a87817beda92c5948</td>
+      <td>18 May 2026, 07:22 UTC</td>
+    </tr>
+   <tr>
       <td>1.8.27</td>
       <td>sha256:beb421f23f1ef4a9cea1e8363a65573d6c22568d17e9a3d92155c0cf8deaffb3</td>
       <td>3 Mar 2026, 17:31 UTC</td>
