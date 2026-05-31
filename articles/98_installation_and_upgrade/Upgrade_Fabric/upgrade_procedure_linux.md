@@ -41,9 +41,11 @@ Stop Fabric on all nodes.
 
 Example:
 
-```bash 
+~~~bash
+
 k2fabric stop 
-```
+
+~~~
 
 If applicable:
 
@@ -57,15 +59,19 @@ Follow project-specific operational procedures where required.
 
 Backup the existing Fabric installation:
 
-```bash 
+~~~bash
+
 mv fabric fabric_backup 
-```
+
+~~~
 
 Extract the Fabric directory from the new package:
 
-```bash
+~~~bash
+
 tar -zxvf k2fabric-server-fabric-<version>.tar.gz fabric 
-```
+
+~~~
 
 Do not overwrite the configuration directory unless specifically instructed by the release notes.
 
@@ -87,9 +93,11 @@ Start the upgraded Fabric installation.
 
 Example:
 
-```bash 
-k2fabric start 
-```
+~~~bash
+
+k2fabric start
+
+~~~
 
 For multi-node deployments:
 
@@ -111,7 +119,7 @@ Verify:
 * All nodes join the cluster.
 * Interfaces are operational.
 * Scheduled jobs execute successfully.
-* Monitoring systems report healthy status.
+* Monitoring systems report a healthy status.
 
 Recommended validation activities include:
 
@@ -132,12 +140,14 @@ If issues are encountered:
 
 Example:
 
-```bash 
+~~~bash
+
 k2fabric stop
 rm -rf fabric
 mv fabric_backup fabric
 k2fabric start
-```
+
+~~~
 
 If release-specific upgrade activities were performed, consult the corresponding upgrade documentation before rolling back.
 
