@@ -88,6 +88,7 @@ Example:
 ```bash 
 k2fabric start 
 ```
+
 For multi-node deployments:
 
 1. Start the first node.
@@ -129,13 +130,17 @@ If issues are encountered:
 
 Example:
 
-bash k2fabric stop rm -rf fabric mv fabric_backup fabric k2fabric start 
+```bash 
+k2fabric stop rm -rf fabric mv fabric_backup fabric k2fabric start
+```
 
 If release-specific upgrade activities were performed, consult the corresponding upgrade documentation before rolling back.
 
+
 ## Related Documentation
 
-* Fabric Installation Guide
-* Upgrade Overview
-* Version Specific Fabric Release Notes
-* Version-Specific Upgrade Procedures
+* <a href="/articles/98_installation_and_upgrade/Install_on_Linux/README.md">Fabric Installation on Linux</a>
+* <a href="https://support.k2view.com/knowledge-base.html">Fabric Release Notes</a>
+* <a href="/articles/98_installation_and_upgrade/Upgrade_Fabric/upgrade_overview.md">Upgrade Overview</a>
+* <a href="/articles/98_installation_and_upgrade/Upgrade_Fabric/upgrade_procedure_linux.md">Fabric Upgrade Procedure (Linux Installations)</a>
+
