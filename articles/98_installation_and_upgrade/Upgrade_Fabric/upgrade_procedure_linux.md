@@ -131,7 +131,10 @@ If issues are encountered:
 Example:
 
 ```bash 
-k2fabric stop rm -rf fabric mv fabric_backup fabric k2fabric start
+k2fabric stop
+rm -rf fabric
+mv fabric_backup fabric
+k2fabric start
 ```
 
 If release-specific upgrade activities were performed, consult the corresponding upgrade documentation before rolling back.
