@@ -1,5 +1,20 @@
 # Fabric Upgrade Procedure (Linux Installations)
 
+## Table of Contents
+
+- [Foreword](#foreword)
+- [Purpose](#purpose)
+- [Prerequisites](#prerequisites)
+- [Backup](#backup)
+- [Stop Fabric](#stop-fabric)
+- [Install the New Fabric Version](#install-the-new-fabric-version)
+- [Review Release-Specific Requirements](#review-release-specific-requirements)
+- [Start Fabric](#start-fabric)
+- [Deploy the Project](#deploy-the-project)
+- [Validate the Upgrade](#validate-the-upgrade)
+- [Rollback](#rollback)
+- [Related Documentation](#related-documentation)
+
 ## Purpose
 
 This document provides the standard procedure for upgrading K2view Fabric installations deployed directly on Linux servers.
