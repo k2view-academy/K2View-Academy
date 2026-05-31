@@ -86,7 +86,7 @@ Release-specific upgrade documentation should be reviewed for any special rollba
 
 ## Related Documentation
 
-* Fabric Upgrade Procedure (Linux Installations)
-* Fabric Release Notes
-* Fabric Installation Guide
-* Project Operational Runbooks
+* <a href="https://support.k2view.com/knowledge-base.html">Fabric Release Notes</a>
+* <a href="/articles/98_installation_and_upgrade/Upgrade_Fabric/upgrade_procedure_linux.md">Fabric Upgrade Procedure (Linux Installations)</a>
+* <a href="/articles/98_installation_and_upgrade/Install_on_Linux/README.md">Fabric Installation on Linux</a>
+
