@@ -2,7 +2,6 @@
 
 ## Table of Contents
 
-- [Foreword](#foreword)
 - [Purpose](#purpose)
 - [Prerequisites](#prerequisites)
 - [Backup](#backup)
