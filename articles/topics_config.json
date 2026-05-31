@@ -397,6 +397,10 @@
 					"display name": "Upgrade",
 					"sub-topics": [
 						{
+							"display name": "Fabric Web Studio",
+							"value": "98_installation_and_upgrade/Upgrade_Web_Studio"
+						},						
+						{
 							"display name": "Fabric on Linux",
 							"value": "98_installation_and_upgrade/Upgrade_Fabric"
 						},
