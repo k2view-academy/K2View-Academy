@@ -29,9 +29,11 @@ Before upgrading, create backups of:
 
 Example:
 
-```bash 
-cp -r config config_backup_$(date +%Y%m%d) 
-```
+~~~bash
+
+cp -r config config_backup_$(date +%Y%m%d)
+
+~~~
 
 ## Stop Fabric
 
