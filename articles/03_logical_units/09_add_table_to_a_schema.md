@@ -118,7 +118,7 @@ While using one of the first three methods, the tables are also created in Fabri
    
    
 
-[![Previous](/articles/images/Previous.png)](05_create_a_new_LU_objectmd)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](10_delete_table_from_a_schema.md)
+[![Previous](/articles/images/Previous.png)](05_create_a_new_LU_object.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](10_delete_table_from_a_schema.md)
 
 </web>
 
