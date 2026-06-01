@@ -49,6 +49,6 @@ The execution progress is displayed by using various icons, as follows:
 
 
 
-[![Previous](/articles/images/Previous.png)](11_catalog_masking.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](20_catalog_APIs.md) 
+[![Previous](/articles/images/Previous.png)](11_catalog_masking.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](13_discovery_pipeline_settings.md) 
 
 

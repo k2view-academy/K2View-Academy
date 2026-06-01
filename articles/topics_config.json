@@ -374,18 +374,18 @@
 					"value": "98_installation_and_upgrade/K2cloud_Space_Profiles"
 				},
 				{
-					"display name": "Image Digital Signature Verification",
+					"display name": "Image DSig Verification",
 					"value": "98_installation_and_upgrade/Image_DSig_Validation"
 				},
 				{
 					"display name": "Installation",
 					"sub-topics": [
 						{
-							"display name": "Fabric Web Studio on Docker/Podman",
+							"display name": "Fabric Web Studio",
 							"value": "98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1"
 						},
 						{
-							"display name": "Fabric on a Linux Host",
+							"display name": "Fabric on Linux",
 							"value": "98_installation_and_upgrade/Install_on_Linux"
 						},
 						{
@@ -393,7 +393,7 @@
 							"value": "98_installation_and_upgrade/Install_on_Kubernetes"
 						},
 						{
-							"display name": "TDM Installation",
+							"display name": "TDM",
 							"value": "98_installation_and_upgrade/Install_TDM"
 						}
 					]
@@ -402,21 +402,25 @@
 					"display name": "Upgrade",
 					"sub-topics": [
 						{
-							"display name": "Upgrade Fabric",
+							"display name": "Fabric Web Studio",
+							"value": "98_installation_and_upgrade/Upgrade_Web_Studio"
+						},						
+						{
+							"display name": "Fabric on Linux",
 							"value": "98_installation_and_upgrade/Upgrade_Fabric"
 						},
 						{
-							"display name": "Upgrade TDM",
-							"value": "98_installation_and_upgrade/Upgrade_TDM"
+							"display name": "Fabric on Kubernetes",
+							"value": "98_installation_and_upgrade/Upgrade"
 						},
 						{
-							"display name": "Upgrade a Fabric Kubernetes Space",
-							"value": "98_installation_and_upgrade/Upgrade"
+							"display name": "TDM",
+							"value": "98_installation_and_upgrade/Upgrade_TDM"
 						}
 					]
 				},
 				{
-					"display name": "Software Maintenance and Support",
+					"display name": "Maintenance and Support",
 					"value": "98_installation_and_upgrade/Maintenance"
 				}
 			]
