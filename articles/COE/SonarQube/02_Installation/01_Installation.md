@@ -105,4 +105,4 @@ For port changes, under web-server section, you can add sonar.web.port=9001.
 
 
 
-[![Previous](/articles/COE/SonarQube/images/Previous.png)](articles/COE/SonarQube/01_Overview/README.md)[<img align="right" width="60" height="54" src="/articles/COE/SonarQube/images/Next.png">](/articles/COE/SonarQube/03_Operation/README.md)
+[<img align="right" width="60" height="54" src="/articles/COE/SonarQube/images/Next.png">](/articles/COE/SonarQube/03_Operation/README.md)
