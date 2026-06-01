@@ -46,7 +46,7 @@ This is available only if the data generation Actor has a seed input argument, a
 
   Click [here](/articles/26_fabric_security/02_fabric_entities_design.md#fabric-hashing-mechanism) for more information about the Fabric hashing mechanism.
 
-- The Data Consistency Using Seed does not keep the referential integrity when the masked value is taken from a dynamic list: If the seed is identical, the random function will bring the same index from the list. It checks the index of the returned value and not the value itself. We therefore recommend to use the Data Consistency Using Table method for keeping the referential integrity in this case.
+- The Data Consistency Using Seed does not keep the referential integrity when the masked value is taken from a dynamic list: If the seed is identical, the random function will bring the same index from the list. It checks the index of the returned value and not the value itself. We therefore recommend using the Data Consistency Using Table method for keeping the referential integrity in this case.
 
   For example, an [MTable](/articles/09_translations/06_mtables_overview.md) that contains a list of names is created at run-time. The 5th index is populated with 'Jonn' on the first run and 'Harry' on the second. If the first run gets 'John', the second run will get 'Harry' when running on the same seed as the first run. This happens because both names have the same index in this example. 
 
@@ -66,7 +66,7 @@ The masking Actors use the Fabric hashing utility to hash the original value, an
 
 Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to read how to use Fabric's masking Broadway Actors.
 
-Click [here](02_fabric_entities_design.md#fabric-hashing-mechanism) to read more about the Fabric hashing mechanism.
+Click [here]/articles/26_fabric_security/02_fabric_entities_design.md#fabric-hashing-mechanism) to read more about the Fabric hashing mechanism.
 
 A new configuration parameter, SERIALIZE_CACHED_VALUE, has been added to the Fabric config.ini file from V8.3.x onwards to provide finer control over masked value serialization:
 - When set to true, the masking process preserves the original data type when generating masked values.
@@ -110,4 +110,4 @@ The use of **MaskingLuFunction**, **MaskingInnerFlow** or **Masking** Actors gua
 
 Format-preserving masking, introduced in Fabric 8.0, provides a solution for maintaining **consistent data masking** across multiple fields while **preserving their original formatting** patterns. It addresses scenarios where **the same underlying value appears in multiple fields with different formatting patterns**.
 
-Click [here](03_format_preserving_masking) for more information about format preserving masking.
+Click [here](03_format_preserving_masking.md) for more information about format preserving masking.
