@@ -2,7 +2,7 @@
 
 Starting from V7.1, Fabric separates the data generation of the masked value from the hashing and caching parts. Data generation Actors can be used to either generate synthetic entities (rule-based generation) or mask sensitive data. Broadway provides various built-in data generation Actors (under the **generators** category) - e.g., RandomString, RandomNumber, Sequence - to generate a random synthetic values.
 
-A data generator Actor can be either executed by the Broadway flow ('as is') for generating new data, invoked by the **Masking** Actor for caching the generated data or activated by the [Catalog masking mechanism](/articles/39_fabric_catalog/11_catalog_masking.md). 
+A data generator Actor can be either executed by the Broadway flow ('as is') for generating new data, invoked by the **Masking** Actor for caching the generated data or activated by the [Catalog masking mechanism](/articles/39_fabric_catalog/catalog_app/11_catalog_masking.md). 
 
 ## Main Data Generation Actors
 
