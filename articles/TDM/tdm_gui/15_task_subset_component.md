@@ -13,7 +13,7 @@ In general, the Subset component is located between the [Source](14a_task_source
 
 ![subset example](images/task_widget_subset_example2.png)
 
-However, when the data is not extracted from the source, the subset moves and is located between the [Test Data Store]((16_task_test_data_store_component.md)) and the [Target](17_task_target_component.md) components:  
+However, when the data is not extracted from the source, the subset moves and is located between the [Test Data Store]((16_task_test_data_store_component.md) and the [Target](17_task_target_component.md) components:  
 
 - Getting pre-extracted or pre-generated data from the TDM Test Data Store:
 
