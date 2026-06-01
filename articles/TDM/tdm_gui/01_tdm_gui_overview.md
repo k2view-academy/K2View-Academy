@@ -20,7 +20,7 @@ Fabric works with several authentication providers. Each authenticator is respon
 - **ADLDAP** (Active Directory) server - for console, WS and web access. Done via LDAP integration. 
 - **SAML** server - for web and WS access. Done via SAML IDP integration. 
 
-[Click for more information about Fabric's User Identification and Access Management](/articles/26_fabric_security/07_user_IAM_overview.md).
+[Click for more information about Fabric's User Identification and Access Management](/articles/26_fabric_security_iam/07_user_IAM_overview.md).
 
 To log into the TDM Portal, click the Web Framework app menu ![web framework app menu](/articles/30_web_framework/images/30_02_icon.PNG), and select the TDM option.
 
