@@ -179,7 +179,7 @@ To confirm what your environment is actually using:
 
 - Download and install Fabric V8.3.X Studio.
 - Create a project in the Fabric Studio for TDM. It is recommended to maintain this project in a pre-configured GitHub repository.
-- Create a PostgreSQL DB — a PostgreSQL DB is required for Fabric System (operational) DB and TDM operational DB (TDM V9.4 was certified based on PG V17). Note that you can download a PG image from the K2view download page. For more details, read [here](/articles/98_maintenance_and_operational/Installations/Linux/PGSQL_setup.md).
+- Create a PostgreSQL DB — a PostgreSQL DB is required for Fabric System (operational) DB and TDM operational DB (TDM V9.4 was certified based on PG V17). Note that you can download a PG image from the K2view download page. For more details, read [here](/articles/98_installation_and_upgrade/Install_on_Linux/PGSQL_setup.md).
 
 #### TDM Library Installation
 
