@@ -72,7 +72,7 @@ Please check the release notes for component version support, such as Kafka, Neo
         </tr>
 		<tr>
             <td align="left">
-                <p><a href="/Release_Notes/V8.3/Fabric_Release_Notes_V8.3.6.pdf">8.3.7</a></p>
+                <p><a href="/Release_Notes/V8.3/Fabric_Release_Notes_V8.3.7.pdf">8.3.7</a></p>
                 <p>June 3, 2026</p>
             </td>
             <td>
