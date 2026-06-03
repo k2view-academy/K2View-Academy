@@ -1,6 +1,6 @@
 # How Fabric Works With SAML 
 
-SAML can be used for the Fabric's [Web Framework](/articles/30_web_framework/01_web_framework_overview.md) and its apps like [Admin](/articles/30_web_framework/03_web_admin_application.md), [TDM](/articles/TDM/tdm_overview/README.md) (7.1 and later), and [DPM](/articles/DPM/01_DPM_Overview/02_DPM_Overview.md), where Fabric follows SAML standard flows.
+SAML can be used for the Fabric's [Web Framework](/articles/30_web_framework/01_web_framework_overview.md) and its apps like [Admin](/articles/30_web_framework/03_web_admin_application.md) and [TDM](/articles/TDM/tdm_overview/README.md) (7.1 and later), where Fabric follows SAML standard flows.
 
 #### Log in
 
