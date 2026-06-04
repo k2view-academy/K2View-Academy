@@ -70,7 +70,7 @@ The ```DEFAULT_GLOBAL_STORAGE_TYPE``` parameter in the [fabric] section is set t
 
 
 
-The credentials of the Fabric system database are configured in the config.ini and are being encrypted by Fabric. You can also use one of the integrated [Secret Managers](/articles/26_fabric_security/04a_secret_manager.md) to store them.
+The credentials of the Fabric system database are configured in the config.ini and are being encrypted by Fabric. You can also use one of the integrated [Secret Managers](/articles/26_fabric_security_sm/04a_secret_manager.md) to store them.
 
 
 
