@@ -43,7 +43,7 @@ The API Key is sent as the token value of the `Authorization: Bearer` header, fo
 
 See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) how to generate an API Key.
 
-Authorization and permissions are assigned based on the roles associated with the API Key and its corresponding permissions. See [here](/articles/26_fabric_security/01_fabric_credentials_overview.md) for more information about API Keys, roles, and permissions.
+Authorization and permissions are assigned based on the roles associated with the API Key and its corresponding permissions. See [here](/articles/26_fabric_security/01_fabric_security_overview.md) for more information about API Keys, roles, and permissions.
 
 ### JWT: Signed by Fabric
 
