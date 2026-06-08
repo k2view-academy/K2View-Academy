@@ -14,6 +14,8 @@ The TDMDB creation script inserts an initial record to **permission_groups_mappi
 
 ![permission groups window](images/permission_group_mapping_window.png)
 
+The Permission Groups Mapping window includes an **Allow Task Creation** column, which indicates whether users mapped to a Tester permission group can create TDM tasks. See [Tester](02_tdm_gui_user_types.md#tester) for more information about the two types of Testers.
+
 Note that if Fabric is set to authenticate using SAML, LDAP, or AD/LDAP, you must add the following record to **permission_groups_mapping** TDM DB table **before the first log in** to the TDM Portal:
 
 ```
@@ -39,7 +41,9 @@ Click for more information about [Fabric User IAM Configuration](/articles/26_fa
 
 
 
-- Select a Permission Group and a Fabric Role from the dropdown lists of the **Permission Group** and **Role** settings. 
+- Select a Permission Group and a Fabric Role from the dropdown lists of the **Permission Group** and **Role** settings.
+
+- Check the **Allow Task Creation** checkbox to allow the mapped users to create TDM tasks. This setting applies to Tester permission groups and determines whether the mapped users can create and assign tasks to other testers, or can only execute pre-created tasks.
 
 - The **Description** setting is an optional setting and can be populated by free text.
 
@@ -48,7 +52,7 @@ Click for more information about [Fabric User IAM Configuration](/articles/26_fa
 
 ### Edit a Permission Group Mapping
 
-Click the **Edit** icon next to the Permission Group mapping record. A pop-up window opens, allowing you to edit the **Permission Group**, **Role**, or **Description** as needed. Save the changes when finished.
+Click the **Edit** icon next to the Permission Group mapping record. A pop-up window opens, allowing you to edit the **Permission Group**, **Role**, **Allow Task Creation**, or **Description** as needed. Save the changes when finished.
 
 ### Delete a Permission Group Mapping
 
@@ -61,4 +65,3 @@ Note that a delete or edit of a permission group mapping can remove the users of
 
 
 [![Previous](/articles/images/Previous.png)](02_tdm_gui_user_types.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_tdm_gui_data_centers_window.md)
-

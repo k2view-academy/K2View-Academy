@@ -20,29 +20,41 @@ Fabric works with several authentication providers. Each authenticator is respon
 - **ADLDAP** (Active Directory) server - for console, WS and web access. Done via LDAP integration. 
 - **SAML** server - for web and WS access. Done via SAML IDP integration. 
 
-[Click for more information about Fabric's User Identification and Access Management](/articles/26_fabric_security_iam/07_user_IAM_overview.md).
+[Click for more information about Fabric's User Identification and Access Management](/articles/26_fabric_security/07_user_IAM_overview.md).
 
 To log into the TDM Portal, click the Web Framework app menu ![web framework app menu](/articles/30_web_framework/images/30_02_icon.PNG), and select the TDM option.
 
 ![application list](images/fabric_web_applications_list.png)
 
+## TDM Portal - Home Page
 
+After logging in, the TDM Portal opens on the **Manage Your Tasks** home page, which displays the available TDM tasks:
 
- 
+![tdm home page](images/tdm_home_page.png)
 
-## TDM Portal Navigation - General
+The home page has the following areas:
+
+- **Task Groups panel** (left) – lists the task groups. Click a group to display its tasks in the main area. The panel has two tabs:
+  - **All groups** – displays all task groups available to the user.
+  - **My created tasks** – displays only tasks created by the logged-in user.
+- **Task cards area** (main) – displays the tasks of the selected group as cards. Each card shows the task name, task ID, and task type icon. Click a task card to open the task.
+- **Search bar** – search for a task by name across all groups.
+- **New task** and **New group** buttons (top right) – available to users with task creation permissions.
+
+## TDM Portal Navigation
 
 ### TDM Navigation Tabs
 
-The following tabs are displayed when selecting the TDM option in the applications menu and opening the TDM application:
+The following tabs are displayed at the top of the TDM Portal:
 
 ![tdm navigation](images/tdm_gui_navigation_pane.png)
 
-​                             
-
-The **Reports** tab has been added in TDM 9.5. It displays [TDM usage reports](TDM_Dashboard_User_Guide.md) and is available for Admin and Environment Owner users.
-
-To move between sections, click the required tab. 
+- **Tasks** – opens the home page. Contains two sub-tabs:
+  - **Task Management** – displays the **Manage Your Tasks** home page for creating and managing tasks.
+  - **Execution Dashboard** – displays the execution status of TDM tasks.
+- **Reserved Entities** – displays the list of entities currently reserved in TDM environments.
+- **Settings** – contains TDM administrative settings. Available to Admin and Owner users.
+- **Reports** – displays [TDM usage reports](TDM_Dashboard_User_Guide.md). Available to Admin and Environment Owner users.
 
 The Settings tab contains the following sub-tabs:
 
@@ -58,14 +70,9 @@ The Settings tab contains the following sub-tabs:
 
   - Define at least one Business Entity (BE) to enable the creation of BE-based tasks.
 
-## TDM Breadcrumbs 
+## TDM Portal Navigation - Back Button
 
-The TDM Portal uses breadcrumbs as a graphical control element to aid navigation across user interfaces whereby users can track their position in the TDM screens. For example, to display the details of a given task's execution: 
-
-![breadcrumbs](images/breadcrumbs_example.png)
-
-- Click **Task Execution Summary - extract all customers** to display the executions list of **extract all customers** task. 
-- Click **Tasks** to display all TDM tasks.
+The TDM Portal uses a **Back** button to navigate between screens. Click the **Back** button to return to the previous screen.
 
 ### TDM Delete
 
