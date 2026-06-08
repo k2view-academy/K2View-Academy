@@ -44,7 +44,7 @@ Deployment can be performed using several methods:
 - <studio>In the Fabric server itself, using Build and Deploy scripts.</studio><web>In k2cloud UI.</web>
 - Remotely, using API calls. This is useful for CI/CD pipelines, where once the project package is verified, it can be sent into the target server.
 
-The latter 2 options are also called [Offline Deploy](03_offline_deploy.md).
+The latter 2 options are described in [Build Artifacts](03_build_artifacts.md) and [Deploy a Project](04_deploy_project.md).
 
 
 
@@ -76,7 +76,7 @@ To activate the Soft Deploy, right-click on a Logical Unit name, and select Soft
 
 </web>
 
-To activate the Soft Deploy during the [Offline Deploy](03_offline_deploy.md), set the **SOFT_DEPLOY** optional parameter to TRUE.
+To activate the Soft Deploy during the [Deploy a Project](04_deploy_project.md), set the **SOFT_DEPLOY** optional parameter to TRUE.
 
 
 
@@ -167,7 +167,7 @@ The version tag creation is done along with a GIT tagging capability, allowing f
 
 While Fabric provides the mechanism and technology for project versioning, the project owner and developers shall follow the related project lifecycle procedures, when tagging a version and while deploying the project.  
 
-For more information about Project Versioning, read [here.](/articles/16_deploy_fabric/04_project_versioning.md)
+For more information about Project Versioning, read [here.](/articles/16_deploy_fabric/05_project_versioning.md)
 
 ### Downloading the Deployed Code
 

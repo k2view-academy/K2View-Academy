@@ -512,7 +512,7 @@ The values are kept in the System DB **global_settings** table under [k2system](
 
 ###  Deploy and Drop Commands
 
-Fabric commands to deploy [Fabric implementation](/articles/16_deploy_fabric/03_offline_deploy.md) and [Fabric Environments](/articles/25_environments/03_deploy_env_from_Fabric_Studio.md) on the Fabric console.
+Fabric commands to deploy [Fabric implementation](/articles/16_deploy_fabric/04_deploy_project.md) and [Fabric Environments](/articles/25_environments/03_deploy_env_from_Fabric_Studio.md) on the Fabric console.
 
 #### Drop LU Command
 

@@ -117,7 +117,7 @@ Upon deployment to a remote server, either the whole project or only specific ob
 
 
 
-When running **Build Deploy Artifacts** action, Studio behaves similarly, but without alerting the user as no deployment is done but building artifacts. Yet, when not skipping the validation checks, the built artifacts are signed with the star indication when not aligned with the tag. This means that later on, when these artifacts will be taken and deployed at another server using the [offline deploy](/articles/16_deploy_fabric/03_offline_deploy.md), the same indication will appear on the `version` command results, hinting users about.
+When running **Build Deploy Artifacts** action, Studio behaves similarly, but without alerting the user as no deployment is done but building artifacts. Yet, when not skipping the validation checks, the built artifacts are signed with the star indication when not aligned with the tag. This means that later on, when these artifacts will be taken and deployed at another server using the [offline deploy](/articles/16_deploy_fabric/04_deploy_project.md), the same indication will appear on the `version` command results, hinting users about.
 
 
 
@@ -202,7 +202,7 @@ In Studio, you can see the currently deployed version also at the bottom status 
 
 
 
-<studio>[![Previous](/articles/images/Previous.png)](/articles/16_deploy_fabric/03_offline_deploy.md)</studio><web>[![Previous](/articles/images/Previous.png)](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md)</web>[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/16_deploy_fabric/05_project_versioning_examples.md)
+[![Previous](/articles/images/Previous.png)](/articles/16_deploy_fabric/04_deploy_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/16_deploy_fabric/06_project_versioning_examples.md)
 
 
 

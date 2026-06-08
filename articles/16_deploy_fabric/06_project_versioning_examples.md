@@ -73,9 +73,7 @@ This example illustrates a required-hotfix case, where one of the developers han
 
 
 
-
-
-[![Previous](/articles/images/Previous.png)](/articles/16_deploy_fabric/04_project_versioning.md)
+[![Previous](/articles/images/Previous.png)](/articles/16_deploy_fabric/05_project_versioning.md)
 
 
 
