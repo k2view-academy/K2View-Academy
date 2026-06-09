@@ -4,13 +4,114 @@ An environment's offline deployment is used for deploying environments to a serv
 
 <studio>
 
-## Offline Deployment using Scripts
+## Offline Deployment using deploy-environment.sh
+
+Run `deploy-environment.sh` to deploy the environment configuration from a build server or CI/CD pipeline. The script is located under `$K2_HOME/fabric/scripts` and supports both local and remote deployment:
+
+- **Local deploy** — connects to a running Fabric instance on the same machine via the Fabric CLI.
+- **Remote deploy** — uses the Fabric HTTP API (`-r` flag). Does not require a local Fabric installation.
+
+**Usage:**
+
+~~~
+./deploy-environment.sh [options]
+~~~
+
+**Options:**
+
+<table>
+<thead>
+<tr>
+<th><p><strong>Option</strong></p></th>
+<th><p><strong>Description</strong></p></th>
+<th><p><strong>Mandatory</strong></p></th>
+<th><p><strong>Default</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>-host / --host</p></td>
+<td><p>Fabric host (IP address or URL).</p></td>
+<td><p>N</p></td>
+<td><p>localhost</p></td>
+</tr>
+<tr>
+<td><p>-port / --port</p></td>
+<td><p>Fabric port.</p></td>
+<td><p>N</p></td>
+<td><p>5124 (when host is localhost)</p></td>
+</tr>
+<tr>
+<td><p>-u / --username</p></td>
+<td><p>Fabric username.</p></td>
+<td><p>N</p></td>
+<td><p>admin</p></td>
+</tr>
+<tr>
+<td><p>-p / --password</p></td>
+<td><p>Fabric password.</p></td>
+<td><p>N</p></td>
+<td><p>admin</p></td>
+</tr>
+<tr>
+<td><p>-t / --token</p></td>
+<td><p>API token for authentication. Takes precedence over username/password.</p></td>
+<td><p>N</p></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td><p>-pd / --project-dir</p></td>
+<td><p>Path to the project directory. Used to locate the default environment file.</p></td>
+<td><p>N</p></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td><p>-ef / --environment-file</p></td>
+<td><p>Path to the environment XML file.</p></td>
+<td><p>N</p></td>
+<td><p>&lt;project&gt;/Implementation/SharedObjects/Environments/Environments.k2fabEnv.xml</p></td>
+</tr>
+<tr>
+<td><p>-e / --environment</p></td>
+<td><p>Environment name to set as active after deployment.</p></td>
+<td><p>N</p></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td><p>-r / --remote-deploy</p></td>
+<td><p>Enable remote deployment via HTTP API.</p></td>
+<td><p>N</p></td>
+<td><p>false</p></td>
+</tr>
+<tr>
+<td><p>-h / --help</p></td>
+<td><p>Displays usage information.</p></td>
+<td><p>N</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+
+In local mode, the script runs two operations: deploys the environment file, then sets the active environment (if `-e` is provided).
+
+**Example — deploy environment file and activate it on a remote server:**
+
+~~~bash
+./deploy-environment.sh \
+  -pd /opt/apps/MyProject \
+  -host 10.0.0.5 \
+  -t $API_TOKEN \
+  -r \
+  -e Production
+~~~
+
+## Offline Deployment using the Fabric Console
 
 Perform the following actions:
 
 1. Connect to a server using the Fabric Console.
 
-2. Copy the **Environments.k2fabEnv.XML** file from the following Windows location - **[Fabric Project's Directory]\\[Project Name]\Implementation\SharedObjects\Environments** - or manually edit the existing XML file.
+2. Copy the **Environments.k2fabEnv.XML** file from the following Windows location - **[Fabric Project’s Directory]\\[Project Name]\Implementation\SharedObjects\Environments** - or manually edit the existing XML file.
 
 3. Deploy the environments file using the following command:
 
@@ -18,7 +119,7 @@ Perform the following actions:
    Deploy environments from file ‘{filename}’
    ~~~
 
-   where {filename} includes the file's path and name on the server.
+   where {filename} includes the file’s path and name on the server.
 
 Fabric encrypts the passwords in the file (if they are not already encrypted) and saves the XML file with the encrypted passwords.
 

@@ -160,14 +160,14 @@
 <p><a href="/articles/26_fabric_security_iam/11_user_IAM_LDAP.md"><strong>LDAP</strong></a></p>
 </td>
 <td width="516">
-<p>Lightweight Directory Access Protocol: This is a mature, flexible, and well supported standards-based mechanism for interacting with directory servers.&nbsp;Fabric&nbsp;can work&nbsp;with&nbsp;LDAP&nbsp;and&nbsp;AD LDAP&nbsp;&nbsp;servers (Active Directory LDAP)&nbsp;as&nbsp;authenticators&nbsp;as well as&nbsp;&nbsp;to&nbsp;get information&nbsp;about users&nbsp;&nbsp;from those&nbsp;servers.</p>
+<p>Lightweight Directory Access Protocol: This is a mature, flexible, and well-supported standards-based mechanism for interacting with directory servers.&nbsp;Fabric&nbsp;can work&nbsp;with&nbsp;LDAP&nbsp;and&nbsp;AD LDAP&nbsp;&nbsp;servers (Active Directory LDAP)&nbsp;as&nbsp;authenticators&nbsp;as well as&nbsp;&nbsp;to&nbsp;get information&nbsp;about users&nbsp;&nbsp;from those&nbsp;servers.</p>
 </td>
 </tr>
 <tr>
 <td width="125"><p><strong><a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit / Data Product</a></strong></p>
 </td>
 <td width="516">
-<p>A Logical Unit (LU, or Logical Unit Type - LUT), also known as a Data Product, is a blueprint that holds a set of definitions / instructions used to create and maintain the data of a Data Product dataset.</p>
+<p>A Logical Unit (LU, or Logical Unit Type - LUT), also known as a Data Product, is a blueprint that holds a set of definitions/instructions used to create and maintain the data of a Data Product dataset.</p>
 </td>
 </tr>
 <tr>
@@ -183,7 +183,7 @@
 <p><strong><a href="/articles/06_LU_tables/06_LU_views.md">LU View</a></strong></p>
 </td>
 <td width="516">
-<p>An object that holds a predefined query on LU tables in the Fabric MicroDB, allowing an easy access to a required data collection.
+<p>An object that holds a predefined query on LU tables in the Fabric MicroDB, allowing easy access to a required data collection.
 </p>
 </td>
 </tr>    
@@ -192,7 +192,7 @@
 <p><strong><a href="/articles/06_LU_tables/01_LU_tables_overview.md">LU Table</a></strong></p>
 </td>
 <td width="516">
-<p>The basic building block of a Logical Unit that defines a Data Product's data, including columns, PKs, indexes and triggers. A Logical Unit may have one or many LU tables.</p>
+<p>The basic building block of a Logical Unit that defines a Data Product's data, including columns, PKs, indexes, and triggers. A Logical Unit may have one or many LU tables.</p>
 </td>
 </tr>
 <tr>
@@ -273,7 +273,7 @@
 <p><strong><a href="/articles/07_table_population/02_source_object_types.md">Source Object</a></strong></p>
 </td>
 <td width="516">
-<p>A population rule, either a query or function, used as a source input to the LU table.</p>
+<p>A population rule, either a query or a function, used as a source input to the LU table.</p>
 </td>
 </tr>
 <tr>
@@ -297,7 +297,7 @@
 <p><strong><a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">Sync</a></strong></p>
 </td>
 <td width="516">
-<p>A process that updates / modifies the source data connected within Fabric. The Sync process executes and extracts the transformation logic of a given instance on the LU tables and populates its data into Fabric.</p>
+<p>A process that updates/modifies the source data connected within Fabric. The Sync process executes and extracts the transformation logic of a given instance on the LU tables and populates its data into Fabric.</p>
 </td>
 </tr>
 <tr>
@@ -309,7 +309,7 @@
 <p><strong>NONE</strong>: Do not sync.</p>
 <p><strong>Time Interval</strong>: Sync is performed automatically at the predefined time. Format = D.HH:MM:SS. Default = 1 Day.</p>
 <p><strong>Inherited</strong>: Each LU level inherits the sync rule of its direct parent branch. For example, the LU Table Population inherits from the LU table and the LU table inherits from the LU schema.</p>
-<p><strong>Decision function</strong>: Sync is performed according to a Decision function which returns a True / False Boolean parameter.</p>
+<p><strong>Decision function</strong>: Sync is performed according to a Decision function that returns a True / False Boolean parameter.</p>
 <p>The sync method can be set on LU Schema, LU Table, or Table Population levels.</p>
 </td>
 </tr>

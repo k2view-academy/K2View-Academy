@@ -2,7 +2,7 @@
 
 New or already existing Fabric project implementations must be deployed to the server in a way that recent code changes are compiled and ready to be used.
 
-A deployment can be performed either from the Fabric Studio, as explained in this article, or by using an [Offline Deploy](/articles/16_deploy_fabric/03_offline_deploy.md).
+A deployment can be performed either from the Fabric Studio, as explained in this article, or by using an [Offline Deploy](/articles/16_deploy_fabric/03_build_artifacts.md).
 
 <studio>
 
@@ -87,4 +87,4 @@ To deploy a specific LU, right-click on its name in the Project Tree. In the con
 
 </web>
 
-[![Previous](/articles/images/Previous.png)](/articles/16_deploy_fabric/01_deploy_Fabric_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/16_deploy_fabric/03_offline_deploy.md)
+[![Previous](/articles/images/Previous.png)](/articles/16_deploy_fabric/01_deploy_Fabric_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/16_deploy_fabric/03_build_artifacts.md)

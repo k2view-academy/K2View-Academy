@@ -27,7 +27,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 <td width="600pxl" valign="top">
 <p>Holds the following Fabric scripts:&nbsp;</p>
 <ul>
-<li><a href="/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options">Deployment</a></li>
+<li><a href="/articles/16_deploy_fabric/04_deploy_project.md">Deployment</a></li>
 <li>IIDFinder</li>
 <li>Fabric execution monitoring</li>
 <li><a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#reset-fabric">Reset</a></li>

@@ -172,7 +172,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>task_ref_partition</td>
-<td valign="top" width="400pxl">This table has been added in TDM 9.5 to support concurrent processing of <a href ="/articles/TDM/tdm_implementation/09b_table_partitions_implementation.md">table partitions</a>. During task execution, each table partition is processed as a separate LU instance and recorded as an individual entry in this table. Each record contains the execution details specific to its corresponding table partition.</td>
+<td valign="top" width="400pxl">This table has been added in TDM 9.5 to support concurrent processing of <a href="/articles/TDM/tdm_implementation/09b_table_partitions_implementation.md">table partitions</a>. During task execution, each table partition is processed as a separate LU instance and recorded as an individual entry in this table. Each record contains the execution details specific to its corresponding table partition.</td>
 <td valign="top" width="300pxl">Task Execution</td>
 </tr>
 <tr>      
