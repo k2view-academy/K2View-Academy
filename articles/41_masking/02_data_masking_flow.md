@@ -66,7 +66,7 @@ The masking Actors use the Fabric hashing utility to hash the original value, an
 
 Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to read how to use Fabric's masking Broadway Actors.
 
-Click [here]/articles/26_fabric_security/02_fabric_entities_design.md#fabric-hashing-mechanism) to read more about the Fabric hashing mechanism.
+Click [here](/articles/26_fabric_security/02_fabric_entities_design.md#fabric-hashing-mechanism) to read more about the Fabric hashing mechanism.
 
 A new configuration parameter, SERIALIZE_CACHED_VALUE, has been added to the Fabric config.ini file from V8.3.x onwards to provide finer control over masked value serialization:
 - When set to true, the masking process preserves the original data type when generating masked values.
