@@ -6,12 +6,13 @@ The article describes plugins that create *refersTo* relations in the Catalog sc
 
 * [Reference by Name Comparison](05_relations_creation.md#reference-by-name-comparison) - identifies possible foreign key references between datasets by matching field names, and then creates corresponding *refersTo* relations.
 * [Reference by Query Analysis](05_relations_creation.md#reference-by-query-analysis) - identifies possible foreign key references between datasets by analyzing JOIN statements in the provided SQL file, and then creates corresponding *refersTo* relations. This plugin is available starting from Fabric V8.3.
-* [Reference by Data Comparison](05_relations_creation.md#reference-by-data-comparison) - identifies possible foreign key references between datasets by analyzing data in fields' columns, and then creates the *refersTo* relations. This plugin is available starting from Fabric V8.3.
+* [Reference by Data Comparison](05_relations_creation.md#reference-by-data-comparison) - identifies possible foreign key references between datasets by analyzing data in fields' columns, and then creates corresponding *refersTo* relations. This plugin is available starting from Fabric V8.3.
+* [Reference by LLM](05_relations_creation.md#reference-by-llm) - identifies possible foreign key references between datasets by analyzing dataset pairs using an LLM, and creates corresponding *refersTo* relations. This plugin is available starting from Fabric V8.5.
 * [Trim Extra Relations](05_relations_creation.md#trim-extra-relations) - identifies and removes redundant *refersTo* relationships between schema datasets to maintain essential connections. This plugin is available starting from Fabric V8.4.1.
 
 ## Reference by Name Comparison
 
-The purpose of the **Reference by Name Comparison** plugin (formerly known as *Metadata Logical Reference*) is to identify possible foreign key references between datasets by matching field names and to create *refersTo* relations. This plugin is useful in cases where a source does not have predefined foreign key constraints. Note that this plugin is inactive by default and must be activated via Discovery Pipeline if needed.
+The purpose of the **Reference by Name Comparison** plugin (formerly known as *Metadata Logical Reference*) is to identify possible foreign key references between datasets by matching field names and to create *refersTo* relations. This plugin is useful in cases where a source does not have predefined foreign key constraints. Note that this plugin is inactive by default and must be activated via the Discovery Pipeline if needed.
 
 The matching algorithm operates by comparing the field names of two datasets at a time. Prior to the matching, the field names are normalized using the following formatting rules: underscore ‘_’ removal, conversion to lowercase letters and the addition of the table name in case the field name is 'ID'. For example, the field names customer.ID, CUSTOMER_ID and CustomerID will be normalized to the same value — customerid.
 
@@ -135,7 +136,7 @@ The plugin then evaluates the candidate datasets using the matching rules descri
 
 Some database management systems (such as Oracle) support automatic generation of **audit files**. These files record activities within the database by tracking executed SQL queries, user logins, schema changes, privilege escalations, and other events. An audit file can be used for creating an input SQL file for the plugin analysis. However, the audit file must first be transformed to remove all information except the SQL queries. This transformation can be done by creating a Broadway flow in your project, which converts the file to the required format. 
 
-This plugin is useful when a source does not have predefined foreign key constraints. Note that this plugin is inactive by default and must be activated via Discovery Pipeline if needed. 
+This plugin is useful when a source does not have predefined foreign key constraints. Note that this plugin is inactive by default and must be activated via the Discovery Pipeline if needed. 
 
 #### Matching Rules
 
@@ -143,10 +144,10 @@ The following matching rules are applied by the plugin. Note that the rule is ap
 
 * ```singleFieldPkAndNotPk``` - Single PK field in Parent Dataset and non-PK field in Child Dataset.
   * The relation *Child refers to Parent* is created.
-* `joinOnlyNoPkCheck` - PKs are not checked. FK is based on JOIN only: left side of condition is the Parent Dataset, right side is the Child Dataset.:
+* `joinOnlyNoPkCheck` - PKs are not checked. FK is based on JOIN only: left side of condition is the Parent Dataset, right side is the Child Dataset.
   * The old syntax is also supported, having WHERE and '=' instead of the JOIN.
-  * in case of the LEFT JOIN or LEFT OUTER JOIN the relation direction is **opposite**: the left side should be considered a Child Dataset, the right side → a Parent Dataset.
-  * the `joinOnlyNoPkCheck` matching rule is only available in the ANTLR mode.
+  * In case of the LEFT JOIN or LEFT OUTER JOIN the relation direction is **opposite**: the left side should be considered a Child Dataset, the right side → a Parent Dataset.
+  * The `joinOnlyNoPkCheck` matching rule is only available in the ANTLR mode.
 * ```commonFieldsInBothPk``` - Common fields in PK of both datasets, but Child Dataset has additional PKs.
   * The relation *Child refers to Parent* is created.
 * ```sameFieldsInBothPk``` - Part of PK in both datasets, and both datasets have an identical number of PKs.
@@ -181,11 +182,11 @@ The ```llmInterface``` parameter is optional. It allows overriding the project's
 
 ## Reference by Data Comparison
 
-**Reference by Data Comparison** is a new plugin (introduced in Fabric V8.3) that examines data within data source fields to identify correlations using the probabilistic Bloom filter algorithm. Based on the analysis results, this plugin can establish FK relationships between datasets. 
+The **Reference by Data Comparison** plugin examines data within data source fields to identify correlations using the probabilistic Bloom filter algorithm. Based on the analysis results, this plugin can establish FK relationships between datasets. 
 
-The data comparison is performed by comparing field values of two datasets at a time - dataset1 and dataset2. All fields in dataset2 are considered for analysis, while only the PK fields in dataset1 are used for this comparison. The data comparison results with a calculated score that represents the probability of a match between each pair of columns from two datasets.   
+The data comparison is performed by comparing field values of two datasets at a time - Parent Dataset and Child Dataset. All fields in the Child Dataset are considered for analysis, while only the PK fields in the Parent Dataset are used for this comparison. The data comparison results with a calculated score that represents the probability of a match between each pair of columns from two datasets.   
 
-Note that this plugin is inactive by default and must be activated via Discovery Pipeline if needed. 
+Note that this plugin is inactive by default and must be activated via the Discovery Pipeline if needed. 
 
 #### Matching Rules
 
@@ -207,6 +208,30 @@ By default, this parameter is set to the STRING, INTEGER or REAL data type for t
 #### Factor
 
 The factor refers to score multiplication, applied only when comparing columns defined by non-GUID data types. By default, the factor is set to 0.85 as it aims to reduce the score of potential matches between non-GUID columns.
+
+## Reference by LLM
+
+The **Reference by LLM** plugin uses an LLM to identify foreign key relationships between pairs of datasets and create corresponding *refersTo* relations in the Catalog schema. Unlike name- or data-comparison plugins, this plugin reasons semantically: it sends each dataset pair's field names, data types, and sample values to the LLM and asks whether a parent-child relationship exists. This makes it effective in cases where field names are not self-explanatory and no physical foreign key constraints are defined in the source.
+
+For every unique pair of datasets in the schema, the plugin builds a prompt containing both datasets' field names, source data types, and up to `sampleSize` actual data values per field, and submits it to the LLM for analysis. The plugin processes each unique dataset pair exactly once (i.e., datasets *A–B* and *B–A* are treated as the same pair). If the LLM identifies a relationship, it returns which dataset is the parent and which is the child, along with the specific fields that form the logical foreign key. 
+
+The relation is created with a score of **0.9**.
+
+Note that this plugin is inactive by default and must be activated via the Discovery Pipeline if needed.
+
+#### Sample Size
+
+The `sampleSize` parameter defines the number of data sample values sent to the LLM per field. 
+
+By default, it is set to 10. Set to 0 to send no sample data.
+
+#### LLM Interface
+
+The `llmInterface` parameter is optional. It allows overriding the project's default LLM interface to be used by the plugin. This parameter should include the interface name.
+
+- If the `llmInterface` parameter is not set in the plugin definition, the plugin searches for an LLM AI interface tagged as 'discovery'. If none of the LLM AI interfaces are tagged as 'discovery', it will use an interface tagged as 'default'.
+
+Note that the plugin performs an LLM call for every unique dataset pair, so the number of calls grows quadratically with the number of datasets. For schemas with many datasets, consider the cost and latency implications, and use the `sampleSize` parameter to control prompt size.
 
 ## Trim Extra Relations
 
@@ -243,8 +268,8 @@ Customer ────────> Order ────────> Product
 
 The resulting model is cleaner and accurately reflects business logic:
 
-- Customer place Order.
-- Order contain Product.
+- Customers place Orders.
+- Orders contain Products.
 
 #### How Trim Plugin Works
 
