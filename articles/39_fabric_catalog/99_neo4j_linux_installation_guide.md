@@ -26,18 +26,18 @@ sudo su - neo4j
 
 #### Download K2view's Neo4j package:
 
-Download the link from [here](https://artifacts.share.cloud.k2view.com/k2view-neo4j/unix/k2view-neo4j-enterprise-5.26.26-unix.tar.gz).
+Download the link from [here](https://artifacts.share.cloud.k2view.com/k2view-neo4j/unix/k2view-neo4j-enterprise-5.26.27-unix.tar.gz).
 
 Note that this link is internal. If you don't have permissions to the folder, open a freshdesk ticket.
 
 #### Untar the package:
 ```bash
-tar -zxvf k2view-neo4j-enterprise-5.26.26-unix.tar.gz
+tar -zxvf k2view-neo4j-enterprise-5.26.27-unix.tar.gz
 ```
 
 #### Remove tar.gz file:
 ```bash
-rm -rf k2view-neo4j-enterprise-5.26.26-unix.tar.gz
+rm -rf k2view-neo4j-enterprise-5.26.27-unix.tar.gz
 ```
 
 #### Source bash profile:
