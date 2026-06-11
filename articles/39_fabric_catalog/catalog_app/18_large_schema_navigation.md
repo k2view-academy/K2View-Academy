@@ -58,7 +58,7 @@ The following actions are available in the Schema Dataset List view:
 
 * **Filter fields** - to limit the displayed fields of the selected dataset:
 
-  * Click the ![](../images/dots.png) context menu icon (visible when a dataset is selected) and click **Filter dataset fields** to trigger the expansion of the dataset fields.
+  * Click the![](../images/dots.png)context menu icon (visible when a dataset is selected) and click **Filter dataset fields** to trigger the expansion of the dataset fields.
 
   ![](../images/schema_explorer_view_filter_fields_1.png)
 
@@ -73,7 +73,7 @@ The following actions are available in the Schema Dataset List view:
 * **Add relation** to another dataset (available in Edit mode only):
 
   * Switch to **Edit catalog** mode and go to the required dataset.
-  * Click the ![](../images/dots.png) context menu icon (visible when a dataset is selected), then click **Add relation**.
+  * Click the![](../images/dots.png)context menu icon (visible when a dataset is selected), then click **Add relation**.
   * A popup opens, allowing you to define the required *refersTo* relation.
 
   ![](../images/schema_explorer_view_add_relation.png)
