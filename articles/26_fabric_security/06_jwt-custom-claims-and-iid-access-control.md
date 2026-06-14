@@ -56,6 +56,7 @@ Fabric JWTs have a set of reserved internal claim keys that are always excluded 
   * An OAuth authorization server which provides the client the JWT that is sent to Fabric.
   * During Signed JWT generation
   * Using Fabric's `/authenticate` endpoint, where initiator can add and declare such claims
+  * From a SAML IDP, when the `ATTRIBUTES_AS_CLAIMS` flag is enabled, SAML response attributes are forwarded as JWT claims. See [Custom Claims from SAML Attributes](#custom-claims-from-saml-attributes) below.
 
 ### Custom Claims Usage 
 
@@ -82,6 +83,52 @@ Here is an JWT payload example that match it:
   "subStatus" :"VIP"
 }
 ```
+
+
+
+## Custom Claims from SAML Attributes
+
+**Requires**: Fabric 8.4.4 or later
+
+When Fabric authenticates a user via SAML, the IDP may include attributes on the SAML response (department, employee ID, full group membership, etc.). With the `ATTRIBUTES_AS_CLAIMS` flag enabled in the `[saml]` section of `config.ini`, Fabric forwards every such attribute as a claim on the JWT it issues. From that point on the values are read through `sessionUser().claims()` identically to claims sourced from OAuth, signed JWTs, or the `/authenticate` endpoint.
+
+### Enabling
+
+```
+[saml]
+ATTRIBUTES_AS_CLAIMS=true
+```
+
+Default is `false`. The flag is off by default to avoid overwhelming the JWT with attributes the project does not consume.
+
+### Reserved Attribute Names
+
+In addition to the Fabric internal claims listed in [Internal & Standard vs. Custom Claims](#internal--standard-vs-custom-claims), SAML attributes whose names clash with **standard JWT registered claims** are also silently dropped:
+
+`sub`, `iss`, `iat`, `exp`, `jti`, `aud`, `nbf`
+
+This prevents the IdP from overriding identity, role, or token bookkeeping fields. If a SAML attribute that the project needs arrives under one of these names, re-map it on the IdP side.
+
+### Groups Behavior
+
+When the flag is enabled, the `groups` attribute is forwarded **in full**, including groups that are not mapped to Fabric roles. The mapped subset continues to appear separately under the internal `bgr` claim.
+
+### Example
+
+A SAML response carrying `department=Finance` and `groups=[admins, viewers, auditors]` (where only `admins` is mapped to a Fabric role) produces a JWT payload such as:
+
+```json
+{
+  "unm": "alice",
+  "bgr": ["admins"],
+  "department": "Finance",
+  "groups": ["admins", "viewers", "auditors"]
+}
+```
+
+`department` and the full `groups` list are then available to implementation code via `sessionUser().claims()`  see [Custom Claims Usage](#custom-claims-usage) above for the access pattern.
+
+The `[saml]` configuration block is documented in [SAML Configuration](/articles/26_fabric_security_iam/13_user_IAM_configuration.md#saml-configuration).
 
 
 
