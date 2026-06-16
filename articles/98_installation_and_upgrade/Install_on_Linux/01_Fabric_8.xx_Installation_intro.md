@@ -32,34 +32,45 @@ On __all__ servers
 ~~~bash
 mkdir -p /opt/apps
 chmod 755 /opt/apps
+groupadd -f k2view
 ~~~
 
 On each server, depending on the service you wish to install, run the appropriate useradd command.
 (on a single host setup, run all commands on the same server)
 For Fabric Sever
 ~~~bash
-useradd -m -d /opt/apps/fabric  -s /bin/bash fabric
+useradd -m -d /opt/apps/fabric -g k2view -s /bin/bash fabric
 ~~~
 For Cassandra Instance (only in case Cassandrta is planned as system DB)
 ~~~bash
-useradd -m -d /opt/apps/cassandra  -s /bin/bash cassandra
+useradd -m -d /opt/apps/cassandra -g k2view -s /bin/bash cassandra
 ~~~
 In Some cases, Kafka instance or cluster will be required.
-
 ~~~bash
-useradd -m -d /opt/apps/kafka  -s /bin/bash kafka
+useradd -m -d /opt/apps/kafka -g k2view -s /bin/bash kafka
 ~~~
-
 
 
 Update the OS limits as follows:
-
+For the Fabric user:
 ~~~bash
+# Allow root an unlimited number of processes
 echo "root soft    nproc     unlimited" >> /etc/security/limits.conf
-echo "cassandra - nofile 1000000" >> /etc/security/limits.conf
-echo "cassandra - nproc 500000" >> /etc/security/limits.conf
+# Raise the open-files and process limits for the fabric user
 echo "fabric - nofile 1000000" >> /etc/security/limits.conf
 echo "fabric - nproc 500000" >> /etc/security/limits.conf
+~~~
+
+For the Cassandra user:
+~~~bash
+# Raise the open-files and process limits for the cassandra user
+echo "cassandra - nofile 1000000" >> /etc/security/limits.conf
+echo "cassandra - nproc 500000" >> /etc/security/limits.conf
+~~~
+
+For the Kafka user:
+~~~bash
+# Raise the open-files and process limits for the kafka user
 echo "kafka hard nofile 1000000" >> /etc/security/limits.conf
 echo "kafka soft nofile 1000000" >> /etc/security/limits.conf
 echo "kafka - nproc 500000" >> /etc/security/limits.conf
