@@ -9,7 +9,7 @@ Fabric has a robust Auditing mechanism that logs various activities running on F
 4. [Turning Auditing ON/OFF](#turning-auditing-onoff)  
 7. [Activities Subject To Auditing](#activities-subject-to-auditing)  
 8. [Audit Report Structure](#audit-report-structure)  
-9. [Audit Report Examples](#audit-report-examples)  
+9. [Audit Actions / Events](#audit-actions--events)  
 
 ## When to Enable Auditing in Production
 
