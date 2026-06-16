@@ -199,12 +199,12 @@ When an activity is captured by the Fabric Auditing mechanism, it is logged with
 </table>
 
 
-## Audit Report Examples
+## Audit Actions / Events
 
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th>Action</th>
+      <th>Action / Event</th>
       <th>Query</th>
     </tr>
   </thead>
