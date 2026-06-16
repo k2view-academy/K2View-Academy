@@ -67,17 +67,20 @@ This guide targets **Apache Cassandra 4.1.x**.
     curl -OL https://dlcdn.apache.org/cassandra/4.1.11/apache-cassandra-4.1.11-bin.tar.gz
     ~~~
 
-3. Extract the package and set `CASSANDRA_HOME`:
+3. Extract the package, create a version-independent `cassandra` symlink, and set `CASSANDRA_HOME` to point at it:
 
     ~~~bash
     tar -zxvf apache-cassandra-4.1.11-bin.tar.gz -C /opt/apps/cassandra
-    export CASSANDRA_HOME=/opt/apps/cassandra/apache-cassandra-4.1.11
+    ln -sfn /opt/apps/cassandra/apache-cassandra-4.1.11 /opt/apps/cassandra/cassandra
+    export CASSANDRA_HOME=/opt/apps/cassandra/cassandra
     ~~~
+
+    > Using the `cassandra` symlink as `CASSANDRA_HOME` keeps all paths version-independent — to upgrade later, extract the new release and repoint the link (`ln -sfn`) without touching any other configuration.
 
     > *Tip:* Persist `CASSANDRA_HOME` and add it to the `PATH` in the `cassandra` user's `.bash_profile` so the `cassandra`, `nodetool`, and `cqlsh` commands are always available:
     >
     > ~~~bash
-    > echo "export CASSANDRA_HOME=/opt/apps/cassandra/apache-cassandra-4.1.11" >> ~/.bash_profile
+    > echo "export CASSANDRA_HOME=/opt/apps/cassandra/cassandra" >> ~/.bash_profile
     > echo 'export PATH=$CASSANDRA_HOME/bin:$PATH' >> ~/.bash_profile
     > source ~/.bash_profile
     > ~~~
