@@ -27,6 +27,7 @@
   - [Generate a Self-signed Certificate](#generate-a-self-signed-certificate)  
   - [Keystore Verification](#keystore-verification)  
   - [Editing the config.ini File](#editing-the-configini-file)  
+    - [SAML Attributes as JWT Claims](#saml-attributes-as-jwt-claims)  
     - [Configurations for Windows OS](#configurations-for-windows-os)  
 
 - [LDAP & LDAPS Configuration](#ldap--ldaps-configuration)  
@@ -155,7 +156,7 @@ If you need multiple authenticators of the same type (e.g., two LDAP servers whe
    # admin_dn=cn=admin,dc=example,dc=com
    # admin_password=********
    # users_base_dn=ou=users,dc=example,dc=com
-   ```
+  ```
 
 This pattern ensures Fabric correctly recognizes and evaluates each authenticator—even when multiple instances of the same type are used.
 
@@ -258,6 +259,22 @@ Edit these properties in the `[saml]` section:
 Moreover, the `WEB_AUTHENTICATION_PROTOCOL` property's value shall be set to "SAML".
 
 
+#### SAML Attributes as JWT Claims
+
+**Requires**: Fabric 8.4.4 or later
+
+Fabric can forward attributes from the SAML response as claims on the JWT it issues, making them available to project implementation code via `sessionUser().claims()`. Disabled by default.
+
+Enable in the `[saml]` section of `config.ini`:
+
+```
+ATTRIBUTES_AS_CLAIMS=true
+```
+
+For the full description, including reserved attribute names, groups handling, and usage from implementation code, see [Custom Claims from SAML Attributes](/articles/26_fabric_security/06_jwt-custom-claims-and-iid-access-control.md#custom-claims-from-saml-attributes).
+
+
+
 #### Configurations for Windows OS
 
 When Fabric is running on a Windows OS, typically during project implementation or testing, when working locally, the following additional steps are required in relation to the certification files.
@@ -330,7 +347,7 @@ username_attribute=cn                    # single attribute
 # username_attribute=sAMAccountName      # single attribute
 # username_attribute=cn,sAMAccountName   # accept either
 # username_attribute=sAMAccountName,cn   # accept either (order preference)
-```
+ ```
 **Notes**
 * Default behavior (when not set) remains cn, preserving backward compatibility.
 * You may specify one attribute or a comma-separated list (order does not affect authentication).
