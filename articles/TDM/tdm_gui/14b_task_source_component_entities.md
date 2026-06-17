@@ -6,15 +6,29 @@ The following information needs to be set for the *Entities & referential data* 
 
 ![source-entities](images/task_source_settings_entities.png)
 
+## Lock Icons
+
+Task fields that support runtime override have a lock icon next to their label. By default, these fields are **locked** — the task creator can click the lock icon to unlock a field and allow the task runner to set or override its value at execution time. See the [full list of attributes available for runtime override](14_task_overview.md#attributes-available-for-runtime-override).
+
 ## Business Entity
 
-This field defines the task’s [Business Entity (BE)](04_tdm_gui_business_entity_window.md). Select a BE from the drop-down list, which includes all TDM BEs.
+This field defines the task's [Business Entity (BE)](04_tdm_gui_business_entity_window.md). Select a BE from the drop-down list, which includes all TDM BEs.
+
+The Business Entity field is an exception to the default locking behavior — the lock is **open** by default:
+
+- If the Business Entity is **not populated**, the lock must remain open so the task runner can populate it at execution:
+
+  ![Empty BE - Source](images/source_component_empty_BE.png)
+
+- If the Business Entity is **populated** by the task creator, the field becomes locked automatically and cannot be unlocked:
+
+  ![Populated BE](images/source_component_populated_BE.png)
 
 The **Advanced** option is **optional** and allows you to:
 
 - Select only specific **systems** and/or **Logical Units (LUs)** for the task.
-- Define the **affinity** and **maximum number of workers** per LU.
-- Override the task’s default [execution mode](04_tdm_gui_business_entity_window.md#task-execution-mode)
+- Define the **affinity** and **maximum number of workers** per LU. The affinity and maximum number of workers can be defined after populating the Source environment.
+- Override the task's default [execution mode](04_tdm_gui_business_entity_window.md#task-execution-mode)
 
 When you click **Advanced**, a pop-up window opens:
 
@@ -24,11 +38,9 @@ When you click **Advanced**, a pop-up window opens:
 
 
 
-
-
 ### Advanced BE - Systems & Logical units Tab
 
-This tab is available for both **Source** and **Target** components and displays the systems and LUs associated with the selected BE.
+This tab is available for both **Source** and **Target** components and displays the systems and LUs associated with the selected BE. Advanced BE attributes are synchronized between the Source and Target components.
 
 #### Selected Systems and/or LUs
 
@@ -48,7 +60,7 @@ You can expand each LU and configure these values **after selecting an environme
 
 By default, each LU inherits its values from:
 
-1. The environment’s system settings (if defined), or
+1. The environment's system settings (if defined), or
 2. The TDM and Fabric configuration values
 
 You can **override these values per LU** to control and **optimize task execution** behavior:
@@ -59,13 +71,17 @@ You can **override these values per LU** to control and **optimize task executio
 
 
 
+The **Source affinity**, **Target affinity**,  and **Max no. of workers** fields each have a lock icon. The task creator can unlock them to allow the task runner to override these values at execution.
+
+The **Target affinity** field is only enabled once the task creator has populated the Target attributes for the task.
+
 When both **Source** and **Target** components are defined for the task (Load, Extract & Load, Generate & Load):
 
 - **Affinity**
   - The task execution process runs using the **target** affinity
   - The entity extraction runs using the **source** affinity
 - **Max number of workers**
-  - The task execution process uses the **target** maximum number of workers
+  - The task execution process uses the maximum number of workers
 
 Click [here](/articles/TDM/tdm_architecture/03b_task_execution_affinity_and_workers_configuration.md) for detailed information on how task execution determines the effective affinity and maximum number of workers.
 
@@ -88,7 +104,9 @@ The Vertical execution mode can be beneficial when running TDM tasks on a large 
 
 ### Source Environment
 
-Select one TDM environment from the drop-down list. The drop-down list displays the list of available source environments for the user. Only environments that contain [systems with the select task's BE](11_environment_products_tab.md) are displayed. If the source environment is defined as containing sensitive data in the [Environment window](08_environment_window_general_information.md#mask-sensitive-data), the TDM task window displays a message stating that the sensitive data is masked. 
+Select one TDM environment from the drop-down list. The drop-down list displays the list of available source environments for the user. Only environments that contain [systems with the select task's BE](11_environment_products_tab.md) are displayed. If the source environment is defined as containing sensitive data in the [Environment window](08_environment_window_general_information.md#mask-sensitive-data), the TDM task window displays a message stating that the sensitive data is masked.
+
+The Source Environment field has a lock icon. The task creator can unlock it to allow the task runner to select or override the source environment at execution. The source environment can be left empty if its lock icon is open.
 
 ### Policy for Fetching Data
 
@@ -121,4 +139,3 @@ Check this checkbox to add related tables to the task's entities:
 
 
  [![Previous](/articles/images/Previous.png)](14_task_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](15_data_flux_task.md)
-
