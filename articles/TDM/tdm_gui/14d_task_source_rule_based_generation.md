@@ -11,41 +11,56 @@ The following information needs to be set for **Rule-based generation**:
 
 ![rule based](images/task_source_rule_based_gen.png)
 
-- **Business entity** - the task's [BE](https://github.com/k2view-academy/K2View-Academy/blob/Academy_8.0_TDM_9.0/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md). Select a BE from the drop-down list of all the TDM BEs. The **Advanced** setting is **optional** and it enables a partial selection of the systems or the LUs in the task. When clicking **Advanced**, a pop-up window opens with the selected BE's systems and LUs. 
-- **Data generation options**:
-  - Generate new data - new entities are generated. The generated entities are stored in the Test Data Store (Fabric). It is possible to populate also the [Target](17_task_target_component.md) component in the task to load the generated entities to the target environment.
-  - Use generated data in the Test data store - get pre-generated synthetic entities from the Test Data Store and load them into the target environment (set in the Target component). Set the entities subset in the Subset component and set the target environment in the target environment.
+## Lock Icons
 
-## Generate New Data 
+Task fields that support runtime override have a lock icon next to their label. By default, these fields are **locked** — the task creator can click the lock icon to unlock a field and allow the task runner to set or override its value at execution time. See the [full list of attributes available for runtime override](14_task_overview.md#attributes-available-for-runtime-override).
+
+## Business Entity
+
+The task's [BE](04_tdm_gui_business_entity_window.md). Select a BE from the drop-down list of all the TDM BEs. The Business Entity field has a lock icon and follows the same locking behavior described in the [Entities & Referential Data](14b_task_source_component_entities.md#business-entity) article.
+
+The **Advanced** setting is **optional** and enables a partial selection of the systems or LUs in the task. When clicking **Advanced**, a pop-up window opens with the selected BE's systems and LUs.
+
+## Data Generation Options
+
+- **Generate new data** — new entities are generated and stored in the Test Data Store (Fabric). The [Target](17_task_target_component.md) component can optionally be added to load the generated entities into a target environment.
+- **Use generated data in the Test data store** — retrieve pre-generated synthetic entities from the Test Data Store and load them into the target environment. Set the entity subset in the Subset component and the target environment in the Target component.
+
+## Generate New Data
 
 The following attributes need to be set in order to generate new entities:
 
-- Number of entities to generate - this is a mandatory attribute. The number of entities populated by the tester user is [limited by the tester's environment's permission set](10_environment_roles_tab.md#read-and-write-and-number-of-entities) in the Synthetic environment. 
-- Data generation parameters - an optional setting.
+### Number of Entities to Generate
+
+This is a mandatory attribute. The number of entities populated by the tester user is [limited by the tester's environment's permission set](10_environment_roles_tab.md#read-and-write-and-number-of-entities) in the Synthetic environment.
+
+The **Number of entities to generate** field has a lock icon. The task creator can unlock it to allow the task runner to set or override the number of entities at execution time.
 
 ### Data Generation Parameters
 
-The TDM portal is integrated with the Fabric's Broadway editors when populating the data generation parameters in the Requested Entities task’s tab.
+Data generation parameters are optional. The task creator can select which parameters to include in the task and configure their values.
 
-This integration enables the user to select a valid value from a list, set dates, and set distributed parameters:
+Each parameter in the list has a lock icon. The task creator can unlock individual parameters to allow the task runner to override their values at execution. The entire **Data generation parameters** section also has a lock icon on its header, which locks or unlocks all parameters at once.
 
-![data generation params](images/generate_task_data_generation_params.png)
+#### Add Parameters at Execution
 
-### Adding/Removing Data Generation Parameters to the Task 
+The **Add parameters at execution** checkbox, when checked, allows the task runner to add data generation parameters at execution time — beyond those already selected by the task creator.
 
-Check/uncheck the checkbox next to the parameter name in order to select/remove the parameter. You can add a search value to get the required parameter. The selected parameter is added to the window with the default values, if set.
+#### Adding/Removing Data Generation Parameters
 
-Click the information icon next to the parameter to view additional information about the parameter.
+Check/uncheck the checkbox next to the parameter name to select or remove it. A search field is available to filter parameters. When a parameter is selected, it appears in the right panel with its default values, if set.
 
-### Reset the Data Generation Parameter's Value
+Click the information icon next to a parameter to view additional details about it.
 
-Click the black Refresh icon next to the parameter's editor to reset your updates and return to the previous value, if set. The previous value can be the default value or the previous value the user has set when opening and updating a Generate task.
+#### Resetting a Parameter's Value
 
-### Data Generation - Distribution Parameters
+Click the refresh icon next to a parameter's editor to reset your changes and return to the previous value. The previous value can be either the default value or the last saved value for that parameter.
 
-The distribution parameter generates random values according to input distribution settings. The supported distribution types are **normal**, **uniform**, **weighted** and **constant**.
+### Data Generation — Distribution Parameters
 
-The user can edit the distribution type and the related distribution parameters. The distribution parameters are set based on the selected distribution type:
+The distribution parameter generates random values according to input distribution settings. The supported distribution types are **normal**, **uniform**, **weighted**, and **constant**.
+
+The user can edit the distribution type and its related settings:
 
 - **Normal** distribution (gaussian) works using **mean** and **stddev** (standard deviation), and can be bound by **minimum** and **maximum** values, both inclusive.
 
@@ -69,7 +84,7 @@ The user can edit the distribution type and the related distribution parameters.
 
   ![normal dist](images/uniform_dist_example2.png)
 
-- **Weighted** distribution returns a value from the list, based on the value's weight. Weighted distribution uses a 'weights' map, where the keys are the results and the values are positive numbers indicating the entry's weight as a proportion of the whole list. Both, the distributed values and the weights, need to be populated manually.
+- **Weighted** distribution returns a value from the list, based on the value's weight. Weighted distribution uses a 'weights' map, where the keys are the results and the values are positive numbers indicating the entry's weight as a proportion of the whole list. Both the distributed values and the weights need to be populated manually.
 
   Example:
 
@@ -79,11 +94,9 @@ The user can edit the distribution type and the related distribution parameters.
 
   
 
-- **costant** distribution returns the populated value. For example: Set the number of generated addresses to one address for each synthetic customer:
+- **Constant** distribution returns the populated value. For example, set the number of generated addresses to one address for each synthetic customer:
 
   
 
   ![const](images/const_dist_example.png)
-
-​	
 

@@ -68,4 +68,10 @@ The **Save & execute** icon saves the task in the TDM DB and executes the task.
 
 
 
+## Task Lock Icons
+
+Task fields that support runtime override have a lock icon next to their label. By default, these fields are **locked** — the task creator can click the lock icon to unlock a field and allow the task runner to set or override its value at execution time. See the [full list of attributes available for runtime override](14_task_overview.md#attributes-available-for-runtime-override).
+
+
+
  [![Previous](/articles/images/Previous.png)](14_task_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](14a_task_source_component.md)

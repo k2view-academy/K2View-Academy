@@ -14,7 +14,7 @@ Task fields that support runtime override have a lock icon next to their label. 
 
 This field defines the task's [Business Entity (BE)](04_tdm_gui_business_entity_window.md). Select a BE from the drop-down list, which includes all TDM BEs.
 
-The Business Entity field is an exception to the default locking behavior — the lock is **open** by default:
+The Business Entity field is an exception to the default locking behavior in the task — the lock icon is **open** by default:
 
 - If the Business Entity is **not populated**, the lock must remain open so the task runner can populate it at execution:
 
