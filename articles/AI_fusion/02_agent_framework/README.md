@@ -11,9 +11,11 @@
     <li><a href="/articles/AI_fusion/02_agent_framework/07_vector_db_intro.md">Vector Database & RAG Introduction</a></li>
     <li><a href="/articles/AI_fusion/02_agent_framework/08_vector_db_integration.md">Vector Database Integration</a></li>
     <li><a href="/articles/AI_fusion/02_agent_framework/09_chat_playground.md">Chat Playground, Trace and Debug</a></li>
+     <li><a href="/articles/AI_fusion/02_agent_framework/10_security_and_privacy.md">Privacy, Security & Agent Monitoring</a></li>
      <li><a href="/articles/AI_fusion/02_agent_framework/11_setup_and_prerequisites.md">Setup and Prerequisites</a></li>
      <li><a href="/articles/AI_fusion/02_agent_framework/12_project_impl_prep.md">Project Implementation Preparation Guidelines</a></li>
-     <li><a href="/articles/AI_fusion/02_agent_framework/13_chat_playground_customize.md">Chat Playground Branding and Customization</a></li>    
+     <li><a href="/articles/AI_fusion/02_agent_framework/13_chat_playground_customize.md">Chat Playground Branding and Customization</a></li>
+     <li><a href="/articles/AI_fusion/02_agent_framework/14_feedback_integration.md">Feedback Integration</a></li>
 
 
 
