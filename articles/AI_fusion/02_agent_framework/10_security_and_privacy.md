@@ -144,6 +144,23 @@ The same persisted trace data flows into the **Evaluation** workspace, where:
 
 This closes the loop between production monitoring and pre-production quality control: a real customer turn that received negative feedback can be promoted into a reproducible test in minutes, and any future regression that reintroduces the same failure is caught before redeployment. See [Feedback Integration](14_feedback_integration.md) for the full workflow.
 
+### Application Logs
+
+Alongside the structured persistence in the AI Fusion tables, every agent execution also writes to the standard Fabric application log. Logs are the secondary observability surface - most useful when investigating issues that aren't visible cleanly in the Observation module, or on failures.
+
+Log levels follow standard Fabric configuration and can be adjusted globally or per Java package without redeploying agent code.
+
+| Level | What is written |
+|---|---|
+| **INFO** (default) | One entry per LLM invocation with flow, actor, thread, and stream parameters. Useful for tracking call volume and basic lifecycle activity in production. |
+| **DEBUG** | The full input passed to each LLM invocation (messages, tool definitions, parameters); the result returned by each tool call before it is fed back into the LLM; `STEP` / `EXECUTIONS` / insights write events; concurrency-throttle waits (e.g. *"Waiting for available slot for interface X: attempt N/100"* when the per-interface concurrent-call limit is engaged). |
+| **WARN** | Transient or recoverable issues such as SQLite busy retries, output-stream write failures, and misuses of chat-session actors outside a chat flow. |
+| **ERROR** | Failures in the persistence pipeline itself - e.g. failed inserts to `STEP`, `MESSAGES`, or to the aifusion LUI. If these fire, the Observation and audit record for the affected sessions may be incomplete; treat them as alerting signals, not informational noise. |
+
+For production deployments, **INFO** is normally sufficient. Switch a specific agent or component to **DEBUG** when reproducing a behavior whose internal cause is not clear from the Trace and Observation surfaces - for example, when you need to see the exact LLM prompt that was constructed or the exact tool output that the LLM consumed.
+
+> **Note:** DEBUG-level logs include full LLM prompts and tool-call results. Handle accordingly in environments that process sensitive data - whatever the agent saw, the log captures.
+
 
 
 ## Summary
