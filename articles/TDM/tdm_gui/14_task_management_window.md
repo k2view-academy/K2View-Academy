@@ -2,6 +2,8 @@
 
 The Task Management window is the home page of the TDM App. It is the central hub for browsing, organizing, and acting on TDM tasks. The window opens when the user clicks **Tasks** in the top navigation bar and selects the **Task Management** tab.
 
+**All TDM users — Admin, Owner, and Tester — can access the Task Management window**. The tasks displayed depend on the user's permission group and the execution permissions set by each task's creator.
+
 ![Task Management window](images/task_management_window.png)
 
 ## Window Layout
@@ -17,24 +19,15 @@ The header bar provides a **Search** field, and the top-right corner provides th
 
 Tasks are organized into logical groups by domain, team, or use case. Grouping helps task runners find the right task quickly without navigating a flat list.
 
-The left panel displays all available task groups. Clicking a group name filters the right panel to show only the tasks belonging to that group.
+The left panel displays all available task groups. Click a group name to filter the right panel to show only the tasks in that group. Select **All groups** to show tasks across all groups the user has access to, or **My created tasks** to show only tasks created by the logged-in user.
 
 Groups marked with a star (★) are pinned to the top of the list as favorites.
-
-### Viewing Tasks
-
-- **All groups** — shows tasks across all groups the user has access to.
-- **My created tasks** — filters the view to show only tasks created by the logged-in user.
-
-![My created tasks view](images/my_created_tasks.png)
 
 ### Product Predefined Tasks
 
 The **Product predefined tasks** group contains a set of built-in tasks provided out of the box, covering the standard TDM actions: Extract entities, Extract and Load entities, Load entities, Clone entities, Generate entities, Generate and load entities, Reserve entities, and Delete entities.
 
 These generic tasks are created with an empty Business Entity (BE) and environments. They can be executed as-is when the task runner populates the required information in the task execution window, or edited by a TDM Admin user to better fit the organization's business needs.
-
-![Product predefined tasks](images/product_predefined_tasks.png)
 
 ### Creating a New Group
 
@@ -53,25 +46,21 @@ Hovering over a group name in the left panel reveals a **⋯** menu with the fol
 
 ## Task Cards
 
-Each task is displayed as a card in the right panel. The card shows the task name and a task-type icon with the task ID number. The following actions are available on each card:
+Each task is displayed as a card in the right panel. The card shows the task name and a task-type icon with the task ID number. Click the task card to open it for execution.
 
-- **Edit** (pencil icon) — opens the task for editing.
+The following actions are available on each card:
+
+- **Edit** (pencil icon) / **View** (eye icon) — opens the task for editing or view. The edit icon is displayed if the user has permission to edit the task (the task creator or an admin user). Users without edit permission can open the task for view by clicking the eye icon.
 - **Favorite** (star icon) — marks the task as a favorite. Favorited tasks are pinned to the top of their group.
 - **⋯ menu** — opens additional options:
-  - **Save as** — creates a copy of the task as a new task.
-  - **Move to group** — moves the task to a different group or adds it to an additional group.
-  - **Delete from group** — removes the task from the current group without deleting it.
-  - **Delete task** — permanently deletes the task.
+  - **Save as** — creates a copy of the task as a new task. Available to every user who has permission to create a task.
+  - **Move to group** — moves the task to a different group or adds it to an additional group. Available to the task creator or an admin user.
+  - **Delete from group** — removes the task from the current group without deleting it. Available to the task creator or an admin user.
+  - **Delete task** — permanently deletes the task. Available to the task creator or an admin user.
 
 A task card can also be dragged from one group to another directly in the left panel, as an alternative to using the **Move to group** option.
 
 ![Task card actions menu](images/task_card_actions.png)
-
-To open a task for execution, click the task card.
-
-> **Note:** Hovering over the pencil icon on a task card displays an **Edit** tooltip confirming the action.
-
-![Edit tooltip on task card](images/task_card_edit_tooltip.png)
 
 ## Search and Filtering
 
@@ -102,7 +91,7 @@ The advanced filter panel provides the following filter fields:
     </tr>
     <tr>
       <td><strong>Processed data</strong></td>
-      <td>Filter by the type of data the task processes</td>
+      <td>Filter by the type of data the task processes: Entities/Tables/Entities & Tables</td>
     </tr>
     <tr>
       <td><strong>Business entity</strong></td>
@@ -135,16 +124,10 @@ Click **Search** to apply the selected filters. Click **✕** in the search bar 
 
 ![Advanced filter panel](images/task_search_filter.png)
 
-### AI-Assisted Task Search
-
-In addition to manual search and filters, the TDM App includes an optional AI assistant for task discovery. Task runners can describe what they need in plain language, and the AI agent finds the matching task and pre-populates execution parameters automatically — reducing setup time and errors for non-expert users.
+The search returns matching tasks across all task groups.
 
 ## Creating a New Task
 
-Click **New task** in the top-right corner of the window to open the task creation flow. See [Task Components](14_task_conponents.md) for details on creating and configuring tasks.
-
-## Who Can Access the Task Management Window?
-
-All TDM users — Admin, Owner, and Tester — can access the Task Management window. The tasks displayed depend on the user's permission group and the execution permissions set by each task's creator.
+Click **New task** in the top-right corner of the window to open the task creation flow. See [Task Components](14_task_components.md) for details on creating and configuring tasks.
 
 [![Previous](/articles/images/Previous.png)](14_task_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](14_task_components.md)
