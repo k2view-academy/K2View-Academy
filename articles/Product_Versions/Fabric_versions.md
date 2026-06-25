@@ -17,13 +17,13 @@ Please check the release notes for component version support, such as Kafka, Neo
 		<tr>
             <td align="left">
                 <p><a href="/Release_Notes/V8.4/Fabric_Release_Notes_V8.4.5.pdf">8.4.5</a></p>
-                <p>June 25, 2026</p>
+                <p>June 28, 2026</p>
             </td>
             <td>
 			</td>
             <td>
-                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.4.5_22</p>
-                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.4.5_22</p>
+                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.4.5_24</p>
+                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.4.5_24</p>
             </td>
             <td>17.5</td>
             <td>4.1.11</td>
