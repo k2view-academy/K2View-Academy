@@ -45,8 +45,6 @@ TDM 10 delivers several new capabilities that together make up the simplified ta
 
 **Task Groups** — Tasks are organized into logical groups by domain, team, or use case, with collapsible group navigation that makes it fast to find the right task without sifting through a flat list.
 
-**Task Search and AI Assistance ** — An expanded search window in addition to an optional AI agent lets users describe what they need in plain language. It finds the matching task and pre-populates execution parameters automatically, reducing setup errors for non-experts.
-
 **Execution Dashboard** — A unified operations center gives each user a complete view of their task activity — history, in-progress runs, and scheduled executions — with the **ability to rerun any previous execution directly from the UI**.
 
 ### How Simplified Tasks Work

@@ -40,13 +40,13 @@ The **Number of entities to generate** field has a lock icon. The task creator c
 
 Data generation parameters are optional. The task creator can select which parameters to include in the task and configure their values.
 
-Each parameter in the list has a lock icon. The task creator can unlock individual parameters to allow the task runner to override their values at execution. The entire **Data generation parameters** section also has a lock icon on its header, which locks or unlocks all parameters at once.
+Each parameter in the list has a lock icon. The task creator can unlock individual parameters, added to the task,  to allow the task runner to override their values at execution. The entire **Data generation parameters** section also has a lock icon on its header, which locks or unlocks all task parameters at once.
 
 #### Add Parameters at Execution
 
 The **Add parameters at execution** checkbox, when checked, allows the task runner to add data generation parameters at execution time — beyond those already selected by the task creator.
 
-#### Adding/Removing Data Generation Parameters
+#### Adding/Removing Data Generation Parameters from the Task
 
 Check/uncheck the checkbox next to the parameter name to select or remove it. A search field is available to filter parameters. When a parameter is selected, it appears in the right panel with its default values, if set.
 

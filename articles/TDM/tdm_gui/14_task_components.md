@@ -34,7 +34,7 @@ Examples:
 
   ![load task widget](images/task_widget_load.png)
 
-The user can click on each one of the components to open its form and update its settings. The task also has **Save task**, **Save & execute** and **Advanced settings** icons.
+The user can click on each one of the components to open its form and update its settings. The task also has **Save task**, **Save & open execution** and **Advanced settings** icons.
 
 ## Task Components
 
@@ -54,23 +54,21 @@ Click on each one of the components to open and update its form.
 
 ### Advanced Settings
 
-The Advanced settings include **optional** task settings:
+The Advanced settings icon opens a popup window that includes **optional** task settings containing pre and post execution processes, task variables, task scheduling, and execution report settings. 
 
-- [Pre and post execution processes](21_task_pre_and_post_execution_processes.md)
-- [Task variables](23_task_globals_tab.md)
-- [Scheduler](22_task_execution_timing_tab.md)
+Click [here](21_task_advanced_settings.md) for more information about the task advanced setting window. 
 
-### Save or Save & Execute
+### Save or Save & Open Execution
 
 The **Save task** icon saves the task in the TDM DB.
 
-The **Save & execute** icon saves the task in the TDM DB and executes the task.
+The **Save & open execution** icon saves the task in the TDM DB and opens the [task execution window](26_task_execution_window.md) to execute the task.
 
 
 
 ## Task Lock Icons
 
-Task fields that support runtime override have a lock icon next to their label. By default, these fields are **locked** — the task creator can click the lock icon to unlock a field and allow the task runner to set or override its value at execution time. See the [full list of attributes available for runtime override](14_task_overview.md#attributes-available-for-runtime-override).
+Task fields that support runtime override at task execution time have a lock icon next to their label. By default, these fields are **locked** — the task creator can click the lock icon to unlock a field and allow the task runner to set or override its value at execution time. See the [full list of attributes available for runtime override](14_task_overview.md#attributes-available-for-runtime-override).
 
 
 

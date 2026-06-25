@@ -330,8 +330,7 @@ Each update of this list may change the list of available versions for the task.
 
 K2view's TDM displays all available versions created in the source environment for the task's LUs and the selected entities.
 
+**Notes:**
 
-
-Note that both the **Entity list** and the selected data version can be unlocked, allowing the task runner to modify them at execution time.
-
-![load version with entities](images/task_load_data_version_with_entity_list.png)
+- Both the **Entity List** and the selected **Data Version** can be unlocked, allowing the task runner to modify them at execution time.
+- The **Data Version** is always unlocked when the source environment is unlocked, as the task runner may select a different source environment during execution. In this case, the task runner must select a data version that was created for the selected execution source environment.
