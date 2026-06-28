@@ -68,10 +68,24 @@ This means agent authorization is not maintained in a separate, parallel system.
 
 Agents in AI Fusion are not given unbounded latitude to call tools or loop indefinitely. Every agent invocation is wrapped in execution limits enforced by the framework:
 
-| Limit | Purpose |
-|---|---|
-| **Tool calls per agent invocation** | Hard-coded ceiling on tool calls within a single agent invocation. Prevents runaway agents that loop forever or chain too many tool calls in a single turn. The agent invocation is terminated with an explicit error if exceeded. |
-| **Concurrent LLM calls per interface** | Throttle, not a hard cap: when 20 calls are already in-flight against the same LLM Interface, additional calls wait and poll until a slot frees (up to ~50 seconds) before proceeding. Prevents bursty load from overwhelming a single LLM provider. |
+<table>
+  <thead>
+    <tr>
+      <th>Limit</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Tool calls per agent invocation</strong></td>
+      <td>Hard-coded ceiling on tool calls within a single agent invocation. Prevents runaway agents that loop forever or chain too many tool calls in a single turn. The agent invocation is terminated with an explicit error if exceeded.</td>
+    </tr>
+    <tr>
+      <td><strong>Concurrent LLM calls per interface</strong></td>
+      <td>Throttle, not a hard cap: when 20 calls are already in-flight against the same LLM Interface, additional calls wait and poll until a slot frees (up to ~50 seconds) before proceeding. Prevents bursty load from overwhelming a single LLM provider.</td>
+    </tr>
+  </tbody>
+</table>
 
 When the tool-call limit is reached, the agent invocation terminates with an explicit error rather than silently truncating - the failure is visible in the trace and the Observation module.
 
@@ -138,16 +152,48 @@ Any conversation in Observation can be exported as a ZIP package - including the
 
 All trace data is persisted in the AI Fusion data model. The same tables that power the Trace pane and Observation module are queryable as Fabric tables for compliance reporting, external BI tools, or custom dashboards.
 
-| Table | What It Captures |
-|---|---|
-| **`CHAT`** | One row per chat conversation - chat ID, create time, synopsis. |
-| **`STEP`** | One row per conversation turn - user input, assistant output, duration, time-to-first-token. |
-| **`EXECUTIONS`** | One row per agent/actor execution within a turn - status (DONE/ERROR/IN_PROGRESS), name, duration, parent tool-call linkage. |
-| **`MESSAGES`** | One row per LLM message - role (system/user/assistant/tool), content, associated tool calls, timestamp. |
-| **`TOOL_CALLS`** | One row per tool invocation - function name, arguments, response, duration. |
-| **`USAGE`** | One row per LLM call - input tokens, output tokens, cache-read tokens, cache-write tokens, model, interface, duration. |
-| **`FEEDBACK`** | One row per user feedback action - reaction, note, submitter, timestamps. |
-| **`SUMMARY`** | Per-conversation aggregate analytics. |
+<table>
+  <thead>
+    <tr>
+      <th>Table</th>
+      <th>What It Captures</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><code>CHAT</code></strong></td>
+      <td>One row per chat conversation - chat ID, create time, synopsis.</td>
+    </tr>
+    <tr>
+      <td><strong><code>STEP</code></strong></td>
+      <td>One row per conversation turn - user input, assistant output, duration, time-to-first-token.</td>
+    </tr>
+    <tr>
+      <td><strong><code>EXECUTIONS</code></strong></td>
+      <td>One row per agent/actor execution within a turn - status (DONE/ERROR/IN_PROGRESS), name, duration, parent tool-call linkage.</td>
+    </tr>
+    <tr>
+      <td><strong><code>MESSAGES</code></strong></td>
+      <td>One row per LLM message - role (system/user/assistant/tool), content, associated tool calls, timestamp.</td>
+    </tr>
+    <tr>
+      <td><strong><code>TOOL_CALLS</code></strong></td>
+      <td>One row per tool invocation - function name, arguments, response, duration.</td>
+    </tr>
+    <tr>
+      <td><strong><code>USAGE</code></strong></td>
+      <td>One row per LLM call - input tokens, output tokens, cache-read tokens, cache-write tokens, model, interface, duration.</td>
+    </tr>
+    <tr>
+      <td><strong><code>FEEDBACK</code></strong></td>
+      <td>One row per user feedback action - reaction, note, submitter, timestamps.</td>
+    </tr>
+    <tr>
+      <td><strong><code>SUMMARY</code></strong></td>
+      <td>Per-conversation aggregate analytics.</td>
+    </tr>
+  </tbody>
+</table>
 
 Because these are Fabric tables, the same role-based access controls that govern agent data access also govern who can read the audit history.
 
@@ -177,12 +223,32 @@ Alongside the structured persistence in the AI Fusion tables, every agent execut
 
 Log levels follow standard Fabric configuration and can be adjusted globally or per Java package without redeploying agent code.
 
-| Level | What is written |
-|---|---|
-| **INFO** (default) | One entry per LLM invocation with flow, actor, thread, and stream parameters. Useful for tracking call volume and basic lifecycle activity in production. |
-| **DEBUG** | The full input passed to each LLM invocation (messages, tool definitions, parameters); the result returned by each tool call before it is fed back into the LLM; `STEP` / `EXECUTIONS` / insights write events; concurrency-throttle waits (e.g. *"Waiting for available slot for interface X: attempt N/100"* when the per-interface concurrent-call limit is engaged). |
-| **WARN** | Transient or recoverable issues such as SQLite busy retries, output-stream write failures, and misuses of chat-context actors outside a chat flow. |
-| **ERROR** | Failures in the persistence pipeline itself - e.g. failed inserts to `STEP`, `MESSAGES`, or to the aifusion LUI. If these fire, the Observation and audit record for the affected conversations may be incomplete; treat them as alerting signals, not informational noise. |
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>What is written</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>INFO</strong> (default)</td>
+      <td>One entry per LLM invocation with flow, actor, thread, and stream parameters. Useful for tracking call volume and basic lifecycle activity in production.</td>
+    </tr>
+    <tr>
+      <td><strong>DEBUG</strong></td>
+      <td>The full input passed to each LLM invocation (messages, tool definitions, parameters); the result returned by each tool call before it is fed back into the LLM; <code>STEP</code> / <code>EXECUTIONS</code> / insights write events; concurrency-throttle waits (e.g. <em>"Waiting for available slot for interface X: attempt N/100"</em> when the per-interface concurrent-call limit is engaged).</td>
+    </tr>
+    <tr>
+      <td><strong>WARN</strong></td>
+      <td>Transient or recoverable issues such as SQLite busy retries, output-stream write failures, and misuses of chat-context actors outside a chat flow.</td>
+    </tr>
+    <tr>
+      <td><strong>ERROR</strong></td>
+      <td>Failures in the persistence pipeline itself - e.g. failed inserts to <code>STEP</code>, <code>MESSAGES</code>, or to the aifusion LUI. If these fire, the Observation and audit record for the affected conversations may be incomplete; treat them as alerting signals, not informational noise.</td>
+    </tr>
+  </tbody>
+</table>
 
 For production deployments, **INFO** is normally sufficient. Switch a specific agent or component to **DEBUG** when reproducing a behavior whose internal cause is not clear from the Trace and Observation surfaces - for example, when you need to see the exact LLM prompt that was constructed or the exact tool output that the LLM consumed.
 
@@ -192,17 +258,55 @@ For production deployments, **INFO** is normally sufficient. Switch a specific a
 
 ## Summary
 
-| Concern | Mechanism |
-|---|---|
-| **Cross-entity data leakage** | Two complementary mechanisms: (a) per-entity Micro-Database isolation - architectural, always-on - stops cross-entity reads from inside an already-bound conversation; (b) optional JWT claim pinning (`READ_WITH_CLAIM`) - stops the agent from addressing a different LUI in the first place. Each closes a gap the other does not. |
-| **Cross-conversation memory leakage** | Each chat conversation is its own aifusion LUI; per-conversation history, traces, and tool calls are isolated by LUI, not by row-level filtering. |
-| **Sensitive field exposure** | Fabric role-based permissions, including Declarative Field Level Authorization. |
-| **Prompt-injection bypasses of authorization** | Role and entity scope are set by the authenticated request session outside the LLM; the LLM has no API to elevate role or to change the bound IID mid-conversation. |
-| **Accidental or malicious writes** | Recommended posture: configure agent roles as read-only when no write capability is required. |
-| **Runaway agents** | Hard tool-call limit per agent invocation, parallel-call cap. |
-| **Out-of-scope tool use** | Per-agent tool allowlist; tools not in the list are not exposed to the LLM. |
-| **Lack of transparency into agent behavior** | Full Trace pane during execution; Observation module for historical review. |
-| **Long-term auditability** | All conversations, messages, tool calls, token usage, and feedback persisted in Fabric tables, queryable under the same RBAC model. |
-| **Continuous quality control** | Conversations exportable from Observation into the Evaluation workspace as reproducible test cases. |
+<table>
+  <thead>
+    <tr>
+      <th>Concern</th>
+      <th>Mechanism</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Cross-entity data leakage</strong></td>
+      <td>Two complementary mechanisms: (a) per-entity Micro-Database isolation - architectural, always-on - stops cross-entity reads from inside an already-bound conversation; (b) optional JWT claim pinning (<code>READ_WITH_CLAIM</code>) - stops the agent from addressing a different LUI in the first place. Each closes a gap the other does not.</td>
+    </tr>
+    <tr>
+      <td><strong>Cross-conversation memory leakage</strong></td>
+      <td>Each chat conversation is its own aifusion LUI; per-conversation history, traces, and tool calls are isolated by LUI, not by row-level filtering.</td>
+    </tr>
+    <tr>
+      <td><strong>Sensitive field exposure</strong></td>
+      <td>Fabric role-based permissions, including Declarative Field Level Authorization.</td>
+    </tr>
+    <tr>
+      <td><strong>Prompt-injection bypasses of authorization</strong></td>
+      <td>Role and entity scope are set by the authenticated request session outside the LLM; the LLM has no API to elevate role or to change the bound IID mid-conversation.</td>
+    </tr>
+    <tr>
+      <td><strong>Accidental or malicious writes</strong></td>
+      <td>Recommended posture: configure agent roles as read-only when no write capability is required.</td>
+    </tr>
+    <tr>
+      <td><strong>Runaway agents</strong></td>
+      <td>Hard tool-call limit per agent invocation, parallel-call cap.</td>
+    </tr>
+    <tr>
+      <td><strong>Out-of-scope tool use</strong></td>
+      <td>Per-agent tool allowlist; tools not in the list are not exposed to the LLM.</td>
+    </tr>
+    <tr>
+      <td><strong>Lack of transparency into agent behavior</strong></td>
+      <td>Full Trace pane during execution; Observation module for historical review.</td>
+    </tr>
+    <tr>
+      <td><strong>Long-term auditability</strong></td>
+      <td>All conversations, messages, tool calls, token usage, and feedback persisted in Fabric tables, queryable under the same RBAC model.</td>
+    </tr>
+    <tr>
+      <td><strong>Continuous quality control</strong></td>
+      <td>Conversations exportable from Observation into the Evaluation workspace as reproducible test cases.</td>
+    </tr>
+  </tbody>
+</table>
 
 Together, these mechanisms ensure that agents created with AI Fusion operate within the same governance, security, and observability envelope as the rest of the K2view Data Product platform - not as a separate, less-governed AI surface bolted on top of it.
