@@ -49,17 +49,23 @@ Every batch process in the execution is listed as a separate row in the monitor 
 
 Rows appear in execution order: pre-execution processes first, then LUs in hierarchy order, then post-execution processes. Pre- and post-execution process rows do not show entity counts (displayed as **-**).
 
+![entity monitor](images/entity_based_monitor.png)
+
 ### Table-based Tasks
 
 Table-based tasks follow the same structure but include an additional **Interface** column (between Process name and Process type) identifying the database interface for each batch process. Pre- and post-execution processes, if added to the task, are also listed as separate rows.
 
 Process types for table-level rows are **Delete tables**, **Extract & Load tables**, **Extract tables**, or **Load tables**, depending on the task actions.
 
+![table monitor](images/table_monitor.png)
+
 Each table-level process row can be **expanded** to view its internal breakdown:
 - **Schema** level — the schema processed within the interface
 - **Table** level — the individual table name, number of partitions (if applicable), and record counts (Total, Succeeded, Failed)
 
-The table can be **grouped by interface** using the **Toggle grouping** button, which reorganizes rows into interface-level groups (e.g., Interface: CRM_DB (4), Interface: BILLING_DB (2)).
+![table monitor](images/table_monitor_2.png)
+
+The process table in the window can be **grouped by interface** using the **Toggle grouping** button, which reorganizes rows into interface-level groups (e.g., Interface: CRM_DB (4), Interface: BILLING_DB (2)).
 
 ## Actions
 
