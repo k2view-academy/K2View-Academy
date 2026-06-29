@@ -4,19 +4,19 @@ The **Permission Groups Mapping** window displays the mapping between Fabric rol
 
 The relation between Fabric roles and TDM Permission Groups is many-to-one, i.e. one or multiple Fabric role(s) can be mapped into a given TDM Permission Group.
 
-This mapping must be added by the TDM Portal setup activities and is saved in [permission_groups_mapping TDM DB table](/articles/TDM/tdm_architecture/02_tdm_database.md#permission_groups_mapping).
+This mapping must be added by the TDM App setup activities and is saved in [permission_groups_mapping TDM DB table](/articles/TDM/tdm_architecture/02_tdm_database.md#permission_groups_mapping).
 
 ### Who Can Map a Fabric Role to a TDM Permissions Group?
 
 Only [Admin users](02_tdm_gui_user_types.md#admin) can add, remove, or edit a mapping of a Fabric role to a permission group.
 
-The TDMDB creation script inserts an initial record to **permission_groups_mapping TDM DB table** to map Fabric **admin role** to the **Admin** TDM Permission Group. This enables an admin user (attached to Fabric admin role) to populate the initial TDM Permission Groups mapping in the TDM Portal:
+The TDMDB creation script inserts an initial record to **permission_groups_mapping TDM DB table** to map Fabric **admin role** to the **Admin** TDM Permission Group. This enables an admin user (attached to Fabric admin role) to populate the initial TDM Permission Groups mapping in the TDM App:
 
 ![permission groups window](images/permission_group_mapping_window.png)
 
 The Permission Groups Mapping window includes an **Allow Task Creation** column, which indicates whether users mapped to a Tester permission group can create TDM tasks. See [Tester](02_tdm_gui_user_types.md#tester) for more information about the two types of Testers.
 
-Note that if Fabric is set to authenticate using SAML, LDAP, or AD/LDAP, you must add the following record to **permission_groups_mapping** TDM DB table **before the first log in** to the TDM Portal:
+Note that if Fabric is set to authenticate using SAML, LDAP, or AD/LDAP, you must add the following record to **permission_groups_mapping** TDM DB table **before the first log in** to the TDM App:
 
 ```
 insert into public.permission_groups_mapping (

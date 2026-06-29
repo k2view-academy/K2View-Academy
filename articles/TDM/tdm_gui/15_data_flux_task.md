@@ -32,7 +32,7 @@ The following users can create a data snapshot task:
 
 To load a data snapshot, open the [Subset](15a_entity_subset.md) form. In addition to the standard subsetting settings, the form includes a **Select data version to load** section with a lock icon.
 
-![Data subset settings - select version](images/task_subset_select_data_version.png)
+![Data subset settings - select version](images/task_load_data_version.png)
 
 Use the **From date** and **To date** fields to filter the list of available snapshots by date range. The table below displays all matching snapshots with the following details:
 

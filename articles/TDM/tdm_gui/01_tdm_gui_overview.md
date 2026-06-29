@@ -1,17 +1,17 @@
-# TDM Portal Overview
+# TDM App Overview
 
-The TDM Portal is a web-based application that helps users to easily control and manage test data. It has 2 main functions:
+The TDM App is a web-based application that helps users to easily control and manage test data. It has 2 main functions:
 
 - TDM administrative activities - this function defines TDM Business Entities, system, environments, permissions and reports.
 - TDM copy activities - this function creates and executes TDM tasks that provide a selected subset of entities or tables to a selected environment.
 
-TDM settings and tasks are saved in the [TDM PostgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Each TDM activity, created by a user via the TDM Portal, updates the TDM DB. 
+TDM settings and tasks are saved in the [TDM PostgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Each TDM activity, created by a user via the TDM App, updates the TDM DB. 
 
-The TDM Portal uses APIs to connect to the TDM DB in order to retrieve and update TDM settings and tasks.
+The TDM App uses APIs to connect to the TDM DB in order to retrieve and update TDM settings and tasks.
 
-## TDM Portal - Login
+## TDM App - Login
 
-The TDM Portal application is pre-integrated with the [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md). The user logs into the Fabric Web Framework and **Fabric authenticates the user**.  
+The TDM App application is pre-integrated with the [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md). The user logs into the Fabric Web Framework and **Fabric authenticates the user**.  
 
 Fabric works with several authentication providers. Each authenticator is responsible for authenticating a user, and provides a user-ID and the user's roles. The following are authentication providers, supported by Fabric:
 
@@ -22,15 +22,15 @@ Fabric works with several authentication providers. Each authenticator is respon
 
 [Click for more information about Fabric's User Identification and Access Management](/articles/26_fabric_security/07_user_IAM_overview.md).
 
-To log into the TDM Portal, click the Web Framework app menu ![web framework app menu](/articles/30_web_framework/images/30_02_icon.PNG), and select the TDM option.
+To log into the TDM App, click the Web Framework app menu ![web framework app menu](/articles/30_web_framework/images/30_02_icon.PNG), and select the TDM option.
 
 ![application list](images/fabric_web_applications_list.png)
 
-## TDM Portal - Home Page
+## TDM App - Home Page
 
-After logging in, the TDM Portal opens on the **Manage Your Tasks** home page, which displays the available TDM tasks:
+After logging in, the TDM App opens on the **Manage Your Tasks** home page, which displays the available TDM tasks:
 
-![tdm home page](images/tdm_home_page.png)
+![tdm home page](images/task_management_window.png)
 
 The home page has the following areas:
 
@@ -41,11 +41,11 @@ The home page has the following areas:
 - **Search bar** – search for a task by name across all groups.
 - **New task** and **New group** buttons (top right) – available to users with task creation permissions.
 
-## TDM Portal Navigation
+## TDM App Navigation
 
 ### TDM Navigation Tabs
 
-The following tabs are displayed at the top of the TDM Portal:
+The following tabs are displayed at the top of the TDM App:
 
 ![tdm navigation](images/tdm_gui_navigation_pane.png)
 
@@ -62,7 +62,7 @@ The Settings tab contains the following sub-tabs:
 
 ### Masking-Only Mode
 
-- A *Masking-only* mode has been added to the TDM Portal in TDM 9.3. When no [Business Entities (BEs)](04_tdm_gui_business_entity_window.md) are implemented, the TDM Portal now automatically operates in *Masking-only* mode, which supports table-level tasks exclusively. 
+- A *Masking-only* mode has been added to the TDM App in TDM 9.3. When no [Business Entities (BEs)](04_tdm_gui_business_entity_window.md) are implemented, the TDM App now automatically operates in *Masking-only* mode, which supports table-level tasks exclusively. 
 
 - To enable the full functionality with BE-based tasks: 
 
@@ -70,13 +70,13 @@ The Settings tab contains the following sub-tabs:
 
   - Define at least one Business Entity (BE) to enable the creation of BE-based tasks.
 
-## TDM Portal Navigation - Back Button
+## TDM App Navigation - Back Button
 
-The TDM Portal uses a **Back** button to navigate between screens. Click the **Back** button to return to the previous screen.
+The TDM App uses a **Back** button to navigate between screens. Click the **Back** button to return to the previous screen.
 
 ### TDM Delete
 
-A Delete activity generally changes the status of a selected object to **Inactive** and does not delete the object from the TDM DB. The object remains in the TDM DB and its history can be displayed in the TDM Portal.
+A Delete activity generally changes the status of a selected object to **Inactive** and does not delete the object from the TDM DB. The object remains in the TDM DB and its history can be displayed in the TDM App.
 
 Inactive objects cannot be repaired.
 

@@ -17,9 +17,7 @@ When you start the task creation with the Target component - e.g., a delete task
 ![target example1](images/task_target_component_delete_only.png)
 
 
-When you set the Source component before the Target, the selected [Business entity](14b_task_source_component_entities.md#business-entity) is already populated in the Target form:
-
-![target example2](images/task_target_component_load_entities1.png)
+When you set the Source component before the Target, the selected [Business entity](14b_task_source_component_entities.md#business-entity) is already populated in the Target form.
 
 ## Business Entity 
 
@@ -82,7 +80,7 @@ The **Target environment** field has a lock icon. The task creator can lock or u
 
 ## Actions to perform
 
-The **Actions to perform** is a required field. The following actions can be performed on the selected testing environment. You can select one or multiple actions. The task actions cannot be overridden by the task runner at execution time.
+The **Actions to perform** is a required field. The following actions can be performed on the selected testing environment. You can select one or multiple actions. The task actions **cannot** be overridden by the task runner at execution time.
 
 ![target example3](images/task_target_component_task_actions.png)
 

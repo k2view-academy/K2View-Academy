@@ -91,4 +91,4 @@ Clicking **Previous Executions** opens the execution history for this task. Task
 
 Once the task runner has reviewed and set any editable parameters, click **Execute Task** to run. The execution uses the current parameter values for this run only — the saved task is not affected.
 
- [![Previous](/articles/images/Previous.png)](14_task_management_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](14_task_components.md)
+ [![Previous](/articles/images/Previous.png)](21_task_advanced_settings.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](26_task_execution.md)
