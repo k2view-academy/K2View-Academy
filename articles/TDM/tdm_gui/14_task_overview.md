@@ -1,140 +1,231 @@
 # TDM Task Overview
 
-Data generation or extract, provisioning, and entity reservation are implemented by creating and executing TDM tasks. 
+Data generation or extract, provisioning, and entity reservation are implemented by creating and executing TDM tasks.
 
-A TDM task is created in the TDM Portal and holds a list of instructions and settings that define the data source, task actions, subset of processed entities and/or tables, the target environments and additional information. A TDM task example: Extract 5 customers with small and medium business plans from Production and load them into the UAT target environment.
+A TDM task is created in the TDM App and holds a list of instructions and settings that define the data source, task actions, subset of processed entities and/or tables, the target environments and additional information. For example, a TDM task might: Extract 5 customers with small and medium business plans from Production and load them into the UAT target environment.
 
-The actual data processing and/or entity reservation is performed by the task execution, where each task can be executed multiple times.
+The actual data processing and entity reservation are performed during task execution, where each task can be executed multiple times.
 
-## Task Actions
+## TDM 10: Simplified Task Management and Execution
 
-The following task actions are supported by TDM:
+### Overview
 
-- **Extract** - extracts the selected entities and/or tables from the selected source environment. The data can be saved in the Test Data Store (Fabric) for a later use.
-- **Generate** - generates synthetic entities. Either one of the entities' generation methods can be applied: Rule-based data generation or AI-based data generation. 
-- **Load** - provisions the selected entities and/or tables to the selected target environment. The target environment can be **AI training** to run AI-based training on a subset of entities. 
-- **Delete** - deletes the selected entities from the target environment.
-- **Reserve** - reserves the selected entities in the target environment.
+TDM 10 introduces a revolutionary simplified way to provision and manage test data — one that makes it easier for testers, developers, and business users to run tasks independently, with confidence, and without needing deep TDM expertise.
 
+The classic TDM workflow remains fully supported: users can continue creating and executing tasks as they always have. TDM 10 adds a complementary model on top of that — one where expert engineers define governed tasks that can be used as templates, and task runners run them through a clean, guided UI, editing only the attributes the creator has explicitly allowed.
 
+The result is a **governed self-service model that enables non-experts to run approved tasks safely while allowing experts to retain full control over task behavior**.
 
-## Task Architectural Widget
+### A Simpler Way to Execute Tasks
 
-TDM 9.0 redesigns the task creation flow in order to simplify the task creation or edit and make it more intuitive. A **graphic architectural widget** guides the user on the task’s related component:
+The simplified execution model is designed around two goals: making life easier for testers, and giving task creators better control over what each user group can do.
 
-- [Source](14a_task_source_component.md) – defines the data source of task’s entities and/or tables. The data source can be either a source environment or a synthetic data generation.
+Rather than requiring every task runner to understand the full scope of a task's configuration, TDM 10 lets qualified engineers set that up once — and then hand off a streamlined execution experience to the people who need it. Task runners get a guided window tailored to their role, with sensible defaults already in place and only the relevant parameters exposed.
 
-- [Subset](15_task_subset_component.md) – defines the entities’ subset or the tables’ filter. For example, select 50 customers that live in NY and have a Gold status.
+This means:
 
-- [Test Data store](16_task_test_data_store_component.md) – this is Fabric that can be used as a staging DB to save the task’s entities and/or tables.
+- Testers and business users can run tasks without technical assistance
+- Creators retain full control over governance, scope, and defaults
+- Each user group sees only the tasks they are permitted to execute
+- Only attributes the creator has explicitly unlocked can be changed at runtime
 
-- [Target](17_task_target_component.md) – defines the target environment for the task. It can be either a testing environment or AI training to create a training model for generating AI-based synthetic entities.
-  
+![task management](images/task_management_window.png)
 
-**The task actions are set by components that are selected and set by the user**. The **Test Data Store must be set for all tasks**.
+### Key Capabilities in TDM 10
 
-Examples: 
+TDM 10 delivers several new capabilities that together make up the simplified task execution experience:
 
-- The user wishes to extract entities from Production and save them in the Test Data Store (Fabric) for a later use. The user needs to select the Source component:
+**Tasks as Templates** — Pre-defined tasks can be used as templates. The creator sets the purpose, scope, and default values once; task runners run from that baseline every time. The task itself acts as a reusable template. **Runtime changes apply only to the current execution** and never modify the saved task definition.
 
-  
+**Creator Controls** — Task creators decide, attribute by attribute, what task runners may change. Everything else stays locked, ensuring governance and defaults are preserved across every execution.
 
-  ![extract task widget](images/task_widget_extract_only.png)
+**Self-Service UI** — Execution is available directly in the TDM Self-Service portal. A guided window walks task runners through only the parameters relevant to them — no API calls, no technical background required.
 
-- The user wishes to extract entities from Production and load them into the UAT environment. The user needs to select both the Source and the Target components:
+**Expanded Parameter Overrides** — A broad set of attributes can now be marked as editable by the creator, giving task runners meaningful flexibility exactly where it's appropriate.
+
+**Task Groups** — Tasks are organized into logical groups by domain, team, or use case, with collapsible group navigation that makes it fast to find the right task without sifting through a flat list.
+
+**Execution Dashboard** — A unified operations center gives each user a complete view of their task activity — history, in-progress runs, and scheduled executions — with the **ability to rerun any previous execution directly from the UI**.
+
+### How Simplified Tasks Work
 
-  ![load task widget](images/task_widget_load.png)
+The model is built on a clear separation of roles.
 
+#### Task Creator
 
+The creator is a qualified engineer or data expert who:
 
-The user can click on each one of the components to open its form and update its settings. The task also has **Save task**, **Save & execute** and **Advanced settings** icons.
+1. Sets the task's purpose, scope, and default parameter values
+2. Marks each attribute as either editable (task runner may override) or locked (task runner cannot change)
+3. Optionally leaves editable attributes empty, so the task runner provides the value at runtime
+4. Assigns which users or Fabric roles are permitted to execute the task
 
-## Who Can Create a Task?
+Only users with the appropriate Fabric roles can create tasks.
 
--  Admin users.
--  Environment owners can create a TDM task for their environment.
--  Testers who can create a TDM task for the environments that they are attached to by a [TDM Environment Permission Set](10_environment_roles_tab.md):
-   - Source environment, testers must be attached to the source environment by a permission set with [Read](10_environment_roles_tab.md#read-and-write-and-number-of-entities) access.
-   - Target environment, testers must be attached to the target environment by a permission set with [Write](10_environment_roles_tab.md#read-and-write-and-number-of-entities) access.
+#### Task Runner
 
+The task runner — a developer, tester, or business user — works in a simple, guided execution window:
 
+1. Sees all task parameters, with clear visual indication of which are editable
+2. Edits only the attributes the creator has unlocked
+3. Runs the task without modifying the underlying template
+4. Can view and rerun previous executions from the dashboard
 
-## TDM Tasks List Window
+Execution never alters the task itself. The template remains intact for future runs.
 
-The TDM Task List displays, by default, the list of all Active tasks in TDM. 
-It displays a list of settings of each task, and these settings can also be used for filtering the displayed tasks.
 
-The below screenshot shows an example of a Tasks window: 
+### Attributes Available for Runtime Override
 
-  ![tasks list](images/tdm_task_list_window.png)
+When defining a task, the creator selects which of the following attributes task runners may adjust at runtime. Anything not marked editable is locked and cannot be changed.
 
-  
-
-1. Click **Show/Hide Columns** to open a pop-up window, which displays the list of available fields for each task. 
-
-2. To display additional fields, click the fields.
-
-3. To remove a field from the display, click the field.
-
-4. To find a field, populate the **Search** box as a means to filter the tasks by the searched value.
-
-5. If the task has a description, an information icon is displayed next to the task name. Hover over the information icon to view the task description.
-
-The TDM Portal displays a list of icons next to each task record:
-
-- ![task icon](images/execute_task_icon.png)[Execute Task](26_task_execution.md). 
-- ![task icon](images/hold_task_icon.png) [Hold Task](26_task_execution.md#holding-task-execution), set the task temporarily to *On Hold*.
-- ![task icon](images/save_as_icon.png) Save As, copy the task into a new task.
-- ![task icon](images/task_execution_history_icon.png)[Task Execution History](27_task_execution_history.md), display the execution history of the selected task.
--  ![delete icon](images/delete_task_icon.png) Delete the task.
-
-
-
-### Disabled Tasks
-
-A Task that contains [disabled systems](11_environment_products_tab.md#disabling-the-environments-systems) on its source and/or target environment cannot be executed. The Execute task icon is disabled for the task and a message is shown for the user when hovering over the disabled Execute task icon:
-
-![disabled task](images/task_list_disabled_task.png) 
-
-## How Do I Create or Edit a Task?
-
-1. Click **New Task** in the right corner of the Tasks List window.
-2. To open a selected task, click the **Task Name** of the task.
-3. Click the **Back** or **Next** buttons to move between the tabs. 
-4. Click **Finish** in the last tab to create the task.
-Once the task has been edited, a new version with a new task_id is created. The old version is saved in the TDM DB for tracking purposes and its status is set to *Inactive*.
-
-## Task Components
-
-### Task Name
-
-When creating a new task or opening a task, the **Task name** form opens. Populating the Task name and Task description fields is optional. If no Task name is set, a default Task name is generated with some basic information about the task.
-
-You can exit each form, including the Task name form, by clicking any task component. You can re-open the Task name form by clicking the Task name in the upper-left corner of the window.
-
-![task name](images/task_name_form.png)
-
-### Task Architectural Widget
-
-Each task must include the [Test Data Store](16_task_test_data_store_component.md) (Fabric) and at least one environment: [Source](14a_task_source_component.md) or [Target](17_task_target_component.md). A task can include Source only, Target only, or both environments.
-
-Click on each one of the components to open and update its form.
-
-### Advanced Settings
-
-The Advanced settings include **optional** task settings:
-
-- [Pre and post execution processes](21_task_pre_and_post_execution_processes.md)
-- [Task variables](23_task_globals_tab.md)
-- [Scheduler](22_task_execution_timing_tab.md)
-
-### Save or Save & Execute
-
-The **Save task** icon saves the task in the TDM DB.
-
-The **Save & execute** icon saves the task in the TDM DB and executes the task.
-
-
-
- [![Previous](/articles/images/Previous.png)](13_reserved_entities_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](14a_task_source_component.md)
-
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>What the Task Runner Can Do</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Business Entity (BE)</strong></td>
+      <td>Select a BE at runtime if left empty in the template; locked if populated by the creator</td>
+    </tr>
+    <tr>
+      <td><strong>Source Environment</strong></td>
+      <td>Pick a different source environment per run</td>
+    </tr>
+    <tr>
+      <td><strong>Target Environment</strong></td>
+      <td>Pick a different target environment per run</td>
+    </tr>
+    <tr>
+      <td><strong><a href="/articles/TDM/tdm_gui/15a_entity_subset.md">Selection Method</a></strong></td>
+      <td>The following attributes can be overridden:
+        <ol>
+          <li>The selection method itself</li>
+          <li>Selection method attributes. For example: edit the business parameter values, edit the custom logic flow and/or input parameter values</li>
+          <li>Number of entities</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Synthetic Data Generation Parameters</strong></td>
+      <td>Edit the parameter values and/or add new parameters</td>
+    </tr>
+    <tr>
+      <td><strong>Task Globals (Variables)</strong></td>
+      <td>Provide or override values for Fabric Global variables defined in the task</td>
+    </tr>
+    <tr>
+      <td><strong>Entity Reservation</strong></td>
+      <td>Enable or disable entity reservation, and set how long reserved entities are held (units and value)</td>
+    </tr>
+    <tr>
+      <td><strong>Data Version (Snapshot)</strong></td>
+      <td>Select an existing snapshot to load (load tasks), or set the retention period for a newly extracted data version (extract tasks)</td>
+    </tr>
+    <tr>
+      <td><strong>Per-LU Settings</strong></td>
+      <td>Override per-LU execution settings: maximum number of workers, source affinity, and target affinity</td>
+    </tr>
+    <tr>
+      <td><strong>Table Filters</strong></td>
+      <td>Adjust filter values applied to reference tables included in the task</td>
+    </tr>
+    <tr>
+      <td><strong>Pre-Execution Process Inputs</strong></td>
+      <td>Supply input parameter values for pre-execution processes</td>
+    </tr>
+    <tr>
+      <td><strong>Post-Execution Process Inputs</strong></td>
+      <td>Supply input parameter values for post-execution processes</td>
+    </tr>
+    <tr>
+      <td><strong>Execution Note</strong></td>
+      <td>Attach a free-text note to the execution for tracking or documentation purposes</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+### Access Control and Task Groups
+
+Task creators control not just *what* task runners can change, but *who* can execute at all.
+
+During task creation, the creator can restrict execution to:
+
+- The creator only
+- The creator's user group
+- Specific named users or Fabric roles
+- All users
+
+This permission model integrates directly with Fabric roles, so access follows the same identity framework used across the K2View platform.
+
+Tasks are also assigned to **task groups** — logical collections organized by domain, team, or use case. Task runners browse tasks through collapsible group navigation rather than a flat list, making it much faster to find the right task.
+
+
+
+### Simplified Execution at a Glance
+
+<table>
+  <thead>
+    <tr>
+      <th>Capability</th>
+      <th>Classic Execution (still supported)</th>
+      <th>Simplified Execution — TDM 10</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Parameter overrides</td>
+      <td>Limited UI support; primarily through APIs or task updates</td>
+      <td>Full UI support</td>
+    </tr>
+    <tr>
+      <td>Override scope</td>
+      <td>Limited set of attributes</td>
+      <td>Configurable per attribute by the creator</td>
+    </tr>
+    <tr>
+      <td>Self-service execution</td>
+      <td>Requires technical knowledge</td>
+      <td>Guided UI, no expertise needed</td>
+    </tr>
+    <tr>
+      <td>Execution permissions</td>
+      <td>Open to all permitted users</td>
+      <td>Creator controls who can execute</td>
+    </tr>
+    <tr>
+      <td>Rerun previous execution</td>
+      <td>Not available in UI</td>
+      <td>Supported via Execution Dashboard</td>
+    </tr>
+    <tr>
+      <td>Editable vs. locked parameters</td>
+      <td>Not available</td>
+      <td>Per-attribute, creator-defined</td>
+    </tr>
+    <tr>
+      <td>Task discovery</td>
+      <td>Full task list</td>
+      <td>Groups + enhanced search + AI agent</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+## Summary
+
+TDM 10's simplified task execution model makes it easy for any team member to run test data tasks confidently — without needing to understand the full configuration behind them. Expert engineers define the template and the guardrails once. Testers, developers, and business users execute from a clean, guided interface, with exactly the flexibility they need and nothing more.
+
+The classic TDM workflow is still there for those who want it. Simplified execution is an additive capability — a better experience for the teams that need it most.
+
+
+
+
+
+ [![Previous](/articles/images/Previous.png)](13_reserved_entities_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](14_task_management_window.md)

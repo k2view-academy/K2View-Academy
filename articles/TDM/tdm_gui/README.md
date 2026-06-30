@@ -15,7 +15,9 @@
 <li><a href="11_environment_products_tab.md">Environment Systems Tab</a></li>   
 <li><a href="12_environment_globals_tab.md">Environment Variables Tab</a></li>  
 <li><a href="13_reserved_entities_window.md">Reserved Entities Window</a></li>  
-<li><a href="14_task_overview.md">TDM Task Overview</a></li>  
+<li><a href="14_task_overview.md">TDM Task Overview</a></li>
+<li><a href="14_task_management_window.md">Task Management Window</a></li> 
+<li><a href="14_task_components.md">Task Components</a></li>    
 <li><a href="14a_task_source_component.md">Task - Source Component</a></li>  
 <li><a href="15_task_subset_component.md">Task - Subset Component</a></li>  
 <li><a href="16_task_test_data_store_component.md">Task - Test Data Store Component</a></li>    
@@ -23,9 +25,11 @@
 <li><a href="18_task_provision_entities_from_source_env.md">How to Provision Entities from a Source Environment</a></li>
 <li><a href="19_task_synthetic_data_generation.md">Synthetic Data Generation</a></li> 
 <li><a href="20_task_provision_tables.md">How to Provision Tables from a Source Environment</a></li>     
-<li><a href="25_task_tdmdb_tables.md">Task - TDM DB Tables</a></li>  
-<li><a href="26_task_execution.md">Task Execution</a></li> 
-<li><a href="27_task_execution_history.md">Task Execution History</a></li>
+<li><a href="26_task_execution_window.md">Task Execution Window</a></li>    
+<li><a href="26_task_execution.md">Task Execution Process</a></li> 
+<li><a href="27_task_execution.md">Task Execution History Monitor</a></li>
+<li><a href = "28_task_execution_dashboard.md">Execution Dashboard Window</a></li>    
+<li><a href="25_task_tdmdb_tables.md">Task - TDM DB Tables</a></li> 
 <li><a href="TDM_Task_Execution_Flows_APIs/README.md">TDM - Task Execution Using APIs</a></li>    
 <li><a href="TDM_Dashboard_User_Guide.md">TDM Reports</a></li>
 

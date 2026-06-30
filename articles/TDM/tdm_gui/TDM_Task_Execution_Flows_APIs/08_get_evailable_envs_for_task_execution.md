@@ -197,6 +197,23 @@ Get the list of TDM environments that are available for the user based on the fo
 <p>Populated by "extract", "load", or "reserve".</p>
 </td>
 </tr>
+<tr>
+<td valign="top" width="100pxl">
+<p>clone_ind</p>
+</td>
+<td valign="top" width="100pxl">
+<p>Boolean</p>
+</td>
+<td valign="top" width="100pxl">
+<p>No</p>
+</td>
+<td valign="top" width="100pxl">
+<p>False</p>
+</td>
+<td width="300pxl" valign="top">
+<p>True/False. Set to true when the task uses the Entity Clone selection method.</p>
+</td>
+</tr>
 </tbody>
 </table>
 

@@ -1,9 +1,9 @@
-# TDM Portal - Permission Groups (User Types)
+# TDM App - Permission Groups (User Types)
 
 There are three main types of TDM users, each with different permissions for different activities:
 - Admin
 - Owner
-- Tester User
+- Tester
 
 Each type is called a **Permission Group**. 
 
@@ -13,7 +13,9 @@ Below are more detailed descriptions of the Permission Groups:
 
 ## Admin 
 
-An Admin user can execute all activities in the TDM Portal application and is responsible for the following activities:
+An Admin can execute all activities in the TDM App application. 
+
+Admins usually also define the [TDM implementation in Fabric](/articles/TDM/tdm_implementation/03_tdm_fabric_implementation_flow.md). They can execute all activities in the TDM App and are responsible for the following activities:
 
 - Create, edit or delete [Business Entities](04_tdm_gui_business_entity_window.md) and attach Logical Units or post-execution processes to each Business Entity.
 - Create, edit or delete [systems](05_tdm_gui_product_window.md).
@@ -21,8 +23,6 @@ An Admin user can execute all activities in the TDM Portal application and is re
 - Attach [environment owners](08_environment_window_general_information.md#environment-owners) to each environment.
 - Define [permission sets](10_environment_roles_tab.md) in each environment and define permissions per permission set.
 - View and download the [TDM reports](TDM_Dashboard_User_Guide.md).
-
-The Admin user can also create, delete, edit, and execute [TDM tasks](14_task_overview.md) 
 
 ## Owner 
 
@@ -42,17 +42,20 @@ Environment Owners can execute the following activities in their environment:
 
 - Attach users to TDM environment's permission sets.
 
-  Environment Owners cannot add or delete an environment, and cannot add or remove Environment Owners from the environment.
+  Environment Owners cannot add or delete an environment and cannot add or remove Environment Owners from the environment.
 
-## Tester User
+## Tester
 
-A Tester User can create and execute TDM tasks based on their TDM environment's permission set. 
+TDM 10 supports two types of Testers, based on the **Allow Task Creation** setting defined in the [Permission Groups Mapping](02a_permission_group_mapping_window.md) window:
+
+- **Testers with Allow Task Creation enabled** – Experienced testers who can create, edit, and execute TDM tasks based on their TDM environment's permission set. They can also designate task executions to other users.
+- **Testers with Allow Task Creation disabled** – Testers who can only execute pre-created tasks that have been designated to them. They can edit some execution parameters when running a task, but cannot create or delete tasks.
 
 ## Permission Groups Mapping
 
 ### How Does TDM Identify the User Type (Permission Group)? 
 
-The TDM Portal application is pre-integrated with [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md). The user logs into the Fabric Web Framework and **Fabric authenticates the user**. The TDM Portal application gets the **user id** and the user's **Fabric roles** from the user's session. 
+The TDM App application is pre-integrated with [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md). The user logs into the Fabric Web Framework and **Fabric authenticates the user**. The TDM App application gets the **user id** and the user's **Fabric roles** from the user's session. 
 
 The users are defined and each user can be attached to one or several user groups in the organization. 
 
@@ -60,11 +63,11 @@ The user groups are defined in the organization's service provider and must be d
 
 Our assumption is a **one-to-one relation between a Fabric role and a user group in the organization's service provider**.
 
-[Click for more information about Fabric's User Identification and Access Management](/articles/26_fabric_security_iam/07_user_IAM_overview.md).
+[Click for more information about Fabric's User Identification and Access Management](/articles/26_fabric_security/07_user_IAM_overview.md).
 
 The mapping of each Fabric role to a TDM Permission Group is done by the [Permission Groups Mapping](02a_permission_group_mapping_window.md) TDM window and is kept in the [permission_groups_mapping TDM DB table](/articles/TDM/tdm_architecture/02_tdm_database.md#permission_groups_mapping).
 
-The TDM Portal application **identifies the user type (Permission Group) by its Fabric roles**.
+The TDM App application **identifies the user type (Permission Group) by its Fabric roles**.
 
 The following diagram illustrates the mapping between Fabric roles and TDM permission groups:
 
@@ -76,7 +79,7 @@ The following diagram illustrates the mapping between Fabric roles and TDM permi
 
 - User id **johnD123** is a tester and is attached to **testers1** and **testers2** Fabric roles.
 
-- User id **clarkG** is a tester and is attached to **testers1** Fabric role.
+- User id **clarkG** is an experienced tester and is attached to **seniorTesters** Fabric role.
 
 - User id **janeR1** is a team leader and is attached to **testingTeamLeaders** Fabric role.
 
@@ -84,46 +87,53 @@ The following diagram illustrates the mapping between Fabric roles and TDM permi
 
 - Each group has a Fabric role with the same name as the Fabric role.
 
-- The **testers1**, **testers2**, **testingTeamLeaders**, and **testingAdmin** Fabric roles are mapped to TDM Permission Groups as follows:
+- The **testers1**, **testers2**, **seniorTesters**, **testingTeamLeaders**, and **testingAdmin** Fabric roles are mapped to TDM Permission Groups as follows:
 
   <table width="900pxl">
   <tbody>
   <tr>
   <td><strong>Fabric Role Name</strong></td>
   <td><strong>TDM Permission Group</strong></td>
+  <td><strong>Allow Task Creation</strong></td>
   </tr>
   <tr>
   <td>testers1</td>
   <td>Tester</td>
+  <td>False</td>
   </tr>
   <tr>
   <td>testers2</td>
   <td>Tester</td>
+  <td>False</td>
+  </tr>
+  <tr>
+  <td>seniorTesters</td>
+  <td>Tester</td>
+  <td>True</td>
   </tr>
   <tr>
   <td>testingTeamLeaders</td>
   <td>Owner</td>
+  <td>True</td>
   </tr>
   <tr>
   <td>testingAdmin</td>
   <td>Admin</td>
+  <td>True</td>
   </tr>
   </table>
 
-- User id **johnD123** logs into the Fabric Web Framework and is authenticated by Fabric. This user connects to the TDM Portal application.
+- User id **johnD123** logs into the Fabric Web Framework and is authenticated by Fabric. This user connects to the TDM App application.
 
 - The TDM gets the following attributes from the user session:
 
   - User id:  **johnD123**
   - User's Fabric roles: **testers1** and **testers2**.
 
-- The TDM checks the Permission Group of **testers1** and **testers2** Fabric roles. Their Permission Group is **Tester**.
+- The TDM checks the Permission Group of **testers1** and **testers2** Fabric roles. Their Permission Group is **Tester** with **Allow Task Creation** disabled.
 
-- Therefore **johnD123** is a **Tester user** and is allowed to create and execute extract or load tasks on [their TDM environments](/articles/TDM/tdm_gui/07_tdm_gui_environment_overview.md). 
+- Therefore **johnD123** is a **Tester** who can execute pre-created tasks designated to them on [their TDM environments](/articles/TDM/tdm_gui/07_tdm_gui_environment_overview.md), but cannot create tasks. 
 
   
 
 [![Previous](/articles/images/Previous.png)](01_tdm_gui_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02a_permission_group_mapping_window.md)
-
-
-

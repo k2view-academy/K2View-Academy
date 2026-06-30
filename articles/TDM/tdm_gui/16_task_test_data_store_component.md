@@ -18,6 +18,8 @@ This checkbox is checked since each task execution that gets the data from the s
 
 The retention period is set on the extracted entities and/or tables. When this period ends, the task's entities and/or tables are **automatically deleted** from Fabric and are no longer available. 
 
+The **Retention Period** field includes a lock icon. By default, the field is locked and cannot be unlocked. When **Create Data Snapshot (Version)** is selected for an entity-based task, the task creator can unlock the field, allowing the task runner to override the retention period at execution time.
+
 #### Retention Period Values
 
 - **Do not delete** - do not delete from Fabric. 
@@ -42,4 +44,3 @@ The retention period is set on the extracted entities and/or tables. When this p
     - Do not delete   
 
  [![Previous](/articles/images/Previous.png)](15_task_subset_component.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](17_task_target_component.md)
-

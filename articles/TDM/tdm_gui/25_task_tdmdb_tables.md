@@ -21,7 +21,7 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   - **number_of_entities** - populated by the number of entities in the task.
   - **load_entities** - populated with **true** for Load tasks. Otherwise, populated with **false**.
   - **delete_before_load** - populated with **true** for **Delete** or **Load and Delete** tasks. Otherwise, populated with **false**.
-  - **task_created_by**, and **task_last_updated_by** - populated by the name of the user who creates the task. From TDM 9.0 onwards, the user's [Fabric role](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) is concatenated to the user name. This is required in order to identify the task creator's Fabric role when the users are managed and kept by the organization’s identity provider (IDP), for example: SAML. The task creator's Fabric role needs to be identified in order to decide if a [tester user can execute a task](26_task_execution.md#who-can-execute-a-task-via-the-tdm-portal) created by another tester. 
+  - **task_created_by**, and **task_last_updated_by** - populated by the name of the user who creates the task. From TDM 9.0 onwards, the user's [Fabric role](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) is concatenated to the user name. This is required in order to identify the task creator's Fabric role when the users are managed and kept by the organization's identity provider (IDP), for example: SAML. The task creator's Fabric role needs to be identified in order to decide if a [tester user can execute a task](26_task_execution.md#who-can-execute-a-task-via-the-tdm-portal) created by another tester. 
   - **task_creation_date** and **task_last_updated_date** - populated by the task's creation datetime.
   
   ### Reservation Information
@@ -30,8 +30,6 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM Portal
   - **reserve retention period fields** - defines the reservation period on the task's entities.
   
   
-  
-
 
   ### Task Status
 
@@ -104,7 +102,7 @@ These columns are used by the TDM task execution process for [creating the entit
   </tbody>
   </table>
 
- 
+
 
 - **parameters** - populated when the task's subset is based on **Business parameters** selection method.
 
@@ -132,6 +130,10 @@ These columns are used by the TDM task execution process for [creating the entit
 
 ### Task Execution Parameters
 
+#### List of Editable Fields
+
+The **task_override_fields** attribute contains the list of [editable table fields](14_task_overview.md#attributes-available-for-runtime-override) and indicates whether each field can be modified by the task runner at execution time.
+
 #### Scheduling Parameters
 
 - **Scheduler** - set based on the task's [Scheduler](22_task_execution_timing_tab.md):
@@ -144,8 +146,6 @@ These columns are used by the TDM task execution process for [creating the entit
 - **retention_period_type** and **retention_period_value**.
 
 
-
-
 #### Other Parameters
 
 - **replace_sequences**
@@ -154,6 +154,16 @@ These columns are used by the TDM task execution process for [creating the entit
   - If the task overrides the [sync mode](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution), this parameter is populated by **FORCE** or **OFF**.
 
  
+
+## TASK_GROUPS
+
+This table holds the [task groups](14_task_management_window.md#task-groups) defined in the TDM Portal. Task groups organize tasks into logical collections by domain, team, or use case. A separate record is created for each group, holding its name and optional description.
+
+## TASK_GROUP_MAPPING
+
+This table holds the mapping between tasks and task groups. Since a task can belong to multiple groups, a separate record is created for each task-to-group assignment.
+
+
 
 ## TASKS_LOGICAL_UNITS
 
@@ -175,11 +185,25 @@ This table holds all [variables that are overridden by the task](23_task_globals
 
 This table is populated with [data generation parameters](14d_task_source_rule_based_generation.md#data-generation-parameters) for Generate tasks.
 
+## TASK_NOTES
+
+This table holds the execution notes added to tasks. A separate record is created for each note.
+
+## TASK_USER_FAVORITES
+
+This table holds tasks and task groups marked as favorites by users. Favorited items are pinned to the top of their respective list in the [Task Management window](14_task_management_window.md). A separate record is created for each user-favorite entry.
+
 ## TASK_REF_TABLES
 
 This table holds a list of the task's [tables](20_task_provision_tables.md). A separate record is created for each table.
 
+## TASK_REF_PARTITION
+
+This table holds the partition settings for the task's referential tables. Starting with TDM 9.5, large referential tables can be processed in parallel by splitting them into partitions, where each partition is handled as a separate LUI by the task execution batch process. A separate record is created for each table partition defined for the task. See [Concurrent Processing of Table Partitions](/articles/TDM/tdm_implementation/09b_table_partitions_implementation.md) for more information.
+
+
+
+
+
   [![Previous](/articles/images/Previous.png)](20_task_provision_tables.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](26_task_execution.md)
-
-
 

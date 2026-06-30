@@ -12,4 +12,5 @@
     <web><li><a href="/articles/04_fabric_studio/studio_ai/09_creating_custom_agents.md">Creating Custom Agents</a></li></web>
 <web><li><a href="/articles/04_fabric_studio/studio_ai/11_skills_and_slash_commands.md">Skills and Slash Commands</a></li></web>
         <web><li><a href="/articles/04_fabric_studio/studio_ai/12_mcp_servers.md">MCP Servers</a></li></web>
+        <web><li><a href="/articles/04_fabric_studio/studio_ai/13_security_and_privacy.md">Security and Privacy</a></li></web>
 </ul>
