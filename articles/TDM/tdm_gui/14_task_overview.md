@@ -29,7 +29,7 @@ This means:
 - Each user group sees only the tasks they are permitted to execute
 - Only attributes the creator has explicitly unlocked can be changed at runtime
 
-[Adding the task management screenshot]
+![task management](images/task_management_window.png)
 
 ### Key Capabilities in TDM 10
 
