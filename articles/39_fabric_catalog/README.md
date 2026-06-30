@@ -6,6 +6,7 @@
 	<li><a href="/articles/39_fabric_catalog/03_discovery_process.md">E2E Discovery Process</a></li>
 	<li><a href="/articles/39_fabric_catalog/04_discovery_pipeline.md">Discovery Pipeline</a></li>
 	<li><a href="/articles/39_fabric_catalog/05_cataloging_of_files.md">File Cataloging</a></li>
+	<li><a href="/articles/39_fabric_catalog/06_open_api_support.md">OpenAPI Support</a></li>
 	<li><a href="/articles/39_fabric_catalog/04a_catalog_integration_with_fabric.md">Catalog Integration with Fabric</a></li>
 	<li><a href="/articles/39_fabric_catalog/20_catalog_APIs.md">Catalog APIs</a></li>
 	<li><a href="/articles/39_fabric_catalog/21_advanced_settings.md">Discovery Advanced Configuration</a></li>
