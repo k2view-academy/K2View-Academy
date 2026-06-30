@@ -75,6 +75,12 @@ Do the following steps to attach the transformation flows:
 
 <img src="images/filesystem_discovery.png"  />
 
+## OpenAPI Support
+
+Starting from V8.5, the File Cataloging framework also supports discovery of **OpenAPI** interfaces. A dedicated **OpenApiToMetadata** actor is provided for this purpose. The actor parses an OpenAPI specification and transforms it into the Catalog's standard metadata format — the same format produced by **JsonSchemaToMetadata** and **AvroSchemaToMetadata** for other file-based sources. Once the metadata is prepared, the standard Discovery pipeline runs over it in the same way as for any other data source.
+
+For more details, refer to [OpenAPI Support](06_open_api_support.md).
+
 ## Organizing Files in Filesystem
 
 There is no system limitation on how to organize the files in the filesystem interface. The only rule is that the file setup should correspond to the flow's logic.
