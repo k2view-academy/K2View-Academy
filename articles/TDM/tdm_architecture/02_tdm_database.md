@@ -117,6 +117,16 @@ The following table lists the TDM tables and their description.
 <td valign="top" width="300pxl">Task</td>
 </tr>
 <tr>
+<td valign="top" width="200pxl"><h4>task_groups</td>
+<td valign="top" width="400pxl">List of <a href="/articles/TDM/tdm_gui/14_task_management_window.md#task-groups">task groups</a> defined in the TDM Portal. Task groups organize tasks into logical collections by domain, team, or use case.</td>
+<td valign="top" width="300pxl">Task</td>
+</tr>
+<tr>
+<td valign="top" width="200pxl"><h4>task_group_mapping</td>
+<td valign="top" width="400pxl">Mapping between tasks and task groups. Since a task can belong to multiple groups, a separate record is created for each task-to-group assignment.</td>
+<td valign="top" width="300pxl">Task</td>
+</tr>
+<tr>
 <td valign="top" width="200pxl"><h4>task_globals</td>
 <td valign="top" width="400pxl">List of <a href="/articles/TDM/tdm_gui/23_task_globals_tab.md">Global parameters set on a task level</a>.</td>
 <td valign="top" width="300pxl">Task</td>
@@ -129,6 +139,21 @@ The following table lists the TDM tables and their description.
 <tr>
 <td valign="top" width="200pxl"><h4>tasks_logical_units</td>
 <td valign="top" width="400pxl">List of LUs included in each TDM task.</td>
+<td valign="top" width="300pxl">Task</td>
+</tr>
+<tr>
+<td valign="top" width="200pxl"><h4>tasks_exe_process</td>
+<td valign="top" width="400pxl">List of <a href="/articles/TDM/tdm_gui/21_task_pre_and_post_execution_processes.md">pre and post execution processes</a> of each task.</td>
+<td valign="top" width="300pxl">Task</td>
+</tr>
+<tr>
+<td valign="top" width="200pxl"><h4>task_notes</td>
+<td valign="top" width="400pxl">Execution notes added to tasks.</td>
+<td valign="top" width="300pxl">Task</td>
+</tr>
+<tr>
+<td valign="top" width="200pxl"><h4>task_user_favorites</td>
+<td valign="top" width="400pxl">Tasks and task groups marked as favorites by users. Favorited items are pinned to the top of their respective list in the <a href="/articles/TDM/tdm_gui/14_task_management_window.md">Task Management window</a>.</td>
 <td valign="top" width="300pxl">Task</td>
 </tr>
 <tr>
@@ -161,6 +186,11 @@ The following table lists the TDM tables and their description.
 <td valign="top" width="300pxl">Task Execution</td>        
 </tr>
 <tr>
+<td valign="top" width="200pxl"><h4>task_execution_prompt_text</td>
+<td valign="top" width="400pxl">Stores the prompt text to be displayed in the task execution window for each task type.</td>
+<td valign="top" width="300pxl">Task Execution</td>
+</tr>
+<tr>
 <td valign="top" width="200pxl"><h4>task_execution_summary</td>
 <td valign="top" width="400pxl">Summary information of each task's execution. A record is created for each task's execution.</td>
 <td valign="top" width="300pxl">Task Execution</td>
@@ -172,7 +202,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td valign="top" width="200pxl"><h4>task_ref_partition</td>
-<td valign="top" width="400pxl">This table has been added in TDM 9.5 to support concurrent processing of <a href="/articles/TDM/tdm_implementation/09b_table_partitions_implementation.md">table partitions</a>. During task execution, each table partition is processed as a separate LU instance and recorded as an individual entry in this table. Each record contains the execution details specific to its corresponding table partition.</td>
+<td valign="top" width="400pxl">This table has been added in TDM 9.5 to support concurrent processing of <a href ="/articles/TDM/tdm_implementation/09b_table_partitions_implementation.md">table partitions</a>. During task execution, each table partition is processed as a separate LU instance and recorded as an individual entry in this table. Each record contains the execution details specific to its corresponding table partition.</td>
 <td valign="top" width="300pxl">Task Execution</td>
 </tr>
 <tr>      
@@ -208,13 +238,6 @@ The following table lists the TDM tables and their description.
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
 
 
 
