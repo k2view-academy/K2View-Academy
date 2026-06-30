@@ -23,373 +23,132 @@ The input **task_ids** is an optional parameter that can be populated to return 
 
 If task_ids parameter is not populated, the data of all tasks will be returned by the API.
 
-
-
 ### API Input
 
-- task_ids  -  this is an optional input. Can be populated by one task ID, or several task IDs separated by a comma.
+- task_ids  -  This is an optional input. Can be populated by one task ID, or several task IDs separated by a comma.
+- mode - Specifies the task status to retrieve. Options: 'Active' to get only active tasks, 'Inactive' for only inactive tasks, or 'Both' to retrieve all tasks regardless of status.
 
 #### API Input Examples
 
 ```
-http://localhost:3213/api/tasks?task_ids=3222
+https://k2rnd-3.cloud.k2view.com/tdm10demo-2-k2view/api/tasks?mode=Active
 ```
 
 ```
-http://localhost:3213/api/tasks?task_ids=3222,454
+https://k2rnd-3.cloud.k2view.com/tdm10demo-2-k2view/api/tasks?task_ids=100%2C%20200&mode=Active
 ```
 
 ```
-http://localhost:3213/api/tasks
+https://k2rnd-3.cloud.k2view.com/tdm10demo-2-k2view/api/tasks?task_ids=100&mode=Active
 ```
 
 ### API Output Example
 
-#### Return One Task 
-
 ```json
 {
   "result": [
     {
-      "task_last_updated_date": "2022-03-15 12:02:15.84",
+      "task_last_updated_date": "2026-06-29 18:37:34.044",
+      "task_description": null,
+      "filterout_reserved": "OTHERS",
       "be_id": 1,
-      "selected_version_task_name": null,
       "reserve_retention_period_type": "Days",
-      "environment_id": 2,
-      "selection_method": "C",
-      "selected_ref_version_task_name": null,
-      "refresh_reference_data": false,
-      "tester": "taha",
-      "be_last_updated_date": "2021-11-07 11:24:45.078",
-      "owners": [
+      "statistics_report_flag": "ALL",
+      "notes": [
         {
-          "owner": "tali",
-          "owner_type": "ID"
+          "note_id": 19,
+          "note_title": "Instructions",
+          "task_id": 100,
+          "note_date": "2026-05-11 14:23:24.085",
+          "note_description": "Select a state from the dropdown list."
         }
       ],
+      "environment_id": 2,
+      "selection_method": "C",
+      "refresh_reference_data": false,
+      "tester": null,
+      "be_last_updated_date": "2026-06-29 09:18:20.567",
+      "owners": [],
       "refcount": 0,
-      "num_of_entities": 120,
-      "tester_type": "ID",
+      "num_of_entities": -1,
+      "selected_subset_task_exe_id": 0,
+      "tester_type": null,
+      "reserve_note": null,
+      "enable_sequence_report": false,
+      "permissions": [
+        {
+          "type": "ID",
+          "value": "ALL"
+        }
+      ],
       "load_entity": true,
       "selected_version_task_exe_id": 0,
-      "task_created_by": "tali",
-      "be_last_updated_by": "admin",
+      "task_created_by": "tali.einhorn@k2view.com.k2v",
+      "be_last_updated_by": "tali.einhorn@k2view.com.k2v",
       "scheduling_end_date": null,
-      "retention_period_type": null,
+      "retention_period_type": "Do Not Delete",
       "environment_point_of_contact_phone1": null,
-      "processnames": null,
-      "testers": [
-        {
-          "tester_type": "ID",
-          "role_id": [
-            "2"
-          ],
-          "tester": "taha"
-        },
-        {
-          "tester_type": "GROUP",
-          "role_id": [
-            "2"
-          ],
-          "tester": "tdmTesters1"
-        },
-        {
-          "tester_type": "GROUP",
-          "role_id": [
-            "6"
-          ],
-          "tester": "tdmTesters2"
-        }
-      ],
-      "selection_param_value": "get5GCustomers",
+      "processnames": "preTaskExePrintToLog,postTaskExePrintToLog",
+      "testers": [],
+      "selection_param_value": "getEntitiesByState",
       "environment_status": "Active",
       "be_status": "Active",
-      "selected_version_datetime": null,
-      "task_last_updated_by": "admin",
+      "task_last_updated_by": "tali.einhorn@k2view.com.k2v##k2view_k2v_user",
       "selected_ref_version_task_exe_id": 0,
       "task_execution_status": "Active",
-      "sync_mode": null,
-      "replace_sequences": false,
-      "entity_exclusion_list": null,
+      "mask_sensitive_data": false,
+      "sync_mode": "ON",
+      "enable_execution": true,
+      "task_groups": [
+        {
+          "task_group_id": 30,
+          "task_group_name": "Customer provisioning tasks"
+        }
+      ],
+      "execution_mode": "INHERITED",
+      "replace_sequences": true,
       "environment_point_of_contact_last_name": null,
       "environment_point_of_contact_email": null,
-      "be_description": "",
-      "reserve_retention_period_value": null,
-      "parameters": "{\"group\":{\"rules\":[{\"condition\":\"=\",\"field\":\"BILLING.NO_OF_OPEN_INVOICES\",\"data\":\"2\",\"operator\":\"AND\",\"$$hashKey\":\"object:389\",\"type\":\"combo\",\"validValues\":[\"0\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\"],\"disableThird\":false}]}}",
-      "environment_expiration_date": null,
-      "environment_point_of_contact_phone2": null,
-      "environment_created_by": "admin",
-      "roles": [
-        [
-          {
-            "role_id": 6,
-            "allowed_test_conn_failure": true
-          },
-          {
-            "role_id": 2,
-            "allowed_test_conn_failure": true
-          }
-        ]
-      ],
-      "environment_last_updated_by": "admin",
-      "be_creation_date": "2021-11-07 11:24:17.668",
-      "task_id": 48,
-      "be_created_by": "admin",
-      "source_environment_id": 1,
-      "role_id_orig": 2,
-      "scheduler": "immediate",
-      "environment_description": null,
-      "selected_ref_version_datetime": null,
-      "source_env_name": "SRC",
-      "reserve_ind": true,
-      "task_title": "testLoadAndReserve",
-      "fabric_environment_name": null,
-      "environment_name": "TAR",
-      "delete_before_load": false,
-      "allow_write": true,
-      "owner": "tali",
-      "task_status": "Active",
-      "retention_period_value": null,
-      "executioncount": 0,
-      "environment_last_updated_date": "2022-03-09 15:00:45.845",
-      "be_name": "Customer",
-      "version_ind": false,
-      "task_creation_date": "2022-03-15 09:35:02.208",
-      "task_globals": false,
-      "environment_point_of_contact_first_name": null,
-      "task_type": "LOAD",
-      "environment_creation_date": "2021-11-07 15:10:17.569",
-      "owner_type": "ID",
-      "creatorRoles": [
-        "tdmOwner"
-      ]
-    }
-  ],
-  "errorCode": "SUCCESS",
-  "message": null
-}
-```
-
-#### Return Two Tasks
-
-```json
-{
-  "result": [
-    {
-      "task_last_updated_date": "2022-03-15 12:02:15.84",
-      "be_id": 1,
-      "selected_version_task_name": null,
-      "reserve_retention_period_type": "Days",
-      "environment_id": 2,
-      "selection_method": "C",
-      "selected_ref_version_task_name": null,
-      "refresh_reference_data": false,
-      "tester": "tdmTesters2",
-      "be_last_updated_date": "2021-11-07 11:24:45.078",
-      "owners": [
-        {
-          "owner": "tali",
-          "owner_type": "ID"
-        }
-      ],
-      "refcount": 0,
-      "num_of_entities": 120,
-      "tester_type": "GROUP",
-      "load_entity": true,
-      "selected_version_task_exe_id": 0,
-      "task_created_by": "tali",
-      "be_last_updated_by": "admin",
-      "scheduling_end_date": null,
-      "retention_period_type": null,
-      "environment_point_of_contact_phone1": null,
-      "processnames": null,
-      "testers": [
-        {
-          "tester_type": "GROUP",
-          "role_id": [
-            "6"
-          ],
-          "tester": "tdmTesters2"
-        },
-        {
-          "tester_type": "ID",
-          "role_id": [
-            "2"
-          ],
-          "tester": "taha"
-        },
-        {
-          "tester_type": "GROUP",
-          "role_id": [
-            "2"
-          ],
-          "tester": "tdmTesters1"
-        }
-      ],
-      "selection_param_value": "get5GCustomers",
-      "environment_status": "Active",
-      "be_status": "Active",
-      "selected_version_datetime": null,
-      "task_last_updated_by": "admin",
-      "selected_ref_version_task_exe_id": 0,
-      "task_execution_status": "Active",
-      "sync_mode": null,
-      "replace_sequences": false,
-      "entity_exclusion_list": null,
-      "environment_point_of_contact_last_name": null,
-      "environment_point_of_contact_email": null,
-      "be_description": "",
-      "reserve_retention_period_value": null,
-      "parameters": "{\"group\":{\"rules\":[{\"condition\":\"=\",\"field\":\"BILLING.NO_OF_OPEN_INVOICES\",\"data\":\"2\",\"operator\":\"AND\",\"$$hashKey\":\"object:389\",\"type\":\"combo\",\"validValues\":[\"0\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\"],\"disableThird\":false}]}}",
-      "environment_expiration_date": null,
-      "environment_point_of_contact_phone2": null,
-      "environment_created_by": "admin",
-      "roles": [
-        [
-          {
-            "role_id": 6,
-            "allowed_test_conn_failure": true
-          },
-          {
-            "role_id": 2,
-            "allowed_test_conn_failure": true
-          }
-        ]
-      ],
-      "environment_last_updated_by": "admin",
-      "be_creation_date": "2021-11-07 11:24:17.668",
-      "task_id": 48,
-      "be_created_by": "admin",
-      "source_environment_id": 1,
-      "role_id_orig": 6,
-      "scheduler": "immediate",
-      "environment_description": null,
-      "selected_ref_version_datetime": null,
-      "source_env_name": "SRC",
-      "reserve_ind": true,
-      "task_title": "testLoadAndReserve",
-      "fabric_environment_name": null,
-      "environment_name": "TAR",
-      "delete_before_load": false,
-      "allow_write": true,
-      "owner": "tali",
-      "task_status": "Active",
-      "retention_period_value": null,
-      "executioncount": 0,
-      "environment_last_updated_date": "2022-03-09 15:00:45.845",
-      "be_name": "Customer",
-      "version_ind": false,
-      "task_creation_date": "2022-03-15 09:35:02.208",
-      "task_globals": false,
-      "environment_point_of_contact_first_name": null,
-      "task_type": "LOAD",
-      "environment_creation_date": "2021-11-07 15:10:17.569",
-      "owner_type": "ID",
-      "creatorRoles": [
-        "tdmOwner"
-      ]
-    },
-    {
-      "task_last_updated_date": "2022-03-16 10:35:19.317",
-      "be_id": 1,
-      "selected_version_task_name": null,
-      "reserve_retention_period_type": "Days",
-      "environment_id": 2,
-      "selection_method": "C",
-      "selected_ref_version_task_name": null,
-      "refresh_reference_data": false,
-      "tester": "tdmTesters2",
-      "be_last_updated_date": "2021-11-07 11:24:45.078",
-      "owners": [
-        {
-          "owner": "tali",
-          "owner_type": "ID"
-        }
-      ],
-      "refcount": 0,
-      "num_of_entities": 10,
-      "tester_type": "GROUP",
-      "load_entity": false,
-      "selected_version_task_exe_id": 0,
-      "task_created_by": "admin",
-      "be_last_updated_by": "admin",
-      "scheduling_end_date": null,
-      "retention_period_type": null,
-      "environment_point_of_contact_phone1": null,
-      "processnames": null,
-      "testers": [
-        {
-          "tester_type": "GROUP",
-          "role_id": [
-            "6"
-          ],
-          "tester": "tdmTesters2"
-        },
-        {
-          "tester_type": "ID",
-          "role_id": [
-            "2"
-          ],
-          "tester": "taha"
-        },
-        {
-          "tester_type": "GROUP",
-          "role_id": [
-            "2"
-          ],
-          "tester": "tdmTesters1"
-        }
-      ],
-      "selection_param_value": "get5GCustomers",
-      "environment_status": "Active",
-      "be_status": "Active",
-      "selected_version_datetime": null,
-      "task_last_updated_by": "admin",
-      "selected_ref_version_task_exe_id": 0,
-      "task_execution_status": "Active",
-      "sync_mode": null,
-      "replace_sequences": false,
-      "entity_exclusion_list": null,
-      "environment_point_of_contact_last_name": null,
-      "environment_point_of_contact_email": null,
-      "be_description": "",
+      "be_description": "Normal Hierarchy",
       "reserve_retention_period_value": "5",
-      "parameters": null,
+      "parameters": "{\"inputs\":[{\"name\":\"state\",\"type\":\"any\",\"value\":\"IL\",\"is_editable\":true,\"checked\":false}]}",
       "environment_expiration_date": null,
       "environment_point_of_contact_phone2": null,
       "environment_created_by": "admin",
+      "clone_ind": false,
       "roles": [],
       "environment_last_updated_by": "admin",
-      "be_creation_date": "2021-11-07 11:24:17.668",
-      "task_id": 50,
+      "be_creation_date": "2026-06-24 11:41:44.171884",
+      "task_id": 100,
       "be_created_by": "admin",
-      "source_environment_id": 2,
-      "role_id_orig": 6,
-      "scheduler": null,
-      "environment_description": null,
-      "selected_ref_version_datetime": null,
-      "source_env_name": "",
-      "reserve_ind": true,
-      "task_title": "ReserveEntities",
-      "fabric_environment_name": null,
-      "environment_name": "TAR",
+      "custom_logic_lu_name": "Customer",
+      "source_environment_id": 1,
+      "role_id_orig": 0,
+      "scheduler": "immediate",
+      "environment_description": "This is the Target environment.",
+      "source_env_name": "Production",
+      "reserve_ind": false,
+      "task_title": "Copy customers based on state",
+      "environment_name": "UAT",
       "delete_before_load": false,
       "allow_write": true,
-      "owner": "tali",
+      "owner": null,
+      "in_place_masking_ind": false,
       "task_status": "Active",
-      "retention_period_value": null,
+      "retention_period_value": "-1",
+      "task_override_fields": "{\"business_entity\": {\"is_editable\": false, \"field_connector\": \"be_name\"}, \"retention_period\": {\"is_editable\": false, \"field_connector\": \"retention_period\"}, \"selection_method\": {\"random\": {\"is_editable\": true}, \"entity_list\": {\"is_editable\": true}, \"is_editable\": true, \"custom_logic\": {\"is_editable\": true, \"can_add_params\": {\"is_editable\": true}}, \"max_entities\": {\"is_editable\": true}, \"field_connector\": \"selection_method\", \"business_parameters\": {\"is_editable\": true}}, \"data_version_name\": {\"is_editable\": false, \"field_connector\": \"data_version_name\"}, \"reservation_period\": {\"is_editable\": false, \"field_connector\": \"reservation_period\"}, \"source_environment\": {\"is_editable\": true, \"field_connector\": \"source_env_name\"}, \"target_environment\": {\"is_editable\": true, \"field_connector\": \"environment_name\"}}",
       "executioncount": 0,
-      "environment_last_updated_date": "2022-03-09 15:00:45.845",
+      "environment_last_updated_date": "2026-06-24 11:41:44.171884",
       "be_name": "Customer",
       "version_ind": false,
-      "task_creation_date": "2022-03-16 10:35:19.317",
+      "task_creation_date": "2026-05-11 11:10:32.432",
       "task_globals": false,
       "environment_point_of_contact_first_name": null,
-      "task_type": "RESERVE",
-      "environment_creation_date": "2021-11-07 15:10:17.569",
-      "owner_type": "ID",
+      "task_type": "LOAD",
+      "environment_creation_date": "2026-06-24 11:41:44.171884",
+      "owner_type": null,
       "creatorRoles": [
-        "admin"
+        "k2view_k2v_user"
       ]
     }
   ],
