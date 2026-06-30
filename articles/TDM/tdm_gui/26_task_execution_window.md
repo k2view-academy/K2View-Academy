@@ -22,10 +22,6 @@ The Execute Task window can be opened in two ways:
 
 The task execution prompt is a predefined text that describes the task action. Each task type has its own predefined prompt text. The prompt includes the task's attributes — for example:
 
-> *Copy data by **Customer** from **Production** to **UAT**. Subset by **Entity list** using: **100, 200**. Reserve the entities for **5 Days**.*
-
-
-
 ![task execution example](images/task_execution_window_example.png)
 
 

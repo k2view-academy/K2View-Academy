@@ -150,6 +150,18 @@ TDM enables customization of the default task execution logic for a specific **i
 - Starting with **TDM 9.5**, supporting [**in-place masking**](09d_in_place_masking_implementation.md) tasks on tables.
 - Supporting table-level tasks using [Connectors](09c_table_level_connectors.md), for example **MongoDB**.
 
+### Step 5: Optional — Pre and Post Execution Processes
+
+Starting with **TDM 10**, table-level tasks support **pre and post execution processes**. To make these processes available for selection when creating a table-level task, the implementor must populate the **TableLevelPostAndPreExecutionProcess** MTable.
+
+The MTable contains the following fields:
+
+- **Process_name** — The name of the Fabric flow to execute as a pre or post execution process.
+- **Process_type** — The type of process: **pre** (runs before the task execution) or **post** (runs after the task execution).
+- **Execution_order** — The numeric order in which the process runs relative to other processes of the same type. Lower numbers run first.
+
+Once the MTable is populated, the configured processes become available for selection in the task's pre and post execution process settings.
+
 
 
 [![Previous](/articles/images/Previous.png)](11e_pre_and_post_execution_processes.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](13_tdm_implementation_supporting_different_product_versions.md)
