@@ -6,9 +6,11 @@ The **Scheduler** tab in the task's **Advanced settings** enables setting a **sc
 
 ![scheduling](images/task_scheduling_parameters_example2.png)
 
-- Sets the timing interval for the automatic scheduling. It is also possible to define an end date for the automatic scheduling.  For example, execute the task every Monday at 2:15 AM until the end of 2024.
+- Set the timing interval for the automatic scheduling. It is also possible to define an end date for the automatic scheduling. For example, execute the task every 2 days at 02:00 until 31 Jul 2026.
 
 ![execution timing example1](images/task_scheduling_parameters_example1.png)
+
+Note: Task execution time is based on the **UTC time zone**.
 
 Notes:
 
@@ -50,10 +52,8 @@ The Execution Time Interval is saved in TDM as a **crontab** value. Scheduling p
 <td valign="top" width="300pxl">Daily</td>
 <td valign="top" width="600pxl">
 <ul>
-<li>Day interval. For example, every 1 day</li>
-<li>Hours</li>
-<li>Minutes</li>
-<li>Seconds</li>
+<li>Every N day(s) at a specified time. For example, every 2 days at 02:00.</li>
+<li>Every week day (Monday through Friday) at a specified time.</li>
 </ul>
 </td>
 </tr>
@@ -94,11 +94,4 @@ The Execution Time Interval is saved in TDM as a **crontab** value. Scheduling p
 </table>
 ​    
 
-The **End By** setting can be set to run a task by the Scheduler until a predefined date. For example, run the task every week until the end of 2024.
-
-  
-
-  
-
-
-
+The **End by date** / **No end date** options control whether the scheduled execution runs indefinitely or stops on a specified date.

@@ -2,19 +2,31 @@
 
 **Tables** is a data selection option that allows the creation of TDM tasks on **tables** only, **without any association to a Business Entity**. Users can select all or specific tables that are included in the DB interfaces of the chosen **source environment**.
 
-The following information needs to be set for the **Tables** data selection option: 
+The following information needs to be set for the **Tables** data selection option:
 
-**Source environment** — select a TDM environment from the drop-down list that displays available source environments. If the selected source environment is defined as containing sensitive data in the [Environment window's settings](08_environment_window_general_information.md#mask-sensitive-data), a PII icon will appear next to the selected source environment, indicating that its 'Sensitive data is masked'. 
+## Lock Icons
 
-**Policy for fetching data** — this setting defines whether the data needs to be extracted from the source environment or can be retrieved from the Test Data Store (Fabric). The following options are available:
+Task fields that support runtime override have a lock icon next to their label. By default, these fields are **locked** — the task creator can click the lock icon to unlock a field and allow the task runner to set or override its value at execution time. See the [full list of attributes available for runtime override](14_task_overview.md#attributes-available-for-runtime-override).
 
-1. **All data from [source environment name]** — extract the tables from the source environment. 
+## Source Environment
 
-2. **Selected snapshot (version)** — retrieve a selected [data snapshot (version)](15_data_flux_task.md) created in the Test Data Store by previous task executions. The task execution does not access the source environment directly.  
+Select a TDM environment from the drop-down list that displays available source environments. If the selected source environment is defined as containing sensitive data in the [Environment window's settings](08_environment_window_general_information.md#mask-sensitive-data), a PII icon will appear next to the selected source environment, indicating that its sensitive data is masked.
 
-   Note that option 1 is not available if the source environment is set with [Do not Sync](08_environment_window_general_information.md#do-not-sync) option.
+The Source Environment field has a lock icon. The task creator can unlock it to allow the task runner to select or override the source environment at execution.
 
-**Tables** — the task displays the source environment's active interfaces. Click the required interface to view its schemas. If needed, click a schema to view its tables. You can select tables in the task using one of the following methods:
+## Policy for Fetching Data
+
+This setting defines whether the data needs to be extracted from the source environment or can be retrieved from the Test Data Store (Fabric). The following options are available:
+
+1. **All data from [source environment name]** — extract the tables from the source environment.
+
+2. **Selected snapshot (version)** — retrieve a selected [data snapshot (version)](15_data_flux_task.md) created in the Test Data Store by previous task executions. The task execution does not access the source environment directly.
+
+   Note that option 1 is not available if the source environment is set with the [Do not Sync](08_environment_window_general_information.md#do-not-sync) option.
+
+## Tables
+
+The task displays the source environment's active interfaces. Click the required interface to view its schemas. If needed, click a schema to view its tables. You can select tables in the task using one of the following methods:
 
 1. Check the checkbox next to the schema to select all of its tables, and click the blue arrow icon to move these tables to the *Table name* area:
 
@@ -62,7 +74,7 @@ The **Table version** (shown in the above image) is the name of the task that ex
 
 - By default, each interface gets its values from:
 
-  1. The environment’s system settings, if defined and if the [interface is attached to the environment's system](11_environment_products_tab.md#affinity-and-maximum-number-of-workers_) or
+  1. The environment's system settings, if defined and if the [interface is attached to the environment's system](11_environment_products_tab.md#affinity-and-maximum-number-of-workers_) or
   2. The TDM and Fabric configuration values
 
   You can **override these values per interface** to better control and **optimize task execution behavior**:
@@ -103,10 +115,11 @@ Select the **In-place Masking** checkbox to create an in-place masking task. In 
 
 Notes:
 
+- The **In-place Masking** checkbox is disabled for **read-only environments**.
+
 - The selected environment must be defined as **Both** (Source and Target) for an in-place masking task.
 
 - The **Policy of fetching data** must be set to **All data from [source environment name]** for an in-place masking task.
 
 
  [![Previous](/articles/images/Previous.png)](14_task_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](15_data_flux_task.md)
-

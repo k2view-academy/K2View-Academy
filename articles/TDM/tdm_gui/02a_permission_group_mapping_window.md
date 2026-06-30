@@ -4,17 +4,19 @@ The **Permission Groups Mapping** window displays the mapping between Fabric rol
 
 The relation between Fabric roles and TDM Permission Groups is many-to-one, i.e. one or multiple Fabric role(s) can be mapped into a given TDM Permission Group.
 
-This mapping must be added by the TDM Portal setup activities and is saved in [permission_groups_mapping TDM DB table](/articles/TDM/tdm_architecture/02_tdm_database.md#permission_groups_mapping).
+This mapping must be added by the TDM App setup activities and is saved in [permission_groups_mapping TDM DB table](/articles/TDM/tdm_architecture/02_tdm_database.md#permission_groups_mapping).
 
 ### Who Can Map a Fabric Role to a TDM Permissions Group?
 
 Only [Admin users](02_tdm_gui_user_types.md#admin) can add, remove, or edit a mapping of a Fabric role to a permission group.
 
-The TDMDB creation script inserts an initial record to **permission_groups_mapping TDM DB table** to map Fabric **admin role** to the **Admin** TDM Permission Group. This enables an admin user (attached to Fabric admin role) to populate the initial TDM Permission Groups mapping in the TDM Portal:
+The TDMDB creation script inserts an initial record to **permission_groups_mapping TDM DB table** to map Fabric **admin role** to the **Admin** TDM Permission Group. This enables an admin user (attached to Fabric admin role) to populate the initial TDM Permission Groups mapping in the TDM App:
 
 ![permission groups window](images/permission_group_mapping_window.png)
 
-Note that if Fabric is set to authenticate using SAML, LDAP, or AD/LDAP, you must add the following record to **permission_groups_mapping** TDM DB table **before the first log in** to the TDM Portal:
+The Permission Groups Mapping window includes an **Allow Task Creation** column, which indicates whether users mapped to a Tester permission group can create TDM tasks. See [Tester](02_tdm_gui_user_types.md#tester) for more information about the two types of Testers.
+
+Note that if Fabric is set to authenticate using SAML, LDAP, or AD/LDAP, you must add the following record to **permission_groups_mapping** TDM DB table **before the first log in** to the TDM App:
 
 ```
 insert into public.permission_groups_mapping (
@@ -39,7 +41,9 @@ Click for more information about [Fabric User IAM Configuration](/articles/26_fa
 
 
 
-- Select a Permission Group and a Fabric Role from the dropdown lists of the **Permission Group** and **Role** settings. 
+- Select a Permission Group and a Fabric Role from the dropdown lists of the **Permission Group** and **Role** settings.
+
+- Check the **Allow Task Creation** checkbox to allow the mapped users to create TDM tasks. This setting applies to Tester permission groups and determines whether the mapped users can create and assign tasks to other testers, or can only execute pre-created tasks.
 
 - The **Description** setting is an optional setting and can be populated by free text.
 
@@ -48,7 +52,7 @@ Click for more information about [Fabric User IAM Configuration](/articles/26_fa
 
 ### Edit a Permission Group Mapping
 
-Click the **Edit** icon next to the Permission Group mapping record. A pop-up window opens, allowing you to edit the **Permission Group**, **Role**, or **Description** as needed. Save the changes when finished.
+Click the **Edit** icon next to the Permission Group mapping record. A pop-up window opens, allowing you to edit the **Permission Group**, **Role**, **Allow Task Creation**, or **Description** as needed. Save the changes when finished.
 
 ### Delete a Permission Group Mapping
 
@@ -61,4 +65,3 @@ Note that a delete or edit of a permission group mapping can remove the users of
 
 
 [![Previous](/articles/images/Previous.png)](02_tdm_gui_user_types.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_tdm_gui_data_centers_window.md)
-

@@ -91,10 +91,11 @@ Note that the pre and post execution processes must be populated in the [PostAnd
 1. Open the **Pre Execution Processes** or **Post Execution Processes** tabs and click  **Add Pre Execution Processes**  or **Add Post Execution Processes** to open a dialog box.  
 
 2. Click the **Process Name** and select a flow from the drop-down list that holds all pre/post execution processes deployed to Fabric.
-3. Populate the **Execution Order** field with a numeric value to set the execution order. Processes with Execution Order 1 run first, followed by processes with Execution Order 2, etc. Note that an execution order can be set for several processes that are executed simultaneously.
-4. Populate the **Description** field (optional).
-5. Click **ADD Pre/Post Eexecution Process** to add the process to the BE.
-6. Repeat steps 1-5 to add additional pre/post execution processes, if needed.
+3. If the process is attached to a Logical Unit (LU) in the TDM implementation, specify the LU name.
+4. Populate the **Execution Order** field with a numeric value to set the execution order. Processes with Execution Order 1 run first, followed by processes with Execution Order 2, etc. Note that an execution order can be set for several processes that are executed simultaneously.
+5. Populate the **Description** field (optional).
+6. Click **ADD Pre/Post Eexecution Process** to add the process to the BE.
+7. Repeat steps 1-5 to add additional pre/post execution processes, if needed.
 
   
 

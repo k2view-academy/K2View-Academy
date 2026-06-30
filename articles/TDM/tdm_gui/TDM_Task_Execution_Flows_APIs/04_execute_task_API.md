@@ -16,220 +16,193 @@ TDM_Tasks
 
 Starts a task execution and returns the execution's task_execution_id on success. The API can get an optional input of overridden parameters for the task execution.
 
-#### Validate the Task Execution Parameters
-
-- Verify that the TDM task execution processes are up and running. If the TDM task execution processes are down, stop the task execution and return an error message.
-- Test the connection details of the source and target environments of the task execution if the **forced** parameter is **false**.  
-- Do not enable an execution if another execution with the same execution parameters is already running on the task.
-- Validate the task's BE and LUs with the [TDM Systems](/articles/TDM/tdm_gui/11_environment_products_tab.md) of the task execution's source and target environment.
-- Verify that the user is permitted to execute the task on the task execution's source and target environment. For example, the user cannot run a [Load task](/articles/TDM/tdm_gui/17_load_task_regular_mode.md) with a [sequence replacement](/articles/TDM/tdm_gui/10_environment_roles_tab.md#replace-sequences) on environment X if the user does not have permissions to run such a task on this environment.
-
-##### Data Versioning Validations
-
-- Data versioning extract tasks: validate the retention period to verify that it does not exceed the maximum days allowed for the tester.
-
-##### Entity Reservation Validations
-
-- Validate the number of reserved entities: if the task reserves the entities whether the reserve_ind is set to **true** in the task itself or in the overridden parameters, accumulate the number of entities in the task to the total number of reserved entities for the user on the target environment. If the total number of reserved entities exceeds the user's permissions on the environment, return an error. For example, if the user is allowed to reserved up to 70 entities in ST1 and there are 50 entities that are already reserved for the user in ST1, the user can reserve up to 20 additional entities in ST1.
-- Validate the retention period to verify that the number of days does not exceed the maximum number of days allowed for the tester.
-
-If at least one of the validations fail, the API does not start the task and returns the validation errors.
-
-Below is the list of the validation codes, returned by the API:
-
-- BEandLUs
-
-- Reference
-
-- selectionMethod
-
-- Versioning
-
-- ReplaceSequence
-
-- DeleteBeforeLoad
-
-- syncMode
-
-- totalNumberOfReservedEntities
-
-- versioningRetentionPeriod
-
-- reverseRetentionPeriod
-
-  
-
-#### Start the Task Execution
-
-If the validations pass successfully, start the task execution by populating the following TDM DB tables:
-
-- [TASK_EXECUTION_LIST](/articles/TDM/tdm_architecture/02_tdm_database.md#task_execution_list) - populate the source and target environments by the task execution's environments:
-  - If the overriden parameters include the task execution envionments, get the execution environments from the overriden parameters. Else, get the execution environments from the [task record](/articles/TDM/tdm_gui/25_task_tdmdb_tables.md#environments-columns).
-- [TASK_EXECUTION_OVERRIDE_ATTRS](/articles/TDM/tdm_architecture/02_tdm_database.md#task_execution_override_attrs) -  populate the JSON of the overridden parameter by param name and param value pairs. For example- "SOURCE_ENVIRONMENT": "ST1"
-
 ### API Input
 
 - **taskId**
 
-- **forced** -  this parameter indicates if the execution should ignore a failure of the task's environment connections validation. If the **forced** parameter is set to **true**, then the execution ignores the validation failure and executes the task. If the **forced** parameter is set to **false** and the environment validation fails, the execution is not initiated.
+- **forced** - this parameter indicates if the execution should ignore a failure of the task's environment connections validation. If the **forced** parameter is set to **true**, then the execution ignores the validation failure and executes the task. If the **forced** parameter is set to **false** and the environment validation fails, the execution is not initiated.
 
-- An optional request body with overriden parameters for task execution. It is possible to populate all, part , or none of the overriden parameters. The following parameters can be set:
+- An optional request body that specifies runtime overrides for task execution. All override values are nested under the **overrideParameters** object. You can provide all, some, or none of the supported override parameters. The following parameters are available.
+
+  **Note:** Only parameters that are [open for editing in the task](/articles/TDM/tdm_gui/14_task_overview.md#attributes-available-for-runtime-override) can be overridden.
 
 
-	<table width="900pxl">
+<table width="900pxl">
 <tbody>
 <tr>
-<td width="225pxl">
-<p><strong>Parameter Name</strong></p>
+<td style="width: 250px;">
+<p><strong>Key</strong></p>
 </td>
-<td width="225pxl">
-<p><strong>Parameter Description</strong></p>
-</td>
-<td width="200pxl">
-<p><strong>Task Types</strong></p>
-</td>
-<td width="150pxl">
-<p><strong>Data Versioning </strong></p>
+<td style="width: 650px;">
+<p><strong>Description</strong></p>
 </td>
 </tr>
 <tr>
-<td width="225pxl">
-<p><strong>entitieslist</strong></p>
+<td>
+<p><strong>BE_ID</strong></p>
 </td>
-<td width="225pxl">
-<p>Populated by a list of entities separated by a comma. Note that the entity list can only contain one entity ID when executing a task that clones an entity</p>
-</td>
-<td width="200pxl">
-<p>Load task</p>
-</td>
-<td width="150pxl">
-<p>True/False</p>
+<td>
+<p>Business Entity ID of the task.</p>
 </td>
 </tr>
 <tr>
-<td width="225pxl">
-<p><strong>sourceEnvironmentName</strong></p>
+<td>
+<p><strong>ENTITY_LIST</strong></p>
 </td>
-<td width="225pxl">
-<p>Source environment name</p>
-</td>
-<td width="200pxl">
-<p>Load or Extract tasks</p>
-</td>
-<td width="150pxl">
-<p>True/False</p>
+<td>
+<p>Comma-separated list of entity IDs to process. When the task uses an Entity Clone selection method, only a single entity ID is allowed.</p>
 </td>
 </tr>
 <tr>
-<td width="225pxl">
-<p><strong>targetEnvironmentName</strong></p>
+<td>
+<p><strong>SOURCE_ENVIRONMENT_NAME</strong></p>
 </td>
-<td width="225pxl">
-<p>Target environment name</p>
-</td>
-<td width="200pxl">
-<p>Load, Delete, or Reserve tasks</p>
-</td>
-<td width="123">
-<p>True/False</p>
+<td>
+<p>Override the source environment name.</p>
 </td>
 </tr>
 <tr>
-<td width="223">
-<p><strong>taskGlobals</strong></p>
+<td>
+<p><strong>TARGET_ENVIRONMENT_NAME</strong></p>
 </td>
-<td width="185">
-<p>A list of Global variables (task variables) and their values</p>
-</td>
-<td width="99">
-<p>All tasks</p>
-</td>
-<td width="123">
-<p>True/False</p>
+<td>
+<p>Override the target environment name.</p>
 </td>
 </tr>
 <tr>
-<td width="223">
-<p><strong>numberOfEntities</strong></p>
+<td>
+<p><strong>TASK_GLOBALS</strong></p>
 </td>
-<td width="185">
-<p>Populated with a number to change the number of entities processed by the task. This parameter is only irrelevant for the entity list if it is not set in the overridden parameters.</p>
-</td>
-<td width="99">
-<p>All tasks</p>
-</td>
-<td width="123">
-<p>False</p>
+<td>
+<p>Map of Fabric Global variable names to their override values. If a Global's value is a JSON string, escape internal quotes with a backslash.</p>
 </td>
 </tr>
 <tr>
-<td width="223">
-<p><strong>dataVersionExecId</strong></p>
+<td>
+<p><strong>NO_OF_ENTITIES</strong></p>
 </td>
-<td width="185">
-<p>Populated with the task execution id of the selected data version. The parameter can be set on Data Versioning load tasks.</p>
-</td>
-<td width="99">
-<p>Load task</p>
-</td>
-<td width="123">
-<p>True</p>
+<td>
+<p>Override the number of entities processed by the task. Applicable only when ENTITY_LIST is not set and the task selection method is not Entity List.</p>
 </td>
 </tr>
 <tr>
-<td width="200pxl">
-<p><strong>dataVersionRetentionPeriod</strong></p>
+<td>
+<p><strong>SELECTED_VERSION_TASK_EXE_ID</strong></p>
 </td>
-<td width="250pxl">
-<p>Populated with the retention period of the extracted data version. This parameter contains the unit (Hours, Days, Weeks&hellip;) and the value.</p>
-</td>
-<td>Extract task</td>
-<td>True</td>
-</tr>
-<tr>
-<td width="223">
-<p><strong>reserveInd</strong></p>
-</td>
-<td width="185">
-	<p>Populated with <strong>true</strong> or <strong>false</strong>. Set to <strong>true</strong> if the task execution needs to reserve the entities on the target environment.</p>
-</td>
-<td width="99">
-<p>Load or Reserve tasks</p>
-</td>
-<td width="123">
-<p>Load task: True/False</p>
-<p>&nbsp;</p>
-<p>Reserve task: N/A</p>
+<td>
+<p>Task execution ID of the selected data version. Applicable to Data Versioning load tasks only.</p>
 </td>
 </tr>
 <tr>
-<td width="223">
-<p><strong>reserveRetention</strong></p>
+<td>
+<p><strong>DATAFLUX_RETENTION_PARAMS</strong></p>
 </td>
-<td width="185">
-<p>Populated with the reservation period of the task's entities. This parameter contains the unit (Hours, Days, Weeks.) and the value.</p>
-</td>
-<td width="99">
-<p>Load or Reserve tasks</p>
-</td>
-<td width="123">
-<p>Load task: True/False</p>
-<p>&nbsp;</p>
-<p>Reserve task: N/A</p>
+<td>
+<p>Retention period of the extracted data version. Object with two fields: <strong>units</strong> (Hours, Days, or Weeks) and <strong>value</strong> (integer).</p>
 </td>
 </tr>
 <tr>
-<td width="223">
-<p><strong>executionNote</strong></p>
+<td>
+<p><strong>RESERVE_IND</strong></p>
 </td>
-<td width="185">
-<p>Free text. Add a note to the execution.</p>
+<td>
+<p>Boolean (true or false). Set to true to reserve the task entities on the target environment.</p>
 </td>
-<td width="99">
-<p>All tasks</p>
+</tr>
+<tr>
+<td>
+<p><strong>RESERVE_RETENTION_PARAMS</strong></p>
 </td>
-<td width="123">
-<p>True/False</p>
+<td>
+<p>Reservation period for the task entities. Object with two fields: <strong>units</strong> (Hours, Days, or Weeks) and <strong>value</strong> (integer).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>EXECUTION_NOTE</strong></p>
+</td>
+<td>
+<p>Free-text note attached to the execution.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>SELECTION_METHOD</strong></p>
+</td>
+<td>
+<p>Override the task selection method. Supported values: 'L' (entity list — requires ENTITY_LIST), 'ALL' (predefined entity list), 'R' (random — requires NO_OF_ENTITIES), 'C' (custom logic — requires NO_OF_ENTITIES; CUSTOM_LOGIC_FLOW and CUSTOM_LOGIC_LU_NAME must be present in the override or in the task definition).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>PARAMETERS</strong></p>
+</td>
+<td>
+<p>JSON string overriding the task's filter or input parameters. For Custom Logic ('C'): <code>{"inputs": [{"name": "...", "value": "..."}]}</code>. For Business Parameters ('P'/'PR'): the full parameter group JSON.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>BP_QUERY</strong></p>
+</td>
+<td>
+<p>SQL WHERE clause string overriding the business parameter filter. Applicable only for selection methods 'P' (Parameters) or 'PR' (Parameters with Random selection).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>GENERATE_DATA_PARAMS</strong></p>
+</td>
+<td>
+<p>Map of synthetic data generation parameter overrides. Each key is a parameter name; each value is an object with a "value" field. Applicable only when the selection method is 'GENERATE'.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>CUSTOM_LOGIC_FLOW</strong></p>
+</td>
+<td>
+<p>Override the flow name used for a Custom Logic selection method.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>CUSTOM_LOGIC_LU_NAME</strong></p>
+</td>
+<td>
+<p>Override the LU name used for a Custom Logic selection method.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>LOGICAL_UNITS</strong></p>
+</td>
+<td>
+<p>List of per-LU override objects. Each entry must include <strong>lu_id</strong> and <strong>lu_name</strong>, and may optionally include <strong>max_no_of_workers</strong>, <strong>source_affinity</strong>, and <strong>target_affinity</strong>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>TABLE_FILTERS</strong></p>
+</td>
+<td>
+<p>List of reference table filter overrides. Each entry must include <strong>ref_table_name</strong> and a <strong>fields</strong> array. Each fields item must include <strong>field</strong> and may include <strong>condition</strong> and <strong>value</strong>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>PRE_EXECUTION_PROCESSES_PARAMS</strong></p>
+</td>
+<td>
+<p>List of pre-execution process parameter overrides. Each entry must include <strong>process_id</strong> and a <strong>parameter_overrides</strong> array of {name, value} objects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>POST_EXECUTION_PROCESSES_PARAMS</strong></p>
+</td>
+<td>
+<p>Same structure as PRE_EXECUTION_PROCESSES_PARAMS, applied to post-execution processes.</p>
 </td>
 </tr>
 </tbody>
@@ -240,30 +213,80 @@ If the validations pass successfully, start the task execution by populating the
 
   ```json
   {
-    "entitieslist": "string",
-    "sourceEnvironmentName": "string",
-    "targetEnvironmentName": "string",
-    "taskGlobals": {
-      "additionalProp1": "string",
-      "additionalProp2": "string",
-      "additionalProp3": "string"
+    "overrideParameters": {
+      "BE_ID": "string",
+      "ENTITY_LIST": "string",
+      "SOURCE_ENVIRONMENT_NAME": "string",
+      "TARGET_ENVIRONMENT_NAME": "string",
+      "TASK_GLOBALS": {
+        "GlobalName": "value"
+      },
+      "NO_OF_ENTITIES": 0,
+      "SELECTED_VERSION_TASK_EXE_ID": 0,
+      "DATAFLUX_RETENTION_PARAMS": {
+        "units": "string",
+        "value": "string"
+      },
+      "RESERVE_IND": true,
+      "RESERVE_RETENTION_PARAMS": {
+        "units": "string",
+        "value": "string"
+      },
+      "EXECUTION_NOTE": "string",
+      "SELECTION_METHOD": "string",
+      "PARAMETERS": "string",
+      "BP_QUERY": "string",
+      "LOGICAL_UNITS": [
+        {
+          "lu_id": 0,
+          "lu_name": "string",
+          "max_no_of_workers": 0,
+          "source_affinity": "string",
+          "target_affinity": "string"
+        }
+      ],
+      "TABLE_FILTERS": [
+        {
+          "ref_table_name": "string",
+          "interface_name": "string",
+          "schema_name": "string",
+          "fields": [
+            {
+              "field": "string",
+              "condition": "string",
+              "value": "string"
+            }
+          ]
+        }
+      ],
+      "PRE_EXECUTION_PROCESSES_PARAMS": [
+        {
+          "process_id": 0,
+          "parameter_overrides": [
+            {
+              "name": "string",
+              "value": "string"
+            }
+          ]
+        }
+      ],
+      "POST_EXECUTION_PROCESSES_PARAMS": [
+        {
+          "process_id": 0,
+          "parameter_overrides": [
+            {
+              "name": "string",
+              "value": "string"
+            }
+          ]
+        }
+      ]
     },
-    "numberOfEntities": 0,
-    "dataVersionExecId": 0,
-    "dataVersionRetentionPeriod": {
-      "additionalProp1": "string",
-      "additionalProp2": "string",
-      "additionalProp3": "string"
-    },
-    "reserveInd": true,
-    "reserveRetention": {
-      "additionalProp1": {}
-    },
-    "executionNote": "string"
+    "draftExecutionId": 0
   }
   ```
-  
-  
+
+
 
 ### API Input Examples
 
@@ -279,19 +302,20 @@ http://localhost:3213/api/task/55/forced/true/startTask
 
 ```json
 {
-	"entitieslist": "1,2,4,9,8,11",
-	"sourceEnvironmentName": "SRC1",
-	"targetEnvironmentName": "TAR1",
-	"taskGlobals": {
-		"Customer.Global2": "value2",
-		"Customer.CUST_DETAILS": "'{\"name\":\"John\", \"age\":30, \"car\":null}'" 
-	},
-	"reserveInd": true,
-  	"reserveRetention": {
-    	"unit": "Days",
-		"value": "10"
+  "overrideParameters": {
+    "ENTITY_LIST": "1,2,4,9,8,11",
+    "SOURCE_ENVIRONMENT_NAME": "SRC1",
+    "TARGET_ENVIRONMENT_NAME": "TAR1",
+    "TASK_GLOBALS": {
+      "Customer.Global2": "value2",
+      "Customer.CUST_DETAILS": "'{\"name\":\"John\", \"age\":30, \"car\":null}'"
+    },
+    "RESERVE_IND": true,
+    "RESERVE_RETENTION_PARAMS": {
+      "units": "Days",
+      "value": "10"
+    }
   }
-	
 }
 ```
 
@@ -301,12 +325,14 @@ http://localhost:3213/api/task/55/forced/true/startTask
 
 ```json
 {
-	"sourceEnvironmentName": "SRC1",
-	"targetEnvironmentName": "TAR1",
-	"taskGlobals": {
-		"Customer.Global2": "value2"
-	},
- "numberOfEntities": 10
+  "overrideParameters": {
+    "SOURCE_ENVIRONMENT_NAME": "SRC1",
+    "TARGET_ENVIRONMENT_NAME": "TAR1",
+    "TASK_GLOBALS": {
+      "Customer.Global2": "value2"
+    },
+    "NO_OF_ENTITIES": 10
+  }
 }
 ```
 
@@ -314,32 +340,58 @@ http://localhost:3213/api/task/55/forced/true/startTask
 
 ##### Example 3 - Data Versioning Load Task
 
-Override the selected version
+Override the selected version:
 
 ```json
 {
-	"sourceEnvironmentName": "TAR1",
-	"targetEnvironmentName": "TAR1",
-	"taskGlobals": {
-		"EMAIL": "john123@gmail.com"
-	},
- "dataVersionExecId": 10
+  "overrideParameters": {
+    "SOURCE_ENVIRONMENT_NAME": "TAR1",
+    "TARGET_ENVIRONMENT_NAME": "TAR1",
+    "TASK_GLOBALS": {
+      "EMAIL": "john123@gmail.com"
+    },
+    "SELECTED_VERSION_TASK_EXE_ID": 10
+  }
 }
 ```
 
 ##### Example 4 - Data Versioning Extract Task
+
 ```json
 {
-	"entitieslist": "1,2,4,9,8,11,33",
-	"sourceEnvironmentName": "TAR1",
-	"taskGlobals": {
-		EMAIL": "john123@gmail.com"
-	},
- 	"dataVersionRetentionPeriod": {
-		"unit": "Days",
-		"value": "10"
-	},
-    "executionNote": "Snapshot 1"
+  "overrideParameters": {
+    "ENTITY_LIST": "1,2,4,9,8,11,33",
+    "SOURCE_ENVIRONMENT_NAME": "TAR1",
+    "TASK_GLOBALS": {
+      "EMAIL": "john123@gmail.com"
+    },
+    "DATAFLUX_RETENTION_PARAMS": {
+      "units": "Days",
+      "value": "10"
+    },
+    "EXECUTION_NOTE": "Snapshot 1"
+  }
+}
+```
+
+##### Example 5 - Override Per-LU Settings
+
+```json
+{
+  "overrideParameters": {
+    "SOURCE_ENVIRONMENT_NAME": "SRC1",
+    "TARGET_ENVIRONMENT_NAME": "TAR1",
+    "NO_OF_ENTITIES": 5,
+    "LOGICAL_UNITS": [
+      {
+        "lu_id": 1,
+        "lu_name": "Customer",
+        "max_no_of_workers": 5,
+        "source_affinity": "DC1",
+        "target_affinity": "DC2"
+      }
+    ]
+  }
 }
 ```
 
@@ -350,9 +402,9 @@ Override the selected version
 
 ```json
 {
-    "result":[{"Number of entity":"The number of entities exceeds the number of entities in the write permission","selectionMethod":"The User has no permissions to run the task's selection method on the task's target environment"}],
-    "errorCode":"FAIL",
-    "message":"validation failure"
+    "result": {"Number of entity": "The number of entities exceeds the number of entities in the write permission", "selectionMethod": "The User has no permissions to run the task's selection method on the task's target environment"},
+    "errorCode": "FAILED",
+    "message": "validation failure"
 }
 ```
 
@@ -361,11 +413,21 @@ Override the selected version
 ```json
 { 
     "result": 
-    [{"reference": "The user has no permissions to run tasks on Reference tables on source environment", 
-      "syncMode": "the user has no permissions to ask to always sync the data from the source."    } ], 
-    "errorCode": "FAIL",
+    {"reference": "The user has no permissions to run tasks on Reference tables on source environment", 
+      "syncMode": "the user has no permissions to ask to always sync the data from the source."    }, 
+    "errorCode": "FAILED",
     "message": "validation failure"
 } 
+```
+
+#### Override Parameter Validation Error
+
+```json
+{
+  "result": null,
+  "errorCode": "FAILED",
+  "message": "LOGICAL_UNITS[0] is missing required field 'lu_name'."
+}
 ```
 
 
@@ -375,7 +437,7 @@ Override the selected version
 The test connection runs when the **forced** input parameter is set to **false**.
 
 ```json
-{"errorCode":"FAIL","message":"The test connection of [CRM_DB] failed. Please check the connection details of target environment TAR"}
+{"errorCode": "FAILED", "message": "The test connection of [CRM_DB] failed. Please check the connection details of target environment TAR"}
 ```
 
 
@@ -391,5 +453,26 @@ The test connection runs when the **forced** input parameter is set to **false**
   "message": null
 }
 ```
+
+### Backward Compatibility - TDM 9.5 Override Parameter Structure
+
+TDM 10 changed the startTask request body: all override parameters are now wrapped in an **overrideParameters** object, and parameter names use uppercase keys (e.g., `ENTITY_LIST` instead of `entitieslist`).
+
+If your integration code was built on TDM 9.5 and populates override parameters using the previous flat structure, you can invoke **V1 of the startTask API**. This version accepts the TDM 9.5 flat parameter structure and internally builds the new **overrideParameters** JSON required by TDM 10.
+
+The TDM 9.5 flat parameter names and their TDM 10 equivalents are:
+
+| TDM 9.5 Parameter | TDM 10 overrideParameters Key |
+|---|---|
+| entitieslist | ENTITY_LIST |
+| sourceEnvironmentName | SOURCE_ENVIRONMENT_NAME |
+| targetEnvironmentName | TARGET_ENVIRONMENT_NAME |
+| taskGlobals | TASK_GLOBALS |
+| numberOfEntities | NO_OF_ENTITIES |
+| dataVersionExecId | SELECTED_VERSION_TASK_EXE_ID |
+| dataVersionRetentionPeriod | DATAFLUX_RETENTION_PARAMS (note: key renamed from `unit` to `units`) |
+| reserveInd | RESERVE_IND |
+| reserveRetention | RESERVE_RETENTION_PARAMS (note: key renamed from `unit` to `units`) |
+| executionNote | EXECUTION_NOTE |
 
  [![Previous](/articles/images/Previous.png)](01_tdm_basic_task_execution_flow.md)

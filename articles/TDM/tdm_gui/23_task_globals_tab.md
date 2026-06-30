@@ -11,13 +11,23 @@ K2view's TDM enables overriding [Global variables](/articles/08_globals/01_globa
 
 The **Task variables** tab in the task's **Advanced settings** displays the list of variables set on a task level and enables setting variables on a task. 
 
-Click **Set Task Variable** to set a variable value on the task. The following pop-up window opens:
+Click **Add variable** to set a variable value on the task. The following pop-up window opens:
 
 ![add global](images/task_add_global.png)
 
-- **Variable Name** - select a value from the drop-down list of Global variables defined in the Fabric implementation.
-- **Logical Unit** - can be populated with either 'ALL' (impacting all the task's LUs) or a specific LU name.
-- **Variable Value** - the default value is displayed. You can set a different value on the variable.
+- **Variable name** (required) — select from the drop-down list of Global variables defined in the Fabric implementation.
+- **Logical unit** (required) — select either a specific LU name or 'ALL' to impact all the task's LUs.
+- **Variable value** — the default value is displayed. You can set a different value on the variable.
 
+## Add Parameters at Execution
 
+The task creator can check the **Add parameters at execution** checkbox to allow the task runner to add new variable overrides at execution time, in addition to any variables already defined in the task. If this checkbox is unchecked, the task runner cannot add new variables at execution.
 
+## Lock Icons
+
+Each variable row has a lock icon. The task creator can unlock individual variables to allow the task runner to edit their values at execution time:
+
+- **Locked** — the variable value is fixed and cannot be changed by the task runner at execution time.
+- **Unlocked** — the task runner can edit the variable's value when executing the task.
+
+At execution time, all variables are displayed, but the task runner can only edit the values of unlocked variables.

@@ -153,5 +153,5 @@ The following table describes how to create a task to provision tables from a se
 
 
 
- [![Previous](/articles/images/Previous.png)](19_task_synthetic_data_generation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](25_task_tdmdb_tables.md)
+ [![Previous](/articles/images/Previous.png)](19_task_synthetic_data_generation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](21_task_advanced_settings.md)
 

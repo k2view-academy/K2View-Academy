@@ -174,6 +174,78 @@ http://10.21.2.69:3213/api/task/2/summary?numberOfExecutions=4&userId=joe
 }
 ```
 
+## Get the Task Details for a Specific Execution
+
+### API URL
+
+/task/execution/{taskExecutionId}
+
+### HTTP Method
+
+GET
+
+### API Category
+
+TDM_Tasks
+
+### API Description
+
+Returns task details for a specific execution, with overridden parameters from the TASK_EXECUTION_OVERRIDE_ATTRS table applied. This API is new in TDM 10 and provides a way to retrieve the effective task configuration as it was executed, including any overrides applied at execution time.
+
+### API Input
+
+<table width="900pxl">
+<tbody>
+<tr>
+<td width="200pxl"><strong>Param Name</strong></td>
+<td width="200pxl">
+<p><strong>Mandatory</strong></p>
+</td>
+<td width="500pxl">
+<p><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p><strong>taskExecutionId</strong></p>
+</td>
+<td valign="top" width="200">
+<p>Yes</p>
+</td>
+<td width="251">
+<p>The unique identifier of the task execution.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+### API Input Example
+
+```
+http://localhost:3213/api/task/execution/43
+```
+
+### API Output Example
+
+```json
+{
+  "result": {
+    "task_id": 2,
+    "task_title": "Extract and Load entities",
+    "task_type": "Extract and load entities",
+    "be_id": 2,
+    "be_name": "Subscriber",
+    "source_environment_id": 1,
+    "source_env_name": "Production",
+    "target_env_id": 2,
+    "environment_name": "UAT",
+    "selection_method": "Business parameters",
+    "num_of_entities": 5
+  },
+  "errorCode": "SUCCESS"
+}
+```
+
 ## Get the Summary Execution Details on Last Execution
 
 The **wsTaskMonitor** API can be used to monitor a task execution or get the information of the last execution (if the last  execution ended).
