@@ -91,37 +91,61 @@ When defining a task, the creator selects which of the following attributes task
       <td>Select a BE at runtime if left empty in the template; locked if populated by the creator</td>
     </tr>
     <tr>
-      <td><strong>Source &amp; Target Environments</strong></td>
-      <td>Pick different source or target environments per run</td>
+      <td><strong>Source Environment</strong></td>
+      <td>Pick a different source environment per run</td>
     </tr>
     <tr>
-      <td><strong>Selection Method</strong></td>
-      <td>Choose the method and configure which business parameter values are editable, or whether to add parameters</td>
+      <td><strong>Target Environment</strong></td>
+      <td>Pick a different target environment per run</td>
     </tr>
     <tr>
-      <td><strong>Entity Reservation Period</strong></td>
-      <td>Set how long reserved entities are held</td>
+      <td><strong><a href="/articles/TDM/tdm_gui/15a_entity_subset.md">Selection Method</a></strong></td>
+      <td>The following attributes can be overridden:
+        <ol>
+          <li>The selection method itself</li>
+          <li>Selection method attributes. For example: edit the business parameter values, edit the custom logic flow and/or input parameter values</li>
+          <li>Number of entities</li>
+        </ol>
+      </td>
     </tr>
     <tr>
-      <td><strong>Table Filters</strong></td>
-      <td>Adjust filters applied to selected tables for that run</td>
+      <td><strong>Synthetic Data Generation Parameters</strong></td>
+      <td>Edit the parameter values and/or add new parameters</td>
     </tr>
     <tr>
-      <td><strong>Task Variables</strong></td>
-      <td>Provide values for variables defined in the task</td>
+      <td><strong>Task Globals (Variables)</strong></td>
+      <td>Provide or override values for Fabric Global variables defined in the task</td>
     </tr>
     <tr>
-      <td><strong>Pre &amp; Post-Execution Inputs</strong></td>
-      <td>Supply input parameters for pre/post-execution processes</td>
+      <td><strong>Entity Reservation</strong></td>
+      <td>Enable or disable entity reservation, and set how long reserved entities are held (units and value)</td>
     </tr>
     <tr>
       <td><strong>Data Version (Snapshot)</strong></td>
-      <td>Select a retention period for new versions, or choose an existing snapshot to load</td>
+      <td>Select an existing snapshot to load (load tasks), or set the retention period for a newly extracted data version (extract tasks)</td>
+    </tr>
+    <tr>
+      <td><strong>Per-LU Settings</strong></td>
+      <td>Override per-LU execution settings: maximum number of workers, source affinity, and target affinity</td>
+    </tr>
+    <tr>
+      <td><strong>Table Filters</strong></td>
+      <td>Adjust filter values applied to reference tables included in the task</td>
+    </tr>
+    <tr>
+      <td><strong>Pre-Execution Process Inputs</strong></td>
+      <td>Supply input parameter values for pre-execution processes</td>
+    </tr>
+    <tr>
+      <td><strong>Post-Execution Process Inputs</strong></td>
+      <td>Supply input parameter values for post-execution processes</td>
+    </tr>
+    <tr>
+      <td><strong>Execution Note</strong></td>
+      <td>Attach a free-text note to the execution for tracking or documentation purposes</td>
     </tr>
   </tbody>
 </table>
-
-> **Note:** Pre/post-execution process inputs are not available for entity-based or table-based tasks.
 
 
 
