@@ -12,6 +12,8 @@ The OpenApiToMetadata actor reads an OpenAPI specification file and outputs an a
 
 The actor supports OpenAPI Specification versions 3.0 and 3.1 only. If the input file does not conform to one of these versions, the actor throws an exception.
 
+The actor's `resolver` input (which represents an inner actor or inner flow) fetches the root OpenAPI document and its external $ref references. It defaults to FileRead.actor.
+
 When an API exposes several versions (e.g., v1, v2), the actor uses the latest version for discovery. A property is created on the data platform node with the version number, so the version context is preserved in the Catalog.
 
 ## Catalog Hierarchy Mapping
