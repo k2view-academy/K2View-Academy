@@ -53,31 +53,30 @@ OpenAPI concepts map to the Catalog hierarchy as follows:
 </tbody>
 </table>
 
-The `tags` defined in OpenAPI specification determine the list of Catalog schemas. Each dataset (Endpoint) is placed under the schema that matches its tag. In case of multiple `tags` values, the first value is used.
-
-* If `tags` is not defined in the Endpoint specification, the `schema` actor input is used.
-* If there is neither `tags` nor the `schema` input, the actor throws an exception. 
-
-Each entry under `paths` in the OpenAPI specification becomes a Catalog dataset, named after the endpoint path.
-
-* When a path includes parameters, the parameters are kept as part of the dataset name. For example, the path `/customers/{customerId}/orders` will be transformed to `customersCustomerIdOrders` dataset.
-* When the path includes brackets, they will be dropped. For example, the path `/A_EmailAddress(AddressID='{AddressID}',Person='{Person}')` will be transformed to `A_EmailAddress` dataset.
-
 ## Metadata Extraction Rules
 
 The following rules govern how the actor interprets an OpenAPI specification when building the Catalog metadata.
 
+**Schema names are derived from endpoint tags.** The `tags` defined in the OpenAPI specification are used to define the Catalog schema name. Each dataset is placed under the schema that matches its tag. 
+
+* When an endpoint has multiple `tags` values, the first value is used. 
+* When `tags` is not defined for an endpoint, the `schema` actor input is used instead. 
+* When neither `tags` nor the `schema` input is provided, the actor throws an exception.
+
 **Dataset represents an entity, not an HTTP operation.** A dataset corresponds to an API resource (entity), not to individual HTTP methods. GET, POST, and DELETE defined on the same path all refer to the same dataset.
 
-**`components/schemas` is the primary data source.** The `components/schemas` section contains the complete, canonical data model definitions and is treated as the authoritative source for field structures.
+**Dataset names are derived from path entries.** Each entry under `paths` becomes a dataset named after the endpoint path. 
 
-**`paths` is supplemental.** The `paths` section identifies which entities are exposed by the API and provides names for inline schemas. It does not replace `components/schemas` as the source of field definitions.
+* When a path includes parameters, they are kept as part of the dataset name, for example: `/customers/{customerId}/orders` becomes `customersCustomerIdOrders`. 
+* When the path includes brackets, the brackets and their content are dropped and the base name is used, for example: `/A_EmailAddress(AddressID='{AddressID}',Person='{Person}')` becomes `A_EmailAddress`.
 
-**Schema composition is preserved.** When a schema uses composition keywords — `allOf`, `anyOf`, or `oneOf` — the member schemas are kept as separate `definedBy` relationships in the Catalog rather than being flattened into a single list of fields. This preserves the original structure and inheritance relationships of the data model.
+**`components/schemas` is the primary data source; `paths` is supplemental.** The `components/schemas` section contains the complete, canonical data model definitions and is the authoritative source for field structures. The `paths` section identifies which entities are exposed by the API and provides names for inline schemas, but does not replace `components/schemas` as the source of field definitions.
+
+**Fields are merged across HTTP methods.** When multiple HTTP methods (GET, POST, etc.) are defined on the same path, their fields are collected from all methods and merged to produce the complete field set for the dataset.
+
+**OpenAPI data model composition is preserved.** When a data model uses composition keywords — `allOf`, `anyOf`, or `oneOf` — the member models are kept as separate `definedBy` relationships in the Catalog rather than being flattened into a single list of fields. This preserves the original structure and inheritance relationships of the data model.
 
 **HTTP transport elements are excluded.** Transport-level constructs — such as path and query parameters, request headers, security schemes, and primitive (non-object) responses — are not data model elements and are therefore excluded from the Catalog.
-
-**Fields are merged across HTTP methods.** When multiple HTTP methods (e.g., GET, POST, PATCH) are defined on the same path, their fields are collected from all methods and merged to produce the complete field set for the dataset.
 
 ## Implementation
 
