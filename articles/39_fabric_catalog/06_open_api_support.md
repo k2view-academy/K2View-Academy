@@ -30,8 +30,7 @@ OpenAPI concepts map to the Catalog hierarchy as follows:
 </tr>
 <tr>
 <td>schema</td>
-<td><p>Endpoint tag - derived from the first value of <code>tags</code> in the Endpoint definition. </p>
-  <p>If <code>tags</code> is not defined, the <code>schema</code> actor input is used.</p> 
+<td>Endpoint tag - derived from the first value of <code>tags</code> in the Endpoint definition.
 </td>
 </tr>
 <tr>
@@ -51,8 +50,8 @@ OpenAPI concepts map to the Catalog hierarchy as follows:
 
 The `tags` defined in the OpenAPI specification determine the list of Catalog schemas. Each dataset (endpoint) is placed under the schema that matches its tag.
 
-* The optional `schema` actor input, when provided, overrides the tags and sets a single schema name for all discovered datasets.
-* If the OpenAPI specification contains no `tags` and the `schema` input is not provided, the actor throws an exception. 
+* If `tags` is not defined in the Endpoint specification, the `schema` actor input is used.
+* If there is neither `tags` nor the `schema` input, the actor throws an exception. 
 
 Each entry under `paths` in the OpenAPI specification becomes a Catalog dataset, named after the endpoint path.
 

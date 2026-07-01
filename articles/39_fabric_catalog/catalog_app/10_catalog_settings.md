@@ -18,6 +18,7 @@ The **Classifier Regex** tab enables viewing and updating of the regular express
 The columns of this tab are:
 
 * **Classification** — defines the value of a Classification property added to the Catalog's fields as a result of the Profiling plugins. 
+  * The filter is always expanded and focused, so a user can simply start typing to filter the list, without first having to click and select the filter field. Available in V8.5.
 * **Type** — can be either **Field Name** or **Field Value**:
   * Entries defined as **Field Name** type are used by the *Metadata Regex Classifier* plugin.
   * Entries defined as **Field Value** type are used by the *Data Regex Classifier* plugin.
@@ -54,6 +55,8 @@ Each **Classification** in this tab is unique and contains the following attribu
 Note that the **Consistent using seed** value is  only available when the data generation supports generating a consistent vale based on [seed](/articles/41_masking/02_data_masking_flow.md#data-consistency-using-seed).
 
 In the **PII & Masking** tab, each classification can have only one definition (row). Note that you cannot create a sequence (via the Sequence Setup tab) with the same name as a classification listed in this tab, since both classifications and sequences are saved in the same MTable.
+
+The **Classification** filter is always expanded and focused, so a user can simply start typing to filter the list, without first having to click and select the filter field. Available in V8.5.
 
 #### Masking Setup Guidelines
 
