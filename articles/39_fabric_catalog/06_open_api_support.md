@@ -18,25 +18,33 @@ When an API exposes several versions (e.g., v1, v2), the actor uses the latest v
 
 OpenAPI concepts map to the Catalog hierarchy as follows:
 
-<table>
-<thead>
-<tr>
-<th>OpenAPI Concept</th>
-<th>Catalog Level</th>
-</tr>
-</thead>
+<table style="width: 900px;">
 <tbody>
 <tr>
+<td style="width: 250px;"><strong>Catalog Node Type</strong></td>
+<td style="width: 650px;"><strong>OpenAPI Concept</strong></td>
+</tr>
+<tr>
+<td>dataPlatform</td>
 <td>OpenAPI interface</td>
-<td>Data platform</td>
 </tr>
 <tr>
-<td><code>tags</code> value (or <code>schema</code> actor input)</td>
-<td>Schema</td>
+<td>schema</td>
+<td><p>Endpoint tag - derived from the first value of <code>tags</code> in the Endpoint definition. </p>
+  <p>If <code>tags</code> is not defined, the <code>schema</code> actor input is used.</p> 
+</td>
 </tr>
 <tr>
-<td>Endpoint name (derived from <code>paths</code>)</td>
-<td>Dataset</td>
+<td>dataset</td>
+<td>Endpoint name - derived from <code>paths</code>.</td>
+</tr>
+<tr>
+<td>class</td>
+<td>Schema component - derived from <code>#/components/schemas/</code>.</td>
+</tr>
+<tr>
+<td>field</td>
+<td>Object component - derived from <code>properties</code>.</td>
 </tr>
 </tbody>
 </table>
