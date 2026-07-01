@@ -21,34 +21,39 @@ OpenAPI concepts map to the Catalog hierarchy as follows:
 <table style="width: 900px;">
 <tbody>
 <tr>
-<td style="width: 250px;"><strong>Catalog Node Type</strong></td>
-<td style="width: 650px;"><strong>OpenAPI Concept</strong></td>
+<td style="width: 150px;"><strong>Catalog Node</strong></td>
+<td style="width: 150px;"><strong>OpenAPI Concept</strong></td>
+<td style="width: 600px;"><strong>Detailed Logic</strong></td>
 </tr>
 <tr>
 <td>dataPlatform</td>
 <td>OpenAPI interface</td>
+<td> </td>
 </tr>
 <tr>
 <td>schema</td>
-<td>Endpoint tag - derived from the first value of <code>tags</code> array in the Endpoint definition.
-</td>
+<td>Endpoint tag</td>
+<td>Derived from the first value of <code>tags</code> array in the Endpoint definition</td>
 </tr>
 <tr>
 <td>dataset</td>
-<td>Endpoint name - derived from <code>paths</code>, when <code>application/json</code> schema in the Endpoint response is not empty.</td>
+<td>Endpoint name</td>
+<td>Derived from <code>paths</code>, when <code>application/json</code> schema in the Endpoint response is not empty</td>
 </tr>
 <tr>
 <td>class</td>
-<td>Schema component - derived from <code>#/components/schemas/</code>.</td>
+<td>Schema component</td>
+<td>Derived from <code>#/components/schemas/</code></td>
 </tr>
 <tr>
 <td>field</td>
-<td>Object component - derived from <code>properties</code>.</td>
+<td>Object component</td>
+<td>Derived from <code>properties</code></td>
 </tr>
 </tbody>
 </table>
 
-The `tags` defined in the OpenAPI specification determine the list of Catalog schemas. Each dataset (endpoint) is placed under the schema that matches its tag.
+The `tags` defined in OpenAPI specification determine the list of Catalog schemas. Each dataset (Endpoint) is placed under the schema that matches its tag. In case of multiple `tags` values, the first value is used.
 
 * If `tags` is not defined in the Endpoint specification, the `schema` actor input is used.
 * If there is neither `tags` nor the `schema` input, the actor throws an exception. 
