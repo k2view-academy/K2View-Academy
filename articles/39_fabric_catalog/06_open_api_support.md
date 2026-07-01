@@ -30,12 +30,12 @@ OpenAPI concepts map to the Catalog hierarchy as follows:
 </tr>
 <tr>
 <td>schema</td>
-<td>Endpoint tag - derived from the first value of <code>tags</code> in the Endpoint definition.
+<td>Endpoint tag - derived from the first value of <code>tags</code> array in the Endpoint definition.
 </td>
 </tr>
 <tr>
 <td>dataset</td>
-<td>Endpoint name - derived from <code>paths</code>.</td>
+<td>Endpoint name - derived from <code>paths</code>, when <code>application/json</code> schema in the Endpoint response is not empty.</td>
 </tr>
 <tr>
 <td>class</td>
