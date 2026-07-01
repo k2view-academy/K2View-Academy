@@ -40,9 +40,10 @@ To better understand the concept of a **transformation flow** and its pivotal us
 
 **Get Metadata** is the first transformation flow, and it builds the Catalog's expected metadata, returning it in a format of an array of maps. This flow is mandatory.
 
-* Metadata may be based on the schema definition file(s), if they are provided. Two dedicated actors are provided for this use case:
+* Metadata may be based on the schema definition file(s), if they are provided. Dedicated actors are provided for this use case:
   * **JsonSchemaToMetadata** to transform the JSON schema to the Catalog metadata format. The actor's capabilities vary by Fabric version as new capabilities were added in V8.3.1 and then later in V8.4.5. Refer to the extension's README for version compatibility details and flow examples.
   * **AvroSchemaToMetadata** to transform the Avro schema to the Catalog metadata format (Avro extension should be installed to use this actor).
+  * **OpenApiToMetadata** to transform an OpenAPI specification (versions 3.0 and 3.1) to the Catalog metadata format. Available from V8.5. For more details, refer to [OpenAPI Support](06_open_api_support.md).
 * When no schema definition file exists, the metadata is expected to be discovered from a data sample. In this case, the output Catalog metadata will only include the dataset name with its corresponding schema. The fields and their properties will then be inferred from the sample data.
 * A combined approach is also possible, where some datasets are defined using schema definition files, while others are based on sample data.
 
@@ -74,12 +75,6 @@ Do the following steps to attach the transformation flows:
 4. Save and deploy the Web Services LU.
 
 <img src="images/filesystem_discovery.png"  />
-
-## OpenAPI Support
-
-Starting from V8.5, the File Cataloging framework also supports discovery of **OpenAPI** interfaces. A dedicated **OpenApiToMetadata** actor is provided for this purpose. The actor parses an OpenAPI specification and transforms it into the Catalog's standard metadata format — the same format produced by **JsonSchemaToMetadata** and **AvroSchemaToMetadata** for other file-based sources. Once the metadata is prepared, the standard Discovery pipeline runs over it in the same way as for any other data source.
-
-For more details, refer to [OpenAPI Support](06_open_api_support.md).
 
 ## Organizing Files in Filesystem
 

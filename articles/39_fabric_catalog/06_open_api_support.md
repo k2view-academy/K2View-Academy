@@ -85,14 +85,4 @@ The following rules govern how the actor interprets an OpenAPI specification whe
 
 **HTTP transport elements are excluded.** Transport-level constructs — such as path and query parameters, request headers, security schemes, and primitive (non-object) responses — are not data model elements and are therefore excluded from the Catalog.
 
-## Implementation
-
-The setup follows the same pattern as other file cataloging sources:
-
-1. Create a **Get Metadata** Broadway flow (under Shared Objects) that uses the **OpenApiToMetadata** actor, providing the OpenAPI spec file as input. Note that **Get Files List** and **Get File Data** flow are not required for the OpenAPI spec file discovery.
-2. Attach the flow to the relevant interface using the **Discovery** parameters group. 
-3. Deploy the Web Services LU and run Discovery on the interface.
-
-Refer to [File Cataloging](05_cataloging_of_files.md) for the general implementation guidelines on creating transformation flows and attaching them to interfaces.
-
 [![Previous](/articles/images/Previous.png)](05_cataloging_of_files.md)
