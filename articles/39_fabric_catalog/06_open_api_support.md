@@ -50,7 +50,7 @@ OpenAPI concepts map to the Catalog hierarchy as follows:
 <tr>
 <td>field</td>
 <td>Object component</td>
-<td>Derived from <code>properties</code></td>
+<td>Derived from objet's <code>properties</code> under <code>components/schemas</code></td>
 </tr>
 </tbody>
 </table>
