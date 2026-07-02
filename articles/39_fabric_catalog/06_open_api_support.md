@@ -81,7 +81,7 @@ The following rules govern how the actor interprets an OpenAPI specification whe
 
 **Fields are merged across HTTP methods.** When multiple HTTP methods (GET, POST, etc.) are defined on the same path, their fields are collected from all methods and merged to produce the complete field set for the dataset.
 
-**OpenAPI data model composition is preserved.** When a data model uses composition keywords — `allOf`, `anyOf`, or `oneOf` — the member models are kept as separate `definedBy` relationships in the Catalog rather than being flattened into a single list of fields. This preserves the original structure and inheritance relationships of the data model.
+**OpenAPI data model composition handling.** When a data model uses composition keywords — `allOf`, `anyOf`, or `oneOf` — the member models are being flattened into a list of fields. 
 
 **HTTP transport elements are excluded.** Transport-level constructs — such as path and query parameters, request headers, security schemes, and primitive (non-object) responses — are not data model elements and are therefore excluded from the Catalog.
 
