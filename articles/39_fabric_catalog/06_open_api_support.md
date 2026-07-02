@@ -67,7 +67,7 @@ The following rules govern how the actor interprets an OpenAPI specification whe
 
 **Dataset represents an entity, not an HTTP operation.** A dataset corresponds to an API resource (entity), not to individual HTTP methods. GET, POST, and DELETE defined on the same path all refer to the same dataset.
 
-**Dataset names are derived from path entries.** Each entry under `paths` becomes a dataset named after the endpoint path. 
+**Dataset names are derived from path entries.** Each entry under `paths` becomes a dataset named after the endpoint path, when `application/json/schema` in the response is not empty. 
 
 * When a path includes parameters, they are kept as part of the dataset name, for example: `/customers/{customerId}/orders` becomes `customersCustomerIdOrders`. 
 * When the path includes brackets, the brackets and their content are dropped and the base name is used, for example: `/A_EmailAddress(AddressID='{AddressID}',Person='{Person}')` becomes `A_EmailAddress`.
