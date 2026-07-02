@@ -13,6 +13,4 @@ The release highlights are:
 * Fabric now supports parallel processing for Entity transfers to and from **Amazon S3** and **Microsoft Azure**, which significantly reduces the large entities’ transfer times.
 * **High-Performance PostgreSQL Loading**: A new Broadway actor, **PgCopy**, enables high-speed bulk data inserts into PostgreSQL databases using the native COPY command. 
 
-Refer to the [Release Notes](https://support.k2view.com/Academy/Release_Notes/V8.4/Fabric_Release_Notes_V8.4.0.pdf.html) for the full list of features and fixes. 
-
 <img src="images/img.png" alt="image" style="zoom: 70%;" />
