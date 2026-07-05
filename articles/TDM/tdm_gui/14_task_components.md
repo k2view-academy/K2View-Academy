@@ -40,9 +40,11 @@ The user can click on each one of the components to open its form and update its
 
 ### Task Name
 
-When creating a new task or opening a task, the **Task name** form opens. Populating the Task name and Task description fields is optional. If no Task name is set, a default Task name is generated with some basic information about the task.
+When you create a new task or open an existing one, the **Task name** form opens. Completing the Task name and Task description fields is optional. If you do not specify a task name, a default name is generated based on basic task information.
 
-You can exit each form, including the Task name form, by clicking any task component. You can re-open the Task name form by clicking the Task name in the upper-left corner of the window.
+You can close the Task name form (or any other form) by clicking any task component. To reopen it, click the task name in the upper-left corner of the window.
+
+The Task name form includes the task name, description, [task group, task access control](14_task_overview.md#access-control-and-task-groups), and notes.
 
 ![task name](images/task_name_form.png)
 
@@ -54,7 +56,7 @@ Click on each one of the components to open and update its form.
 
 ### Advanced Settings
 
-The Advanced settings icon opens a popup window that includes **optional** task settings containing pre and post execution processes, task variables, task scheduling, and execution report settings. 
+The Advanced settings icon opens a pop-up window that includes **optional** task settings containing pre and post execution processes, task variables, task scheduling, and execution report settings. 
 
 Click [here](21_task_advanced_settings.md) for more information about the task advanced setting window. 
 
