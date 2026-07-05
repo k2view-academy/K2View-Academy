@@ -179,7 +179,7 @@ Similar to the POST method but send the information using GET parameters.
 <span style="border-radius: 2em; background-color: #0969da; padding: 0 7px; color:white">POST</span>  `/api/authenticate`
 
 
-Generate a JWT digitally signed cookie for Web-Services calls on the same session. Consequently, later Fabric Web-services calls requires sending this JWT. Read more [here](/articles/26_fabric_security/05_fabric_webservices_security.md#jwt-signed-by-fabric)
+Generate a JWT for Web-Services calls on the same session, returned either as a digitally-signed **cookie** (end-user login) or in the **response body** (server-to-server access), depending on the caller and on the `responseInBody` parameter. Consequently, later Fabric Web-services calls require sending this JWT. Read more [here](/articles/26_fabric_security/05_fabric_webservices_security.md#authenticate-cookie-vs-response-body)
 
 The web service expects either an API Key to be sent in the request body or username and password, as follows:
 
@@ -203,6 +203,10 @@ The web service expects either an API Key to be sent in the request body or user
   "password": "string",
 }
 ```
+
+**Additional parameter:**
+
+- `responseInBody` (optional, boolean, as a query/form parameter) - when `true`, the JWT is returned in the response body (`{"response": "OK", "jwt": "<JWT>"}`) instead of a cookie. This is **required** when authenticating with an API Key that is not associated to any user, since there is no user identity (`unm` claim) to place in a cookie.
 
 
 

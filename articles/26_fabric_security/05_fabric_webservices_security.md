@@ -5,6 +5,7 @@
 - [Authentication Methods](#authentication-methods)
   - [API Key](#api-key)
   - [JWT: Signed by Fabric](#jwt-signed-by-fabric)
+    - [Authenticate: Cookie vs. Response Body](#authenticate-cookie-vs-response-body)
   - [JWT: Signed by the WS Client](#jwt-signed-by-the-ws-client)
     - [External Trusted Authentication](#external-trusted-authentication)
   - [Open Auth (OAuth)](#open-auth-oauth)
@@ -39,7 +40,11 @@ Fabric supports several methods for that purpose:
 
 API key authentication is the simplest method because it authenticates WS calls by including a single key, allowing a client to make calls from various origins.
 
-The API Key is sent as the token value of the `Authorization: Bearer` header, for example: `Authorization: Bearer ABC`, where the API Key is "ABC".
+Fabric supports 3 API Key types, selected at creation time:
+
+* **Access** - a server-generated UUID, sent as the token value of the `Authorization: Bearer` header, for example: `Authorization: Bearer 89ad080a-ef07-4cf1-95ef-9972996b787f`. This is the default type.
+* **Signing JWT** - not used directly as a Bearer token; instead, the returned value is a secret used by the client to sign its own JWT. See [JWT: Signed by the WS Client](#jwt-signed-by-the-ws-client).
+* **Legacy** - the token name itself is the API Key, sent as `Authorization: Bearer <token_name>`. This is the pre-8.5 behavior, kept for backward compatibility.
 
 See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) how to generate an API Key.
 
@@ -49,14 +54,14 @@ Authorization and permissions are assigned based on the roles associated with th
 
 The authentication flow for this method works as follows:
 
-1. Create an API Key. See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) for instructions. To indicate that JWT is signed by Fabric, do not select the "Signed by client" option.
+1. Create an **Access** or **Legacy** API Key. See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) for instructions.
 
 2. Make a first POST call to the Fabric server's endpoint: `<SERVER-HOST>:<SERVER-PORT>/api/authenticate`, where it provides one of the following credentials in the post body:
 
    - user/password, using the pattern: `{"username": "<USER>", "password": "<PASSWORD>"}`.
-   - API Key, using the pattern: `{"apikey": "<APIKEY>"}`. See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) how to generate an API Key (choose the non "Signed by client" key).
+   - API Key, using the pattern: `{"apikey": "<APIKEY>"}`. See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) how to generate an Access or Legacy API Key.
 
-3. Upon authentication success, Fabric responds with `{"response": "OK"}` (within 201 response code), along with the JWT, which is returned as a cookie.
+3. Upon authentication success, Fabric returns the JWT either as a **cookie** or in the **response body**, depending on how the call is made - see [Cookie vs. Response Body](#authenticate-cookie-vs-response-body) below.
 
 4. Make the following web service calls by sending this JWT as the token value of the `Authorization: Bearer` header or as a cookie, as part of each request. If requests are made via the browser, this cookie is already stored in the browser.  
 
@@ -64,16 +69,27 @@ The authentication flow for this method works as follows:
 
 Authorization and permissions are determined by the credentials provided during the initial "/api/authenticate" call, either by the user or by the API Key, along with the assigned roles for each. See [here](/articles/26_fabric_security/01_fabric_credentials_overview.md) for more information about API Keys, roles, and permissions.
 
+#### Authenticate: Cookie vs. Response Body
+
+The `/api/authenticate` endpoint is used both for **end-user login** (a human authenticating in a browser) and for **server-to-server calls** (a service obtaining a short-lived JWT using an API Key). Fabric enforces a behavioral separation between these two modes, based on whether the resulting JWT carries a resolved user identity (the `unm` claim) and on the `responseInBody` request parameter:
+
+* **End-user login** - when the call resolves to a Fabric user (username/password, or an API Key associated to a user), the JWT is returned as a **cookie** by default, and it carries the `unm` claim. Accessing Web Services using this cookie requires the `unm` claim to be present; a cookie JWT without it is rejected.
+* **Server-to-server access** - when the call authenticates only with an API Key that is *not* associated to a user, there is no user identity to place in a cookie. Such calls must pass `responseInBody=true`; the JWT is then returned in the response body, `{"response": "OK", "jwt": "<JWT>"}`, instead of a cookie. Calling without `responseInBody=true` in this case is rejected.
+* `responseInBody=true` can also be used with username/password or a user-associated API Key, to get the JWT back in the body instead of a cookie.
+* A bearer-header JWT (as opposed to a cookie) may be used with or without the `unm` claim.
+
+**Audit log**: the `/api/authenticate` "LOGIN" audit entry records the resolved **user** when the JWT carries a `unm` claim (either resolved from Fabric credentials, or explicitly supplied via the `claims` parameter - see [JWT Custom Claims](/articles/26_fabric_security/06_jwt-custom-claims-and-iid-access-control.md)), and otherwise records the **API Key** name.
+
 
 
 ### JWT: Signed by the WS Client
 
 The authentication flow for this method works as follows:
 
-1. Create an API Key. See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) for instructions. Select the "Signed by client" option to indicate that the client is signing. In such a case, the "/api/authenticate" call using the API Key will be rejected because it is only available when Fabric signs the JWT.
+1. Create a **Signing JWT** API Key. See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) for instructions. In such a case, the "/api/authenticate" call using this API Key will be rejected, because it is only available for Access/Legacy keys (when Fabric signs the JWT).
 2. Generate a JWT, where:
-   - It must include an "apk" claim with the value of the API Key, as part of the JWT payload.
-   - The secret key, provided by Fabric during the API Key generation, must be used to sign the JWT.
+   - It must include an "apk" claim with the value of the API Key name, as part of the JWT payload.
+   - The Signing Key, provided by Fabric during the API Key generation, must be used to sign the JWT.
    - JWT is signed using HMAC-SHA256.
    - The client maintains the JWT's expiration time.
 3. Make the web services calls by sending this JWT as the token value of the `Authorization: Bearer` header.
@@ -165,39 +181,43 @@ When activated, a browser pop-up will appear when the request is sent. The user 
 
 ## Generating API Key  
 
-There are two ways to generate an API key: either through the Web Framework Admin or with a Fabric command. In both cases, you can choose whether to use HMAC-based symmetric signing of the API Key, as described below.
+There are two ways to generate an API key: either through the Web Framework Admin or with a Fabric command. In both cases, you choose one of the 3 [API Key types](#api-key): **Access**, **Signing JWT**, or **Legacy**.
 
 * Web Framework Admin: 
 
   1. Open the **Admin Panel** web page and select **Admin** > **Security** and then click the **API keys** tab.
   2. Click the **Add API Key +** button on the upper right of the window.
 
-  3. Fill in the Name (Mandatory) and choose if you need to perform HMAC-based symmetric signing (Optional) by using the checkbox on the page.
+  3. Fill in the Name (Mandatory) and select the key type from the **Select key type** dropdown (Access / Signing JWT / Legacy). **Access** is the default selection.
 
   4. Click  **Save**.
 
-  When the "Signed by client" option has been selected, the secret key is displayed in a pop-up window and can be copied for later use. The secret key is used to sign the JWT.
+  * For **Access** keys, a pop-up shows the generated **API Key ID**, with a warning to copy and store it now, as it cannot be retrieved later.
+  * For **Signing JWT** keys, a pop-up shows the generated **Signing Key**, with the same warning. This value is both the key identifier and the HMAC-SHA256 secret used to sign the client's JWT.
+  * For **Legacy** keys, no pop-up is shown - the token name is the key, and it is already visible in the API Keys table.
 
   For example:
 
   <img src="images/07_fabric_webToken.PNG">
 
-* Fabric command: `CREATE TOKEN <'token_name'> [SECURED]`.  When "SECURED" is used, the secret key is retrieved.
+  In the API Keys table, the previous "signed by client" column is now named **type**, showing **Access** / **Signing JWT** / **Legacy**.
 
-  Note: "SECURED" is equivalent to the use of "Signed by client" shown in the Admin Panel.
+* Fabric command: `CREATE TOKEN <'token_name'> [ACCESS | SIGNING | LEGACY]`. See [CREATE TOKEN](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-token) for the full syntax and examples.
+
+  Note: `SIGNING` replaces the old `SECURED` keyword (still accepted as a backward-compatible alias). Unlike the Admin UI - where **Access** is the default selection - the command's default when no type is given is **Legacy**, preserved for backward compatibility with existing scripts/automation that call `CREATE TOKEN <name>` without a type keyword.
 
   For example:
 
   ```text
-  create token 'Secured1' SECURED;
+  create token 'Signing1' signing;
   
-  |Secretkey                           |
-  +------------------------------------+
-  |c55a86d1-9de6-4aaa-bf9e-cedf1391c95b|
+  | api_key_id                           |
+  +---------------------------------------+
+  | c55a86d1-9de6-4aaa-bf9e-cedf1391c95b |
   ```
 
 
-If the SECURED option has not been selected, the token name is used as the token value for the API Key Authentication method.
+For **Legacy** keys, the token name is used as the token value for the API Key Authentication method.
 
 
 
