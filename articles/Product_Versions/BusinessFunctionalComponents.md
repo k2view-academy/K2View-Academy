@@ -4,11 +4,11 @@ Functional components included with the **K2view Platform**. Component names lin
 
 ## 1. Create Data Products
 
-<table>
+<table style="width: 900px;">
   <thead>
     <tr>
-      <th>Functional Component</th>
-      <th>Business Functionality</th>
+      <th width="250pxl">Functional Component</th>
+      <th width="650pxl">Business Functionality</th>
     </tr>
   </thead>
   <tbody>
@@ -37,7 +37,7 @@ Functional components included with the **K2view Platform**. Component names lin
       <td>Configure storage layer for Data Products.</td>
     </tr>
     <tr>
-      <td><a href="https://support.k2view.com/Academy/articles/22_reference%28commonDB%29_tables/01_fabric_commonDB_overview.html">Reference Data (CommonDB)</a></td>
+      <td><a href="https://support.k2view.com/Academy/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.html">Reference Data (CommonDB)</a></td>
       <td>Manage shared reference and lookup data.</td>
     </tr>
     <tr>
@@ -97,11 +97,11 @@ Functional components included with the **K2view Platform**. Component names lin
 
 ## 2. Connect Enterprise Data
 
-<table>
+<table style="width: 900px;">
   <thead>
     <tr>
-      <th>Functional Component</th>
-      <th>Business Functionality</th>
+      <th width="250pxl">Functional Component</th>
+      <th width="650pxl">Business Functionality</th>
     </tr>
   </thead>
   <tbody>
@@ -142,11 +142,11 @@ Functional components included with the **K2view Platform**. Component names lin
 
 ## 3. Transform & Orchestrate Data
 
-<table>
+<table style="width: 900px;">
   <thead>
     <tr>
-      <th>Functional Component</th>
-      <th>Business Functionality</th>
+      <th width="250pxl">Functional Component</th>
+      <th width="650pxl">Business Functionality</th>
     </tr>
   </thead>
   <tbody>
@@ -175,11 +175,11 @@ Functional components included with the **K2view Platform**. Component names lin
 
 ## 4. Discover & Govern Data
 
-<table>
+<table style="width: 900px;">
   <thead>
     <tr>
-      <th>Functional Component</th>
-      <th>Business Functionality</th>
+      <th width="250pxl">Functional Component</th>
+      <th width="650pxl">Business Functionality</th>
     </tr>
   </thead>
   <tbody>
@@ -196,11 +196,11 @@ Functional components included with the **K2view Platform**. Component names lin
 
 ## 5. Expose Data Products
 
-<table>
+<table style="width: 900px;">
   <thead>
     <tr>
-      <th>Functional Component</th>
-      <th>Business Functionality</th>
+      <th width="250pxl">Functional Component</th>
+      <th width="650pxl">Business Functionality</th>
     </tr>
   </thead>
   <tbody>
@@ -237,11 +237,11 @@ Functional components included with the **K2view Platform**. Component names lin
 
 ## 6. Secure the Platform
 
-<table>
+<table style="width: 900px;">
   <thead>
     <tr>
-      <th>Functional Component</th>
-      <th>Business Functionality</th>
+      <th width="250pxl">Functional Component</th>
+      <th width="650pxl">Business Functionality</th>
     </tr>
   </thead>
   <tbody>
@@ -282,11 +282,11 @@ Functional components included with the **K2view Platform**. Component names lin
 
 ## 7. Deploy & Manage
 
-<table>
+<table style="width: 900px;">
   <thead>
     <tr>
-      <th>Functional Component</th>
-      <th>Business Functionality</th>
+      <th width="250pxl">Functional Component</th>
+      <th width="650pxl">Business Functionality</th>
     </tr>
   </thead>
   <tbody>
@@ -319,11 +319,11 @@ Functional components included with the **K2view Platform**. Component names lin
 
 ## 8. Monitor & Operate
 
-<table>
+<table style="width: 900px;">
   <thead>
     <tr>
-      <th>Functional Component</th>
-      <th>Business Functionality</th>
+      <th width="250pxl">Functional Component</th>
+      <th width="650pxl">Business Functionality</th>
     </tr>
   </thead>
   <tbody>
