@@ -66,7 +66,7 @@ Only users with the appropriate Fabric roles can create tasks.
 
 The task runner — a developer, tester, or business user — works in a simple, guided execution window:
 
-1. Sees all task parameters, with clear visual indication of which are editable
+1. Sees all task parameters, with a clear visual indication of which are editable
 2. Edits only the attributes the creator has unlocked
 3. Runs the task without modifying the underlying template
 4. Can view and rerun previous executions from the dashboard
@@ -158,7 +158,8 @@ During task creation, the creator can restrict execution to:
 - The creator only
 - The creator's user group
 - Specific named users or Fabric roles
-- All users
+- All users who are assigned to TDM environments with permission sets that allow task execution.
+
 
 This permission model integrates directly with Fabric roles, so access follows the same identity framework used across the K2View platform.
 

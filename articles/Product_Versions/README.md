@@ -5,6 +5,7 @@
 <li><a href="/articles/Product_Versions/TDM_versions.md">TDM Versions</a></li>
 <li><a href="/articles/Product_Versions/K2cloud.md">K2cloud, K2agent and K2deployer Versions</a></li>  
 <li><a href="/articles/Product_Versions/ADI_versions.md">ADI Versions</a></li>
+<li><a href="/articles/Product_Versions/BusinessFunctionalComponents.md">Business Functional Components</a></li>
 </ul>
 
 
