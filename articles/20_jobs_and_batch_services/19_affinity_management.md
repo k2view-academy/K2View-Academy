@@ -50,7 +50,7 @@ The JSON structure is as follows:
 * **Value** - a list of node groups (colors). The order of the groups defines their priority - groups listed first are populated with nodes first. Each group includes:
     * **count** - the number of nodes in the group.
     * **affinities** - a list of affinity entries in the ```<affinity> [<recommended> [<max>]]``` format, as defined in the *node.id* file.
-* **DEFAULT** - a single default section for the entire cluster, containing only an affinity list.
+* **default_group** - a single default section for the entire cluster, containing only an affinity list.
 
 For example:
 
