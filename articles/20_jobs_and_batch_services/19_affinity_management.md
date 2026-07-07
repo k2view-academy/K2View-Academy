@@ -2,7 +2,7 @@
 
 ## Overview
 
-Affinity Management enables a centralized definition and enforcement of node affinities across a Fabric cluster. Instead of editing the *node.id* file on each node separately, you can define the affinity rules once - per DC or for the entire cluster - and let Fabric distribute and maintain them automatically via a dedicated Affinity Management Job.
+Affinity Management enables a centralized definition and enforcement of node affinities across a Fabric cluster. Instead of editing the *node.id* file on each node separately, you can define the affinity rules once - per DC or for the entire cluster - and let Fabric distribute and maintain them automatically via a dedicated Affinity Management Job. This feature is available starting from Fabric V8.5.
 
 For an introduction to the affinity concept and its usage by jobs and batch processes, see the [Job & Batch Processes Affinity](/articles/20_jobs_and_batch_services/10_jobs_and_batches_affinity.md) article.
 
@@ -50,7 +50,7 @@ The JSON structure is as follows:
 * **Value** - a list of node groups (colors). The order of the groups defines their priority - groups listed first are populated with nodes first. Each group includes:
     * **count** - the number of nodes in the group.
     * **affinities** - a list of affinity entries in the ```<affinity> [<recommended> [<max>]]``` format, as defined in the *node.id* file.
-* **DEFAULT** - a single default section for the entire cluster, containing only an affinity list.
+* **default_group** - a single default section for the entire cluster, containing only an affinity list.
 
 For example:
 
