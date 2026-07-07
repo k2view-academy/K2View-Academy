@@ -150,5 +150,5 @@ The summary of the batch process execution is displayed on a per-node basis or a
 
 Note that when the batch status is **GENERATE_IID_LIST**, the number of unprocessed entities is still not final and may increase when the entity list is finalized.
 
-[![Previous](/articles/images/Previous.png)](17_batch_process_flow.md)
+[![Previous](/articles/images/Previous.png)](17_batch_process_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](19_affinity_management.md)
 

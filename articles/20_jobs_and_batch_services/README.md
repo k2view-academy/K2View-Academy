@@ -18,4 +18,5 @@
 	<li><a href="/articles/20_jobs_and_batch_services/16_batch_CDC_commands.md">CDC Republish Execution</a></li>
 	<li><a href="/articles/20_jobs_and_batch_services/17_batch_process_flow.md">Fabric Batch Process Architecture</a></li>
 	<li><a href="/articles/20_jobs_and_batch_services/18_batch_monitor.md">Batch Process Monitoring</a></li>
+	<li><a href="/articles/20_jobs_and_batch_services/19_affinity_management.md">Affinity Management</a></li>
 </ul>
