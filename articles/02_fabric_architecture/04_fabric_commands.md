@@ -399,7 +399,66 @@ The Fabric SET command enables updating Fabric settings at session level.
 
 - **SET OUTPUT** command, sets the output format of the query's results. 
 
-- **SET INSTANCE_TTL** command, sets the Time To Live (TTL) in seconds for each [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui); the LUI is automatically deleted from Fabric after the set TTL ends. Fabric V7.1 adds the option to avoid saving the LUI in Fabric (instead of save and delete) if the TTL is set to zero. When the TTL is set to zero, Fabric does not clean older versions of the LUI (if any exist). The TTL must be greater than zero in order to clean the LUI from Fabric.  
+- **SET INSTANCE_TTL**
+
+  `SET INSTANCE_TTL` sets the Time To Live (TTL), in seconds, for each LUI. Once the configured TTL expires, the LUI is automatically deleted from Fabric storage.
+
+  Starting with **Fabric 7.1**, setting the TTL to **0** instructs Fabric **not to save the LUI** (instead of saving it and deleting it later). When the TTL is set to **0**, Fabric also does **not** remove any existing versions of the LUI. To enable automatic cleanup of LUIs stored in Fabric, the TTL must be greater than **0**.
+
+  **Fabric 8.5 Enhancement – Amazon S3 and Azure Blob Storage**
+
+  Starting with **Fabric 8.5**, when a TTL is configured, Fabric converts the configured TTL from **seconds to days**, rounding it up to the nearest whole day. It then attempts to reuse an existing rule before creating a new one.
+
+  The term **rule** refers to the following cloud-provider-specific resources:
+
+  - **Amazon S3:** `LifecycleConfiguration`
+  - **Azure Blob Storage:** `Management Policy`
+
+  Fabric performs the following steps:
+
+  1. Converts the configured TTL from seconds to days and rounds it up to the nearest whole day.
+  2. Checks whether a rule already exists for the calculated number of days.
+  3. If a matching rule exists, Fabric tags the object with the corresponding TTL tag. The cloud rule automatically deletes tagged objects when the configured retention period expires.
+  4. If no matching rule exists, Fabric searches for an existing rule within the range defined by the `TTL_WINDOWS` parameter.
+  5. If a suitable rule is found, Fabric reuses it.
+  6. Otherwise, Fabric creates a new rule for the calculated TTL.
+
+  Example
+
+  ```plaintext
+  SET INSTANCE_TTL = 110000
+  ```
+
+  The configured TTL is equivalent to **1.27 days**, which is rounded up to **2 days**.
+
+  - Fabric first checks whether a **2-day** rule already exists.
+  - If a matching rule exists, Fabric uses it.
+  - Otherwise:
+    - If `TTL_WINDOWS = 0` (default), Fabric creates a new **2-day** rule.
+    - If `TTL_WINDOWS = 3`, Fabric searches for an existing rule between **2 and 5 days**. If one is found, Fabric reuses it; otherwise, it creates a new **2-day** rule.
+
+  **Required Amazon S3 IAM Permissions**
+
+  The following IAM permissions must be added:
+
+  - `s3:GetLifecycleConfiguration`
+  - `s3:PutLifecycleConfiguration`
+  - `s3:PutObjectTagging`
+
+  **Fabric 8.5 Enhancement – Google Cloud Storage (GCS)**
+
+  Google Cloud Storage (GCS) uses a different approach.
+
+  Unlike Amazon S3 and Azure Blob Storage, Fabric does **not** create or manage multiple lifecycle rules based on TTL values. Instead, GCS uses a **single Lifecycle Rule** that applies to all objects. If the rule does not already exist, Fabric attempts to create it.
+
+  When an LUI is stored, Fabric calculates the TTL, converts it from seconds to days (rounding up as needed), and associates the calculated expiration value with the object. The existing GCS Lifecycle Rule then automatically deletes the object when its retention period expires. No additional lifecycle rules are created, regardless of the configured TTL.
+
+  **Required GCS IAM Roles**
+
+  To enable this capability, grant the following IAM roles:
+
+  - `roles/storage.editor`
+  - `roles/storage.objectUser`
 
 - **SET LUI_READ_ONE_WHEN_FAIL** command, sets the consistency level for the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) to ONE. If it fails to achieve a QUORUM consistency level, the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF.
 
@@ -414,10 +473,10 @@ The Fabric SET command enables updating Fabric settings at session level.
     ~~~
     fabric>set from '{ "attached" : {"Customer": "1", "ORDERS": "4"}}';
     (1 row affected)
-  
+    
     fabric>set from '{ "scope" : {"sync": "on", "environment" : "_dev"}, "attached" : {"Customer": "1", "ORDERS": "3"}}';
     (1 row affected)
-  
+    
     fabric>set from '{ "scope" : {"sync": "force", "environment" : "UAT1"}}';
     (1 row affected)
     ~~~
