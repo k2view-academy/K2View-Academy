@@ -12,7 +12,8 @@ The decision whether to move to an in-memory cache mode depends also on the oper
 
 Fabric allows you to configure how the MicroDB cache is stored using the CACHE_TYPE parameter in config.ini. The supported values are:
 
-FILES_CACHE (default) – stores the MicroDB cache on disk as SQLite files. 
+FILES_CACHE (default) – stores the MicroDB cache on disk as SQLite files.
+
 MEMORY_NO_CACHE – stores the MicroDB cache in memory.
 
 Starting with Fabric 8.5, a new CACHE_TYPE value, HYBRID_NO_CACHE, is available. This option is designed for data products that contain a mix of small and large MicroDBs, optimizing both performance and memory utilization.
