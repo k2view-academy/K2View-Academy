@@ -48,12 +48,15 @@ From TDM V9.4 onwards, the TDM shared Globals are split into two files:
 A new Global, SEQ_CACHE_INTERFACE, was introduced in TDM V8.1. This Global is populated with the DB interface of the k2masking DB (PostgreSQL or Cassandra) and must be aligned with the Fabric System DB. From TDM V9.0 onwards, TDM sets the POSTGRESQL_ADMIN as a default value for this Global:
 - If you use Cassandra as the Fabric System DB, you must edit the SEQ_CACHE_INTERFACE Global and update its value to DB_CASSANDRA.
 - If you wish to use the PostgreSQL DB as Fabric's system DB, do the following:
-    - Open Fabric’s config.ini file and edit the [system_db] section’s attributes including the SYSTEM_DB_DATABASE attribute to be aligned with the POSTGRESQL_ADMIN DB interface. 
+    - Open Fabric’s config.ini file and edit the [system_db] section’s attributes, including the SYSTEM_DB_DATABASE attribute to be aligned with the POSTGRESQL_ADMIN DB interface. 
 
 #### TDMB_SCHEMA Global
 
 - This Global holds the TDM DB schema name. By default, it is populated with **public**. Edit it if you wish to create a schema other than 'public' for the TDM DB. 
 - Always restart Fabric after updating this Global.
+
+#### POP_FULL_LU_HIERARCHY_IN_TDM_LU Global
+By default, this Global is set to **true**. Set it to **false** to exclude the entity hierarchy when synchronizing task executions to the TDM LU. Excluding the hierarchy prevents duplicate records when child entities participate in multiple parent-child relationships.
 
 ### Shared Functions
 

@@ -13,7 +13,7 @@ I. [Sequence handling based on Catalog](11a_tdm_sequence_implementation_based_on
 
 II. [Sequence handling without Catalog](11b_tdm_sequence_implementation_without_catalog.md). 
 
-## Configuring the Sequence Method per LU
+## Configuring the Sequence Method
 
 A new **shared Global** variable, **TDM_USING_CATALOG_SEQUENCES**, was introduced in TDM V9.3.
 
@@ -25,6 +25,10 @@ It controls the default sequence handling method for all LUs in the project:
 
 - **true** — Use Catalog-based sequences
 - **false** — Use sequences without a Catalog
+
+By default, this Global is set to **false**. If you change its value, update the Environments file accordingly, verify that the new value is reflected in the environments, and redeploy the environments.
+
+### Configuring the Sequence Method per LU
 
 You can **override the default behavior for a specific LU** by defining the same Global in the LU’s *Globals.java* file and setting it to the required value.
 
@@ -53,6 +57,7 @@ Configuration:
 
 This configuration sets the default behavior for all LUs to non-Catalog sequences while overriding the behavior for the Billing LU only.
 
+After adding the Global to a specific LU, update the Environments file accordingly, verify that the new value is reflected in the environments, and redeploy the environments.
 
 ## Generating Sequence Flows and Actors
 

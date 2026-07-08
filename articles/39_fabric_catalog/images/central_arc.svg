@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" font-family="'Segoe UI', 'DejaVu Sans', sans-serif">
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#1B6E9E"/>
+    </marker>
+    <marker id="arrowBlueStart" markerWidth="10" markerHeight="8" refX="1" refY="4" orient="auto">
+      <path d="M9,0 L0,4 L9,8 Z" fill="#1B6E9E"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#6B7A88"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- ================= group frames ================= -->
+  <rect x="30" y="40" width="300" height="430" rx="14" fill="#EAF4FB" stroke="#B9D9EE" stroke-width="1.5"/>
+  <text x="180" y="72" text-anchor="middle" font-size="17" font-weight="600" fill="#1B6E9E">READ &amp; WRITE ACCESS</text>
+
+  <rect x="870" y="40" width="300" height="430" rx="14" fill="#F2F4F6" stroke="#CDD5DB" stroke-width="1.5"/>
+  <text x="1020" y="72" text-anchor="middle" font-size="17" font-weight="600" fill="#5A6B78">READ-ONLY ACCESS</text>
+
+  <!-- ================= central Neo4j ================= -->
+  <g filter="url(#shadow)">
+    <rect x="445" y="195" width="310" height="150" rx="14" fill="#BFE0F3" stroke="#7EC3E8" stroke-width="1.5"/>
+  </g>
+  <!-- database cylinder icon -->
+  <g transform="translate(577,215)">
+    <path d="M0,8 V34 A23,8 0 0 0 46,34 V8" fill="#1B6E9E"/>
+    <ellipse cx="23" cy="8" rx="23" ry="8" fill="#FFFFFF" stroke="#1B6E9E" stroke-width="2"/>
+  </g>
+  <text x="600" y="290" text-anchor="middle" font-size="20" font-weight="700" fill="#0F4C6E">Central Neo4j GraphDB</text>
+  <text x="600" y="318" text-anchor="middle" font-size="14" fill="#1B6E9E">Combined Catalog · Enterprise edition</text>
+
+  <!-- ================= left clusters (read/write) ================= -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="95" width="240" height="110" rx="12" fill="#FFFFFF" stroke="#1B6E9E" stroke-width="2"/>
+  </g>
+  <rect x="60" y="95" width="240" height="38" rx="12" fill="#F5822B"/>
+  <rect x="60" y="115" width="240" height="18" fill="#F5822B"/>
+  <text x="180" y="121" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">Fabric Cluster 1</text>
+  <text x="180" y="160" text-anchor="middle" font-size="14" fill="#33454F">Runs Discovery jobs,</text>
+  <text x="180" y="180" text-anchor="middle" font-size="14" fill="#33454F">manual overrides</text>
+
+  <g filter="url(#shadow)">
+    <rect x="60" y="335" width="240" height="110" rx="12" fill="#FFFFFF" stroke="#1B6E9E" stroke-width="2"/>
+  </g>
+  <rect x="60" y="335" width="240" height="38" rx="12" fill="#F5822B"/>
+  <rect x="60" y="355" width="240" height="18" fill="#F5822B"/>
+  <text x="180" y="361" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">Fabric Cluster 2</text>
+  <text x="180" y="400" text-anchor="middle" font-size="14" fill="#33454F">Runs Discovery jobs,</text>
+  <text x="180" y="420" text-anchor="middle" font-size="14" fill="#33454F">manual overrides</text>
+
+  <!-- ================= right clusters (read-only) ================= -->
+  <g filter="url(#shadow)">
+    <rect x="900" y="95" width="240" height="110" rx="12" fill="#FFFFFF" stroke="#6B7A88" stroke-width="2"/>
+  </g>
+  <rect x="900" y="95" width="240" height="38" rx="12" fill="#8A99A6"/>
+  <rect x="900" y="115" width="240" height="18" fill="#8A99A6"/>
+  <text x="1020" y="121" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">Fabric Cluster 3</text>
+  <text x="1020" y="160" text-anchor="middle" font-size="14" fill="#33454F">Browses the Catalog tree;</text>
+  <text x="1020" y="180" text-anchor="middle" font-size="14" fill="#33454F">no Discovery or overrides</text>
+
+  <g filter="url(#shadow)">
+    <rect x="900" y="335" width="240" height="110" rx="12" fill="#FFFFFF" stroke="#6B7A88" stroke-width="2"/>
+  </g>
+  <rect x="900" y="335" width="240" height="38" rx="12" fill="#8A99A6"/>
+  <rect x="900" y="355" width="240" height="18" fill="#8A99A6"/>
+  <text x="1020" y="361" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">Fabric Cluster 4</text>
+  <text x="1020" y="400" text-anchor="middle" font-size="14" fill="#33454F">Browses the Catalog tree;</text>
+  <text x="1020" y="420" text-anchor="middle" font-size="14" fill="#33454F">no Discovery or overrides</text>
+
+  <!-- ================= connections (drawn on top) ================= -->
+  <!-- read/write: solid, bidirectional -->
+  <line x1="310" y1="150" x2="462" y2="238" stroke="#1B6E9E" stroke-width="3" marker-end="url(#arrowBlue)" marker-start="url(#arrowBlueStart)"/>
+  <line x1="310" y1="390" x2="462" y2="302" stroke="#1B6E9E" stroke-width="3" marker-end="url(#arrowBlue)" marker-start="url(#arrowBlueStart)"/>
+  <!-- read-only: dashed, one-way from Neo4j to cluster -->
+  <line x1="738" y1="238" x2="890" y2="150" stroke="#6B7A88" stroke-width="3" stroke-dasharray="9 7" marker-end="url(#arrowGray)"/>
+  <line x1="738" y1="302" x2="890" y2="390" stroke="#6B7A88" stroke-width="3" stroke-dasharray="9 7" marker-end="url(#arrowGray)"/>
+
+  <!-- ================= connection labels ================= -->
+  <rect x="330" y="163" width="106" height="26" rx="13" fill="#FFFFFF" stroke="#1B6E9E" stroke-width="1.5"/>
+  <text x="383" y="181" text-anchor="middle" font-size="13" font-weight="600" fill="#1B6E9E">read / write</text>
+  <rect x="330" y="352" width="106" height="26" rx="13" fill="#FFFFFF" stroke="#1B6E9E" stroke-width="1.5"/>
+  <text x="383" y="370" text-anchor="middle" font-size="13" font-weight="600" fill="#1B6E9E">read / write</text>
+  <rect x="768" y="163" width="98" height="26" rx="13" fill="#FFFFFF" stroke="#6B7A88" stroke-width="1.5"/>
+  <text x="817" y="181" text-anchor="middle" font-size="13" font-weight="600" fill="#5A6B78">read only</text>
+  <rect x="768" y="352" width="98" height="26" rx="13" fill="#FFFFFF" stroke="#6B7A88" stroke-width="1.5"/>
+  <text x="817" y="370" text-anchor="middle" font-size="13" font-weight="600" fill="#5A6B78">read only</text>
+
+  <!-- ================= legend ================= -->
+  <rect x="330" y="520" width="540" height="66" rx="12" fill="#FFFFFF" stroke="#CDD5DB" stroke-width="1.5"/>
+  <line x1="355" y1="545" x2="420" y2="545" stroke="#1B6E9E" stroke-width="3" marker-end="url(#arrowBlue)" marker-start="url(#arrowBlueStart)"/>
+  <text x="432" y="550" font-size="13" fill="#33454F">Read &amp; write: runs Discovery, updates the Catalog</text>
+  <line x1="355" y1="572" x2="420" y2="572" stroke="#6B7A88" stroke-width="3" stroke-dasharray="9 7" marker-end="url(#arrowGray)"/>
+  <text x="432" y="577" font-size="13" fill="#33454F">Read-only: browses the combined Catalog</text>
+</svg>
