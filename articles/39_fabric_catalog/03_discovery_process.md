@@ -22,7 +22,7 @@ Once the process has been completed, the Logical Unit schema can be created base
 
 ![](images/DiscoveryE2E.png)
 
-
+Note: The Fabric Discovery and Catalog solution requires **Neo4j Enterprise edition**. For the exact certified Neo4j version, refer to the latest Fabric Release Notes.
 
 
 

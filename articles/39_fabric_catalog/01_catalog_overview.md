@@ -27,6 +27,8 @@ The Logical Unit creation is based on the discovered and enriched data model. Th
 
 The Catalog information - including the data model, properties and classifications - is exposed via the Fabric REST APIs.
 
+Note: The Fabric Discovery and Catalog solution requires **Neo4j Enterprise edition**. For the exact certified Neo4j version, refer to the latest Fabric Release Notes.
+
 <studio>
 
 Note that when using the Desktop Studio, few setup steps must be taken prior to running the Discovery process. 
