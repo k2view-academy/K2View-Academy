@@ -9,81 +9,69 @@
 - [Step 5 - Disable the default cassandra superuser](#step-5---disable-the-default-cassandra-superuser)
 
 
-The following steps ensure that the keys that secure Fabric and Cassandra are correctly generated and configured.
+The following steps ensure that the keys that secure Fabric and Cassandra are correctly generated and configured on a **vanilla Apache Cassandra 4.1.x** installation (see the [Cassandra Setup guide](/articles/98_installation_and_upgrade/Install_on_Linux/Cassandra_Setup.md)).
 
-- The example password ```Q1w2e3r4t5``` is used for TLS keys and can be replaced in all of the following sections by a new password.
-- Do not forget to replace all `$K2_HOME/` & `$INSTALL_DIR`  values with the complete and correct path location for both Fabric and Cassandra.
+- The example password ```changeit``` is used for the TLS keys, and the cluster name defaults to ```Cassandra```. Both can be replaced in all of the following sections (export `CLUSTER_NAME` before running the commands to use a different name).
+- These steps assume `$CASSANDRA_HOME` is set to the `cassandra` symlink (`/opt/apps/cassandra/cassandra`) created in the Cassandra Setup guide. All keys are generated under `/opt/apps/cassandra/.cassandra_ssl`; the keystore and truststore are then deployed to `$CASSANDRA_HOME/conf/.keystore` and `$CASSANDRA_HOME/conf/.truststore` (the paths the stock `cassandra.yaml` already references).
+- `keytool` (bundled with the JDK) and `openssl` must be available on the `PATH`.
 
 
 ## Step 1 - Keys Generation
 
-1. Connect as **cassandra** user.
-2. Run the `secure_cassandra.sh` file that generates the keys. This file is included within our supplied package or can be downloaded from [here](https://owncloud-bkp2.s3.amazonaws.com/adminoc/Utils/Hardening/secure_cassandra.sh). 
-3. Stop Cassandra services before running the script.
-    ```bash
-    ## run: 
-    stop-server
-    ```
+Run the following **on a single Cassandra node only**, connected as the **cassandra** user. The commands generate a cluster keypair (for inter-node encryption) and a client keypair (for client-to-node encryption), build the keystore and truststore, and extract the client key/certificate in PEM format for `cqlsh` and Fabric.
 
-    ```bash
-    echo "export K2_HOME=$INSTALL_DIR" >> .bash_profile
-    source ~/.bash_profile
-    cd ~/
-    rm -rf .cassandra .cassandra_ssl .oracle_jre_usage .ssl
-    ````
+> To use a different password or cluster name, change `changeit` and export `CLUSTER_NAME` (e.g. `export CLUSTER_NAME=Cassandra`) before running the commands.
 
-    **Note:** Run the below command on a single Cassandra node only. To change the password or cluster name, edit the secure_cassandra.sh file or execute it using the password and cluster name parameters.
+~~~bash
+export SSL_DIR=/opt/apps/cassandra/.cassandra_ssl
+export CLUSTER_NAME=${CLUSTER_NAME:-Cassandra}
+export KEYSTORE_PASSWORD=changeit
+mkdir -p $SSL_DIR && cd $SSL_DIR
 
+# 1. Generate the cluster (node) keypair
+keytool -genkeypair -keyalg RSA -keysize 2048 -alias ${CLUSTER_NAME}_cluster \
+  -keystore cassandra.keystore -storepass ${KEYSTORE_PASSWORD} -keypass ${KEYSTORE_PASSWORD} \
+  -validity 3650 -dname "CN=${CLUSTER_NAME}, OU=Cassandra, O=K2view, C=US"
 
-    ```bash
-    ./secure_cassandra.sh {Password} {Cluster_Name}
-    ```
+# 2. Generate the client keypair (used by cqlsh / Fabric)
+keytool -genkeypair -keyalg RSA -keysize 2048 -alias ${CLUSTER_NAME}_client \
+  -keystore cassandra.keystore -storepass ${KEYSTORE_PASSWORD} -keypass ${KEYSTORE_PASSWORD} \
+  -validity 3650 -dname "CN=${CLUSTER_NAME}_client, OU=Cassandra, O=K2view, C=US"
 
-    For example: 
+# 3. Export the public certificates
+keytool -exportcert -alias ${CLUSTER_NAME}_cluster -keystore cassandra.keystore \
+  -storepass ${KEYSTORE_PASSWORD} -file CLUSTER_${CLUSTER_NAME}_PUBLIC.cer
+keytool -exportcert -alias ${CLUSTER_NAME}_client -keystore cassandra.keystore \
+  -storepass ${KEYSTORE_PASSWORD} -file CLIENT_${CLUSTER_NAME}_PUBLIC.cer
 
-    ```bash
-    ./secure_cassandra.sh Q1w2e3r4t5 k2tls
-    ```
-    An output example:
-    
-    ```bash
-    Warning:
-    The JKS Keystore uses a proprietary format. It is recommended to migrate    to PKCS12, which is an industry standard format using "keytool  -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.  keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra. keystore -deststoretype pkcs12".
-    Certificate stored in file </opt/apps/k2view/.cassandra_ssl/    CLUSTER_k2tls_PUBLIC.cer>
-    
-    Warning:
-    The JKS Keystore uses a proprietary format. It is recommended to migrate    to PKCS12, which is an industry standard format using "keytool  -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.  keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra. keystore -deststoretype pkcs12".
-    Certificate was added to the keystore
-    [Storing /opt/apps/k2view/.cassandra_ssl/cassandra.truststore]
-    
-    Warning:
-    The JKS Keystore uses a proprietary format. It is recommended to migrate    to PKCS12, which is an industry standard format using "keytool  -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.  keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra. keystore -deststoretype pkcs12".
-    Certificate stored in file </opt/apps/k2view/.cassandra_ssl/    CLIENT_k2tls_PUBLIC.cer>
-    
-    Warning:
-    The JKS Keystore uses a proprietary format. It is recommended to migrate    to PKCS12, which is an industry standard format using "keytool  -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.  keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra. keystore -deststoretype pkcs12".
-    Certificate was added to the keystore
-    [Storing /opt/apps/k2view/.cassandra_ssl/cassandra.truststore]
-    Importing keystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore to    /opt/apps/k2view/.cassandra_ssl/cassandra.pks12.keystore...
-    Entry for alias k2tls_client successfully imported.
-    Entry for alias k2tls_cluster successfully imported.
-    Import command completed:  2 entries successfully imported, 0 entries   failed or cancelled
-    MAC verified OK
-    MAC verified OK 
-    ```
-    
-    The following 7 files will be created under the `$INSTALL_DIR/.cassandra_ssl` directory:
-    - k2tls_CLIENT.key.pem
-    - k2tls_CLIENT.cer.pem
-    - cassandra.keystore
-    - cassandra.pks12.keystore
-    - cassandra.truststore
-    - CLIENT_k2tls_PUBLIC.cer
-    - CLUSTER_k2tls_PUBLIC.cer
+# 4. Build the truststore from the public certificates
+keytool -importcert -noprompt -alias ${CLUSTER_NAME}_cluster -file CLUSTER_${CLUSTER_NAME}_PUBLIC.cer \
+  -keystore cassandra.truststore -storepass ${KEYSTORE_PASSWORD}
+keytool -importcert -noprompt -alias ${CLUSTER_NAME}_client -file CLIENT_${CLUSTER_NAME}_PUBLIC.cer \
+  -keystore cassandra.truststore -storepass ${KEYSTORE_PASSWORD}
 
-    A cassandra_keys.tar.gz file, containing all of the above files, will be created, so it can be transferred to the other nodes.
+# 5. Extract the client key and certificate in PEM format (for cqlsh / Fabric)
+keytool -importkeystore -srckeystore cassandra.keystore -srcstorepass ${KEYSTORE_PASSWORD} \
+  -srcalias ${CLUSTER_NAME}_client -destkeystore cassandra.pks12.keystore \
+  -deststoretype PKCS12 -deststorepass ${KEYSTORE_PASSWORD}
+openssl pkcs12 -legacy -in cassandra.pks12.keystore -passin pass:${KEYSTORE_PASSWORD} -nocerts -nodes -out ${CLUSTER_NAME}_CLIENT.key.pem
+openssl pkcs12 -legacy -in cassandra.pks12.keystore -passin pass:${KEYSTORE_PASSWORD} -clcerts -nokeys -out ${CLUSTER_NAME}_CLIENT.cer.pem
 
-    > Note that the key and certificate file names contain the cluster name you have set.
+# 6. Bundle the keys for transfer to the other nodes
+tar -zcvf cassandra_keys.tar.gz cassandra.keystore cassandra.truststore cassandra.pks12.keystore \
+  ${CLUSTER_NAME}_CLIENT.key.pem ${CLUSTER_NAME}_CLIENT.cer.pem CLIENT_${CLUSTER_NAME}_PUBLIC.cer CLUSTER_${CLUSTER_NAME}_PUBLIC.cer
+~~~
+
+The following 7 files are created under `/opt/apps/cassandra/.cassandra_ssl` (file names contain your cluster name — `Cassandra` by default):
+- &lt;CLUSTER_NAME&gt;_CLIENT.key.pem
+- &lt;CLUSTER_NAME&gt;_CLIENT.cer.pem
+- cassandra.keystore
+- cassandra.pks12.keystore
+- cassandra.truststore
+- CLIENT_&lt;CLUSTER_NAME&gt;_PUBLIC.cer
+- CLUSTER_&lt;CLUSTER_NAME&gt;_PUBLIC.cer
+
+The `cassandra_keys.tar.gz` archive bundles all of the above so it can be transferred to the other nodes.
 
 ## Step 2 - Transfer Keys and Certificates to All Cassandra and Fabric Nodes
 
@@ -92,13 +80,17 @@ Copy the previously created file  *cassandra_keys.tar.gz* to all Cassandra nodes
 See the example below: 
 
 ``` bash
+# copy the archive to the other nodes in case more than one node is used
+# 10.10.10.10 represents the IP address of another node
+scp /opt/apps/cassandra/.cassandra_ssl/cassandra_keys.tar.gz cassandra@10.10.10.10:/opt/apps/cassandra/.cassandra_ssl/
 
-# copy to other nodes in case more than one node is used
-# 10.10.10.10 represents IP address of another node
-scp  cassandra_keys.tar.gz cassandra@10.10.10.10:/opt/apps/cassandra/
+# on each OTHER node, unpack the archive into the same directory
+mkdir -p /opt/apps/cassandra/.cassandra_ssl && tar -zxvf cassandra_keys.tar.gz -C /opt/apps/cassandra/.cassandra_ssl
 
-# login to every node separately and run the following command
-mkdir -p $INSTALL_DIR/.cassandra_ssl && tar -zxvf cassandra_keys.tar.gz -C $INSTALL_DIR/.cassandra_ssl
+# on ALL nodes (including the one that generated the keys), deploy the
+# keystore and truststore to the Cassandra conf directory
+cp /opt/apps/cassandra/.cassandra_ssl/cassandra.keystore   $CASSANDRA_HOME/conf/.keystore
+cp /opt/apps/cassandra/.cassandra_ssl/cassandra.truststore $CASSANDRA_HOME/conf/.truststore
 ```
 
 ## Step 3 - Cassandra YAML
@@ -109,20 +101,19 @@ mkdir -p $INSTALL_DIR/.cassandra_ssl && tar -zxvf cassandra_keys.tar.gz -C $INST
 
 ```bash
 sed -i "s@internode_encryption: none@internode_encryption: all@" $CASSANDRA_HOME/conf/cassandra.yaml
-sed -i "s@key_password: cassandra@key_password: Q1w2e3r4t5@" $CASSANDRA_HOME/conf/cassandra.yaml
-sed -i "s@keystore: conf/.keystore*@keystore: $INSTALL_DIR/.cassandra_ssl/cassandra.keystore@" $CASSANDRA_HOME/conf/cassandra.yaml
+sed -i "s@key_password: cassandra@key_password: changeit@" $CASSANDRA_HOME/conf/cassandra.yaml
+sed -i "s@keystore: conf/.keystore*@keystore: $CASSANDRA_HOME/conf/.keystore@" $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i "s@# truststore:@truststore:@" $CASSANDRA_HOME/conf/cassandra.yaml
-sed -i "s@truststore: conf/.truststore*@truststore: $INSTALL_DIR/.cassandra_ssl/cassandra.truststore@" $CASSANDRA_HOME/conf/cassandra.yaml
+sed -i "s@truststore: conf/.truststore*@truststore: $CASSANDRA_HOME/conf/.truststore@" $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i "s@# protocol: TLS*@protocol: TLS@" $CASSANDRA_HOME/conf/cassandra.yaml
-sed -i "s@keystore_password: cassandra@keystore_password: Q1w2e3r4t5@" $CASSANDRA_HOME/conf/cassandra.yaml
-sed -i "s@# truststore: conf/.truststore*@truststore: $INSTALL_DIR/.cassandra_ssl/cassandra.truststore@" $CASSANDRA_HOME/conf/cassandra.yaml
-sed -i "s@# truststore_password: cassandra*@truststore_password: Q1w2e3r4t5@" $CASSANDRA_HOME/conf/cassandra.yaml
-sed -i "s@truststore_password: cassandra*@truststore_password: Q1w2e3r4t5@" $CASSANDRA_HOME/conf/cassandra.yaml
+sed -i "s@keystore_password: cassandra@keystore_password: changeit@" $CASSANDRA_HOME/conf/cassandra.yaml
+sed -i "s@# truststore: conf/.truststore*@truststore: $CASSANDRA_HOME/conf/.truststore@" $CASSANDRA_HOME/conf/cassandra.yaml
+sed -i "s@# truststore_password: cassandra*@truststore_password: changeit@" $CASSANDRA_HOME/conf/cassandra.yaml
+sed -i "s@truststore_password: cassandra*@truststore_password: changeit@" $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i "s@# protocol: TLS*@protocol: TLS@" $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i "s@# require_client_auth: .*@require_client_auth: false@g" $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i "s@# store_type: JKS@store_type: JKS@g" $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i '0,/enabled: false/! {0,/enabled: false/ s/enabled: false/enabled: true/}' $CASSANDRA_HOME/conf/cassandra.yaml
-sed -i -e 's/# \(.*cipher_suites.*\)/\1/g' $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i '1,/cdc_enabled: false/ {0,/cdc_enabled: false/ s/cdc_enabled: false/cdc_enabled: true/}' $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i "s@back_pressure_enabled: .*@back_pressure_enabled: true@" $CASSANDRA_HOME/conf/cassandra.yaml
@@ -138,24 +129,31 @@ sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cas
 2. Execute this as a Cassandra user on all Cassandra nodes. 
 > Replace the key and certificate file names with the files created earlier.
 
-    ```bash
-    mkdir -p ~/.cassandra
-    cp $INSTALL_DIR/cassandra/conf/cqlshrc.sample $INSTALL_DIR/.cassandra/cqlshrc
-
-    sed -i "s@\;\[ssl\]@\[ssl\]@" $INSTALL_DIR/.cassandra/cqlshrc
-    sed -i '/^\[csv]/i factory = cqlshlib.ssl.ssl_transport_factory' $INSTALL_DIR/.cassandra/cqlshrc
-    sed -i "s@; certfile = .*@certfile = $INSTALL_DIR/.cassandra_ssl/k2tls_CLIENT.cer.pem@" $INSTALL_DIR/.cassandra/cqlshrc
-    sed -i "s@;validate = true@validate = true@" $INSTALL_DIR/.cassandra/cqlshrc
-    sed -i "105iversion = SSLv23" $INSTALL_DIR/.cassandra/cqlshrc
-    sed -i "s@;userkey = .*@userkey = $INSTALL_DIR/.cassandra_ssl/k2tls_CLIENT.key.pem@" $INSTALL_DIR/.cassandra/cqlshrc
-    sed -i "s@;usercert = .*@usercert = $INSTALL_DIR/.cassandra_ssl/k2tls_CLIENT.cer.pem@" $INSTALL_DIR/.cassandra/cqlshrc
-    sed -i "s@port = .*@port = 9142@" $INSTALL_DIR/.cassandra/cqlshrc
-    sed -i "s@hostname = .*@hostname = $(hostname -I |awk {'print $1'})@" $INSTALL_DIR/.cassandra/cqlshrc
-    ```
-3. You can check your configuration by connecting to Cassandra with the following command: (use the user and password you have defined earlier)
    ```bash
-   cqlsh -u k2admin -p Q1w2e3r4t5 --ssl
+   export SSL_DIR=/opt/apps/cassandra/.cassandra_ssl
+   export CLUSTER_NAME=${CLUSTER_NAME:-Cassandra}
+   mkdir -p ~/.cassandra
+   cp $CASSANDRA_HOME/conf/cqlshrc.sample ~/.cassandra/cqlshrc
+
+   # cqlsh verifies the node's (server) certificate against 'certfile'. The node presents the
+   # CLUSTER certificate, so convert it from DER (keytool output) to PEM for cqlsh to trust it.
+   openssl x509 -inform der -in $SSL_DIR/CLUSTER_${CLUSTER_NAME}_PUBLIC.cer -out $SSL_DIR/${CLUSTER_NAME}_CLUSTER.cer.pem
+
+   sed -i "s@\;\[ssl\]@\[ssl\]@" ~/.cassandra/cqlshrc
+   sed -i '/^\[csv]/i factory = cqlshlib.ssl.ssl_transport_factory' ~/.cassandra/cqlshrc
+   sed -i "s@; certfile = .*@certfile = $SSL_DIR/${CLUSTER_NAME}_CLUSTER.cer.pem@" ~/.cassandra/cqlshrc
+   sed -i "s@;validate = true@validate = true@" ~/.cassandra/cqlshrc
+   sed -i "105iversion = SSLv23" ~/.cassandra/cqlshrc
+   sed -i "s@;userkey = .*@userkey = $SSL_DIR/${CLUSTER_NAME}_CLIENT.key.pem@" ~/.cassandra/cqlshrc
+   sed -i "s@;usercert = .*@usercert = $SSL_DIR/${CLUSTER_NAME}_CLIENT.cer.pem@" ~/.cassandra/cqlshrc
+   sed -i "s@port = .*@port = 9142@" ~/.cassandra/cqlshrc
+   sed -i "s@hostname = .*@hostname = $(hostname -I |awk {'print $1'})@" ~/.cassandra/cqlshrc
    ```
+3. Check your TLS configuration by connecting to Cassandra. At this point the only account is the bootstrap superuser `cassandra` (the `k2admin` user is created in Step 5), so connect with:
+   ```bash
+   cqlsh -u cassandra -p cassandra --ssl
+   ```
+   After completing Step 5, connect with the new superuser instead: `cqlsh -u k2admin -p changeit --ssl`
 
 ## Step 5 - Disable the default `cassandra` superuser
 
@@ -164,7 +162,7 @@ Cassandra's default superuser is `cassandra`, and it must be disabled before dep
 1. Connect to one of the Cassandra nodes' consoles, and create two new **superusers**
 
    ~~~bash
-   echo "create user k2admin with password 'Q1w2e3r4t5' superuser;" | cqlsh -u cassandra -p cassandra $(hostname -i) 9142 --ssl
+   echo "create user k2admin with password 'changeit' superuser;" | cqlsh -u cassandra -p cassandra $(hostname -i) 9142 --ssl
    echo "create user k2sysdba with password '3ptBF9eMSsyLrXr3' superuser;" | cqlsh -u cassandra -p cassandra $(hostname -i) 9142 --ssl
    ~~~
 
