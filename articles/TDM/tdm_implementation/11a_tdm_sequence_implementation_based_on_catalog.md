@@ -44,5 +44,14 @@ Click [here](/articles/39_fabric_catalog/catalog_app/14_2_bulk_edit.md) for addi
 
 - Run the [TDMLUInitBasedOnFabric](05_tdm_lu_implementation_general.md#ii-adding-the-tdm-setup-to-the-lu) flow to regenerate the load and rule-based data generation flows.
 
-- For each LU that requires sequences to be populated by the Catalog, add the **TDM_USING_CATALOG_SEQUENCES** Global. Set this Global to **true**. 
+- For each LU that requires sequences to be populated by the Catalog, add the **TDM_USING_CATALOG_SEQUENCES** Global. Set this Global to **true**. Verify that the updated Global is reflected in the **Environments** file, and then redeploy the Environments.
+    
+#### Using a Custom Sequence Generator
 
+To use a custom flow as a sequence generator, add an external parameter named **category** with the default value **enable_sequences** to the flow. This parameter is required for catalog masking to activate the custom sequence for tasks that replace entity IDs.
+
+**Implementation guidelines:**
+
+1. Add an external parameter named **category** to the flow and set its default value to **enable_sequences**.
+2. Deploy the changes and open the Catalog. On the **Sequences** tab, edit or create the sequence that uses the custom flow. Select the custom flow as the generator and verify that the **category** parameter is displayed and populated with the default value `enable_sequences`.
+3. Save the sequence and return to the Studio. Open the **catalog_classification_generators** MTable and verify that the sequence entry for the custom flow contains the parameter `{category: "enable_sequences"}`.
