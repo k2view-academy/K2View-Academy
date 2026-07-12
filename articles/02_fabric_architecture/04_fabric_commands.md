@@ -457,8 +457,10 @@ The Fabric SET command enables updating Fabric settings at session level.
 
   To enable this capability, grant the following IAM roles:
 
+  - `roles/storage.bucketViewer`
   - `roles/storage.editor`
-  - `roles/storage.objectUser`
+  - `roles/storage.objectAdmin`
+  
 
 - **SET LUI_READ_ONE_WHEN_FAIL** command, sets the consistency level for the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) to ONE. If it fails to achieve a QUORUM consistency level, the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF.
 
