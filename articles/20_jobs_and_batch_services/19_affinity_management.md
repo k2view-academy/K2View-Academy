@@ -16,7 +16,7 @@ Affinity can be configured across a cluster using one of the following approache
 
 ## Affinity Types
 
-Affinity Management supports the existing affinity format - ```<name>:<recommended>:<max>``` - as well as the following special affinities:
+Affinity Management supports the existing affinity format - ```<name>:<recommended> <max>``` - as well as the following special affinities:
 
 * **Node ID** - the node's identifier.
 * **DC** - the node's data center name.
@@ -27,7 +27,7 @@ Affinity Management supports the existing affinity format - ```<name>:<recommend
 
 The below notations are supported in the *node.id* file:
 
-* ```a1:1:2``` - full notation: affinity *a1* with a recommended value of 1 and a maximum of 2.
+* ```a1:1 2``` - full notation: affinity *a1* with a recommended value of 1 and a maximum of 2.
 * ```a2:3``` - short notation, equivalent to ```a2:3:3```.
 * ```a3``` - unlimited affinity.
 * ```blue``` - a node group (color) name, e.g. group *blue*. A group name is also a valid affinity for jobs. However, recommended or max values cannot be set on a group.
