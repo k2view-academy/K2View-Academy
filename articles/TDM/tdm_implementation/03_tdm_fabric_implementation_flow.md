@@ -22,29 +22,30 @@ Click [here](04_fabric_tdm_library.md) for more information about the TDM Librar
 - [PII settings](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#pii--masking-tab)
 - [Sequence settings](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#sequences-tab)
 
-## 4. [Creation of Logical Units (LUs) and TDM Setup](05_tdm_lu_implementation_general.md)
+## 4. [Environment Setup](tdm_fabric_implementation_environments_setup.md)
 
-## 5. LUs — Special Handling
+## 5. [Creation of Logical Units (LUs) and TDM Setup](05_tdm_lu_implementation_general.md)
+
+## 6. LUs — Special Handling
 
 - [Masking implementation](05c_tdm_masking.md)
 - [Sequence implementation](05d_tdm_sequence.md)
 - [LU hierarchy implementation](06_tdm_implementation_support_hierarchy.md)
 - [Error and statistics handling](12_tdm_error_handling_and_statistics.md)
 
-## 6. Optional — Implementation for Entity Subset Setting
+## 7. Optional — Implementation for Entity Subset Setting
 
 - [Business parameters implementation](07_tdm_implementation_parameters_handling.md)
 - [Custom logic flows implementation](11d_custom_logic.md)
 - [Predefined entity list implementation](11c_predefined_entity_list.md)
 
-## 7. Optional — Synthetic Data Implementation
+## 8. Optional — Synthetic Data Implementation
 
 - [Rule-based generation](16_tdm_data_generation_implementation.md)
 - [AI-based generation](17_tdm_ai_generation_implementation.md)
 
-## 7. [Environment Setup](tdm_fabric_implementation_environments_setup.md)
 
-## 8. Additional Optional Setting 
+## 9. Additional Optional Setting 
 
 - [Implementation of table-level tasks](09_tdm_reference_implementation.md)
 
