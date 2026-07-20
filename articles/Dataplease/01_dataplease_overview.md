@@ -7,8 +7,8 @@ Dataplease is a K2View application, built on top of the Fabric platform, that he
 Test and development environments need data that looks and behaves like production data, without exposing real, sensitive information. Dataplease addresses this by combining the following K2view tools:
 
 * **Fabric's interfaces** to connect to any source system (databases, files, queues, etc.).
-* **Fabric Catalog / discovery** to automatically learn the schema, tables, and relationships of that source.
-* **AI agent** (with dedicated skills and sub-agents) that interprets natural-language requests into business-oriented user stories and drives the synthetic data generation process.
+* **Fabric Discovery and Catalog solution** to scan the source's metadata: schema, tables and relationships between them.
+* **Dataplease AI Agent** (with dedicated skills and sub-agents) that interprets natural-language requests into business-oriented user stories and drives the synthetic data generation process.
 
 The result is an intuitive, self-service flow: a user points Dataplease at a data source and, with the assistant's help, ends up with freshly generated, referentially-consistent synthetic data for selected datasets.
 
