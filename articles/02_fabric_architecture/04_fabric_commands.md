@@ -877,7 +877,9 @@ The command supports two modes:
 
 This flexible export/import system allows teams to efficiently move LUIs across environments, using either database- or file-based approaches.
 
+A new hidden parameter, **USE_POSTGRES_COPY**, is available in Fabric 8.5. Although it is not included in the default **config.ini** file, it can be added manually if needed.
 
+By default, MDB exports to PostgreSQL use the PostgreSQL COPY command for improved performance. To revert to the legacy INSERT-based export mechanism, add USE_POSTGRES_COPY=false to the config.ini file.
 
 ### MDB Size
 
