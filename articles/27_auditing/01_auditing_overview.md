@@ -5,11 +5,11 @@ Fabric has a robust Auditing mechanism that logs various activities running on F
 ## Table of Contents
 
 1. [When to Enable Auditing in Production](#when-to-enable-auditing-in-production)  
-3. [When Should Auditing Not Be Enabled](#when-should-auditing-not-be-enabled)  
-4. [Turning Auditing ON/OFF](#turning-auditing-onoff)  
-7. [Activities Subject To Auditing](#activities-subject-to-auditing)  
-8. [Audit Report Structure](#audit-report-structure)  
-9. [Audit Actions / Events](#audit-actions--events)  
+2. [When Should Auditing Not Be Enabled](#when-should-auditing-not-be-enabled)  
+3. [Turning Auditing ON/OFF](#turning-auditing-onoff)  
+4. [Activities Subject To Auditing](#activities-subject-to-auditing)  
+5. [Audit Report Structure](#audit-report-structure)  
+6. [Audit Actions / Events](#audit-actions--events)  
 
 ## When to Enable Auditing in Production
 
@@ -128,7 +128,7 @@ Auditing should not be enabled in development environments that use Fabric Web S
 
 ## Turning Auditing ON/OFF
 
-By default, Auditing is set to OFF. To enable Auditing in Fabric, set **AUDIT=ON** using the [K2admin's Configuration tab](/articles/30_web_framework/03_web_admin_application.md) and set a configuration override to AUDIT. The K2cloud space must then be restarted.
+By default, Auditing is set to OFF. To enable Auditing in Fabric, set **AUDIT=ON** using the [K2admin's Configuration tab](/articles/30_web_framework/03_web_admin_application.md) and set a configuration override to AUDIT. 
 
 ~~~
 AUDIT=ON
