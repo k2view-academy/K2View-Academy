@@ -121,6 +121,15 @@ This capability simplifies the deployment process further when handling several 
 </tr>
 <tr>
 <td width="210">
+<p><strong>AlwaysQuoteIdentifiers</strong></p>
+</td>
+<td width="433">
+<p>Added in Fabric 8.4.8, when set to false (default), the interface behaves as it does today. When set to true, field names in the generated WHERE clause are enclosed in double quotes, ensuring that case-sensitive identifiers are handled correctly when fetching parent rows from the source database.
+</p>
+</td>
+</tr> 
+<tr>
+<td width="210">
 <p><strong>Min Connection Number</strong></p>
 <p><strong>Minimum Connections</strong></p>
 </td>
