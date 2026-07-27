@@ -213,7 +213,7 @@ The factor refers to score multiplication, applied only when comparing columns d
 
 The **Reference by LLM** plugin uses an LLM to identify foreign key relationships between pairs of datasets and create corresponding *refersTo* relations in the Catalog schema. Unlike name- or data-comparison plugins, this plugin reasons semantically: it sends each dataset pair's field names, data types, and sample values to the LLM and asks whether a parent-child relationship exists. This makes it effective in cases where field names are not self-explanatory and no physical foreign key constraints are defined in the source.
 
-For every unique pair of datasets in the schema, the plugin builds a prompt containing both datasets' field names, source data types, and up to `sampleSize` actual data values per field, and submits it to the LLM for analysis. The plugin processes each unique dataset pair exactly once (i.e., datasets *A–B* and *B–A* are treated as the same pair). If the LLM identifies a relationship, it returns which dataset is the parent and which is the child, along with the specific fields that form the logical foreign key. 
+For every unique pair of datasets in the schema, the plugin builds a prompt containing both datasets' field names, source data types, and up to `sampleSize` actual data values per field, and submits it to the LLM for analysis. The plugin processes each unique dataset pair exactly once (i.e., datasets *A–B* and *B–A* are treated as the same pair). If the LLM identifies a relationship, it returns which dataset is the parent and which is the child, along with the specific fields that form the logical foreign key. The rule does not check whether the fields are PK or non-PK. 
 
 The relation is created with a score of **0.9**.
 
