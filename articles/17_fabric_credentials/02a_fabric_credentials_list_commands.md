@@ -76,10 +76,10 @@ The following table describes the methods to see the access control information 
 </td>
 <td width="700pxl">
 <p><strong>Description:&nbsp;</strong>List of tokens and their association to roles.</p>
-<p>The retrieved list is in a table form where each entry contains the token-name, indication if it is secured, and associated role/s</p>
+<p>The retrieved list is in a table form where each entry contains the token-name, its <a href="/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-token">API Key type</a> (Access / Signing JWT / Legacy), and associated role/s. The API Key ID and secret key are never shown here &ndash; they are displayed once, at creation time, in the <a href="/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-token">CREATE TOKEN</a> result.</p>
 <p><strong>Example:</strong></p>
 <blockquote>
-<p>|token|secured|roles&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |<br />+-----+--------+-----------------+<br />|ABC&nbsp; |false&nbsp; &nbsp; &nbsp;|admin&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |<br />|CBA&nbsp; |true&nbsp; &nbsp; &nbsp; |admin,manager|</p>
+<p>|token|type&nbsp; &nbsp; &nbsp; &nbsp;|roles&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |<br />+-----+-----------+-----------------+<br />|ABC&nbsp; |Legacy&nbsp; &nbsp; |admin&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |<br />|CBA&nbsp; |Signing JWT|admin,manager|<br />|XYZ&nbsp; |Access&nbsp; &nbsp; |admin&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</p>
 </blockquote>
 <p>&nbsp;</p>
 <p>To read more about create tokens see <a href="/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-token">here</a>.</p>

@@ -101,20 +101,42 @@ The following tables discuss how user access control is managed using Fabric com
 <p><h4>CREATE TOKEN</p>
 </td>
 <td width="700pxl">
-<p><strong>Description</strong>: Create a new API Key.</p>
+<p><strong>Description</strong>: Create a new API Key. Fabric supports 3 API Key types:</p>
+<ul>
+<li><strong>ACCESS</strong> &ndash; a server-generated UUID, used to access Fabric as <code>Authorization: Bearer &lt;UUID&gt;</code>. This is the type selected by default in the Web Framework Admin UI.</li>
+<li><strong>SIGNING</strong> &ndash; the client builds and signs its own JWT using the returned secret key (HMAC-SHA256), sending the API Key name in the JWT's <code>apk</code> claim. This replaces the old <strong>SECURED</strong> keyword (still accepted, for backward compatibility, as an alias for SIGNING).</li>
+<li><strong>LEGACY</strong> &ndash; the token name itself is the API Key, sent as <code>Authorization: Bearer &lt;token_name&gt;</code>. This is the pre-8.5 default behavior.</li>
+</ul>
 <p><strong>Usage</strong>:</p>
-<p>CREATE TOKEN &lt;'token_name'&gt; [SECURED]</p>
+<p>CREATE TOKEN &lt;'token_name'&gt; [ACCESS | SIGNING | LEGACY]</p>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li>&lt;'token_name'&gt; &ndash; mandatory, API Key name.</li>
-<li>SECURED &ndash; optional in case of a secured API Key.</li>    
+<li>[ACCESS | SIGNING | LEGACY] &ndash; optional, the API Key type. <strong>Default when omitted: LEGACY</strong> &ndash; this default is kept for backward compatibility, so that existing scripts and automation that call <code>CREATE TOKEN &lt;name&gt;</code> without a type keyword keep working unchanged.</li>
 </ul>
+<p><strong>Note</strong>: For <strong>ACCESS</strong> and <strong>SIGNING</strong> types, the command returns a generated <code>api_key_id</code> (for SIGNING, this value also acts as the HMAC-SHA256 signing secret). This value is shown only once, at creation time, and cannot be retrieved later &ndash; copy and store it immediately. <strong>LEGACY</strong> tokens return no key (the token name itself is the key, already visible via <a href="/articles/17_fabric_credentials/02a_fabric_credentials_list_commands.md#list-tokens">LIST TOKENS</a>).</p>
 <p><strong>Examples:</strong></p>
 <ul>
-<li>Create a <strong>test_token</strong> token. Do not assign it to any user:
+<li>Create a <strong>test_token</strong> Legacy token (no type keyword, default behavior). Do not assign it to any user:
 <ul>
 <li>create token 'test_token';</li>
 </ul>
+</li>
+<li>Create an <strong>Access</strong> token:
+<ul>
+<li>create token 'test_token' access;</li>
+</ul>
+<pre>| api_key_id                           |
++---------------------------------------+
+| 89ad080a-ef07-4cf1-95ef-9972996b787f |</pre>
+</li>
+<li>Create a <strong>Signing JWT</strong> token:
+<ul>
+<li>create token 'test_token' signing;</li>
+</ul>
+<pre>| api_key_id                           |
++---------------------------------------+
+| 89ad080a-ef07-4cf1-95ef-9972996b787f |</pre>
 </li>
 </ul>
 </td>

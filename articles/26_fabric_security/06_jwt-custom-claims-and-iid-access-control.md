@@ -21,10 +21,6 @@ Fabric JWTs have a set of reserved internal claim keys that are always excluded 
   </thead>
   <tbody>
     <tr>
-      <td><code>unm</code></td>
-      <td>Username</td>
-    </tr>
-    <tr>
       <td><code>bgr</code></td>
       <td>Roles/groups</td>
     </tr>
@@ -50,6 +46,9 @@ Fabric JWTs have a set of reserved internal claim keys that are always excluded 
     </tr>
   </tbody>
 </table>
+
+**Note**: `unm` (Username) is intentionally **not** in this list - server callers (API Key based) can supply it as an explicit custom claim via `/authenticate`'s `claims` parameter, to declare a user identity for a server-mode token. It remains reserved and dropped, however, when forwarding SAML attributes as claims (see [Reserved Attribute Names](#reserved-attribute-names)), to prevent an IDP attribute from spoofing the identity.
+
 * Any JWT claim not in the list above is treated as a custom claim. 
 * Claim keys can be excluded via the `JWT_EXCLUDED_CLAIMS` configuration setting.
 * The claims can be set at the JWT by its issuer:
@@ -103,9 +102,9 @@ Default is `false`. The flag is off by default to avoid overwhelming the JWT wit
 
 ### Reserved Attribute Names
 
-In addition to the Fabric internal claims listed in [Internal & Standard vs. Custom Claims](#internal--standard-vs-custom-claims), SAML attributes whose names clash with **standard JWT registered claims** are also silently dropped:
+In addition to the Fabric internal claims listed in [Internal & Standard vs. Custom Claims](#internal--standard-vs-custom-claims), SAML attributes whose names clash with `unm` (Username) or with **standard JWT registered claims** are also silently dropped:
 
-`sub`, `iss`, `iat`, `exp`, `jti`, `aud`, `nbf`
+`unm`, `sub`, `iss`, `iat`, `exp`, `jti`, `aud`, `nbf`
 
 This prevents the IdP from overriding identity, role, or token bookkeeping fields. If a SAML attribute that the project needs arrives under one of these names, re-map it on the IdP side.
 
@@ -165,7 +164,12 @@ The `POST /authenticate` endpoint accepts an optional `claims` JSON parameter. W
     <tr>
       <td><code>claims</code></td>
       <td>JSON object</td>
-      <td>Custom claims to embed in the resulting JWT</td>
+      <td>Custom claims to embed in the resulting JWT. Note: <code>unm</code> may be supplied here to declare a user identity for a server-mode token (API Key without an associated user) - see below.</td>
+    </tr>
+    <tr>
+      <td><code>responseInBody</code></td>
+      <td>Boolean</td>
+      <td>When <code>true</code>, returns the JWT in the response body instead of a cookie. Required when authenticating with an API Key that has no associated user. See <a href="/articles/26_fabric_security/05_fabric_webservices_security.md#authenticate-cookie-vs-response-body">Cookie vs. Response Body</a>.</td>
     </tr>
   </tbody>
 </table>
@@ -187,8 +191,8 @@ Content-Type: application/json
 **Behavior:**
 
 - Fabric authenticates the requester normally.
-- It merges the provided `claims` into the authenticated user context (filtering out any internal claim keys if supplied).
-- The issued JWT cookie contains the extra claims.
+- It merges the provided `claims` into the authenticated user context (filtering out any internal claim keys if supplied, except `unm` - see [Internal & Standard vs. Custom Claims](#internal--standard-vs-custom-claims)).
+- The issued JWT (in the cookie, or in the response body when `responseInBody=true`) contains the extra claims.
 - On subsequent requests, these injected claims are accessible for implementation user code, for example for access restrictions.
   In addition, when a claim with the special LU claim key prefix is sent, it is later being used by Fabric for IID-based access restrictions.
 
