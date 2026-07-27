@@ -44,11 +44,11 @@ Fabric supports 3 API Key types, selected at creation time:
 
 * **Access** - a server-generated UUID, sent as the token value of the `Authorization: Bearer` header, for example: `Authorization: Bearer 89ad080a-ef07-4cf1-95ef-9972996b787f`. This is the default type.
 * **Signing JWT** - not used directly as a Bearer token; instead, the returned value is a secret used by the client to sign its own JWT. See [JWT: Signed by the WS Client](#jwt-signed-by-the-ws-client).
-* **Legacy** - the token name itself is the API Key, sent as `Authorization: Bearer <token_name>`. This is the pre-8.5 behavior, kept for backward compatibility.
+* **Legacy** - the token name itself is the API Key, sent as `Authorization: Bearer <token_name>`. This is the pre-Fabric-8.5 behavior, kept for backward compatibility.
 
 See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) how to generate an API Key.
 
-Authorization and permissions are assigned based on the roles associated with the API Key and its corresponding permissions. See [here](/articles/26_fabric_security/01_fabric_security_overview.md) for more information about API Keys, roles, and permissions.
+> Authorization and permissions are assigned based on the roles associated with the API Key and its corresponding permissions. See [here](/articles/26_fabric_security/01_fabric_security_overview.md) for more information about API Keys, roles, and permissions.
 
 ### JWT: Signed by Fabric
 
@@ -67,14 +67,14 @@ The authentication flow for this method works as follows:
 
    When used in the cookie, the JWT expiration is automatically extended on each call, whereas it is not extended when using the Bearer header to pass the JWT.
 
-Authorization and permissions are determined by the credentials provided during the initial "/api/authenticate" call, either by the user or by the API Key, along with the assigned roles for each. See [here](/articles/26_fabric_security/01_fabric_credentials_overview.md) for more information about API Keys, roles, and permissions.
+> Authorization and permissions are determined by the credentials provided during the initial "/api/authenticate" call, either by the user or by the API Key, along with the assigned roles for each. See [here](/articles/26_fabric_security/01_fabric_credentials_overview.md) for more information about API Keys, roles, and permissions.
 
 #### Authenticate: Cookie vs. Response Body
 
 The `/api/authenticate` endpoint is used both for **end-user login** (a human authenticating in a browser) and for **server-to-server calls** (a service obtaining a short-lived JWT using an API Key). Fabric enforces a behavioral separation between these two modes, based on whether the resulting JWT carries a resolved user identity (the `unm` claim) and on the `responseInBody` request parameter:
 
-* **End-user login** - when the call resolves to a Fabric user (username/password, or an API Key associated to a user), the JWT is returned as a **cookie** by default, and it carries the `unm` claim. Accessing Web Services using this cookie requires the `unm` claim to be present; a cookie JWT without it is rejected.
-* **Server-to-server access** - when the call authenticates only with an API Key that is *not* associated to a user, there is no user identity to place in a cookie. Such calls must pass `responseInBody=true`; the JWT is then returned in the response body, `{"response": "OK", "jwt": "<JWT>"}`, instead of a cookie. Calling without `responseInBody=true` in this case is rejected.
+* **End-user login** - when the call resolves to a Fabric user, e.g. while browsing (username/password, or an API Key associated to a user), the JWT is returned as a **cookie** by default, and it carries the `unm` claim. Accessing Web Services using this cookie requires the `unm` claim to be present; a cookie JWT without it is rejected.
+* **Server-to-server access** - when the call authenticates only with an API Key that is *not* associated to a user, there is no user identity to place in a cookie. Such calls must pass `responseInBody=true`; the JWT is then returned in the response body, `{"response": "OK", "jwt": "<JWT>"}`, instead of a cookie (cookies are used for browsing). Calling without `responseInBody=true` in this case is rejected.
 * `responseInBody=true` can also be used with username/password or a user-associated API Key, to get the JWT back in the body instead of a cookie.
 * A bearer-header JWT (as opposed to a cookie) may be used with or without the `unm` claim.
 
@@ -186,9 +186,14 @@ There are two ways to generate an API key: either through the Web Framework Admi
 * Web Framework Admin: 
 
   1. Open the **Admin Panel** web page and select **Admin** > **Security** and then click the **API keys** tab.
+
   2. Click the **Add API Key +** button on the upper right of the window.
 
   3. Fill in the Name (Mandatory) and select the key type from the **Select key type** dropdown (Access / Signing JWT / Legacy). **Access** is the default selection.
+
+     <img src="images/07_fabric_webToken.PNG" style="zoom:80%;" >
+
+     
 
   4. Click  **Save**.
 
@@ -196,9 +201,9 @@ There are two ways to generate an API key: either through the Web Framework Admi
   * For **Signing JWT** keys, a pop-up shows the generated **Signing Key**, with the same warning. This value is both the key identifier and the HMAC-SHA256 secret used to sign the client's JWT.
   * For **Legacy** keys, no pop-up is shown - the token name is the key, and it is already visible in the API Keys table.
 
-  For example:
+  
 
-  <img src="images/07_fabric_webToken.PNG">
+  <img src="images/08_fabric_webToken.PNG" style="zoom:80%;" >
 
   In the API Keys table, the previous "signed by client" column is now named **type**, showing **Access** / **Signing JWT** / **Legacy**.
 
