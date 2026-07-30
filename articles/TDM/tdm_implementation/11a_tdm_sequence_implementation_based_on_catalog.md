@@ -55,3 +55,8 @@ To use a custom flow as a sequence generator, add an external parameter named **
 1. Add an external parameter named **category** to the flow and set its default value to **enable_sequences**.
 2. Deploy the changes and open the Catalog. On the **Sequences** tab, edit or create the sequence that uses the custom flow. Select the custom flow as the generator and verify that the **category** parameter is displayed and populated with the default value `enable_sequences`.
 3. Save the sequence and return to the Studio. Open the **catalog_classification_generators** MTable and verify that the sequence entry for the custom flow contains the parameter `{category: "enable_sequences"}`.
+
+#### Using a Different Built-In Generator for a Sequence
+
+If you want to use a built-in actor other than the Sequences actor as the generator for a Sequence in the Catalog, wrap the built-in actor in a Broadway flow. Add an external parameter named **category** to the flow and set its default value to **enable_sequences**, as described in the section above. Then, select the wrapper flow as the generator for the Sequence.
+
