@@ -63,8 +63,10 @@ In Broadway, sequences can be mapped in a number of ways. The following use case
 
 #### Custom Sequence Mapping
 
-Create your own function or Broadway flow for generating a new ID, using the **MaskingLuFunction** or **MaskingInnerFlow** Actors. Set the [category](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#how-do-i-set-masking-input-arguments) to **enable_sequences** in order to use the Actor for sequence (ID) replacement.
+Create your own function or Broadway flow for generating a new ID, using the **MaskingLuFunction** or **Masking** Actors. Set the [category](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#how-do-i-set-masking-input-arguments) to **enable_sequences** in order to use the Actor for sequence (ID) replacement.
 
-Click here for more information about the [custom masking actors](/articles/41_masking/02_data_masking_flow.md#customized-masking-logic).
+Click [here](/articles/41_masking/02_data_masking_flow.md#customized-masking-logic) for more information about the custom masking actors.
+
+Click [here](/articles/TDM/tdm_implementation/11a_tdm_sequence_implementation_based_on_catalog.md#using-a-custom-sequence-generator) for more information about adding a custom sequence generator to the Catalog's Sequences. 
 
 [![Previous](/articles/images/Previous.png)](07a_data_generators_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](09_MTable_actors.md)
