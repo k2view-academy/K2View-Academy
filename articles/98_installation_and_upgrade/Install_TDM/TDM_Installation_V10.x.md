@@ -76,7 +76,7 @@ The procedure for upgrading to TDM V10.x is described in the [TDM upgrade docume
 
 You can install TDM within your K2cloud Kubernetes self-hosted environment, and also Docker or Podman container runtimes on a VM or a computer. 
 
-Here are instructions links for installing Fabric Web Studio on Docker or Podman : 
+Here are the link instructions for installing Fabric Web Studio on Docker or Podman : 
 
 1. [Install Fabric Web Studio for Docker Compose](/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md).
 2. [Install Fabric Web Studio for Podman](/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation-podman.md).
@@ -140,8 +140,8 @@ To confirm what your environment is actually using:
     
   - Set the Port. By default, it is `5432`.
   - The database's name on the interface
-     - For the **POSTGRESQL_ADMIN** interface use: `postgres`.
-     - For the **TDM** interface use: `TDMDB`.
+     - For the **POSTGRESQL_ADMIN** interface, use: `postgres`.
+     - For the **TDM** interface, use: `TDMDB`.
   
   - Set the User as: `postgres`
   - Set the Password as: `postgres`.
@@ -195,15 +195,15 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 
 #### TDM Deployment
 
-- If you use **Cassandra** as the Fabric system DB, you must edit the **SEQ_CACHE_INTERFACE** Global and update its value to **DB_CASSANDRA**.
+- If you use **Cassandra** as the Fabric system DB, edit the SEQ_CACHE_INTERFACE Global and set its value to **DB_CASSANDRA**.
 - Perform the following step to use the **PostgreSQL** DB as the Fabric system DB:
-  - Open Fabric’s **config.ini** file and edit the **[system_db]** section’s attributes, including the SYSTEM_DB_DATABASE attribute, to be aligned with the **POSTGRESQL_ADMIN** DB interface. 
-
+- Open Fabric’s config.ini file and edit the [system_db] section’s attributes, including the SYSTEM_DB_DATABASE attribute, to be aligned with the POSTGRESQL_ADMIN DB interface.
 - Set the **POSTGRESQL_ADMIN interface** to **active**.
-- Edit the **TDM** and **POSTGRESQL_ADMIN** interfaces with the installed PostgreSQL connection details.
-- Set the **CREATE_TDMDB** Global in the TDM LU to **true**.
+- Edit the **TDM** and **POSTGRESQL_ADMIN** interfaces with the installed PostgreSQL connection details. The **POSTGRESQL_ADMIN** user must have administrator permissions. During the TDM LU deployment, this interface is used to create the TDM operational DB, if it does not already exist, and to create the TDM DB tables.
+-  Set the **CREATE_TDMDB** Global in the TDM LU to **true**.
 - Optional: If you wish to change the schema name for the TDM DB (the default schema name contains the cluster ID), then edit the **TDMDB_SCHEMA** shared Global. Restart Fabric after updating this Global.
 - Deploy the TDM LU. This deployment creates the TDM DB and the k2masking schema. Note that the k2masking schema can also be created by running the **masking-create-cache-table.flow** from the Broadway Examples (found in the Broadway Flow window, Main Menu > Actions > Examples and select this flow).
+- The TDM DB user configured in the TDM interface must have permission to create, edit, and delete tables. It must also have permission to insert, update, and select records in the TDM tables.
 - After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false**.
 
 

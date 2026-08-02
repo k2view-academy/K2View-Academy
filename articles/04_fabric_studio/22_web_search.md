@@ -46,7 +46,7 @@ You can replace across all files from the Replace text box, replace all in one f
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/21_web_file_explorer_and_navigation.md)
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/31_logical_units_groups.md)
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/08_fabric_project_tree.md)
 
 
