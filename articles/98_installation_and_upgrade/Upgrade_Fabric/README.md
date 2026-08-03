@@ -12,9 +12,12 @@ The Upgrade Overview topic provides an overview of the Fabric upgrade methodolog
 
 The Fabric Upgrade Procedure (Linux Installations) topic provides the standard step-by-step procedure for upgrading Fabric installations deployed directly on Linux servers. Version-Specific upgrade procedures links follow. 
 
+The IID Finder Upgrade to Fabric 8.5 topic describes the component-specific activities required when upgrading an existing IID Finder deployment, where the IID Finder standalone process is replaced by a Fabric job.
+
 <ul>    
 <li><a href="/articles/98_installation_and_upgrade/Upgrade_Fabric/upgrade_overview.md"> Upgrade  Overview</a></li>
 <li><a href="/articles/98_installation_and_upgrade/Upgrade_Fabric/upgrade_procedure_linux.md"> Fabric Upgrade Procedure (Linux Installations)</a></li>
+<li><a href="/articles/98_installation_and_upgrade/Upgrade_Fabric/iidfinder_upgrade_v8.5.md"> Fabric 8.5 IID Finder Upgrade to Fabric Job</a></li>
 <li><a href="/articles/98_installation_and_upgrade/Upgrade_Fabric/Fabric_Upgrade_Procedure_To_V8.3.pdf"> Upgrade  to V8.3</a></li>
 <li><a href="/articles/98_installation_and_upgrade/Upgrade_Fabric/Fabric_Upgrade_Procedure_To_V8.2.pdf"> Upgrade  to V8.2</a></li>
 <li><a href="/articles/98_installation_and_upgrade/Upgrade_Fabric/Fabric_Upgrade_Procedure_To_V8.1.pdf"> Upgrade  to V8.1</a></li>
