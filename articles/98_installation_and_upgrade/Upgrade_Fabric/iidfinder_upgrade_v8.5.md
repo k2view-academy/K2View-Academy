@@ -47,7 +47,14 @@ The **iifConfig.ini** file is removed. Its settings are relocated to **config.in
 * Cassandra settings are replaced by the SystemDB settings.
 * Properties defined in the **finder** section of **iifConfig.ini** are moved to the **finder** section of **config.ini**.
 
-Note that using links for the **SourceDbQuery** actor parameters (**sql**, **sourceTable**) causes issues with XML generation. Use constants instead.
+In addition, add the following section to the **config.ini**:
+
+~~~
+[finder_pubsub]
+POLL_TIMEOUT=1000
+MAX_POLL_RECORDS=100
+VALUE_DESERIALIZER=com.k2view.cdbms.kafka.JSONObjectDeserializer
+~~~
 
 ## Finder Hook (Filter)
 
@@ -84,3 +91,7 @@ Click here for more information about [Affinity Management](/articles/20_jobs_an
 7. Define the IID Finder and Delta job affinities through the Fabric Admin.
 8. Update monitoring definitions to use the merged Fabric JMX metrics.
 9. Validate the IID Finder job execution and the existing Broadway flows.
+
+## Known Limitation
+
+Note that using links for the **SourceDbQuery** actor parameters (**sql**, **sourceTable**) causes issues with XML generation. Use constants instead.
