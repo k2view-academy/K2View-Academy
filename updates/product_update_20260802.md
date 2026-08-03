@@ -4,7 +4,7 @@ We are excited to announce the release of Fabric 8.5.0. The release highlights a
 
 * **Catalog** has the following major enhancements:
   * **Large Catalog Navigation**: The datasets of large schemas are now displayed in a filterable list view instead of the tree view, reducing rendering time and preventing browser slowdowns.
-  * **File Cataloging — OpenAPI Support**: File Cataloging now supports discovery of OpenAPI interfaces (V3.0 & 3.1) using the File Cataloging framework and a new **OpenApiToMetadata** actor. 
+  * **OpenAPI Support**: Catalog now supports discovery of OpenAPI interfaces (V3.0 & 3.1) using a new **OpenApiToMetadata** actor in the File Cataloging flows. 
   * **Search Catalog Enhancement**: The Catalog Advanced search now includes a **Limit by hierarchy** criterion, allowing users to scope searches to a specific Data Platform and Schema.
   * **Creation of Logical Relations**: Two new plugins expand the *refersTo* relation creation — a **Reference by Name Comparison** plugin that scores field name similarity using the Jaro-Winkler algorithm, and a **Reference by LLM** plugin that analyzes dataset pairs with an LLM to identify possible foreign-key references. Both rules can create the relations even for datasets with no PK.
 * **Affinity Management**: Fabric now supports centralized management of node affinities across the cluster — rules can be defined once per DC or for the entire cluster via the Admin UI or the new `set_global affinity_rules` command, with a dedicated Affinity Management Job distributing and maintaining the settings on all nodes.
