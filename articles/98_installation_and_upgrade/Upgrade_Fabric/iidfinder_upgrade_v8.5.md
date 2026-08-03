@@ -6,7 +6,7 @@ This document describes the changes introduced to the IID Finder in Fabric 8.5 a
 
 In Fabric 8.5, the IID Finder is no longer executed as a standalone process. It is executed as a Fabric job.
 
-The implementation is designed to be as transparent as possible for users. Existing Broadway flows are preserved and continue to be supported under the new approach.
+The implementation is designed to be as transparent as possible for users. Existing Broadway flows (in the implementation layer) are preserved and continue to be supported under the new approach.
 
 ## Summary of Changes
 
@@ -23,9 +23,9 @@ The following changes apply to the IID Finder in Fabric 8.5:
 
 ## Logging
 
-IID Finder log messages are written to the k2fabric log files.
+IID Finder log messages are now written to the k2fabric log files.
 
-As a result, the dedicated IID Finder log files and their associated logback configuration are obsolete and can be removed.
+As a result, the dedicated IID Finder log files and their associated logback configuration are obsolete.
 
 ## Resource Allocation
 
