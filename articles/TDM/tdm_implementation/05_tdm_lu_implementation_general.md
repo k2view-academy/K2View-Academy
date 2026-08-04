@@ -35,9 +35,7 @@ In a TDM project, each LU is structured as follows:
 
   - It sets the FABRIC_TDM_ROOT LU table to be the root LU table and links it to the main source LU table.
 
-
   - It sets the ROOT_TABLE_NAME and ROOT_COLUMN_NAME Globals on the LU. 
-
 
   - It recreates the LU population of the main source LU table.
 
@@ -52,6 +50,7 @@ In a TDM project, each LU is structured as follows:
     - Creating and adding the target tables to the LU to support the entity deletion.
     - Creating the [data generation flows](16_tdm_data_generation_implementation.md) to support [rule-based generation tasks](/articles/TDM/tdm_gui/14d_task_source_rule_based_generation.md).  
 
+- Note that starting with TDM 9.5.0, the **TDMLUInitBasedOnFabric** flow supports LUs with **multiple interfaces and/or schemas**, as the interface and schema for each LU table are derived from the LU table definitions.
 
 <web>
 
@@ -62,16 +61,17 @@ In a TDM project, each LU is structured as follows:
 #### TDMLUInitBasedOnFabric Flow Execution
 
 1. Verify that the LU schema does not contain [grouped tables](/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md), and deploy the LU to the Fabric debug server before running the flow. 
-2. Optional — [filter out LU tables from the Broadway flows](05b_filter_out_lu_tables.md) (delete, load, and data generation flows). 
+2. Optional — [Filter out LU tables from the Broadway flows](05b_filter_out_lu_tables.md) (delete, load, and data generation flows). 
 3. Set the flow input parameters before executing it:
 
    - **LU_NAME**
-   - **SOURCE_INTERFACE** — populated with the source DB interface name.
-   - **SOURCE_SCHEMA** — populated with the source DB schema name.
+   - **SOURCE_ENVIRONMENT** - Optional. If left empty, the settings are taken from the **_dev** environment.
+   - **SOURCE_INTERFACE** — Optional. Specify the source DB interface name, or leave empty to use the interface defined for each LU table.  
+   - **SOURCE_SCHEMA** —  Optional. Specify the source DB schema name, or leave empty to use the schema defined for each LU table.
    - **OVERRIDE_EXISTING_FLOWS** — true/false. It indicates if the execution recreates existing flows. 
-   - **TARGET_SCHEMA** — populated with the target DB schema name.
-   - **TARGET_INTERFACE** — populated with the target DB interface name.
-   - **TARGET_ENVIRONMENT** — populated with one of the target environment names. Can be populated with '_dev' in case the Environments are not yet defined.
+   - **TARGET_SCHEMA** — Optional. Specify the target DB schema name, or leave empty to use the schema defined for each LU table.
+   - **TARGET_INTERFACE** — Optional. Specify the target DB interface name, or leave empty to use the interface defined for each LU table.
+   - **TARGET_ENVIRONMENT** — Specify one of the target environment names. Use **_dev** if the environments have not yet been defined.
 
 
 4. Additional **flow input parameters**:
