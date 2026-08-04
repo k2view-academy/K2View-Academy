@@ -94,4 +94,4 @@ Click here for more information about [Affinity Management](/articles/20_jobs_an
 
 ## Known Limitation
 
-Note that using links for the **SourceDbQuery** actor parameters (**sql**, **sourceTable**) causes issues with XML generation. Use constants instead.
+Note that using links to the **SourceDbQuery** actor parameters (**sql**, **sourceTable**) causes issues with XML generation. Use constants instead.
