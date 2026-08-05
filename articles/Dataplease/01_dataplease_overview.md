@@ -35,4 +35,4 @@ Dataplease is built on the following K2view tools:
   * Auto-generates a coherent **data story**, with or without user guidance.
   * Enforces **logical consistency across multiple disjoint tables**.
 
-Further articles walk through each step of the Dataplease app in more detail, under [dataplease_app](dataplease_app/README.md).
+Further articles walk through each step of the [Dataplease App](dataplease_app/README.md) in more details.
