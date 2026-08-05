@@ -2,15 +2,10 @@
 
 ### Overview
 
-Once the datasets are confirmed, the Dataplease Assistant asks the user - in natural language - whether there are any special requests for the generation, before kicking it off:
+Two things happen at this step: 
 
-<img src="../images/dataplease_generation_special_requests.jpg" style="zoom:75%;" />
-
-The Assistant suggests common options as quick-pick chips, for example generating a specific number of rows per table, preserving the statistical distribution of numeric fields, or keeping realistic date ranges based on the existing data. The user can also type free-text instructions, such as maintaining referential integrity across tables. Together, these instructions form the request that the Dataplease AI Agent interprets into a coherent **data story** driving the generation, enforcing logical consistency across the selected, disjoint tables.
-
-### Tracking the Generation
-
-Clicking **Generate** starts the process, with per-table progress shown for the selected datasets:
+* The data is generated based on the **user story** - built by the [Dataplease AI Agent](../dataplease_assistant/01_dataplease_assistant_overview.md) from the user's input, as described in [Selecting the Datasets](04_selecting_the_datasets.md).
+* The generated data is saved into the Fabric DB, with its progress tracked via the monitor shown below:
 
 <img src="../images/dataplease_generation_progress.jpg" style="zoom:75%;" />
 
