@@ -17,7 +17,8 @@ The result is an intuitive, self-service flow: a user points Dataplease at a dat
 2. **Building the catalog** – If a Catalog version already exists for that interface/schema, it can be reused as-is. Otherwise, Dataplease triggers a discovery process that scans the source and builds a new Catalog version, shown to the user as a live progress monitor.
 3. **Selecting the datasets** – The user reviews and refines the discovered datasets, including their fields, properties  and descriptions. Descriptions and properties can be edited, for getting better results during the data generation step. Any changes are saved as a new Catalog version.
 4. **Data generation** – Once the datasets are confirmed, Dataplease generates the synthetic data for the selected tables and reports per-table status, row counts, duration, and an overall execution summary (datasets processed, total rows, success rate).
-5. **Data preview and provisioning** – After the data generation is completed, the user can preview and evaluate the data to validate its quality. This step is optional. Eventually, the data is provisioned to the target system using Fabric's platform capabilities. The provisioning process is monitored, to report the progress and success rate.
+5. **Data preview** – After the data generation is completed, the user can preview and evaluate the data to validate its quality. This step is optional.
+6. **Provisioning** – The generated data is provisioned to the target system using Fabric's platform capabilities. The provisioning process is monitored, to report the progress and success rate.
 
 ![](images/dataplease_e2e_swimlane.png)
 
@@ -34,4 +35,4 @@ Dataplease is built on the following K2view tools:
   * Auto-generates a coherent **data story**, with or without user guidance.
   * Enforces **logical consistency across multiple disjoint tables**.
 
-
+Further articles walk through each step of the Dataplease app in more detail, under [dataplease_app](dataplease_app/README.md).
