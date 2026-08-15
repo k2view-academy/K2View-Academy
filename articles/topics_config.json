@@ -344,7 +344,7 @@
 			]
 		},
 		{
-			"group display name": "Installation & Upgrade",
+			"group display name": "Installation, Upgrades @ Runbooks",
 			"group icon": "images/deployment-icon.png",
 			"visible in main": true,
 			"topics": [
@@ -408,6 +408,23 @@
 						{
 							"display name": "TDM",
 							"value": "98_installation_and_upgrade/Upgrade_TDM"
+						}
+					]
+				},
+				{
+					"display name": "Runbooks",
+					"sub-topics": [
+						{
+							"display name": "Fabric",
+							"value": "98_installation_and_upgrade/Runbooks_Fabric"
+						},
+						{
+							"display name": "Cassandra",
+							"value": "98_installation_and_upgrade/Runbooks_Cassandra"
+						},
+						{
+							"display name": "Kafka",
+							"value": "98_installation_and_upgrade/Runbooks_Kafka"
 						}
 					]
 				},
