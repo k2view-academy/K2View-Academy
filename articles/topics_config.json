@@ -344,7 +344,7 @@
 			]
 		},
 		{
-			"group display name": "Installation, Upgrades @ Runbooks",
+			"group display name": "Installation, Upgrades & Runbooks",
 			"group icon": "images/deployment-icon.png",
 			"visible in main": true,
 			"topics": [
