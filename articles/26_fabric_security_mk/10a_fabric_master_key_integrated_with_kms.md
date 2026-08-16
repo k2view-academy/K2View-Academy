@@ -182,10 +182,13 @@ While Fabric might be deployed across several regions, it can use the same KMS k
    >  * Changes in the config.ini file are performed on all Fabric nodes.
 
    
+2. Ensure that Fabric trusts the TLS certificate presented by the Fortanix KMS endpoint.
 
-2. Set certificate when needed for trust, as any communication with external servers.
-2. In Fabric console/terminal, run this command: ``activatekey name='<name>' generatorType='Java_AES' storeType='FORTANIX_KMS'``.
+   If the Fortanix certificate or its issuing Certificate Authority (CA) is not already trusted by the Fabric Java runtime, add the required certificate to the Fabric truststore before activating the key.
 
+   See [Trusting External TLS Services](/articles/99_fabric_infras/03_3_Trusting_External_TLS_Services.md) for instructions on retrieving and importing certificates using `get-certificate.sh`, importing an existing certificate using `certificates.sh addtrust`, and configuring the Fabric truststore.
+
+3. In Fabric console/terminal, run this command: `activatekey name='<name>' generatorType='Java_AES' storeType='FORTANIX_KMS'`.
 
 
 ## Symmetric and Asymmetric Master Key Encryption Types
