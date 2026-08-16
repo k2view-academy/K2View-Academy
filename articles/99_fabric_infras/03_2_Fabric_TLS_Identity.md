@@ -146,53 +146,9 @@ When replacing a certificate, use the same alias if the Fabric configuration alr
 
 ## Generate a Self-Signed TLS Identity
 
-`certificates.sh` can also generate a keypair and self-signed certificate directly in the Fabric keystore.
+Fabric can generate a self-signed certificate and keypair using the `certificates.sh genkey` command.
 
-The syntax is:
-
-```text
-${FABRIC_HOME}/fabric/scripts/certificates.sh genkey <ALIAS> [CNAME] [PASSWORD]
-```
-
-Where:
-
-<table>
-    <thead>
-        <tr>
-            <th>Parameter</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><code>ALIAS</code></td>
-            <td>Alias used to identify the generated keypair in the Fabric keystore.</td>
-        </tr>
-        <tr>
-            <td><code>CNAME</code></td>
-            <td>Common Name (CN) used when generating the certificate. If omitted, the script uses <code>k2view.local</code>.</td>
-        </tr>
-        <tr>
-            <td><code>PASSWORD</code></td>
-            <td>Keystore password. If omitted, the script uses <code>changeit</code>.</td>
-        </tr>
-    </tbody>
-</table>
-
-For example:
-
-```bash
-${FABRIC_HOME}/fabric/scripts/certificates.sh genkey webserver fabric.example.com changeit
-```
-
-The script generates:
-
-- a 4096-bit RSA key;
-- a certificate signed using SHA256 with RSA;
-- a self-signed certificate with the specified Common Name; and
-- a certificate validity period of 760 days.
-
-For the complete self-signed certificate procedure, including cases where Subject Alternative Names (SANs) or IP-based access are required, see [Generating a Self-Signed Certificate in Fabric](/articles/99_fabric_infras/13_creating_a_self_signed_certificate.md).
+Self-signed certificates are typically appropriate for development, testing, air-gapped, or isolated environments. For the complete procedure, including certificate parameters, Subject Alternative Names (SANs), IP-based access, and exporting the certificate for client trust, see [Generating a Self-Signed Certificate in Fabric](/articles/99_fabric_infras/13_creating_a_self_signed_certificate.md).
 
 ## Keystore File Permissions
 
