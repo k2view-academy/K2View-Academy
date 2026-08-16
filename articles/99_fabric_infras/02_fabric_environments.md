@@ -62,4 +62,5 @@ This environment should be isolated from the Development and QA environments and
 
 <img src="/articles/99_fabric_infras/images/04_devop-prodEnv.png">
 
-[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/01_fabric_security_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/03_fabric_api_and_ui_hardening.md)
+
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/01_fabric_security_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/03_1_Certificate_Management.md)
