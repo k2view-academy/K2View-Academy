@@ -23,7 +23,7 @@ For information about configuring Fabric's TLS identity and keystore, see [Fabri
 
 Fabric provides the following certificate-management utility:
 
-```text id="67g8ue"
+```text
 ${FABRIC_HOME}/fabric/scripts/certificates.sh
 ```
 
@@ -31,7 +31,7 @@ The `genkey` command generates a self-signed RSA keypair and stores it in the Fa
 
 The syntax is:
 
-```text id="qpnm7s"
+```text
 ${FABRIC_HOME}/fabric/scripts/certificates.sh genkey <ALIAS> [CNAME] [PASSWORD]
 ```
 
@@ -62,7 +62,7 @@ Where:
 
 For example, to generate a certificate for `fabric.example.com` using the alias `webserver`:
 
-```bash id="y5h5oy"
+```bash
 ${FABRIC_HOME}/fabric/scripts/certificates.sh genkey webserver fabric.example.com changeit
 ```
 
@@ -81,13 +81,13 @@ By default, the script generates:
 
 The generated Distinguished Name has the following form:
 
-```text id="o25jcc"
+```text
 CN=<CNAME>,OU=K2View,O=K2View,C=US
 ```
 
 The script also restricts access to the keystore using:
 
-```text id="rhg3b2"
+```text
 chmod 600
 ```
 
@@ -99,7 +99,7 @@ Administrators can alternatively use Java's `keytool` utility directly. This pro
 
 For example:
 
-```bash id="vzrtn5"
+```bash
 keytool -genkeypair \
   -alias webserver \
   -keyalg RSA -keysize 4096 -sigalg SHA256WithRSA \
@@ -130,7 +130,7 @@ The `certificates.sh genkey` command does not provide an option for adding SAN e
 
 For access using a DNS name:
 
-```bash id="pzh2fq"
+```bash
 keytool -genkeypair \
   -alias webserver \
   -keyalg RSA -keysize 4096 -sigalg SHA256WithRSA \
@@ -145,7 +145,7 @@ keytool -genkeypair \
 
 For access using an IP address:
 
-```bash id="vjj2bx"
+```bash 
 keytool -genkeypair \
   -alias webserver \
   -keyalg RSA -keysize 4096 -sigalg SHA256WithRSA \
@@ -168,7 +168,7 @@ The public certificate can be exported from the Fabric keystore and added to the
 
 For example:
 
-```bash id="p3b6wm"
+```bash 
 keytool -exportcert \
   -alias webserver \
   -keystore ~/.keystore \
@@ -189,13 +189,13 @@ Fabric can also use a generated keypair when a Fabric certificate is required fo
 
 When generating a certificate specifically for use as the SAML Service Provider certificate, use an appropriate alias such as:
 
-```text id="pr9g0s"
+```text
 fabric_cert
 ```
 
 For example:
 
-```bash id="f7tft8"
+```bash
 ${FABRIC_HOME}/fabric/scripts/certificates.sh genkey fabric_cert fabric.example.com changeit
 ```
 
@@ -203,7 +203,7 @@ The alias used to generate the keypair must correspond to the value configured f
 
 For example:
 
-```ini id="tjqk3c"
+```ini 
 [saml]
 SP_CERT_ALIAS=fabric_cert
 ```
