@@ -370,6 +370,10 @@
 					]
 				},
 				{
+					"display name": "Network & Firewall Requirements",
+					"value": "98_installation_and_upgrade/Network_and_Firewall_Requirements"
+				},
+				{
 					"display name": "Installation",
 					"sub-topics": [
 						{
