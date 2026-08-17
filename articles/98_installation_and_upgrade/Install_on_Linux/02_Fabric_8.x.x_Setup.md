@@ -1,6 +1,6 @@
-# Fabric 8 Installation Guide
+# Fabric Installation Guide
 
-This guide describes the steps required to prepare your environment for the installation of Fabric and TDM. It covers both system-level and application-level preparation to ensure a successful deployment.
+This guide describes the steps to prepare your environment for installing Fabric version 8 or later and TDM. It covers both system-level and application-level preparation to ensure a successful deployment.
 
 ## Table of Contents
 
