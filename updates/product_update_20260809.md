@@ -6,4 +6,4 @@ New Fabric releases are automatically made available in the **Projects** page fo
 
 Release information—including version status, release date, image location, and a link to the release notes—is available directly from the Fabric Image selection.
 
-For complete details, refer to the **[K2cloud August 2026 Release Notes](https://support.k2view.com/Academy/Release_Notes/K2cloud/K2cloud_Release_Notes_Aug2026.pdf.html)**.
+For complete details, refer to the [K2cloud August 2026 Release Notes](https://support.k2view.com/Academy/Release_Notes/K2cloud/K2cloud_Release_Notes_Aug2026.pdf.html).
