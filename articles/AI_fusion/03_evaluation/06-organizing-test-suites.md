@@ -62,6 +62,10 @@ Different teams can own different suites.
 
 ### Creating a New Suite
 
+> **Note:** *Screenshot needed:* Open `/static/aifusion/evaluation`. Capture the interface for creating a new test suite, showing the name input. Save as `images/evaluation_create_suite.png`
+
+<img src="images/evaluation_create_suite.png" alt="Test suite creation interface" style="zoom:80%;" />
+
 When you save a test, you'll be prompted to choose a suite:
 
 1. **Option 1:** Select existing suite from dropdown
@@ -146,6 +150,10 @@ Account_Closure_Journey
 ---
 
 ## Suite Organization Strategies
+
+> **Note:** *Screenshot needed:* Open `/static/aifusion/evaluation` with multiple suites visible. Capture the left-side suite tree showing organized suites and tests. Save as `images/evaluation_organized_suites.png`
+
+<img src="images/evaluation_organized_suites.png" alt="Organized test suite tree" style="zoom:80%;" />
 
 ### Strategy 1: By Business Domain
 
@@ -312,6 +320,10 @@ Banking/
 ## Enabling and Disabling Suites
 
 ### Managing Suite Status
+
+> **Note:** *Screenshot needed:* Capture the test or suite list showing the enable/disable toggle or checkbox. Save as `images/evaluation_enable_disable.png`
+
+<img src="images/evaluation_enable_disable.png" alt="Enable/disable toggle for suites and tests" style="zoom:80%;" />
 
 You can enable or disable entire suites:
 

@@ -20,6 +20,10 @@ A bad test is:
 
 ## Principle 1: Use Real Customer Language
 
+> **Note:** *Screenshot needed:* Open `/static/aifusion/evaluation` showing a test with natural language questions. Capture the conversation builder to illustrate realistic question phrasing. Save as `images/evaluation_natural_language_example.png`
+
+<img src="images/evaluation_natural_language_example.png" alt="Natural language question example in conversation builder" style="zoom:80%;" />
+
 ### Bad Examples ❌
 
 ```

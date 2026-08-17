@@ -220,8 +220,9 @@ The Fabric Web Studio has a simple and intuitive layout. Like many other code ed
 More specifically, the Fabric Web Studio follows Visual Studio Code layout concepts, where the user interface is divided into several main areas:
 
 * **Editor** (A) - the main area in which you edit all your project files and entities. You may open many editors, alongside each other, vertically and horizontally.
-* **Activity Bar** (B) - it is the left-most menu, allowing you to switch between views.
-* **Side Bar** (C) - the second sidebar from the left, containing a variety of views - where each provides a different aspect in tailoring your project - such as File Explorer that assists you during the work on your Fabric project. Click for more information about the [Project Tree](08_fabric_project_tree.md).
+* **Activity Bar** (B) - it is the left-most menu, allowing you to switch between activity views. See below for details
+* **Side Bar** (C) - the second bar from the left, containing a variety of views - where each provides a different aspect in tailoring your project. The default view is the File Explorer that assists you during the work on your Fabric project. 
+  This view is divided into several sections, where the main section is the *Project*, where you can see the whole [project tree](08_fabric_project_tree.md) files. Other sections within the Explorer view are the *Open Editors* section - an helper for navigating between opened files, and the [*Logical Units Groups*](31_logical_units_groups.md) section.  
 * **Status Bar** (D) - located at the very bottom of the screen and presents information about the open project and the files you are editing.
 * **Panel** (E) - displays different panel modules below the Editor area. Examples for such panel modules are the Fabric Terminal, Fabric Logs Viewer, Problems (comprised of compilation errors and warnings) and Debug Information. These can be dragged to the right side of the screen, allowing for more vertical space. 
 * **Minimap** & **Outline** (F) - a code outline, provides a high-level overview of your source code, which is useful for both a quick navigation and the code comprehension. A file's minimap is shown on the right side of the Editor. You can either click on or drag the shaded area in order to quickly jump to different sections of your file. The minimap is shown only for some of the editors (mainly code editors) and when using those editors you can also click on the **Outline** icon at top-right, which, when expanded, shows the symbol tree of the currently active editor.
@@ -273,7 +274,14 @@ The views that appear by default on the Web Studio are as follows:
     <td style="text-align: center; padding-top: 10px;"><img src="images/web/datasource_explorer.png" alt="data source explorer" /></td>
     <td style="padding-left: 30px;"><strong>DB Interface Explorer</strong></td>
     <td style="width:60%">Enables exploring the project's DB interfaces, showing schemas, tables, views and columns. According to the open editor's context, it lets you apply actions such as executing SQL queries in Query Builder, adding DB statements to Fabric functions, adding DB Actors to Broadway and adding an SQL section to Graphit. To learn more about using the Git tool within the Web Studio see <a href="25_web_data_explorer.md">here</a>.</td>
-</tr></tbody></table>
+</tr>
+<tr>
+    <td style="text-align: center; padding-top: 10px;"><img src="images/web/log.png" alt="Log Viewer" /></td>
+    <td style="padding-left: 30px;"><strong>Logs Viewer</strong></td>
+    <td style="width:60%">Enables exploring Fabric logs. When clicked, you can choose, at the Side Bar, the required log, for example the main k2fabric.log file. When chosen, log file is opened in the main Editor area. Using the right side bar you can navigate to a specific location, for example - to errors, which are red colored.</td>
+</tr>    
+    </tbody></table>
+
 
 
 >**Tip:** You can change the order of views in the Activity Bar by dragging and dropping them.

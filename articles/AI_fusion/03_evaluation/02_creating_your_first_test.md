@@ -23,6 +23,10 @@ Let's start with manual creation to understand the fundamentals, then explore au
 
 ### Step 1: Start a New Test
 
+> **Note:** *Screenshot needed:* Open `/static/aifusion/evaluation`. Capture the main toolbar showing the "Create New Test" action. Save as `images/evaluation_create_new_test_button.png`
+
+<img src="images/evaluation_create_new_test_button.png" alt="Create New Test button" style="zoom:80%;" />
+
 Click the **"Create New Test"** button in the interface.
 
 ### Step 2: Choose Your Application
@@ -48,6 +52,10 @@ Customer ID: `1` might represent "John Smith" with checking and savings accounts
 **Tip:** Use test customers created specifically for testing, not production customer data.
 
 ### Step 4: Build the Conversation
+
+> **Note:** *Screenshot needed:* Open `/static/aifusion/evaluation`, create a new test, type a question and expected answer. Capture the conversation builder UI. Save as `images/evaluation_conversation_builder.png`
+
+<img src="images/evaluation_conversation_builder.png" alt="Conversation builder with question and expected answer" style="zoom:80%;" />
 
 Now you'll create the questions and define what good answers should include.
 
@@ -77,6 +85,10 @@ For multi-turn conversations, add follow-up questions:
 - **Maximum**: 15 questions (beyond this, split into multiple tests)
 
 ### Step 5: Configure Quality Criteria
+
+> **Note:** *Screenshot needed:* Open `/static/aifusion/evaluation` in test creation mode. Capture the evaluation criteria panel showing dimensions (Accuracy, Relevance, Clarity, Politeness) and their threshold settings. Save as `images/evaluation_criteria_config.png`
+
+<img src="images/evaluation_criteria_config.png" alt="Quality criteria and threshold configuration panel" style="zoom:80%;" />
 
 Choose what to measure and set minimum acceptable scores.
 
@@ -132,6 +144,10 @@ Auto-generation uses AI to create realistic test conversations automatically. Th
 
 ### Step 1: Start Auto-Generation
 
+> **Note:** *Screenshot needed:* Open `/static/aifusion/evaluation`, click "Create New Test" and switch to auto-generate mode. Capture the form showing Subject, Persona, Customer ID, and Max Steps fields. Save as `images/evaluation_autogenerate_form.png`
+
+<img src="images/evaluation_autogenerate_form.png" alt="Auto-generate test form" style="zoom:80%;" />
+
 Click **"Create New Test"**, then select **"Auto-Generate Conversation"**.
 
 ### Step 2: Basic Configuration
@@ -176,6 +192,10 @@ How many question/answer turns to generate (default: 15).
 - Long test: 11-15 steps
 
 ### Step 4: Generate
+
+> **Note:** *Screenshot needed:* Open `/static/aifusion/evaluation`, start auto-generation. Capture the chat interface showing messages being generated in real time. Save as `images/evaluation_generation_inprogress.png`
+
+<img src="images/evaluation_generation_inprogress.png" alt="Live auto-generation in progress" style="zoom:80%;" />
 
 Click **"Generate"** and watch in real-time as:
 1. AI generates an initial customer question

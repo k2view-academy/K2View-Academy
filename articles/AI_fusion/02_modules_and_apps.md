@@ -32,6 +32,20 @@ A comprehensive testing and assessment system for validating AI agent performanc
 
 This core module ensures that agents and apps meet predefined quality standards across various criteria prior to production deployment.
 
+Learn [here](/articles/AI_fusion/03_evaluation/00_intro_to_evaluation.md) about the Evaluation Framework.
+
+### Feedback Integration
+
+A mechanism for rating and annotating AI responses at the conversation level, enabling continuous quality improvement. Key features include:
+
+- Thumbs up / thumbs down ratings on individual assistant responses
+- Free-text annotations for detailed feedback notes
+- Available in the Chat Playground, production chat UI, and via API
+- Feedback surfaced in the Observation conversation review
+- Roadmap: automated agent tuning driven by accumulated feedback
+
+Learn [here](/articles/AI_fusion/02_agent_framework/14_feedback_integration.md) about Feedback Integration.
+
 ### 3. Observation
 
 A production monitoring and analytics platform providing visibility into agent behavior, performance metrics, and operational health. Features include:
@@ -42,6 +56,8 @@ A production monitoring and analytics platform providing visibility into agent b
 - Deep-dive capabilities for reviewing individual conversation threads
 
 This enables teams to identify issues, optimize costs, and continuously improve agent effectiveness based on production data.
+
+Learn [here](/articles/AI_fusion/04_observation/00_intro_to_observation.md) about Observation.
 
 
 

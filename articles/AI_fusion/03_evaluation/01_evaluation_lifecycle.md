@@ -24,6 +24,10 @@ The lifecycle typically follows five stages:
 
 Each stage helps teams systematically improve AI quality over time.
 
+> **Note:** *Screenshot needed:* Open `/static/aifusion/evaluation`. Capture the evaluation workspace showing the suite tree with at least one suite and test visible. Save as `images/evaluation_lifecycle_overview.png`
+
+<img src="images/evaluation_lifecycle_overview.png" alt="Evaluation lifecycle overview" style="zoom:80%;" />
+
 
 
 ## 1. Test Design

@@ -10,6 +10,10 @@ The Evaluation Framework enables QA teams, domain experts, and product teams to 
 
 The entire workflow is accessible through a **web-based interface**, allowing both technical and non-technical users to create tests, execute evaluations, and analyze results.
 
+> **Note:** *Screenshot needed:* Open `/static/aifusion/evaluation`. Capture the full evaluation workspace showing the left test suite tree panel, center conversation/test panel, and any right panel. Save as `images/evaluation_workspace_overview.png`
+
+<img src="images/evaluation_workspace_overview.png" alt="Evaluation workspace overview" style="zoom:80%;" />
+
 
 
 ## Why AI Agents Require a Different Testing Approach

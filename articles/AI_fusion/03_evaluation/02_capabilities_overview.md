@@ -4,6 +4,10 @@
 
 ## Test Creation
 
+> **Note:** *Screenshot needed:* Open `/static/aifusion/evaluation`, click "Create New Test". Capture the test creation interface showing the chat input area. Save as `images/evaluation_test_creation.png`
+
+<img src="images/evaluation_test_creation.png" alt="Test creation interface" style="zoom:80%;" />
+
 * **Create tests through a chat experience** - Creating a test feels like having a conversation - you interact with the agent through a chat interface similar your customers use, and save the result as a test case.
 
 * **Manual and AI-assisted** - Create tests by writing your own questions and expected answers, or let the AI Copilot generate realistic multi-turn conversations automatically. The Copilot can run a full conversation on autopilot, simulate specific customer personas (confused, tech-savvy, frustrated), and focus on topics you choose (billing, loans, account inquiries).
@@ -58,6 +62,10 @@
 
 ## Test Management
 
+> **Note:** *Screenshot needed:* Open `/static/aifusion/evaluation`. Capture the left-side test suite tree showing organized suites and tests. Save as `images/evaluation_suite_tree.png`
+
+<img src="images/evaluation_suite_tree.png" alt="Test suite tree panel" style="zoom:80%;" />
+
 * **Reusable and iterative** - Saved tests are not static. Load any test case, examine it as a live chat, edit questions or expected answers, continue the conversation with additional turns, or duplicate it as a starting point for a new test.
 
 * **Organized into suites** - Group tests by business domain, test type, or customer journey. Enable or disable entire suites or individual tests within a suite.
@@ -71,6 +79,10 @@
 
 
 ## Test Execution
+
+> **Note:** *Screenshot needed:* Open the Fabric Studio pipeline panel. Navigate to `aifusion.evaluatorPipeline`. Capture the pipeline ready to execute. Save as `images/evaluation_pipeline.png`
+
+<img src="images/evaluation_pipeline.png" alt="Pipeline execution view" style="zoom:80%;" />
 
 * **Three modes:**
 
@@ -104,6 +116,10 @@
 
 
 ## Results and Analysis
+
+> **Note:** *Screenshot needed:* Open `/static/aifusion/evaluation` with a completed test result. Capture the results view showing score breakdown per criterion. Save as `images/evaluation_results_drilldown.png`
+
+<img src="images/evaluation_results_drilldown.png" alt="Results drill-down view" style="zoom:80%;" />
 
 **Deep-dive view** - Drill down from suite-level results to individual conversations, then to per-turn scores broken out by dimension and threshold, with the evaluator's written verdicts.
 

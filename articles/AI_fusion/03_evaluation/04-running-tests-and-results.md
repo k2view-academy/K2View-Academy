@@ -26,6 +26,10 @@
 
 **Time:** Usually 30-60 seconds per test depending on conversation length
 
+> **Note:** *Screenshot needed:* Open `/static/aifusion/evaluation`, select a test. Capture the test detail view with the Execute/Run button visible. Save as `images/evaluation_single_test_execute.png`
+
+<img src="images/evaluation_single_test_execute.png" alt="Test selected with Execute button" style="zoom:80%;" />
+
 ---
 
 ### Method 2: Run an Entire Test Suite (Batch)
@@ -53,6 +57,10 @@
 **Time:** Depends on number of tests (typically 5-10 minutes for 50-100 tests)
 
 **Note:** Disabled tests are automatically skipped.
+
+> **Note:** *Screenshot needed:* Open Fabric Studio pipeline panel, navigate to `aifusion.evaluatorPipeline`. Capture the pipeline execution view. Save as `images/evaluation_batch_pipeline.png`
+
+<img src="images/evaluation_batch_pipeline.png" alt="Batch pipeline execution view" style="zoom:80%;" />
 
 ---
 
@@ -114,6 +122,10 @@ When a test completes, you'll see the results interface with several sections:
 
 ### Top Summary Bar
 
+> **Note:** *Screenshot needed:* Open `/static/aifusion/evaluation` with a completed test execution. Capture the top summary bar showing PASS/FAIL status, overall score, duration, and session ID. Save as `images/evaluation_results_summary_bar.png`
+
+<img src="images/evaluation_results_summary_bar.png" alt="Results summary bar" style="zoom:80%;" />
+
 ```
 ✅ PASSED  |  Overall Score: 4.3/5.0  |  Duration: 47s  |  Session: abc-123-def
 ```
@@ -133,6 +145,10 @@ Or:
 ---
 
 ### Conversation View (Main Panel)
+
+> **Note:** *Screenshot needed:* Open a completed test result. Capture the conversation view showing multiple turns with green/yellow/red color indicators and score badges. Save as `images/evaluation_conversation_results.png`
+
+<img src="images/evaluation_conversation_results.png" alt="Color-coded conversation view with score indicators" style="zoom:80%;" />
 
 Shows the full conversation with color-coded quality indicators:
 
@@ -182,6 +198,10 @@ Scores:
 ---
 
 ### Score Breakdown Table
+
+> **Note:** *Screenshot needed:* Capture the score breakdown table showing Criterion / Average / MIN / Threshold / Status columns for a test result. Save as `images/evaluation_score_breakdown_table.png`
+
+<img src="images/evaluation_score_breakdown_table.png" alt="Score breakdown table" style="zoom:80%;" />
 
 Shows aggregated statistics across the entire conversation:
 

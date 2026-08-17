@@ -115,6 +115,10 @@ Several standard criteria are provided out of the box. You can use them or defin
 
 
 
+> **Note:** *Screenshot needed:* Open `/static/aifusion/evaluation` in test creation mode, scroll to the criteria section. Capture the dimensions panel showing the 4 default criteria with their threshold inputs. Save as `images/evaluation_default_criteria.png`
+
+<img src="images/evaluation_default_criteria.png" alt="Default evaluation criteria panel" style="zoom:80%;" />
+
 ## Custom Quality Criteria
 
 You can create custom dimensions specific to your business. Some examples:
@@ -129,6 +133,10 @@ When creating a custom criterion, provide:
 - A clear name
 - A description of what the criterion measures
 - A threshold definition
+
+> **Note:** *Screenshot needed:* Open `/static/aifusion/evaluation` in test criteria configuration. Capture the interface for adding a custom evaluation dimension. Save as `images/evaluation_custom_criteria.png`
+
+<img src="images/evaluation_custom_criteria.png" alt="Custom dimension creation dialog" style="zoom:80%;" />
 
 
 
@@ -186,6 +194,10 @@ Use for non-negotiable requirements: accuracy, compliance, security.
 Use for stylistic qualities where some variation is acceptable: clarity, politeness.
 
 > Example: Clarity AVERAGE 4.0 = some responses can score 3.5 if others are 4.5, as long as the average is 4.0 or above
+
+> **Note:** *Screenshot needed:* Capture the threshold configuration showing MIN vs AVERAGE selector for a criterion. Save as `images/evaluation_threshold_types.png`
+
+<img src="images/evaluation_threshold_types.png" alt="Threshold type selector" style="zoom:80%;" />
 
 ### Recommended Starting Points
 
