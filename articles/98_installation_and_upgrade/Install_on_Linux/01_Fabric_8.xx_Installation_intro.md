@@ -1,4 +1,4 @@
-# Fabric 8.xx Pre-Installation Steps
+# Fabric Pre-Installation Steps
 
 ## Introduction 
 
