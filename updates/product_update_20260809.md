@@ -1,4 +1,4 @@
-### The K2cloud August 2026 Release
+# The K2cloud August 2026 Release
 
 Simplified Fabric Release Management in K2cloud - K2cloud now provides a simpler, self-service way to access and deploy available K2view Fabric releases.
 
