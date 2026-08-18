@@ -464,7 +464,7 @@
 					"value": "26_fabric_security_sm"
 				},
 				{
-					"display name": "Fabric Master Key Management",
+					"display name": "Master Key Management",
 					"value": "26_fabric_security_mk"
 				},
 				{
