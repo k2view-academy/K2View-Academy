@@ -10,6 +10,6 @@ For Project Managers, this update streamlines version governance and gives space
   * **Existing customers**: Available on request—open a ticket and we’ll enable these profiles (and any desired versions) for your Studio, Staging, and Production environments. For new customers, these are provided by default during the provisioning process.
 
 
-View the [release notes](https://support.k2view.com/Academy/Release_Notes/K2cloud/K2cloud_Release_Notes_Nov2025.pdf.html) and an [overview video](https://download.k2view.com/index.php/s/3rgZczMc6eEOU7t).
+View the [release notes](https://support.k2view.com/Academy/Release_Notes/K2cloud/K2cloud_Release_Notes_20251102.pdf.html) and an [overview video](https://download.k2view.com/index.php/s/3rgZczMc6eEOU7t).
 
 <img src="images/img.png" alt="image" style="zoom: 70%;" />
