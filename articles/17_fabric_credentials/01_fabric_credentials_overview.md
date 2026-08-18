@@ -61,6 +61,22 @@ Roles are assigned with many or all of the following permissions:
 </tr>
 <tr>
 <td width="300pxl">
+<p><strong>ASSIGN_SECURITY_PROFILE / REVOKE_SECURITY_PROFILE</strong></p>
+</td>
+<td width="600pxl">
+<p>Attach/detach a security profile to/from a role</p>
+</td>
+</tr>
+<tr>
+<td width="300pxl">
+<p><strong>REVOKE_ROLE</strong></p>
+</td>
+<td width="600pxl">
+<p>Remove a role from a user or token</p>
+</td>
+</tr>
+<tr>
+<td width="300pxl">
 <p><strong>EDIT_ROLE</strong></p>
 </td>
 <td width="600pxl">
@@ -93,6 +109,20 @@ Roles are assigned with many or all of the following permissions:
 </td></tr>
 <tr>
 <td width="300pxl">
+<p><strong>DROP_LUTYPE</strong></p>
+</td>
+<td width="600pxl">
+<p>Drop an LU type (schema and data), optionally scoped to specific LUs</p>
+</td></tr>
+<tr>
+<td width="300pxl">
+<p><strong>BROADWAY</strong></p>
+</td>
+<td width="600pxl">
+<p>Invoke a deployed Broadway flow</p>
+</td></tr>
+<tr>
+<td width="300pxl">
 <p><strong>QUERY_WS / READ / WRITE</strong></p>
 </td>
 <td width="600pxl">
@@ -100,10 +130,52 @@ Roles are assigned with many or all of the following permissions:
 </td></tr>
 <tr>
 <td width="300pxl">
+<p><strong>READ_WITH_CLAIM</strong></p>
+</td>
+<td width="600pxl">
+<p>Same as READ, but additionally validated against the caller's JWT claims (per-instance/field restriction)</p>
+</td></tr>
+<tr>
+<td width="300pxl">
+<p><strong>LIST_SETTINGS</strong></p>
+</td>
+<td width="600pxl">
+<p>List server/project metadata &ndash; LU types, interfaces, environments, MTables, Broadway flows, etc. Doesn't expose instance data</p>
+</td></tr>
+<tr>
+<td width="300pxl">
+<p><strong>READ_CONFIG</strong></p>
+</td>
+<td width="600pxl">
+<p>View config.ini settings, applied config overrides, and override history</p>
+</td></tr>
+<tr>
+<td width="300pxl">
 <p><strong>SET_ENVIRONMENT / SET_GLOBAL_ENVIRONMENT / SET_GLOBAL_GLOBAL</strong></p>
 </td>
 <td width="600pxl">
 <p>Used for setting the environment or Globals for the current session onto which a role is defined</p>
+</td></tr>
+<tr>
+<td width="300pxl">
+<p><strong>SET_GLOBAL_CONFIG_OVERRIDES</strong></p>
+</td>
+<td width="600pxl">
+<p>Apply, add, remove, or roll back config.ini overrides cluster-wide</p>
+</td></tr>
+<tr>
+<td width="300pxl">
+<p><strong>SET_READ</strong></p>
+</td>
+<td width="600pxl">
+<p>See global variable values when running plain SET with no arguments (otherwise only session-local values show)</p>
+</td></tr>
+<tr>
+<td width="300pxl">
+<p><strong>DB_INTERFACE_PROXY / SYSTEM_DB_PROXY</strong></p>
+</td>
+<td width="600pxl">
+<p>Enter DB-interface / system-DB proxy mode for the session</p>
 </td></tr>
 <tr>
 <td width="300pxl">
@@ -127,6 +199,8 @@ Roles are assigned with many or all of the following permissions:
 <p>Allows the above-mentioned permissions</p>
 </td></tr>
 </table>
+
+For the exact permission(s) required by every Fabric command, see [Fabric Commands - Required Permissions](/articles/17_fabric_credentials/06_fabric_commands_permissions.md).
 
 
 ## K2Auth Tables

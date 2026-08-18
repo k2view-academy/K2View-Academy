@@ -2,6 +2,8 @@
 
 The following table describes the methods to see the access control information using Fabric `LIST` commands.
 
+For the permission required to run each `LIST` type (and every other Fabric command), see [Fabric Commands - Required Permissions](/articles/17_fabric_credentials/06_fabric_commands_permissions.md#list-per-type-breakdown).
+
 <table width="900pxl">
 <tbody>
 <tr>
