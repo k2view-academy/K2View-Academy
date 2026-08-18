@@ -79,7 +79,14 @@ You can read more about the guidelines at this link: [Azure AD](https://docs.mic
    </tbody>
    </table>
 
-10. Edit the **User Attributes & Claims** section (2) and verify that the groups are sent in a claim named "groups".
+10. Configure the group claim.
+    1. In Attributes & Claims, select Add a group claim.
+    2. Select the groups that should be included in the SAML assertion.
+    3. Expand Advanced options and select Customize the name of the group claim.
+    4. Enter groups as the claim name.
+    5. Click Save.
+
+Verify that the Attributes & Claims list contains a claim named groups and that the groups required for Fabric authorization are included in the SAML assertion.
 
 11. From the **SAML Signing Certificate** section (3), click **Download** to obtain the Microsoft Entra ID certificate key, which will be uploaded into Fabric for signing authentication requests.
 
