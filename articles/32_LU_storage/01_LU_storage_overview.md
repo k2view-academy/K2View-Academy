@@ -148,18 +148,11 @@ MDB_DEFAULT_SCHEMA_CACHE_STORAGE_TYPE=NFS
 
 Unlike the other storage types, the NFS storage path is defined using the `MDB_DEFAULT_STORAGE_PATH` property.
 
-> **Important:** `MDB_DEFAULT_STORAGE_PATH` is not included in the default `config.ini` file. When NFS storage is used, this property must be manually added to the `[fabricdb]` section.
-
-For example:
+The default is set to
 
 ```ini
-[fabricdb]
-
-MDB_DEFAULT_SCHEMA_CACHE_STORAGE_TYPE=NFS
-MDB_DEFAULT_STORAGE_PATH=<NFS_storage_path>
+${FABRIC_HOME}/storage
 ```
-
-`MDB_DEFAULT_STORAGE_PATH` specifies the path to the shared NFS storage used to persist MicroDB instances.
 
 The NFS filesystem must be mounted and accessible to the Fabric nodes that use the NFS-backed LU storage.
 
