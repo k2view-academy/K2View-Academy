@@ -14,6 +14,12 @@ All APIs are accessed over HTTPS, from the Fabric URL endpoint `https://<Domain 
 
 The API invokes the DISCOVERY_CRAWLER job for a given interface.
 
+Starting from Fabric V8.5.1, a new optional input `schemas` has been added. It allows to set a comma separate list of schema names that belong to the specified data platform. The logic is as follows:
+
+* When one or more schemas are provided in the API input, the discovery is executed only for them, while all other schemas of the same data platform are excluded from the run.
+* This ad-hoc rule is combined with the existing rules (in pluginsOverride.discovery) however it is not saved as a new rule.
+* This change is not applicable when discovery is triggered by the Catalog App UI.
+
 **Example of an API call:**
 
 ~~~
