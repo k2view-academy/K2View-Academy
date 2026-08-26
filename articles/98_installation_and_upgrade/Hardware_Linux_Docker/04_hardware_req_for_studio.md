@@ -12,6 +12,7 @@
     - [Windows Permissions](#windows-permissions)
     - [Recommended Software](#recommended-software)
     - [Linux Server Ports](#linux-server-ports)
+  - [Related Topics](#related-topics)
 
 
 ## About Fabric Studio
@@ -221,60 +222,174 @@ Depending on your setup, not all ports are required:
 <table>
 <tbody>
 <tr>
-<td style="width: 161.109px;">
-<p><strong>Port Numbers</strong></p>
+<td style="width: 120px;">
+<p><strong>Section</strong></p>
 </td>
-<td style="width: 249.891px;">
-<p><strong>Role</strong></p>
+<td style="width: 80px;">
+<p><strong>Port</strong></p>
+</td>
+<td style="width: 400px;">
+<p><strong>Description</strong></p>
 </td>
 </tr>
 <tr>
-<td style="width: 161.109px;">
+<td style="width: 120px;">
+<p><strong>Linux</strong></p>
+</td>
+<td style="width: 80px;">
 <p>22</p>
 </td>
-<td style="width: 249.891px;">
-<p>SSH, SCP</p>
+<td style="width: 400px;">
+<p>SSH and SCP - shell access and file transfer for installation and maintenance.</p>
 </td>
 </tr>
 <tr>
-<td style="width: 161.109px;">
-<p>3213, 9443, 5124, 6379</p>
+<td rowspan="7" style="width: 120px;">
+<p><strong>Fabric</strong></p>
 </td>
-<td style="width: 249.891px;">
-<p>Fabric</p>
+<td style="width: 80px;">
+<p>3213</p>
 </td>
-</tr>
-<tr>
-<td style="width: 161.109px;">
-<p>9042, 9142</p>
-</td>
-<td style="width: 249.891px;">
-<p>Cassandra</p>
+<td style="width: 400px;">
+<p>Fabric web server - REST APIs and the server status pages.</p>
 </td>
 </tr>
 <tr>
-<td style="width: 161.109px;">
-<p>9093, 7270</p>
+<td style="width: 80px;">
+<p>9443</p>
 </td>
-<td style="width: 249.891px;">
-<p>Kafka</p>
-</td>
-</tr>
-<tr>
-<td style="width: 161.109px;">
-<p>3000, 9090</p>
-</td>
-<td style="width: 249.891px;">
-<p>Grafana stack</p>
+<td style="width: 400px;">
+<p>Fabric Admin UI and deployment endpoint (HTTPS).</p>
 </td>
 </tr>
 <tr>
-<td style="width: 161.109px;">
+<td style="width: 80px;">
+<p>5124</p>
+</td>
+<td style="width: 400px;">
+<p>Fabric JDBC listener - used by Studio, deployment tools, and JDBC clients.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 80px;">
+<p>7170</p>
+</td>
+<td style="width: 400px;">
+<p>JMX Exporter - Fabric JVM and application metrics, in Prometheus format.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 80px;">
+<p>7270</p>
+</td>
+<td style="width: 400px;">
+<p>JMX Exporter for the iid_finder process, when running.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 80px;">
+<p>9100</p>
+</td>
+<td style="width: 400px;">
+<p>Node Exporter - host CPU, memory, disk, and network metrics. Optional.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 80px;">
+<p>5009</p>
+</td>
+<td style="width: 400px;">
+<p>JVM remote debug port for the Fabric process. Optional, for development only.</p>
+</td>
+</tr>
+<tr>
+<td rowspan="5" style="width: 120px;">
+<p><strong>Cassandra</strong></p>
+</td>
+<td style="width: 80px;">
+<p>9042</p>
+</td>
+<td style="width: 400px;">
+<p>CQL native transport - default Cassandra client port.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 80px;">
+<p>9142</p>
+</td>
+<td style="width: 400px;">
+<p>CQL native transport over TLS, used in hardened Cassandra setups.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 80px;">
+<p>7199</p>
+</td>
+<td style="width: 400px;">
+<p>JMX - used by nodetool and monitoring. Optional.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 80px;">
+<p>7000</p>
+</td>
+<td style="width: 400px;">
+<p>Inter-node communication between Cassandra nodes. Not needed on a single node.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 80px;">
+<p>7001</p>
+</td>
+<td style="width: 400px;">
+<p>Inter-node communication over TLS. Not needed on a single node.</p>
+</td>
+</tr>
+<tr>
+<td rowspan="3" style="width: 120px;">
+<p><strong>Kafka</strong></p>
+</td>
+<td style="width: 80px;">
+<p>9093</p>
+</td>
+<td style="width: 400px;">
+<p>Kafka broker listener - SASL_SSL in hardened setups.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 80px;">
+<p>9092</p>
+</td>
+<td style="width: 400px;">
+<p>Kafka broker listener - default plaintext port, used by local installations.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 80px;">
+<p>2181</p>
+</td>
+<td style="width: 400px;">
+<p>ZooKeeper client port. Not needed when Kafka runs in KRaft mode.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 120px;">
+<p><strong>PostgreSQL</strong></p>
+</td>
+<td style="width: 80px;">
 <p>5432</p>
 </td>
-<td style="width: 249.891px;">
-<p>PostgreSQL</p>
+<td style="width: 400px;">
+<p>PostgreSQL client connections - Fabric metadata and CommonDB.</p>
 </td>
 </tr>
 </tbody>
 </table>
+
+
+## Related Topics
+
+  - <a href="/articles/99_fabric_infras/03_fabric_api_and_ui_hardening.md">Fabric API and UI Hardening</a>
+  - <a href="/articles/99_fabric_infras/04_cassandra_hardening.md">Cassandra Hardening</a>
+  - <a href="/articles/99_fabric_infras/06_kafka_hardening.md">Kafka Hardening</a>
+  - <a href="/articles/98_installation_and_upgrade/Install_on_Linux/01_Fabric_8.xx_Installation_intro.md">Linux Environment Preparation for Fabric Installation</a>
