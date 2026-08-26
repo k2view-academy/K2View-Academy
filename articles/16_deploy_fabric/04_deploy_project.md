@@ -22,7 +22,7 @@ All script-based methods support **local** and **remote** deployment:
 
 `buildAndDeployArtifacts.sh` orchestrates the full pipeline: build → optionally deploy environment → deploy LU artifacts. It calls `buildArtifacts.sh`, `deploy-environment.sh`, and `deploy-artifacts.sh` internally, stopping if any step fails.
 
-The script is located under `$K2_HOME/fabric/scripts`.
+The script is located under `$FABRIC_HOME/fabric/scripts`.
 
 **Usage:**
 
@@ -32,126 +32,130 @@ The script is located under `$K2_HOME/fabric/scripts`.
 
 **Options:**
 
+The options are passed as command-line arguments. They can also be set as environment variables before running the script, although passing them as arguments is the recommended approach.
+
 <table>
 <thead>
 <tr>
 <th><p><strong>Option</strong></p></th>
+<th><p><strong>Environment Variable</strong></p></th>
 <th><p><strong>Description</strong></p></th>
-<th><p><strong>Mandatory</strong></p></th>
 <th><p><strong>Default</strong></p></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><p>-pd / --project-dir</p></td>
+<td><p>PROJ_DIR</p></td>
 <td><p>Path to the project directory. Required unless <code>-d</code> (deploy-only) is set.</p></td>
-<td><p>Conditional</p></td>
 <td><p></p></td>
 </tr>
 <tr>
 <td><p>-l / --lu-type-name</p></td>
+<td><p>LUTNAME</p></td>
 <td><p>LU name(s) to build and deploy. Accepts a comma-separated list.</p></td>
-<td><p>N</p></td>
 <td><p>All LUs</p></td>
 </tr>
 <tr>
 <td><p>-u / --username</p></td>
+<td><p>USERNAME</p></td>
 <td><p>Fabric username.</p></td>
-<td><p>N</p></td>
 <td><p>admin</p></td>
 </tr>
 <tr>
 <td><p>-p / --password</p></td>
+<td><p>PASSWORD</p></td>
 <td><p>Fabric password.</p></td>
-<td><p>N</p></td>
 <td><p>admin</p></td>
 </tr>
 <tr>
 <td><p>-t / --token</p></td>
+<td><p>TOKEN</p></td>
 <td><p>API token for authentication. Takes precedence over username/password.</p></td>
-<td><p>N</p></td>
 <td><p></p></td>
 </tr>
 <tr>
 <td><p>-host / --host</p></td>
+<td><p>HOST</p></td>
 <td><p>Fabric host (IP address or URL).</p></td>
-<td><p>N</p></td>
 <td><p>localhost</p></td>
 </tr>
 <tr>
 <td><p>-port / --port</p></td>
-<td><p>Fabric port.</p></td>
-<td><p>N</p></td>
-<td><p>5124 (when host is localhost)</p></td>
+<td><p>PORT</p></td>
+<td><p>Fabric port. See the note below the table.</p></td>
+<td><p>5124</p></td>
 </tr>
 <tr>
 <td><p>-r / --remote-deploy</p></td>
+<td><p></p></td>
 <td><p>Enable remote deployment via HTTP API.</p></td>
-<td><p>N</p></td>
 <td><p>false</p></td>
 </tr>
 <tr>
 <td><p>-d / --deploy-only</p></td>
+<td><p>DEPLOYONLY</p></td>
 <td><p>Skip the build step; deploy pre-built artifacts only.</p></td>
-<td><p>N</p></td>
 <td><p>false</p></td>
 </tr>
 <tr>
 <td><p>-sd / --soft-deploy</p></td>
+<td><p>SOFTDEPLOY</p></td>
 <td><p>Soft deploy: skip automatic processes (jobs, parsers, interface listeners, deploy.flow).</p></td>
-<td><p>N</p></td>
 <td><p>false</p></td>
 </tr>
 <tr>
 <td><p>-s / --nosync</p></td>
+<td><p>NOSYNC</p></td>
 <td><p>NoSync mode.</p></td>
-<td><p>N</p></td>
 <td><p>true</p></td>
 </tr>
 <tr>
 <td><p>-ad / --artifact-dir</p></td>
+<td><p>ARTIFACT_DIR</p></td>
 <td><p>Path to the artifacts directory.</p></td>
-<td><p>N</p></td>
 <td><p>&lt;project&gt;/Implementation/LogicalUnits</p></td>
 </tr>
 <tr>
 <td><p>-e / --environment</p></td>
+<td><p>ENVIRONMENT</p></td>
 <td><p>Environment name to activate after deployment.</p></td>
-<td><p>N</p></td>
 <td><p></p></td>
 </tr>
 <tr>
 <td><p>-ef / --environment-file</p></td>
+<td><p>ENVIRONMENT_FILE</p></td>
 <td><p>Path to the environment XML file.</p></td>
-<td><p>N</p></td>
 <td><p>&lt;project&gt;/Implementation/SharedObjects/Environments/Environments.k2fabEnv.xml</p></td>
 </tr>
 <tr>
 <td><p>-de / --deploy-environment</p></td>
+<td><p>DEPLOY_ENVIRONMENT</p></td>
 <td><p>Deploy the environment file without setting it as active.</p></td>
-<td><p>N</p></td>
 <td><p>false</p></td>
 </tr>
 <tr>
 <td><p>-v / --jdk-version</p></td>
+<td><p>JDK_VERSION</p></td>
 <td><p>JDK version for compilation.</p></td>
-<td><p>N</p></td>
 <td><p>21</p></td>
 </tr>
 <tr>
 <td><p>-a / --args</p></td>
+<td><p>ARGS</p></td>
 <td><p>Additional arguments passed to broadway.flow.</p></td>
-<td><p>N</p></td>
 <td><p></p></td>
 </tr>
 <tr>
 <td><p>-h / --help</p></td>
+<td><p></p></td>
 <td><p>Displays usage information.</p></td>
-<td><p>N</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table>
+
+> The port depends on the deploy mode. A local deploy connects to the Fabric JDBC endpoint, using the default port 5124. A remote deploy connects to the Fabric REST API endpoint, whose default port is 3213 — set it explicitly unless it is already part of the host URL.
 
 **Example — build and deploy to a remote server:**
 
@@ -179,7 +183,7 @@ The script is located under `$K2_HOME/fabric/scripts`.
 
 ## Deploy Pre-Built Artifacts
 
-`deploy-artifacts.sh` deploys LU artifacts that have already been built, for example using `buildArtifacts.sh` in a separate CI stage. The script is located under `$K2_HOME/fabric/scripts`.
+`deploy-artifacts.sh` deploys LU artifacts that have already been built, for example using `buildArtifacts.sh` in a separate CI stage. The script is located under `$FABRIC_HOME/fabric/scripts`.
 
 **Usage:**
 
@@ -189,84 +193,88 @@ The script is located under `$K2_HOME/fabric/scripts`.
 
 **Options:**
 
+The options are passed as command-line arguments. They can also be set as environment variables before running the script, although passing them as arguments is the recommended approach.
+
 <table>
 <thead>
 <tr>
 <th><p><strong>Option</strong></p></th>
+<th><p><strong>Environment Variable</strong></p></th>
 <th><p><strong>Description</strong></p></th>
-<th><p><strong>Mandatory</strong></p></th>
 <th><p><strong>Default</strong></p></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><p>-host / --host</p></td>
+<td><p>HOST</p></td>
 <td><p>Fabric host (IP address or URL).</p></td>
-<td><p>N</p></td>
 <td><p>localhost</p></td>
 </tr>
 <tr>
 <td><p>-port / --port</p></td>
-<td><p>Fabric port.</p></td>
-<td><p>N</p></td>
-<td><p>5124 (when host is localhost)</p></td>
+<td><p>PORT</p></td>
+<td><p>Fabric port. See the note below the table.</p></td>
+<td><p>5124</p></td>
 </tr>
 <tr>
 <td><p>-u / --username</p></td>
+<td><p>USERNAME</p></td>
 <td><p>Fabric username.</p></td>
-<td><p>N</p></td>
 <td><p>admin</p></td>
 </tr>
 <tr>
 <td><p>-p / --password</p></td>
+<td><p>PASSWORD</p></td>
 <td><p>Fabric password.</p></td>
-<td><p>N</p></td>
 <td><p>admin</p></td>
 </tr>
 <tr>
 <td><p>-t / --token</p></td>
+<td><p>TOKEN</p></td>
 <td><p>API token for authentication. Takes precedence over username/password.</p></td>
-<td><p>N</p></td>
 <td><p></p></td>
 </tr>
 <tr>
 <td><p>-pd / --project-dir</p></td>
+<td><p>PROJECT_DIR</p></td>
 <td><p>Path to the project directory.</p></td>
-<td><p>N</p></td>
 <td><p></p></td>
 </tr>
 <tr>
 <td><p>-ad / --artifact-dir</p></td>
+<td><p>ARTIFACT_DIR</p></td>
 <td><p>Path to the artifacts directory.</p></td>
-<td><p>N</p></td>
 <td><p>&lt;project&gt;/Implementation/LogicalUnits</p></td>
 </tr>
 <tr>
 <td><p>-r / --remote-deploy</p></td>
+<td><p>REMOTE_DEPLOY</p></td>
 <td><p>Enable remote deployment via HTTP API.</p></td>
-<td><p>N</p></td>
 <td><p>false</p></td>
 </tr>
 <tr>
 <td><p>-sd / --soft-deploy</p></td>
+<td><p>SOFTDEPLOY</p></td>
 <td><p>Soft deploy: skip automatic processes (jobs, parsers, interface listeners, deploy.flow).</p></td>
-<td><p>N</p></td>
 <td><p>false</p></td>
 </tr>
 <tr>
 <td><p>-l / --lu-list</p></td>
+<td><p>LU_LIST</p></td>
 <td><p>LU name(s) to deploy. Accepts a comma-separated list.</p></td>
-<td><p>N</p></td>
 <td><p>All LUs in the artifact directory</p></td>
 </tr>
 <tr>
 <td><p>-h / --help</p></td>
+<td><p></p></td>
 <td><p>Displays usage information.</p></td>
-<td><p>N</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table>
+
+> The port depends on the deploy mode. A local deploy connects to the Fabric JDBC endpoint, using the default port 5124. A remote deploy connects to the Fabric REST API endpoint, whose default port is 3213 — set it explicitly unless it is already part of the host URL.
 
 The script enforces a fixed deployment order: `k2_ref` is deployed first, all other LUs follow, and `k2_ws` (Web Services) is deployed last.
 
@@ -274,10 +282,11 @@ The script enforces a fixed deployment order: `k2_ref` is deployed first, all ot
 
 ~~~bash
 ./deploy-artifacts.sh \
-  -ad /artifacts/MyProject \
-  -host 10.0.0.5 \
-  -t $API_TOKEN \
-  -r
+  -ad $FABRIC_HOME/artifacts/MyProject \
+  --remote-deploy \
+  --host 10.0.0.5 \
+  --port 3124 \
+  -t $API_TOKEN
 ~~~
 
 ---

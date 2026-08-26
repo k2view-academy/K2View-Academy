@@ -1,12 +1,10 @@
-# Environment's Offline Deployment
+# Environment's Deployment
 
 An environment's offline deployment is used for deploying environments to a server not from Studio. 
 
-<studio>
+## Deployment using deploy-environment.sh
 
-## Offline Deployment using deploy-environment.sh
-
-Run `deploy-environment.sh` to deploy the environment configuration from a build server or CI/CD pipeline. The script is located under `$K2_HOME/fabric/scripts` and supports both local and remote deployment:
+Run `deploy-environment.sh` to deploy the environment configuration from a build server or CI/CD pipeline. The script is located under `$FABRIC_HOME/fabric/scripts` and supports both local and remote deployment:
 
 - **Local deploy** — connects to a running Fabric instance on the same machine via the Fabric CLI.
 - **Remote deploy** — uses the Fabric HTTP API (`-r` flag). Does not require a local Fabric installation.
@@ -19,78 +17,82 @@ Run `deploy-environment.sh` to deploy the environment configuration from a build
 
 **Options:**
 
+The options are passed as command-line arguments. They can also be set as environment variables before running the script, although passing them as arguments is the recommended approach.
+
 <table>
 <thead>
 <tr>
 <th><p><strong>Option</strong></p></th>
+<th><p><strong>Environment Variable</strong></p></th>
 <th><p><strong>Description</strong></p></th>
-<th><p><strong>Mandatory</strong></p></th>
 <th><p><strong>Default</strong></p></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><p>-host / --host</p></td>
+<td><p>HOST</p></td>
 <td><p>Fabric host (IP address or URL).</p></td>
-<td><p>N</p></td>
 <td><p>localhost</p></td>
 </tr>
 <tr>
 <td><p>-port / --port</p></td>
-<td><p>Fabric port.</p></td>
-<td><p>N</p></td>
-<td><p>5124 (when host is localhost)</p></td>
+<td><p>PORT</p></td>
+<td><p>Fabric port. See the note below the table.</p></td>
+<td><p>5124</p></td>
 </tr>
 <tr>
 <td><p>-u / --username</p></td>
+<td><p>USERNAME</p></td>
 <td><p>Fabric username.</p></td>
-<td><p>N</p></td>
 <td><p>admin</p></td>
 </tr>
 <tr>
 <td><p>-p / --password</p></td>
+<td><p>PASSWORD</p></td>
 <td><p>Fabric password.</p></td>
-<td><p>N</p></td>
 <td><p>admin</p></td>
 </tr>
 <tr>
 <td><p>-t / --token</p></td>
+<td><p>TOKEN</p></td>
 <td><p>API token for authentication. Takes precedence over username/password.</p></td>
-<td><p>N</p></td>
 <td><p></p></td>
 </tr>
 <tr>
 <td><p>-pd / --project-dir</p></td>
+<td><p>PROJECT_DIR</p></td>
 <td><p>Path to the project directory. Used to locate the default environment file.</p></td>
-<td><p>N</p></td>
 <td><p></p></td>
 </tr>
 <tr>
 <td><p>-ef / --environment-file</p></td>
+<td><p>ENVIRONMENT_FILE</p></td>
 <td><p>Path to the environment XML file.</p></td>
-<td><p>N</p></td>
 <td><p>&lt;project&gt;/Implementation/SharedObjects/Environments/Environments.k2fabEnv.xml</p></td>
 </tr>
 <tr>
 <td><p>-e / --environment</p></td>
+<td><p>ENVIRONMENT</p></td>
 <td><p>Environment name to set as active after deployment.</p></td>
-<td><p>N</p></td>
 <td><p></p></td>
 </tr>
 <tr>
 <td><p>-r / --remote-deploy</p></td>
+<td><p>REMOTE_DEPLOY</p></td>
 <td><p>Enable remote deployment via HTTP API.</p></td>
-<td><p>N</p></td>
 <td><p>false</p></td>
 </tr>
 <tr>
 <td><p>-h / --help</p></td>
+<td><p></p></td>
 <td><p>Displays usage information.</p></td>
-<td><p>N</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table>
+
+> The port depends on the deploy mode. A local deploy connects to the Fabric JDBC endpoint, using the default port 5124. A remote deploy connects to the Fabric REST API endpoint, whose default port is 3213 — set it explicitly unless it is already part of the host URL.
 
 In local mode, the script runs two operations: deploys the environment file, then sets the active environment (if `-e` is provided).
 
@@ -105,7 +107,7 @@ In local mode, the script runs two operations: deploys the environment file, the
   -e Production
 ~~~
 
-## Offline Deployment using the Fabric Console
+## Deployment using the Fabric Console
 
 Perform the following actions:
 
@@ -125,11 +127,8 @@ Fabric encrypts the passwords in the file (if they are not already encrypted) an
 
 Note that deploying an XML file overrides all existing environments - except for *_dev* - which is the default environment. If the environment exists in Fabric, but not in the deployed XML file, it is removed from Fabric.
 
-</studio>
 
-
-
-## Offline Deployment using API calls
+## Deployment using API calls
 
 ### Request URL Format
 
@@ -189,10 +188,3 @@ Body parameters, along with the deployment files, to be sent with ContentType he
 
 
 [![Previous](/articles/images/Previous.png)](03_deploy_env_from_Fabric_Studio.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_set_and_list_commands.md)
-
-
-
-</studio>
-
-
-
