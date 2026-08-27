@@ -45,6 +45,15 @@ TDM 10 delivers several new capabilities that together make up the simplified ta
 
 **Task Groups** — Tasks are organized into logical groups by domain, team, or use case, with collapsible group navigation that makes it fast to find the right task without sifting through a flat list.
 
+**TDM Agent - AI-Assisted Task Search**
+
+The **TDM Agent** is available in the **TDM App**. It makes it easier to find and prepare TDM tasks using natural language. Instead of browsing or filtering through the task list and then manually provision them, testers can simply describe what they want to do. The TDM Agent identifies the most appropriate task, opens it, and **pre-fills its editable execution attributes based on the user's request**. When needed and allowed, it also adds new attributes. The tester can then review the suggested values, make any necessary changes, and execute the task.
+
+Click [here](14_tdm_agent.md) for more information about the TDM agent.
+
+**Role-Based Permission Control**
+Only authorized users and Fabric roles can create or execute specific tasks. Every team sees only what's relevant to them.
+
 **Execution Dashboard** — A unified operations center gives each user a complete view of their task activity — history, in-progress runs, and scheduled executions — with the **ability to rerun any previous execution directly from the UI**.
 
 ### How Simplified Tasks Work

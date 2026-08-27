@@ -126,6 +126,16 @@ Click **Search** to apply the selected filters. Click **✕** in the search bar 
 
 The search returns matching tasks across all task groups.
 
+
+
+## AI Helper – AI-Assisted Task Search
+
+The **TDM Agent** is available in the **TDM App**. It makes it easier to find and prepare TDM tasks using natural language. Instead of browsing or filtering through the task list and then manually provision them, testers can simply describe what they want to do. The TDM Agent identifies the most appropriate task, opens it, and **pre-fills its editable execution attributes based on the user's request**. When needed and allowed, it also adds new attributes. The tester can then review the suggested values, make any necessary changes, and execute the task.
+
+Click [here](14_tdm_agent.md) for more information about the TDM agent.
+
+
+
 ## Creating a New Task
 
 Click **New task** in the top-right corner of the window to open the task creation flow. See [Task Components](14_task_components.md) for details on creating and configuring tasks.
