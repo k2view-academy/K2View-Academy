@@ -206,6 +206,11 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 - The TDM DB user configured in the TDM interface must have permission to create, edit, and delete tables. It must also have permission to insert, update, and select records in the TDM tables.
 - After the TDM DB is created, set the **CREATE_TDMDB** Global in the TDM LU back to **false**.
 
+## TDM Agent Installation
+
+The **TDM Agent** is an AI-assisted task search capability available in the **TDM App**. It makes it easier to find and prepare TDM tasks using natural language.
+
+Click [here](/articles/TDM/tdm_gui/14_tdm_agent.md#installation) for installation steps.
 
 ## Git Best Practices
 
