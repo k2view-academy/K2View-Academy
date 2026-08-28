@@ -400,7 +400,11 @@
 						{
 							"display name": "Fabric Web Studio",
 							"value": "98_installation_and_upgrade/Upgrade_Web_Studio"
-						},						
+						},		
+						{
+							"display name": "Fabric and Studio with K2cloud",
+							"value": "98_installation_and_upgrade/Upgrade_K2cloud"
+						},
 						{
 							"display name": "Fabric on Linux",
 							"value": "98_installation_and_upgrade/Upgrade_Fabric"
