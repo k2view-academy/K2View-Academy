@@ -40,7 +40,7 @@ For each available release, K2cloud provides release information including:
 
 For customer-managed environments, the required images must be available in the customer's container registry at the destination locations configured for the Site. For instructions, see [Preparing Images for Customer-Managed K2cloud](/articles/98_installation_and_upgrade/Upgrade_K2cloud/Preparing_Images_For_Customer_Managed_K2cloud.md).
 
-For K2cloud SaaS environments, K2view manages the container registry and image distribution.
+> For K2cloud SaaS environments, K2view manages the container registry and image distribution.
 
 ## Viewing Available Fabric Releases
 
@@ -65,7 +65,7 @@ The release details include:
 
 For customer-managed K2cloud, the required Fabric and Fabric-Studio images must be available in the customer container registry at the configured destinations before the release is used. See [Preparing Images for Customer-Managed K2cloud](/articles/98_installation_and_upgrade/Upgrade_K2cloud/Preparing_Images_For_Customer_Managed_K2cloud.md).
 
-For K2cloud SaaS, K2view manages the registry configuration and image distribution.
+> For K2cloud SaaS, K2view manages the registry configuration and image distribution.
 
 ## Project-Level Version Selection
 
@@ -130,7 +130,7 @@ If the required Fabric release does not appear, open a support ticket and provid
 
 For customer-managed K2cloud, also open a support ticket if the **Destination URL** shown for the Site does not match the customer's registry configuration. Include the expected customer registry location.
 
-For K2cloud SaaS, registry configuration and image distribution are managed by K2view. SaaS customers do not need to request registry-location changes or notify K2view after an image becomes available.
+> For K2cloud SaaS, registry configuration and image distribution are managed by K2view. SaaS customers do not need to request registry-location changes or notify K2view after an image becomes available.
 
 ## Next Step
 
