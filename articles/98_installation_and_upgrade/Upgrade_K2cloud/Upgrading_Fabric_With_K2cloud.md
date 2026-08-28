@@ -234,7 +234,7 @@ These naming conventions represent:
 - Replica count
 - Runtime topology
 
-For a list of available Space Profiles, see: (/articles/98_installation_and_upgrade/K2cloud_Space_Profiles/profiles.md)
+For a list of available [Space Profiles](/articles/98_installation_and_upgrade/K2cloud_Space_Profiles/profiles.md).
 
 
 
