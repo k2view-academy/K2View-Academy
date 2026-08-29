@@ -344,6 +344,17 @@
 			]
 		},
 		{
+			"group display name": "K2cloud",
+			"group icon": "images/catalog-icon.png",
+			"visible in main": false,
+			"topics": [
+				{
+					"display name": "Overview",
+					"value": "80_k2cloud/01-overview"
+				}
+			]
+		},
+		{
 			"group display name": "Installation, Upgrades & Runbooks",
 			"group icon": "images/deployment-icon.png",
 			"visible in main": true,
