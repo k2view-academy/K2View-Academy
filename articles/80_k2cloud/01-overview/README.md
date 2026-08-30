@@ -9,5 +9,4 @@ K2cloud provides a centralized operational model for deploying, managing, and go
 <li><a href="/articles/80_k2cloud/01-overview/80_k2cloud_overview_deployment_models.md">Deployment Models</a></li>
 <li><a href="/articles/80_k2cloud/01-overview/80_k2cloud_overview_k2cloud_saas_vs_self_hosted.md">K2cloud SaaS vs K2cloud Self-Hosted</a></li>
 <li><a href="/articles/80_k2cloud/01-overview/80_k2cloud_roles_and_personas.md">Roles and Personas</a></li>
-<li><a href="/articles/80_k2cloud/01-overview/80_k2cloud_overview_shared_responsibility_model.md">Shared Responsibility Model</a></li>
 </ul>
