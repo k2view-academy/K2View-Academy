@@ -153,7 +153,7 @@ Air-gapped deployments should therefore not be treated simply as K2cloud Self-Ho
 ## Related Documentation
 
 - [Deployment Models](/articles/80_k2cloud/01-overview/80_k2cloud_overview_deployment_models.md)
-- [Shared Responsibility Model](/articles/80_k2cloud/01-overview/80_k2cloud_overview_shared_responsibility_model.md)
+- [Shared Responsibility Model](/articles/80_k2cloud/09-common-operations/80_k2cloud_common_operations_shared_responsibility_model.md)
 - [K2cloud SaaS Overview](/articles/80_k2cloud/10-k2cloud-saas/80_k2cloud_saas_overview.md)
 - [K2cloud Self-Hosted Overview](/articles/80_k2cloud/11-k2cloud-self-hosted/80_k2cloud_self_hosted_overview.md)
 - [Air-Gapped Overview](/articles/80_k2cloud/12-air-gapped/80_k2cloud_air_gapped_overview.md)
