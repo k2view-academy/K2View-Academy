@@ -73,6 +73,7 @@ The following actions are available from the monitor window:
 
 - **Stop** (■ icon) — stops the execution of running or pending processes and sets the execution status to *stopped*.
 - **Resume** (▶ icon) — resumes a stopped execution.
+- **Rerun** (![Rerun icon](images/task_rerun_icon.png)icon) - rerun the failed processes and tables or table partitions in a table-level task execution.
 - **Settings** (⚙ icon) — opens execution settings.
 - **Show/Hide** — shows or hides columns in the monitor table.
 - **Export** — exports the monitor table data.
