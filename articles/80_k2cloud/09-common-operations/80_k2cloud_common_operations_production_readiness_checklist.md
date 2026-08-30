@@ -41,7 +41,7 @@ Validate:
 - the Space can be accessed as expected,
 - and the correct environment has been deployed and activated.
 
-Confirm:
+:
 
 - the appropriate environment designation, such as `prod`, is active,
 - required Project content has been deployed,
@@ -49,7 +49,7 @@ Confirm:
 
 ## Storage and Lifecycle Readiness
 
-Confirm whether the Space Profile uses a `managed` or `noSdb` persistence model and understand the lifecycle implications.
+Confirm the persistence model used by the Space Profile and understand its lifecycle implications. K2cloud SaaS uses managed persistence; K2cloud Self-Hosted can use managed or noSdb, depending on the Space Profile and architecture.
 
 ### `managed`
 
