@@ -96,7 +96,8 @@ The primary responsibility boundary is:
 </tbody>
 </table>
 
-For the broader K2cloud responsibility model, see [Shared Responsibility Model](/articles/80_k2cloud/01-overview/80_k2cloud_overview_shared_responsibility_model.md).
+For the broader K2cloud responsibility model, see [Shared Responsibility Model](/articles/80_k2cloud/09-common-operations/80_k2cloud_common_operations_shared_responsibility_model.md).
+
 
 ## Infrastructure Operations
 
@@ -223,7 +224,7 @@ This boundary allows customers to operate their K2view applications while K2view
 ## Related Documentation
 
 - [K2cloud SaaS Overview](/articles/80_k2cloud/10-k2cloud-saas/80_k2cloud_saas_overview.md)
-- [Shared Responsibility Model](/articles/80_k2cloud/01-overview/80_k2cloud_shared_responsibility_model.md)
+- [Shared Responsibility Model](/articles/80_k2cloud/09-common-operations/80_k2cloud_common_operations_shared_responsibility_model.md)
 - [SaaS Runtime Operations](/articles/80_k2cloud/10-k2cloud-saas/80_k2cloud_saas_runtime_operations.md)
 - [SaaS Customer Responsibilities](/articles/80_k2cloud/10-k2cloud-saas/80_k2cloud_saas_customer_responsibilities.md)
 - [SaaS Observability and Support](/articles/80_k2cloud/10-k2cloud-saas/80_k2cloud_saas_observability_and_support.md)
