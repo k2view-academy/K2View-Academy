@@ -122,4 +122,4 @@ Detailed identity, federation, role mapping, and Space access configuration are 
 ## Related Documentation
 
 - [Operational Model Overview](/articles/80_k2cloud/01-overview/80_k2cloud_operational_model_overview.md)
-- [Shared Responsibility Model](/articles/80_k2cloud/01-overview/80_k2cloud_overview_shared_responsibility_model.md)
+- [Shared Responsibility Model](/articles/80_k2cloud/09-common-operations/80_k2cloud_common_operations_shared_responsibility_model.md)
