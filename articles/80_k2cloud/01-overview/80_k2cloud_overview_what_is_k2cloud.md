@@ -75,7 +75,7 @@ For more information, see:
 
 - [K2cloud SaaS vs K2cloud Self-Hosted](/articles/80_k2cloud/01-overview/80_k2cloud_overview_k2cloud_saas_vs_self_hosted.md)
 - [Deployment Models](/articles/80_k2cloud/01-overview/80_k2cloud_overview_deployment_models.md)
-- [Shared Responsibility Model](/articles/80_k2cloud/01-overview/80_k2cloud_overview_shared_responsibility_model.md)
+- [Shared Responsibility Model](/articles/80_k2cloud/09-common-operations/80_k2cloud_common_operations_shared_responsibility_model.md)
 
 ## Related Documentation
 
