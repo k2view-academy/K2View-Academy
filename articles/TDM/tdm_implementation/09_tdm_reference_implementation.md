@@ -107,14 +107,16 @@ Import the TDM_TableLevel LU and deploy it.
 
   - **count_flow** - Populated with the name of a customized flow that returns the table record count. The flow must expose a single external output parameter named **tableCount**.
 
+Starting with **TDM V9.4**, the `schema_name` and `target_schema_name` fields can be populated using either of the following options:
 
-Note that starting with **TDM V9.4 onwards**, the schema_name and target_schema_name fields can be populated with either of the following options:
+- **Schema name** – Specify the schema name directly.
+- **Global name** – Enclose the Global name with `@` signs to indicate that the schema name should be retrieved from the Global's value. For example: `@CUSTOMER_SCHEMA_NAME@`.
 
-- Schema name
-- Global name. Add a `@` sign before and after the Global name to indicate that the schema name should be taken from the Global's value. For example: `@CUSTOMER_SCHEMA_NAME@`. Using a Global to populate the schema is useful when different environments have different schema names. 
+Using a Global to populate the schema name is useful when different environments use different schema names.
 
+**Note:** If the table is partitioned and therefore has a record in the **TableLevelDefinitions** MTable, populate the `TableLevelDefinitions.schema_name` field with the Global name as well, using the same syntax as in the **RefList** MTable (for example, `@CUSTOMER_SCHEMA_NAME@`).
 
- Click [here](/articles/09_translations/06_mtables_overview.md) for more information about MTable objects. 
+Click [here](/articles/09_translations/06_mtables_overview.md) for more information about MTable objects. 
 
 ### Step 3: Catalog
 
