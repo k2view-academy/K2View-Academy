@@ -25,9 +25,9 @@ Using the K2cloud Orchestrator, authorized users can:
 
 K2cloud does not replace Fabric. **Fabric is the runtime platform. K2cloud provides the orchestration and lifecycle management used to deploy and operate Fabric environments.**
 
-## Core K2cloud Objects
+## Core K2cloud Components
 
-K2cloud uses a small set of objects to define what is deployed and where it runs.
+K2cloud uses a small set of components to define what is deployed and where it runs.
 
 ### Project
 
