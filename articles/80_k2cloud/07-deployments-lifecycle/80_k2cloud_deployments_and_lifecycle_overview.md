@@ -70,8 +70,6 @@ Before deploying Project content, deploy the appropriate environment definition 
 
 The operator selects the Git tag containing the version of the environment definition to deploy.
 
-After the environment definition has been deployed, the appropriate environment is selected and **activated in Fabric Admin**.
-
 After the environment definition has been deployed, the environment is selected and **activated in Fabric Admin**.
 
 This establishes the runtime environment configuration that Fabric will use.
