@@ -206,4 +206,4 @@ K2cloud provides the application-aware orchestration layer for K2view Spaces, wh
 - [Sites and Space Profiles in Self-Hosted Environments](/articles/80_k2cloud/11-k2cloud-self-hosted/80_k2cloud_self_hosted_sites_and_space_profiles.md)
 - [Self-Hosted Runtime Operations](/articles/80_k2cloud/11-k2cloud-self-hosted/80_k2cloud_self_hosted_runtime_operations.md)
 - [Self-Hosted Observability and Support](/articles/80_k2cloud/11-k2cloud-self-hosted/80_k2cloud_self_hosted_observability_and_support.md)
-- [Shared Responsibility Model](/articles/80_k2cloud/01-overview/80_k2cloud_overview_shared_responsibility_model.md)
+- [Shared Responsibility Model](/articles/80_k2cloud/09-common-operations/80_k2cloud_common_operations_shared_responsibility_model.md)
