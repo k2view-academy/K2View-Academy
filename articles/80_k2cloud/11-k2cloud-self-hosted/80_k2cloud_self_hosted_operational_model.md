@@ -197,4 +197,4 @@ This distinguishes K2cloud Self-Hosted from a Fabric air-gapped deployment, wher
 - [Self-Hosted Runtime Operations](/articles/80_k2cloud/11-k2cloud-self-hosted/80_k2cloud_self_hosted_runtime_operations.md)
 - [Self-Hosted Customer Responsibilities](/articles/80_k2cloud/11-k2cloud-self-hosted/80_k2cloud_self_hosted_customer_responsibilities.md)
 - [Self-Hosted Observability and Support](/articles/80_k2cloud/11-k2cloud-self-hosted/80_k2cloud_self_hosted_observability_and_support.md)
-- [Shared Responsibility Model](/articles/80_k2cloud/01-overview/80_k2cloud_overview_shared_responsibility_model.md)
+- [Shared Responsibility Model](/articles/80_k2cloud/09-common-operations/80_k2cloud_common_operations_shared_responsibility_model.md)
