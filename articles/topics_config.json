@@ -343,7 +343,69 @@
 				}
 			]
 		},
-
+		{
+			"group display name": "K2cloud",
+			"group icon": "images/catalog-icon.png",
+			"visible in main": false,
+			"topics": [
+				{
+					"display name": "Overview",
+					"value": "80_k2cloud/01-overview"
+				},
+				{
+					"display name": "Getting Started",
+					"value": "80_k2cloud/02-getting-started"
+				},
+				{
+					"display name": "Projects",
+					"value": "80_k2cloud/03-projects"
+				},
+				{
+					"display name": "Space Profiles",
+					"value": "80_k2cloud/04-space-profiles"
+				},
+				{
+					"display name": "Sites",
+					"value": "80_k2cloud/05-sites"
+				},
+				{
+					"display name": "Spaces",
+					"value": "80_k2cloud/06-spaces"
+				},
+				{
+					"display name": "Deployments and Lifecycle",
+					"value": "80_k2cloud/07-deployments-lifecycle"
+				},
+				{
+					"display name": "Identity and Access",
+					"value": "80_k2cloud/08-identity-and-access"
+				},
+				{
+					"display name": "Common Operations",
+					"value": "80_k2cloud/09-common-operations"
+				},
+				{
+					"display name": "K2cloud SaaS",
+					"value": "80_k2cloud/10-k2cloud-saas"
+				},
+				{
+					"display name": "Self-Hosted",
+					"value": "80_k2cloud/11-k2cloud-self-hosted"
+				},
+				{
+					"display name": "Air-Gapped",
+					"value": "80_k2cloud/12-air-gapped"
+				},
+				{
+					"display name": "Troubleshooting",
+					"value": "80_k2cloud/13-troubleshooting"
+				},
+				{
+					"display name": "Reference",
+					"value": "80_k2cloud/14-reference"
+				}
+			]
+		},
 		{
 			"group display name": "Installation, Upgrades & Runbooks",
 			"group icon": "images/deployment-icon.png",
