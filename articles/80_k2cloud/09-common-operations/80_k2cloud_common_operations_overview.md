@@ -65,7 +65,7 @@ K2cloud environments typically involve several operational responsibilities.
 
 The exact division of responsibility depends on whether the environment uses K2cloud SaaS or K2cloud Self-Hosted.
 
-For the detailed responsibility model, see [Shared Responsibility Model](/articles/80_k2cloud/01-overview/80_k2cloud_overview_ shared_responsibility_model.md).
+For the detailed responsibility model, see [Shared Responsibility Model](/articles/80_k2cloud/01-overview/80_k2cloud_overview_shared_responsibility_model.md).
 
 ## Common Operational Activities
 
