@@ -236,8 +236,14 @@ The following table lists the TDM tables and their description.
 <td valign="top" width="400pxl"><a href="/articles/TDM/tdm_configuration/02_tdmdb_general_parameters.md">TDM general parameters.</a></td>
 <td valign="top" width="300pxl">General TDM Parameters</td>
 </tr>
+<tr>
+    <td valign="top" width="200pxl"><h4>tdm_agent_info</h4></td> 
+    <td valign="top" width="400pxl"><a href="/articles/TDM/tdm_gui/14_tdm_agent.md">TDM Agent</a> table. Contains information about TDM tasks and is used by the TDM Agent to identify the relevant task based on the user's prompt. A separate record is created for each TDM task. </td>
+<td valign="top" width="300pxl">TDM Agent - AI Helper</td>    
+</tr>
 </tbody>
 </table>
+
 
 
 
