@@ -7,7 +7,7 @@ Building a Fabric project compiles the Java sources of each Logical Unit and pac
 
 These artifacts are the input for the deployment phase. They can be built and deployed in one step, or built once and deployed to multiple environments separately.
 
-> CI/CD pipelines should build artifacts on a dedicated build server using a Docker image that contains Fabric. Fabric itself does not need to be running to build artifacts.
+> Building artifacts requires the Fabric package to be available, either installed on a server or provided as a Docker image. Fabric itself does not need to be running.
 
 <studio>
 
@@ -28,7 +28,7 @@ To build artifacts in the Fabric Studio:
 
 ## Build on a Server using buildArtifacts.sh
 
-Run `buildArtifacts.sh` on a server to compile and package the project artifacts. The script is located under `$K2_HOME/fabric/scripts`.
+Run `buildArtifacts.sh` on a server to compile and package the project artifacts. The script is located under `$FABRIC_HOME/fabric/scripts`.
 
 **Usage:**
 
@@ -38,50 +38,52 @@ Run `buildArtifacts.sh` on a server to compile and package the project artifacts
 
 **Options:**
 
+The options are passed as command-line arguments. They can also be set as environment variables before running the script, although passing them as arguments is the recommended approach.
+
 <table>
 <thead>
 <tr>
 <th><p><strong>Option</strong></p></th>
+<th><p><strong>Environment Variable</strong></p></th>
 <th><p><strong>Description</strong></p></th>
-<th><p><strong>Mandatory</strong></p></th>
 <th><p><strong>Default</strong></p></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><p>-pd / --project-dir</p></td>
-<td><p>Path to the project directory. The folder name must match the .k2proj file name.</p></td>
-<td><p>Y</p></td>
+<td><p>PROJ_DIR</p></td>
+<td><p>Path to the project directory. The folder name must match the .k2proj file name. Mandatory.</p></td>
 <td><p></p></td>
 </tr>
 <tr>
 <td><p>-l / --lu-type-name</p></td>
-<td><p>LU name(s) to build. Accepts a comma-separated list (e.g., <code>-l Customer,Orders</code>).</p></td>
-<td><p>N</p></td>
+<td><p>LUTNAME</p></td>
+<td><p>LU name(s) to build. Accepts a comma-separated list (e.g., -l Customer,Orders).</p></td>
 <td><p>All LUs in the project</p></td>
 </tr>
 <tr>
 <td><p>-d / --output-direction</p></td>
+<td><p>OUTDIR</p></td>
 <td><p>Output directory for generated artifacts.</p></td>
-<td><p>N</p></td>
 <td><p>&lt;project&gt;/Implementation/LogicalUnits</p></td>
 </tr>
 <tr>
 <td><p>-pn / --project-name</p></td>
+<td><p>PROJ_NAME</p></td>
 <td><p>Project name override.</p></td>
-<td><p>N</p></td>
 <td><p>Project folder name</p></td>
 </tr>
 <tr>
 <td><p>-v / --jdk-version</p></td>
+<td><p>JDK_VERSION</p></td>
 <td><p>JDK version for compilation.</p></td>
-<td><p>N</p></td>
 <td><p>21</p></td>
 </tr>
 <tr>
 <td><p>-h / --help</p></td>
+<td><p></p></td>
 <td><p>Displays usage information.</p></td>
-<td><p>N</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
