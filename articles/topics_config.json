@@ -389,11 +389,11 @@
 					"value": "80_k2cloud/10-k2cloud-saas"
 				},
 				{
-					"display name": "Self-Hosted",
+					"display name": "K2cloud Self-Hosted",
 					"value": "80_k2cloud/11-k2cloud-self-hosted"
 				},
 				{
-					"display name": "Air-Gapped",
+					"display name": "Non-K2cloud Air-Gapped",
 					"value": "80_k2cloud/12-air-gapped"
 				},
 				{
