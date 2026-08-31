@@ -440,7 +440,7 @@
 					"display name": "Installation",
 					"sub-topics": [
 						{
-							"display name": "Fabric Web Studio",
+							"display name": "Fabric Web Studio on Docker/Podman",
 							"value": "98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1"
 						},
 						{
@@ -461,7 +461,7 @@
 					"display name": "Upgrade",
 					"sub-topics": [
 						{
-							"display name": "Fabric Web Studio",
+							"display name": "Fabric Web Studio on Docker/Podman",
 							"value": "98_installation_and_upgrade/Upgrade_Web_Studio"
 						},		
 						{
@@ -473,7 +473,7 @@
 							"value": "98_installation_and_upgrade/Upgrade_Fabric"
 						},
 						{
-							"display name": "Fabric on Kubernetes",
+							"display name": "Fabric on Self-hosted Kubernetes",
 							"value": "98_installation_and_upgrade/Upgrade"
 						},
 						{
