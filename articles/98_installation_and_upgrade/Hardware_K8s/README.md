@@ -3,7 +3,12 @@
 <ul>
   <li>
     <a href="/articles/98_installation_and_upgrade/Hardware_K8s/04_k8s_req.md">
-      Cloud Self-hosted Kubernetes Installation System Requirements
+      K2cloud Self-hosted Kubernetes Installation System Requirements
+    </a>
+  </li>
+  <li>
+    <a href="/articles/98_installation_and_upgrade/Hardware_K8s/05_k2cloud_space_profiles.md">
+      K2cloud Space Profiles
     </a>
   </li>
 </ul>
