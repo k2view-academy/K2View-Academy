@@ -8,7 +8,7 @@
   </li>
   <li>
     <a href="/articles/98_installation_and_upgrade/Hardware_K8s/05_k2cloud_space_profiles.md">
-      K2cloud Space Profile Naming
+      K2cloud Space Profiles
     </a>
   </li>
 </ul>
