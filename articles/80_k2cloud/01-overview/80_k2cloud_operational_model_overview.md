@@ -1,4 +1,4 @@
-# Operational Model Overview
+# Model Overview
 
 ## Overview
 
