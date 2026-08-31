@@ -54,7 +54,7 @@ The authoritative Space Profile documentation provides:
 - persistence options,
 - and guidance for selecting a profile.
 
-See [K2cloud Versionless Space Profiles](/articles/98_installation_and_upgrade/K2cloud_Space_Profiles/README.md).
+See [K2cloud Versionless Space Profiles](/articles/98_installation_and_upgrade/Hardware_K8s/05_k2cloud_space_profiles.md).
 
 ## Profiles and Fabric Upgrades
 
