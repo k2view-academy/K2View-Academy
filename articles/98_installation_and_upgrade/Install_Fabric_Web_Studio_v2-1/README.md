@@ -4,8 +4,8 @@ K2view Fabric Web Studio on Docker Compose or Podman, version 2.1, introduces ex
 
 <ul>      
 <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/About.md">About</a></li>
-<li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md">Installing Fabric Web Studio with Docker Compose</a></li>
-<li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation-podman.md">Installing Fabric Web Studio with Podman</a></li>
+<li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md">Installing Fabric Web Studio on Docker Compose</a></li>
+<li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation-podman.md">Installing Fabric Web Studio on Podman</a></li>
 <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Operating.md">Operating</a></li>
 <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Troubleshooting.md">Troubleshooting</a></li>
 <li><a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Docker-Compose.md">Docker and Docker Compose Installation</a></li>
