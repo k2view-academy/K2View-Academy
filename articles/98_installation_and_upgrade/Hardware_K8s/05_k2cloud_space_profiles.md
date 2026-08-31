@@ -1,4 +1,4 @@
-# K2cloud Space Profile Naming Guide
+# K2cloud Space Profile Naming 
 
 This guide explains how to read the names of K2cloud’s **versionless** Space Profiles. These profiles standardize sizing across environments and are available out-of-the-box (OOTB).
 
