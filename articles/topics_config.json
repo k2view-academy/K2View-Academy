@@ -440,15 +440,15 @@
 					"display name": "Installation",
 					"sub-topics": [
 						{
-							"display name": "Web Studio on Docker/Podman",
+							"display name": "Web Studio - Docker/Podman",
 							"value": "98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1"
 						},
 						{
-							"display name": "Fabric on Linux",
+							"display name": "Fabric - Linux",
 							"value": "98_installation_and_upgrade/Install_on_Linux"
 						},
 						{
-							"display name": "Fabric on Kubernetes",
+							"display name": "Fabric - Self-hosted Kubernetes",
 							"value": "98_installation_and_upgrade/Install_on_Kubernetes"
 						},
 						{
@@ -461,19 +461,19 @@
 					"display name": "Upgrade",
 					"sub-topics": [
 						{
-							"display name": "Web Studio on Docker/Podman",
+							"display name": "Web Studio - Docker/Podman",
 							"value": "98_installation_and_upgrade/Upgrade_Web_Studio"
 						},		
 						{
-							"display name": "Fabric and Studio with K2cloud",
-							"value": "98_installation_and_upgrade/Upgrade_K2cloud"
-						},
-						{
-							"display name": "Fabric on Linux",
+							"display name": "Fabric - Linux",
 							"value": "98_installation_and_upgrade/Upgrade_Fabric"
 						},
 						{
-							"display name": "Fabric on Self-hosted Kubernetes",
+							"display name": "Fabric/Studio - K2cloud",
+							"value": "98_installation_and_upgrade/Upgrade_K2cloud"
+						},
+						{
+							"display name": "Fabric/Studio - Air-Gapped Kubernetes",
 							"value": "98_installation_and_upgrade/Upgrade"
 						},
 						{
