@@ -71,13 +71,13 @@ The process table in the window can be **grouped by interface** using the **Togg
 
 The following actions are available from the monitor window:
 
-- **Stop** (■ icon) — stops the execution of running or pending processes and sets the execution status to *stopped*.
-- **Resume** (▶ icon) — resumes a stopped execution.
-- **Rerun** (![Rerun icon](images/task_rerun_icon.png)icon) - rerun the failed processes and tables or table partitions in a table-level task execution.
-- **Settings** (⚙ icon) — opens execution settings.
-- **Show/Hide** — shows or hides columns in the monitor table.
-- **Export** — exports the monitor table data.
-- **Download report** — downloads the full execution report.
+- **Stop** (■ icon) — Stops the execution of running or pending processes and sets the execution status to *stopped*.
+- **Resume** (▶ icon) — Resumes a stopped execution. TDM 10.0.1 adds support for resuming stopped executions for table-level tasks as well.
+- **Rerun** (![Rerun icon](images/task_rerun_icon.png)icon) — TDM 10.0.1 adds support for rerunning failed tables and/or table partitions in table-level tasks, enabling targeted recovery from partial execution failures without rerunning the entire task. Note that the rerun operation does **not** rerun failed pre- or post-execution activities.
+- **Settings** (⚙ icon) — Opens execution settings.
+- **Show/Hide** — Shows or hides columns in the monitor table.
+- **Export** — Exports the monitor table data.
+- **Download report** — Downloads the full execution report.
 
 ## Open Batch Monitor
 
