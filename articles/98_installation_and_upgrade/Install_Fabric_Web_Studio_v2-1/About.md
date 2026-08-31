@@ -1,4 +1,4 @@
-# About K2view Fabric Web Studio for Docker Compose or Podman, version 2.1
+# About K2view Fabric Web Studio on Docker Compose or Podman, version 2.1
 
 ## Table of Contents
 
