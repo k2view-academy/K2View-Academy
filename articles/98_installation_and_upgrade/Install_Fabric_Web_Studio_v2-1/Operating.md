@@ -40,7 +40,7 @@ Usage: `./k2space.sh COMMAND [OPTIONS] SPACE_NAME`
 > If you have Git integration enabled within Windows Explorer, you can also start `Git Bash` from Windows Explorer by navigating to the script's directory, right-clicking within the Explorer's window, and selecting 'Show more options'. This will display an 'Open Git Bash here' menu item that can be used to start `Git Bash` to run `k2start.sh`. 
 
 
-**Listing your Spaces**
+### Listing your Spaces
 
 List all Fabric spaces, along with some information such as profile, status (running / stopped), Web Studio port, and the URL that can be used for accessing Web Studio if Traefik is running.
 
@@ -49,7 +49,7 @@ Use:
 ./k2space.sh list
 ```
 
-**Creating Additional Spaces**
+### Creating Additional Spaces
 
 Launch a Fabric space - *spacename* (optionally, with the selected space profile).
 
@@ -61,7 +61,7 @@ Use:
 > After creating your first Space, you will need to wait for Fabric to come up. Unless it's up, you may get a 404 error if Traefik hasn't yet processed its new ingress rules, which may take a few seconds. Otherwise, you might get a 502 error if Traefik is ready but Fabric is not yet ready. Give it some time. 
 
 
-**Starting a Space**
+### Starting a Space
 
 To start a Fabric space use: 
 
@@ -69,7 +69,7 @@ To start a Fabric space use:
 ./k2space.sh start spacename
 ```
 
-**Stopping a Space**
+### Stopping a Space
 
 To stop a Fabric space use: 
 
@@ -78,7 +78,7 @@ To stop a Fabric space use:
 ```
 
 
-**Destroying a Space**
+### Destroying a Space
 
 Delete the Fabric space - *spacename*. 
 
