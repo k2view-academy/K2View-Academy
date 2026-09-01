@@ -56,7 +56,13 @@ The options are passed as command-line arguments. They can also be set as enviro
 <tr>
 <td><p>-t / --token</p></td>
 <td><p>TOKEN</p></td>
-<td><p>API token for authentication. Takes precedence over username/password.</p></td>
+<td><p>Fabric API token, sent as a <code>token</code> URL parameter.</p></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td><p>-b / --bearer</p></td>
+<td><p>BEARER_TOKEN</p></td>
+<td><p>Fabric API token, sent as an <code>Authorization: Bearer</code> header instead of a URL parameter. Available from Fabric 8.5.1.</p></td>
 <td><p></p></td>
 </tr>
 <tr>
@@ -94,6 +100,8 @@ The options are passed as command-line arguments. They can also be set as enviro
 
 > The port depends on the deploy mode. A local deploy connects to the Fabric JDBC endpoint, using the default port 5124. A remote deploy connects to the Fabric REST API endpoint, whose default port is 3213 — set it explicitly unless it is already part of the host URL.
 
+**Authentication:** the script accepts `-b` / `--bearer`, `-t` / `--token`, or `-u` / `--username` with `-p` / `--password`. If more than one is set, `--bearer` is used first, then `--token`, then `--username`/`--password`.
+
 In local mode, the script runs two operations: deploys the environment file, then sets the active environment (if `-e` is provided).
 
 **Example — deploy environment file and activate it on a remote server:**
@@ -102,7 +110,7 @@ In local mode, the script runs two operations: deploys the environment file, the
 ./deploy-environment.sh \
   -pd /opt/apps/MyProject \
   -host 10.0.0.5 \
-  -t $API_TOKEN \
+  -b $API_TOKEN \
   -r \
   -e Production
 ~~~
@@ -157,8 +165,18 @@ Note that deploying an XML file overrides all existing environments - except for
 
 #### Authentication & Authorization
 
-* Authentication is done by either user and password (*user* & *password* parameters) or by an API Key (*token* parameter), that shall be sent as parameters. 
-* The request caller shall be authorized with the right permissions to perform the deploy (granted with "DEPLOY_ENVIRONMENTS" permission). See [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md#list-of-permissions) for more information.
+Authenticate with any one of the following.
+
+**Request header:**
+
+* `Authorization: Bearer <APIKEY>` — available from Fabric 8.5.1.
+
+**URL parameters:**
+
+* `token=<APIKEY>`
+* `user=<USER-NAME>&password=<PASSWORD>`
+
+The request caller shall be authorized with the right permissions to perform the deploy (granted with "DEPLOY_ENVIRONMENTS" permission). See [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md#list-of-permissions) for more information.
 
  
 
