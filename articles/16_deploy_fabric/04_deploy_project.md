@@ -71,13 +71,7 @@ The options are passed as command-line arguments. They can also be set as enviro
 <tr>
 <td><p>-t / --token</p></td>
 <td><p>TOKEN</p></td>
-<td><p>Fabric API token, sent as a <code>token</code> URL parameter.</p></td>
-<td><p></p></td>
-</tr>
-<tr>
-<td><p>-b / --bearer</p></td>
-<td><p>BEARER_TOKEN</p></td>
-<td><p>Fabric API token, sent as an <code>Authorization: Bearer</code> header instead of a URL parameter. Available from Fabric 8.5.1.</p></td>
+<td><p>API token for authentication. Takes precedence over username/password.</p></td>
 <td><p></p></td>
 </tr>
 <tr>
@@ -163,8 +157,6 @@ The options are passed as command-line arguments. They can also be set as enviro
 
 > The port depends on the deploy mode. A local deploy connects to the Fabric JDBC endpoint, using the default port 5124. A remote deploy connects to the Fabric REST API endpoint, whose default port is 3213 — set it explicitly unless it is already part of the host URL.
 
-**Authentication:** the script accepts `-b` / `--bearer`, `-t` / `--token`, or `-u` / `--username` with `-p` / `--password`. If more than one is set, `--bearer` is used first, then `--token`, then `--username`/`--password`.
-
 **Example — build and deploy to a remote server:**
 
 ~~~bash
@@ -240,13 +232,7 @@ The options are passed as command-line arguments. They can also be set as enviro
 <tr>
 <td><p>-t / --token</p></td>
 <td><p>TOKEN</p></td>
-<td><p>Fabric API token, sent as a <code>token</code> URL parameter.</p></td>
-<td><p></p></td>
-</tr>
-<tr>
-<td><p>-b / --bearer</p></td>
-<td><p>BEARER_TOKEN</p></td>
-<td><p>Fabric API token, sent as an <code>Authorization: Bearer</code> header instead of a URL parameter. Available from Fabric 8.5.1.</p></td>
+<td><p>API token for authentication. Takes precedence over username/password.</p></td>
 <td><p></p></td>
 </tr>
 <tr>
@@ -290,8 +276,6 @@ The options are passed as command-line arguments. They can also be set as enviro
 
 > The port depends on the deploy mode. A local deploy connects to the Fabric JDBC endpoint, using the default port 5124. A remote deploy connects to the Fabric REST API endpoint, whose default port is 3213 — set it explicitly unless it is already part of the host URL.
 
-**Authentication:** the script accepts `-b` / `--bearer`, `-t` / `--token`, or `-u` / `--username` with `-p` / `--password`. If more than one is set, `--bearer` is used first, then `--token`, then `--username`/`--password`.
-
 The script enforces a fixed deployment order: `k2_ref` is deployed first, all other LUs follow, and `k2_ws` (Web Services) is deployed last.
 
 **Example — deploy from a CI artifact store to a remote server:**
@@ -302,7 +286,7 @@ The script enforces a fixed deployment order: `k2_ref` is deployed first, all ot
   --remote-deploy \
   --host 10.0.0.5 \
   --port 3124 \
-  -b $API_TOKEN
+  -t $API_TOKEN
 ~~~
 
 ---
@@ -413,19 +397,8 @@ Use the Fabric REST API to deploy remotely without a local Fabric installation.
 
 #### Authentication & Authorization
 
-Authenticate with any one of the following.
-
-**Request header:**
-
-* `Authorization: Bearer <APIKEY>` — available from Fabric 8.5.1.
-* `Authorization: Basic <base64(user:password)>`
-
-**URL parameters:**
-
-* `token=<APIKEY>`
-* `user=<USER-NAME>&password=<PASSWORD>`
-
-The caller must hold deploy permissions. See [Fabric Credentials](/articles/17_fabric_credentials/01_fabric_credentials_overview.md#list-of-permissions).
+* Use either `user` + `password` parameters, or a `token` (API key).
+* The caller must hold deploy permissions. See [Fabric Credentials](/articles/17_fabric_credentials/01_fabric_credentials_overview.md#list-of-permissions).
 
 ### Request Body
 
