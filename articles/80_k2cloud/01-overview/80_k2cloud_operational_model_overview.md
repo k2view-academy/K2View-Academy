@@ -1,4 +1,4 @@
-# Operational Model Overview
+# Model Overview
 
 ## Overview
 
@@ -32,7 +32,7 @@ A Space Profile is selected when a Space is created.
 
 Space Profiles are managed independently of the Fabric software version, allowing the runtime topology and Fabric Image to be selected separately.
 
-For available profiles and their configurations, see [K2cloud Space Profiles](/articles/98_installation_and_upgrade/K2cloud_Space_Profiles/profiles.md).
+For available profiles and their configurations, see [K2cloud Space Profiles](/articles/98_installation_and_upgrade/Hardware_K8s/05_k2cloud_space_profiles.md).
 
 ## Fabric Images
 

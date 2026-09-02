@@ -1,4 +1,4 @@
-<strong>Air-Gapped Fabric Deployments</strong>
+<strong>Non-K2cloud Air-Gapped Fabric Deployments</strong>
 
 Air-gapped Fabric deployments operate without dependence on the K2cloud Orchestrator control plane. These articles describe the operational model, runtime operations, customer responsibilities, and operational expectations associated with independently operated Fabric environments.
 

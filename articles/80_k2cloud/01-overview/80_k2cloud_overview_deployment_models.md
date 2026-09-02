@@ -49,7 +49,7 @@ This creates a deliberate separation of responsibilities:
 
 The customer therefore retains control of where Fabric runs and how that infrastructure integrates with its enterprise environment, while K2cloud provides the application-aware operational model used to provision, deploy, upgrade, and manage Fabric Spaces.
 
-## Fabric Without K2cloud — Air-Gapped
+## Non-K2cloud Air-Gapped Fabric
 
 An **air-gapped Kubernetes deployment** operates without dependence on the K2cloud Orchestrator control plane.
 
@@ -75,7 +75,7 @@ The following table compares the two K2cloud deployment models with an air-gappe
 <th>Area</th>
 <th>K2cloud SaaS</th>
 <th>K2cloud Self-Hosted</th>
-<th>Air-Gapped Without K2cloud</th>
+<th>Non-K2cloud Air-Gapped</th>
 </tr>
 </thead>
 <tbody>

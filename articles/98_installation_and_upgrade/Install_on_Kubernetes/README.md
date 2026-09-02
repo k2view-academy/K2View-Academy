@@ -3,7 +3,7 @@
 <ul>
   <li>
     <a href="/articles/98_installation_and_upgrade/Install_on_Kubernetes/01_K2cloud_Self-hosted_K8s_Installation.md">
-      Cloud Self-hosted Kubernetes Cluster Installation
+      K2cloud Self-hosted Kubernetes Cluster Installation
     </a>
   </li>
   <li>
@@ -12,3 +12,4 @@
     </a>
   </li>
 </ul>
+

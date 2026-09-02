@@ -1,4 +1,4 @@
-# Cloud Self-Hosted Kubernetes Cluster Installation
+# K2cloud Self-Hosted Kubernetes Cluster Installation
 
 ## Table of Contents
 

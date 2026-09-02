@@ -344,7 +344,7 @@
 			]
 		},
 		{
-			"group display name": "K2cloud",
+			"group display name": "K2cloud Service",
 			"group icon": "images/catalog-icon.png",
 			"visible in main": false,
 			"topics": [
@@ -389,11 +389,11 @@
 					"value": "80_k2cloud/10-k2cloud-saas"
 				},
 				{
-					"display name": "Self-Hosted",
+					"display name": "K2cloud Self-Hosted",
 					"value": "80_k2cloud/11-k2cloud-self-hosted"
 				},
 				{
-					"display name": "Air-Gapped",
+					"display name": "Non-K2cloud Air-Gapped",
 					"value": "80_k2cloud/12-air-gapped"
 				},
 				{
@@ -440,15 +440,15 @@
 					"display name": "Installation",
 					"sub-topics": [
 						{
-							"display name": "Fabric Web Studio",
+							"display name": "Web Studio - Docker/Podman",
 							"value": "98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1"
 						},
 						{
-							"display name": "Fabric on Linux",
+							"display name": "Fabric - Linux",
 							"value": "98_installation_and_upgrade/Install_on_Linux"
 						},
 						{
-							"display name": "Fabric on Kubernetes",
+							"display name": "Fabric - Self-hosted Kubernetes",
 							"value": "98_installation_and_upgrade/Install_on_Kubernetes"
 						},
 						{
@@ -461,19 +461,19 @@
 					"display name": "Upgrade",
 					"sub-topics": [
 						{
-							"display name": "Fabric Web Studio",
+							"display name": "Web Studio - Docker/Podman",
 							"value": "98_installation_and_upgrade/Upgrade_Web_Studio"
 						},		
 						{
-							"display name": "Fabric and Studio with K2cloud",
-							"value": "98_installation_and_upgrade/Upgrade_K2cloud"
-						},
-						{
-							"display name": "Fabric on Linux",
+							"display name": "Fabric - Linux",
 							"value": "98_installation_and_upgrade/Upgrade_Fabric"
 						},
 						{
-							"display name": "Fabric on Kubernetes",
+							"display name": "Fabric/Studio - K2cloud",
+							"value": "98_installation_and_upgrade/Upgrade_K2cloud"
+						},
+						{
+							"display name": "Fabric/Studio - Air-Gapped Kubernetes",
 							"value": "98_installation_and_upgrade/Upgrade"
 						},
 						{
@@ -498,10 +498,6 @@
 							"value": "98_installation_and_upgrade/Runbooks_Kafka"
 						}
 					]
-				},
-				{
-					"display name": "K2cloud Space Profiles",
-					"value": "98_installation_and_upgrade/K2cloud_Space_Profiles"
 				},
 				{
 					"display name": "Image DSig Verification",

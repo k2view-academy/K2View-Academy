@@ -50,8 +50,11 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td>
 			</td>
             <td>
+				<p>Deprecated</p>
+				<!--
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.4.8_14</p>
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.4.8_14</p>
+				-->	
             </td>
             <td>17.5</td>
             <td>4.1.11</td>
@@ -64,8 +67,11 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td>
 			</td>
             <td>
+				<p>Deprecated</p>
+				<!--
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.4.7_18</p>
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.4.7_18</p>
+				-->
             </td>
             <td>17.5</td>
             <td>4.1.11</td>
@@ -78,8 +84,11 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td>
 			</td>
             <td>
+				<p>Deprecated</p>
+				<!--
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.4.6_4</p>
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.4.6_4</p>
+				-->
             </td>
             <td>17.5</td>
             <td>4.1.11</td>
@@ -92,8 +101,11 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td>
 			</td>
             <td>
+				<p>Deprecated</p>
+				<!--
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.4.5_26</p>
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.4.5_26</p>
+				-->
             </td>
             <td>17.5</td>
             <td>4.1.11</td>
@@ -106,8 +118,11 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td>
 			</td>
             <td>
+				<p>Deprecated</p>
+				<!--
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.4.4_30</p>
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.4.4_30</p>
+				-->
             </td>
             <td>17.5</td>
             <td>4.1.11</td>
@@ -120,8 +135,11 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td>
 			</td>
             <td>
+				<p>Deprecated</p>
+				<!--
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.4.3_16</p>
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.4.3_16</p>
+				-->
             </td>
             <td>17.5</td>
             <td>4.1.11</td>
@@ -134,8 +152,11 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td>
 			</td>
             <td>
+				<p>Deprecated</p>
+				<!--
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.4.2_28</p>
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.4.2_28</p>
+				-->
             </td>
             <td>17.5</td>
             <td>4.1.11</td>
@@ -148,8 +169,11 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td>
 			</td>
             <td>
+				<p>Deprecated</p>
+				<!--
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.4.1_73</p>
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.4.1_73</p>
+				-->
             </td>
             <td>17.5</td>
             <td>4.1.8</td>
@@ -162,8 +186,11 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td>
 			</td>
             <td>
+				<p>Deprecated</p>
+				<!--
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.4.0_174</p>
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.4.0_174</p>
+				-->
             </td>
             <td>17.5</td>
             <td>4.1.8</td>
@@ -190,8 +217,11 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td>
 			</td>
             <td>
+				<p>Deprecated</p>
+				<!--
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.3.10_18</p>
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.3.10_18</p>
+				-->
             </td>
             <td>17.5</td>
             <td>4.1.8</td>
@@ -204,8 +234,11 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td>
 			</td>
             <td>
+				<p>Deprecated</p>
+				<!--
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.3.9_2</p>
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.3.9_2</p>
+				-->
             </td>
             <td>17.5</td>
             <td>4.1.8</td>
@@ -218,8 +251,11 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td>
 			</td>
             <td>
+				<p>Deprecated</p>
+				<!--
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.3.8_18</p>
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.3.8_18</p>
+				-->
             </td>
             <td>17.5</td>
             <td>4.1.8</td>
@@ -232,8 +268,11 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td>
 			</td>
             <td>
+				<p>Deprecated</p>
+				<!--
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.3.7_29</p>
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.3.7_29</p>
+				-->
             </td>
             <td>17.5</td>
             <td>4.1.8</td>
@@ -246,8 +285,11 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td>
 			</td>
             <td>
+				<p>Deprecated</p>
+				<!--
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.3.6_2</p>
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.3.6_2</p>
+				-->
             </td>
             <td>17.5</td>
             <td>4.1.8</td>
@@ -260,8 +302,11 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td>
 			</td>
             <td>
+				<p>Deprecated</p>
+				<!--
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.3.5_9</p>
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.3.5_9</p>
+				-->
             </td>
             <td>17.5</td>
             <td>4.1.8</td>
@@ -274,8 +319,11 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td>
 			</td>
             <td>
+				<p>Deprecated</p>
+				<!--
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.3.4_7</p>
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.3.4_7</p>
+				-->
             </td>
             <td>17.5</td>
             <td>4.1.8</td>
@@ -288,8 +336,11 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td>
 			</td>
             <td>
+				<p>Deprecated</p>
+				<!--
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.3.3_10</p>
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.3.3_10</p>
+				-->
             </td>
             <td>17.5</td>
             <td>4.1.8</td>
@@ -302,8 +353,11 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td>
 			</td>
             <td>
+				<p>Deprecated</p>
+				<!--
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.3.2_35</p>
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.3.2_35</p>
+				-->
             </td>
             <td>17.5</td>
             <td>4.1.8</td>
@@ -318,8 +372,11 @@ Please check the release notes for component version support, such as Kafka, Neo
                 <p>Jan 21, 2026</p>
 			</td>
             <td>
+				<p>Deprecated</p>
+				<!--
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.3.1_249</p>
                 <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.3.1_249</p>
+				-->
             </td>
             <td>17.5</td>
             <td>4.1.8</td>

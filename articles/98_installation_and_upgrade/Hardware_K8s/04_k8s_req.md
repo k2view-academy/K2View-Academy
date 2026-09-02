@@ -1,4 +1,4 @@
-# Cloud Self-hosted Kubernetes Installation System Requirements
+# K2cloud Self-hosted Kubernetes Installation System Requirements
 
 This article describes the requirements and prerequisites for the K2cloud *self-hosted* cloud deployment, which is based on the Kubernetes (K8s) infrastructure, when deployed at your cloud. The supported cloud providers are: AWS, GCP, and Azure.
 
