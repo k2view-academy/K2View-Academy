@@ -74,5 +74,4 @@ The TDM Agent currently supports the following task actions:
     </tr>
   </tbody>
 </table>
-
-The TDM Agent does not currently support searching for Synthetic Generation tasks. You can search for them using the Search window.
+The TDM Agent does not currently support searching for **Synthetic Generation**, **Entity Clone**, or **Entities & Referential Data** tasks. These tasks can be searched for using the **Search** window.
