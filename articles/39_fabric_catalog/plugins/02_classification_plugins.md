@@ -1,10 +1,11 @@
-# Regex-Based Profiling
+# Classification & Profiling Plugins
 
 The following article describes basic classification plugins included in the Catalog solution:
 
 * [Data Regex Classifier](02_classification_plugins.md#data-regex-classifier) - classify the source fields based on their data (field value). 
 * [Metadata Regex Classifier](02_classification_plugins.md#metadata-regex-classifier) - classify the source fields based on their metadata (field name).
 * [Classification PII Marker](02_classification_plugins.md#classification-pii-marker) - create the ```PII=true``` property on Catalog fields, based on their classification.
+* [Bulk Dimension Loader](02_classification_plugins.md#bulk-dimension-loader) - load properties onto schemas, datasets, classes and fields from an input file. This plugin is available starting from Fabric V8.5.1.
 
 ## Data Regex Classifier
 
@@ -64,3 +65,23 @@ The exclusion list can be defined using the Discovery Pipeline Settings screen a
 
 [Click here to learn how to create the override rules using the Discovery Pipeline Settings screen](../catalog_app/13_discovery_pipeline_settings.md).
 
+## Bulk Dimension Loader
+
+The purpose of the **Bulk Dimension Loader** plugin is to load properties  (e.g. `description` or `classification`) onto Catalog nodes — schemas, datasets, classes, or fields — in bulk, from an input CSV file. 
+
+This plugin is available starting from Fabric V8.5.1.
+
+The plugin's input parameter is:
+
+* ```inputFile``` - the input file. 
+  * Place it in Fabric Studio under the following path: `/SharedObjects/Interfaces/Discovery/Mtable `. 
+  * The expected file name is: `BulkDimensionLoader_<interface_name>.csv`.
+
+The expected input file structure is as follows:
+
+* The first 4 columns - ```schema```, ```dataset```, ```class``` and ```field``` - identify the node on which the properties should be created. 
+* The remaining columns hold the property values to load, with each column header being the name of the property to create (e.g. ```description```).
+* The node level on which the properties are created depends on which of the first 4 columns are populated:
+  * When only ```schema``` is populated, the properties are created on the **schema**.
+  * When ```schema```, ```dataset``` and ```class``` are populated, the properties are created on the **class**.
+  * When all 4 columns - ```schema```, ```dataset```, ```class``` and ```field``` - are populated, the properties are created on the **field**.

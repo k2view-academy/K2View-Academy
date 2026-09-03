@@ -6,15 +6,16 @@ Starting from V8.2, the Catalog includes a data and metadata profiling plugin po
 
 The LLM plugin performs profiling of each column's metadata and data. The LLM plugin's response depends on the user prompt, which is defined in the plugin's configuration. The pre-defined user prompt can be modified per the project's needs; this user prompt should correspond to use cases as explained further in this article. 
 
-The LLM plugin can perform various tasks. The following two use cases are pre-configured in the product's Discovery Pipeline:
+The LLM plugin can perform various tasks. The following three use cases are pre-configured in the product's Discovery Pipeline:
 
 - [Use Case 1](02_LLM_data_profiling.md#use-case-1-llm-profiling): Profiling and classification of columns based on column name and values, by the **LLM Profiling** plugin.
 - [Use Case 2](02_LLM_data_profiling.md#use-case-2-llm-description): Creation of each column's short description using the **LLM Description** plugin.
+- [Use Case 3](02_LLM_data_profiling.md#use-case-3-llm-domain): Creation of a tag (e.g. description) for each dataset and each schema, based on the descriptions of their child nodes, by the **LLM Domain** plugin.
 
 In addition to the above use cases, you can use the same plugin to implement your own use cases by updating the **user prompt** and other plugin's input parameters. The article includes two additional use cases with configuration examples:
 
-- [Use Case 3](02_LLM_data_profiling.md#use-case-3-llm-profiling-by-description): Profiling and classification of columns based on the column's description.
-- [Use Case 4](02_LLM_data_profiling.md#use-case-4-creating-new-business-dimension): Creating a new business dimension (a new property). 
+- [Use Case 4](02_LLM_data_profiling.md#use-case-4-llm-profiling-by-description): Profiling and classification of columns based on the column's description.
+- [Use Case 5](02_LLM_data_profiling.md#use-case-5-creating-new-business-dimension): Creating a new business dimension (a new property). 
 
 ## LLM Profiling Plugin Definition
 
@@ -103,7 +104,36 @@ The following is the default product configuration of the LLM Description plugin
 }
 ~~~
 
-### Use Case 3: LLM Profiling by Description
+### Use Case 3: LLM Domain
+
+Unlike the LLM Profiling and LLM Description plugins, which run on column nodes, the **LLM Domain** plugin runs on dataset and schema nodes. It creates a tag (defined by the ```propertyName``` input parameter) for each node, based on the descriptions of its child nodes:
+
+- For each **dataset**, the tag is generated from the dataset's columns and their descriptions.
+- For each **schema**, the tag is generated from the schema's datasets and their descriptions.
+
+As with the other LLM-based plugins, the LLM Domain plugin skips nodes that already have a property defined in ```propertyName``` — whether it was created by the Crawler or set manually.
+
+This plugin is available starting from Fabric V8.5.1.
+
+The following is the default product configuration for LLM Domain:
+
+~~~json
+{
+	"name": "LLM Domain",
+	"class": "com.k2view.discovery.plugins.llm.LLMDomainPlugin",
+	"active": true,
+	"threshold": 0.8,
+	"monitorDesc": "Descriptions",
+	"inputParameters": {
+		"propertyName": "description",
+		"userPrompt": "Given the following table ${tableName} which includes the following columns ${columns}.\nPlease provide a one-line description of ${tableName} with a minimum of 5 words to be used in technical documentation.\n${samplePrompt}\nDo not include table or column names in your response.",
+		"sampleSize": 0,
+		"samplePrompt": ""
+	}
+}
+~~~
+
+### Use Case 4: LLM Profiling by Description
 
 The LLM Profiling plugin is most effective when column names are meaningful, column values provide contextual insight, or both. However, this is not always the case. Sometimes the table and column names are not meaningful and there is no data in them. On the other hand, some field properties can shed more light on how to profile a column. The LLM plugin can use a field property's values to perform the profiling. 
 
@@ -138,7 +168,7 @@ Below is an LLM plugin configuration to support this use case:
 }
 ~~~
 
-### Use Case 4: Creating New Business Dimension
+### Use Case 5: Creating New Business Dimension
 
 The LLM plugin is not limited to the pre-configured use cases above. By customizing the user prompt and input parameters, you can define any use case that fits your project's needs. The following example demonstrates how to identify columns containing medical information — such as a medical condition, treatment, or drug — and tag them with a new property ```medicalInfo = true```.
 
