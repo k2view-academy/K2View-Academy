@@ -74,8 +74,8 @@ This plugin is available starting from Fabric V8.5.1.
 The plugin's input parameter is:
 
 * `inputFile` - the input file name. 
-  * The file should be placed it in Fabric Studio under: `/SharedObjects/Interfaces/Discovery/Mtable `. 
-  * If the `inputFile` is empty, the plugin will assume the default name is: `BulkDimensionLoader_<interface_name>.csv`.
+  * The file should be placed in Fabric Studio under: `/SharedObjects/Interfaces/Discovery/Mtable`. 
+  * If the `inputFile` is empty, the plugin searches for a file using the default name: `BulkDimensionLoader_<interface_name>.csv`.
 
 The expected input file structure is as follows:
 
