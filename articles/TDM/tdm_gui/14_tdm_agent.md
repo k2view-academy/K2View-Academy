@@ -14,7 +14,7 @@ The TDM Agent is available **in addition to** the existing search option in the 
 
 To enable the TDM Agent, complete the following steps:
 
-1. **Install the TDM Agent extension.** The TDM Agent installation adds the **aifusion** and **Vecor** LUs (Data Products).
+1. **Install the TDM Agent extension.** The TDM Agent installation adds the **aifusion** and **Vector** LUs (Data Products).
 
 2. **Install an LLM extension** (e.g. Anthropic)
 
