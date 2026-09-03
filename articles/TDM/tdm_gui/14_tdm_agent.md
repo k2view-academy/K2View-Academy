@@ -14,15 +14,23 @@ The TDM Agent is available **in addition to** the existing search option in the 
 
 To enable the TDM Agent, complete the following steps:
 
-1. **Install the TDM Agent extension.** The TDM Agent installation adds the **aifusion** and **Vector** LUs (Data Products).
+1. **Install the aifusion extension.** Verify that the **aifusion** and **Vector** LUs (Data Products) are added to the project.
 
-2. **Install an LLM extension** (e.g. Anthropic)
+2. **Install the TDM Agent extension.** 
 
-3. **Define an LLM interface** upon the installed LLM extension.
+3. **Edit the Workspace settings JSON file**.  In the top menu bar, select **View > Command Palette > Preferences: Open Workspace Settings (JSON)**. Add the following path to the **java.project.referencedLibraries** attribute: 
 
-4. **Edit the `apps.json` file.** In the **TDM** application entry, set the **`showChat`** attribute to `true`. This attribute is set to `false` by default.
+   `"/opt/apps/fabric/workspace/fabric/lib/fabric/fabric-task*.jar"`
 
-5. **Redeploy the TDM LU.**
+   See below:
+
+   ![settings file](images/tdm_agent_settings_file.png)
+
+
+3. **Install an LLM extension** (e.g. Anthropic)
+4. **Define an LLM interface** upon the installed LLM extension.
+5. **Edit the `apps.json` file.** In the **TDM** application entry, set the **`showChat`** attribute to `true`. This attribute is set to `false` by default.
+6. **Redeploy the TDM LU.**
 
 > **Important:** The TDM deployment is required to run the **`initRefreshTaskDesc`** Broadway job, which set during the TDM deploy. This job scans the TDM tasks and updates their descriptions in a dedicated table, which the TDM Agent uses to match tasks to user requests.
 
