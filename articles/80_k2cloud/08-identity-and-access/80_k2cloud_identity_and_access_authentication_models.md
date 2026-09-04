@@ -4,16 +4,16 @@
 
 K2cloud supports two primary authentication models:
 
-- **K2directory / CyberArk-hosted users**
+- **K2directory-hosted users**
 - **Customer-federated users**
 
-Both models use CyberArk Identity as part of the K2cloud identity service, but they differ in where the user's identity is managed and where authentication occurs.
+Both models use identity federation as part of the K2cloud identity service, but they differ in where the user's identity is managed and where authentication occurs.
 
 In either model, authentication establishes the user's identity. Authorization is then independently enforced by K2cloud Orchestrator, Fabric, and, where applicable, TDM.
 
-## K2directory / CyberArk-Hosted Users
+## K2directory-Hosted Users
 
-In the K2directory model, user accounts are hosted in K2view's CyberArk Identity service.
+In the K2directory model, user accounts are hosted in K2view's Identity service.
 
 Users authenticate directly through the K2cloud identity service.
 
@@ -30,9 +30,9 @@ After authentication, the user's group membership is used to determine the appro
 A typical authorization path is:
 
 ```text
-CyberArk User
+K2directory User
     ↓
-CyberArk Group
+K2directory Group
     ↓
 Fabric Role
     ↓
