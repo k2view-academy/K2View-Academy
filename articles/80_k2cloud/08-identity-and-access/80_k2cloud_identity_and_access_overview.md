@@ -72,10 +72,10 @@ The distinction is fundamental:
 
 K2cloud supports two primary authentication models:
 
-1. **K2directory / CyberArk-hosted users**
+1. **K2directory-hosted users**
 2. **Customer-federated users**
 
-With K2directory, users authenticate using identities hosted through K2view's CyberArk Identity service.
+With K2directory, users authenticate using identities hosted through K2view's Identity service.
 
 With customer federation, users authenticate through the customer's identity provider, such as Microsoft Entra ID, Okta, PingFederate, or another supported SAML identity provider.
 
@@ -83,7 +83,7 @@ For more information, see [Authentication Models](/articles/80_k2cloud/08-identi
 
 ## Identity Federation
 
-K2cloud uses CyberArk Identity as the federation layer between customer identity providers and K2view services.
+K2cloud uses its identity service as the federation layer between customer identity providers and K2view services.
 
 For federated customers, the customer's identity provider remains authoritative for users and group membership. Identity federation maps those groups to the roles used by K2cloud and Fabric.
 
