@@ -28,7 +28,7 @@ K2cloud supports federation with SAML-compliant identity providers, including:
 
 The customer's IdP remains authoritative for user identity and group membership.
 
-K2cloud uses CyberArk Identity as the federation layer between the customer IdP and K2view services.
+K2cloud uses its identity federation service as the federation layer between the customer IdP and K2view services.
 
 ## Federation Model
 
