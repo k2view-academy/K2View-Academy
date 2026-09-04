@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This technical note explains how K2cloud implements Role-Based Access Control (RBAC) across projects, spaces, and Test Data Management (TDM) environments. It describes how customer-managed identity providers (IDPs) work with the K2cloud CyberArk federation service to enforce consistent authentication and authorization. The document details the layered approach to access control at the cloud and space levels, the process of mapping IDP groups to Fabric roles, and the creation and assignment of roles and permissions.
+This technical note explains how K2cloud implements Role-Based Access Control (RBAC) across projects, spaces, and Test Data Management (TDM) environments. It describes how customer-managed identity providers (IDPs) work with the K2cloud identity federation service to enforce consistent authentication and authorization. The document details the layered approach to access control at the cloud and space levels, the process of mapping IDP groups to Fabric roles, and the creation and assignment of roles and permissions.
 
 Practical usage scenarios show how access can be limited to specific areas and how deployment permissions are assigned to authorized groups, ensuring least-privilege access and separation of duties. The note also emphasizes TDM-specific roles and permissions, which expand RBAC controls to data provisioning, masking, and synthetic data generation workflows.
 
