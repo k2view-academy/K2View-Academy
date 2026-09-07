@@ -136,7 +136,7 @@ TDM 9.2 and onwards enables removing the concatenation of the LU name to the par
      UPDATE 
        tdm_general_parameters
     SET 
-       param_value = REPLACE(param_value, '"versioningRetentionPeriodForTesters":"versioningRetentionPeriodForTesters":{"units":"Days","value":5,"allow_doNotDelete":False}',  '"versioningRetentionPeriodForTesters":{"units":"Do Not Delete","value":-1,"allow_doNotDelete":True}')
+       param_value = REPLACE(param_value, '"versioningRetentionPeriodForTesters":"versioningRetentionPeriodForTesters":{"units":"Days","value":5,"allow_doNotDelete":True}',  '"versioningRetentionPeriodForTesters":{"units":"Do Not Delete","value":-1,"allow_doNotDelete":True}')
       where param_name = 'tdm_gui_params'; 
     ```
     
