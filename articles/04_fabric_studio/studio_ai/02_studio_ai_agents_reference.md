@@ -1,157 +1,65 @@
-# Studio AI Agents Reference
+# Studio AI Agents
 
-Studio AI provides a set of specialized agents, each focused on a specific area of K2View project implementation. To invoke an agent, prefix your message with `@AgentName` in the AI Chat input. After the first use in a session, the agent is pinned and you can continue chatting without the prefix.
+By default, Studio AI routes every message to @k2-assistant, which answers directly, loads the relevant skill, or delegates to a specialist agent automatically. Just open AI Chat and start asking - see [Getting Started with Studio AI](01_getting_started_with_studio_ai.md#just-start-asking).
 
-## K2View Implementation Agents
+This reference covers the small set of agents worth knowing by name. For the longer tail of specialized and legacy agents, see [Other Studio AI Agents](14_other_studio_ai_agents.md).
 
-### @Architect
+Studio AI is built from a set of specialized agents behind the scenes. To invoke one directly, prefix your message with `@AgentName` in the AI Chat input. After the first use in a session, the agent is pinned and you can continue chatting without the prefix.
 
-**Focus:** Planning and project structure analysis.
+## The Core Duo
 
-@Architect is the recommended starting point for any complex or multi-step development task. When you describe a goal, it generates a **structured implementation plan** — a document listing steps, file changes, and verification criteria — and presents it with an **"Execute with Coder"** button. You can refine the plan through follow-up messages before handing it off; the agent keeps the whole document consistent as you iterate.
+### @k2-assistant
 
-The plan is saved as a file in your workspace, so it persists across sessions. If the chat is closed, you can reopen the file and use **F1 > Execute Plan with Coder** to start a fresh implementation session from it.
+**Focus:** General-purpose entry point for Fabric project work - this is who you're already talking to by default.
 
-**Example prompts:**
-- `@Architect Plan a new enrichment that pulls customer risk scores from the Oracle CRM interface`
-- `@Architect Analyze the dependencies between the customer_bank and aifusion LUs`
-- `@Architect What shared objects does this project expose to Web Services?`
+@k2-assistant is the default agent shown on the AI Chat welcome screen ("Ask K2assistant"). It knows the project's available skills and puts the relevant one to work, creates and edits Fabric artifacts (Data Products/Logical Units, Broadway flows and actors, interfaces, web services, MTables, globals), consults specialist agents (@KB, @Data-Product-Explorer, @Interfaces) for knowledge, delegates larger or under-specified coding work to its worker sub-agent (@k2-worker), and can operate the Fabric runtime directly (commands, REST APIs, logs, deploy).
 
-For a full walkthrough of the plan-first workflow, see [Plan-First Development with the Architect Agent](05_plan_first_development.md).
+@k2-assistant routes work by scope: a small, fully-specified change (two or three files at most, every edit statable up front) it applies itself; anything larger, multi-step, or requiring exploration is handed off to @k2-worker, run in parallel when the work can be split.
 
-### @Coder
+You never need to type `@k2-assistant` explicitly - it's the default.
 
-**Focus:** Code writing and editing.
+### @k2-worker
 
-@Coder is the primary agent for generating, modifying, and fixing code. It can browse your workspace, read file content, propose changes as reviewable diffs, and apply them directly. It supports both guided (Edit Mode) and autonomous (Agent Mode) operation.
+**Focus:** File editing and code writing - the execution arm behind @k2-assistant.
 
-In **Agent Mode**, @Coder works independently: it reads files, writes changes, runs tests, starts or stops a development server if needed, and iterates until the task is complete. A visual task list in the chat tracks its progress through multi-step work.
+@k2-worker is the sub-agent @k2-assistant delegates hands-on file editing to, and where the code-writing capability formerly associated with @Coder now lives. Given one self-contained task, it loads the skill the task names (or the closest match from the skill catalog), creates or edits exactly the files in its assigned scope - Fabric artifacts (LU tables, Broadway flows and actors, interfaces, web services, MTables, globals) or project Java/generic code - verifies the result with diagnostics, and reports the changes back in a fixed format.
 
-**Example prompts:**
-- `@Coder Write a Java enrichment function that joins customer data with the Orders table`
-- `@Coder Fix all issues in #_f`
-- `@Coder Refactor this function to use try-with-resources: #selectedText`
+@k2-worker has no shell, runtime, user-interaction, or delegation tools of its own - anything beyond workspace file edits is reported back to @k2-assistant to handle. In practice, you will rarely address `@k2-worker` directly; it's documented here because understanding it explains how @k2-assistant actually gets implementation work done, and because it is the modern equivalent of what @Coder used to do.
 
-For details on how code changes are proposed and applied, see [AI Code Editing: Reviewing and Applying Changes](04_ai_code_editing_and_changesets.md).
+## Specialist Agents
 
-### @Code Reviewer
-
-**Focus:** Analyzing code changes
-
-@Code Reviewer is a code review assistant that analyzes code changes and returns structured verdicts. Checks completion criteria, build/lint/test evidence, and code quality. this is a read only agent.
-
-### @Universal
-
-**Focus:** General programming questions.
-
-Use @Universal for language questions, patterns, algorithms, and conceptual topics that are not specific to a particular K2View entity. It does not modify files — it answers and explains.
-
-**Example prompts:**
-
-- `@Universal What is the difference between a Fabric Decision function and a Trigger function?`
-- `@Universal Explain the Builder pattern and when to use it in Java`
-
----
-
-### @GitHub
-
-**Focus:** Repository management.
-
-@GitHub integrates with your Git repository. It can read issues, inspect the current diff, help draft commit messages, and perform other repository-related tasks.
-
-**Example prompts:**
-- `@GitHub Summarize the changes in my current working branch`
-- `@GitHub Create a pull request description for my latest commits`
-
----
-
-### @Studio-Commands
-
-**Focus:** k2Studio operations.
-
-Use @Studio-Commands to trigger Studio actions through natural language — deploying LUs, running Fabric commands, and other IDE-level operations.
-
-**Example prompts:**
-- `@Studio-Commands Deploy all updated Logical Units`
-- `@Studio-Commands Open the Fabric terminal`
-
-### @Broadway-Explain
-
-**Focus:** Broadway flow explanations.
-
-@Broadway-Explain reads and describes Broadway flows in plain language. Use it to understand an unfamiliar flow, or to generate documentation for an existing one.
-
-**Example prompts:**
-
-- `@Broadway-Explain Explain what this flow does step by step: #_f`
-- `@Broadway-Explain What actors are used in the enrichment flows of the customer_bank LU?`
-
-### @Broadway-Edit
-
-**Focus:** Broadway flow editing.
-
-@Broadway-Edit can propose modifications to Broadway flows: adding actors, error handling, conditions, and more.
-
-**Example prompts:**
-- `@Broadway-Edit Add an error handler to this flow: #_f`
-- `@Broadway-Edit Insert a DbLoad actor after the existing transformation step`
-
-### @Graphit
-
-**Focus:** Graphit web services.
-
-Use @Graphit for help designing, generating, and reviewing Graphit-based web services.
-
-**Example prompts:**
-
-- `@Graphit Generate a Graphit service that returns customer policy data with nested claims`
-- `@Graphit Review my Graphit file for missing field mappings: #_f`
+These three are still commonly worth addressing directly for read-only lookups, even though @k2-assistant can also reach them on your behalf.
 
 ### @Interfaces
 
-**Focus:** Database interface help.
+**Focus:** Database interface lookup.
 
-@Interfaces helps with DB interface design, schema exploration, and SQL generation in the context of your Fabric project's configured data sources.
+@Interfaces is aware of all Fabric DB interfaces and can answer questions about any DB interface and its schema and table metadata.
 
 **Example prompts:**
 - `@Interfaces Show me the schema for the Oracle CRM interface`
-- `@Interfaces Generate a SELECT query that joins customer and address tables from the CRM source`
+- `@Interfaces What tables does the aifusion interface expose?`
 
-### @LU
+### @Data-Product-Explorer
 
-**Focus:** Logical Unit management.
+**Focus:** Read-only Data Product (Logical Unit) schema and instance lookup.
 
-@LU assists with LU design: tables, populations, enrichment functions, globals, and the overall structure of a Logical Unit.
+@Data-Product-Explorer is a read-only expert on Fabric Data Products (Logical Units / LUs). It explains a Data Product's schema - tables, columns, relationships - by name or from the currently open schema file, and fetches instance data by IID as well as common/reference table data. For design and editing work (adding tables, populations, enrichment functions), ask @k2-assistant instead.
 
 **Example prompts:**
-- `@LU Add a new table to the customer_bank LU that stores transaction history`
-- `@LU What populations are defined in the aifusion LU?`
+- `@Data-Product-Explorer What is the schema of the customer_bank Data Product?`
+- `@Data-Product-Explorer Show me the instance data for IID 100234 in the Employee LU`
 
 ### @KB
 
 **Focus:** K2View knowledge base.
 
-Use @KB to ask product questions — how features work, recommended patterns, and configuration guidance — drawing on K2View's documentation.
+@KB answers knowledge-base questions about K2View Fabric and Fabric Studio - it draws on the fabric issues/Q&A knowledge base and Fabric's help topics, so it can answer questions about most fabric commands and modules: Data Product/LU schema, LU tables and views, common (reference) tables, Broadway flows and actors, Graphit, interfaces, environments, Query Builder, web services and user Java functions, globals, instance groups, IID finder, MTable, reports, security profiles, web apps, templates, deploy, LU instances, sync methods/modes, micro DB (MDB), TDM, and more.
 
 **Example prompts:**
 - `@KB How do I configure an MTable in Fabric?`
 - `@KB What is the difference between a Reference table and a Shared Object?`
 
----
-
-### @ClaudeCode
-
-**Focus:** Advanced coding assistance.
-
-@ClaudeCode provides deep, sophisticated coding help for complex scenarios, large refactors, and nuanced implementation challenges. Unlike @Coder, it handles long-running autonomous sessions particularly well and can ask clarifying questions mid-task when it needs more information before proceeding.
-
-**Example prompts:**
-- `@ClaudeCode Refactor this complex population logic to be more readable and efficient: #_f`
-- `@ClaudeCode Review this Java class for potential thread-safety issues: #file:src/MyService.java`
-
----
-
 ## Switching Between Agents
 
 You can switch agents at any point in a conversation by typing `@AgentName` again. The new agent becomes pinned for subsequent messages.
-

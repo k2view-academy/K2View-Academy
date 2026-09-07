@@ -28,6 +28,7 @@ Fabric distinguishes between DB interfaces and Non-DB interfaces.
 * [Amazon S3 Storage Interface](12_S3_interface.md)
 * [Azure Blob Storage Interface](13_blob_interface.md)
 * [Google Cloud Storage Interface](14_gcs_interface.md)
+* [AI LLM Interface](15_LLM_interface.md)
 * Search Interface. This interface type supports cross-instance searches and is needed to enable Fabric to connect to the search engine when a Search is defined on LU tables. [Click for more information about Search Implementation Steps](/articles/18_fabric_cdc/cdc_consumers/search/02_search_implementation.md).
 
 <studio>

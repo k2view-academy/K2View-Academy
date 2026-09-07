@@ -132,4 +132,4 @@ Fill in the following parameters in the Actor's Properties tab:
 
 
 
-[![Previous](/articles/images/Previous.png)](13_blob_interface.md)
+[![Previous](/articles/images/Previous.png)](13_blob_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](15_LLM_interface.md)

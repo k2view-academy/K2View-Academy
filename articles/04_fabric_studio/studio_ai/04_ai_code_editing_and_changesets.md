@@ -1,14 +1,16 @@
 # AI Code Editing: Reviewing and Applying Changes
 
-When @Coder proposes changes to your code, Studio AI gives you full control over how those changes are reviewed and applied. This article covers the two operating modes, Edit Mode and Agent Mode, and how to manage the resulting diffs, including accepting, rejecting, and iterating on changes.
+This article applies when you address `@Coder` directly. The default `@k2-assistant` flow routes work automatically (small edits applied inline, larger work delegated to `@k2-worker`) and does not use the mode selector or diff-review workflow described here; see [Studio AI Agents](02_studio_ai_agents_reference.md) and [Other Studio AI Agents](14_other_studio_ai_agents.md#coder-superseded-by-k2-worker). When `@Coder` proposes changes to your code, Studio AI gives you full control over how those changes are reviewed and applied. This article covers its operating modes and how to manage the resulting diffs, including accepting, rejecting, and iterating on changes.
 
 ## Edit Mode vs Agent Mode
 
-@Coder supports two modes, selectable from the **mode selector dropdown** in the chat input area, or by pressing **Shift+Tab** to toggle between them.
+Once `@Coder` is addressed, a **mode selector dropdown** appears in the chat input area, with three options: **Edit Mode**, **Agent Mode**, and **Agent Mode (Next)**. You can also press **Shift+Tab** to toggle between Edit Mode and Agent Mode.
 
 **Edit Mode** is the default. In this mode, every change @Coder proposes is presented as a diff for your review before anything is written to disk. You can inspect exactly what will change, accept or reject individual files, and ask for revisions, all without modifying your project until you explicitly approve.
 
 **Agent Mode** gives @Coder full autonomy. It reads files, writes changes, runs tests, and iterates until the task is complete, without pausing for approval at each step. Use this for larger tasks where you trust the agent to work through a multi-step implementation on its own.
+
+**Agent Mode (Next)** is a newer variant of Agent Mode. At the time of writing it had not been evaluated in detail; treat it as preview/experimental until confirmed otherwise.
 
 For most focused edits and targeted fixes, Edit Mode gives you the control you need. For broader tasks, implementing a new feature end-to-end, for example, Agent Mode is more efficient.
 

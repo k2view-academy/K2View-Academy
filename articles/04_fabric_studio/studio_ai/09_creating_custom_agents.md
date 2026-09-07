@@ -2,11 +2,13 @@
 
 In addition to the built-in K2View agents, Studio AI lets you create your own agents. A custom agent has a name, a focused purpose, and a prompt you write. Once created, it appears in the chat alongside the built-in agents and can be addressed with `@AgentName` like any other.
 
-Custom agents are useful when you have a repeated workflow that none of the built-in agents covers well — for example, an agent specialized in a specific LU, a coding style enforcer, or an agent that always injects a particular set of project context.
+Custom agents are useful when you have a repeated workflow that none of the built-in agents covers well: an agent specialized in a specific LU, a coding style enforcer, or an agent that always injects a particular set of project context.
+
+> For agents scoped to a specific Data Product/Logical Unit, consider `@Agent-Builder` instead of the manual form below. It scaffolds a richer structure (`agent.yaml`, sub-agents, skills, references, and evals) by understanding your Data Product's schema. See [Studio AI Agents](02_studio_ai_agents_reference.md) and [Other Studio AI Agents](14_other_studio_ai_agents.md#agent-builder).
 
 ## Creating a Custom Agent
 
-1. Open the **AI Configuration** panel (click the configuration icon in the AI Chat panel bar, or go to **View > AI Configuration**).
+1. Open the **AI Configuration** panel: click **More Actions...** ("…") in the AI Chat panel toolbar, then **Open AI Configuration**. See [Using the AI Chat](03_using_the_ai_chat.md#the-ai-chat-toolbar).
 2. Select the **Agents** tab.
 3. Click **Add Custom Agent** at the bottom of the agent list.
 4. Fill in the agent definition fields (described below).
@@ -43,7 +45,7 @@ The new agent is immediately available in the AI Chat.
     <tr>
       <td><strong>Prompt</strong></td>
       <td>Yes</td>
-      <td>The system prompt that defines the agent's behavior, persona, and knowledge. Supports <code>{{variable}}</code> and <code>~{function}</code> syntax — see <a href="07_ai_configuration_and_prompts.md">Customizing Agent Prompts</a>.</td>
+      <td>The system prompt that defines the agent's behavior, persona, and knowledge. Supports <code>{{variable}}</code> and <code>~{function}</code> syntax. See <a href="07_ai_configuration_and_prompts.md">Customizing Agent Prompts</a>.</td>
     </tr>
     <tr>
       <td><strong>Default LLM</strong></td>
@@ -55,11 +57,9 @@ The new agent is immediately available in the AI Chat.
 
 ## Global vs Workspace-Specific Agents
 
-Custom agents can be stored in two locations:
+Custom agents can be stored in two locations: a global, user-level location available in every workspace, and a workspace-specific location tied to the current project, which takes priority over a global agent with the same ID. This is useful for project-specific assistants, for example an agent pre-loaded with context about a particular Logical Unit.
 
-**Global agents** are stored in your user-level configuration directory (`~/.theia/`). They are available in every workspace you open on your machine.
-
-**Workspace-specific agents** are stored in the `.theia/` directory of a specific project. They are only available when that project is open, and they take priority over global agents with the same ID. This is useful for project-specific assistants — for example, an agent pre-loaded with context about a particular Logical Unit.
+The older claim that these locations are `~/.theia/` (global) and a project's `.theia/` folder (workspace) is confirmed outdated. The `skills.skillDirectories` setting (see [AI Features Settings](15_ai_features_settings.md#prompt-templates-and-skills)) explicitly documents that skills resolve from both a workspace-level `.agents/skills` folder and a user-home-level `~/.agents/skills` folder, with workspace taking precedence. Custom agents follow the same convention: workspace-level under `.agents/agents/<id>/`, global (user-level) under `~/.agents/agents/<id>/`.
 
 When you create an agent via the UI, Studio AI prompts you to choose whether to save it globally or for the current workspace.
 

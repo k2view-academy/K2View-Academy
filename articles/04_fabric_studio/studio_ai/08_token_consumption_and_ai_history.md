@@ -4,7 +4,7 @@ Studio AI provides two complementary tools for monitoring how the AI is being us
 
 ## Token Usage Summary
 
-The **Token Usage** tab is found in the AI Configuration panel (click the configuration icon in the AI Chat panel bar, then select the **Token Usage** tab).
+The **Token Usage** tab is found in the AI Configuration panel. Open it via **More Actions...** ("…") in the AI Chat panel toolbar, then **Open AI Configuration**, then select the **Token Usage** tab. See [Using the AI Chat](03_using_the_ai_chat.md#the-ai-chat-toolbar).
 
 It displays a table with one row per language model that has been used in the current Studio session:
 
@@ -18,11 +18,11 @@ It displays a table with one row per language model that has been used in the cu
   <tbody>
     <tr>
       <td><strong>Model</strong></td>
-      <td>The LLM identifier (e.g., <code>anthropic/claude-opus-4-5</code>)</td>
+      <td>The LLM identifier (e.g., <code>anthropic/claude-opus-5</code>)</td>
     </tr>
     <tr>
       <td><strong>Input Tokens</strong></td>
-      <td>Cumulative tokens sent to this model — prompts, attached files, context, and conversation history</td>
+      <td>Cumulative tokens sent to this model: prompts, attached files, context, and conversation history</td>
     </tr>
     <tr>
       <td><strong>Output Tokens</strong></td>
@@ -39,7 +39,7 @@ It displays a table with one row per language model that has been used in the cu
   </tbody>
 </table>
 
-The table resets when you restart the Studio. It covers all agents in the session, not just the active chat — background agents such as session naming and code completion are included.
+The table resets when you restart the Studio. It covers all agents in the session, not just the active chat: background agents such as session naming and code completion are included.
 
 ### Interpreting Token Counts
 
@@ -53,7 +53,7 @@ The **AI Agent History** panel provides a detailed, chronological log of every r
 
 ### Opening the Panel
 
-Go to **View > AI Agent History** from the menu bar. The panel opens as a separate view alongside your other panels.
+Click **More Actions...** ("…") in the AI Chat panel toolbar, then **Open AI Agent History**. The panel opens as a tab in the bottom panel area, alongside Problems and Terminal.
 
 ### Using the History Panel
 
@@ -61,16 +61,16 @@ At the top of the panel is an **agent dropdown** that lets you filter the histor
 
 Each entry in the history shows:
 
-- **Agent name** — which agent handled the request
-- **Timestamp** — when the request was sent
-- **Request** — the full message sent to the model, including any context that was injected (files, variables, prompt template content)
-- **Response** — the full text of the model's reply
-- **Request ID** — a unique identifier for the request, useful for support or debugging
-- **Session ID** — the chat session this request belongs to
+- **Agent name**: which agent handled the request
+- **Timestamp**: when the request was sent
+- **Request**: the full message sent to the model, including any context that was injected (files, variables, prompt template content)
+- **Response**: the full text of the model's reply
+- **Request ID**: a unique identifier for the request, useful for support or debugging
+- **Session ID**: the chat session this request belongs to
 
 ### Reviewing Full Prompts
 
-One of the primary uses of the History panel is to see the **complete prompt** that was actually sent to the model — including all injected context variables, file contents, and prompt template expansions. This helps you understand exactly what the model received, which is invaluable for debugging unexpected responses or tuning your prompt templates.
+One of the primary uses of the History panel is to see the **complete prompt** that was actually sent to the model, including all injected context variables, file contents, and prompt template expansions. This helps you understand exactly what the model received, which is invaluable for debugging unexpected responses or tuning your prompt templates.
 
 For example, if an agent is ignoring a file you thought you attached, the History panel will show whether the file content actually appeared in the prompt.
 

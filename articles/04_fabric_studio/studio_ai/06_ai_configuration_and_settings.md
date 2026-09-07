@@ -4,17 +4,15 @@ The AI Configuration panel is the central place to manage every aspect of Studio
 
 ## Opening AI Configuration
 
-Click the **AI Configuration** icon at the far right of the AI Chat panel bar (the second icon from the right). The panel opens alongside the chat, replacing the chat view with the configuration interface.
-
-You can also access it via **View > AI Configuration** from the menu bar.
+Click the history icon's neighboring **More Actions...** ("…") in the AI Chat panel toolbar, then choose **Open AI Configuration**. It opens as a full editor tab (not a side panel). See [Using the AI Chat](03_using_the_ai_chat.md#the-ai-chat-toolbar) for the toolbar layout.
 
 ## Panel Overview
 
-The AI Configuration panel is organized into seven tabs along the top:
+The AI Configuration panel is organized into eight tabs along the top:
 
-<table>   <thead>     <tr>       <th>Tab</th>       <th>Purpose</th>     </tr>   </thead>   <tbody>     <tr>       <td><strong>Agents</strong></td>       <td>Enable or disable agents, assign language models, configure notifications</td>     </tr>     <tr>       <td><strong>Variables</strong></td>       <td>View and set global context variables available to all agents</td>     </tr>     <tr>       <td><strong>MCP Servers</strong></td>       <td>Add, edit, and remove Model Context Protocol server connections</td>     </tr>     <tr>       <td><strong>Token Usage</strong></td>       <td>Monitor cumulative token consumption by model</td>     </tr>     <tr>       <td><strong>Prompt Fragments</strong></td>       <td>Manage reusable prompt snippet files</td>     </tr>     <tr>       <td><strong>Tools</strong></td>       <td>View and manage the tools (functions) available to agents</td>     </tr>     <tr>       <td><strong>Model Aliases</strong></td>       <td>Define named LLM aliases and priority lists used across agents</td>     </tr>   </tbody> </table>
+<table>   <thead>     <tr>       <th>Tab</th>       <th>Purpose</th>     </tr>   </thead>   <tbody>     <tr>       <td><strong>Agents</strong></td>       <td>Enable or disable agents, assign language models, configure notifications</td>     </tr>     <tr>       <td><strong>Variables</strong></td>       <td>View and set global context variables available to all agents</td>     </tr>     <tr>       <td><strong>MCP Servers</strong></td>       <td>Add, edit, and remove Model Context Protocol server connections</td>     </tr>     <tr>       <td><strong>Token Usage</strong></td>       <td>Monitor cumulative token consumption by model</td>     </tr>     <tr>       <td><strong>Prompt Fragments</strong></td>       <td>Manage reusable prompt snippet files</td>     </tr>     <tr>       <td><strong>Tools</strong></td>       <td>View and manage the tools (functions) available to agents</td>     </tr>     <tr>       <td><strong>Skills</strong></td>       <td>Lists every installed skill (name, description, and SKILL.md location)</td>     </tr>     <tr>       <td><strong>Model Aliases</strong></td>       <td>Define named LLM aliases and priority lists used across agents</td>     </tr>   </tbody> </table>
 
-![The AI Configuration panel showing seven tabs across the top (Agents, Variables, MCP Servers, Token Usage, Prompt Fragments, Tools, Model Aliases) with the Agents tab active and a list of agents with enable toggles and model selectors.](images/ai_configuration_panel.png)
+*(Screenshot pending refresh: the current panel shows eight tabs, ending with Skills then Model Aliases.)*
 
 ## Agents Tab
 
@@ -55,7 +53,7 @@ The **Token Usage** tab shows a summary table of all LLM usage accumulated in th
 
 Use this table to understand which models are consuming the most tokens, and to spot unexpectedly large requests (for example, attaching very large files as context).
 
-For the full history of individual requests and responses, use the **AI Agent History** panel — see [AI History and Token Usage](08_token_consumption_and_ai_history.md).
+For the full history of individual requests and responses, use the **AI Agent History** panel. See [AI History and Token Usage](08_token_consumption_and_ai_history.md).
 
 ## Prompt Fragments Tab
 
@@ -65,7 +63,11 @@ For details on writing and using prompt fragments, see [Customizing Agent Prompt
 
 ## Tools Tab
 
-The **Tools** tab shows all the function tools registered with Studio AI — these are the capabilities agents can call during a conversation, such as reading files, running commands, or querying the project structure. You can review which tools are active and, where applicable, enable or disable individual tools.
+The **Tools** tab shows all the function tools registered with Studio AI: the capabilities agents can call during a conversation, such as reading files, running commands, or querying the project structure. You can review which tools are active and, where applicable, enable or disable individual tools.
+
+## Skills Tab
+
+The **Skills** tab lists every skill installed in the project: its name, a short description, and the file path to its `SKILL.md` entry point under `.agents/skills/<name>/`. Click **Open** next to a skill to view its `SKILL.md` file directly. For how skills are structured and invoked, see [Skills and Slash Commands](11_skills_and_slash_commands.md).
 
 ## Model Aliases Tab
 
@@ -78,6 +80,6 @@ Each alias entry contains:
 
 **Default aliases in Studio AI:**
 
-<table>   <thead>     <tr>       <th>Alias</th>       <th>Typical use</th>     </tr>   </thead>   <tbody>     <tr>       <td><code>default/code</code></td>       <td>@Coder, @ClaudeCode, and other code-focused agents</td>     </tr>     <tr>       <td><code>default/universal</code></td>       <td>@Universal and general question-answering agents</td>     </tr>     <tr>       <td><code>default/fabric</code></td>       <td>K2View-specific agents (e.g., @LU, @Interfaces, @Broadway-Edit)</td>     </tr>     <tr>       <td><code>default/summarize</code></td>       <td>Session naming, summary, and background agents</td>     </tr>     <tr>       <td><code>default/code-completion</code></td>       <td>Inline code completion</td>     </tr>   </tbody> </table>
+<table>   <thead>     <tr>       <th>Alias</th>       <th>Typical use</th>     </tr>   </thead>   <tbody>     <tr>       <td><code>default/code</code></td>       <td>@Coder, @ClaudeCode, and other code-focused agents</td>     </tr>     <tr>       <td><code>default/universal</code></td>       <td>@Universal and general question-answering agents</td>     </tr>     <tr>       <td><code>default/fabric</code></td>       <td>K2View-specific agents (e.g., @k2-assistant, @Interfaces, @Broadway-Edit, @Agent-Builder)</td>     </tr>     <tr>       <td><code>default/fast</code></td>       <td>Lightweight, latency-sensitive tasks</td>     </tr>     <tr>       <td><code>default/summarize</code></td>       <td>Session naming, summary, and background agents</td>     </tr>     <tr>       <td><code>default/code-completion</code></td>       <td>Inline code completion</td>     </tr>   </tbody> </table>
 
 To change which model backs an alias, edit the priority list. This is the recommended way to swap LLM providers across all agents at once without updating each agent individually.

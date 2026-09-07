@@ -16,6 +16,7 @@
   <li><a href="/articles/24_non_DB_interfaces/12_S3_interface.md">Amazon S3 Storage Interface</a></li>
   <li><a href="/articles/24_non_DB_interfaces/13_blob_interface.md">Azure Blob Storage Interface</a></li>
   <li><a href="/articles/24_non_DB_interfaces/14_gcs_interface.md">Google Cloud Storage Interface</a></li>
+  <li><a href="/articles/24_non_DB_interfaces/15_LLM_interface.md">AI LLM Interface</a></li>
 
 </ul>
 

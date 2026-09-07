@@ -23,16 +23,18 @@ The request path is:
 1. The user types a message in the AI Chat panel in the browser.
 2. The browser forwards the message and any attached context references to the server running inside your Fabric Dev environment.
 3. The server assembles the full prompt (system prompt, conversation history, attached files, tool-call results, and auto-injected content from the agent's prompt template; it may also contain K2View-provided skills and reference content, when relevant).
-4. The server makes an outbound HTTPS call directly to the configured LLM provider (for example, Anthropic, OpenAI, Google) using the API key provisioned in Studio settings.
+4. The server makes an outbound HTTPS call to the configured LLM provider (for example, Anthropic, OpenAI, Google) using the API key provisioned in Studio settings. When [Fabric is configured as the LLM provider](/articles/24_non_DB_interfaces/15_LLM_interface.md#fabric-as-an-llm-provider), the call goes to Fabric instead, and Fabric calls the upstream provider using the credentials held in the project's AI LLM interface.
 5. The provider's response streams back to the server, which forwards it to the browser to display in the chat.
 
-K2View does not host or proxy LLM traffic. The API key is held by your Fabric Dev environment and is used to authenticate directly against the chosen provider. Network egress from the Fabric Dev environment to the provider must be permitted by your network policy.
+K2View does not host or proxy LLM traffic. The API key is held by your Fabric Dev environment - either in the Studio settings, or, when Fabric is the provider, in the project's AI LLM interface - and is used to authenticate against the chosen provider. Network egress to the provider must be permitted by your network policy.
 
 For fully on-premises operation, Studio AI supports **local model providers** such as Ollama. When configured like that, no data leaves your environment - the model runs on the Fabric Dev server (or a network-reachable host) and there is no outbound call to a third-party provider. See [Choose and Provision LLM](01_getting_started_with_studio_ai.md#choose-and-provision-llm) for the full list of supported providers. The same applies if you choose a self-hosted LLM at your organization's private premises or cloud, using the *Custom Models* settings. 
 
 ### API Keys
 
 API keys are entered in Studio AI settings (see [Getting Started with Studio AI](01_getting_started_with_studio_ai.md#choose-and-provision-llm)) and are stored as part of the Studio setup on the Fabric Dev server. They are not sent to K2View and are not transmitted to the browser after being saved.
+
+Alternatively, configure [Fabric as the LLM provider](16_custom_llm_providers.md#fabric-as-a-provider). Users then enter no API key at all: the provider credentials are defined once on the Fabric [AI LLM interface](/articles/24_non_DB_interfaces/15_LLM_interface.md), and access to the endpoint is controlled by the **LLM_INVOKE** permission granted to Fabric roles.
 
 
 
@@ -66,7 +68,7 @@ Tool availability per agent is visible in the **Tools** tab of AI Configuration.
 
 ### 3. The agent's prompt template auto-injects content
 
-Prompt templates support `~{readFile('...')}`, `~{fragment('...')}`, and other function references that pull content into the prompt every time the agent runs. See [Agents Prompt Customization](07_ai_configuration_and_prompts.md#function-tool-references-functionname). This is how some K2View agents (for example, @LU or @Interfaces) include project metadata by default.
+Prompt templates support `~{readFile('...')}`, `~{fragment('...')}`, and other function references that pull content into the prompt every time the agent runs. See [Agents Prompt Customization](07_ai_configuration_and_prompts.md#function-tool-references-functionname). This is how some K2View agents (for example, @Data-Product-Explorer or @Interfaces) include project metadata by default.
 
 ### 4. A capability is enabled
 
@@ -80,7 +82,7 @@ Prompt templates support `~{readFile('...')}`, `~{fragment('...')}`, and other f
 
 ## Per-Agent Data Profile
 
-The table below summarizes, for each built-in agent, the kinds of project information that may be sent to the LLM as part of doing its job. The list reflects each agent's tools and prompt template - to see them yourself, open the **Agents** tab in AI Configuration and click **Edit Prompt** next to an agent.
+The table below summarizes, for each commonly used agent, the kinds of project information that may be sent to the LLM as part of doing its job. The list reflects each agent's tools and prompt template - to see them yourself, open the **Agents** tab in AI Configuration and click the edit (pencil) icon next to a prompt template in the agent's **Prompt Templates** table. See [Customizing Agent Prompts](07_ai_configuration_and_prompts.md#opening-the-prompt-editor).
 
 <table>
   <thead>
@@ -91,12 +93,32 @@ The table below summarizes, for each built-in agent, the kinds of project inform
   </thead>
   <tbody>
     <tr>
+      <td><strong>@k2-assistant</strong></td>
+      <td>Project structure and the content of files it reads directly to answer or make a small edit; for larger requests it delegates to @k2-worker, which then applies to the same request.</td>
+    </tr>
+    <tr>
+      <td><strong>@k2-worker</strong></td>
+      <td>Content of workspace files it reads or edits, plus terminal output, test results, and build logs when it runs commands as part of a delegated task. See [Studio AI Agents](02_studio_ai_agents_reference.md#k2-worker).</td>
+    </tr>
+    <tr>
+      <td><strong>@Interfaces</strong></td>
+      <td>The list of interfaces in the project; the list of schemas for an interface; the table and column metadata of a schema. Does <strong>not</strong> read or send any row data from the source databases.</td>
+    </tr>
+    <tr>
+      <td><strong>@Data-Product-Explorer</strong></td>
+      <td>Data Product / Logical Unit metadata: the list of LUs or Data Products and, for a selected one, its tables and schema. Supersedes the earlier <code>@LU</code> agent, which no longer exists.</td>
+    </tr>
+    <tr>
+      <td><strong>@KB</strong></td>
+      <td>Nothing from the workspace. Sends the user question and retrieves content from K2View product documentation.</td>
+    </tr>
+    <tr>
       <td><strong>@Architect</strong></td>
-      <td>Project structure and the content of files the agent decides are relevant for producing a plan.</td>
+      <td>Project structure and the content of files relevant to answering a question about the project. Earlier documentation described @Architect as also generating implementation plans; that capability is unconfirmed in the current version. See [Other Studio AI Agents](14_other_studio_ai_agents.md#architect).</td>
     </tr>
     <tr>
       <td><strong>@Coder</strong></td>
-      <td>Content of workspace files; in Agent Mode also terminal output, test results, and build logs.</td>
+      <td>Content of workspace files; in Agent Mode also terminal output, test results, and build logs. See [Other Studio AI Agents](14_other_studio_ai_agents.md#coder-superseded-by-k2-worker).</td>
     </tr>
     <tr>
       <td><strong>@Code Reviewer</strong></td>
@@ -127,18 +149,6 @@ The table below summarizes, for each built-in agent, the kinds of project inform
       <td>The JSON of the active Graphit file.</td>
     </tr>
     <tr>
-      <td><strong>@Interfaces</strong></td>
-      <td>The list of interfaces in the project; the list of schemas for an interface; the table and column metadata of a schema. Does <strong>not</strong> read or send any row data from the source databases.</td>
-    </tr>
-    <tr>
-      <td><strong>@LU</strong></td>
-      <td>LU metadata - the list of LUs and for selected LU its tables.</td>
-    </tr>
-    <tr>
-      <td><strong>@KB</strong></td>
-      <td>Nothing from the workspace. Sends the user question and retrieves content from K2View product documentation.</td>
-    </tr>
-    <tr>
       <td><strong>@ClaudeCode</strong></td>
       <td>Content of workspace files; in long autonomous sessions also terminal output and test results.</td>
     </tr>
@@ -149,32 +159,11 @@ The table below summarizes, for each built-in agent, the kinds of project inform
 
 Custom agents created by your team (see [Creating Custom Agents](09_creating_custom_agents.md)) follow the same rules but may send different content depending on how they are configured.
 
-### Agents and Skills from the AI Studio Core Artifacts Extension
+### Agents and Skills from the Studio AI Core Artifacts Extension
 
-K2View publishes a Studio extension - the **AI Studio Core Artifacts** - that currently adds builder agents and reusable skills tailored to Fabric project work. After installation, some of the artifacts are copied and located  `.prompts/`, `.agents/` and `.fabric-wiki/`.
+K2View publishes a Studio extension, the **Studio AI Core Artifacts** extension (available on K2Exchange), that supplies all of the built-in K2View-specific agents and skills described throughout this article set, including @k2-assistant, @k2-worker, @Interfaces, @Data-Product-Explorer, @KB, @Architect, and @Agent-Builder. See [Getting Started with Studio AI](01_getting_started_with_studio_ai.md#install-the-studio-ai-core-artifacts-extension). After installation, its artifacts are located under `.agents/agents/` (agents) and `.agents/skills/` (skills) in the project, with some reference content under `.fabric-wiki/`.
 
-The extension currently contributes two additional agents:
-
-<table>
-  <thead>
-    <tr>
-      <th>Agent</th>
-      <th>Project information that may be sent to the LLM</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>@Broadway-Flow-Builder</strong></td>
-      <td>The list of available skills and a summary of recent project activity (recently changed files, project info, task context); content of workspace files the agent reads to build or modify <code>.flow</code> YAML files; bundled K2View reference content from <code>.fabric-wiki/</code> (~260 Broadway actor schemas, example flow patterns, Fabric Java API docs).</td>
-    </tr>
-    <tr>
-      <td><strong>@Broadway-Actor-Builder</strong></td>
-      <td>Same recent-activity summary as @Broadway-Flow-Builder; content of workspace files the agent reads to build or modify Broadway actor files (Java implementation and <code>.actor</code> JSON); bundled K2View reference content from <code>.fabric-wiki/</code> (actor schemas and Fabric Java API docs); Java compile diagnostics.</td>
-    </tr>
-  </tbody>
-</table>
-
-In addition to those two agents, the extension imports a set of **skills** that any agent can call via slash command (see [Skills and Slash Commands](11_skills_and_slash_commands.md)): `fabric-orchestrator`, `broadway-flow-builder`, `broadway-actor-builder`, `lu-builder`, `interface-builder`, `web-service-builder`, `fabric-project-helper`, and `fabric-java-api`. Each skill is a markdown file that the agent reads when activated; when the agent calls a skill, the skill's content is appended to the prompt and the agent then reads any further reference files the skill points to.
+In addition to its agents, the extension imports a set of **skills** that any agent can call via slash command (see [Skills and Slash Commands](11_skills_and_slash_commands.md)). At the time of writing, the installed skill catalog was: `broadway-actor-builder`, `broadway-flow-builder`, `data-product-builder`, `data-product-cowork`, `debug-broadway-flow`, `fabric-commands`, `fabric-java-docs`, `fabric-overview`, `fabric-project-helper`, `fabric-troubleshooting`, `interface-builder`, `report-builder`, and `web-service-builder`. Each skill is a `SKILL.md` file that the agent reads when activated; when the agent calls a skill, the skill's content is appended to the prompt and the agent then reads any further reference files the skill points to.
 
 Two important properties of the imported plugin content for security review:
 
@@ -187,7 +176,7 @@ Two important properties of the imported plugin content for security review:
 
 Studio AI provides full visibility into every request and response. For any chat message, you can view the **complete prompt** that was sent to the LLM, including the system prompt, all auto-injected content, the conversation history, the user message, and tool-call results.
 
-Open the **AI Agent History** panel from **View > AI Agent History** and select the agent and request you want to inspect. The panel shows the full request body and the full response, with a unique request ID for support correlation. See [Viewing Token Consumption and AI History](08_token_consumption_and_ai_history.md).
+Open the **AI Agent History** panel via **More Actions...** ("…") in the AI Chat panel toolbar, then **Open AI Agent History**, and select the agent and request you want to inspect. The panel shows the full request body and the full response, with a unique request ID for support correlation. See [Viewing Token Consumption and AI History](08_token_consumption_and_ai_history.md).
 
 This is the authoritative source of truth for what left your environment on any given request, and it is the recommended tool for security teams who want to audit Studio AI activity in a specific Fabric Dev environment.
 
@@ -202,6 +191,8 @@ AI features are off until an administrator explicitly enables them and provision
 ### Choose where data goes
 
 The LLM provider is configured per Fabric Dev environment. To keep all data on-premises, configure a local hosted LLM provider instead of a foundation cloud provider. To restrict to a specific cloud provider that has an enterprise data-handling agreement with your organization, configure only that provider.
+
+Configuring Fabric as the provider centralizes this choice: the model and its credentials are set once on the AI LLM interface, developers cannot point Studio at a provider of their own, and use of the endpoint is restricted by role.
 
 ### Disable individual agents
 
@@ -224,7 +215,7 @@ Use the **AI Agent History** panel (described above) to periodically review what
 ## At a Glance
 
 - **Where requests go:** outbound HTTPS from the Fabric Dev environment directly to the configured LLM provider. No K2View proxy.
-- **Who holds the API key:** the customer's Fabric Dev environment.
+- **Who holds the API key:** the customer's Fabric Dev environment - in Studio settings, or in the project's AI LLM interface when Fabric is the provider.
 - **What is sent by default:** the agent's system prompt, the conversation history, and the user's current message. Some agents additionally auto-inject project structure or configuration metadata (see the per-agent table above).
 - **What is sent on demand:** files the user attaches, files an agent reads via tools, and outputs of any enabled capabilities or MCP servers.
 - **What is not sent:** API keys, credentials, server environment variables, or any data outside the workspace.

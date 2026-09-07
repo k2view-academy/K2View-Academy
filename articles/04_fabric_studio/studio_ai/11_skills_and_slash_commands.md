@@ -1,113 +1,95 @@
 # Skills and Slash Commands
 
-Skills are reusable, structured workflows that you can invoke from the AI Chat using a **slash command**. Instead of typing a detailed prompt from scratch for a recurring task, you define the task once as a skill and trigger it with `/skillName` whenever you need it.
+Skills are reusable, structured instructions and domain knowledge that agents can draw on. They are named, and each skill's name doubles as a **slash command** you can type in the AI Chat input to invoke it directly.
 
-> **Note:** Skills are currently in **Alpha**. The interface and file format may change in future releases.
+> This article reflects the current `SKILL.md`-based format, shipped via the **Studio AI Core Artifacts** extension. It replaces an earlier `.prompttemplate`-based format described in older versions of this article; if you have old-format skill files, they will not appear in the current Skills list.
 
 ## What Is a Skill?
 
-A skill is a `.prompttemplate` file stored in a designated skills directory. It contains:
+A skill is a self-contained folder with a `SKILL.md` entry point, plus any supporting reference files (and, in some cases, evaluation examples). `SKILL.md` starts with a YAML frontmatter block and a markdown body:
 
-- A **YAML frontmatter** block with a `name`, `description`, and the slash command trigger
-- A **prompt body** that describes the task in detail, with the same `{{variable}}` and `~{function}` syntax used in agent prompts
+```
+---
+name: my-skill
+description: One or two sentences describing what this skill does and when to use it.
+---
 
-When you type the matching slash command in the chat input, Studio AI loads the skill's prompt and executes it with the currently addressed agent.
+Detailed instructions for the task, written in markdown.
+```
+
+The skill's `name` is also its slash command trigger; the skill above would be invoked with `/my-skill`. Studio AI can also load a relevant skill automatically based on your request, without you typing the slash command yourself, when the addressed agent (such as `@k2-assistant`) is configured to do so.
 
 ## Using Slash Commands in the Chat
 
-Type `/` in the chat input to see a list of available slash commands. Both built-in commands and your custom skills appear in this list. Select one or type the full command name and press **Enter**.
+Type `/` in the chat input to see a list of available skills as slash commands. Select one, or type the full name and press **Enter**.
 
 ```
-/analyze-gh-ticket
+/fabric-commands
 ```
 
-Slash commands can also accept arguments. Refer to the specific command's description for its expected input.
+## Skills Tab (AI Configuration)
 
-## Built-In Slash Commands
+Every installed skill is listed in the **Skills** tab of [AI Configuration](06_ai_configuration_and_settings.md#skills-tab): its name, description, and the file path to its `SKILL.md`. Click **Open** next to a skill to view its file directly.
 
-Studio AI includes a set of built-in slash commands for common development workflows:
+## Where Skills Are Stored
+
+Skills live under `.agents/skills/<skill-name>/SKILL.md` in your project (imported by the Studio AI Core Artifacts extension; see [Getting Started with Studio AI](01_getting_started_with_studio_ai.md#install-the-studio-ai-core-artifacts-extension)). The `@CreateSkill` agent also supports an alternate `.prompts/skills/` location. Check the **Location** column in the Skills tab for the exact path of any given skill rather than assuming one location.
+
+## Skills Available in This Project
+
+At the time of writing, this project's Skills tab listed the following (yours may differ):
 
 <table>
   <thead>
     <tr>
-      <th>Command</th>
-      <th>Description</th>
+      <th>Skill</th>
+      <th>Slash Command</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><code>/remember</code></td>
-      <td>Saves a piece of information — a convention, a preference, or a fact about the project — for the current agent to retain across the session. Useful for establishing context once without repeating it in every message.</td>
-    </tr>
-    <tr>
-      <td><code>/with-apptester</code></td>
-      <td>Triggers the current task with the AppTester capability enabled, equivalent to enabling the AppTester chip before sending your message.</td>
-    </tr>
-    <tr>
-      <td><code>/analyze-gh-ticket</code></td>
-      <td>Fetches a GitHub issue and asks the agent to analyze it in the context of your current project — summarizing the problem, identifying affected files, and suggesting an implementation approach.</td>
-    </tr>
-    <tr>
-      <td><code>/fix-gh-ticket</code></td>
-      <td>Fetches a GitHub issue and instructs @Coder to implement the fix directly, starting from the issue description.</td>
-    </tr>
-    <tr>
-      <td><code>/address-gh-review</code></td>
-      <td>Takes a GitHub pull request review and instructs @Coder to address each review comment in the codebase.</td>
-    </tr>
+    <tr><td>broadway-actor-builder</td><td><code>/broadway-actor-builder</code></td></tr>
+    <tr><td>broadway-flow-builder</td><td><code>/broadway-flow-builder</code></td></tr>
+    <tr><td>data-product-builder</td><td><code>/data-product-builder</code></td></tr>
+    <tr><td>data-product-cowork</td><td><code>/data-product-cowork</code></td></tr>
+    <tr><td>debug-broadway-flow</td><td><code>/debug-broadway-flow</code></td></tr>
+    <tr><td>fabric-commands</td><td><code>/fabric-commands</code></td></tr>
+    <tr><td>fabric-java-docs</td><td><code>/fabric-java-docs</code></td></tr>
+    <tr><td>fabric-overview</td><td><code>/fabric-overview</code></td></tr>
+    <tr><td>fabric-project-helper</td><td><code>/fabric-project-helper</code></td></tr>
+    <tr><td>fabric-troubleshooting</td><td><code>/fabric-troubleshooting</code></td></tr>
+    <tr><td>interface-builder</td><td><code>/interface-builder</code></td></tr>
+    <tr><td>report-builder</td><td><code>/report-builder</code></td></tr>
+    <tr><td>web-service-builder</td><td><code>/web-service-builder</code></td></tr>
   </tbody>
 </table>
 
+> Earlier built-in commands such as `/remember`, `/with-apptester`, `/analyze-gh-ticket`, `/fix-gh-ticket`, and `/address-gh-review` were not found in the current slash-command list and appear to have been replaced by this skill-based system.
+
 ## Creating Custom Skills
 
-To create a skill, add a `.prompttemplate` file to the skills discovery directory. Studio AI automatically discovers skills from `~/.theia/skills/` (global, available in all workspaces) and from `.theia/skills/` within your current project (workspace-specific, takes priority).
+To create a skill manually, add a folder under `.agents/skills/<skill-name>/` containing a `SKILL.md` file with the frontmatter and body format shown above. Reload the Studio window (**F1 > Developer: Reload Window**) after adding a new skill file to make it available.
 
-### Skill File Format
+Alternatively, address `@CreateSkill` and describe the skill you want; it will scaffold a well-structured `SKILL.md` for you. See [Studio AI Agents](02_studio_ai_agents_reference.md) and [Other Studio AI Agents](14_other_studio_ai_agents.md#createskill).
 
-```
----
-name: My Skill
-description: A one-line description shown in the slash command list
-command: my-skill
----
-
-You are helping the developer with a specific, recurring task.
-
-[Detailed prompt instructions here]
-
-Current file: {{currentRelativeFilePath}}
-```
-
-The `command` field in the frontmatter defines the slash command trigger. In the example above, the skill would be invoked with `/my-skill`.
-
-### Skill Discovery
-
-Skills are loaded when the Studio starts. After adding a new skill file, reload the Studio window (**F1 > Developer: Reload Window**) to make it available.
-
-Skills in `.theia/skills/` (workspace-level) take precedence over skills in `~/.theia/skills/` (global) when both define a command with the same name.
-
-## Example: A Code Review Skill
-
-Here is an example skill that performs a code review on the current file, checking for K2View-specific best practices:
+### Example: A Code Review Skill
 
 ```
 ---
-name: K2View Code Review
-description: Review the current file for K2View best practices and common issues
-command: k2review
+name: k2review
+description: Review the current file for K2View best practices and common issues, such as JDBC resource management, SQL injection risks, exception handling, and naming conventions.
 ---
 
 Review the code in {{currentRelativeFilePath}} for the following issues:
 
-1. JDBC resource management — ensure all connections, statements, and result sets are
+1. JDBC resource management: ensure all connections, statements, and result sets are
    closed, preferably with try-with-resources.
-2. SQL injection risks — verify that all SQL uses parameterized queries.
-3. Exception handling — check that exceptions are caught at the appropriate level and
+2. SQL injection risks: verify that all SQL uses parameterized queries.
+3. Exception handling: check that exceptions are caught at the appropriate level and
    logged correctly per our conventions.
-4. Naming conventions — verify method and variable names follow our team standards.
+4. Naming conventions: verify method and variable names follow our team standards.
 
 For each issue found, explain the problem and provide a corrected version of the relevant code.
 If no issues are found in a category, say so explicitly.
 ```
 
-With this skill saved, typing `/k2review` in the chat triggers the full review prompt against the currently open file.
+With this skill saved under `.agents/skills/k2review/SKILL.md`, typing `/k2review` in the chat triggers the full review prompt against the currently open file.

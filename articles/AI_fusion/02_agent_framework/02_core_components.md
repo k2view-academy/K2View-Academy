@@ -62,7 +62,7 @@ LLMs are invoked at various points in the agent workflow to perform different ta
 
 LLM interfaces are installed via K2exchange, offering integrations with multiple LLM providers, such as OpenAI, Anthropic, AWS Bedrock, and Google’s Vertex AI.
 
-For more information on provisioning LLM interfaces, read [here](05_llm_interfaces.md).
+For more information on provisioning LLM interfaces, read [here](/articles/24_non_DB_interfaces/15_LLM_interface.md).
 
 
 

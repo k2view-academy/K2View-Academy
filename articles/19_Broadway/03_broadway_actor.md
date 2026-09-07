@@ -10,7 +10,6 @@ When a flow requires business logic that is not supported by a built-in Actor, a
 
 This article describes the following options for working with Actors:
 - [Adding Actors to the Stages](03_broadway_actor.md#how-do-i-add-actor-to-stage) of a Broadway flow.
-- [Broadway Co-pilot](03_broadway_actor.md#broadway-co-pilot).
 - [Saving a flow as an Actor](03_broadway_actor.md#how-do-i-save-a-flow-as-an-actor) that can be used as an inner flow of other Broadway flows.
 - [Exporting Actors](03_broadway_actor.md#how-do-i-export-an-actor) to create inherited Actors with extended business logic. 
 
@@ -26,22 +25,6 @@ To add an Actor to a Stage in a Broadway flow:
 Note that you can add a call to an inner flow by switching the radio button from **Actors** to **Flows** at the top-right of the pop-up window. Select a flow and click **Submit**. At that point, the **InnerFlow** Actor, whose aim is to execute the Broadway flow that it encapsulates, is added to the stage. [Click for more information about Inner Flows.](22_broadway_flow_inner_flows.md)
 
 <img src="images/99_04_01_add_actor.PNG" alt="image" style="zoom:80%;" />
-
-### Broadway Co-pilot
-
-Starting from Fabric V8.2, Broadway includes an AI-based capability to search for required actors using natural language rather than standard key words. 
-
-To start using the Co-pilot, make sure an LLM AI interface is defined in the project as it is a prerequisite. Note that prior to an AI interface creation in a project, it is required to install the relevant [extension](/articles/04_fabric_studio/28_web_k2exchange.md) (e.g. OpenAI Connector).
-
-Open the **Add Actor** window, select the **AI** icon as shown below and populate the prompt describing what action should be performed by the actors:
-
-<img src="images/99_04_01_add_by_ai.png" alt="image" style="zoom:80%;" />
-
-
-
-Upon clicking **Enter**, the LLM model is invoked. The LLM returns an explanation, stating what actors are needed, and accordingly they are retrieved from the Broadway repository. At this stage, the actors can be added to a flow, and the user should complete the flow creation by adding the links between the actors. When multiple actors are suggested by the Co-pilot, they can be added all at once.
-
-<img src="images/99_04_01_add_by_ai_2.png" alt="image" style="zoom:80%;" />
 
 ### How Do I Save a Flow as an Actor?
 

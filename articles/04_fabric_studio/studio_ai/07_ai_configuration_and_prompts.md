@@ -1,12 +1,12 @@
 # Customizing Agent Prompts
 
-Every agent in Studio AI is driven by a **prompt template** — a structured text file that tells the agent who it is, what it knows, and how it should behave. Studio AI lets you view and edit these templates directly, so you can tailor any agent's behavior to your team's conventions, K2View project structure, or coding standards.
+Every agent in Studio AI is driven by a **prompt template**: a structured text file that tells the agent who it is, what it knows, and how it should behave. Studio AI lets you view and edit these templates directly, so you can tailor any agent's behavior to your team's conventions, K2View project structure, or coding standards.
 
 ## Opening the Prompt Editor
 
-1. Open the **AI Configuration** panel (click the configuration icon in the AI Chat panel bar, or go to **View > AI Configuration**).
+1. Open the **AI Configuration** panel: click **More Actions...** ("…") in the AI Chat panel toolbar, then **Open AI Configuration**. See [Using the AI Chat](03_using_the_ai_chat.md#the-ai-chat-toolbar).
 2. Select the **Agents** tab.
-3. Click the **Edit Prompt** button next to the agent you want to customize.
+3. Click the edit (pencil) icon next to the prompt template you want to customize, in the agent's **Prompt Templates** table.
 
 The prompt template opens in the Studio editor, where you can modify it like any other file.
 
@@ -50,7 +50,7 @@ description: A Coder variant tuned for our Java coding standards
 ---
 ```
 
-The `name` and `description` fields appear in the AI Configuration panel and in the agent selector. They do not affect the agent's behavior — they are for identification only.
+The `name` and `description` fields appear in the AI Configuration panel and in the agent selector. They do not affect the agent's behavior; they are for identification only.
 
 ## Prompt Fragments
 
@@ -68,32 +68,28 @@ Fragments support the same `{{variable}}` and `~{function}` syntax as regular pr
 
 ## Saving and Resetting Prompts
 
-Changes to a prompt template are saved when you save the file in the editor (Ctrl+S). The updated prompt takes effect for the next chat session that uses the agent — ongoing sessions continue with the prompt that was active when they started.
+Changes to a prompt template are saved when you save the file in the editor (Ctrl+S). The updated prompt takes effect for the next chat session that uses the agent; ongoing sessions continue with the prompt that was active when they started.
 
 To reset a built-in agent's prompt to its original default, click the **Reset to Default** button in the Agents tab next to the agent. Custom agents do not have a default to reset to.
 
 ## Where Prompt Files Are Stored
 
-Prompt templates for built-in agents are stored within the Studio application. The Studio resolves prompt files in the following priority order:
+Confirmed live: a built-in agent's prompt template (for example `@Coder`'s, `coder-system-agent-mode.prompttemplate`) opens from a **`.prompts/`** folder in the project, not from inside the Studio application itself. Editing and saving it (Ctrl+S) edits that project file directly. The `promptTemplates.promptTemplatesFolder` setting confirms the full path: `<workspace root>/.prompts` (falling back to the user config directory if not customized). See [AI Features Settings](15_ai_features_settings.md#prompt-templates-and-skills).
 
-1. **Workspace-level overrides** — files in your project's `.theia/` directory. These take precedence for anyone working in that workspace.
-2. **Global user overrides** — files in your user-level Theia configuration directory (`~/.theia/`). These apply across all workspaces on your machine.
-3. **Application defaults** — the built-in prompts shipped with Studio AI.
-
-This means you can customize a prompt for a specific project by placing the override in the project's `.theia/` folder, without affecting other projects or other users.
+The older claim that overrides live in a project's `.theia/` directory or a user-level `~/.theia/` directory is confirmed outdated; `.theia/` is not used by the current version.
 
 ## Practical Customization Examples
 
 **Enforcing a coding style:**
 
 ```
-Always use try-with-resources for JDBC operations. Never use raw string concatenation for SQL — use parameterized queries.
+Always use try-with-resources for JDBC operations. Never use raw string concatenation for SQL; use parameterized queries.
 ```
 
 **Adding project-specific context:**
 
 ```
-The K2View project in this workspace follows the naming conventions defined in ~{readFile('.theia/naming-conventions.md')}.
+The K2View project in this workspace follows the naming conventions defined in ~{readFile('.prompts/naming-conventions.md')}.
 ```
 
 **Restricting scope:**

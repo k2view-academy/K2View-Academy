@@ -1,4 +1,6 @@
-# Plan-First Development with the Architect Agent
+# Plan-First Development with the Architect Agent (Deprecated)
+
+> **This workflow appears deprecated.** @Architect's current configured description no longer mentions generating implementation plans or an "Execute with Coder" button; it now reads as a read-only project Q&A agent. See [Other Studio AI Agents](14_other_studio_ai_agents.md#architect) for its current description. This article is kept for reference in case the workflow below still works in your environment, but it has not been reconfirmed live.
 
 For complex or multi-step development tasks, the most effective approach in Studio AI is to plan before you code. The @Architect agent is designed specifically for this: it takes your goal, reasons about the structure of your project, and produces a detailed implementation plan that @Coder can then execute.
 

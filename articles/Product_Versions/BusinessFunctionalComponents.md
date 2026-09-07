@@ -167,7 +167,7 @@ Functional components included with the **K2view Platform**. Component names lin
       <td>Transactional processing support.</td>
     </tr>
     <tr>
-      <td><a href="https://support.k2view.com/Academy/articles/19_Broadway/03_broadway_actor.html">AI Copilot</a></td>
+      <td><a href="https://support.k2view.com/Academy/articles/04_fabric_studio/studio_ai/01_getting_started_with_studio_ai.html">AI Copilot</a></td>
       <td>Natural language development assistant.</td>
     </tr>
   </tbody>
