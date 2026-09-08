@@ -1,4 +1,4 @@
-<strong>Upgrading Fabric and Studio with K2cloud</strong>
+# Upgrading Fabric and Studio with K2cloud
 
 K2cloud provides self-service capabilities for selecting, upgrading, and rolling back Fabric and Studio versions. 
 
