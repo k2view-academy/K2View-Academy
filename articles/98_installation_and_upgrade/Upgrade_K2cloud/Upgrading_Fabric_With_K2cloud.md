@@ -51,7 +51,7 @@ K2cloud supports two deployment models:
 </thead>
 <tbody>
 <tr>
-<td><strong>Customer-managed K2cloud</strong></td>
+<td><strong>K2cloud Self-Hosted</strong></td>
 <td>The customer copies the Fabric and Studio images into its container registry at the locations configured for the Site.</td>
 <td>The customer selects the version and performs the Space upgrade using K2cloud.</td>
 </tr>
@@ -65,6 +65,11 @@ K2cloud supports two deployment models:
 
 The version-selection, upgrade, monitoring, validation, and rollback workflows are otherwise the same for both deployment models.
 
+## At a Glance
+
+![](/articles/80_k2cloud/images/06_space_upgrade_glance.png)
+
+
 ## Upgrade Workflow
 
 The K2cloud upgrade workflow consists of the following steps:
@@ -74,16 +79,14 @@ The K2cloud upgrade workflow consists of the following steps:
 3. **Upgrade the Space** — Initiate the upgrade from the Space tile and monitor its progress.
 4. **Validate the upgrade** — Validate the upgraded Space before progressing the release through additional environments.
 5. **Rollback if necessary** — If a prior Fabric Image version remains available, K2cloud supports rollback using the same Space upgrade workflow.
-
-## At a Glance
-
-![](/articles/80_k2cloud/images/06_space_upgrade_glance.png)
+6. 
 
 ## Video Walkthrough
 
 You can get an overview of the K2cloud upgrade capabilities at:
 
 https://download.k2view.com/index.php/s/3rgZczMc6eEOU7t
+
 
 ## Related Upgrade Procedures
 
