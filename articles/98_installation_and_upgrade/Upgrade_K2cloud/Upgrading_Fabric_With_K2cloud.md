@@ -5,6 +5,7 @@
 - [Overview](#overview)
 - [K2cloud Deployment Models](#k2cloud-deployment-models)
 - [Upgrade Workflow](#upgrade-workflow)
+- [At A Glance](#at-a-glance)
 - [Video Walkthrough](#video-walkthrough)
 - [Related Upgrade Procedures](#related-upgrade-procedures)
 
