@@ -12,4 +12,8 @@ Spaces are deployed K2view environments managed through the K2cloud Orchestrator
 <li><a href="/articles/80_k2cloud/06-spaces/80_k2cloud_spaces_space_lifecycle.md">Space Lifecycle</a></li>
 <li><a href="/articles/80_k2cloud/06-spaces/80_k2cloud_spaces_delete_a_space.md">Delete a Space</a></li>
 <li><a href="/articles/80_k2cloud/06-spaces/80_k2cloud_spaces_space_isolation.md">Space Isolation</a></li>
+<li><a href="/articles/80_k2cloud/06-spaces/80_k2cloud_spaces_upgrade_space.md">Upgrading Spaces</a></li>  
 </ul>
+
+
+
