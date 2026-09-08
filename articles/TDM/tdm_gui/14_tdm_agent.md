@@ -39,9 +39,9 @@ To enable the TDM Agent, complete the following steps:
 
 ## Scope and Limitations
 
-The TDM Agent currently searches **Business Entity (BE)-based tasks only**. It does not search table-level tasks.
+- The TDM Agent currently searches **Business Entity (BE)-based tasks only**. It does not search table-level tasks.
 
-The TDM Agent currently supports the following task actions:
+- The TDM Agent currently supports the following task actions:
 
 <table>
   <thead>
@@ -73,4 +73,5 @@ The TDM Agent currently supports the following task actions:
     </tr>
   </tbody>
 </table>
-The TDM Agent does not currently support searching for **Synthetic Generation**, **Entity Clone**, or **Entities & Referential Data** tasks. These tasks can be searched for using the **Search** window.
+- The TDM Agent does not currently support searching for **Synthetic Generation**, **Entity Clone**, or **Entities & Referential Data** tasks. These tasks can be searched for using the **Search** window.
+- **Chat History** — The TDM Agent does not currently support viewing or reopening previous conversations. Users must start a new chat each time they access the agent.
