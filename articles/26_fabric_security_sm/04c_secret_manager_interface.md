@@ -11,6 +11,7 @@ To use a secrets management service, in the Interface Editor (including Environm
 1. [Interface Connection Settings](#interface-connection-settings)  
    1.1 [Setting and marking an interface property to use a Secrets Management service](#setting-and-marking-an-interface-property-to-use-a-secrets-management-service)  
    1.2 [Provider-Specific Considerations and Usage Patterns](#provider-specific-considerations-and-usage-patterns)  
+   - [AWS Secrets Manager](#aws-secrets-manager)  
    - [HashiCorp Vault](#hashicorp-vault)  
    - [CyberArk CCP](#cyberark-ccp)  
    - [One Identity Safeguard](#one-identity-safeguard)  
@@ -60,6 +61,17 @@ The ${secretmanager:<id-at-secret-manager>} pattern should be used in the interf
 ### Provider-Specific Considerations and Usage Patterns
 
 The following are additional notes and considerations regarding **specific** Secrets Management service providers:
+
+#### **AWS Secrets Manager**
+
+   * The secret must be defined in AWS as a **key/value** secret, which AWS stores as a JSON object. Fabric reads the requested field out of that object, so a *Plaintext* secret cannot be used.
+
+   * The pattern is `secret-name.key`. For example, for a secret named "OracleDb" holding the keys `host` and `password`: <studio>${secretmanager:OracleDb.host} and ${secretmanager:OracleDb.password}</studio><web>OracleDb.host and OracleDb.password</web>
+
+     The secret name is separated from the key at the **first** dot. If the secret name itself contains a dot, use the URL query string instead: `secretName=my.secret.name&secretKey=password`.
+
+   * The secret can be identified either by its name or by its full **ARN**. When using an ARN, prefix the reference with the provider name, as described in [Multi Secrets Management Services](#multi-secrets-management-services). For example: <web>aws:arn:aws:secretsmanager:us-east-1:123456789012:secret:OracleDb-AbCdEf.password</web><studio>${secretmanager:aws:arn:aws:secretsmanager:us-east-1:123456789012:secret:OracleDb-AbCdEf.password}</studio>
+
 
 #### **HashiCorp Vault**
 
