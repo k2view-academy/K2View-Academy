@@ -344,6 +344,41 @@
 			]
 		},
 		{
+			"group display name": "Fabric Security",
+			"group icon": "images/security-icon.png",
+			"visible in main": true,
+			"topics": [
+				{
+					"display name": "Concepts and Methods",
+					"value": "26_fabric_security"
+				},
+				{
+					"display name": "User & Access Management",
+					"value": "26_fabric_security_iam"
+				},
+				{
+					"display name": "Secret Manager Integration",
+					"value": "26_fabric_security_sm"
+				},
+				{
+					"display name": "Master Key Management",
+					"value": "26_fabric_security_mk"
+				},
+				{
+					"display name": "Auditing",
+					"value": "27_auditing"
+				},
+				{
+					"display name": "Authorization",
+					"value": "17_fabric_credentials"
+				},
+				{
+					"display name": "Infrastructure Security",
+					"value": "99_fabric_infras"
+				}
+			]
+		},
+		{
 			"group display name": "K2cloud Service",
 			"group icon": "images/catalog-icon.png",
 			"visible in main": false,
@@ -506,41 +541,6 @@
 				{
 					"display name": "Maintenance and Support",
 					"value": "98_installation_and_upgrade/Maintenance"
-				}
-			]
-		},
-		{
-			"group display name": "Fabric Security",
-			"group icon": "images/security-icon.png",
-			"visible in main": true,
-			"topics": [
-				{
-					"display name": "Concepts and Methods",
-					"value": "26_fabric_security"
-				},
-				{
-					"display name": "User & Access Management",
-					"value": "26_fabric_security_iam"
-				},
-				{
-					"display name": "Secret Manager Integration",
-					"value": "26_fabric_security_sm"
-				},
-				{
-					"display name": "Master Key Management",
-					"value": "26_fabric_security_mk"
-				},
-				{
-					"display name": "Auditing",
-					"value": "27_auditing"
-				},
-				{
-					"display name": "Authorization",
-					"value": "17_fabric_credentials"
-				},
-				{
-					"display name": "Infrastructure Security",
-					"value": "99_fabric_infras"
 				}
 			]
 		},
