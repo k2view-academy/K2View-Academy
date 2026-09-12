@@ -269,7 +269,7 @@
 					"value": "25_environments"
 				},
 				{
-					"display name": "Fabric Deployment",
+					"display name": "Deployment",
 					"value": "16_deploy_fabric"
 				},
 				{
@@ -319,11 +319,11 @@
 					]
 				},
 				{
-					"display name": "Fabric Monitoring",
+					"display name": "Monitoring",
 					"value": "34_JMX_statistics"
 				},	
 				{
-					"display name": "Fabric Troubleshooting",
+					"display name": "Troubleshooting",
 					"value": "21_Fabric_troubleshooting"
 				}
 			]
