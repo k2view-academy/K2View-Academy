@@ -321,7 +321,11 @@
 				{
 					"display name": "Fabric Monitoring",
 					"value": "34_JMX_statistics"
-				}				
+				},	
+				{
+					"display name": "Fabric Troubleshooting",
+					"value": "21_Fabric_troubleshooting"
+				}
 			]
 		},
 		{
