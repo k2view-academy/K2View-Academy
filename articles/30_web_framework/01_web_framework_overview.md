@@ -1,6 +1,6 @@
-# Web Framework Overview 
+# Overview 
 
-The K2view web framework is a container that hosts multiple web applications and provides out-of-the-box services. It improves the system's usability by providing one unified tool with links to several frequently used web applications running on the same application server. Instead of manually typing the URL to open each application, users can log in to the K2view web framework and select the application from the context menu. 
+K2view offers a web framework container that hosts multiple web applications and bundled applications. It improves usability by providing a single tool with links to several frequently used web applications running on the same application server. Instead of manually typing the URL to open each application, users can log in to the K2view web framework and select the application from the context menu. 
 
 <img src="images/30_01_menu.PNG" alt="image" style="zoom:80%;" />
 
