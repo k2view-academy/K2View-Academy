@@ -149,15 +149,15 @@
 			"visible in main": true,
 			"topics": [
 				{
-					"display name": "Fabric Overview",
+					"display name": "Overview",
 					"value": "01_fabric_overview"
 				},
 				{
-					"display name": "Fabric Server Architecture",
+					"display name": "Server Architecture",
 					"value": "02_fabric_architecture"
 				},
 				{
-					"display name": "Fabric Apps",
+					"display name": "Applications",
 					"sub-topics": [
 						{
 							"display name": "Web Framework",
