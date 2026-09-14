@@ -11,7 +11,7 @@
 
 - *Affinity* refers to Fabric assigning a job or a batch process to a specific handling node within a Fabric cluster. This is particularly handy when specific nodes are reserved for specific tasks or need to be dedicated to time-consuming or heavy processing executions. 
 
-  Click [here](Task affinity can include either a DC name or a cluster Logical ID.md) for more information about the batch affinity.
+  Click [here](/articles/20_jobs_and_batch_services/19_affinity_management.md) for more information about the batch affinity.
 
 - Task execution affinity can be specified using either a **DC name** or a **cluster Logical ID**.
 
@@ -124,10 +124,8 @@ Starting with **TDM 9.5**, you can define a **different default number of worker
    A new parameter, **`MAX_NO_OF_WORKERS_FOR_EXECUTION`**, has been added to the **`TDM_GENERAL_PARAMETERS`** table.
   - When set to **-1**, the parameter is ignored.
   - When set to a value **greater than 0**, it is used as the default number of workers for TDM task executions.
-- **Environment**
-   You can configure the **maximum number of workers per system** in the [Environment](/articles/TDM/tdm_gui/11_environment_products_tab.md).
-- **Task**
-   You can define the **maximum number of workers** at the task level, either on the **Source** component or the **Target** component.
+- **Environment** - You can configure the **maximum number of workers per system** in the [Environment](/articles/TDM/tdm_gui/11_environment_products_tab.md).
+- **Task** - You can define the **maximum number of workers** at the task level, either on the **Source** component or the **Target** component.
    This setting is supported for both:
   - [Entity-level tasks](/articles/TDM/tdm_gui/14b_task_source_component_entities.md#system--logical-units-tab---affinity-and-max-number-of-workers)
   - [Table-level tasks](/articles/TDM/tdm_gui/14c_task_source_component_tables.md)
