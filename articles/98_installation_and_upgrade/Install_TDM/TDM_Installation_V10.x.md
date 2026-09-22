@@ -97,7 +97,7 @@ If internet access is available, perform the following steps:
 If internet access is unavailable, follow the following steps:  
 
 - Download the VSIX file from the download page. Please request a link to this file from your K2view representative.
-  - <a href="https://k2view.sharepoint.com/:f:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v9.x/V9.5?csf=1&web=1&e=jANmIa">Download Links for K2view Representatives</a>. This link is accessible only to K2view representatives.
+  - <a href="https://k2view.sharepoint.com/:w:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v10.x/V10.0/TDM%2010.0.1_download_links.docx?d=w9aeae2d5cbf240dc9fa6e0d6ad5ace69&csf=1&web=1&e=j85P2E">Download Links for K2view Representatives</a>. This link is accessible only to K2view representatives.
   
 - Upload the file to the TDM project: 
   -  Right-click on **project-resources** from the Project tree.
@@ -184,7 +184,7 @@ To confirm what your environment is actually using:
 #### TDM Library Installation
 
 - Download the TDM Library export files from the links provided by your K2view representative.
-  - <a href="https://k2view.sharepoint.com/:f:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v9.x/V9.5?csf=1&web=1&e=jANmIa">Download Links for K2view Representatives</a>. This link is accessible only to K2view representatives.
+  - <a href="https://k2view.sharepoint.com/:w:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v10.x/V10.0/TDM%2010.0.1_download_links.docx?d=w9aeae2d5cbf240dc9fa6e0d6ad5ace69&csf=1&web=1&e=j85P2E">Download Links for K2view Representatives</a>. This link is accessible only to K2view representatives.
 
 
 - Once downloaded, import the TDM Library export file using the **Import All** option: Right-click on the root of the Project tree, click on **Import**, and select **Import All...**, then in the File Browser, choose the export file to be imported. The following LUs would then be imported into your project: TDM, TDM_LIBRARY, and the TDM_TableLevel.
@@ -240,7 +240,7 @@ Two deployment models are supported: On-Prem VM Installation and K2cloud Install
 The following prerequisites apply to both deployment models:
 - Fabric: Install Fabric v8.4.x.
 - PostgreSQL: Required for both the Fabric System DB (operational) and the TDM operational DB.
-    - TDM v9.5 was certified with PostgreSQL v17.
+    - TDM v10.x was certified with PostgreSQL v18.4.
 - Kafka: Not required for TDM projects.
 - Git: Recommended use of separate branches for development, testing (SIT), and production.
     - Development → Testing → Production merge flow.
@@ -269,6 +269,43 @@ The following prerequisites apply to both deployment models:
 6.	Offline Deployment
     - Refer to [Deploy a Project](/articles/16_deploy_fabric/04_deploy_project.md).
 
+### TDM PostgreSQL Installation - Permissions Required for TDM Deployment
+
+TDM uses two PostgreSQL connections during deployment and operation:
+
+- **POSTGRESQL_ADMIN** — Used during initial TDM provisioning to create the TDM operational database (**TDMDB**), create and configure the TDM database user, and create or grant access to the required database and schema objects.
+  
+  The TDM database can also be created in advance. In this case, the initial TDM deployment does not need to create TDMDB; it only needs to create the required TDM tables and sequences in the existing database.
+
+- **TDM** — Used by TDM for ongoing access to TDMDB.
+
+The **POSTGRESQL_ADMIN** user does not need to be a PostgreSQL **SUPERUSER**. This is particularly important when using managed PostgreSQL services, where creating or using PostgreSQL superusers may not be permitted.
+
+The **POSTGRESQL_ADMIN** user must have sufficient permissions to:
+
+- Create TDMDB, when TDM is configured to create the database.
+- Create and configure the TDM database user.
+- Connect to TDMDB.
+- Create and manage the schemas and database objects required by TDM.
+- Grant the TDM database user the required database and schema privileges.
+
+The **TDM database user** must have sufficient permissions within TDMDB to:
+
+- Connect to the database.
+- Access the schemas used by TDM.
+- Create, alter, and drop the required tables and sequences.
+- Select, insert, update, and delete data in TDM tables.
+
+### Managed PostgreSQL Services
+
+When using a managed PostgreSQL service, ensure that the administrative account configured for **POSTGRESQL_ADMIN** has the required database and schema privileges as described above.
+In particular, the **TDM** database user must have sufficient privileges on the target schema to create and manage the TDM objects required for deployment.
+
+Insufficient schema privileges can cause TDM deployment to fail with errors such as:
+
+```text
+ERROR: permission denied for schema public
+```
 
 ### K2cloud Installation
 
