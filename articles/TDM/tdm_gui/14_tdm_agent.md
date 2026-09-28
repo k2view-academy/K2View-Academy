@@ -10,21 +10,23 @@ This makes task execution faster and easier, particularly for users who may not 
 
 The TDM Agent is available **in addition to** the existing search option in the **Manage Your Tasks** window. It does not replace the existing search functionality.
 
-## Installation
+## Prerequisite
+Install Fabric 8.5.x or later.
+
+## Installation Steps
 
 To enable the TDM Agent, complete the following steps:
 
-1. **Install the TDM Agent extension.**  Verify that the **aifusion** LU (Data Product) is added to the project.
+1. **Install the TDM Agent extension.** Verify that the **aifusion** LU (Data Product) is added to the project.
+2. **Install an LLM extension** (e.g. Anthropic).
+3. **Define an LLM interface** on the installed LLM extension.
+4. **Edit the `apps.json` file.** In the **TDM** application entry, set the `showChat` attribute to `true`. This attribute is set to `false` by default.
+5. **Redeploy the TDM LU.**
 
-2. **Install an LLM extension** (e.g. Anthropic)
-
-
-4. **Define an LLM interface** upon the installed LLM extension.
-5. **Edit the `apps.json` file.** In the **TDM** application entry, set the **`showChat`** attribute to `true`. This attribute is set to `false` by default.
-6. **Redeploy the TDM LU.**
-
-> **Important:** The TDM deployment is required to run the **`initRefreshTaskDesc`** Broadway job, which set during the TDM deploy. This job scans the TDM tasks and updates their descriptions in a dedicated table, which the TDM Agent uses to match tasks to user requests.
-
+> **Important notes:**
+>
+> * The TDM deployment is required to run the `initRefreshTaskDesc` Broadway job, which is configured during the TDM deployment. This job scans the TDM tasks and updates their descriptions in a dedicated table. The TDM Agent uses this information to match tasks to user requests.
+> * If you upgrade your TDM project from a version earlier than 10.0.1, verify that the `java.project.referencedLibraries` attribute in the workspace `settings.json` file contains the following JAR path: `/opt/apps/fabric/workspace/fabric/lib/fabric/fabric-task*.jar`.
 
 
 ## How It Works
