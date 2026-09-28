@@ -1,14 +1,14 @@
 # K2cloud Self-hosted Kubernetes Installation System Requirements
 
-This article describes the requirements and prerequisites for the K2cloud *self-hosted* cloud deployment, which is based on the Kubernetes (K8s) infrastructure, when deployed at your cloud. The supported cloud providers are: AWS, GCP, and Azure.
+This article describes the requirements and prerequisites for the K2cloud *self-hosted* cloud deployment, which is based on the Kubernetes (K8s) infrastructure, when deployed at your cloud. Supported cloud providers include AWS, GCP, and Azure.
 
 K2cloud is also available as a *fully-managed* service (PaaS), where K2view manages the platform for you, with all relevant deployments and installations, on a segregated arena in the cloud.
 
 
 
-A Terraform sample for the creation and installation of the infrastructure, as well as the Helm chart used during the deployment, can be found [here](https://github.com/k2view/blueprints/).
+A Terraform sample for creating and installing the infrastructure, along with the Helm chart used for deployment, is available [here](https://github.com/k2view/blueprints/).
 
-The K2cloud platform's Orchestrator handles the namespaces creation and the ongoing lifecycle.
+The K2cloud platform's Orchestrator handles namespace creation and ongoing lifecycle management.
 
 ## Table of Contents
 
@@ -57,7 +57,7 @@ A Kubernetes worker node is expected to meet the following requirements:
 </tbody>
 </table>
 
-The CPU to memory ratio is useful for memory optimized machines' profile.
+The CPU-to-memory ratio is useful for memory-optimized machines' profile.
 
 ### How Many Nodes Do I Need?
 
@@ -65,7 +65,7 @@ Determining the base number of the required worker nodes, as well as the maximum
 
 Below are some use cases:
 
-* The recommended resources for **Studio** namespaces, for Fabric POD, are: 4 cores and 16GB RAM. (Several applications are running on this POD: Fabric runtime, Studio, and Neo4J). 
+* The recommended resources for **Studio** namespaces for the Fabric POD are: 4 cores and 16GB RAM. (Several applications are running on this POD: Fabric runtime, Studio, and Neo4J). 
 
   Additional PODs may be required, depending on the project and solution types:
 
@@ -76,16 +76,16 @@ Below are some use cases:
         * Fabric: 4 cores, 16GB RAM (note that in this case, the Kafka application is also running on this POD).
         * Cassandra: 2 cores, 8GB RAM
 
-* **Non-Studio** namespaces, such as UAT, SIT, pre-production, and production, require a cluster of several Fabric PODs, using K8S auto-scale capabilities.
+* **Non-Studio** namespaces, such as UAT, SIT, pre-production, and production, require a cluster of several Fabric PODs, using K8S auto-scaling capabilities.
 
-  On the other hand, PODs and resources that are required for Studio namespace, might not be needed here: for a non-studio case, it is recommended to use managed services (buckets / blob-storage for a massive storage; managed DBs like managed Postgres or managed Cassandra; managed Kafka rather than running it on Fabric POD).
-  Accordingly, a namespace might contain only Fabric Pods, where two cores and 8GB RAM are required. Just so you know, different resources will be necessary, according to your project's needs.   
+  On the other hand, PODs and resources that are required for the Studio namespace might not be needed here: for a non-studio case, it is recommended to use managed services (buckets / blob-storage for massive storage; managed DBs like managed Postgres or managed Cassandra; managed Kafka rather than running it on Fabric PODs).
+  Accordingly, a namespace might contain only Fabric Pods, which require 2 cores and 8GB RAM. Just so you know, different resources will be necessary, according to your project's needs.   
 
 
 
-> Note: You may consider having several clusters. For example: Dev cluster for Studio, QA, preproduction, and Production. This separation leads to a higher enforcement of security and privacy policies (that is, which clusters are allowed to access what data platforms/DBs). Additionally, it can help with resource allocation, as scaling in and out may be different, and you may wish to avoid the effect of Studio namespaces on production and vice versa.
+> Note: You may consider having several clusters. For example: Dev cluster for Studio, QA, preproduction, and Production. This separation leads to stronger enforcement of security and privacy policies (i.e., which clusters can access which data platforms/DBs). Additionally, it can help with resource allocation, as scaling in and out may differ, and you may want to avoid Studio namespaces affecting production and vice versa.
 >
-> In POT - for Studio namespaces, a single 3-node K8s cluster is required. 
+> In POT - for Studio namespaces, a single 3-node K8S cluster is required. 
 
 
 
@@ -108,28 +108,28 @@ While setting up a K8s cluster, you shall follow these guidelines:
     - Amazon EFS CSI Driver is installed (see [here](https://docs.aws.amazon.com/eks/latest/userguide/efs-csi.html) and [here](https://github.com/kubernetes-sigs/aws-efs-csi-driver/blob/master/docs/README.md#examples) for guidelines and examples).
     - Amazon EBS CSI Driver shall be installed. (see [here](https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html) for guidelines).
     - Cluster auto-scaler is set (see [here](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/README.md) for more information. It can be any cluster auto-scaler). Auto-scaling is not required for Dev Studio type clusters.
-    - Have a certificate attached to the LB level.
+    - Have a certificate attached at the LB level.
   - GCP
     - Have GKE with 2 AZs (due to GCP limitation of regional-pd volumes. Refer [here]([https://cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/regional-pd) for more information).
     - Provide K2view with the cluster's TLS/HTTPS certificate.
   - Azure
     - Provide K2view with the cluster's TLS/HTTPS certificate.
-    - Recommended: Have AKS on a single AZ (Azure does not support having persistent volumes across AZ, which can affect the user experience when K8s revives or moves its namespace).
+    - Recommended: Have AKS on a single AZ (Azure does not support having persistent volumes across AZs, which can affect the user experience when K8S revives or moves its namespace).
 
 > The proposed sample Terraform defines several modules that are part of the cluster preparations. If, according to your organization's needs, you need to change some parts of it or run your Terraform, ensure the following:
 > * You use NGINX Ingress controller (see [here](https://kubernetes.github.io/ingress-nginx/deploy/) the installation instructions).
-> * You have a CNI for the cluster's network policy (see [here](https://docs.tigera.io/calico/3.25/getting-started/kubernetes/helm#install-calico) the installation instructions for Calico CNI. K2cloud deployments use basic network policy, and accordingly, most of the CNIs fit.
+> * You have a CNI for the cluster's network policy (see [here](https://docs.tigera.io/calico/3.25/getting-started/kubernetes/helm#install-calico) the installation instructions for Calico CNI. K2cloud deployments use basic network policy; accordingly, most CNIs fit.
 
 
 ### Persistent Volumes and Storage Classes
 
 The type of volume that shall be provisioned depends on the cloud provider:
 
-- AWS: EFS storage class is being used for Studio namespaces. Please refer [here](https://raw.githubusercontent.com/kubernetes-sigs/aws-efs-csi-driver/master/examples/kubernetes/dynamic_provisioning/specs/storageclass.yaml) to the EFS storage class sample.
+- AWS: EFS storage class is being used for Studio namespaces. Please refer to [here](https://raw.githubusercontent.com/kubernetes-sigs/aws-efs-csi-driver/master/examples/kubernetes/dynamic_provisioning/specs/storageclass.yaml) for the EFS storage class sample.
 
-  These are the default names and UIDs that are used by K2cloud deployments. If different values have to be set, provide them to K2view. 
+  These are the default names and UIDs that are used by K2cloud deployments. If you need different values, provide them to K2view. 
 
-  The list below covers several storage classes, but not all of them are required for all projects. Please check with your team and with K2view about the project and the solution that you are using. For example, for the TDM solution, usually only Fabric and PG are required. 
+  The list below covers several storage classes, but not all are required for every project. Please check with your team and with K2view about the project and the solution that you are using. For example, for the TDM solution, you usually need only Fabric and PG. 
 
   - name: efs-fabric
     uid: "1000"
@@ -143,21 +143,21 @@ The type of volume that shall be provisioned depends on the cloud provider:
 - GCP
   - Use regional pd 
 - Azure
-  - Currently, Azure does not have an NFS/EFS equivalent solution, and therefore, a local disk shall be used. 
+  - Currently, Azure does not have an NFS/EFS equivalent solution; therefore, a local disk shall be used. 
 
 
 
 ### K2-agent
 
-The K2-agent is a module, deployed in each cluster, as a POD inside a dedicated namespace. It polls instructions for deployment from the K2cloud platform Mailbox. Adopting this workflow eliminates the need for connectivity from the K2cloud orchestrator into the cluster, so that only outbound traffic from the agent to the K2cloud Orchestrator is required.
+The K2-agent is a module, deployed in each cluster, as a POD inside a dedicated namespace. It polls deployment instructions from the K2cloud platform Mailbox. This workflow eliminates the need for connectivity from the K2cloud orchestrator into the cluster, so only outbound traffic from the agent to the K2cloud Orchestrator is required.
 
 The k2-agent source code can be found [here](https://github.com/k2view/k2-agent).
 
-As part of cluster preparations, you shall deploy the K2-agent. It is deployed in a dedicated namespace (whose default name is "k2view-agent").
+As part of cluster preparations, you shall deploy the K2-agent. Deploy it in a dedicated namespace (default name: "k2view-agent").
 
 * Refer [here](https://github.com/k2view/blueprints/tree/main/helm/k2view-agent) for the k2-agent helm charts and with its configuration values.
 
-* Cluster's dedicated Mailbox ID shall be obtained from K2view and applied to the agent's configuration values.
+* The cluster's dedicated Mailbox ID shall be obtained from K2view and applied to the agent's configuration values.
 
 * The kubeInterface should be accessible by the k2-agent.
 
@@ -166,38 +166,38 @@ As part of cluster preparations, you shall deploy the K2-agent. It is deployed i
 
 ### Fabric Containers Registry 
 
-For simplicity, K2view suggests using its shared Nexus for the Fabric and k2-agent images. To use and consume them, you shall open an outbound connection to the Nexus host. Refer to the Networking section. 
+For simplicity, K2view suggests using its OCI shared container registry for the Fabric and k2-agent images. To use and consume them, you shall open an outbound connection to K2view's container registry at docker.share.cloud.k2view.com. Refer to the Networking section. 
 
 You can also use your OCI-based registry. For this, you shall:
 
-* Contact the K2view team to get Nexus access credentials.
+* Contact the K2view team to get container registry access credentials.
 * Take the relevant images, scan them if required, and upload them to your registry.
 * Provide K2view with the registry URL.
 
 
-The non-Fabric images - Postgres, Cassandra, and Neo4j - are not provided by K2view. Instead, you should use the images as published on the Docker Hub. If you prefer hosting them in your registry, inform the K2view team about it, so they can be configured in the K2cloud platform orchestrator.
+The non-Fabric images - Postgres, Cassandra, and Neo4j - are not provided by K2view. Instead, use the images published on Docker Hub. If you prefer to host them in your registry, inform the K2view team so they can configure them in the K2cloud platform orchestrator.
 
 
 
 ### Connectivity and Networking
 
-The cluster interacts with external hosts, into which you shall open the outbound network, all in port 443:
+The cluster interacts with external hosts, to which you shall open outbound network access, all on port 443:
 
 - https://cloud.k2view.com (used to get instructions via the Mailbox REST service from the K2cloud platform orchestrator)
-- https://nexus.share.cloud.k2view.com (used for fetching Fabric and k2-agent images)
+- https://docker.share.cloud.k2view.com (used for fetching Fabric and k2-agent images)
 - https://github.com (used for fetching the deployments' Helm charts)
 - Cluster shall have access to your data platforms/DBs, as the project requires.
 
-> Note: As mentioned, container images can be hosted in your OCI registry. Helm charts can also be copied into your GIT repository and maintained there (It is the responsibility of your team to synchronize with the official repository to ensure smooth operation). If you consume them from your repositories, inform the K2view team about it, so they can be configured in the K2cloud platform orchestrator.
+> Note: As mentioned, container images can be hosted in your OCI registry. Helm charts can also be copied into your GIT repository and maintained there (your team is responsible for synchronizing with the official repository to ensure smooth operation). If you consume them from your repositories, inform the K2view team so they can configure them in the K2cloud platform orchestrator.
 
  
 
 ### Managed service Credentials 
 
-For a Fabric cluster namespace, like production, where massive data is handled, it is recommended to use managed services (like managed Postgres or bucket/blob storage). K2cloud is creating on-the-fly relevant managed resources during the namespace creation process. For this creation purpose, the k2-agent namespace needs to have credentials. This can be achieved by using K8s cloud native credentials: 
+For a Fabric cluster namespace, like production, where massive data is handled, we recommend using managed services (like managed Postgres or bucket/blob storage). K2cloud creates relevant managed resources on the fly during namespace creation. For this purpose, the k2-agent namespace needs credentials. This can be achieved by using K8s cloud native credentials: 
 
-* AWS: using IAM role ARN, attached to the k2view-agent namespace service account. This shall be set in the K2-agent configuration.
-* GCP: using service account. The GCP service account name and project ID shall be set in the k2-agent configuration.
+* AWS: using an IAM role ARN, attached to the k2view-agent namespace service account. Set this in the K2-agent configuration.
+* GCP: using a service account. Set the GCP service account name and project ID in the k2-agent configuration.
 
  
 
