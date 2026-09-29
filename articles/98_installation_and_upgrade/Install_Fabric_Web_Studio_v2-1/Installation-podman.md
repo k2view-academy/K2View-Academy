@@ -58,13 +58,13 @@ A supported **Enterprise Linux distribution** (e.g., RHEL, AlmaLinux, Rocky Linu
 **K2view Software**
 
 1. The installation assumes you have Internet access, allowing you to obtain Fabric images from the K2view Container Registry and perform a Git clone on your machine. 
-2. To obtain a Fabric Studio docker image, you need a K2view account. Your K2view representative can arrange this for you. 
+2. To obtain a Fabric Studio image, you need a K2view account. Your K2view representative can arrange this for you. 
 
 **Internet Access is Required**
 
 Internet access is required to perform this installation. You will need access to:
 
-1. K2view’s Docker Image repository at https://docker.share.cloud.k2view.com
+1. K2view’s Image repository at https://docker.share.cloud.k2view.com
 2. (Optional) Github.com to clone K2view’s blueprints at https://github.com/k2view/blueprints.git
 3. If you plan to install TDM, you need access to K2view’s Exchange.
 
@@ -173,7 +173,7 @@ https://download.k2view.com/index.php/s/8lgQY4ybu5fNy4u/download
 Alternatively, you can use `wget` as follows:
 
 ```bash
-wget -c -O Studio-Docker-latest.zip 'https://download.k2view.com/index.php/s/8lgQY4ybu5fNy4u/download'
+wget -c -O Studio-Podman-latest.zip 'https://download.k2view.com/index.php/s/8lgQY4ybu5fNy4u/download'
 ```
 
 Then, change the directory to the K2view directory. Copy `Studio-Podman-latest.zip` to this directory, and unzip `Studio-Podman-latest.zip` to this directory. Then, rename the `Studio-Podman` directory as `Studio`.
