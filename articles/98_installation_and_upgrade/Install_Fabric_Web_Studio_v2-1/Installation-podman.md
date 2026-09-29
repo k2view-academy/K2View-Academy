@@ -13,6 +13,7 @@ Version 2.1 introduces minor enhancements to Fabric Web Studio, including an upd
 3. [Things to Configure](#things-to-configure)
 4. [Things to Know](#things-to-know)
 5. [Installation](#installation)
+6. [Upgrading this Package](#upgrading-this-package)
 
 
 ## Prerequisites
@@ -464,6 +465,122 @@ When presented with the login screen, enter:
   - Password: admin
 
 If you access Fabric Web Studio, you have successfully installed it. 
+
+
+# Upgrading this Package
+
+The Fabric Web Studio for Podman package is updated periodically to add new capabilities and support newer Fabric and Web Studio versions. Keeping the package current is important because newer operational capabilities, including space upgrade functionality, may depend on changes delivered with the package.
+
+Upgrading the package does **not** require recreating your existing spaces. Space data and configuration are maintained separately under the `persistent-data` directory and must be preserved during the package upgrade.
+
+## Download the Latest Package
+
+Download the latest Fabric Web Studio for Podman package using the same procedure described in [Step 3: Download](#step-3-download).
+
+Extract the downloaded package into a temporary directory before updating your existing installation.
+
+The package contains files similar to the following:
+
+```
+.env
+.env-tdm-sample-space
+.VERSION
+common.config
+compose.yaml
+k2space.sh
+K2View-EULA.pdf
+k2ingress-compose.yaml
+README.md
+ssl-certs/
+studio_cass.config
+studio_pg_cass.config
+studio_pg.config
+studio.config
+tls-config.yaml
+```
+
+Your existing installation may also contain additional files and directories, including:
+
+```
+persistent-data/
+```
+
+The `persistent-data` directory contains the persistent data and configuration associated with your existing spaces and **must not be replaced or removed**.
+
+## Back Up the Existing Installation
+
+Before replacing any files, create a backup of the existing Podman package directory.
+
+At a minimum, preserve:
+
+- `.env`
+- `ssl-certs/`
+- Any configuration files that you have modified
+- Any locally added scripts or files
+
+If you are unsure which files have been customized, back up the entire directory.
+
+> **Important:** Files beginning with a period, such as `.env`, may be hidden by your operating system or file browser. Make sure these files are included in your backup.
+
+K2view does not automatically merge customer-specific changes into a newer package. If you have modified files supplied with the package, you are responsible for reviewing and reapplying those changes after the new package is installed.
+
+## Preserve Persistent Data and Certificates
+
+Do **not** replace or delete the existing:
+
+```
+persistent-data/
+```
+
+This directory contains the persistent data and configuration used by your existing spaces.
+
+Also preserve the existing:
+
+```
+ssl-certs/
+```
+
+The certificates in this directory may have been replaced or updated for your environment. Do not overwrite them with the `ssl-certs` directory supplied in the new package.
+
+## Replace the Package Files
+
+Copy the files from the newly downloaded package into the existing Fabric Web Studio Podman installation directory, replacing the corresponding package files.
+
+Exclude:
+
+```
+ssl-certs/
+```
+
+Do not modify or replace:
+
+```
+persistent-data/
+```
+
+Before replacing a file that you previously customized, make sure you have retained a backup. After the new package files have been copied, review those customizations and reapply them where appropriate.
+
+## Review and Merge `.env` Changes
+
+Take particular care with the `.env` file.
+
+The new package may introduce new environment variables or change existing settings, while your current `.env` file may contain values specific to your installation.
+
+Before replacing the existing `.env` file:
+
+1. Make a copy of the existing `.env` file.
+2. Compare it with the `.env` file supplied in the new package.
+3. Retain any required customer-specific settings.
+4. Incorporate any new or changed settings introduced by the latest package.
+5. Replace the existing `.env` file with the resulting merged version.
+
+Do not assume that the previous `.env` file can simply be retained unchanged, because newer package functionality may depend on settings introduced in the latest version.
+
+## Proceed with the Space Upgrade
+
+After you update the Podman package and review and reapply any required configuration changes, you can proceed to upgrade the Fabric Web Studio spaces.
+
+See <a href="/articles/98_installation_and_upgrade/Upgrade_Web_Studio/Upgrade_WS.md">Upgrading Fabric Web Studio Spaces</a> for the space upgrade procedure.
 
 
 
