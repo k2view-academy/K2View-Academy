@@ -22,6 +22,7 @@
 ## Important Notes
 - **Default credentials**: `admin` / `admin`
 - **Persistent data** is stored under `persistent-data/<space-name>`
+- **Container runtime storage:** Ensure that the filesystem used by Docker/containerd has sufficient free space for Fabric Web Studio container images and extracted layers. The container runtime storage may reside on a different filesystem from the Studio installation directory. See <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Docker-Compose.md">Docker and Docker Compose Installation</a> for details.
 - **In doubt?** Consult the <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md">installation instructions.</a>
 
 ## Installation Steps
