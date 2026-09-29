@@ -216,6 +216,7 @@ See <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-
   - Install Docker Compose: [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
   - Docker Desktop includes the Docker Compose plugin by default.
   - Use the native Docker Compose plugin (not the legacy `docker-compose` Python utility).
+- **Container runtime storage:** Ensure that the filesystem used by Docker and containerd has sufficient capacity for Fabric Web Studio container images, extracted image layers, runtime data, and future upgrades. The container runtime storage may reside on a different filesystem from the Fabric Web Studio installation directory. See <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Docker-Compose.md">Docker and Docker Compose Installation</a> for details.
 
 > Please refer to the installation instructions provided in the <a href="https://support.k2view.com/Academy/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Docker-Compose.html">Installing Docker and Docker Compose </a> topic.
 
