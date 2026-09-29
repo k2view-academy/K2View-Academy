@@ -23,6 +23,43 @@ The easiest and recommended way to get Docker Compose is to install Docker Deskt
 2.	You need to install the Docker Compose Plugin. See https://docs.docker.com/compose/install/.
 3.	If you install Docker Desktop, Docker Compose is bundled with Docker Engine. See https://docs.docker.com/desktop/ to install Docker Desktop.
 
+### Container Runtime Storage
+
+Before installing Fabric Web Studio, verify that sufficient free space is available on the filesystem used by Docker and the container runtime to store and extract container images.
+
+Docker installations that use the containerd image store require additional storage because image layers are maintained in both compressed and extracted forms. The container runtime storage may also reside on a different filesystem from the Fabric Web Studio installation directory.
+
+As a result, a server can have sufficient overall disk capacity while the filesystem used by Docker or containerd does not.
+
+Common storage locations on Linux include:
+
+```text
+/var/lib/docker
+/var/lib/containerd
+```
+
+The actual locations depend on your Docker and containerd configuration.
+
+You can review the Docker data directory, Docker storage usage, and available filesystem capacity using:
+
+```bash
+docker info --format '{{.DockerRootDir}}'
+docker system df
+df -h /var/lib/docker
+df -h /var/lib/containerd
+```
+
+If one of these directories does not exist, verify the storage location configured for your Docker/containerd installation.
+
+Insufficient container runtime storage can cause image download, import, or extraction operations to fail with errors such as:
+
+```text
+no space left on device
+```
+
+For additional information about containerd image storage and disk usage, see the [Docker containerd image store documentation](https://docs.docker.com/engine/storage/containerd/).
+
+
 ## Using the Windows Subsystem for Linux (WSL)
 
 When using Microsoft Windows, you must run Docker inside the WSL file system in conjunction with a Linux distribution. Otherwise, the installation will not perform adequately and will exhibit slow performance. 
