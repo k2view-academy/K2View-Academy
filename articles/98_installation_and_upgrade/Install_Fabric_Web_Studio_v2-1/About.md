@@ -13,6 +13,7 @@
 6. [Supported Profiles](#supported-profiles)
 7. [Prerequisites](#prerequisites)
     - [Host Machine Requirements](#host-machine-requirements)
+    - [Container Image Storage](#container-image-storage)
     - [Operating System Requirements](#operating-system-requirements)
     - [Required 3rd Party Software](#required-3rd-party-software)
         - [Common Requirements (Both Docker and Podman)](#common-requirements-both-docker-and-podman)
@@ -154,6 +155,14 @@ Please refer to the [Installation System Requirements topic.](/articles/98_insta
   - Each Fabric Space allocates a 4GB JVM heap by default (this can be overridden in the configuration).
 
 - **Disk Space**: Sufficient local storage for persistent data directories, Fabric images (~2GB per image), and logs.
+
+### Container Runtime Storage
+
+The filesystem used by Docker and its container runtime must have sufficient available capacity for Fabric Web Studio container images, image extraction, runtime data, and future image upgrades.
+
+The container runtime storage may reside on a different filesystem from the Fabric Web Studio installation directory. Verify the capacity of the actual Docker/containerd storage location before installation.
+
+See <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Docker-Compose.md">Docker and Docker Compose Installation</a> for container runtime storage requirements and validation commands.
 
 ### Operating System Requirements
 
