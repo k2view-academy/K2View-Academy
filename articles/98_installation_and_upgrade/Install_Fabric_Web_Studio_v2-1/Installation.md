@@ -564,18 +564,19 @@ Take particular care with the `.env` file.
 
 The new package may introduce new environment variables or change existing settings, while your current `.env` file may contain values specific to your installation.
 
-Before replacing it:
+Before replacing the existing `.env` file:
 
 1. Make a copy of the existing `.env` file.
-2. Compare the existing `.env` file with the version supplied in the new package.
+2. Compare it with the `.env` file supplied in the new package.
 3. Retain any required customer-specific settings.
 4. Incorporate any new or changed settings introduced by the latest package.
+5. Replace the existing `.env` file with the resulting merged version.
 
 Do not assume that the previous `.env` file can simply be retained unchanged, because newer package functionality may depend on settings introduced in the latest version.
 
 ## Proceed with the Space Upgrade
 
-After the Docker Compose package has been updated and any required configuration changes have been reviewed and reapplied, proceed with upgrading the Fabric Web Studio spaces.
+After you update the Docker Compose package and review and reapply any required configuration changes, you can proceed to upgrade the Fabric Web Studio spaces.
 
 See <a href="/articles/98_installation_and_upgrade/Upgrade_Web_Studio/Upgrade_WS.md">Upgrading Fabric Web Studio Spaces</a> for the space upgrade procedure.
 
