@@ -465,13 +465,13 @@ Doing this before you run the first `k2space.sh` command ensures the file is pre
   `docker pull cassandra:4.1.5`
 
 
-# 7. Upgrading this Package
+# Upgrading this Package
 
 The Fabric Web Studio for Docker Compose package is updated periodically to add new capabilities and support newer Fabric and Web Studio versions. Keeping the package current is important because newer operational capabilities, including space upgrade functionality, may depend on changes delivered with the package.
 
 Upgrading the package does **not** require recreating your existing spaces. Space data and configuration are maintained separately under the `persistent-data` directory and must be preserved during the package upgrade.
 
-## 7.1 Download the Latest Package
+## Download the Latest Package
 
 Download the latest Fabric Web Studio for Docker Compose package using the same procedure described in [Step 3: Download](#step-3-download).
 
@@ -505,7 +505,7 @@ persistent-data/
 
 The `persistent-data` directory contains the persistent data and configuration associated with your existing spaces and **must not be replaced or removed**.
 
-## 7.2 Back Up the Existing Installation
+## Back Up the Existing Installation
 
 Before replacing any files, create a backup of the existing Docker Compose package directory.
 
@@ -522,7 +522,7 @@ If you are unsure which files have been customized, back up the entire directory
 
 K2view does not automatically merge customer-specific changes into a newer package. If you have modified files supplied with the package, you are responsible for reviewing and reapplying those changes after the new package is installed.
 
-## 7.3 Preserve Persistent Data and Certificates
+## Preserve Persistent Data and Certificates
 
 Do **not** replace or delete the existing:
 
@@ -540,7 +540,7 @@ ssl-certs/
 
 The certificates in this directory may have been replaced or updated for your environment. Do not overwrite them with the `ssl-certs` directory supplied in the new package.
 
-## 7.4 Replace the Package Files
+## Replace the Package Files
 
 Copy the files from the newly downloaded package into the existing Fabric Web Studio Docker Compose installation directory, replacing the corresponding package files.
 
@@ -558,7 +558,7 @@ persistent-data/
 
 Before replacing a file that you previously customized, make sure you have retained a backup. After the new package files have been copied, review those customizations and reapply them where appropriate.
 
-## 7.5 Review and Merge `.env` Changes
+## Review and Merge `.env` Changes
 
 Take particular care with the `.env` file.
 
@@ -573,7 +573,7 @@ Before replacing it:
 
 Do not assume that the previous `.env` file can simply be retained unchanged, because newer package functionality may depend on settings introduced in the latest version.
 
-## 7.6 Proceed with the Space Upgrade
+## Proceed with the Space Upgrade
 
 After the Docker Compose package has been updated and any required configuration changes have been reviewed and reapplied, proceed with upgrading the Fabric Web Studio spaces.
 
