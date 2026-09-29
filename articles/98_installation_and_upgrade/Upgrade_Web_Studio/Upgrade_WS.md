@@ -15,6 +15,20 @@ The supported upgrade approach preserves:
 
 This is the recommended approach for upgrading existing Studio environments.
 
+## **Keep the Installation Package Current**
+
+The Fabric Web Studio installation package is updated periodically to add new capabilities, including enhancements to the `k2space.sh` utility and the space upgrade process.
+
+Upgrading the Fabric or Studio version within a Space does **not** update the installation package itself. Therefore, you should periodically update the installation package before performing Space upgrades to ensure that you have the latest supported scripts, configuration, and upgrade capabilities.
+
+Package upgrade instructions are provided with the installation documentation for each deployment type:
+
+- **Docker Compose:** <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md#upgrading-this-package">Upgrading the Fabric Web Studio for Docker Compose Package</a>
+- **Podman:** <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation-podman.md#upgrading-this-package">Upgrading the Fabric Web Studio for Podman Package</a>
+
+> **Important:** Upgrading the installation package and upgrading a Space are separate operations. Update the package first, preserving your existing configuration and persistent data as described in the applicable installation guide, and then use the procedures in this document to upgrade your Spaces.
+
+
 ## **Important Considerations**
 
 The recommended upgrade procedure is an in-place upgrade of the existing Studio environment.
