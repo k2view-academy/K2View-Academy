@@ -5,7 +5,7 @@
 - Obtain a login account for docker.share.cloud.k2view.com
 - <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Docker-Compose.md">Install Docker & Docker Compose plugin</a> (not the deprecated `docker-compose` binary).
 - If installing on Windows, use **WSL2** and install under a **Linux distribution** (not under `/mnt/c`).
-- Internet access is required to pull images from K2view Nexus unless using offline image loading.
+- Internet access is required to pull images from K2view's container registry unless using offline image loading.
 
 ## Package Contents
 - `README.html` – Documentation
@@ -68,7 +68,7 @@ Available profiles:
 - `studio_cass` *(Cassandra)*
 - `studio_pg_cass` *(PostgreSQL + Cassandra)*
 
-### 6. Login to K2view Nexus
+### 6. Login to K2view Container Registry
 ```bash
 docker login -u <your_user> https://docker.share.cloud.k2view.com
 ```
@@ -99,6 +99,20 @@ Login with:
 Username: admin
 Password: admin
 ```
+
+## Upgrading the Docker Compose Package
+
+The Fabric Web Studio for Docker Compose package is updated periodically to add new capabilities and support newer Fabric and Web Studio versions.
+
+Upgrading a Fabric Web Studio Space does **not** update the Docker Compose package itself. Keep the package current so that you have the latest `k2space.sh`, configuration files, and supported upgrade capabilities.
+
+Before upgrading a Space, review the package upgrade procedure:
+
+<a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md#upgrading-this-package">Upgrading the Fabric Web Studio for Docker Compose Package</a>
+
+After updating the package, use the supported Space upgrade procedure:
+
+<a href="/articles/98_installation_and_upgrade/Upgrade_Web_Studio/Upgrade_WS.md">Upgrading Fabric Web Studio Spaces</a>
 
 ## Offline Docker Image Download (If No Internet)
 <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/Installation.md#docker-image-offline-package-download">Offline Package Download Instructions</a>
