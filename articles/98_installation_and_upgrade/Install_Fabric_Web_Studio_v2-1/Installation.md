@@ -171,6 +171,39 @@ Using a shell, create a `K2view` directory to download K2view's Blueprints. You 
 mkdir K2view
 ```
 
+### Validate Container Runtime Storage
+
+Before downloading or loading the Fabric Web Studio container images, verify that sufficient free space is available on the filesystem used by Docker and the container runtime.
+
+The container runtime storage may reside on a different filesystem from the Fabric Web Studio installation directory. A server can therefore have sufficient overall disk capacity while the filesystem used by Docker or containerd does not.
+
+Common storage locations on Linux include:
+
+```text
+/var/lib/docker
+/var/lib/containerd
+```
+
+You can review the Docker data directory, Docker storage usage, and available filesystem capacity using:
+
+```bash
+docker info --format '{{.DockerRootDir}}'
+docker system df
+df -h /var/lib/docker
+df -h /var/lib/containerd
+```
+
+If one of these directories does not exist, verify the storage location configured for your Docker/containerd installation.
+
+Insufficient container runtime storage can cause image download, import, or extraction operations to fail with errors such as:
+
+```text
+no space left on device
+```
+
+See <a href="/articles/98_installation_and_upgrade/Install_Fabric_Web_Studio_v2-1/6-Docker-Compose.md">Docker and Docker Compose Installation</a> for additional information about container runtime storage.
+
+
 ### **Step 3**: Download
 
 There are two options to obtain the Docker Compose Runtime for Fabric Web Studio. You can download a zip file (recommended) or clone the content from K2view's Blueprints.
