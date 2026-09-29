@@ -3,6 +3,7 @@
 ## Table of Contents
 
 1. [Docker and Docker Compose Installation](#docker-and-docker-compose-installation)
+   - [Container Runtime Storage](#container-runtime-storage)
 2. [Install Docker and Docker Compose on Linux, MacOS, or Microsoft Windows](#install-docker-and-docker-compose-on-linux-macos-or-microsoft-windows)
 3. [Using the Windows Subsystem for Linux (WSL)](#using-the-windows-subsystem-for-linux-wsl)
     - [Installing WSL](#installing-wsl)
