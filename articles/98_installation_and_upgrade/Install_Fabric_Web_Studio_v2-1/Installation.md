@@ -12,7 +12,7 @@ Version 2.1 introduces minor enhancements to Fabric Web Studio, including an upd
 4. [Things to Know](#things-to-know)
 5. [Installation](#installation)
 6. [Docker Image Offline Package Download](#docker-image-offline-package-download)
-7. [Upgrading the Fabric Web Studio for Docker Compose Package](#upgrading-the-fabric-web-studio-for-docker-compose-package)
+7. [Upgrading this Package](#upgrading-this-package)
 
 
 ## Prerequisites
@@ -465,15 +465,15 @@ Doing this before you run the first `k2space.sh` command ensures the file is pre
   `docker pull cassandra:4.1.5`
 
 
-# 7. Upgrading the Fabric Web Studio for Docker Compose Package
+# 7. Upgrading this Package
 
-The Fabric Web Studio for Docker Compose package is periodically updated to introduce new capabilities and support newer Fabric and Web Studio versions. Keeping the package current is important because newer operational capabilities, including space upgrade functionality, may depend on changes delivered with the package.
+The Fabric Web Studio for Docker Compose package is updated periodically to add new capabilities and support newer Fabric and Web Studio versions. Keeping the package current is important because newer operational capabilities, including space upgrade functionality, may depend on changes delivered with the package.
 
 Upgrading the package does **not** require recreating your existing spaces. Space data and configuration are maintained separately under the `persistent-data` directory and must be preserved during the package upgrade.
 
 ## 7.1 Download the Latest Package
 
-Download the latest Fabric Web Studio for Docker Compose package using the same procedure described in [Step 3: Download]((#step-3-download)).
+Download the latest Fabric Web Studio for Docker Compose package using the same procedure described in [Step 3: Download](#step-3-download).
 
 Extract the downloaded package into a temporary directory before updating your existing installation.
 
