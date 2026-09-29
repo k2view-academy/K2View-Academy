@@ -13,7 +13,7 @@
 6. [Supported Profiles](#supported-profiles)
 7. [Prerequisites](#prerequisites)
     - [Host Machine Requirements](#host-machine-requirements)
-    - [Container Image Storage](#container-image-storage)
+    - [Container Runtime Storage](#container-runtime-storage)
     - [Operating System Requirements](#operating-system-requirements)
     - [Required 3rd Party Software](#required-3rd-party-software)
         - [Common Requirements (Both Docker and Podman)](#common-requirements-both-docker-and-podman)
