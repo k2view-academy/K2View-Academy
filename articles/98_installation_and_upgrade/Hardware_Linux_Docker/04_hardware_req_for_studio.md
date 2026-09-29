@@ -61,6 +61,10 @@ The following baseline resources are recommended for deploying Fabric Web Studio
     <td>200 GB SSD or NVMe (high IOPS recommended)</td>
   </tr>
   <tr>
+    <td>Container Runtime Storage</td>
+    <td>Docker/containerd image storage must have sufficient free capacity for container images, extracted image layers, runtime metadata, and upgrades. The container runtime storage filesystem may be separate from the Fabric Web Studio installation filesystem.</td>
+  </tr>
+  <tr>
     <td>Host OS</td>
     <td>Windows, macOS, or Linux</td>
   </tr>
@@ -75,6 +79,42 @@ The following baseline resources are recommended for deploying Fabric Web Studio
 </table>
 
 Tip: This sizing is intended for POV and initial development environments. For production-scale deployments, resource allocation should be adjusted based on workload size, number of Spaces, and concurrency requirements.
+
+### Container Runtime Storage
+
+Fabric Web Studio container images are stored and managed by Docker and the underlying container runtime.
+
+When Docker uses the containerd image store, additional disk capacity is required because containerd maintains both compressed image layers and their extracted contents. Containerd storage can also be configured separately from the Docker data directory.
+
+As a result, sizing the Fabric Web Studio installation filesystem alone is not sufficient. Verify the available capacity of the filesystem hosting the container runtime storage before installation and as part of ongoing capacity management.
+
+Common storage locations on Linux include:
+
+```text
+/var/lib/docker
+/var/lib/containerd
+```
+
+The actual locations depend on the Docker and containerd configuration.
+
+You can review Docker storage usage and filesystem capacity using:
+
+```bash
+docker info --format '{{.DockerRootDir}}'
+docker system df
+df -h /var/lib/docker
+df -h /var/lib/containerd
+```
+
+If one of these directories does not exist, verify the storage location configured for your Docker/containerd installation.
+
+Insufficient container runtime storage can prevent images from being downloaded, imported, extracted, or upgraded and may result in errors such as:
+
+```text
+no space left on device
+```
+
+For additional information, see the [Docker containerd image store documentation](https://docs.docker.com/engine/storage/containerd/).
 
 ### Installation Options
 
