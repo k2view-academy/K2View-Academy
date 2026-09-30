@@ -1,10 +1,10 @@
 # Viewing Token Consumption and AI History
 
-Studio AI provides two complementary tools for monitoring how the AI is being used: the **Token Usage** tab in AI Configuration gives a per-model summary of cumulative consumption, and the **AI Agent History** panel gives a full log of every individual request and response.
+Studio AI provides two complementary tools for monitoring how the AI is being used: the **Token Usage** category in AI Configuration gives a per-model summary of cumulative consumption, and the **AI Agent History** panel gives a full log of every individual request and response.
 
 ## Token Usage Summary
 
-The **Token Usage** tab is found in the AI Configuration panel. Open it via **More Actions...** ("…") in the AI Chat panel toolbar, then **Open AI Configuration**, then select the **Token Usage** tab. See [Using the AI Chat](03_using_the_ai_chat.md#the-ai-chat-toolbar).
+The **Token Usage** category is found in the AI Configuration panel. Open it via **More Actions...** ("…") in the AI Chat panel toolbar, then **Open AI Configuration**, then select the **Token Usage** category. See [Using the AI Chat](03_using_the_ai_chat.md#the-ai-chat-toolbar).
 
 It displays a table with one row per language model that has been used in the current Studio session:
 
@@ -38,6 +38,8 @@ It displays a table with one row per language model that has been used in the cu
     </tr>
   </tbody>
 </table>
+
+From V8.5.2, token counts are reported correctly for Anthropic and OpenAI models.
 
 The table resets when you restart the Studio. It covers all agents in the session, not just the active chat: background agents such as session naming and code completion are included.
 

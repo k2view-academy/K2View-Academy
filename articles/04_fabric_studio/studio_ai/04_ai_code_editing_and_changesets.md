@@ -1,6 +1,8 @@
-# AI Code Editing: Reviewing and Applying Changes
+# Code Editing with @Coder (Legacy)
 
-This article applies when you address `@Coder` directly. The default `@k2-assistant` flow routes work automatically (small edits applied inline, larger work delegated to `@k2-worker`) and does not use the mode selector or diff-review workflow described here; see [Studio AI Agents](02_studio_ai_agents_reference.md) and [Other Studio AI Agents](14_other_studio_ai_agents.md#coder-superseded-by-k2-worker). When `@Coder` proposes changes to your code, Studio AI gives you full control over how those changes are reviewed and applied. This article covers its operating modes and how to manage the resulting diffs, including accepting, rejecting, and iterating on changes.
+> With the default `@k2-assistant`, choose **Act Mode** to let it make changes, or **Ask** / **Plan Mode** to keep it read-only. See [Ask, Plan and Act Modes](05_plan_first_development.md). `@Coder` is a legacy agent.
+
+This article applies when you address `@Coder` directly. The default `@k2-assistant` flow routes work automatically (small edits applied inline, larger work delegated to `@k2-worker`) and does not use the Edit/Agent mode selector or diff-review workflow described here; see [Studio AI Agents](02_studio_ai_agents_reference.md) and [Other Studio AI Agents](14_other_studio_ai_agents.md#coder-superseded-by-k2-worker). When `@Coder` proposes changes to your code, Studio AI gives you full control over how those changes are reviewed and applied. This article covers its operating modes and how to manage the resulting diffs, including accepting, rejecting, and iterating on changes.
 
 ## Edit Mode vs Agent Mode
 
@@ -74,6 +76,10 @@ When @Coder writes or modifies code, Studio AI monitors the diagnostics (errors 
 ```
 
 In Agent Mode, @Coder may automatically attempt to resolve diagnostics as part of its task loop, without waiting to be asked.
+
+## Protection Against Overwriting Your Edits
+
+Agents keep track of the files they have read. If you change such a file after the agent read it, the agent is told about it before it writes, so it re-reads the file instead of overwriting your recent changes. This applies to agents that edit through the Studio's built-in file tools, including @k2-assistant and @k2-worker.
 
 ## Starting a Code Edit from the Editor
 

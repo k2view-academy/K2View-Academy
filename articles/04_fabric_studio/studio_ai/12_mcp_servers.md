@@ -15,9 +15,9 @@ Examples of what MCP servers can provide:
 
 ## Managing MCP Servers
 
-MCP servers are managed in the **MCP Servers** tab of the AI Configuration panel. Open AI Configuration via **More Actions...** ("…") in the AI Chat panel toolbar, then **Open AI Configuration**, then select the **MCP Servers** tab. See [Using the AI Chat](03_using_the_ai_chat.md#the-ai-chat-toolbar).
+MCP servers are managed in the **MCP Servers** category of the AI Configuration panel. Open AI Configuration via **More Actions...** ("…") in the AI Chat panel toolbar, then **Open AI Configuration**, then select the **MCP Servers** category. See [Using the AI Chat](03_using_the_ai_chat.md#the-ai-chat-toolbar).
 
-The tab shows a list of all configured servers. Each entry displays the server name, type, connection details, and status.
+The category shows a list of all configured servers. Each entry displays the server name, type, connection details, and status.
 
 ### Adding a Server
 
@@ -92,6 +92,14 @@ This type is suitable for shared, centrally managed MCP servers (for example, a 
 
 - Type: `HTTP/SSE`
 - URL: `https://mcp.internal.example.com/studio-tools`
+
+## MCP Apps
+
+From V8.5.2, an MCP server can also ship an interactive UI for its results - for example a chart, a table or a form - instead of returning plain text. The chat renders such a result inside a sandboxed frame, isolated from the Studio.
+
+## Agent Plugins
+
+From V8.5.2, skills and MCP servers can also be installed together as an **Agent Plugin** - a package that follows the open Agent Plugins format (a `plugin.json` manifest, a `skills/` folder and an `mcp.json`), so the same package works across AI clients. Skills from a plugin are listed under the plugin's name, to tell them apart from workspace skills with the same name.
 
 ## Security Considerations
 

@@ -27,7 +27,7 @@ When you open AI Chat, what you see depends on your setup state:
 - **AI disabled / no LLM provisioned** - The panel shows a setup guide prompting you to enable AI features and configure an LLM provider.
 
   Follow [Enabling Studio AI](#enabling-studio-ai) and [Choose and Provision LLM](#choose-and-provision-llm) below.
-- **Ready to use** - The welcome screen reads **"Ask K2assistant"**, with a short hint on using `@agent` to call a specific agent and `#` (or the paperclip icon) to attach context. If you have previous sessions, a **Restored** list of your most recent chats appears below the hint for quick resumption. The chat input is at the bottom, with a compact toolbar at the top of the panel.
+- **Ready to use** - The welcome screen reads **"Ask K2assistant"**. It explains that @k2-assistant answers by default, so you can just type your question, and shows how to use `#` (or the paperclip icon) to attach context. A **Get Started with AI** button opens the [AI walkthrough](#the-get-started-with-ai-walkthrough). If you have previous sessions, a **Restored** list of your most recent chats appears for quick resumption. The chat input is at the bottom, with a compact toolbar at the top of the panel.
 
   *(Screenshot pending refresh for the current UI.)*
 
@@ -39,7 +39,21 @@ The setup is built from 3 steps:
 
 1. Enable AI Features in Settings.
 2. Provision an LLM provider - either a provider API key, or Fabric itself (see [Using Fabric as the LLM Provider](#using-fabric-as-the-llm-provider)).
-3. Install the **Studio AI Core Artifacts** extension.
+3. Install the **Studio AI Core Artifacts** extension (recommended - it adds the Fabric skills).
+
+### The Get Started with AI Walkthrough
+
+From V8.5.2, the Studio **Welcome** page includes a **Get started with AI** walkthrough that takes you through these steps with progress tracking. Open it from the Welcome page, from the **Get Started with AI** button on the AI Chat welcome screen, or with **Help > Open Walkthrough...**. Its steps are:
+
+1. **AI support in K2view Web Studio** - what the AI features do, and a link to this documentation.
+2. **Turn on the AI features** - enables AI.
+3. **Connect a language model** - enter an API key for a hosted provider (OpenAI, Anthropic, Google), or use **Fabric as a proxy**: install the LLM connector for your provider from the K2 Exchange and define an interface for it in the project. Ollama, llamafile and other OpenAI-compatible endpoints are set up in the **Providers & Models** page of AI Configuration.
+4. **Ask your first question** - opens the AI Chat.
+5. **Add the Studio AI core skills** - installs the Studio AI Core Artifacts extension in one click. The step is marked done once the extension is installed.
+6. **Stay in control of what agents do** - links to the **Tools** page of AI Configuration, where you set which tools need your confirmation. See [Security and Privacy](13_security_and_privacy.md#tool-confirmations) for the Studio defaults.
+7. **Go further** - prompts and skills, MCP servers, token usage, and the experimental *AI First* layout.
+
+The Welcome page opens on Studio startup. To stop that, clear the **Show welcome page on startup** checkbox on the Welcome page.
 
 ### Enabling Studio AI
 
@@ -62,29 +76,31 @@ Once AI is enabled, you need to enter an API key for at least one LLM provider.
 
 ![](images/02_settings_enable_ai.png)
 
-The left navigation lists all supported providers: Anthropic, OpenAI (Official and Custom Models), Google, Codex, Hugging Face, Ollama, Llamafile, and more. The Settings left navigation also exposes a much larger set of AI Feature sub-sections beyond enablement and provisioning: chat behavior, server-side compaction, token usage warnings, security-relevant defaults, and more. See [AI Features Settings](15_ai_features_settings.md) for the full map.
+The left navigation lists all supported providers: Anthropic, OpenAI (Official and Custom Models), Google, Codex, Hugging Face, Ollama, Llamafile, and more. From V8.5.2, you do not maintain a model list for Anthropic, OpenAI or Google: once the API key is set, Studio reads the available models from the provider, and you choose which of them appear in the chat in the **Providers & Models** page of [AI Configuration](06_ai_configuration_and_settings.md#providers-and-models). The Settings left navigation also exposes a much larger set of AI Feature sub-sections beyond enablement and provisioning: chat behavior, server-side compaction, token usage warnings, security-relevant defaults, and more. See [AI Features Settings](15_ai_features_settings.md) for the full map.
 
 When provisioned, the AI Chat panel will refresh and show the chat interface.
 
 ### Using Fabric as the LLM Provider
 
-From V8.5.1, Fabric can act as the LLM provider itself. Fabric exposes an OpenAI-compatible endpoint backed by the project's [AI LLM interface](/articles/24_non_DB_interfaces/15_LLM_interface.md), so the provider credentials are held in Fabric rather than by each developer. Users do not enter an API key, and the organization controls which models are reachable and who may use them.
+From V8.5.1, Fabric can act as the LLM provider itself. Fabric exposes an OpenAI-compatible endpoint backed by the project's [AI LLM interface](/articles/24_non_DB_interfaces/15_LLM_interface.md), so the provider credentials are held in Fabric rather than by each developer. Users do not enter an API key, and the organization controls which models are reachable through Fabric and who may use them. Fabric as the provider does not prevent a developer from also configuring a provider of their own; see [Security and Privacy](13_security_and_privacy.md#choose-where-data-goes).
 
-Fabric is connected as a custom OpenAI provider - see [Fabric as a Provider](16_custom_llm_providers.md#fabric-as-a-provider) for the settings.
+Fabric is connected as a custom OpenAI provider. Studio ships a ready model entry for it, which authenticates as the signed-in Fabric user, so no API key is entered in Studio. On the Fabric side, install the LLM connector for your provider from the K2 Exchange and define the AI LLM interface with the provider's API key. See [Fabric as a Provider](16_custom_llm_providers.md#fabric-as-a-provider) for the settings.
 
 ### Install the Studio AI Core Artifacts Extension
 
-Studio AI's built-in agents, skills, and prompt templates - including **@k2-assistant**, the default agent and its companion **k2-worker** - are shipped by the **Studio AI Core Artifacts** extension on K2 Exchange. Without it installed and imported, the AI Chat panel has little to work with.
+From V8.5.2, **@k2-assistant** (the default agent) and its worker sub-agent **k2-worker** are built into the Studio. The **Studio AI Core Artifacts** extension on K2 Exchange adds the Fabric **skills** - instructions, references and workflows for the most common Fabric tasks - which the agents load on their own. The chat works without it, but installing it is recommended.
 
-To install it:
+To install it, either use the **Add the Studio AI core skills** step of the [walkthrough](#the-get-started-with-ai-walkthrough), or:
 
 1. Open the **Extensions** view (left activity bar) and search for **Studio AI Core Artifacts** under **K2 Exchange**.
 2. Click **Install**.
-3. This creates a `.agents/` folder in your workspace, with agents under `.agents/agents/` and skills under `.agents/skills/` (each skill is a self-contained folder with a `SKILL.md` entry point).
+3. This creates a `.agents/` folder in your workspace, with skills under `.agents/skills/` (each skill is a self-contained folder with a `SKILL.md` entry point).
 
 > The extension provides an **Init Claude Skills** command, which imports the same skills for use with Claude Code instead of (or alongside) the Studio AI.
 
-Once imported, the agents and skills become available immediately - no restart required. See [Studio AI Agents Reference](02_studio_ai_agents_reference.md) for the agent roster and [Skills and Slash Commands](11_skills_and_slash_commands.md) for how skills work.
+> Up to V8.5.1, the extension also installed @k2-assistant and k2-worker under `.agents/agents/`. From V8.5.2 the built-in agents are used, and workspace copies of these two agents are ignored.
+
+Once imported, the skills become available immediately - no restart required. See [Studio AI Agents Reference](02_studio_ai_agents_reference.md) for the agent roster and [Skills and Slash Commands](11_skills_and_slash_commands.md) for how skills work.
 
 
 
@@ -93,6 +109,8 @@ Once imported, the agents and skills become available immediately - no restart r
 You do not need to know which agent to use. By default, your message goes to **@k2-assistant**, the Fabric project assistant shown on the AI Chat welcome screen ("Ask K2assistant"). It figures out what you need and handles it: answering directly, loading a relevant skill, or delegating to a specialized agent behind the scenes - all without you having to pick anything.
 
 Just type your question or task and press **Enter**. This is the recommended way to work with Studio AI for the vast majority of tasks.
+
+@k2-assistant works in one of three modes, selected in the chat input: **Ask** (read-only answers), **Plan** (read-only, writes a plan) and **Act** (the default - makes changes). See [Ask, Plan and Act Modes](05_plan_first_development.md).
 
 
 
@@ -121,5 +139,5 @@ For a complete guide to context, including drag-and-drop and the paperclip butto
 ## Next Recommended Steps
 
 - Understand all chat features: [Using the AI Chat](03_using_the_ai_chat.md)
-- Learn how code changes are proposed and applied: [AI Code Editing: Reviewing and Applying Changes](04_ai_code_editing_and_changesets.md)
+- Learn how @k2-assistant reads, plans and makes changes: [Ask, Plan and Act Modes](05_plan_first_development.md)
 - Optional/advanced - address specific agents directly: [Studio AI Agents Reference](02_studio_ai_agents_reference.md)

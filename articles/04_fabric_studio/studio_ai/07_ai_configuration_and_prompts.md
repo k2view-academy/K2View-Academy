@@ -5,8 +5,8 @@ Every agent in Studio AI is driven by a **prompt template**: a structured text f
 ## Opening the Prompt Editor
 
 1. Open the **AI Configuration** panel: click **More Actions...** ("…") in the AI Chat panel toolbar, then **Open AI Configuration**. See [Using the AI Chat](03_using_the_ai_chat.md#the-ai-chat-toolbar).
-2. Select the **Agents** tab.
-3. Click the edit (pencil) icon next to the prompt template you want to customize, in the agent's **Prompt Templates** table.
+2. Select the **Agents** category, and open the agent.
+3. In the agent's **Prompts** section, open the prompt you want to customize. A prompt with several variants shows them there - for example `k2-assistant-system` has three variants, one per mode, with **Act Mode** as the default.
 
 The prompt template opens in the Studio editor, where you can modify it like any other file.
 
@@ -16,7 +16,7 @@ Prompt templates are plain text files with a YAML frontmatter header and a body.
 
 ### Variable References: `{{variableName}}`
 
-Double-curly-brace syntax inserts the current value of a context variable at the point where the reference appears. Variables are defined in the **Variables** tab of AI Configuration or come from the built-in set (such as `{{currentRelativeFilePath}}`).
+Double-curly-brace syntax inserts the current value of a context variable at the point where the reference appears. Variables are defined in the **Variables** category of AI Configuration or come from the built-in set (such as `{{currentRelativeFilePath}}`).
 
 **Example:**
 
@@ -26,6 +26,8 @@ The current file is {{currentRelativeFilePath}}.
 ```
 
 When the agent runs, these placeholders are replaced with the actual values for that session.
+
+> **Prompt caching tip:** LLM providers cache the start of a request - tools, then system prompt, then messages - and charge much less for the cached part. A variable whose value changes often, such as `{{currentRelativeFilePath}}` or `{{openEditors}}`, changes the system prompt whenever you switch editor tabs, so the whole request is sent uncached again. Avoid such variables in a system prompt. @k2-assistant sends this editor state with each message instead (see [Security and Privacy](13_security_and_privacy.md#what-each-request-contains)).
 
 ### Function Tool References: `~{functionName}`
 
@@ -56,7 +58,7 @@ The `name` and `description` fields appear in the AI Configuration panel and in 
 
 A **prompt fragment** is a reusable snippet of prompt content stored in a `.prompttemplate` file. Instead of duplicating the same instructions across multiple agent prompts, you write them once as a fragment and reference the fragment from each agent.
 
-Fragments are managed in the **Prompt Fragments** tab of AI Configuration. To use a fragment in an agent prompt template, reference it using the `~{fragment}` function call syntax:
+Fragments are managed in the **Prompt Snippets** category of AI Configuration. To use a fragment in an agent prompt template, reference it using the `~{fragment}` function call syntax:
 
 ```
 ~{fragment('shared/java-style-guide')}
@@ -70,13 +72,15 @@ Fragments support the same `{{variable}}` and `~{function}` syntax as regular pr
 
 Changes to a prompt template are saved when you save the file in the editor (Ctrl+S). The updated prompt takes effect for the next chat session that uses the agent; ongoing sessions continue with the prompt that was active when they started.
 
-To reset a built-in agent's prompt to its original default, click the **Reset to Default** button in the Agents tab next to the agent. Custom agents do not have a default to reset to.
+To reset a built-in agent's prompt to its original default, use the reset option of the prompt in the agent's **Prompts** section. Custom agents do not have a default to reset to.
 
 ## Where Prompt Files Are Stored
 
 Confirmed live: a built-in agent's prompt template (for example `@Coder`'s, `coder-system-agent-mode.prompttemplate`) opens from a **`.prompts/`** folder in the project, not from inside the Studio application itself. Editing and saving it (Ctrl+S) edits that project file directly. The `promptTemplates.promptTemplatesFolder` setting confirms the full path: `<workspace root>/.prompts` (falling back to the user config directory if not customized). See [AI Features Settings](15_ai_features_settings.md#prompt-templates-and-skills).
 
-The older claim that overrides live in a project's `.theia/` directory or a user-level `~/.theia/` directory is confirmed outdated; `.theia/` is not used by the current version.
+### @k2-assistant and @k2-worker Prompts
+
+From V8.5.2, the prompts of @k2-assistant - one per mode (Ask, Plan and Act, see [Ask, Plan and Act Modes](05_plan_first_development.md)) - and of @k2-worker are built into the Studio. Customize them in the same way as the prompts of other built-in agents. Copies of these agents under `.agents/agents/` in the workspace, installed by earlier versions of the Studio AI Core Artifacts extension, are ignored.
 
 ## Practical Customization Examples
 

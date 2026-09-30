@@ -1,6 +1,13 @@
 # Other Studio AI Agents
 
-> This article covers the longer tail of Studio AI agents beyond the core set in [Studio AI Agents Reference](02_studio_ai_agents_reference.md) (@k2-assistant, @k2-worker, @Interfaces, @Data-Product-Explorer, @KB). Some of these agents are being superseded by @k2-worker's expanded capabilities or folded into skills over time. Check the [AI Configuration](06_ai_configuration_and_settings.md) Agents tab for each agent's current **Enabled** / **Show in Chat** status before relying on one.
+> This article covers the longer tail of Studio AI agents beyond the core set in [Studio AI Agents Reference](02_studio_ai_agents_reference.md) (@k2-assistant, @k2-worker, @Interfaces, @Data-Product-Explorer, @KB). Some of these agents are being superseded by @k2-worker's expanded capabilities or folded into skills over time. Check the [AI Configuration](06_ai_configuration_and_settings.md) Agents category for each agent's current **Enabled** / **Show in Chat** status before relying on one.
+
+## Agents Disabled by Default
+
+The following agents are shipped **disabled**. They do not appear in the chat until you enable them in the **Agents** category of [AI Configuration](06_ai_configuration_and_settings.md#agents):
+
+- **@ClaudeCode**, **@Broadway-Edit**, **@Broadway-Explain** and **@Graphit** (disabled from V8.5.1) - their work is covered by @k2-assistant and the Fabric skills.
+- **AppTester**, **ProjectInfo** and **Codex**.
 
 ## Still Commonly Used
 
@@ -14,7 +21,7 @@
 - `@Architect Where should a new enrichment function for the customer_bank LU go?`
 - `@Architect How is this project structured?`
 
-> Earlier versions of Studio AI had @Architect generate structured implementation plans with an "Execute with Coder" button, described in [Plan-First Development with the Architect Agent](05_plan_first_development.md). That workflow does not match @Architect's current description and should be treated as deprecated/unconfirmed rather than relied upon.
+> Earlier versions of Studio AI had @Architect generate structured implementation plans with an "Execute with Coder" button. That workflow is no longer supported. For planning, use @k2-assistant's **Plan Mode** - see [Ask, Plan and Act Modes](05_plan_first_development.md).
 
 ### @GitHub
 
@@ -26,9 +33,11 @@
 - `@GitHub Summarize the changes in my current working branch`
 - `@GitHub Create a pull request description for my latest commits`
 
+## Advanced Coding
+
 ### @ClaudeCode
 
-**Focus:** Advanced coding assistance.
+**Focus:** Advanced coding assistance. *(Disabled by default.)*
 
 @ClaudeCode provides deep, sophisticated coding help for complex scenarios, large refactors, and nuanced implementation challenges. It handles long-running autonomous sessions particularly well and can ask clarifying questions mid-task when it needs more information before proceeding.
 
@@ -42,7 +51,7 @@
 
 **Focus:** Code writing and editing. *(Its capabilities now live in @k2-worker.)*
 
-@Coder is the original agent for generating, modifying, and fixing code, with reviewable diffs in Edit Mode and autonomous multi-step work in Agent Mode. It is still valid and enabled, but @k2-assistant now delegates the same kind of file-editing work to @k2-worker by default, so there is usually no need to address @Coder directly anymore. See [AI Code Editing: Reviewing and Applying Changes](04_ai_code_editing_and_changesets.md) for how the review/diff workflow works either way.
+@Coder is the original agent for generating, modifying, and fixing code, with reviewable diffs in Edit Mode and autonomous multi-step work in Agent Mode. It is still valid and enabled, but @k2-assistant now delegates the same kind of file-editing work to @k2-worker by default, so there is usually no need to address @Coder directly anymore. See [Code Editing with @Coder (Legacy)](04_ai_code_editing_and_changesets.md) for how the review/diff workflow works either way.
 
 **Example prompts:**
 - `@Coder Write a Java enrichment function that joins customer data with the Orders table`
@@ -76,7 +85,7 @@ Use @Studio-Commands to trigger Studio actions through natural language: deployi
 
 ### @Broadway-Explain
 
-**Focus:** Broadway flow explanations.
+**Focus:** Broadway flow explanations. *(Disabled by default.)*
 
 @Broadway-Explain reads and describes Broadway flows in plain language. Use it to understand an unfamiliar flow, or to generate documentation for an existing one.
 
@@ -85,7 +94,7 @@ Use @Studio-Commands to trigger Studio actions through natural language: deployi
 
 ### @Broadway-Edit
 
-**Focus:** Broadway flow editing.
+**Focus:** Broadway flow editing. *(Disabled by default.)*
 
 @Broadway-Edit can propose modifications to Broadway flows: adding actors, error handling, conditions, and more.
 
@@ -94,7 +103,7 @@ Use @Studio-Commands to trigger Studio actions through natural language: deployi
 
 ### @Graphit
 
-**Focus:** Graphit web services.
+**Focus:** Graphit web services. *(Disabled by default.)*
 
 Use @Graphit for help designing, generating, and reviewing Graphit-based web services.
 
@@ -104,15 +113,6 @@ Use @Graphit for help designing, generating, and reviewing Graphit-based web ser
 ## Meta Agents
 
 These agents don't work on your project directly; they help you build and manage the other agents, skills, and requests around them.
-
-### @Agent-Builder
-
-**Focus:** Scaffolding new Fabric agents.
-
-@Agent-Builder builds a new Fabric agent under a Data Product/Logical Unit. It understands the Data Product's schema, splits it into business domains, scaffolds the agent, and fills in its `agent.yaml`, sub-agents, skills, references, and evals. It delegates to @Data-Product-Explorer, @Interfaces, and @KB for schema and documentation context.
-
-**Example prompts:**
-- `@Agent-Builder Create a new agent for the customer_bank Data Product`
 
 ### @CreateSkill
 
@@ -134,8 +134,8 @@ These agents don't work on your project directly; they help you build and manage
 
 ## Background and Delegate Agents
 
-A number of additional agents exist in the [AI Configuration](06_ai_configuration_and_settings.md) Agents tab but are not intended to be addressed directly with `@`. They support other agents or Studio features in the background:
+A number of additional agents exist in the [AI Configuration](06_ai_configuration_and_settings.md) Agents category but are not intended to be addressed directly with `@`. They support other agents or Studio features in the background:
 
 - **AppTester**: runs end-to-end UI verification; see [Agent Capabilities](10_agent_capabilities.md).
 - **PR Reviewer**, **ProjectInfo**, **Codex**, **Terminal Assistant**: specialized delegate agents used by other agents and Studio features.
-- **Chat Session Naming**, **Chat Session Summary**, **Code Completion**: internal agents that name sessions, generate summaries, and power inline code completion.
+- **Chat Session Naming**, **Chat Session Summary**, **Code Completion**, **Commit Message**: internal agents that name sessions, generate summaries, power inline code completion, and suggest Git commit messages.

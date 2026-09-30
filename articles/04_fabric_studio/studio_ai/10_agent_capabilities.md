@@ -10,7 +10,7 @@ This design keeps agents predictable and contained in everyday use, while still 
 
 ## Capability Chips in the Chat Input
 
-Agents that advertise optional capabilities show compact toggle **chips** directly in the chat input area. Each chip represents a named capability that is **off by default** - click the chip to enable it for your next request, click again to disable. When any capability is on, a small blue dot appears on the tools icon in the chat toolbar so you can see at a glance that a capability is active.
+Agents that advertise optional capabilities show compact toggle **chips** directly in the chat input area. Each chip represents a named capability, usually **off by default** - click the chip to enable it for your next request, click again to disable. When any capability is on, a small blue dot appears on the tools icon in the chat toolbar so you can see at a glance that a capability is active.
 
 @Coder advertises three chips in Agent Mode:
 
@@ -18,7 +18,33 @@ Agents that advertise optional capabilities show compact toggle **chips** direct
 - **GitHub** - lets @Coder delegate to the @GitHub agent during a task, so it can read issues, create pull requests, query repositories, and perform other Git operations as part of the implementation workflow.
 - **AppTester** - delegates to the AppTester agent after an implementation step to run UI verification, forming an implement-and-test loop without extra prompting.
 
+@k2-assistant advertises three chips:
+
+<table>
+  <thead>
+    <tr><th>Chip</th><th>Act Mode</th><th>Ask / Plan Mode</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Shell Execution</strong></td><td><strong>On</strong> by default</td><td>Off by default. When turned on, used for inspection only - reading logs, <code>git log</code>, listing files - never for a command that changes anything.</td></tr>
+    <tr><td><strong>GitHub</strong></td><td>Off by default</td><td>Off by default</td></tr>
+    <tr><td><strong>Memory</strong></td><td>Off by default</td><td>Off by default</td></tr>
+  </tbody>
+</table>
+
+See [Ask, Plan and Act Modes](05_plan_first_development.md) and [Memory](#memory) below.
+
+These chips, and the agent's default for each of them, are also listed under **Available Capabilities** on the agent's page in AI Configuration (**Agents** category > open the agent). For Anthropic models the same page lists **Server Tools** (Web Fetch, Web Search), off by default - see [Security and Privacy](13_security_and_privacy.md#4-a-capability-is-enabled).
+
 Other agents (including custom and plugin-provided agents) can declare their own chips - see [Declaring Capabilities in an Agent Prompt](#declaring-capabilities-in-an-agent-prompt) below.
+
+## Memory
+
+From V8.5.2, @k2-assistant supports the **Memory** capability, which is **off by default**. When you turn it on, the assistant keeps a wiki-style knowledge base in the workspace and reuses it in later tasks:
+
+- `.agents/memory/raw/` - append-only notes: session logs and findings, as recorded.
+- `.agents/memory/wiki/` - compiled articles, one concept each, linked from an `index.md`.
+
+The assistant turns what it learned in a session into linked concept articles, so later sessions do not have to rediscover the same facts about your project. The memory files are ordinary workspace files: you can read, edit or delete them, and decide whether to commit them to Git.
 
 ## The Generic Capabilities Panel
 
@@ -43,7 +69,7 @@ Use this panel when:
 
 ## Capability Persistence
 
-Toggle chips and Generic Capabilities Panel selections are **per session**. When you start a new chat session, all capabilities reset to their defaults (off) so that permissions do not silently carry over from one task to the next.
+Toggle chips and Generic Capabilities Panel selections are **per session**. When you start a new chat session, all capabilities reset to their defaults - off, except where the agent declares a capability as `default on`, such as Shell Execution in @k2-assistant's Act mode - so that permissions do not silently carry over from one task to the next.
 
 Within the current session, once a capability is enabled it stays on for all subsequent messages until you explicitly disable it.
 

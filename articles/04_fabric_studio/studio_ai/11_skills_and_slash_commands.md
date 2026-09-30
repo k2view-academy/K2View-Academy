@@ -27,17 +27,19 @@ Type `/` in the chat input to see a list of available skills as slash commands. 
 /fabric-commands
 ```
 
-## Skills Tab (AI Configuration)
+Only the name of an existing command or skill is treated as a slash command. Text that merely starts with `/` - for example a file path such as `/opt/apps/fabric/workspace` - is sent as part of your message.
 
-Every installed skill is listed in the **Skills** tab of [AI Configuration](06_ai_configuration_and_settings.md#skills-tab): its name, description, and the file path to its `SKILL.md`. Click **Open** next to a skill to view its file directly.
+## Skills in AI Configuration
+
+Every installed skill is listed, with its name and description, in the **Skills & Slash Commands** category of [AI Configuration](06_ai_configuration_and_settings.md#skills-and-slash-commands). Open a skill there to edit its `SKILL.md`.
 
 ## Where Skills Are Stored
 
-Skills live under `.agents/skills/<skill-name>/SKILL.md` in your project (imported by the Studio AI Core Artifacts extension; see [Getting Started with Studio AI](01_getting_started_with_studio_ai.md#install-the-studio-ai-core-artifacts-extension)). The `@CreateSkill` agent also supports an alternate `.prompts/skills/` location. Check the **Location** column in the Skills tab for the exact path of any given skill rather than assuming one location.
+Skills live under `.agents/skills/<skill-name>/SKILL.md` in your project. The Fabric skills are imported by the Studio AI Core Artifacts extension - from V8.5.2 the extension ships skills only, since @k2-assistant and @k2-worker are built into the Studio. Install it from the **Add the Studio AI core skills** step of the Get started with AI walkthrough, or from the K2 Exchange; see [Getting Started with Studio AI](01_getting_started_with_studio_ai.md#install-the-studio-ai-core-artifacts-extension). The `@CreateSkill` agent also supports an alternate `.prompts/skills/` location. Open a skill in the Skills & Slash Commands category to see the exact file it comes from, rather than assuming one location.
 
 ## Skills Available in This Project
 
-At the time of writing, this project's Skills tab listed the following (yours may differ):
+At the time of writing, this project's Skills & Slash Commands category listed the following (yours may differ):
 
 <table>
   <thead>

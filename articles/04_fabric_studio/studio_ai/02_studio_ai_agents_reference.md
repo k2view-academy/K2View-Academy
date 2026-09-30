@@ -16,13 +16,25 @@ Studio AI is built from a set of specialized agents behind the scenes. To invoke
 
 @k2-assistant routes work by scope: a small, fully-specified change (two or three files at most, every edit statable up front) it applies itself; anything larger, multi-step, or requiring exploration is handed off to @k2-worker, run in parallel when the work can be split.
 
-You never need to type `@k2-assistant` explicitly - it's the default.
+You never need to type `@k2-assistant` explicitly - it's the default. From V8.5.2 it is built into the Studio (earlier versions installed it with the Studio AI Core Artifacts extension).
+
+**Modes.** @k2-assistant offers three modes, picked per chat session in the mode selector of the chat input:
+
+- **Ask Mode** - read-only: answers, reviews and diagnoses. It does not edit files, delegate to @k2-worker, or run anything that changes the Fabric server.
+- **Plan Mode** - read-only, and writes an implementation plan that Act mode can then carry out.
+- **Act Mode** (default) - makes changes: edits files, delegates to @k2-worker and runs actions on the Fabric server, with confirmation where needed.
+
+In Ask or Plan mode, the assistant can offer to switch modes - it asks in the chat and switches only after you accept. See [Ask, Plan and Act Modes](05_plan_first_development.md).
+
+**Memory.** @k2-assistant supports the optional **Memory** capability (off by default), which keeps a knowledge base of what it learned in the workspace. See [Agent Capabilities](10_agent_capabilities.md#memory).
 
 ### @k2-worker
 
 **Focus:** File editing and code writing - the execution arm behind @k2-assistant.
 
 @k2-worker is the sub-agent @k2-assistant delegates hands-on file editing to, and where the code-writing capability formerly associated with @Coder now lives. Given one self-contained task, it loads the skill the task names (or the closest match from the skill catalog), creates or edits exactly the files in its assigned scope - Fabric artifacts (LU tables, Broadway flows and actors, interfaces, web services, MTables, globals) or project Java/generic code - verifies the result with diagnostics, and reports the changes back in a fixed format.
+
+Follow-ups on the same task - your answers to its open questions, fixes, re-reviews - are sent into the worker's existing session, so it keeps the context of the original task. A delegation that fails is retried in a fresh session.
 
 @k2-worker has no shell, runtime, user-interaction, or delegation tools of its own - anything beyond workspace file edits is reported back to @k2-assistant to handle. In practice, you will rarely address `@k2-worker` directly; it's documented here because understanding it explains how @k2-assistant actually gets implementation work done, and because it is the modern equivalent of what @Coder used to do.
 
@@ -44,7 +56,7 @@ These three are still commonly worth addressing directly for read-only lookups, 
 
 **Focus:** Read-only Data Product (Logical Unit) schema and instance lookup.
 
-@Data-Product-Explorer is a read-only expert on Fabric Data Products (Logical Units / LUs). It explains a Data Product's schema - tables, columns, relationships - by name or from the currently open schema file, and fetches instance data by IID as well as common/reference table data. For design and editing work (adding tables, populations, enrichment functions), ask @k2-assistant instead.
+@Data-Product-Explorer is a read-only expert on Fabric Data Products (Logical Units / LUs). It explains a Data Product's schema - tables, columns, relationships - by name or from the currently open schema file, and fetches instance data by IID as well as common/reference table data. Its schema and data tools ask for confirmation before they run: they read real data into the chat, and fetching an instance can trigger a sync from the source systems. For design and editing work (adding tables, populations, enrichment functions), ask @k2-assistant instead.
 
 **Example prompts:**
 - `@Data-Product-Explorer What is the schema of the customer_bank Data Product?`
@@ -54,7 +66,7 @@ These three are still commonly worth addressing directly for read-only lookups, 
 
 **Focus:** K2View knowledge base.
 
-@KB answers knowledge-base questions about K2View Fabric and Fabric Studio - it draws on the fabric issues/Q&A knowledge base and Fabric's help topics, so it can answer questions about most fabric commands and modules: Data Product/LU schema, LU tables and views, common (reference) tables, Broadway flows and actors, Graphit, interfaces, environments, Query Builder, web services and user Java functions, globals, instance groups, IID finder, MTable, reports, security profiles, web apps, templates, deploy, LU instances, sync methods/modes, micro DB (MDB), TDM, and more.
+@KB sends the search text to the public K2view knowledge-base service (see [Security and Privacy](13_security_and_privacy.md#where-requests-go)). @KB answers knowledge-base questions about K2View Fabric and Fabric Studio - it draws on the fabric issues/Q&A knowledge base and Fabric's help topics, so it can answer questions about most fabric commands and modules: Data Product/LU schema, LU tables and views, common (reference) tables, Broadway flows and actors, Graphit, interfaces, environments, Query Builder, web services and user Java functions, globals, instance groups, IID finder, MTable, reports, security profiles, web apps, templates, deploy, LU instances, sync methods/modes, micro DB (MDB), TDM, and more.
 
 **Example prompts:**
 - `@KB How do I configure an MTable in Fabric?`
@@ -62,4 +74,4 @@ These three are still commonly worth addressing directly for read-only lookups, 
 
 ## Switching Between Agents
 
-You can switch agents at any point in a conversation by typing `@AgentName` again. The new agent becomes pinned for subsequent messages.
+You can switch agents at any point in a conversation by typing `@AgentName` again. The new agent becomes pinned for subsequent messages. While you are talking to the default @k2-assistant, the chat does not show it as a pinned agent, which leaves room for its mode selector.

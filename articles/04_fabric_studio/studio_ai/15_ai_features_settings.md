@@ -29,21 +29,35 @@ Studio AI has three separate configuration surfaces, and it is easy to confuse t
   </tbody>
 </table>
 
-This article covers the third surface: a large set of preferences (77 at the time of writing) under the **AI Features** category of Studio's standard Settings UI, most of which are not exposed anywhere in the AI Configuration panel.
+This article covers the third surface: a large set of preferences under the **AI Features** category of Studio's standard Settings UI, most of which are not exposed anywhere in the AI Configuration panel.
 
 ## Opening AI Features Settings
 
 1. Open the command palette (**F1**) and run **Preferences: Open Settings (UI)**, or press **Ctrl+,**.
-2. In the left navigation, expand **AI Features**. It contains around 28 sub-sections (Agent Mode, Agent Settings, AI Enablement, Anthropic, Chat, Code Completion, and more).
+2. In the left navigation, expand **AI Features**. It contains sub-sections such as Agent Mode, Agent Settings, AI Enablement, Anthropic, Chat, Code Completion, and more. Selecting a sub-section shows only its settings.
 3. Alternatively, type a keyword (for example, "compaction" or "token usage") into the **Search settings** box at the top; matching settings from any category are shown directly.
 
-Settings here apply globally to your Studio user/workspace, unlike the per-session overrides in article 03.
+Settings here apply to your Studio user or workspace (not only to one chat session, unlike the per-session overrides in article 03). They are not a central policy: each Studio has its own settings, and its user can change them. See [Security and Privacy](13_security_and_privacy.md#controls).
 
 ## AI Enablement and LLM Providers
 
 Turning AI on and connecting a provider is covered in [Getting Started with Studio AI](01_getting_started_with_studio_ai.md#enabling-studio-ai). The same **AI Enablement** section lives under AI Features in this Settings UI.
 
-Each supported LLM provider has its own sub-section here for API keys, model lists, and provider-specific options:
+Each supported LLM provider has its own sub-section here for API keys and provider-specific options.
+
+From V8.5.2, Anthropic, OpenAI and Google no longer have a model-list setting: the settings `ai-features.anthropic.AnthropicModels`, `ai-features.openAiOfficial.officialOpenAiModels` and `ai-features.google.models` were removed. Studio reads the available models from each provider, and you choose which appear in the chat in the **Providers & Models** category of [AI Configuration](06_ai_configuration_and_settings.md#providers-and-models). Two new settings per provider (`anthropic`, `openAiOfficial`, `google`) control this:
+
+<table>
+  <thead>
+    <tr><th>Setting</th><th>What it does</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>ai-features.&lt;provider&gt;.modelOverrides</code></td><td>A fixed list of models to offer, instead of the list read from the provider. Like other Studio settings it can be changed by the user, so it sets a default rather than enforcing a restriction.</td></tr>
+    <tr><td><code>ai-features.&lt;provider&gt;.allowEnvironmentApiKey</code></td><td>Whether an API key found in an environment variable (for example <code>ANTHROPIC_API_KEY</code>) may be used. The user is asked once before such a key is used.</td></tr>
+  </tbody>
+</table>
+
+The models chosen in AI Configuration are stored in `ai-features.modelSettings.favoriteModels` and `ai-features.modelSettings.hiddenModels`.
 
 <table>
   <thead>
@@ -53,20 +67,20 @@ Each supported LLM provider has its own sub-section here for API keys, model lis
     </tr>
   </thead>
   <tbody>
-    <tr><td>Anthropic / Anthropic Custom</td><td>Anthropic API key, the list of Anthropic models available to agents, and custom (self-defined) Anthropic model entries. See <a href="16_custom_llm_providers.md">Custom LLM Providers</a>.</td></tr>
-    <tr><td>Open AI Official Models / Open AI Custom Models</td><td>OpenAI API key, official model list, custom model entries, and whether to use the Responses API (<code>useResponseApi</code>). See <a href="16_custom_llm_providers.md">Custom LLM Providers</a>.</td></tr>
-    <tr><td>Google</td><td>API key, model list, and retry/backoff settings for rate-limit and other errors.</td></tr>
+    <tr><td>Anthropic / Anthropic Custom</td><td>Anthropic API key, <code>modelOverrides</code> / <code>allowEnvironmentApiKey</code>, and custom (self-defined) Anthropic model entries. See <a href="16_custom_llm_providers.md">Custom LLM Providers</a>.</td></tr>
+    <tr><td>Open AI Official Models / Open AI Custom Models</td><td>OpenAI API key, <code>modelOverrides</code> / <code>allowEnvironmentApiKey</code>, custom model entries, and whether to use the Responses API (<code>useResponseApi</code>). See <a href="16_custom_llm_providers.md">Custom LLM Providers</a>.</td></tr>
+    <tr><td>Google</td><td>API key, <code>modelOverrides</code> / <code>allowEnvironmentApiKey</code>, and retry/backoff settings for rate-limit and other errors.</td></tr>
     <tr><td>Hugging Face</td><td>API key and model list.</td></tr>
     <tr><td>Ollama</td><td>Ollama host URL and model list, for a locally or network-hosted Ollama server.</td></tr>
     <tr><td>Llamafile</td><td>Configured Llamafile executables.</td></tr>
-    <tr><td>Claude Code</td><td>API key and executable path for the bundled <code>@anthropic-ai/claude-agent-sdk</code>, used by the <code>@ClaudeCode</code> agent.</td></tr>
+    <tr><td>Claude Code</td><td>API key and executable path for the bundled <code>@anthropic-ai/claude-agent-sdk</code>, used by the <code>@ClaudeCode</code> agent (disabled by default).</td></tr>
     <tr><td>Codex</td><td>API key for OpenAI Codex.</td></tr>
-    <tr><td>GitHub Copilot</td><td>Enable/disable, enterprise URL, and model overrides.</td></tr>
-    <tr><td>Fabric (via Open AI Custom Models)</td><td>Fabric as the LLM provider: a custom model entry whose URL is the Fabric <code>/api/v1</code> base URL and whose API key is empty. The provider credentials sit in the Fabric <a href="/articles/24_non_DB_interfaces/15_LLM_interface.md">AI LLM interface</a>. See <a href="16_custom_llm_providers.md#fabric-as-a-provider">Custom LLM Providers</a>.</td></tr>
+    <tr><td>GitHub Copilot</td><td>Enable/disable (off by default in the Studio), enterprise URL, and model overrides. From V8.5.2, Copilot signs in through the official GitHub Copilot CLI.</td></tr>
+    <tr><td>Fabric (via Open AI Custom Models)</td><td>Fabric as the LLM provider: the predefined custom model entry <code>fabric-openai-compatible-llm</code>, whose URL is the Fabric <code>/api/v1</code> base URL and which authenticates with the user's Fabric session token (<code>Authorization: Bearer ${fabric:jwt}</code> header). The provider credentials sit in the Fabric <a href="/articles/24_non_DB_interfaces/15_LLM_interface.md">AI LLM interface</a>. See <a href="16_custom_llm_providers.md#fabric-as-a-provider">Custom LLM Providers</a>.</td></tr>
   </tbody>
 </table>
 
-**Model Selection** and **Language Model Aliases** also appear here, but both are thin pointers into the AI Configuration panel's **Agents** and **Model Aliases** tabs (see article 06) rather than separate editors. **Model Settings** does add two standalone knobs: `maxRetries` (retry attempts on a failed model call) and `requestSettings` (provider request tuning).
+**Model Selection** and **Language Model Aliases** also appear here, but both are thin pointers into the AI Configuration panel's **Agents** and **Model Aliases** categories (see article 06) rather than separate editors. **Model Settings** does add two standalone knobs: `maxRetries` (retry attempts on a failed model call) and `requestSettings` (provider request tuning).
 
 ## Server-Side Compaction
 
@@ -145,25 +159,25 @@ This is the closest equivalent Studio AI currently has to a "your session is get
   </thead>
   <tbody>
     <tr><td><code>defaultChatAgent</code></td><td>Which agent handles a message when none is explicitly addressed.</td></tr>
-    <tr><td><code>defaultToolConfirmation</code></td><td>Default confirmation behavior for tools without a tool-specific entry (see below). Some tools always require confirmation regardless of this setting.</td></tr>
+    <tr><td><code>defaultToolConfirmation</code></td><td>Default confirmation behavior for tools without a tool-specific entry (see below). <strong>The Studio default is Always Allow.</strong> Tools that read Data Product schemas or data from the Fabric server (<code>getLuSchema</code>, <code>getLuInstanceData</code>, <code>getLuInstanceTableData</code>, <code>getCommonSchema</code>, <code>getCommonTableData</code>) still ask - see <a href="13_security_and_privacy.md#tool-confirmations">Tool Confirmations</a>.</td></tr>
     <tr><td><code>toolConfirmation</code></td><td>Per-tool confirmation overrides (e.g. force a specific tool to always ask, or always allow).</td></tr>
     <tr><td><code>toolConfirmationTimeout</code></td><td>Seconds before a pending tool confirmation is auto-denied. <code>0</code> (default) disables the timeout. Also settable per session; see article 03.</td></tr>
     <tr><td><code>pinChatAgent</code></td><td>Keeps a mentioned agent active across prompts so you don't need to repeat <code>@Agent</code> every message.</td></tr>
     <tr><td><code>persistedSessionLimit</code></td><td>Maximum chat sessions to persist; <code>-1</code> unlimited, <code>0</code> disables persistence. Oldest sessions are pruned first.</td></tr>
     <tr><td><code>sessionStorageScope</code></td><td>Persist sessions per-workspace or in a single global store.</td></tr>
     <tr><td><code>welcomeScreenSessions</code></td><td>How many sessions to show on the chat welcome/home view before overflowing to "Browse all chats...".</td></tr>
-    <tr><td><code>bypassModelRequirement</code></td><td>Skips the language-model-configured check, for external agents (e.g. <code>@ClaudeCode</code>) that don't need a Theia-managed model.</td></tr>
+    <tr><td><code>bypassModelRequirement</code></td><td>Skips the language-model-configured check, for external agents (e.g. <code>@ClaudeCode</code>) that don't need a Studio-managed model.</td></tr>
     <tr><td><code>allowedResourceUrls</code></td><td>Controls which external resources chat markdown is allowed to load (a security hardening setting).</td></tr>
   </tbody>
 </table>
 
-If tool confirmations are set to auto-allow (globally or by default), review that choice with your security team: it means agent tool calls, including shell commands and file writes, proceed without a per-action prompt. See [Security and Privacy](13_security_and_privacy.md).
+Because the Studio ships with tool confirmations set to Always Allow, most agent tool calls - including file writes - proceed without a per-action prompt. Review that default with your security team, and consider requiring confirmation for more tools with `toolConfirmation`. Shell commands are also governed by the allow and deny lists below. See [Security and Privacy](13_security_and_privacy.md#tool-confirmations).
 
 ## Agent Mode and Agent Settings
 
-**Agent Mode: Enabled** (`ai-features.agentMode.enabled`) is the global default for whether `@Coder`'s Agent Mode is available without an extra first-use confirmation dialog. See [AI Code Editing and Changesets](04_ai_code_editing_and_changesets.md#edit-mode-vs-agent-mode).
+**Agent Mode: Enabled** (`ai-features.agentMode.enabled`) is the global default for whether `@Coder`'s Agent Mode is available without an extra first-use confirmation dialog. See [Code Editing with @Coder (Legacy)](04_ai_code_editing_and_changesets.md#edit-mode-vs-agent-mode).
 
-**Agent Settings** is a pointer, not a separate editor: it directs you to the AI Configuration panel's Agents tab for enablement, LLM selection, prompt customization, and custom agent creation (articles 06 and 09).
+**Agent Settings** is a pointer, not a separate editor: it directs you to the AI Configuration view's Agents category for enablement, LLM selection, prompt customization, and custom agent creation (articles 06 and 09).
 
 ## Code Completion
 
@@ -191,14 +205,14 @@ These settings back the file-location behavior described in [Customizing Agent P
   </thead>
   <tbody>
     <tr><td><code>promptTemplatesFolder</code></td><td>Confirmed set to <code>&lt;workspace root&gt;/.prompts</code> in this project (falls back to the user config directory if not customized).</td></tr>
-    <tr><td><code>taskContextStorageDirectory</code></td><td>Workspace-relative path for persisted task-context descriptions; confirmed as <code>.prompts/task-contexts</code> here. Empty means in-memory only.</td></tr>
+    <tr><td><code>taskContextStorageDirectory</code></td><td>Workspace-relative path for persisted task-context descriptions; confirmed as <code>.prompts/task-contexts</code> here. Empty means in-memory only. This is where @k2-assistant saves the plans it writes in Plan mode (see <a href="05_plan_first_development.md#plan-mode">Ask, Plan and Act Modes</a>).</td></tr>
     <tr><td><code>WorkspaceTemplateDirectories</code> / <code>WorkspaceTemplateFiles</code></td><td>Additional folders/files scanned for workspace-specific prompt templates, resolved by priority when IDs collide.</td></tr>
     <tr><td><code>TemplateExtensions</code></td><td>File extensions treated as prompt templates.</td></tr>
     <tr><td><code>skills.skillDirectories</code></td><td>Confirmed: <code>.prompts/skills</code> and <code>.agents/skills</code> in the workspace, plus <code>.agents/skills</code> in the user's home directory, and the product's own skills folder, are <strong>always</strong> included. This setting adds further directories on top. Live value in this project: <code>&lt;workspace root&gt;/.agents/skills</code>.</td></tr>
   </tbody>
 </table>
 
-This directly confirms the workspace-vs-global custom-agent/skill location question left open in article 09: skills (and, by the same convention, agents) resolve from both a workspace-level `.agents/` folder and a user-home-level `~/.agents/` folder, with workspace taking precedence.
+Skills therefore resolve from both a workspace-level `.agents/skills` folder and a user-home-level `~/.agents/skills` folder, with workspace taking precedence. Custom agents do not follow this convention: they are read from the workspace only - see [Creating Custom Agents](09_creating_custom_agents.md#where-custom-agents-are-stored).
 
 ## MCP, Notifications, Reasoning, Orchestrator
 
