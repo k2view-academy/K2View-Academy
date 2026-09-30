@@ -41,8 +41,7 @@ Validate:
 - the Space can be accessed as expected,
 - and the correct environment has been deployed and activated.
 
-:
-
+Confirm: 
 - the appropriate environment designation, such as `prod`, is active,
 - required Project content has been deployed,
 - and the deployment promotion procedure has been tested.
