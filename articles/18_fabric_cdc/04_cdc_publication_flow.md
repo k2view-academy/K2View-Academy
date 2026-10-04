@@ -34,6 +34,8 @@ The following diagram describes a list of events that trigger CDC messages:
 
 Note: You must run the CDC_REPUBLISH_INSTANCE command with TRUNCATE = FALSE on all Fabric LUIs to repopulate the data.
 
+Note: Starting from Fabric V8.5.2, the index creation and update messages sent to the Search consumer include the index settings defined in the settings files under **$FABRIC_HOME/config/cdc-tags**. [Click for more information about customizing index settings](/articles/18_fabric_cdc/cdc_consumers/search/03_creating_elasticsearch_indexes_on_search_fields.md#customizing-index-settings).
+
 
 **Examples:**
 

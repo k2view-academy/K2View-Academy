@@ -20,6 +20,10 @@ Edit the configuration file parameters, based on the search provider: **elastics
 
 Note that an installation of the search provider is required, as it is not included in the Fabric installation package.
 
+### Index Settings Files
+
+Starting from Fabric V8.5.2, you can customize the settings of the Search provider indexes, such as the number of shards or replicas, per environment, using JSON settings files under the **$FABRIC_HOME/config/cdc-tags** directory. [Click for more information about customizing index settings](03_creating_elasticsearch_indexes_on_search_fields.md#customizing-index-settings).
+
 
 
 [![Previous](/articles/images/Previous.png)](06_search_solution_limitations.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_search_troubleshooting.md)
