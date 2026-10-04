@@ -10,7 +10,9 @@ When enabled, the execution report lists the processed tables and their source a
 
 The **Scope** drop-down controls which tables are included in the report:
 
-- **All** — the report includes all processed tables for each processed entity.
+- **All** — The report includes all processed tables for each processed entity.
+- **Discrepancies only** — The report includes only tables with discrepancies for each processed entity.
+
 
 ## Include Sequence Replacement Report
 
