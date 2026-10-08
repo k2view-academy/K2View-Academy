@@ -12,15 +12,46 @@ All APIs are accessed over HTTPS, from the Fabric URL endpoint `https://<Domain 
 
 <span style="border-radius: 1em; background-color: #0969da; padding: 0 10px; color:white">GET</span>   `/api/catalog/start-crawler-job`
 
-The API invokes the DISCOVERY_CRAWLER job for a given interface.
+The API invokes the Discovery job for a selected data platform. For more information about the Discovery job, read [here](/articles/39_fabric_catalog/04_discovery_pipeline.md).
 
-**Example of an API call:**
+Starting from Fabric V8.5.2, the API can run in ad-hoc mode, for the selected data platform and its schema. Ad-hoc mode starts automatically when you supply a schema.
 
-~~~
-https://localhost:3213/api/catalog/start-crawler-job?dataPlatform=CRM_DB
-~~~
+In ad-hoc mode:
 
+- Discovery runs on the selected data platform and its schema **excluding** other schemas on the same data platform.
+- This "virtual rule" is combined with other pipeline rules for the same data platform, for example - plugins overrides, or exclusion of some specific datasets on the same schema.
+- This "virtual rule" is not saved to the `pluginsOverride.discovery`.
 
+<table>
+<thead>
+<tr>
+<th style="text-align: left;" width="100pxl"><strong>Component</strong></th>
+<th style="text-align: left;" width="100pxl"><strong>Mandatory</strong></th>
+<th style="text-align: left;" width="700pxl"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dataPlatform</td>
+<td>Y</td>
+<td>The name of the data platform (interface) to run the Discovery on.</td>
+</tr>
+<tr>
+<td>schema</td>
+<td>N</td>
+<td>
+<p>The name of the schema to run the Discovery on, in ad-hoc mode.</p>
+<p>Available from Fabric V8.5.2.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Examples of an API call:**
+
+`https://localhost:3213/api/catalog/start-crawler-job?dataPlatform=CRM_DB`
+
+`https://localhost:3213/api/catalog/start-crawler-job?dataPlatform=CRM_DB&schema=main`
 
 ## Get Catalog
 

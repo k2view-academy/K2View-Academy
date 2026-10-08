@@ -76,7 +76,8 @@ The following is the default product configuration for LLM Profiling:
 		"possibleMTableValues":"",
       	 "sampleSize": 10,
 		"samplePrompt": "Here is a data sample from the column ${columnName} to help you classify the column: ${sampleData}.",
-      	"incrementalMode":"KEEP_ALL"
+      	"incrementalMode":"KEEP_EXISTING",
+		"llmInterface": ""
 	}
 }
 ```
@@ -99,7 +100,8 @@ The following is the default product configuration of the LLM Description plugin
 		"userPrompt": "Given the following table ${tableName} which includes the following columns ${columns}.\nPlease provide a one-line description of ${columnName} with a minimum of 5 words to be used in technical documentation.\n${samplePrompt}\nDo not include table or column names in your response.",
 		"sampleSize": 10,
 		"samplePrompt": "Here is a data sample from the column ${columnName} to help you describe the column: ${sampleData}.",
-      	"incrementalMode":"KEEP_ALL"
+      	"incrementalMode":"KEEP_EXISTING",
+		"llmInterface": ""
 	}
 }
 ~~~
@@ -113,7 +115,7 @@ Unlike the LLM Profiling and LLM Description plugins, which run on column nodes,
 
 As with the other LLM-based plugins, the LLM Domain plugin skips nodes that already have a property defined in ```propertyName``` — whether it was created by the Crawler or set manually.
 
-This plugin is available starting from Fabric V8.5.1.
+This plugin is available starting from Fabric V8.5.1, the incremental mode - from V8.5.2.
 
 The following is the default product configuration for LLM Domain:
 
@@ -128,7 +130,9 @@ The following is the default product configuration for LLM Domain:
 		"propertyName": "description",
 		"userPrompt": "Given the following table ${tableName} which includes the following columns ${columns}.\nPlease provide a one-line description of ${tableName} with a minimum of 5 words to be used in technical documentation.\n${samplePrompt}\nDo not include table or column names in your response.",
 		"sampleSize": 0,
-		"samplePrompt": ""
+		"samplePrompt": "",
+        "incrementalMode":"KEEP_EXISTING",
+		"llmInterface": ""
 	}
 }
 ~~~
