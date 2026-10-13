@@ -1,6 +1,6 @@
 
 # Fabric Server - Main Directories
-There are several directories under the Fabric server $K2_HOME directory. The following table lists the main ones:
+There are several directories under the Fabric server $FABRIC_HOME directory (typically `/opt/apps/fabric` on a server installation, or `/opt/apps/fabric/workspace` in a Docker image). The following table lists the main ones:
 
 <table width="900pxl">
 <tbody>
@@ -14,7 +14,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 </tr>
 <tr>
 <td width="300pxl" valign="top">
-<h5>$K2_HOME/fabric</h4>
+<h5>$FABRIC_HOME/fabric</h4>
 </td>
 <td width="600pxl" valign="top">
 <p>Holds Fabric code, scripts, templates and resources.</p>
@@ -22,7 +22,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 </tr>
 <tr>
 <td width="300pxl" valign="top">
-<h5>$K2_HOME/fabric/scripts</h4>
+<h5>$FABRIC_HOME/fabric/scripts</h4>
 </td>
 <td width="600pxl" valign="top">
 <p>Holds the following Fabric scripts:&nbsp;</p>
@@ -38,7 +38,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 </tr>
 <tr>
 <td width="300pxl" valign="top">
-<h5>$K2_HOME/fabric/upgrade</h4>
+<h5>$FABRIC_HOME/fabric/upgrade</h4>
 </td>
 <td width="600pxl" valign="top">
 <p>Holds Fabric upgrade scripts. Each Fabric version has its own sub-directory. For example, when upgrading Fabric 5.5.x to Fabric 6.x, run the scripts under the  <strong>toV6.0</strong> sub-directory.</p>
@@ -46,7 +46,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 </tr>
 <tr>
 <td width="300pxl" valign="top">
-<h5>$K2_HOME/logs</h4>
+<h5>$FABRIC_HOME/logs</h4>
 </td>
 <td width="600pxl" valign="top">
 <p>Holds Fabric <a href="/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md">log files.</a></p>
@@ -54,7 +54,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 </tr>
 <tr>
 <td width="300pxl" valign="top">
-<h5>$K2_HOME/config</h4>
+<h5>$FABRIC_HOME/config</h4>
 </td>
 <td width="600pxl" valign="top">
 <p>Holds<a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md"> Fabric configuration files.</a></p>
@@ -63,7 +63,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 </tr>
 <tr>
 <td width="300pxl" valign="top">
-<h5>$K2_HOME/monitor</h4>
+<h5>$FABRIC_HOME/monitor</h4>
 </td>
 <td width="600pxl" valign="top">
 <p>Holds the Prometheus JMX exporter for execution monitoring.</p>
@@ -71,7 +71,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 </tr>
 <tr>
 <td width="300pxl" valign="top">
-<h5>$K2_HOME/apps</h4>
+<h5>$FABRIC_HOME/apps</h4>
 </td>
 <td width="600pxl" valign="top">
 <p>Holds third-party applications and tools used by Fabric. For example, Java, Cassandra, Grafana, or Redis.</p>
@@ -79,7 +79,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 </tr>
 <tr>
 <td width="300pxl" valign="top">
-<h5>$K2_HOME/storage</h4>
+<h5>$FABRIC_HOME/storage</h4>
 </td>
 <td width="600pxl" valign="top">
 <p>Stores data on each Fabric server and holds the <a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md">ludb.jar artifact files for each deployed LU or Web Service</a>, IIDFinder XMLs, and Reference (common) files.</p>
@@ -95,7 +95,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 </tr>
 <tr>
 <td width="300pxl" valign="top">
-<h5>$K2_HOME/ExternalJars</h4>
+<h5>$FABRIC_HOME/ExternalJars</h4>
 </td>
 <td width="600pxl" valign="top">
 <p>Holds the .jar files of all database jars that have not been provided as an out-of-the box product and also external jars used for the Fabric implementation.</p>
@@ -103,7 +103,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 </tr>
 <tr>
 <td width="300pxl" valign="top">
-<h5>$K2_HOME/export</h4>
+<h5>$FABRIC_HOME/export</h4>
 </td>
 <td width="600pxl" valign="top">
 <p>Holds the output files of the <a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting">set output Fabric command.</a></p>
@@ -111,7 +111,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 </tr>
 <tr>
 <td width="300pxl" valign="top">
-<h5>$K2_HOME/trace</h4>
+<h5>$FABRIC_HOME/trace</h4>
 </td>
 <td width="600pxl" valign="top">
 <p>Holds Trace files.</p>
@@ -119,7 +119,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 </tr>
 <tr>
 <td width="300pxl" valign="top">
-<h5>$K2_HOME/webserver</h4>
+<h5>$FABRIC_HOME/webserver</h4>
 </td>
 <td width="600pxl" valign="top">
 <p>The Home directory of the Fabric Web Admin. This directory can also hold manipulations (rewrites) on the URL when invoking Fabric Web Services.</p>
@@ -127,6 +127,8 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 </tr>
 </tbody>
 </table>
+
+<studio>>
 
 ## **Fabric Local Server Main Directories**
 
@@ -138,6 +140,8 @@ Fabric and Cassandra are installed under the following directories:
 - Fabric server, ```C:\K2View\<Fabric version>\Server```.
 - Apache-cassandra-3.11.x, ```C:\K2View\Fabric_6.1\Server and C:\K2View\<Fabric version>\ apache-cassandra-3.11.x```
 
+</studio>
+
 ### Fabric Server Directories
 
 The Fabric server directory has the following sub-directories:
@@ -146,19 +150,14 @@ The Fabric server directory has the following sub-directories:
 - **BroadwayUI**, Broadway directory.
 - **Webserver**, the Home directory of the Fabric Web Admin. This directory can also hold manipulations (rewrites) on the URL when invoking Fabric Web Services.
 
-### FabricHome Directory
+### Fabric Home Directory
 
-The Fabric Studio creates a **FabricHome** directory under each Fabric project's directory and holds the following sub-directories:
+The Fabric Studio creates a **Fabric Home** directory under each Fabric project's directory and holds the following sub-directories:
 
-- [config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig)
-- [export](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeexport)
-- [logs](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homelogs)
-- [storage](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homestorage)
+- [config](/articles/02_fabric_architecture/02_fabric_directories.md#fabric_homeconfig)
+- [export](/articles/02_fabric_architecture/02_fabric_directories.md#fabric_homeexport)
+- [logs](/articles/02_fabric_architecture/02_fabric_directories.md#fabric_homelogs)
+- [storage](/articles/02_fabric_architecture/02_fabric_directories.md#fabric_homestorage)
 
-
-<!--Add links:-->
-<!-- Drop 2- Broadway -->
-<!-- Drop 3- iidFinder, LU storage -->
-<!-- Drop 4- Trace files -->
 
 [![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/01_fabric_architecture_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md)
