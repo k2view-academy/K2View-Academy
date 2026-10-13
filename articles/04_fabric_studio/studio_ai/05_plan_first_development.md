@@ -1,75 +1,98 @@
-# Plan-First Development with the Architect Agent (Deprecated)
+# Ask, Plan and Act Modes
 
-> **This workflow appears deprecated.** @Architect's current configured description no longer mentions generating implementation plans or an "Execute with Coder" button; it now reads as a read-only project Q&A agent. See [Other Studio AI Agents](14_other_studio_ai_agents.md#architect) for its current description. This article is kept for reference in case the workflow below still works in your environment, but it has not been reconfirmed live.
+From V8.5.2, @k2-assistant - the default agent of the AI Chat - works in one of three **modes**. The mode decides what the assistant is allowed to do in the chat session: only read and answer, write a plan, or make changes.
 
-For complex or multi-step development tasks, the most effective approach in Studio AI is to plan before you code. The @Architect agent is designed specifically for this: it takes your goal, reasons about the structure of your project, and produces a detailed implementation plan that @Coder can then execute.
+Pick the mode in the **mode selector** of the chat input. It applies to the current chat session, and you can change it at any time.
 
-## Why Plan First?
+<table>
+  <thead>
+    <tr>
+      <th>Mode</th>
+      <th>Use it to</th>
+      <th>What it can change</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Ask Mode</strong></td>
+      <td>Ask questions, explain code or flows, review, diagnose errors</td>
+      <td>Nothing. Read-only.</td>
+    </tr>
+    <tr>
+      <td><strong>Plan Mode</strong></td>
+      <td>Design a change before it is made</td>
+      <td>Only the plan itself (a task context). No project files, no server state.</td>
+    </tr>
+    <tr>
+      <td><strong>Act Mode</strong> (default)</td>
+      <td>Implement changes, run and deploy</td>
+      <td>Project files, and the Fabric server, with confirmation where needed.</td>
+    </tr>
+  </tbody>
+</table>
 
-Jumping straight into code generation on a large feature often produces fragmented results — changes that work in isolation but miss dependencies, or an approach that requires significant rework. Using @Architect first gives you a shared blueprint that is consistent, reviewable, and easy to hand off.
+## Ask Mode
 
-The plan-first workflow also separates *design decisions* from *implementation work*. You can iterate on the plan in conversation, refine the approach, and only commit to code once you are confident the strategy is right.
+In Ask mode the assistant answers, explains, reviews and diagnoses. It reads the project, the Fabric logs, and the state of the Fabric server - for example with `list`, `describe` or `select` commands - and consults @KB, @Data-Product-Explorer and @Interfaces when needed.
 
-## Step 1: Describe Your Goal to @Architect
+It never:
 
-Open AI Chat and address @Architect with a description of what you want to build. Be as specific as you can about the goal; you do not need to specify the implementation steps — that is @Architect's job.
+- edits project files, or delegates to @k2-worker,
+- runs a command that changes the Fabric server - such as `deploy`, `get` (which syncs an instance), `broadway`, `startjob` or `set_global`,
+- runs a shell command that changes anything. **Shell Execution** is off by default and, when you turn it on, is used for inspection only.
+
+When the answer is a change, the assistant describes it exactly - which files, and what each one gets - and offers to switch to Act mode to apply it, or to Plan mode when the change is larger than a few files.
 
 **Example prompts:**
 
-```
-@Architect Plan a new enrichment that pulls customer risk scores from the Oracle CRM interface
-```
+- `Why does the population of the CUSTOMER table fail? #_f`
+- `Explain what this flow does step by step`
 
-```
-@Architect I need to add a transaction history table to the customer_bank LU and expose it through a Graphit web service
-```
+## Plan Mode
 
-@Architect will analyze your project structure — Logical Units, shared objects, interfaces, existing functions — and generate a **structured implementation plan**.
+In Plan mode the assistant turns a request into an **implementation plan**. It explores the project, loads the skill that governs each part of the change, asks you about real decisions (for example, two valid approaches with a trade-off), and writes the plan as a **task context**. The plan lists the goal, every file the change touches, the route, and what will need your confirmation in Act mode.
 
-## Step 2: Review the Plan
+Task contexts are saved in the workspace, under the folder set by the `taskContextStorageDirectory` setting (`.prompts/task-contexts` by default - see [AI Features Settings](15_ai_features_settings.md#prompt-templates-and-skills)). This means a plan persists after you close the chat, and you can open and edit it like any Markdown file.
 
-The plan is presented directly in the chat as a structured document. It typically includes:
+To revise an existing plan, ask for the change in Plan mode: the assistant reads the existing task context and edits it rather than creating a second one.
 
-- A summary of the goal and approach
-- A list of numbered steps with the specific file changes, functions to write, and configurations to update
-- Verification criteria — what should be true once the implementation is complete
+**Example prompts:**
 
-Read through the plan and assess whether the approach makes sense. If you want to adjust anything — change the order of steps, add a constraint, choose a different pattern — just tell @Architect in a follow-up message:
+- `Plan a new enrichment that pulls customer risk scores from the Oracle CRM interface`
+- `I need to add a transaction history table to the customer_bank Data Product and expose it through a web service`
 
-```
-The enrichment should use batch mode rather than per-instance. Please update the plan.
-```
+## Act Mode
 
-@Architect keeps the whole plan document consistent as you iterate, so you never end up with contradictions between sections.
+Act mode is the default, and works as @k2-assistant always has: a small, fully-specified change it applies itself; anything larger is delegated to @k2-worker. It can also run commands and deploy on the Fabric server. The **Shell Execution** capability is on by default in this mode (see [Agent Capabilities](10_agent_capabilities.md)). It asks you once per task before changing files, and tools that read real data or change the server ask for confirmation (see [Security and Privacy](13_security_and_privacy.md#tool-confirmations)).
 
-## Step 3: Execute the Plan with @Coder
+When a plan exists for the work, Act mode reads it first and implements it without exploring the project again.
 
-Once you are satisfied with the plan, click the **"Execute with Coder"** button that appears below it. This opens a fresh @Coder session pre-loaded with the plan as context.
+## Switching Modes
 
-@Coder reads the plan and works through the steps autonomously in **Agent Mode**, tracking its progress with a visual task list in the chat. You can follow along in real time, and the session notification will alert you when the implementation is complete.
+You can change the mode yourself at any time in the mode selector.
 
-## The Plan File
+In Ask or Plan mode, the assistant can also **offer** a switch - for example, after writing a plan it offers to switch to Act mode with "Implement the plan '<name>'" as the next message:
 
-The plan is automatically saved as a Markdown file in your workspace. This means the plan persists even if you close the chat or the Studio.
+1. The offer appears in the chat as a question with two buttons - for example **Switch to Act Mode** and **Stay in Plan Mode**.
+2. If you switch, the mode selector moves to the new mode, and the assistant sends its follow-up in that mode once the current response has finished.
+3. If you stay, nothing changes, and you can keep refining.
 
-If you close the AI Chat and want to resume later, open the plan file in the editor and use the command palette (**F1**) to run **"Execute Plan with Coder"**. This starts a fresh @Coder session from the saved plan, exactly as if you had clicked the button in the original chat.
+The assistant never switches mode on its own - only after you accept.
 
-The plan file is a regular Markdown document, so you can also edit it directly in the Studio editor to make changes outside of the chat, then execute the updated version.
+## A Typical Flow
 
-## Tips for Getting the Best Plans
+1. **Ask** - understand the area: `How is the customer_bank Data Product populated?`
+2. **Plan** - design the change, answer the assistant's questions, and review the plan.
+3. **Act** - accept the offered switch to implement the plan.
 
-**Be specific about constraints.** If you have preferences about patterns, libraries, or approaches — for example, "use try-with-resources for all DB operations" or "do not modify the existing population logic" — state them upfront. @Architect incorporates these into the plan.
+For small, clear changes, you can stay in Act mode throughout.
 
-**Include relevant context.** Use `#file:path/to/file` to attach specific files that @Architect should take into account when planning. For example, attaching an existing function that the new one should follow in style:
+## Tips
 
-```
-@Architect Plan a currency conversion function similar to the one in #file:implementation/Shared Objects/functions/ParseDate.java
-```
+**Be specific about constraints.** State preferences about patterns or approaches up front - for example, "use try-with-resources for all DB operations" or "do not modify the existing population logic". In Plan mode they become part of the plan.
 
-**Iterate before executing.** It is much cheaper to revise a plan than to revise implemented code. Spend a few extra messages refining the plan before handing it off to @Coder.
+**Attach relevant context.** Use `#file:path/to/file` to point at an existing artifact the change should follow.
 
-**Check dependencies.** Ask @Architect to analyze dependencies as part of your planning:
+**Iterate before executing.** It is much cheaper to revise a plan than to revise implemented code.
 
-```
-@Architect Before we plan, analyze the dependencies between the customer_bank and aifusion LUs so we understand the impact
-```
+> **Earlier versions:** this article used to describe a plan-first workflow with the @Architect agent and an "Execute with Coder" button. That workflow is no longer supported - use Plan mode instead. See [Other Studio AI Agents](14_other_studio_ai_agents.md#architect).

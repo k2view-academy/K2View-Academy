@@ -8,31 +8,46 @@ Open the AI Chat panel via **View > AI Chat** or press **Ctrl+Alt+I**. It appear
 
 ## The AI Chat Toolbar
 
-The toolbar at the top of the AI Chat panel is intentionally minimal. Most actions live under **More Actions...**.
+The toolbar at the top of the AI Chat panel is intentionally minimal. On the chat home screen it shows **Browse all chats...**, **Move View to Secondary Window** and **More Actions...**; when a chat is open, a few more buttons appear.
 
 <table>
   <thead>
     <tr>
-      <th>Icon</th>
-      <th>Action</th>
+      <th>Button</th>
+      <th>Shown</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>History (clock)</td>
+      <td><strong>Home</strong> (<code>Ctrl+Shift+L</code>)</td>
+      <td>In an open chat</td>
+      <td>Returns to the AI Chat home screen, where a new message starts a new chat.</td>
+    </tr>
+    <tr>
       <td><strong>Browse all chats...</strong> (<code>Ctrl+Alt+L</code>)</td>
+      <td>Always</td>
       <td>Opens a searchable "Select chat" picker listing your persisted sessions. See <a href="#chat-session-history">Chat Session History</a> below.</td>
     </tr>
     <tr>
-      <td>Window</td>
+      <td><strong>Summarize Current Session</strong></td>
+      <td>In an open chat</td>
+      <td>Creates a summary of the chat so far.</td>
+    </tr>
+    <tr>
       <td><strong>Move View to Secondary Window</strong></td>
+      <td>Always</td>
       <td>Pops the AI Chat panel out into its own browser window.</td>
     </tr>
     <tr>
-      <td><strong>…</strong></td>
-      <td><strong>More Actions...</strong></td>
-      <td>Opens a menu with the four items below.</td>
+      <td><strong>Turn Auto Scrolling Off / On</strong></td>
+      <td>In an open chat</td>
+      <td>Stops (or resumes) scrolling to the end of the response while it is written.</td>
+    </tr>
+    <tr>
+      <td><strong>More Actions...</strong> (<strong>…</strong>)</td>
+      <td>Always</td>
+      <td>Opens the menu described below.</td>
     </tr>
   </tbody>
 </table>
@@ -53,11 +68,11 @@ The **More Actions...** menu contains:
     </tr>
     <tr>
       <td><strong>Open AI Configuration</strong></td>
-      <td>Opens the AI Configuration panel as a full editor tab. See <a href="06_ai_configuration_and_settings.md">AI Configuration: Managing Agents and Settings</a>.</td>
+      <td>Opens the AI Configuration view as a full editor tab. See <a href="06_ai_configuration_and_settings.md">AI Configuration: Managing Agents and Settings</a>.</td>
     </tr>
     <tr>
-      <td><strong>Open AI Settings</strong></td>
-      <td>Opens the Studio Settings dialog, scoped to AI Features. Equivalent to <a href="01_getting_started_with_studio_ai.md#enabling-studio-ai">Enabling Studio AI</a> via the gear icon.</td>
+      <td><strong>Keep screen awake while this chat is working</strong></td>
+      <td>Shown when a chat is open. Keeps the screen awake while this chat is running. See <a href="17_long_running_chats.md#keeping-the-screen-awake">Long-Running Chats</a>.</td>
     </tr>
     <tr>
       <td><strong>Set Session Settings...</strong></td>
@@ -66,14 +81,12 @@ The **More Actions...** menu contains:
   </tbody>
 </table>
 
-> Earlier versions of Studio AI exposed a dedicated **New Chat**, **Summarize Session**, **Auto-scroll toggle**, and **JSON View** as separate toolbar icons. These are no longer present as toolbar buttons in the current version. See [Starting a New Chat](#starting-a-new-chat) for how to start fresh, and [Session Settings](#session-settings) for what replaced the `{ }` icon.
-
 ## Starting a New Chat
 
-There is no dedicated "New Chat" toolbar button anymore. To start a fresh conversation:
+To start a fresh conversation:
 
-- Open the command palette (**F1**) and run **Chat: New Chat**, or
-- Run **Chat: Home** (`Ctrl+Shift+L`) to return to the AI Chat welcome screen, from which typing a new message starts a new session.
+- Click **Home** (`Ctrl+Shift+L`) in the chat toolbar to return to the AI Chat home screen, from which typing a new message starts a new session, or
+- Open the command palette (**F1**) and run **Chat: New Chat**.
 
 ## Session Settings
 
@@ -90,9 +103,11 @@ Type your question or instruction in the **"Ask a question"** input at the botto
 
 To address a specific agent, start your message with `@AgentName`. Once an agent is addressed, it is **pinned** for the rest of the session, so subsequent messages automatically go to the same agent without the `@` prefix. To switch agents, type a new `@AgentName`. For most tasks you can skip this entirely, see [Just Start Asking](01_getting_started_with_studio_ai.md#just-start-asking).
 
-### Chat Modes (Legacy Coder Agents)
+### Chat Modes
 
-The chat input area does not always show a mode selector. It appears only when the currently addressed agent supports it, such as `@Coder`, and offers **Edit Mode**, **Agent Mode**, and **Agent Mode (Next)**. With the default `@k2-assistant` flow there is no manual mode to pick; routing happens automatically. See [AI Code Editing: Reviewing and Applying Changes](04_ai_code_editing_and_changesets.md) for what each mode does.
+With the default @k2-assistant, the chat input shows a mode selector with **Ask Mode**, **Plan Mode** and **Act Mode** (default). Ask and Plan are read-only; Act makes changes. The mode applies to the current chat session. See [Ask, Plan and Act Modes](05_plan_first_development.md).
+
+Other agents show their own modes, or none. For example, `@Coder` offers **Edit Mode**, **Agent Mode** and **Agent Mode (Next)** - see [Code Editing with @Coder (Legacy)](04_ai_code_editing_and_changesets.md).
 
 ### Chat Input Controls
 
@@ -120,11 +135,11 @@ Below the input field, the chat input area has:
     </tr>
     <tr>
       <td><strong>Reasoning effort selector</strong></td>
-      <td>Dropdown (default <strong>Auto</strong>) with levels Off / Minimal / Low / Medium / High / Auto, controlling how much reasoning effort the model applies to your request. Persists as the session default until changed.</td>
+      <td>Dropdown (default <strong>Auto</strong>) with levels Off / Minimal / Low / Medium / High / Auto, controlling how much reasoning effort the model applies to your request. Only the levels the selected model supports are offered. Persists as the session default until changed.</td>
     </tr>
     <tr>
       <td><strong>Model selector</strong></td>
-      <td>Dropdown (default <strong>Default</strong>, mapped to the agent's configured model alias) letting you pick a specific model for the session, for example a Claude Opus, Sonnet, Haiku, or Fable variant, or a model from another connected provider. Once changed, the selection <strong>persists as the default for the rest of that chat session</strong> (it does not reset per message); switching to a new chat resets it back to <strong>Default</strong>. See <a href="06_ai_configuration_and_settings.md#model-aliases-tab">AI Configuration: Managing Agents and Settings</a> for how aliases map to models.</td>
+      <td>Dropdown (default <strong>Default</strong>, mapped to the agent's configured model alias) letting you pick a specific model for the session, for example a Claude Opus, Sonnet, Haiku, or Fable variant, or a model from another connected provider. Once changed, the selection <strong>persists as the default for the rest of that chat session</strong> (it does not reset per message); switching to a new chat resets it back to <strong>Default</strong>. The list shows the models selected in the <a href="06_ai_configuration_and_settings.md#providers-and-models">Providers &amp; Models</a> page of AI Configuration. See <a href="06_ai_configuration_and_settings.md#model-aliases">AI Configuration: Managing Agents and Settings</a> for how aliases map to models.</td>
     </tr>
   </tbody>
 </table>
@@ -194,6 +209,14 @@ You can edit a previously sent message in the chat. Click the edit icon next to 
 
 When you edit and resend a message this way, Studio AI **automatically branches the conversation** into a new session, preserving the original thread exactly as it was. This makes it easy to explore alternative approaches, for example trying a different prompt phrasing or changing a requirement, without losing your current work. The original session remains accessible in [Chat Session History](#chat-session-history).
 
+## Reading Responses
+
+While a response streams in, you can follow the model's thinking live, and a summary of its reasoning stays with the response. On a long response, its header stays at the top of the chat while you scroll.
+
+## Finding Text in a Chat
+
+Press **Ctrl+F** (**Cmd+F** on Mac) anywhere in the AI Chat panel to open **Find in Chat** and search the current session. The shortcut stays in the chat: it does not open the editor's find box, even when a file is open.
+
 ## Starting Chat from the Editor
 
 You can initiate a chat message directly from the editor. Right-click on selected code or a file and choose **Ask AI** (or similar) from the context menu. This pre-populates the chat input with the selected content as context, saving you the manual step of adding `#selectedText`.
@@ -206,7 +229,11 @@ Every conversation is automatically saved. Press `Ctrl+Alt+L` or click the histo
 - Rename a session using the pencil icon next to it.
 - Delete a session using the **×** icon next to it.
 
-The AI Chat welcome screen also shows a **Restored** list of your most recent sessions directly, for quick resumption without opening the picker.
+On the home screen, hovering over a chat's row shows a card with its status (for example **Running**), its last message, the agent, the number of exchanges and the last activity. The row's icons let you rename the chat, [keep the screen awake](17_long_running_chats.md#keeping-the-screen-awake) while it runs (coffee cup), or delete it.
+
+The AI Chat home screen also lists your chats: those currently running under **Active** at the top, and your most recent sessions in a **Restored** list, for quick resumption without opening the picker.
+
+After a page reload, the Studio reopens the chat you were in. A chat that was cut off while the assistant was still working is listed as **Interrupted** and can be resumed with **Continue**. See [Long-Running Chats: Resume and Keep Awake](17_long_running_chats.md).
 
 For more on AI history and token monitoring, see [Viewing Token Consumption and AI History](08_token_consumption_and_ai_history.md).
 

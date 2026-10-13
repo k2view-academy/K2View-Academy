@@ -49,7 +49,7 @@ Setting key: `ai-features.openAiCustom.customOpenAiModels`.
 </tr>
 <tr>
 <td><code>apiKey</code></td>
-<td>API key sent to the endpoint. Leave empty when the endpoint does not require one.</td>
+<td>API key sent to the endpoint. Leave empty when the endpoint does not require one. Instead of the key itself, you can give a reference - <code>${env:&lt;envName&gt;}</code> or <code>${file:&lt;pathToFile&gt;}</code> - as described in <a href="#secret-references">Secret References</a>.</td>
 </tr>
 <tr>
 <td><code>enableStreaming</code></td>
@@ -97,56 +97,67 @@ Setting key: `ai-features.anthropicCustom.customAnthropicModels`. The entry name
 
 Starting from V8.5.1, both custom OpenAI and custom Anthropic entries accept a `headers` object. Every key/value pair in it is added to each request sent to that endpoint. This is typically required by an LLM gateway that identifies the calling user or team through its own headers.
 
-A header value can be given in three forms:
-
-<table>
-<tbody>
-<tr>
-<td width="270pxl"><strong>Form</strong></td>
-<td width="630pxl"><strong>Description</strong></td>
-</tr>
-<tr>
-<td>A literal string</td>
-<td>The value is sent as written.</td>
-</tr>
-<tr>
-<td><code>${env:&lt;envName&gt;}</code></td>
-<td>The value is read from the named environment variable of the Fabric Dev server.</td>
-</tr>
-<tr>
-<td><code>${file:&lt;pathToFile&gt;}</code></td>
-<td>The value is read from the contents of the named file.</td>
-</tr>
-</tbody>
-</table>
+A header value can be a literal string, which is sent as written, or can contain a [secret reference](#secret-references) - for example a value read from an environment variable of the server:
 
 ~~~json
 "headers": {
   "X-Team": "data-platform",
   "X-Gateway-Token": "${env:LLM_GATEWAY_TOKEN}",
-  "X-Client-Cert": "${file:/etc/k2view/llm-gateway/client.token}"
+  "X-Client-Cert": "${file:/etc/k2view/llm-gateway/client.token}",
+  "Authorization": "Bearer ${fabric:jwt}"
 }
 ~~~
 
-The `${env:...}` and `${file:...}` forms keep secrets out of the Studio configuration, so that the configuration can be shared or version-controlled while the secret stays on the server.
+Header values are resolved on the Studio server for every request, including the model-list lookup of custom Anthropic entries. A header with an empty name is dropped.
+
+## Secret References
+
+The following references can be used in header values and - except `${fabric:jwt}` - in `apiKey`. A reference can be the whole value, or part of a longer string such as `"Bearer ${env:LLM_GATEWAY_TOKEN}"`.
+
+<table>
+<tbody>
+<tr>
+<td width="270pxl"><strong>Reference</strong></td>
+<td width="630pxl"><strong>Description</strong></td>
+</tr>
+<tr>
+<td><code>${env:&lt;envName&gt;}</code></td>
+<td>The value of the named environment variable of the Studio server (the Fabric Dev environment). The value is read when the server starts, so changing it requires a restart. Allowed in <code>headers</code> and <code>apiKey</code>.</td>
+</tr>
+<tr>
+<td><code>${file:&lt;pathToFile&gt;}</code></td>
+<td>The contents of the named file on the server, without the trailing newline. The file is re-read each time, so a rotated secret - for example a Kubernetes Secret volume - takes effect without a restart. Allowed in <code>headers</code> and <code>apiKey</code>.</td>
+</tr>
+<tr>
+<td><code>${fabric:jwt}</code></td>
+<td>From V8.5.2: the Fabric session token of the signed-in user. Requires the Studio to be opened through Fabric. Allowed in <code>headers</code> only, since the <code>apiKey</code> is read once and the session token is renewed over time - use <code>"Authorization": "Bearer ${fabric:jwt}"</code>.</td>
+</tr>
+</tbody>
+</table>
+
+These references keep secrets out of the Studio configuration, so that the configuration can be shared or version-controlled while the secret stays on the server. Resolved values are never sent to the browser or written to logs. If a reference cannot be resolved - for example, the environment variable is not set - the request fails with an error naming the reference.
 
 ## Fabric as a Provider
 
 Starting from V8.5.1, Fabric exposes an OpenAI-compatible endpoint of its own, backed by the project's [AI LLM interface](/articles/24_non_DB_interfaces/15_LLM_interface.md). Pointing Studio AI at it means that:
 
 * Developers enter no API key at all - the provider credentials are defined once, on the Fabric interface.
-* The organization controls which models are reachable, and which roles may use them.
+* The organization controls which models are reachable through Fabric, and which roles may use them (the **LLM_INVOKE** permission).
 * The model can be swapped by editing the Fabric interface, without changing any Studio setting.
 
-Because the Fabric endpoint is OpenAI-compatible, it is configured as a **custom OpenAI provider**: set `url` to the Fabric `/api/v1` base URL and leave `apiKey` empty.
+The Fabric entry does not replace the other providers: a developer who has an API key of their own can still configure another provider in their Studio. Requests sent through Fabric are forwarded to the upstream provider of the AI LLM interface; to keep data within your environment, point the interface at a model hosted in your environment. See [Security and Privacy](13_security_and_privacy.md#choose-where-data-goes).
+
+Because the Fabric endpoint is OpenAI-compatible, it is configured as a **custom OpenAI provider**. The Studio ships with this entry predefined, so you normally do not need to add it:
 
 ~~~json
 "ai-features.openAiCustom.customOpenAiModels": [
   {
-    "id": "fabric-openai-compatible-llm-endpoint",
+    "id": "fabric-openai-compatible-llm",
     "model": "default",
     "url": "http://localhost:3213/api/v1",
-    "apiKey": "",
+    "headers": {
+      "Authorization": "Bearer ${fabric:jwt}"
+    },
     "enableStreaming": true,
     "useResponseApi": false,
     "supportsStructuredOutput": false,
@@ -155,7 +166,11 @@ Because the Fabric endpoint is OpenAI-compatible, it is configured as a **custom
 ]
 ~~~
 
-Here `model` selects which LLM Fabric uses: `default` for the project's default LLM engine, or the name or tag of a specific AI LLM interface. The Fabric role of the calling user must be granted the **LLM_INVOKE** permission.
+Here `url` is the Fabric `/api/v1` base URL, and `model` selects which LLM Fabric uses: `default` for the project's default LLM engine, or the name or tag of a specific AI LLM interface.
+
+The entry authenticates as the signed-in user: the `Authorization` header carries the user's Fabric session token (`${fabric:jwt}`, see [Secret References](#secret-references)), so no API key is stored in the Studio. Do not set `apiKey` for this entry - with an empty `apiKey` and no `Authorization` header, Fabric rejects the request (401). The Fabric role of the calling user must be granted the **LLM_INVOKE** permission.
+
+On the Fabric side, install the LLM connector for your provider from the K2 Exchange (for example the OpenAI or Anthropic connector), and define an AI LLM interface for it in the project, with the provider's API key.
 
 For the endpoint reference, the authorization details and the interface settings themselves, see [Fabric as an LLM Provider](/articles/24_non_DB_interfaces/15_LLM_interface.md#fabric-as-an-llm-provider).
 
@@ -164,5 +179,5 @@ For the endpoint reference, the authorization details and the interface settings
 Once an entry is saved, its `id` appears wherever a model can be chosen:
 
 * In the chat toolbar's model dropdown, for a single session. See [Using the AI Chat](03_using_the_ai_chat.md#the-ai-chat-toolbar).
-* In the **Agents** tab of AI Configuration, as an agent's default model.
-* In a **Model Alias** priority list, which is the recommended way to move all agents onto a provider at once. See [AI Configuration: Managing Agents and Settings](06_ai_configuration_and_settings.md#model-aliases-tab).
+* In the **Agents** category of AI Configuration, as an agent's default model.
+* In a **Model Alias** priority list, which is the recommended way to move all agents onto a provider at once. See [AI Configuration: Managing Agents and Settings](06_ai_configuration_and_settings.md#model-aliases).
