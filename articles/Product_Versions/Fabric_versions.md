@@ -22,8 +22,8 @@ Please check the release notes for component version support, such as Kafka, Neo
             <td>
 			</td>
             <td>
-                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.5.2_90</p>
-                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.5.2_90</p>
+                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric:8.5.2_92</p>
+                <p>docker pull docker.share.cloud.k2view.com/k2view-images/fabric-studio:8.5.2_92</p>
             </td>
             <td>18.4</td>
             <td>4.1.8</td>
