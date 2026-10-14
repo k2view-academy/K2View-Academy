@@ -1,4 +1,4 @@
-# Building the Catalog
+# Scanning
 
 ### Overview
 

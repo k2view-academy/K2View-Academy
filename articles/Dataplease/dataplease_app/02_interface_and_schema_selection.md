@@ -27,4 +27,4 @@ From here, the user decides how to proceed:
 * **Use existing** - continue with the existing Catalog version, skipping the scan.
 * **Re-scan** - trigger a new Discovery run on the source, to build an up-to-date Catalog version.
 
-This decision drives the next step of the flow, described in [Building the Catalog](03_building_the_catalog.md).
+This decision drives the next step of the flow, described in [Scanning](03_scanning.md).
