@@ -39,7 +39,7 @@ Starting from TDM 10.1, the table filter displays business-friendly field names 
 
 **Prerequisites:**
 
-- Field aliases are defined in the Catalog using the **FIELD ALIAS** tag on the table's fields.
+- Field aliases are defined in the Catalog using the **FIELDALIAS** tag on the table's fields.
 - Valid values are available when the Catalog Discovery has been executed with the **Option Set Analyzer** enabled. The Option Set Analyzer identifies non-sensitive fields with a limited number of distinct values within a data sample and saves these values in the Catalog.
 
 ## Record Sampling

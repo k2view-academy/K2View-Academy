@@ -71,11 +71,11 @@ Each LUI contains the following tables:
 
 ## Tables — Implementation Steps
 
-### Step 1: Deploy the TDM_TableLevel LU
+## Step 1: Deploy the TDM_TableLevel LU
 
 Import the TDM_TableLevel LU and deploy it. 
 
-### Step 2: Optional — Populate RefList MTable
+## Step 2: Optional — Populate RefList MTable
 
 - This step is required for:
   * [Entities & referential data](/articles/TDM/tdm_gui/14b_task_source_component_entities.md) tasks. Populate the **RefList** with a list of all available related tables for each LU. The following settings should be populated for each record.
@@ -118,17 +118,39 @@ Using a Global to populate the schema name is useful when different environments
 
 Click [here](/articles/09_translations/06_mtables_overview.md) for more information about MTable objects. 
 
-### Step 3: Catalog
+## Step 3: Catalog
 
-#### Edit the PII Settings
+### Edit the PII Settings
 
 The TDM table flow uses [Fabric Catalog masking](/articles/39_fabric_catalog/catalog_app/11_catalog_masking.md). You can [edit the PII settings](/articles/39_fabric_catalog/catalog_app/10_catalog_settings.md#classifier-pii--masking-setup) in the Catalog when required.
 
-#### Run the Catalog to Identify Table Relations and Order
+### Run the Catalog to Identify Table Relations and Order
 
 Run the Discovery job on the table's interfaces. Following the job completion, the interface metadata is retrieved from the Catalog.
 
-### Step 4: Optional — Special Handling  
+### Optional – Catalog Settings for Table-Level Task Improvements
+
+#### Add Field Aliases to Table Fields
+
+Starting with TDM 10.1, table-level task filters can display friendly business names for table fields. Field aliases also enable users to share a filter across multiple tables in a task when the corresponding fields have the same business name.
+
+For example, a filter on **Financial Transaction Type = 'Payment'** can be shared across multiple tables that contain fields with the same business name.
+
+To enable this functionality, tag the relevant table fields with the `fieldAlias` attribute in the Fabric Catalog. This displays their business names in the filter definition and enables cross-table filter sharing.
+
+See the example below:
+
+![field alias](images/field_alias_configuration.png) 
+
+For more information, see [Manual Overrides on Table Fields in the Catalog](/articles/39_fabric_catalog/catalog_app/07_manual_overrides.md).
+
+#### Add Option Set Analyzer to Discovery
+
+Use the  [Option set analyzer](/articles/39_fabric_catalog/plugins/04_source_data_metrics.md#option-set-analyzer) plugin during discovery to identify non-sensitive (non-PII) fields with a limited number of distinct values in the sampled data. The plugin saves the identified values in a dedicated MTable, making them available as selectable options in table-level task filters.
+
+For example, the `vip_status` field may contain the following values: *Bronze, Silver, Gold,* and *Platinum*. When defining or running a task, users can select a value from the available list or enter a custom value manually.
+
+## Step 4: Optional — Special Handling  
 
 ####  Interface Level Special Handling
 
@@ -152,7 +174,7 @@ TDM enables customization of the default task execution logic for a specific **i
 - Starting with **TDM 9.5**, supporting [**in-place masking**](09d_in_place_masking_implementation.md) tasks on tables.
 - Supporting table-level tasks using [Connectors](09c_table_level_connectors.md), for example **MongoDB**.
 
-### Step 5: Optional — Pre and Post Execution Processes
+## Step 5: Optional — Pre and Post Execution Processes
 
 Starting with **TDM 10**, table-level tasks support **pre and post execution processes**. To make these processes available for selection when creating a table-level task, the implementor must populate the **TableLevelPostAndPreExecutionProcess** MTable.
 
