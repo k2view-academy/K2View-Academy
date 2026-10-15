@@ -54,7 +54,7 @@ The following tabs are displayed at the top of the TDM App:
   - **Execution Dashboard** – displays the execution status of TDM tasks.
 - **Reserved Entities** – displays the list of entities currently reserved in TDM environments.
 - **Settings** – contains TDM administrative settings. Available to Admin and Owner users.
-- **Reports** – displays [TDM usage reports](TDM_Dashboard_User_Guide.md). Available to Admin and Environment Owner users.
+- **Reports** – displays the TDM reports. Available to Admin and Environment Owner users.
 
 The Settings tab contains the following sub-tabs:
 

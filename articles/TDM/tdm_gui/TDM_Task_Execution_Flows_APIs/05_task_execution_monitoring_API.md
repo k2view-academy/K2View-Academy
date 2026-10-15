@@ -14,7 +14,7 @@ TDM_Tasks
 
 ### API Description
 
-Returns the details of the current or last execution of the given task_id. If the task is pending, it will return only its status, else it will return the statistics of the entities handled by the task.
+Returns the details of the input task execution ID, if populated. When the task execution ID is not populated, the API returns the details of the current or last execution of the given task ID. If the task execution is pending, the API returns only its status. Else, it returns the statistics of the entities handled by the task execution.
 
 ### API Input
 
@@ -50,7 +50,7 @@ Returns the details of the current or last execution of the given task_id. If th
 <p>No</p>
 </td>
 <td width="251" valign="top">
-<p>This parameter can be populated by a task execution id to monitor a selected task execution.</p>
+<p>The task execution ID. This parameter can be populated to monitor a given task execution. If not populated, the API returns the current or last execution of the task.</p>
 <p>&nbsp;</p>
 </td>
 </tr>

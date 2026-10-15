@@ -16,7 +16,7 @@ TDM_Tasks
 
 ### API Description
 
-Returns the list of all executions of the input task. Returns one summary record for each execution.
+Returns the list of executions of the input task, based on the input filtering parameters. Returns one summary record for each execution.
 
 ### API Input
 
@@ -110,6 +110,7 @@ http://10.21.2.69:3213/api/task/2/summary?numberOfExecutions=4&userId=joe
       "task_type": "LOAD",
       "tot_num_of_failed_root_entities": 0,
       "task_executed_by": "joe"
+    },
     {
       "be_id": 10,
       "environment_id": 10,
@@ -171,78 +172,6 @@ http://10.21.2.69:3213/api/task/2/summary?numberOfExecutions=4&userId=joe
   ],
   "errorCode": "SUCCESS",
   "message": null
-}
-```
-
-## Get the Task Details for a Specific Execution
-
-### API URL
-
-/task/execution/{taskExecutionId}
-
-### HTTP Method
-
-GET
-
-### API Category
-
-TDM_Tasks
-
-### API Description
-
-Returns task details for a specific execution, with overridden parameters from the TASK_EXECUTION_OVERRIDE_ATTRS table applied. This API is new in TDM 10 and provides a way to retrieve the effective task configuration as it was executed, including any overrides applied at execution time.
-
-### API Input
-
-<table width="900pxl">
-<tbody>
-<tr>
-<td width="200pxl"><strong>Param Name</strong></td>
-<td width="200pxl">
-<p><strong>Mandatory</strong></p>
-</td>
-<td width="500pxl">
-<p><strong>Description</strong></p>
-</td>
-</tr>
-<tr>
-<td valign="top">
-<p><strong>taskExecutionId</strong></p>
-</td>
-<td valign="top" width="200">
-<p>Yes</p>
-</td>
-<td width="251">
-<p>The unique identifier of the task execution.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-### API Input Example
-
-```
-http://localhost:3213/api/task/execution/43
-```
-
-### API Output Example
-
-```json
-{
-  "result": {
-    "task_id": 2,
-    "task_title": "Extract and Load entities",
-    "task_type": "Extract and load entities",
-    "be_id": 2,
-    "be_name": "Subscriber",
-    "source_environment_id": 1,
-    "source_env_name": "Production",
-    "target_env_id": 2,
-    "environment_name": "UAT",
-    "selection_method": "Business parameters",
-    "num_of_entities": 5
-  },
-  "errorCode": "SUCCESS"
 }
 ```
 
@@ -522,442 +451,77 @@ Returns the list of all executed Logical Units and Post Execution Processes of t
 http://localhost:3213/api/task/488/history
 ```
 
+### API Output
+
+The API output includes the following objects:
+
+- **summary** - general information about the task execution: source and target environment names, BE name, the user who executed the task, task type, start and end time, and task title.
+- **result** - a list of records, one record for each executed Logical Unit and Post Execution Process of the task execution. Each record includes the execution status and statistics of the LU or process, such as the execution mode, Fabric execution ID (batch ID), number of processed, copied and failed entities, selection method, and the LU's parent LU and system (product).
+
 ### API Output Example
 
 ```json
 {
+  "summary": {
+    "source_environment_name": "Production",
+    "target_environment_name": "Production",
+    "be_name": "Customer",
+    "task_executed_by": "admin",
+    "task_type_label": "Extract",
+    "start_time": "2026-05-26 09:00:07.04126",
+    "end_time": "2026-05-26 09:00:40.055341",
+    "task_title": "Extract entities"
+  },
   "result": [
     {
-      "be_id": 10,
-      "selected_version_task_name": null,
-      "selected_ref_version_task_name": null,
-      "num_of_copied_entities": 148,
-      "fabric_execution_id": "d854ac07-6d00-4a89-9ae9-797f74c8b51b",
-      "be_last_updated_date": "2021-06-08 08:20:27.804",
-      "execution_plan_name": "epOrders",
-      "product_id": 8,
-      "load_entity": true,
-      "selected_version_task_exe_id": null,
-      "task_created_by": "tali",
-      "product_description": null,
-      "scheduling_end_date": null,
-      "environment_point_of_contact_phone1": "(",
-      "product_created_by": "admin",
-      "environment_status": "Active",
-      "be_status": "Active",
-      "creation_date": "2021-06-16 15:36:00.055",
-      "selected_version_datetime": null,
-      "last_executed_lu": false,
-      "task_last_updated_by": "admin",
-      "selected_ref_version_task_exe_id": null,
-      "task_execution_status": "Active",
-      "product_versions": "1",
-      "product_last_updated_by": "admin",
-      "replace_sequences": false,
-      "end_execution_time": "2021-06-16 15:36:27.000",
-      "environment_point_of_contact_last_name": "hhhl.",
-      "updated_by": null,
-      "clean_redis": false,
-      "environment_point_of_contact_phone2": null,
-      "environment_last_updated_by": "admin",
-      "product_status": "Active",
-      "task_id": 293,
-      "be_created_by": "admin",
-      "environment_description": "ffff",
-      "version_datetime": "2021-06-16 15:36:00.055",
-      "selected_ref_version_datetime": null,
-      "source_env_name": "SRC",
-      "task_title": "createTaskByTester",
-      "allow_write": true,
-      "task_status": "Active",
-      "environment_last_updated_date": "2021-06-15 10:44:44.934",
-      "number_of_entities_to_copy": 50,
-      "environment_point_of_contact_first_name": "tali",
-      "product_creation_date": "2021-05-26 08:03:57.526",
-      "task_type": "LOAD",
-      "environment_creation_date": "2021-05-26 08:05:57.085",
-      "task_executed_by": "admin",
-      "task_last_updated_date": "2021-06-16 15:34:40.555",
-      "num_of_failed_ref_tables": 0,
-      "reserve_retention_period_type": "Days",  
-      "environment_id": 10,
-      "selection_method": "R",
-      "lu_parent_id": 20,
-      "refresh_reference_data": false,
-      "task_execution_id": 488,
-      "lu_dc_name": null,
-      "refcount": 0,
-      "lu_is_ref": null,
-      "lu_parent_name": "Customer",
-      "process_name": null,
-      "be_last_updated_by": "admin",
-      "retention_period_type": "Days",
-      "start_execution_time": "2021-06-16 15:36:22.000",
-      "selection_param_value": null,
-      "product_last_updated_date": "2021-05-26 08:11:03.218",
-      "product_name": "ORDERING",
-      "num_of_processed_ref_tables": 0,
-      "execution_order": null,
-      "sync_mode": null,
-      "version_expiration_date": null,
-      "entity_exclusion_list": null,
-      "environment_point_of_contact_email": "",
-      "lu_name": "Orders",
-      "lu_id": 21,
-      "reserve_retention_period_value": 5,  
-      "be_description": "",
-      "parameters": null,
-      "environment_expiration_date": null,
-      "process_id": 0,
-      "product_vendor": null,
-      "environment_created_by": "admin",
-      "be_creation_date": "2021-05-26 08:02:46.710",
-      "allow_read": true,
-      "source_environment_id": 9,
-      "num_of_failed_entities": 0,
-      "scheduler": "immediate",
-      "parent_lu_id": 20,
-      "lu_description": null,
+      "task_execution_id": 312,
       "execution_status": "completed",
-      "reserve_ind": true,  
-      "fabric_environment_name": null,
-      "environment_name": "TAR",
-      "delete_before_load": true,
-      "product_version": "1",
-      "retention_period_value": 5,
-      "synced_to_fabric": true,
-      "be_name": "CUSTOMER",
-      "version_ind": false,
-      "task_creation_date": "2021-06-08 12:38:40.523",
-      "task_globals": false,
-      "num_of_copied_ref_tables": 0,
-      "data_center_name": null,
-      "num_of_processed_entities": 148
-    },
-    {
-      "be_id": 10,
-      "selected_version_task_name": null,
-      "selected_ref_version_task_name": null,
-      "num_of_copied_entities": 95,
-      "fabric_execution_id": "8182b3ab-0b1d-4a18-89b9-82913772dc76",
-      "be_last_updated_date": "2021-06-08 08:20:27.804",
-      "execution_plan_name": "epBilling",
-      "product_id": 7,
-      "load_entity": true,
-      "selected_version_task_exe_id": null,
-      "task_created_by": "tali",
-      "product_description": null,
-      "scheduling_end_date": null,
-      "environment_point_of_contact_phone1": "(",
-      "product_created_by": "admin",
-      "environment_status": "Active",
-      "be_status": "Active",
-      "creation_date": "2021-06-16 15:36:00.055",
-      "selected_version_datetime": null,
-      "last_executed_lu": false,
-      "task_last_updated_by": "admin",
-      "selected_ref_version_task_exe_id": null,
-      "task_execution_status": "Active",
-      "product_versions": "1",
-      "product_last_updated_by": "admin",
-      "replace_sequences": false,
-      "end_execution_time": "2021-06-16 15:36:27.000",
-      "environment_point_of_contact_last_name": "hhhl.",
-      "updated_by": null,
-      "clean_redis": false,
-      "environment_point_of_contact_phone2": null,
-      "environment_last_updated_by": "admin",
-      "product_status": "Active",
-      "task_id": 293,
-      "be_created_by": "admin",
-      "environment_description": "ffff",
-      "version_datetime": "2021-06-16 15:36:00.055",
-      "selected_ref_version_datetime": null,
-      "source_env_name": "SRC",
-      "task_title": "createTaskByTester",
-      "allow_write": true,
-      "task_status": "Active",
-      "environment_last_updated_date": "2021-06-15 10:44:44.934",
-      "number_of_entities_to_copy": 50,
-      "environment_point_of_contact_first_name": "tali",
-      "product_creation_date": "2021-05-26 08:03:44.361",
-      "task_type": "LOAD",
-      "environment_creation_date": "2021-05-26 08:05:57.085",
-      "task_executed_by": "admin",
-      "task_last_updated_date": "2021-06-16 15:34:40.555",
-      "num_of_failed_ref_tables": 0,
-      "reserve_retention_period_type": "Days",
-      "environment_id": 10,
-      "selection_method": "R",
-      "lu_parent_id": 20,
-      "refresh_reference_data": false,
-      "task_execution_id": 488,
-      "lu_dc_name": null,
-      "refcount": 0,
-      "lu_is_ref": null,
-      "lu_parent_name": "Customer",
-      "process_name": null,
-      "be_last_updated_by": "admin",
-      "retention_period_type": "Days",
-      "start_execution_time": "2021-06-16 15:36:22.000",
-      "selection_param_value": null,
-      "product_last_updated_date": "2021-05-26 08:04:58.187",
-      "product_name": "BILLING",
-      "num_of_processed_ref_tables": 0,
-      "execution_order": null,
-      "sync_mode": null,
-      "version_expiration_date": null,
-      "entity_exclusion_list": null,
-      "environment_point_of_contact_email": "",
-      "lu_name": "Billing",
-      "lu_id": 22,
-      "reserve_retention_period_value": 5,
-      "be_description": "",
-      "parameters": null,
-      "environment_expiration_date": null,
-      "process_id": 0,
-      "product_vendor": null,
-      "environment_created_by": "admin",
-      "be_creation_date": "2021-05-26 08:02:46.710",
-      "allow_read": true,
-      "source_environment_id": 9,
+      "execution_mode": "HORIZONTAL",
+      "fabric_execution_id": "Extract entities_8bdc486e-5fa3-41e",
+      "num_of_entities": 5,
+      "num_of_copied_entities": 5,
       "num_of_failed_entities": 0,
-      "scheduler": "immediate",
-      "parent_lu_id": 20,
-      "lu_description": null,
-      "execution_status": "completed",
-      "reserve_ind": true,
-      "fabric_environment_name": null,
-      "environment_name": "TAR",
-      "delete_before_load": true,
-      "product_version": "1",
-      "retention_period_value": 5,
-      "synced_to_fabric": true,
-      "be_name": "CUSTOMER",
-      "version_ind": false,
-      "task_creation_date": "2021-06-08 12:38:40.523",
-      "task_globals": false,
-      "num_of_copied_ref_tables": 0,
-      "data_center_name": null,
-      "num_of_processed_entities": 95
-    },
-    {
-      "be_id": 10,
-      "selected_version_task_name": null,
-      "selected_ref_version_task_name": null,
-      "num_of_copied_entities": 32,
-      "fabric_execution_id": "5f5958d1-83e4-45cd-a64c-ce4a845ee183",
-      "be_last_updated_date": "2021-06-08 08:20:27.804",
-      "execution_plan_name": "epCollection",
-      "product_id": 9,
-      "load_entity": true,
-      "selected_version_task_exe_id": null,
-      "task_created_by": "tali",
-      "product_description": null,
-      "scheduling_end_date": null,
-      "environment_point_of_contact_phone1": "(",
-      "product_created_by": "admin",
-      "environment_status": "Active",
-      "be_status": "Active",
-      "creation_date": "2021-06-16 15:36:00.055",
-      "selected_version_datetime": null,
-      "last_executed_lu": false,
-      "task_last_updated_by": "admin",
-      "selected_ref_version_task_exe_id": null,
-      "task_execution_status": "Active",
-      "product_versions": "1",
-      "product_last_updated_by": "admin",
-      "replace_sequences": false,
-      "end_execution_time": "2021-06-16 15:36:24.000",
-      "environment_point_of_contact_last_name": "hhhl.",
-      "updated_by": null,
-      "clean_redis": false,
-      "environment_point_of_contact_phone2": null,
-      "environment_last_updated_by": "admin",
-      "product_status": "Active",
-      "task_id": 293,
-      "be_created_by": "admin",
-      "environment_description": "ffff",
-      "version_datetime": "2021-06-16 15:36:00.055",
-      "selected_ref_version_datetime": null,
-      "source_env_name": "SRC",
-      "task_title": "createTaskByTester",
-      "allow_write": true,
-      "task_status": "Active",
-      "environment_last_updated_date": "2021-06-15 10:44:44.934",
-      "number_of_entities_to_copy": 50,
-      "environment_point_of_contact_first_name": "tali",
-      "product_creation_date": "2021-06-08 08:20:45.445",
-      "task_type": "LOAD",
-      "environment_creation_date": "2021-05-26 08:05:57.085",
-      "task_executed_by": "admin",
-      "task_last_updated_date": "2021-06-16 15:34:40.555",
-      "num_of_failed_ref_tables": 0,
-      "reserve_retention_period_type": "Days",
-      "environment_id": 10,
-      "selection_method": "R",
-      "lu_parent_id": 20,
-      "refresh_reference_data": false,
-      "task_execution_id": 488,
-      "lu_dc_name": null,
+      "num_of_processed_entities": 5,
       "refcount": 0,
-      "lu_is_ref": null,
-      "lu_parent_name": "Customer",
-      "process_name": null,
-      "be_last_updated_by": "admin",
-      "retention_period_type": "Days",
-      "start_execution_time": "2021-06-16 15:36:22.000",
-      "selection_param_value": null,
-      "product_last_updated_date": "2021-06-08 08:20:55.973",
-      "product_name": "COLLECTION",
-      "num_of_processed_ref_tables": 0,
-      "execution_order": null,
-      "sync_mode": null,
-      "version_expiration_date": null,
-      "entity_exclusion_list": null,
-      "environment_point_of_contact_email": "",
-      "lu_name": "Collection",
-      "lu_id": 23,
-      "reserve_retention_period_value": 5,  
-      "be_description": "",
-      "parameters": null,
-      "environment_expiration_date": null,
-      "process_id": 0,
-      "product_vendor": null,
-      "environment_created_by": "admin",
-      "be_creation_date": "2021-05-26 08:02:46.710",
-      "allow_read": true,
-      "source_environment_id": 9,
-      "num_of_failed_entities": 0,
-      "scheduler": "immediate",
-      "parent_lu_id": 20,
-      "lu_description": null,
-      "execution_status": "completed",
-      "reserve_ind": true,  
-      "fabric_environment_name": null,
-      "environment_name": "TAR",
-      "delete_before_load": true,
-      "product_version": "1",
-      "retention_period_value": 5,
-      "synced_to_fabric": true,
-      "be_name": "CUSTOMER",
-      "version_ind": false,
-      "task_creation_date": "2021-06-08 12:38:40.523",
-      "task_globals": false,
-      "num_of_copied_ref_tables": 0,
-      "data_center_name": null,
-      "num_of_processed_entities": 32
-    },
-    {
-      "be_id": 10,
-      "selected_version_task_name": null,
-      "selected_ref_version_task_name": null,
-      "num_of_copied_entities": 50,
-      "fabric_execution_id": "07d813fa-1585-4380-ac19-1920d7074f54",
-      "be_last_updated_date": "2021-06-08 08:20:27.804",
-      "execution_plan_name": "epCustomer",
-      "product_id": 6,
-      "load_entity": true,
-      "selected_version_task_exe_id": null,
-      "task_created_by": "tali",
-      "product_description": null,
-      "scheduling_end_date": null,
-      "environment_point_of_contact_phone1": "(",
-      "product_created_by": "admin",
-      "environment_status": "Active",
-      "be_status": "Active",
-      "creation_date": "2021-06-16 15:36:00.055",
-      "selected_version_datetime": null,
-      "last_executed_lu": false,
-      "task_last_updated_by": "admin",
-      "selected_ref_version_task_exe_id": null,
-      "task_execution_status": "Active",
-      "product_versions": "PROD,DEV",
-      "product_last_updated_by": "admin",
-      "replace_sequences": false,
-      "end_execution_time": "2021-06-16 15:36:04.000",
-      "environment_point_of_contact_last_name": "hhhl.",
-      "updated_by": null,
-      "clean_redis": false,
-      "environment_point_of_contact_phone2": null,
-      "environment_last_updated_by": "admin",
-      "product_status": "Active",
-      "task_id": 293,
-      "be_created_by": "admin",
-      "environment_description": "ffff",
-      "version_datetime": "2021-06-16 15:36:00.055",
-      "selected_ref_version_datetime": null,
-      "source_env_name": "SRC",
-      "task_title": "createTaskByTester",
-      "allow_write": true,
-      "task_status": "Active",
-      "environment_last_updated_date": "2021-06-15 10:44:44.934",
-      "number_of_entities_to_copy": 50,
-      "environment_point_of_contact_first_name": "tali",
-      "product_creation_date": "2021-05-26 08:03:28.264",
-      "task_type": "LOAD",
-      "environment_creation_date": "2021-05-26 08:05:57.085",
-      "task_executed_by": "admin",
-      "task_last_updated_date": "2021-06-16 15:34:40.555",
-      "num_of_failed_ref_tables": 0,
-      "reserve_retention_period_type": "Days",  
-      "environment_id": 10,
-      "selection_method": "R",
-      "lu_parent_id": null,
-      "refresh_reference_data": false,
-      "task_execution_id": 488,
-      "lu_dc_name": null,
-      "refcount": 0,
-      "lu_is_ref": null,
-      "lu_parent_name": null,
-      "process_name": null,
-      "be_last_updated_by": "admin",
-      "retention_period_type": "Days",
-      "start_execution_time": "2021-06-16 15:36:02.000",
-      "selection_param_value": null,
-      "product_last_updated_date": "2021-05-26 08:04:48.842",
-      "product_name": "CRM",
-      "num_of_processed_ref_tables": 0,
-      "execution_order": null,
-      "sync_mode": null,
-      "version_expiration_date": null,
-      "entity_exclusion_list": null,
-      "environment_point_of_contact_email": "",
+      "start_execution_time": "2026-05-26 09:00:07.04126",
+      "end_execution_time": "2026-05-26 09:00:40.055341",
+      "source_env_name": "Production",
+      "environment_name": "Production",
+      "selection_method": "ALL",
+      "creation_date": "2026-05-26 08:59:57.103",
+      "sync_mode": "ON",
       "lu_name": "Customer",
-      "lu_id": 20,
-      "reserve_retention_period_value": 5,
-      "be_description": "",
-      "parameters": null,
-      "environment_expiration_date": null,
-      "process_id": 0,
-      "product_vendor": null,
-      "environment_created_by": "admin",
-      "be_creation_date": "2021-05-26 08:02:46.710",
-      "allow_read": true,
-      "source_environment_id": 9,
-      "num_of_failed_entities": 0,
-      "scheduler": "immediate",
-      "parent_lu_id": null,
-      "lu_description": null,
+      "lu_id": 1,
+      "product_name": "CRM",
+      "product_description": "CRM Application",
+      "process_id": 0
+    },
+    {
+      "task_execution_id": 312,
       "execution_status": "completed",
-      "reserve_ind": true,  
-      "fabric_environment_name": null,
-      "environment_name": "TAR",
-      "delete_before_load": true,
-      "product_version": "PROD",
-      "retention_period_value": 5,
-      "synced_to_fabric": true,
-      "be_name": "CUSTOMER",
-      "version_ind": false,
-      "task_creation_date": "2021-06-08 12:38:40.523",
-      "task_globals": false,
-      "num_of_copied_ref_tables": 0,
-      "data_center_name": null,
-      "num_of_processed_entities": 50
+      "execution_mode": "HORIZONTAL",
+      "num_of_entities": 17,
+      "num_of_copied_entities": 17,
+      "num_of_failed_entities": 0,
+      "num_of_processed_entities": 17,
+      "refcount": 0,
+      "start_execution_time": "2026-05-26 09:00:12.218769",
+      "end_execution_time": "2026-05-26 09:00:40.055341",
+      "source_env_name": "Production",
+      "environment_name": "Production",
+      "selection_method": "ALL",
+      "creation_date": "2026-05-26 08:59:57.103",
+      "sync_mode": "ON",
+      "lu_name": "Billing",
+      "lu_id": 2,
+      "lu_parent_id": 1,
+      "lu_parent_name": "Customer",
+      "product_name": "Billing",
+      "product_description": "Billing Application",
+      "process_id": 0
     }
   ],
-  "errorCode": "SUCCESS",
-  "message": null
+  "errorCode": "SUCCESS"
 }
 ```
 
@@ -2303,13 +1867,13 @@ The type is the run mode of the API and can have the following values:
 #### Summary Information
 
 ```json
-{taskExecutionId: 494, type: "S"}
+{"taskExecutionId": "494", "type": "S"}
 ```
 
 #### Detailed Information
 
 ```json
-{taskExecutionId: 494, type: "D"}
+{"taskExecutionId": "494", "type": "D"}
 ```
 
 ### API Output Examples

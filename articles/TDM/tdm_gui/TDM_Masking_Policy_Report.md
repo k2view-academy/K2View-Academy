@@ -1,4 +1,4 @@
-# Masking Policy Report
+# Masking Policy Report User Guide
 
 ## Overview
 

@@ -51,7 +51,7 @@ Note: the number of entities in the TDM execution report is limited to the numbe
 <p>Yes</p>
 </td>
 <td style="width: 516.284px;">
-<p>Populate this parameter by 'ALL' to get a summary execution report on the execution. This report includes all the related task's LUs.</p>
+<p>Populate this parameter by 'ALL' to get one unified summary execution report on all the Logical Units of the task execution, or by a Logical Unit name to get a report on a given Logical Unit (see the <strong>Load Tasks - Get a Summary Execution Report on a Given LU</strong> section below).</p>
 </td>
 </tr>
 </tbody>
@@ -1552,6 +1552,131 @@ The **migrateIds** parameter is populated by the batch IDs related to the task e
 
 ```json
 {"migrateIds": ["8a9ad3f6-74d8-4c1e-9a2a-7c87600ca7f2", "2721ad86-8c66-4304-9a4d-e00716a9450e"], "runModes": ["D", "H", "S"]}
+```
+
+### API Output Example
+
+The output includes an object for each requested run mode: **S** (summary statistics per Node, DC and Cluster level), **D** (detailed execution status of each entity), and **H** (the batch command).
+
+```json
+{
+  "result": [
+    {
+      "S": {
+        "columnsNames": [
+          "Status",
+          "Ent./sec (avg.)",
+          "Ent./sec (pace)",
+          "Start time (UTC)",
+          "Duration",
+          "End time (UTC)",
+          "Name",
+          "Succeeded",
+          "Failed",
+          "Added",
+          "Updated",
+          "Unchanged",
+          "Total",
+          "Level",
+          "Remaining dur.",
+          "Remaining",
+          "% Completed"
+        ],
+        "results": [
+          {
+            "columns": {
+              "Status": "",
+              "Ent./sec (avg.)": "7.84",
+              "Added": 0,
+              "Ent./sec (pace)": "7.84",
+              "Updated": 2,
+              "Failed": "0",
+              "Duration": "00:05:05",
+              "Start time (UTC)": "2021-05-08 06:46:22",
+              "End time (UTC)": "2021-05-08 06:51:27",
+              "End time": "2021-05-08 06:51:27",
+              "Name": "76b2a141-4f0a-453b-8999-f2bdd66a9b8d",
+              "Succeeded": "2",
+              "Total": "--",
+              "Level": "Node",
+              "Remaining dur.": "00:00:00",
+              "Remaining": "0",
+              "Start time": "2021-05-08 06:46:22",
+              "Unchanged": 0,
+              "% Completed": "100"
+            }
+          },
+          {
+            "columns": {
+              "Status": "",
+              "Ent./sec (avg.)": "7.84",
+              "Added": 0,
+              "Ent./sec (pace)": "7.84",
+              "Updated": 2393,
+              "Failed": "0",
+              "Duration": "00:05:05",
+              "Start time (UTC)": "2021-05-08 06:46:22",
+              "End time (UTC)": "2021-05-08 06:51:27",
+              "End time": "2021-05-08 06:51:27",
+              "Name": "DC1",
+              "Succeeded": "2393",
+              "Total": "--",
+              "Level": "DC",
+              "Remaining dur.": "00:00:00",
+              "Remaining": "0",
+              "Start time": "2021-05-08 06:46:22",
+              "Unchanged": 0,
+              "% Completed": "100"
+            }
+          },
+          {
+            "columns": {
+              "Status": "DONE",
+              "Ent./sec (avg.)": "7.84",
+              "Added": 0,
+              "Ent./sec (pace)": "7.84",
+              "Updated": 2393,
+              "Failed": "0",
+              "Duration": "00:05:05",
+              "Start time (UTC)": "2021-05-08 06:46:22",
+              "End time (UTC)": "2021-05-08 06:51:27",
+              "End time": "2021-05-08 06:51:27",
+              "Name": "--",
+              "Succeeded": "2393",
+              "Total": "2393",
+              "Level": "Cluster",
+              "Remaining dur.": "00:00:00",
+              "Remaining": "0",
+              "Start time": "2021-05-08 06:46:22",
+              "Unchanged": 0,
+              "% Completed": "100"
+            }
+          }
+        ]
+      },
+      "D": [
+        {
+          "Status": "COMPLETED",
+          "Error": "",
+          "Entity ID": "ENV1_26982",
+          "Results": "{\"Added\":0,\"Updated\":1,\"Unchanged\":0}",
+          "Node id": "76b2a141-4f0a-453b-8999-f2bdd66a9b8d"
+        },
+        {
+          "Status": "COMPLETED",
+          "Error": "",
+          "Entity ID": "ENV1_26191",
+          "Results": "{\"Added\":0,\"Updated\":1,\"Unchanged\":0}",
+          "Node id": "76b2a141-4f0a-453b-8999-f2bdd66a9b8d"
+        }
+      ],
+      "H": {
+        "Migration Command": "batch PATIENT_VISITS from TDM using ('SELECT ''''||rel.source_env||''_''||rel.lu_type2_eid||'''' child_entity_id FROM task_execution_entities t, tdm_lu_type_relation_eid rel where t.task_execution_id = ''33'' and t.execution_status = ''completed'' and t.lu_name = ''PATIENT_LU'' and t.lu_name = rel.lu_type_1 and rel.lu_type_2 = ''PATIENT_VISITS'' and rel.version_name = '''' and t.source_env = rel.source_env and t.iid = rel.lu_type1_eid') FABRIC_COMMAND=\"sync_instance PATIENT_VISITS.?\" WITH ASYNC=true"
+      }
+    }
+  ],
+  "errorCode": "SUCCESS"
+}
 ```
 
  [![Previous](/articles/images/Previous.png)](01_tdm_basic_task_execution_flow.md)
