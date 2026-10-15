@@ -8,7 +8,7 @@ Click the filter icon next to a table to open the **Data subset settings** windo
 
 
 
-![table subset](images/task_subset_tables_example.png)
+![table subset](images/task_table_record_sampling.png)
 
 
 
