@@ -32,7 +32,10 @@
 <li><a href = "28_task_execution_dashboard.md">Execution Dashboard Window</a></li>    
 <li><a href="25_task_tdmdb_tables.md">Task - TDM DB Tables</a></li> 
 <li><a href="TDM_Task_Execution_Flows_APIs/README.md">TDM - Task Execution Using APIs</a></li>    
-<li><a href="TDM_Dashboard_User_Guide.md">TDM Reports</a></li>
+<li><a href="TDM_Dashboard_User_Guide.md">TDM Reports: TDM DashBoard User Guide</a></li>
+<li><a href="TDM_Masking_Policy_Report.md">TDM Reports: Masking Policy User Guide</a></li>
+<li><a href="TDM_Masking_Execution_Report.md">TDM Reports: Masking Execution User Guide</a></li>    
+
 
 
 

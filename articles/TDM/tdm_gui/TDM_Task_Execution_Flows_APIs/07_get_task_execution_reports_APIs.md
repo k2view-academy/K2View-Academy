@@ -51,11 +51,12 @@ Note: the number of entities in the TDM execution report is limited to the numbe
 <p>Yes</p>
 </td>
 <td style="width: 516.284px;">
-<p>Populate this parameter by 'ALL' to get a summary execution report on the execution. This report includes all the related task's LUs.</p>
+<p>Populate this parameter by 'ALL' to get one unified summary execution report on all the Logical Units of the task execution, or by a Logical Unit name to get a report on a given Logical Unit (see the <strong>Load Tasks - Get a Summary Execution Report on a Given LU</strong> section below). The 'ALL' mode also returns the masking execution details. </p>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 #### API Input Example
 
@@ -65,1071 +66,1104 @@ http://localhost:3213/api/taskSummaryReport/490/luName/ALL
 
 ### API Output Examples
 
-```json
-{
-   "result":{
-      "General Info":[
-         {
-            "task_name":"loadVIPCus",
-            "task_id":3,
-            "task_execution_id":"6",
-            "created_by":"admin",
-            "executed_by":"joe",
-            "start_execution":"2021-11-07 15:52:09.0",
-            "end_execution":"2021-11-07 15:52:30.0",
-            "execution_status":"completed",
-            "source_env":"SRC",
-            "target_env":"TAR",
-            "be_name":"Customer",
-            "task_type":"LOAD",
-            "selection_method":"Parameters",
-            "task_sync_mode":null,
-            "env_sync_mode":"ON",
-            "operation_mode":"Delete and load entity",
-            "replace_sequences":"false",
-            "version_ind":"false",
-            "selected_version_task_name":null,
-            "selected_version_datetime":null,
-            "selected_ref_version_task_name":null,
-            "selected_ref_version_datetime":null,
-            "scheduling_parameters":"immediate",
-            "schedule_expiration_date":null,
-            "override_parameters":"{\"NO_OF_ENTITIES\":6}",
-            "reserve_ind": "true",
-            "reserve_retention_period_type": "Days",
-            "reserve_retention_period_value": 5
-         }
-      ],
-      "Source Environment": {
-         "Environment Name": [
-         {
-             "name": "SRC"
-         }
-         ],
-         "Source Environment Products": [
-         {
-            "product_name": "BILLING",
-            "source_product_version": "PROD"
-         },
-         {
-            "product_name": "COLLECTION",
-            "source_product_version": "1"
-         },
-         {
-            "product_name": "CRM",
-            "source_product_version": "1"
-         },
-         {
-            "product_name": "ORDERING",
-            "source_product_version": "1"
-         }
-         ]
-     },
-    "Target Environment": {
-      "Environment Name": [
-        {
-          "name": "TAR"
-        }
-      ],
-      "Target Environment Products": [
-        {
-          "product_name": "BILLING",
-          "target_product_version": "PROD"
-        },
-        {
-          "product_name": "COLLECTION",
-          "target_product_version": "1"
-        },
-        {
-          "product_name": "CRM",
-          "target_product_version": "1.5"
-        },
-        {
-          "product_name": "ORDERING",
-          "target_product_version": "1"
-        }
-      ]
-    },
-      "Task Execution Summary":[
-         {
-            "LUs":{
-               "LU Load Summary":[
-                  {
-                     "lu_name":"Customer",
-                     "fabric_execution_id":"71175bf8-e606-49a9-b5e9-489b99c3fa46",
-                     "parent_lu_name":"null",
-                     "data_center_name":"DC1",
-                     "start_execution_time":"2021-11-07 15:52:09.0",
-                     "end_execution_time":"2021-11-07 15:52:10.0",
-                     "num_of_processed_entities":6,
-                     "num_of_copied_entities":6,
-                     "num_of_failed_entities":0,
-                     "num_of_processed_ref_tables":0,
-                     "num_of_copied_ref_tables":0,
-                     "num_of_failed_ref_tables":0
-                  }
-               ]
-            }
-         },
-         {
-            "LUs":{
-               "LU Load Summary":[
-                  {
-                     "lu_name":"Collection",
-                     "fabric_execution_id":"d522f580-ff91-4835-a35d-e6fe9dc75685",
-                     "parent_lu_name":"Customer",
-                     "data_center_name":"DC1",
-                     "start_execution_time":"2021-11-07 15:52:29.0",
-                     "end_execution_time":"2021-11-07 15:52:30.0",
-                     "num_of_processed_entities":2,
-                     "num_of_copied_entities":2,
-                     "num_of_failed_entities":0,
-                     "num_of_processed_ref_tables":0,
-                     "num_of_copied_ref_tables":0,
-                     "num_of_failed_ref_tables":0
-                  }
-               ]
-            }
-         },
-         {
-            "LUs":{
-               "LU Load Summary":[
-                  {
-                     "lu_name":"Billing",
-                     "fabric_execution_id":"3dbf3bb7-075e-4eea-a151-f257b3ee6874",
-                     "parent_lu_name":"Customer",
-                     "data_center_name":"null",
-                     "start_execution_time":"2021-11-07 15:52:29.0",
-                     "end_execution_time":"2021-11-07 15:52:30.0",
-                     "num_of_processed_entities":18,
-                     "num_of_copied_entities":1,
-                     "num_of_failed_entities":17,
-                     "num_of_processed_ref_tables":0,
-                     "num_of_copied_ref_tables":0,
-                     "num_of_failed_ref_tables":0
-                  }
-               ]
-            }
-         },
-         {
-            "LUs":{
-               "LU Load Summary":[
-                  {
-                     "lu_name":"Orders",
-                     "fabric_execution_id":"d4033252-e1b0-4267-bb2d-46ff7795c250",
-                     "parent_lu_name":"Customer",
-                     "data_center_name":"null",
-                     "start_execution_time":"2021-11-07 15:52:29.0",
-                     "end_execution_time":"2021-11-07 15:52:30.0",
-                     "num_of_processed_entities":18,
-                     "num_of_copied_entities":18,
-                     "num_of_failed_entities":0,
-                     "num_of_processed_ref_tables":0,
-                     "num_of_copied_ref_tables":0,
-                     "num_of_failed_ref_tables":0
-                  }
-               ]
-            }
-         }
-      ],
-      "List of Root Entities":{
-         "Number of Copied Entities":[
-            {
-               "number_of_copied_root_entities":0
-            }
-         ],
-         "List of Copied Entities":[
-            {
-               "source_id":"SRC_1016",
-               "target_id":"1016"
-            },
-            {
-               "source_id":"SRC_329",
-               "target_id":"329"
-            },
-            {
-               "source_id":"SRC_360",
-               "target_id":"360"
-            },
-            {
-               "source_id":"SRC_448",
-               "target_id":"448"
-            },
-            {
-               "source_id":"SRC_663",
-               "target_id":"663"
-            },
-            {
-               "source_id":"SRC_679",
-               "target_id":"679"
-            }
-         ],
-         "Number of Failed Entities":[
-            {
-               "number_of_failed_root_entities":0
-            }
-         ],
-         "List of Failed Entities":[
-            
-         ]
-      },
-      "List of Reference Tables":{
-         "Number of Copied Reference Tables":[
-            {
-               "count":0
-            }
-         ],
-         "List of Copied Reference Tables":[
-            
-         ],
-         "Number of Failed Reference Tables":[
-            {
-               "count":0
-            }
-         ],
-         "List of Failed Reference Tables":[
-            
-         ]
-      },
-      "Error Summary":[
-         {
-            "lu_name":"Billing",
-            "flow_name":"TDMOrchestrator",
-            "stage_name":"Load Tables",
-            "actor_name":"Load All Tables",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"Flow: LoadAllTables Level: 4 Stage: Load Tables Level 3 Actor: load_PAYMENT Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70 Cause: ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) InnerFlowException: Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70",
-            "number_of_entities":17,
-            "number_of_records":17
-         },
-         {
-            "lu_name":"Billing",
-            "flow_name":"load_PAYMENT",
-            "stage_name":"Set payment method",
-            "actor_name":"Load PAYMENT - DEV",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?)",
-            "number_of_entities":17,
-            "number_of_records":17
-         }
-      ],
-      "Error Details":[
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_1125",
-            "target_entity_id":"1125",
-            "flow_name":"load_PAYMENT",
-            "stage_name":"Set payment method",
-            "actor_name":"Load PAYMENT - DEV",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?)",
-            "actor_parameters":"5592,2815,2015-04-06 14:39:22,3,24.0,\n"
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_1125",
-            "target_entity_id":"1125",
-            "flow_name":"TDMOrchestrator",
-            "stage_name":"Load Tables",
-            "actor_name":"Load All Tables",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"Flow: LoadAllTables Level: 4 Stage: Load Tables Level 3 Actor: load_PAYMENT Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70 Cause: ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) InnerFlowException: Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70",
-            "actor_parameters":""
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_1126",
-            "target_entity_id":"1126",
-            "flow_name":"TDMOrchestrator",
-            "stage_name":"Load Tables",
-            "actor_name":"Load All Tables",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"Flow: LoadAllTables Level: 4 Stage: Load Tables Level 3 Actor: load_PAYMENT Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70 Cause: ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) InnerFlowException: Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70",
-            "actor_parameters":""
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_1126",
-            "target_entity_id":"1126",
-            "flow_name":"load_PAYMENT",
-            "stage_name":"Set payment method",
-            "actor_name":"Load PAYMENT - DEV",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?)",
-            "actor_parameters":"5593,2816,2016-02-27 04:30:58,1,820.0,\n"
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_1127",
-            "target_entity_id":"1127",
-            "flow_name":"TDMOrchestrator",
-            "stage_name":"Load Tables",
-            "actor_name":"Load All Tables",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"Flow: LoadAllTables Level: 4 Stage: Load Tables Level 3 Actor: load_PAYMENT Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70 Cause: ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) InnerFlowException: Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70",
-            "actor_parameters":""
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_1127",
-            "target_entity_id":"1127",
-            "flow_name":"load_PAYMENT",
-            "stage_name":"Set payment method",
-            "actor_name":"Load PAYMENT - DEV",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?)",
-            "actor_parameters":"5600,2820,2016-09-13 08:01:49,2,144.0,\n"
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_1128",
-            "target_entity_id":"1128",
-            "flow_name":"TDMOrchestrator",
-            "stage_name":"Load Tables",
-            "actor_name":"Load All Tables",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"Flow: LoadAllTables Level: 4 Stage: Load Tables Level 3 Actor: load_PAYMENT Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70 Cause: ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) InnerFlowException: Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70",
-            "actor_parameters":""
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_1128",
-            "target_entity_id":"1128",
-            "flow_name":"load_PAYMENT",
-            "stage_name":"Set payment method",
-            "actor_name":"Load PAYMENT - DEV",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?)",
-            "actor_parameters":"5602,2821,2017-02-11 17:56:25,1,273.0,\n"
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_1629",
-            "target_entity_id":"1629",
-            "flow_name":"load_PAYMENT",
-            "stage_name":"Set payment method",
-            "actor_name":"Load PAYMENT - DEV",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?)",
-            "actor_parameters":"8151,4092,2017-01-03 01:10:57,3,436.0,\n"
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_1629",
-            "target_entity_id":"1629",
-            "flow_name":"TDMOrchestrator",
-            "stage_name":"Load Tables",
-            "actor_name":"Load All Tables",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"Flow: LoadAllTables Level: 4 Stage: Load Tables Level 3 Actor: load_PAYMENT Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70 Cause: ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) InnerFlowException: Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70",
-            "actor_parameters":""
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_1630",
-            "target_entity_id":"1630",
-            "flow_name":"TDMOrchestrator",
-            "stage_name":"Load Tables",
-            "actor_name":"Load All Tables",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"Flow: LoadAllTables Level: 4 Stage: Load Tables Level 3 Actor: load_PAYMENT Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70 Cause: ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) InnerFlowException: Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70",
-            "actor_parameters":""
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_1630",
-            "target_entity_id":"1630",
-            "flow_name":"load_PAYMENT",
-            "stage_name":"Set payment method",
-            "actor_name":"Load PAYMENT - DEV",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?)",
-            "actor_parameters":"8153,4094,2016-01-03 00:48:11,1,511.0,\n"
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_1631",
-            "target_entity_id":"1631",
-            "flow_name":"TDMOrchestrator",
-            "stage_name":"Load Tables",
-            "actor_name":"Load All Tables",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"Flow: LoadAllTables Level: 4 Stage: Load Tables Level 3 Actor: load_PAYMENT Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70 Cause: ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) InnerFlowException: Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70",
-            "actor_parameters":""
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_1631",
-            "target_entity_id":"1631",
-            "flow_name":"load_PAYMENT",
-            "stage_name":"Set payment method",
-            "actor_name":"Load PAYMENT - DEV",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?)",
-            "actor_parameters":"8160,4098,2016-09-15 01:06:15,1,172.0,\n"
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_1679",
-            "target_entity_id":"1679",
-            "flow_name":"TDMOrchestrator",
-            "stage_name":"Load Tables",
-            "actor_name":"Load All Tables",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"Flow: LoadAllTables Level: 4 Stage: Load Tables Level 3 Actor: load_PAYMENT Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70 Cause: ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) InnerFlowException: Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70",
-            "actor_parameters":""
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_1679",
-            "target_entity_id":"1679",
-            "flow_name":"load_PAYMENT",
-            "stage_name":"Set payment method",
-            "actor_name":"Load PAYMENT - DEV",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?)",
-            "actor_parameters":"8364,4181,2015-03-21 14:09:26,1,1000.0,\n"
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_2507",
-            "target_entity_id":"2507",
-            "flow_name":"load_PAYMENT",
-            "stage_name":"Set payment method",
-            "actor_name":"Load PAYMENT - DEV",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?)",
-            "actor_parameters":"12502,6238,2016-10-11 16:37:16,1,797.0,\n"
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_2507",
-            "target_entity_id":"2507",
-            "flow_name":"TDMOrchestrator",
-            "stage_name":"Load Tables",
-            "actor_name":"Load All Tables",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"Flow: LoadAllTables Level: 4 Stage: Load Tables Level 3 Actor: load_PAYMENT Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70 Cause: ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) InnerFlowException: Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70",
-            "actor_parameters":""
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_2508",
-            "target_entity_id":"2508",
-            "flow_name":"load_PAYMENT",
-            "stage_name":"Set payment method",
-            "actor_name":"Load PAYMENT - DEV",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?)",
-            "actor_parameters":"12512,6245,2015-03-11 23:11:00,3,553.0,\n"
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_2508",
-            "target_entity_id":"2508",
-            "flow_name":"TDMOrchestrator",
-            "stage_name":"Load Tables",
-            "actor_name":"Load All Tables",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"Flow: LoadAllTables Level: 4 Stage: Load Tables Level 3 Actor: load_PAYMENT Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70 Cause: ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) InnerFlowException: Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70",
-            "actor_parameters":""
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_834",
-            "target_entity_id":"834",
-            "flow_name":"load_PAYMENT",
-            "stage_name":"Set payment method",
-            "actor_name":"Load PAYMENT - DEV",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?)",
-            "actor_parameters":"4139,2056,2016-08-30 14:49:04,1,36.0,\n"
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_834",
-            "target_entity_id":"834",
-            "flow_name":"TDMOrchestrator",
-            "stage_name":"Load Tables",
-            "actor_name":"Load All Tables",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"Flow: LoadAllTables Level: 4 Stage: Load Tables Level 3 Actor: load_PAYMENT Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70 Cause: ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) InnerFlowException: Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70",
-            "actor_parameters":""
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_835",
-            "target_entity_id":"835",
-            "flow_name":"load_PAYMENT",
-            "stage_name":"Set payment method",
-            "actor_name":"Load PAYMENT - DEV",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?)",
-            "actor_parameters":"4149,2062,2017-01-30 17:59:53,3,48.0,\n"
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_835",
-            "target_entity_id":"835",
-            "flow_name":"TDMOrchestrator",
-            "stage_name":"Load Tables",
-            "actor_name":"Load All Tables",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"Flow: LoadAllTables Level: 4 Stage: Load Tables Level 3 Actor: load_PAYMENT Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70 Cause: ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) InnerFlowException: Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70",
-            "actor_parameters":""
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_836",
-            "target_entity_id":"836",
-            "flow_name":"TDMOrchestrator",
-            "stage_name":"Load Tables",
-            "actor_name":"Load All Tables",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"Flow: LoadAllTables Level: 4 Stage: Load Tables Level 3 Actor: load_PAYMENT Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70 Cause: ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) InnerFlowException: Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70",
-            "actor_parameters":""
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_836",
-            "target_entity_id":"836",
-            "flow_name":"load_PAYMENT",
-            "stage_name":"Set payment method",
-            "actor_name":"Load PAYMENT - DEV",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?)",
-            "actor_parameters":"4155,2064,2015-12-04 04:44:41,2,933.0,\n"
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_905",
-            "target_entity_id":"905",
-            "flow_name":"TDMOrchestrator",
-            "stage_name":"Load Tables",
-            "actor_name":"Load All Tables",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"Flow: LoadAllTables Level: 4 Stage: Load Tables Level 3 Actor: load_PAYMENT Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70 Cause: ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) InnerFlowException: Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70",
-            "actor_parameters":""
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_905",
-            "target_entity_id":"905",
-            "flow_name":"load_PAYMENT",
-            "stage_name":"Set payment method",
-            "actor_name":"Load PAYMENT - DEV",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?)",
-            "actor_parameters":"4521,2257,2015-09-18 03:07:18,1,755.0,\n"
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_906",
-            "target_entity_id":"906",
-            "flow_name":"TDMOrchestrator",
-            "stage_name":"Load Tables",
-            "actor_name":"Load All Tables",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"Flow: LoadAllTables Level: 4 Stage: Load Tables Level 3 Actor: load_PAYMENT Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70 Cause: ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) InnerFlowException: Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70",
-            "actor_parameters":""
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_906",
-            "target_entity_id":"906",
-            "flow_name":"load_PAYMENT",
-            "stage_name":"Set payment method",
-            "actor_name":"Load PAYMENT - DEV",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?)",
-            "actor_parameters":"4526,2259,2015-07-26 16:11:30,1,895.0,\n"
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_907",
-            "target_entity_id":"907",
-            "flow_name":"TDMOrchestrator",
-            "stage_name":"Load Tables",
-            "actor_name":"Load All Tables",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"Flow: LoadAllTables Level: 4 Stage: Load Tables Level 3 Actor: load_PAYMENT Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70 Cause: ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) InnerFlowException: Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70",
-            "actor_parameters":""
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_907",
-            "target_entity_id":"907",
-            "flow_name":"load_PAYMENT",
-            "stage_name":"Set payment method",
-            "actor_name":"Load PAYMENT - DEV",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?)",
-            "actor_parameters":"4533,2261,2015-09-26 14:57:05,2,424.0,\n"
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_908",
-            "target_entity_id":"908",
-            "flow_name":"TDMOrchestrator",
-            "stage_name":"Load Tables",
-            "actor_name":"Load All Tables",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"Flow: LoadAllTables Level: 4 Stage: Load Tables Level 3 Actor: load_PAYMENT Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70 Cause: ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) InnerFlowException: Flow: load_PAYMENT Level: 8 Stage: Set payment method Actor: Load PAYMENT - DEV ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?) class org.postgresql.util.PSQLException Cause: ERROR: column \"payment_method\" of relation \"payment\" does not exist\n  Position: 70",
-            "actor_parameters":""
-         },
-         {
-            "lu_name":"Billing",
-            "source_entity_id":"SRC_908",
-            "target_entity_id":"908",
-            "flow_name":"load_PAYMENT",
-            "stage_name":"Set payment method",
-            "actor_name":"Load PAYMENT - DEV",
-            "error_category":"Entity Failed",
-            "error_code":"0",
-            "error_message":"ERROR: current transaction is aborted, commands ignored until end of transaction block\nINSERT INTO PAYMENT (INVOICE_ID,PAYMENT_ID,ISSUED_DATE,STATUS,AMOUNT,PAYMENT_METHOD) VALUES (?,?,?,?,?,?)",
-            "actor_parameters":"4539,2263,2015-04-09 22:11:19,1,246.0,\n"
-         }
-      ],
-      "Statistics Report":[
-         {
-            "lu_name":"Customer",
-            "table_name":"CASE_NOTE",
-            "target_count":"52",
-            "source_count":"52",
-            "diff":"0",
-            "results":"OK"
-         },
-         {
-            "lu_name":"Customer",
-            "table_name":"ACTIVITY",
-            "target_count":"34",
-            "source_count":"34",
-            "diff":"0",
-            "results":"OK"
-         },
-         {
-            "lu_name":"Customer",
-            "table_name":"CASES",
-            "target_count":"17",
-            "source_count":"17",
-            "diff":"0",
-            "results":"OK"
-         },
-         {
-            "lu_name":"Customer",
-            "table_name":"ADDRESS",
-            "target_count":"6",
-            "source_count":"6",
-            "diff":"0",
-            "results":"OK"
-         },
-         {
-            "lu_name":"Customer",
-            "table_name":"CONTRACT",
-            "target_count":"18",
-            "source_count":"18",
-            "diff":"0",
-            "results":"OK"
-         },
-         {
-            "lu_name":"Customer",
-            "table_name":"CUSTOMER",
-            "target_count":"6",
-            "source_count":"6",
-            "diff":"0",
-            "results":"OK"
-         },
-         {
-            "lu_name":"Collection",
-            "table_name":"COLLECTION",
-            "target_count":"2",
-            "source_count":"2",
-            "diff":"0",
-            "results":"OK"
-         },
-         {
-            "lu_name":"Billing",
-            "table_name":"SUBSCRIBER",
-            "target_count":"18",
-            "source_count":"18",
-            "diff":"0",
-            "results":"OK"
-         },
-         {
-            "lu_name":"Orders",
-            "table_name":"ORDERS",
-            "target_count":"18",
-            "source_count":"18",
-            "diff":"0",
-            "results":"OK"
-         },
-         {
-            "lu_name":"Billing",
-            "table_name":"INVOICE",
-            "target_count":"102",
-            "source_count":"102",
-            "diff":"0",
-            "results":"OK"
-         },
-         {
-            "lu_name":"Billing",
-            "table_name":"OFFER",
-            "target_count":"9",
-            "source_count":"9",
-            "diff":"0",
-            "results":"OK"
-         },
-         {
-            "lu_name":"Billing",
-            "table_name":"BALANCE",
-            "target_count":"170",
-            "source_count":"170",
-            "diff":"0",
-            "results":"OK"
-         }
-      ],
-      "Replace Sequence Summary Report":[
-         
-      ]
-   },
-   "errorCode":"SUCCESS",
-   "message":""
-}
 ```
-
-
-
-```json
 {
-  "result": {
-    "General Info": [
+  "result":{
+    "General Info":[
       {
-        "task_name": "createTaskByTester",
-        "task_id": 294,
-        "task_execution_id": "490",
-        "created_by": "tali",
-        "executed_by": "admin",
-        "start_execution": "2021-06-16 16:24:21.0",
-        "end_execution": "2021-06-16 16:24:32.0",
-        "execution_status": "completed",
-        "source_env": "SRC",
-        "target_env": "TAR",
-        "be_name": "CUSTOMER",
-        "task_type": "LOAD",
-        "selection_method": "Randon Selection",
-        "task_sync_mode": null,
-        "env_sync_mode": "ON",
-        "operation_mode": "Delete and load entity",
-        "replace_sequences": "false",
-        "version_ind": "false",
-        "selected_version_task_name": null,
-        "selected_version_datetime": null,
-        "selected_ref_version_task_name": null,
-        "selected_ref_version_datetime": null,
-        "scheduling_parameters": "immediate",
-        "schedule_expiration_date": null,
-        "override_parameters": null,
-        "reserve_ind": "false",
-        "reserve_retention_period_type": null,
-        "reserve_retention_period_value": null 
+        "task_name":"Copy Bronze customers with unlimited calls",
+        "task_id":210,
+        "task_execution_id":"442",
+        "created_by":"tali.einhorn@k2view.com.k2v",
+        "executed_by":"tali.einhorn@k2view.com.k2v",
+        "start_execution":"2026-10-15 09:51:07.947",
+        "end_execution":"2026-10-15 09:52:08.000",
+        "execution_status":"completed",
+        "source_env":"Production",
+        "target_env":"UAT",
+        "be_name":"Customer",
+        "task_type":"LOAD",
+        "selection_method":"Parameters",
+        "task_sync_mode":"ON",
+        "env_sync_mode":"",
+        "operation_mode":"Load entity",
+        "replace_sequences":"true",
+        "version_ind":"false",
+        "selected_version_task_exe_id":0,
+        "selected_subset_task_exe_id":0,
+        "scheduling_parameters":"immediate",
+        "schedule_expiration_date":null,
+        "retention_period_type":"Do Not Delete",
+        "retention_period_value":"-1",
+        "reserve_ind":"true",
+        "reserve_retention_period_type":"Days",
+        "reserve_retention_period_value":5,
+        "execution_mode":"HORIZONTAL"
       }
     ],
-     "Source Environment": {
-         "Environment Name": [
-         {
-             "name": "SRC"
-         }
-         ],
-         "Source Environment Products": [
-         {
-            "product_name": "BILLING",
-            "source_product_version": "PROD"
-         },
-         {
-            "product_name": "COLLECTION",
-            "source_product_version": "1"
-         },
-         {
-            "product_name": "CRM",
-            "source_product_version": "1"
-         },
-         {
-            "product_name": "ORDERING",
-            "source_product_version": "1"
-         }
-         ]
-     },
-    "Target Environment": {
-      "Environment Name": [
+    "Task Globals":[],
+    "Override parameters":[],
+    "Source Environment":{
+      "Environment Name":[
         {
-          "name": "TAR"
+          "name":"Production"
         }
       ],
-      "Target Environment Products": [
+      "Source Environment Products":[
         {
-          "product_name": "BILLING",
-          "target_product_version": "PROD"
+          "product_name":"CRM",
+          "source_product_version":"PROD"
         },
         {
-          "product_name": "COLLECTION",
-          "target_product_version": "1"
-        },
-        {
-          "product_name": "CRM",
-          "target_product_version": "1.5"
-        },
-        {
-          "product_name": "ORDERING",
-          "target_product_version": "1"
+          "product_name":"Billing",
+          "source_product_version":"PROD"
         }
       ]
     },
-    "Task Execution Summary": [
+    "Target Environment":{
+      "Environment Name":[
+        {
+          "name":"UAT"
+        }
+      ],
+      "Target Environment Products":[
+        {
+          "product_name":"CRM",
+          "target_product_version":"1"
+        },
+        {
+          "product_name":"Billing",
+          "target_product_version":"1"
+        }
+      ]
+    },
+    "Task Parameters":{
+      "Selection Method":{
+        "parameters":{
+          "param_name":"sql",
+          "param_value":"(( SELECT distinct ROOT_IID FROM customer_params WHERE 'TX' = ANY(\"CUSTOMER.STATE\") ) \nINTERSECT \n( SELECT distinct ROOT_IID FROM customer_params WHERE 'Unlimited call' = ANY(\"CUSTOMER.CONTRACT_DESCRIPTION\") ) \nINTERSECT \n( SELECT distinct ROOT_IID FROM billing_params WHERE 'Bronze' = ANY(\"BILLING.VIP_STATUS\") ))"
+        }
+      }
+    },
+    "Task Execution Summary":[
       {
-        "lu_name": "Customer",
-        "fabric_execution_id": "aced32c8-7d2c-43cd-a7ba-f363733f59e7",
-        "parent_lu_name": "null",
-        "data_center_name": "null",
-        "start_execution_time": "2021-06-16 16:24:21.0",
-        "end_execution_time": "2021-06-16 16:24:22.0",
-        "num_of_processed_entities": 5,
-        "num_of_copied_entities": 5,
-        "num_of_failed_entities": 0,
-        "num_of_processed_ref_tables": 0,
-        "num_of_copied_ref_tables": 0,
-        "num_of_failed_ref_tables": 0
+        "LUs":{
+          "LU Load Summary":[
+            {
+              "lu_name":"Customer",
+              "fabric_execution_id":"Copy Bronze custom_ef7d985e-4514-425",
+              "parent_lu_name":null,
+              "source_affinity":"",
+              "target_affinity":"",
+              "start_execution_time":"2026-10-15 09:51:07.947",
+              "end_execution_time":"2026-10-15 09:51:26.000",
+              "num_of_processed_entities":11,
+              "num_of_copied_entities":11,
+              "num_of_failed_entities":0,
+              "num_of_processed_ref_tables":0,
+              "num_of_copied_ref_tables":0,
+              "num_of_failed_ref_tables":0
+            }
+          ],
+          "Load Summary":[
+            {
+              "level":"Node",
+              "name":"tdm10-1-demo-11-k2view",
+              "status":"",
+              "start time":"2026-10-15 09:51:08.966",
+              "end time":"2026-10-15 09:51:26.688",
+              "duration":"00:00:18",
+              "remaining dur.":"-",
+              "remaining":"0",
+              "total":"--",
+              "succeeded":"11",
+              "failed":"0",
+              "% completed":"100",
+              "ent./sec (pace)":"0.62",
+              "ent./sec (avg.)":"0.62"
+            },
+            {
+              "level":"DC",
+              "name":"LOCAL_DC",
+              "status":"",
+              "start time":"2026-10-15 09:51:08.966",
+              "end time":"2026-10-15 09:51:26.688",
+              "duration":"00:00:18",
+              "remaining dur.":"-",
+              "remaining":"0",
+              "total":"--",
+              "succeeded":"11",
+              "failed":"0",
+              "% completed":"100",
+              "ent./sec (pace)":"0.62",
+              "ent./sec (avg.)":"0.62"
+            },
+            {
+              "level":"Cluster",
+              "name":"--",
+              "status":"DONE",
+              "start time":"2026-10-15 09:51:08.966",
+              "end time":"2026-10-15 09:51:26.688",
+              "duration":"00:00:18",
+              "remaining dur.":"-",
+              "remaining":"0",
+              "total":"11",
+              "succeeded":"11",
+              "failed":"0",
+              "% completed":"100",
+              "ent./sec (pace)":"0.62",
+              "ent./sec (avg.)":"0.62"
+            }
+          ]
+        }
       },
       {
-        "lu_name": "Collection",
-        "fabric_execution_id": "4f4e3609-1b9b-418b-b059-ceb38b4e93eb",
-        "parent_lu_name": "Customer",
-        "data_center_name": "null",
-        "start_execution_time": "2021-06-16 16:24:31.0",
-        "end_execution_time": "2021-06-16 16:24:32.0",
-        "num_of_processed_entities": 3,
-        "num_of_copied_entities": 3,
-        "num_of_failed_entities": 0,
-        "num_of_processed_ref_tables": 0,
-        "num_of_copied_ref_tables": 0,
-        "num_of_failed_ref_tables": 0
-      },
-      {
-        "lu_name": "Billing",
-        "fabric_execution_id": "8868047e-0aa4-4793-a2f2-d41f8a24a94b",
-        "parent_lu_name": "Customer",
-        "data_center_name": "null",
-        "start_execution_time": "2021-06-16 16:24:31.0",
-        "end_execution_time": "2021-06-16 16:24:32.0",
-        "num_of_processed_entities": 17,
-        "num_of_copied_entities": 17,
-        "num_of_failed_entities": 0,
-        "num_of_processed_ref_tables": 0,
-        "num_of_copied_ref_tables": 0,
-        "num_of_failed_ref_tables": 0
-      },
-      {
-        "lu_name": "Orders",
-        "fabric_execution_id": "d423dcfc-e175-4aed-b31f-0ca55e59f095",
-        "parent_lu_name": "Customer",
-        "data_center_name": "null",
-        "start_execution_time": "2021-06-16 16:24:31.0",
-        "end_execution_time": "2021-06-16 16:24:32.0",
-        "num_of_processed_entities": 27,
-        "num_of_copied_entities": 27,
-        "num_of_failed_entities": 0,
-        "num_of_processed_ref_tables": 0,
-        "num_of_copied_ref_tables": 0,
-        "num_of_failed_ref_tables": 0
+        "LUs":{
+          "LU Load Summary":[
+            {
+              "lu_name":"Billing",
+              "fabric_execution_id":"Copy Bronze custom_978908be-f3df-445",
+              "parent_lu_name":"Customer",
+              "source_affinity":"",
+              "target_affinity":"",
+              "start_execution_time":"2026-10-15 09:51:49.542",
+              "end_execution_time":"2026-10-15 09:52:08.000",
+              "num_of_processed_entities":43,
+              "num_of_copied_entities":43,
+              "num_of_failed_entities":0,
+              "num_of_processed_ref_tables":0,
+              "num_of_copied_ref_tables":0,
+              "num_of_failed_ref_tables":0
+            }
+          ],
+          "Load Summary":[
+            {
+              "level":"Node",
+              "name":"tdm10-1-demo-11-k2view",
+              "status":"",
+              "start time":"2026-10-15 09:51:50.536",
+              "end time":"2026-10-15 09:52:08.297",
+              "duration":"00:00:18",
+              "remaining dur.":"-",
+              "remaining":"0",
+              "total":"--",
+              "succeeded":"43",
+              "failed":"0",
+              "% completed":"100",
+              "ent./sec (pace)":"2.42",
+              "ent./sec (avg.)":"2.42"
+            },
+            {
+              "level":"DC",
+              "name":"LOCAL_DC",
+              "status":"",
+              "start time":"2026-10-15 09:51:50.536",
+              "end time":"2026-10-15 09:52:08.297",
+              "duration":"00:00:18",
+              "remaining dur.":"-",
+              "remaining":"0",
+              "total":"--",
+              "succeeded":"43",
+              "failed":"0",
+              "% completed":"100",
+              "ent./sec (pace)":"2.42",
+              "ent./sec (avg.)":"2.42"
+            },
+            {
+              "level":"Cluster",
+              "name":"--",
+              "status":"DONE",
+              "start time":"2026-10-15 09:51:50.536",
+              "end time":"2026-10-15 09:52:08.297",
+              "duration":"00:00:18",
+              "remaining dur.":"-",
+              "remaining":"0",
+              "total":"43",
+              "succeeded":"43",
+              "failed":"0",
+              "% completed":"100",
+              "ent./sec (pace)":"2.42",
+              "ent./sec (avg.)":"2.42"
+            }
+          ]
+        }
       }
     ],
-    "List of Root Entities": {
-      "Number of Copied Entities": [
+    "List of Root Entities":{
+      "Number of Copied Entities":[
         {
-          "number_of_copied_root_entities": 5
+          "number_of_copied_root_entities":11
         }
       ],
-      "List of Copied Entities": [
+      "List of Copied Entities":[
         {
-          "source_id": "SRC_36",
-          "target_id": "36"
+          "source_id":"Production_112",
+          "target_id":"200036",
+          "note":null
         },
         {
-          "source_id": "SRC_532",
-          "target_id": "532"
+          "source_id":"Production_123",
+          "target_id":"200031",
+          "note":null
         },
         {
-          "source_id": "SRC_577",
-          "target_id": "577"
+          "source_id":"Production_247",
+          "target_id":"200030",
+          "note":null
         },
         {
-          "source_id": "SRC_627",
-          "target_id": "627"
+          "source_id":"Production_487",
+          "target_id":"200034",
+          "note":null
         },
         {
-          "source_id": "SRC_794",
-          "target_id": "794"
+          "source_id":"Production_5",
+          "target_id":"200033",
+          "note":null
+        },
+        {
+          "source_id":"Production_573",
+          "target_id":"200037",
+          "note":null
+        },
+        {
+          "source_id":"Production_779",
+          "target_id":"200032",
+          "note":null
+        },
+        {
+          "source_id":"Production_788",
+          "target_id":"200035",
+          "note":null
+        },
+        {
+          "source_id":"Production_836",
+          "target_id":"200039",
+          "note":null
+        },
+        {
+          "source_id":"Production_872",
+          "target_id":"200040",
+          "note":null
+        },
+        {
+          "source_id":"Production_906",
+          "target_id":"200038",
+          "note":null
         }
       ],
-      "Number of Failed Entities": [
+      "Number of Failed Entities":[
         {
-          "number_of_failed_root_entities": 0
+          "number_of_failed_root_entities":0
         }
       ],
-      "List of Failed Entities": []
+      "List of Failed Entities":[]
     },
-    "List of Reference Tables": {
-      "Number of Copied Reference Tables": [
+    "List of Tables":{
+      "Number of Copied Tables":[
         {
-          "count": 0
+          "count":0
         }
       ],
-      "List of Copied Reference Tables": [],
-      "Number of Failed Reference Tables": [
+      "List of Copied Tables":[],
+      "Number of Failed Tables":[
         {
-          "count": 0
+          "count":0
         }
       ],
-      "List of Failed Reference Tables": []
+      "List of Failed Tables":[]
     },
-    "Error Summary": [],
-    "Error Details": [],
-    "Statistics Report": [
+    "Masking Report":{
+      "Masking Details":[
+        {
+          "source_env":"Production",
+          "interface_name":"BILLING_DB",
+          "schema_name":"public",
+          "system_name":null,
+          "dataset":"invoice",
+          "object_name":"invoice",
+          "field_name":"invoice_image",
+          "data_type":"BLOB",
+          "classification":"STATEMENT",
+          "data_generator":null,
+          "data_consistency":"Random",
+          "processed_data":"Entities",
+          "number_of_entities_or_tables":11,
+          "total_no_of_records":212
+        },
+        {
+          "source_env":"Production",
+          "interface_name":"BILLING_DB",
+          "schema_name":"public",
+          "system_name":null,
+          "dataset":"subscriber",
+          "object_name":"subscriber",
+          "field_name":"first_name",
+          "data_type":"TEXT",
+          "classification":"FIRST_NAME",
+          "data_generator":"maskFirstName",
+          "data_consistency":"Consistent Using Seed",
+          "processed_data":"Entities",
+          "number_of_entities_or_tables":11,
+          "total_no_of_records":43
+        },
+        {
+          "source_env":"Production",
+          "interface_name":"BILLING_DB",
+          "schema_name":"public",
+          "system_name":null,
+          "dataset":"subscriber",
+          "object_name":"subscriber",
+          "field_name":"imsi",
+          "data_type":"TEXT",
+          "classification":"DEVICE_ID",
+          "data_generator":null,
+          "data_consistency":"Random",
+          "processed_data":"Entities",
+          "number_of_entities_or_tables":11,
+          "total_no_of_records":43
+        },
+        {
+          "source_env":"Production",
+          "interface_name":"BILLING_DB",
+          "schema_name":"public",
+          "system_name":null,
+          "dataset":"subscriber",
+          "object_name":"subscriber",
+          "field_name":"last_name",
+          "data_type":"TEXT",
+          "classification":"LAST_NAME",
+          "data_generator":"maskLastName",
+          "data_consistency":"Consistent Using Table",
+          "processed_data":"Entities",
+          "number_of_entities_or_tables":11,
+          "total_no_of_records":43
+        },
+        {
+          "source_env":"Production",
+          "interface_name":"BILLING_DB",
+          "schema_name":"public",
+          "system_name":null,
+          "dataset":"subscriber",
+          "object_name":"subscriber",
+          "field_name":"msisdn",
+          "data_type":"TEXT",
+          "classification":"TELEPHONE_NUMBER",
+          "data_generator":"RandomRegexGenerator",
+          "data_consistency":"Consistent Using Table",
+          "processed_data":"Entities",
+          "number_of_entities_or_tables":11,
+          "total_no_of_records":43
+        },
+        {
+          "source_env":"Production",
+          "interface_name":"BILLING_DB",
+          "schema_name":"public",
+          "system_name":null,
+          "dataset":"subscriber",
+          "object_name":"subscriber",
+          "field_name":"sim",
+          "data_type":"TEXT",
+          "classification":"CREDIT_CARD",
+          "data_generator":"RandomCreditCard",
+          "data_consistency":"Consistent & Unique",
+          "processed_data":"Entities",
+          "number_of_entities_or_tables":11,
+          "total_no_of_records":43
+        },
+        {
+          "source_env":"Production",
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "system_name":null,
+          "dataset":"activity",
+          "object_name":"activity",
+          "field_name":"activity_note",
+          "data_type":"TEXT",
+          "classification":"NOTES",
+          "data_generator":null,
+          "data_consistency":"Random",
+          "processed_data":"Entities",
+          "number_of_entities_or_tables":11,
+          "total_no_of_records":51
+        },
+        {
+          "source_env":"Production",
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "system_name":null,
+          "dataset":"activity",
+          "object_name":"activity",
+          "field_name":"birthday",
+          "data_type":"DATE",
+          "classification":"DATE_OF_BIRTH",
+          "data_generator":"RandomDistribution",
+          "data_consistency":"Random",
+          "processed_data":"Entities",
+          "number_of_entities_or_tables":11,
+          "total_no_of_records":51
+        },
+        {
+          "source_env":"Production",
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "system_name":null,
+          "dataset":"address",
+          "object_name":"address",
+          "field_name":"street_address_1",
+          "data_type":"TEXT",
+          "classification":"STREET",
+          "data_generator":null,
+          "data_consistency":"Random",
+          "processed_data":"Entities",
+          "number_of_entities_or_tables":11,
+          "total_no_of_records":11
+        },
+        {
+          "source_env":"Production",
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "system_name":null,
+          "dataset":"address",
+          "object_name":"address",
+          "field_name":"street_address_2",
+          "data_type":"TEXT",
+          "classification":"STREET",
+          "data_generator":null,
+          "data_consistency":"Random",
+          "processed_data":"Entities",
+          "number_of_entities_or_tables":11,
+          "total_no_of_records":11
+        },
+        {
+          "source_env":"Production",
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "system_name":null,
+          "dataset":"address",
+          "object_name":"address",
+          "field_name":"zip",
+          "data_type":"TEXT",
+          "classification":"POSTAL_CODE",
+          "data_generator":"RandomRegexGenerator",
+          "data_consistency":"Random",
+          "processed_data":"Entities",
+          "number_of_entities_or_tables":11,
+          "total_no_of_records":11
+        },
+        {
+          "source_env":"Production",
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "system_name":null,
+          "dataset":"case_note",
+          "object_name":"case_note",
+          "field_name":"note_text",
+          "data_type":"TEXT",
+          "classification":"NOTES",
+          "data_generator":null,
+          "data_consistency":"Random",
+          "processed_data":"Entities",
+          "number_of_entities_or_tables":11,
+          "total_no_of_records":70
+        },
+        {
+          "source_env":"Production",
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "system_name":null,
+          "dataset":"contract",
+          "object_name":"contract",
+          "field_name":"associated_line",
+          "data_type":"TEXT",
+          "classification":"TELEPHONE_NUMBER",
+          "data_generator":"RandomRegexGenerator",
+          "data_consistency":"Consistent Using Table",
+          "processed_data":"Entities",
+          "number_of_entities_or_tables":11,
+          "total_no_of_records":86
+        },
+        {
+          "source_env":"Production",
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "system_name":null,
+          "dataset":"contract",
+          "object_name":"contract",
+          "field_name":"associated_line_fmt",
+          "data_type":"TEXT",
+          "classification":"TELEPHONE_NUMBER",
+          "data_generator":"RandomRegexGenerator",
+          "data_consistency":"Consistent Using Table",
+          "processed_data":"Entities",
+          "number_of_entities_or_tables":11,
+          "total_no_of_records":86
+        },
+        {
+          "source_env":"Production",
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "system_name":null,
+          "dataset":"customer",
+          "object_name":"customer",
+          "field_name":"age",
+          "data_type":"INTEGER",
+          "classification":"AGE",
+          "data_generator":"RandomNumber",
+          "data_consistency":"Random",
+          "processed_data":"Entities",
+          "number_of_entities_or_tables":11,
+          "total_no_of_records":11
+        },
+        {
+          "source_env":"Production",
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "system_name":null,
+          "dataset":"customer",
+          "object_name":"customer",
+          "field_name":"driver_type",
+          "data_type":"TEXT",
+          "classification":"DRIVER_LICENSE",
+          "data_generator":"RandomRegexGenerator",
+          "data_consistency":"Consistent Using Table",
+          "processed_data":"Entities",
+          "number_of_entities_or_tables":11,
+          "total_no_of_records":11
+        },
+        {
+          "source_env":"Production",
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "system_name":null,
+          "dataset":"customer",
+          "object_name":"customer",
+          "field_name":"email",
+          "data_type":"TEXT",
+          "classification":"EMAIL",
+          "data_generator":"RandomRegexGenerator",
+          "data_consistency":"Consistent & Unique",
+          "processed_data":"Entities",
+          "number_of_entities_or_tables":11,
+          "total_no_of_records":11
+        },
+        {
+          "source_env":"Production",
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "system_name":null,
+          "dataset":"customer",
+          "object_name":"customer",
+          "field_name":"first_name",
+          "data_type":"TEXT",
+          "classification":"FIRST_NAME",
+          "data_generator":"maskFirstName",
+          "data_consistency":"Consistent Using Seed",
+          "processed_data":"Entities",
+          "number_of_entities_or_tables":11,
+          "total_no_of_records":11
+        },
+        {
+          "source_env":"Production",
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "system_name":null,
+          "dataset":"customer",
+          "object_name":"customer",
+          "field_name":"last_name",
+          "data_type":"TEXT",
+          "classification":"LAST_NAME",
+          "data_generator":"maskLastName",
+          "data_consistency":"Consistent Using Table",
+          "processed_data":"Entities",
+          "number_of_entities_or_tables":11,
+          "total_no_of_records":11
+        },
+        {
+          "source_env":"Production",
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "system_name":null,
+          "dataset":"customer",
+          "object_name":"customer",
+          "field_name":"ssn",
+          "data_type":"TEXT",
+          "classification":"SOCIAL_SECURITY_NUMBER",
+          "data_generator":"RandomSSN",
+          "data_consistency":"Consistent & Unique",
+          "processed_data":"Entities",
+          "number_of_entities_or_tables":11,
+          "total_no_of_records":11
+        }
+      ],
+      "Masked Tables":[
+        {
+          "interface_name":"BILLING_DB",
+          "schema_name":"public",
+          "table_name":"invoice",
+          "field_name":"balance",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"BILLING_DB",
+          "schema_name":"public",
+          "table_name":"invoice",
+          "field_name":"due_date",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"BILLING_DB",
+          "schema_name":"public",
+          "table_name":"invoice",
+          "field_name":"invoice_id",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"BILLING_DB",
+          "schema_name":"public",
+          "table_name":"invoice",
+          "field_name":"invoice_image",
+          "sensitive":"Y"
+        },
+        {
+          "interface_name":"BILLING_DB",
+          "schema_name":"public",
+          "table_name":"invoice",
+          "field_name":"issued_date",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"BILLING_DB",
+          "schema_name":"public",
+          "table_name":"invoice",
+          "field_name":"status",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"BILLING_DB",
+          "schema_name":"public",
+          "table_name":"invoice",
+          "field_name":"subscriber_id",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"BILLING_DB",
+          "schema_name":"public",
+          "table_name":"subscriber",
+          "field_name":"first_name",
+          "sensitive":"Y"
+        },
+        {
+          "interface_name":"BILLING_DB",
+          "schema_name":"public",
+          "table_name":"subscriber",
+          "field_name":"imsi",
+          "sensitive":"Y"
+        },
+        {
+          "interface_name":"BILLING_DB",
+          "schema_name":"public",
+          "table_name":"subscriber",
+          "field_name":"last_name",
+          "sensitive":"Y"
+        },
+        {
+          "interface_name":"BILLING_DB",
+          "schema_name":"public",
+          "table_name":"subscriber",
+          "field_name":"msisdn",
+          "sensitive":"Y"
+        },
+        {
+          "interface_name":"BILLING_DB",
+          "schema_name":"public",
+          "table_name":"subscriber",
+          "field_name":"sim",
+          "sensitive":"Y"
+        },
+        {
+          "interface_name":"BILLING_DB",
+          "schema_name":"public",
+          "table_name":"subscriber",
+          "field_name":"subscriber_id",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"BILLING_DB",
+          "schema_name":"public",
+          "table_name":"subscriber",
+          "field_name":"subscriber_type",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"BILLING_DB",
+          "schema_name":"public",
+          "table_name":"subscriber",
+          "field_name":"vip_count_category",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"BILLING_DB",
+          "schema_name":"public",
+          "table_name":"subscriber",
+          "field_name":"vip_status",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"activity",
+          "field_name":"activity_date",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"activity",
+          "field_name":"activity_id",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"activity",
+          "field_name":"activity_note",
+          "sensitive":"Y"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"activity",
+          "field_name":"birthday",
+          "sensitive":"Y"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"activity",
+          "field_name":"customer_id",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"address",
+          "field_name":"address_id",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"address",
+          "field_name":"city",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"address",
+          "field_name":"country",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"address",
+          "field_name":"customer_id",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"address",
+          "field_name":"license_plate_number",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"address",
+          "field_name":"state",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"address",
+          "field_name":"state_regex",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"address",
+          "field_name":"street_address_1",
+          "sensitive":"Y"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"address",
+          "field_name":"street_address_2",
+          "sensitive":"Y"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"address",
+          "field_name":"zip",
+          "sensitive":"Y"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"case_note",
+          "field_name":"case_id",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"case_note",
+          "field_name":"note_date",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"case_note",
+          "field_name":"note_id",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"case_note",
+          "field_name":"note_text",
+          "sensitive":"Y"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"contract",
+          "field_name":"associated_line",
+          "sensitive":"Y"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"contract",
+          "field_name":"associated_line_fmt",
+          "sensitive":"Y"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"contract",
+          "field_name":"contract_description",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"contract",
+          "field_name":"contract_id",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"contract",
+          "field_name":"contract_ref_id",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"contract",
+          "field_name":"customer_id",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"contract",
+          "field_name":"from_date",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"contract",
+          "field_name":"income",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"contract",
+          "field_name":"to_date",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"customer",
+          "field_name":"age",
+          "sensitive":"Y"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"customer",
+          "field_name":"customer_id",
+          "sensitive":"N"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"customer",
+          "field_name":"driver_type",
+          "sensitive":"Y"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"customer",
+          "field_name":"email",
+          "sensitive":"Y"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"customer",
+          "field_name":"first_name",
+          "sensitive":"Y"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"customer",
+          "field_name":"last_name",
+          "sensitive":"Y"
+        },
+        {
+          "interface_name":"CRM_DB",
+          "schema_name":"public",
+          "table_name":"customer",
+          "field_name":"ssn",
+          "sensitive":"Y"
+        }
+      ],
+      "Masking Errors":[]
+    },
+    "Error Summary":[],
+    "Error Details":[],
+    "Statistics Report":[
       {
-        "lu_name": "Billing",
-        "table_name": "BALANCE",
-        "target_count": "172",
-        "source_count": "172",
-        "diff": "0",
-        "results": "OK"
+        "lu_name":"Customer",
+        "table_name":"customer",
+        "target_count":"11",
+        "source_count":"11",
+        "suppressed_error_count":"0",
+        "diff":"0",
+        "results":"OK"
       },
       {
-        "lu_name": "Billing",
-        "table_name": "INVOICE",
-        "target_count": "107",
-        "source_count": "107",
-        "diff": "0",
-        "results": "OK"
+        "lu_name":"Customer",
+        "table_name":"contract",
+        "target_count":"43",
+        "source_count":"43",
+        "suppressed_error_count":"0",
+        "diff":"0",
+        "results":"OK"
       },
       {
-        "lu_name": "Billing",
-        "table_name": "OFFER",
-        "target_count": "9",
-        "source_count": "9",
-        "diff": "0",
-        "results": "OK"
+        "lu_name":"Billing",
+        "table_name":"payment",
+        "target_count":"216",
+        "source_count":"216",
+        "suppressed_error_count":"0",
+        "diff":"0",
+        "results":"OK"
       },
       {
-        "lu_name": "Billing",
-        "table_name": "SUBSCRIBER",
-        "target_count": "17",
-        "source_count": "17",
-        "diff": "0",
-        "results": "OK"
+        "lu_name":"Customer",
+        "table_name":"activity",
+        "target_count":"51",
+        "source_count":"51",
+        "suppressed_error_count":"0",
+        "diff":"0",
+        "results":"OK"
       },
       {
-        "lu_name": "Collection",
-        "table_name": "COLLECTION",
-        "target_count": "3",
-        "source_count": "3",
-        "diff": "0",
-        "results": "OK"
+        "lu_name":"Billing",
+        "table_name":"subscriber",
+        "target_count":"43",
+        "source_count":"43",
+        "suppressed_error_count":"0",
+        "diff":"0",
+        "results":"OK"
       },
       {
-        "lu_name": "Customer",
-        "table_name": "ACTIVITY",
-        "target_count": "26",
-        "source_count": "26",
-        "diff": "0",
-        "results": "OK"
+        "lu_name":"Customer",
+        "table_name":"case_note",
+        "target_count":"70",
+        "source_count":"70",
+        "suppressed_error_count":"0",
+        "diff":"0",
+        "results":"OK"
       },
       {
-        "lu_name": "Customer",
-        "table_name": "ADDRESS",
-        "target_count": "5",
-        "source_count": "5",
-        "diff": "0",
-        "results": "OK"
+        "lu_name":"Customer",
+        "table_name":"cases",
+        "target_count":"28",
+        "source_count":"28",
+        "suppressed_error_count":"0",
+        "diff":"0",
+        "results":"OK"
       },
       {
-        "lu_name": "Customer",
-        "table_name": "CASE_NOTE",
-        "target_count": "35",
-        "source_count": "35",
-        "diff": "0",
-        "results": "OK"
+        "lu_name":"Billing",
+        "table_name":"offer",
+        "target_count":"18",
+        "source_count":"18",
+        "suppressed_error_count":"0",
+        "diff":"0",
+        "results":"OK"
       },
       {
-        "lu_name": "Customer",
-        "table_name": "CASES",
-        "target_count": "16",
-        "source_count": "16",
-        "diff": "0",
-        "results": "OK"
+        "lu_name":"Customer",
+        "table_name":"address",
+        "target_count":"11",
+        "source_count":"11",
+        "suppressed_error_count":"0",
+        "diff":"0",
+        "results":"OK"
       },
       {
-        "lu_name": "Customer",
-        "table_name": "CONTRACT",
-        "target_count": "17",
-        "source_count": "17",
-        "diff": "0",
-        "results": "OK"
+        "lu_name":"Billing",
+        "table_name":"invoice",
+        "target_count":"212",
+        "source_count":"212",
+        "suppressed_error_count":"0",
+        "diff":"0",
+        "results":"OK"
       },
       {
-        "lu_name": "Customer",
-        "table_name": "CUSTOMER",
-        "target_count": "5",
-        "source_count": "5",
-        "diff": "0",
-        "results": "OK"
-      },
-      {
-        "lu_name": "Orders",
-        "table_name": "ORDERS",
-        "target_count": "27",
-        "source_count": "27",
-        "diff": "0",
-        "results": "OK"
+        "lu_name":"Billing",
+        "table_name":"balance",
+        "target_count":"509",
+        "source_count":"509",
+        "suppressed_error_count":"0",
+        "diff":"0",
+        "results":"OK"
       }
     ],
-    "Replace Sequence Summary Report": []
+    "Replace Sequence Summary Report":[]
   },
-  "errorCode": "SUCCESS",
-  "message": ""
+  "errorCode":"SUCCESS",
+  "message":""
 }
 ```
 
@@ -1552,6 +1586,131 @@ The **migrateIds** parameter is populated by the batch IDs related to the task e
 
 ```json
 {"migrateIds": ["8a9ad3f6-74d8-4c1e-9a2a-7c87600ca7f2", "2721ad86-8c66-4304-9a4d-e00716a9450e"], "runModes": ["D", "H", "S"]}
+```
+
+### API Output Example
+
+The output includes an object for each requested run mode: **S** (summary statistics per Node, DC and Cluster level), **D** (detailed execution status of each entity), and **H** (the batch command).
+
+```json
+{
+  "result": [
+    {
+      "S": {
+        "columnsNames": [
+          "Status",
+          "Ent./sec (avg.)",
+          "Ent./sec (pace)",
+          "Start time (UTC)",
+          "Duration",
+          "End time (UTC)",
+          "Name",
+          "Succeeded",
+          "Failed",
+          "Added",
+          "Updated",
+          "Unchanged",
+          "Total",
+          "Level",
+          "Remaining dur.",
+          "Remaining",
+          "% Completed"
+        ],
+        "results": [
+          {
+            "columns": {
+              "Status": "",
+              "Ent./sec (avg.)": "7.84",
+              "Added": 0,
+              "Ent./sec (pace)": "7.84",
+              "Updated": 2,
+              "Failed": "0",
+              "Duration": "00:05:05",
+              "Start time (UTC)": "2021-05-08 06:46:22",
+              "End time (UTC)": "2021-05-08 06:51:27",
+              "End time": "2021-05-08 06:51:27",
+              "Name": "76b2a141-4f0a-453b-8999-f2bdd66a9b8d",
+              "Succeeded": "2",
+              "Total": "--",
+              "Level": "Node",
+              "Remaining dur.": "00:00:00",
+              "Remaining": "0",
+              "Start time": "2021-05-08 06:46:22",
+              "Unchanged": 0,
+              "% Completed": "100"
+            }
+          },
+          {
+            "columns": {
+              "Status": "",
+              "Ent./sec (avg.)": "7.84",
+              "Added": 0,
+              "Ent./sec (pace)": "7.84",
+              "Updated": 2393,
+              "Failed": "0",
+              "Duration": "00:05:05",
+              "Start time (UTC)": "2021-05-08 06:46:22",
+              "End time (UTC)": "2021-05-08 06:51:27",
+              "End time": "2021-05-08 06:51:27",
+              "Name": "DC1",
+              "Succeeded": "2393",
+              "Total": "--",
+              "Level": "DC",
+              "Remaining dur.": "00:00:00",
+              "Remaining": "0",
+              "Start time": "2021-05-08 06:46:22",
+              "Unchanged": 0,
+              "% Completed": "100"
+            }
+          },
+          {
+            "columns": {
+              "Status": "DONE",
+              "Ent./sec (avg.)": "7.84",
+              "Added": 0,
+              "Ent./sec (pace)": "7.84",
+              "Updated": 2393,
+              "Failed": "0",
+              "Duration": "00:05:05",
+              "Start time (UTC)": "2021-05-08 06:46:22",
+              "End time (UTC)": "2021-05-08 06:51:27",
+              "End time": "2021-05-08 06:51:27",
+              "Name": "--",
+              "Succeeded": "2393",
+              "Total": "2393",
+              "Level": "Cluster",
+              "Remaining dur.": "00:00:00",
+              "Remaining": "0",
+              "Start time": "2021-05-08 06:46:22",
+              "Unchanged": 0,
+              "% Completed": "100"
+            }
+          }
+        ]
+      },
+      "D": [
+        {
+          "Status": "COMPLETED",
+          "Error": "",
+          "Entity ID": "ENV1_26982",
+          "Results": "{\"Added\":0,\"Updated\":1,\"Unchanged\":0}",
+          "Node id": "76b2a141-4f0a-453b-8999-f2bdd66a9b8d"
+        },
+        {
+          "Status": "COMPLETED",
+          "Error": "",
+          "Entity ID": "ENV1_26191",
+          "Results": "{\"Added\":0,\"Updated\":1,\"Unchanged\":0}",
+          "Node id": "76b2a141-4f0a-453b-8999-f2bdd66a9b8d"
+        }
+      ],
+      "H": {
+        "Migration Command": "batch PATIENT_VISITS from TDM using ('SELECT ''''||rel.source_env||''_''||rel.lu_type2_eid||'''' child_entity_id FROM task_execution_entities t, tdm_lu_type_relation_eid rel where t.task_execution_id = ''33'' and t.execution_status = ''completed'' and t.lu_name = ''PATIENT_LU'' and t.lu_name = rel.lu_type_1 and rel.lu_type_2 = ''PATIENT_VISITS'' and rel.version_name = '''' and t.source_env = rel.source_env and t.iid = rel.lu_type1_eid') FABRIC_COMMAND=\"sync_instance PATIENT_VISITS.?\" WITH ASYNC=true"
+      }
+    }
+  ],
+  "errorCode": "SUCCESS"
+}
 ```
 
  [![Previous](/articles/images/Previous.png)](01_tdm_basic_task_execution_flow.md)

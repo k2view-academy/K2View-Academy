@@ -179,6 +179,32 @@ Below you can find the detailed description of several selected reports.
 - Table showing: User group, Permission group.
 - Lists all configured user groups and their associated permission levels. A user group is equivalent to a Fabric role.
 
+### TDM User Activities
+
+**Access**: By drilling down from the *TDM Users and Roles* report (breadcrumb: TDM Reports Dashboard > TDM Users and Roles > TDM User Activities). Click 'Go up...' to return to the *TDM Users and Roles* report.
+
+**Purpose**: Detailed view of the activities performed by each user during the report period, including a full audit of the setup changes.
+
+![](images/TDMUserActivities.png)
+
+**Sections include:**
+
+**Number of User Activities**
+- Table showing: User name, Activity, Total activities.
+- Displays the number of times each user performed each activity type during the report period, such as Create Tasks, Execute Tasks, Update Tasks, Create BEs, Create Permission Groups, Update Envs.
+
+**Setup Activity Summary**
+
+- Table showing: User name, Activity, Activity Date, Description.
+- Lists each setup activity performed by the users, sorted from the most recent to the oldest. Setup activities are changes to the TDM configuration, such as creating business entities, creating permission groups, updating environments and changing the environment sensitivity. Task creation and execution are not listed in this table.
+- The **Description** column details the change. For example:
+  - *Permission set 'CRMTesters' was mapped to permission group 'admin'.*
+  - *Permission set test1 was added to environment UAT.*
+  - *Testers of permission set test1 of environment UAT were updated.*
+  - *Business entity TEST was created.*
+  - *Environment UAT sensitivity changed to Sensitive.*
+- Helps to audit who changed the TDM setup, when, and what was changed.
+
 ### Systems, BEs, LUs Summary
 
 **Access**: By clicking 'Show all' in the *Systems, BEs, LUs* section of the main dashboard. 
