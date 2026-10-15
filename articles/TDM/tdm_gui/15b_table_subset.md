@@ -31,22 +31,23 @@ Starting from TDM 10.1, the table filter displays business-friendly field names 
 
 - **Field aliases** — when a field alias (business name) is defined for a field in the Catalog, it is displayed under the field name in the fields dropdown list, as well as under the selected field in the filter condition. For example, the *offer_ref_id* field is displayed with its alias *Offer Reference ID*.
 
-  ![field alias](images/table_subset_field_alias.png)
+  ![field alias](images/task_table_filter_based_on_field_alias.png)
 
 - **Valid values** — when the Catalog holds a list of valid values for the selected field, these values are displayed in a dropdown list in the condition's value field. For example, the *vip_status* field displays the following valid values: Bronze, Silver, Gold, and Platinum. You can select a value from the list or type a custom value manually.
 
-  ![valid values](images/table_subset_valid_values.png)
+  ![valid values](images/task_table_filter_valid_values.png)
 
 **Prerequisites:**
 
 - Field aliases are defined in the Catalog using the **FIELDALIAS** tag on the table's fields.
 - Valid values are available when the Catalog Discovery has been executed with the **Option Set Analyzer** enabled. The Option Set Analyzer identifies non-sensitive fields with a limited number of distinct values within a data sample and saves these values in the Catalog.
+- Click [here](/articles/TDM/tdm_implementation/09_tdm_reference_implementation.md#optional--catalog-settings-for-table-level-task-improvements) For more information about the implementation steps.
 
 ## Record Sampling
 
 Starting from TDM 10.1, you can extract a random sample of records from a table, either together with the filter conditions or without them. The sample is used to limit the number of records extracted from the table. 
 
-![record sampling](images/table_subset_record_sampling.png)
+![record sampling](images/task_table_record_sampling.png)
 
 To set a record sampling on a table:
 
@@ -62,7 +63,7 @@ A summary message displays the expected output. For example: *Output = 50 record
 
 - Sampling is partition-based, and each partition is processed independently.
 - In each sampled partition, the table's SELECT statement retrieves all records that match the filter conditions (or all records, if no filter conditions are defined). The number of records read from the SELECT statement's output is then limited by the configured number of records per partition.
-- The number of the table's partitions is displayed based on the partition flow defined for the table in the **TableLevelDefinitions** MTable.
+- The number of table partitions can be displayed based on the partition flow defined for the table in the **TableLevelDefinitions** MTable. This requires additional configuration. Click [here](/articles/TDM/tdm_implementation/09b_table_partitions_implementation.md#table-level-task-record-sampling--displaying-the-number-of-partitions) for more information. 
 - Tables with a record sampling are indicated in the task execution window.
 
 **Notes:**
@@ -75,12 +76,12 @@ Starting from TDM 10.1, you can share the filter conditions and/or the record sa
 
 Click **Share filter** in the right panel of the source table to open the **Share filter** window. The **Share filter** button is enabled only when a filter or a record sampling has been defined on the selected table.
 
-![share filter](images/table_subset_share_filter.png)
+![share filter](images/task_table_share_filter.png)
 
 The **Share filter** window includes the following steps:
 
 1. **What to share** — select the settings to share:
-   - **Field conditions** — shares the entire filter expression of the source table, including all its conditions, groups, and logical operators. The number of conditions is displayed next to the option.
+   - **Field conditions** — shares the fields that have business names (field alias).
    - **Record sampling** — shares the record sampling settings of the source table. This option is disabled if a record sampling is not enabled on the source table.
 2. **How to apply it** — select how to apply the shared settings to the target tables:
    - **Replace** — overwrites the target table's own filter.
@@ -94,8 +95,6 @@ Click **Share with [N] tables** to apply the shared settings to the selected tab
 **Notes:**
 
 - Filter conditions are matched to each target table by their **field alias** and not by the field name, since the same field name can represent a different meaning in different tables. For example, an *ID_NUM* field can represent a customer, an address, or a contract.
-- Filter conditions can be shared only with tables that contain all the fields referenced by the shared conditions.
-- Partial sharing of individual filter conditions is not supported. The entire filter expression is shared.
 - The shared settings are copied to the target tables. After sharing, the filter of each table can be edited independently, and future edits on the source table do not affect the target tables.
 
 ## Lock Icons
