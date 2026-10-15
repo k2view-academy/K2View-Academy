@@ -75,8 +75,6 @@ Displays the 10 masking classifications that were used most frequently by the ex
 
 The 'View All...' link opens the *Masking Classification Summary* report with all the classifications used in the executions.
 
-------
-
 ## Linked Reports
 
 ### General
@@ -142,13 +140,11 @@ Below you can find the detailed description of each report.
 
 **Purpose**: Lists the task executions within the selected period and summarizes the masking activities of each execution.
 
-![](images/MaskingExecutions.png)
-
 **Task Executions - Masking Summary**
 
 Table showing the following columns:
 
-- **Execution ID**: The task execution ID. Each execution ID is a link. Clicking it opens the task execution monitor window, where you can view the execution details and download the detailed execution report of the execution.
+- **Execution ID**: The task execution ID. Each execution ID is a link. Clicking it opens the **task execution monitor** window, where you can view the execution details and download the detailed execution report of the execution.
 - **Task Name**: The name of the executed task.
 - **Task Type**: The task type, for example, Extract, Load, Load & Reserve, or In-place masking.
 - **Processed Data**: Whether the execution processed Entities or Tables.
@@ -260,8 +256,6 @@ When filtered by a schema or a dataset, only the *Interface Detailed List* secti
 
 **Purpose**: Combines all the execution masking details in a single report. This report is useful for exporting or sharing the masking execution records, for example, for an audit or a compliance review.
 
-![](images/FullMaskingExecutionReport.png)
-
 **Sections include:**
 
 **Task Executions - Masking Summary**
@@ -295,6 +289,3 @@ In both execution sections, each execution ID is a link that opens the task exec
 
 - Table showing: Env Name, Sensitivity, Total Number of Executions.
 - Lists the number of source data executions per source environment, with the environment's sensitivity: Sensitive or Non-sensitive.
-
----
-
