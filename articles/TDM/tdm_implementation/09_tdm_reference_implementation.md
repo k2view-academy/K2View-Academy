@@ -150,6 +150,8 @@ Use the  [Option set analyzer](/articles/39_fabric_catalog/plugins/04_source_dat
 
 For example, the `vip_status` field may contain the following values: *Bronze, Silver, Gold,* and *Platinum*. When defining or running a task, users can select a value from the available list or enter a custom value manually.
 
+For more information about how to add filters to tables in a task, click [here](/articles/TDM/tdm_gui/15b_table_subset.md).
+
 ## Step 4: Optional — Special Handling  
 
 ####  Interface Level Special Handling
