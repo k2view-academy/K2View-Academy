@@ -118,6 +118,14 @@ Using a Global to populate the schema name is useful when different environments
 
 Click [here](/articles/09_translations/06_mtables_overview.md) for more information about MTable objects. 
 
+### Supporting Different Source and Target Settings
+
+By default, you can populate the **RefList** MTable to support different source and target settings.
+
+Starting with TDM 10.1, you can also implement a custom Broadway flow to map different source and target settings. The custom flow must have the same inputs and outputs as the **DefaultSourceTargetMappingData** flow.
+
+To use the custom flow, specify its name in the `table_info_mapping_flow` field of the **TableLevelDefinitions** MTable.
+
 ## Step 3: Catalog
 
 ### Edit the PII Settings
