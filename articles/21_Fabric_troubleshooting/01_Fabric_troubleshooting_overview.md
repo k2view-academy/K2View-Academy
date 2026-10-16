@@ -24,7 +24,7 @@ The use cases for running **jjstack.sh** are as follows:
 
 When running jjstack, first run the script and then analyze the output either on your own or with the help of K2View R&D staff.
 
-The following table describes the syntax and parameters for calling the **jjstack.sh** script. The script is located under **$K2_HOME/fabric/scripts** in the Fabric server.
+The following table describes the syntax and parameters for calling the **jjstack.sh** script. The script is located under **$FABRIC_HOME/fabric/scripts** in the Fabric server.
 
 
 <table>
@@ -80,7 +80,7 @@ The following table describes the syntax and parameters for calling the **jjstac
 
 A Heap Dump file is automatically created when Fabric crashes due to memory usage exceeding the definition. When required, a Heap Dump file can also be created manually using the **jmap** command. 
 
-Default memory usage is defined in the **$K2_HOME/config/ jvm.options** configuration file and is equal to 2GBytes.  The location of a Heap Dump file is defined in the **jvm.options** configuration file. If the location of the Heap Dump is not defined explicitly in this file, its location is created in the folder where Fabric started, which is usually **$K2_HOME** or **$K2_HOME/fabric/scripts**. 
+Default memory usage is defined in the **$FABRIC_HOME/config/ jvm.options** configuration file and is equal to 2GBytes.  The location of a Heap Dump file is defined in the **jvm.options** configuration file. If the location of the Heap Dump is not defined explicitly in this file, its location is created in the folder where Fabric started, which is usually **$FABRIC_HOME** or **$FABRIC_HOME/fabric/scripts**. 
 
 Note that Heap Dump files can take up a lot of disk space, therefore it is recommended to delete them after an investigation has been completed. Head Dump files should be uploaded to [K2view sftp dedicated servers](https://k2view.sharepoint.com/sites/Wiki/IT%20%20Technology/Heap%20dump%20upload%20point.aspx) in order to allow their analysis by the K2View R&D team.
 

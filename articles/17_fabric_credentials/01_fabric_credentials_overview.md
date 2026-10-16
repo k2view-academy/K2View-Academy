@@ -269,8 +269,8 @@ Define credentials by either Admin UI (Security tab) or Fabric commands, as foll
 
 ### Bootstrap Credentials
 Fabric can also be started with predefined API keys, roles, and permissions. This is available since Fabric 7.2.1.
-- Turn on this capability by adding a new line containing "rolespermissions" to the *modules* file, located at [$FABRIC_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
-- Create a file named **rolesPrivileges.json** at [$FABRIC_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
+- Turn on this capability by adding a new line containing "rolespermissions" to the *modules* file, located at [$FABRIC_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#fabric_homeconfig) directory.
+- Create a file named **rolesPrivileges.json** at [$FABRIC_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#fabric_homeconfig) directory.
 - Edit the file with the required values. It is built from two main independent objects: "roles" and "apikeys", where each can be set or skipped independently of the other.
    - Define roles' associated operations, per role, at the "roles" array object.
    - Define API keys association to roles, per API key, at the `"apikeys"` array object.
@@ -306,7 +306,7 @@ Note: When Fabric integrates with an external authenticator, Fabric neither mana
 
 By default, Fabric creates the **admin** user as the initial superuser when it is first started, and it defines its username and password as 'admin'. Fabric can also be initially started with a different initial superuser, which is not defined as admin/admin.
 
-- Copy the **adminInitialCredentials.template** file from the [$K2_HOME/fabric/config.template](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md) directory to the [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory.
+- Copy the **adminInitialCredentials.template** file from the [$FABRIC_HOME/fabric/config.template](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md) directory to the [$FABRIC_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#fabric_homeconfig) directory.
 
 - Change the **File Name** to **adminInitialCredentials**.
 

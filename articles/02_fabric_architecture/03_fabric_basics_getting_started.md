@@ -69,7 +69,7 @@ Type **fabric** in the Fabric server command line.
 
 ## Reset Fabric
 
-The Fabric **reset.sh** script cleans Fabric and deletes (drops) all data from Fabric and the Storage DB. The **reset.sh** script is located under [$K2_HOME/fabric/scripts](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homefabricscripts) and is used mainly:
+The Fabric **reset.sh** script cleans Fabric and deletes (drops) all data from Fabric and the Storage DB. The **reset.sh** script is located under [$FABRIC_HOME/fabric/scripts](/articles/02_fabric_architecture/02_fabric_directories.md#fabric_homefabricscripts) and is used mainly:
 
 - In a **Test environment** to delete the current data and to restart the testing process from scratch.
 
@@ -79,9 +79,9 @@ Unlike the **drop LU** ([DROP LUTYPE](/articles/02_fabric_architecture/04_fabric
 
 The Drop process must be followed by the re-creation of Fabric credentials and redeployment of the project implementation into the Fabric server and an initial load of LUI into the re-deployed LUs.
 
-Note that the Windows version of the **$K2_HOME/fabric/scripts** Reset script is **reset.bat**.
+Note that the Windows version of the **$FABRIC_HOME/fabric/scripts** Reset script is **reset.bat**.
 
-Run the script from $K2_HOME/fabric/scripts directory: 
+Run the script from $FABRIC_HOME/fabric/scripts directory: 
 
 <ul><li>./reset.sh &lt;mode&gt;&lt;black_list&gt;&lt;path of config.ini file&gt;</li></ul>
 
@@ -216,7 +216,7 @@ The **reset.sh** script gets the list of the Fabric directories to be removed fr
 </table>
 ## Watchdog (available from Fabric 6.4.5)
 
-The Fabric **watchdog.sh** script is used to keep a specific command alive. The script is located under [$K2_HOME/fabric/scripts](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homefabricscripts).
+The Fabric **watchdog.sh** script is used to keep a specific command alive. The script is located under [$FABRIC_HOME/fabric/scripts](/articles/02_fabric_architecture/02_fabric_directories.md#fabric_homefabricscripts).
 
 **Script flow:**
 
@@ -245,7 +245,7 @@ WATCHDOG_VERIFICATION_GRACE_SEC [optional (default=60)]: A verification grace pe
 
 ## Kill Watchdog (available from Fabric 6.4.5)
 
-The Fabric **watchdog-kill.sh** script is used kill (stop) a watchdog process and its child processes. The script is located under [$K2_HOME/fabric/scripts](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homefabricscripts).
+The Fabric **watchdog-kill.sh** script is used kill (stop) a watchdog process and its child processes. The script is located under [$FABRIC_HOME/fabric/scripts](/articles/02_fabric_architecture/02_fabric_directories.md#fabric_homefabricscripts).
 
 **Script flow:**
 
