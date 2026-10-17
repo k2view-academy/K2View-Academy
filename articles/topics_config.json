@@ -129,16 +129,24 @@
 					"value": "AI_fusion"
 				},
 				{
-					"display name": "Agent Builder and Framework",
-					"value": "AI_fusion/02_agent_framework"
+					"display name": "Agent Platform",
+					"value": "AI_fusion/02_agents"
 				},
 				{
-					"display name": "Evaluation Framework",
-					"value": "AI_fusion/03_evaluation"
+					"display name": "AI Fusion Studio",
+					"value": "AI_fusion/03_studio"
+				},
+				{
+					"display name": "Evaluation",
+					"value": "AI_fusion/04_evaluation"
 				},
 				{
 					"display name": "Observation",
-					"value": "AI_fusion/04_observation"
+					"value": "AI_fusion/05_observation"
+				},
+				{
+					"display name": "AI Fusion 1.x-2.x (Legacy)",
+					"value": "AI_fusion/legacy_v1_v2"
 				}
 
 			]

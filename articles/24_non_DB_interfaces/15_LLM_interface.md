@@ -4,8 +4,8 @@ The **AI LLM** interface type defines the connection to a Large Language Model (
 
 An AI LLM interface is consumed by:
 
-* [GenAI Data Fusion](/articles/AI_fusion/02_agent_framework/02_core_components.md) agents - see [Use in GenAI Data Fusion](#use-in-genai-data-fusion).
-* Broadway [LLM utility Actors](/articles/AI_fusion/02_agent_framework/06_llm_calls_utility_actors.md), addressed as `llm://<tag>`.
+* [GenAI Data Fusion](/articles/AI_fusion/02_agents/01_agents_overview.md) agents - see [Use in GenAI Data Fusion](#use-in-genai-data-fusion).
+* Broadway [LLM utility Actors](/articles/AI_fusion/legacy_v1_v2/02_agent_framework/06_llm_calls_utility_actors.md), addressed as `llm://<tag>`.
 * External AI clients, through Fabric's [OpenAI-compatible provider endpoint](#fabric-as-an-llm-provider) - including [Studio AI](/articles/04_fabric_studio/studio_ai/01_getting_started_with_studio_ai.md).
 
 
@@ -134,34 +134,14 @@ When an LLM task is triggered, Fabric looks up the configured AI LLM interface a
 
 ## Use in GenAI Data Fusion
 
-The [GenAI Data Fusion](/articles/AI_fusion/02_agent_framework/01_intro_agent_framework.md) agent framework invokes LLMs at several points in the agent workflow:
+[GenAI Data Fusion](/articles/AI_fusion/02_agents/01_agents_overview.md) agents (AI Fusion 3) call LLMs through AI LLM interfaces:
 
-<table>
-<tbody>
-<tr>
-<td width="250pxl"><strong>Task</strong></td>
-<td width="650pxl"><strong>Description</strong></td>
-</tr>
-<tr>
-<td><strong>Reflecting</strong></td>
-<td>Analyzing user queries to determine the appropriate response path</td>
-</tr>
-<tr>
-<td><strong>SQL Generation</strong></td>
-<td>Building database queries from natural language requests</td>
-</tr>
-<tr>
-<td><strong>Planning</strong></td>
-<td>Creating step-by-step execution strategies</td>
-</tr>
-<tr>
-<td><strong>Answering</strong></td>
-<td>Formulating natural-language responses for users</td>
-</tr>
-</tbody>
-</table>
+* Each agent names its interface in `settings.llm_interface` of its `agent.yaml`. When not set, the agent uses `llm://default` - the interface whose Tag is `default`.
+* An agent can use a different interface for context compaction (`settings.compaction_interface`) and for naming conversations (`settings.chat_name_interface`) - typically a smaller, cheaper model.
+* Folder sub-agents inherit the parent agent's interface unless they set their own, so each specialist can run on the model that suits its task.
+* The reasoning (thinking) level is set per agent in `settings.thinking` and mapped by the connector to the provider's API.
 
-When an LLM task is triggered, Fabric looks up the configured AI LLM interface and uses it to communicate with the underlying model, using the credentials defined in that interface. Tagging separate interfaces per task - for example a `sql-generator` interface alongside the `default` one - is what lets an implementation choose a different model for each of these steps.
+The interface must be active in the running environment; otherwise the agent fails with `Unsupported IO interface llm://default`. See [LLM Connectors](/articles/AI_fusion/02_agents/10_llm_connectors.md) for the supported providers and their properties.
 
 ## Fabric as an LLM Provider
 
