@@ -79,6 +79,16 @@ How it works:
 4. The plan becomes a **to-do list**. The agent executes the items in order — typically calling a specialist sub-agent with `task` for each step — and updates their status with `todo_write`.
 5. The client shows the to-do list live (pending, in progress, done, failed).
 
+### Planning Rules Added Automatically
+
+When planning is enabled, the runtime adds a `## Planning` section to the agent's prompt with the rules for when to plan and how to execute a plan, so you do not need to write them in `system_prompt`:
+
+- Plan when the request needs more than one sub-agent (`task` call) or more than two tool calls; answer simple lookups directly.
+- Let the planner design the plan — following a written procedure when one covers the request — and do not re-plan once it is handed back.
+- Execute the to-dos in order without adding steps, marking each one in progress and done.
+- When a to-do asks the user something, ask and stop the turn. When the user answers, continue from the first pending to-do instead of restarting the plan.
+- When a procedure check fails and the procedure says to stop, tell the user why and mark the remaining to-dos as skipped.
+
 Planning works without procedures too: if the `Procedures` pack is missing or nothing matches, the planner plans from the request and the available tools. It does not require `search_reference` to be enabled.
 
 
