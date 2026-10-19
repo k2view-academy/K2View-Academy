@@ -129,16 +129,28 @@
 					"value": "AI_fusion"
 				},
 				{
-					"display name": "Agent Builder and Framework",
-					"value": "AI_fusion/02_agent_framework"
+					"display name": "Agent Platform",
+					"value": "AI_fusion/02_agents"
 				},
 				{
-					"display name": "Evaluation Framework",
-					"value": "AI_fusion/03_evaluation"
+					"display name": "AI Fusion Studio",
+					"value": "AI_fusion/03_studio"
+				},
+				{
+					"display name": "Evaluation",
+					"value": "AI_fusion/04_evaluation"
 				},
 				{
 					"display name": "Observation",
-					"value": "AI_fusion/04_observation"
+					"value": "AI_fusion/05_observation"
+				},
+				{
+					"display name": "Release Notes and Versions",
+					"value": "AI_fusion/release_notes"
+				},
+				{
+					"display name": "AI Fusion 1.x-2.x (Legacy)",
+					"value": "AI_fusion/legacy_v1_v2"
 				}
 
 			]
@@ -585,7 +597,7 @@
 		},
 		{
 			"KB display name": "Product Versions",
-			"KB display text": "List of Fabric, ADI and TDM available versions, including their release information and end of life date.",
+			"KB display text": "List of Fabric, ADI, TDM and AI Fusion available versions, including their release information and end of life date.",
 			"KB icon": "images/product_version_icon.png",
 			"link": "Academy/articles/Product_Versions/README.html",
 			"visible": true

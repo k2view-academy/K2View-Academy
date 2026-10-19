@@ -1,60 +1,98 @@
-# GenAI Data Fusion
+# GenAI Data Fusion Overview
 
-K2view's AI Data Fusion is a comprehensive end-to-end solution that bridges the gap between generative AI language models and enterprise data ecosystems. It empowers GenAI agents to deliver accurate, contextual, and secure responses based on real-time business entity data retrieved from across your enterprise systems.
+K2view GenAI Data Fusion (**AI Fusion**) is an end-to-end platform for building, testing, running and governing enterprise AI agents on top of K2view Data Products. Agents built with AI Fusion answer from real-time, entity-level business data — a single customer, account, policy or member — retrieved securely from across your enterprise systems.
 
-AI Data Fusion is purpose-built and engineered for high-scale 360° systems in industries such as telecommunications, finance, insurance, and healthcare, where privacy, performance, and precision are essential.
+AI Fusion is purpose-built for high-scale 360° systems in industries such as telecommunications, finance, insurance and healthcare, where privacy, performance and precision are essential.
+
+This documentation describes **AI Fusion 3**. If you are running AI Fusion 1.x or 2.x, see the [legacy documentation](/articles/AI_fusion/legacy_v1_v2/README.md).
 
 
 
 ## The Challenges Enterprises Face in Adopting AI
 
-AI applications face a fundamental disconnect when interfacing with enterprise data. While foundation models are trained on extensive general knowledge, they lack access to your organization's specific, real-time operational data that is essential for delivering meaningful business interactions.
+Foundation models are trained on extensive general knowledge, but they have no access to your organization's specific, real-time operational data — the data needed for meaningful business interactions.
 
-Industry research shows that 50-70% of customer service inquiries require direct access to enterprise systems. This is particularly true for questions such as "What's my current account balance?" or "Why was my bill higher this month?" that rely on real-time access to customer data that is stored across multiple business systems.
+Industry research shows that 50–70% of customer service inquiries require direct access to enterprise systems. Questions such as "What's my current account balance?" or "Why was my bill higher this month?" depend on real-time data that is spread across several business systems.
 
-Meeting this need involves several significant data challenges for enterprises:
+Meeting this need raises several data challenges:
 
 - **Data Fragmentation** — enterprise data resides across dozens of disparate systems (CRM, Billing, ERP, support platforms), making it difficult to deliver complete, unified information to AI applications.
-- **Real-time Requirements** — AI applications require quick access to up-to-date data to deliver accurate and responsive conversational experiences.
-- **Security & Privacy** — strict access controls and data sanitization are essential; LLMs should only access user- and context-specific data, where sensitive data is properly scrubbed.
-- **Scale & Performance** — supporting thousands of simultaneous AI interactions while maintaining high-speed responses across enterprise-scale data volumes.
-- **Data Quality & Reliability** — ensuring AI responses rely on complete, current, and accurate data to prevent hallucinations and preserve user trust.
+- **Real-time Requirements** — AI applications need quick access to up-to-date data to deliver accurate, responsive conversations.
+- **Security & Privacy** — LLMs must access only the data relevant to the current user and context, under strict access control.
+- **Scale & Performance** — thousands of simultaneous AI interactions must be served with fast responses across enterprise-scale data volumes.
+- **Quality & Reliability** — responses must rely on complete, current and accurate data to prevent hallucinations and preserve user trust.
 
 
 
-## AI Data Fusion Solution: Core Capabilities and Benefits
+## How AI Fusion 3 Addresses Them
 
-The AI Data Fusion solution addresses the above-mentioned challenges by integrating the [Data Product Platform](/articles/01_fabric_overview/01_what%20is%20fabric.md) with GenAI capabilities, enabling a powerful fusion of real-time data access, AI orchestration, and operational control, across four key dimensions:
+AI Fusion combines the [Data Product Platform](/articles/01_fabric_overview/01_what%20is%20fabric.md) with a declarative agent runtime, a dedicated development environment in Studio, and built-in evaluation and observation.
+
+### Declarative Agents on Data Products
+
+In AI Fusion 3, an agent is a set of files that lives inside a Data Product (LU): an `agent.yaml` definition, plus optional skills, sub-agents, reference documents, evaluation suites and observation configuration. There is no orchestration flow to build — the runtime runs the reasoning loop, calls tools, delegates to sub-agents, streams the answer, and records everything for trace and analysis.
+
+Agents work directly on the entity's micro-database: a `step_start` hook loads the customer's data and the built-in `query` tool lets the LLM run SQL against it, guided by schema skills that describe the tables. Learn more in [Agent Platform](/articles/AI_fusion/02_agents/README.md).
 
 ### Quality & Accuracy
 
-- **Entity-centric Data Modeling** — creates unified 360° views of business entities (customers, orders, products) by consolidating data from multiple source systems.
-- **Live Data Synchronization** — maintains current information through continuous synchronization with enterprise systems.
-- **Quick Response Times** — enables conversational AI experiences with immediate data access and retrieval.
-- **Accurate SQL Generation** — ensures LLMs have access to the latest database structures (schema/metadata), allowing them to generate valid on-the-fly SQL queries.
+- **Entity-centric data** — a unified 360° view of each business entity (customer, order, product), consolidated from multiple source systems.
+- **Live data synchronization** — current information through Fabric's synchronization with the source systems.
+- **Schema-aware SQL generation** — schema skills can embed the live LU table definitions, so the LLM always generates SQL against the deployed structure.
+- **Procedures and knowledge** — plan-then-execute mode guided by written procedures, and cited answers from reference documents.
 
 ### Privacy & Security
 
-- **Entity-level Access Control** — ensures LLMs access only user- and context-specific data.
-- **Dynamic Data Masking** — automatically anonymizes Personally Identifiable Information (PII) and sensitive data prior to exposure to LLMs.
-- **Role-based Permissions** — restricts access to information based on roles, ensuring that users and applications can view only data permitted by their assigned privileges.
-- **Built-in Data Access Partitioning** — implements comprehensive data segregation at entity level, by using role-based security profiles.
+- **Entity-level access** — each conversation works on the micro-database of the entity it was started for.
+- **Trusted inputs** — values such as the customer ID are passed as agent inputs that the LLM cannot change.
+- **Guardrail hooks** — `pre_tool_call` hooks can block any tool call; `constraints` declare rules the agent must never break, and they cannot be dropped by delegation.
+- **Data masking support** — PII can be masked inside the tool and hook flows that read it, using Fabric masking. Masking is configured per project and is not applied automatically.
+- **Role-based permissions** — AI Fusion web services run under standard Fabric authentication and authorization.
 
 ### Control & Trace
 
-- **Visual Flow Builder** — enables editing and debugging of each step in the agent workflow for complete decision transparency.
-- **Cost Management** — provides tracking and monitoring of token usage for cost control.
-- **Comprehensive Auditing** — ensures every agent interaction and processing step can be audited and traced.
-- **Advanced Observability** — features dynamic, customized tags, signals and dashboards, including deep-dive capabilities to review and track individual conversation threads.
+- **Full execution trace** — every step, LLM call, tool call and sub-agent run, with inputs, outputs, durations and tokens.
+- **Cost management** — token usage per LLM call, interface and agent.
+- **Advanced observability** — LLM-scored signals per conversation, per-agent dashboards and conversation review.
 
 ### Maintainability
 
-- **Unified Platform** — delivers an all-in-one, end-to-end toolset for data retrieval and agent development, eliminating the need to learn multiple platforms or manage separate licenses.
-- **API Maintenance Elimination** — provides up-to-date data structures directly to LLMs, removing the need for ongoing API maintenance for tools and agents.
-- **Flexible Model Management** — enables utilization of various models and versions with per-invocation selection, achieving optimized performance, accuracy, and cost efficiency.
-- **Integrated Evaluation Platform** — includes a GenAI evaluation and rating system for building, testing, and executing regression tests, facilitating easy assessment of conversational applications and agents with dynamic, customized dimensions and thresholds.
+- **Unified platform** — one toolset for data retrieval, agent development, testing and monitoring, inside K2view Studio.
+- **Form-based agent editor** — build and test agents in AI Fusion Studio, with AI-assisted agent building and answer diagnosis.
+- **Flexible model management** — Anthropic, AWS Bedrock, OpenAI, Google GenAI and Ollama connectors; choose the model and reasoning level per agent.
+- **Integrated evaluation** — regression test suites per agent, scored by LLM-as-a-judge on configurable dimensions and thresholds.
 
 
 
-Altogether, AI Data Fusion uses K2view's proven Data Product Platform to transform enterprise data into AI-ready resources. The solution combines real-time data integration, enterprise-grade security, and advanced prompt engineering to deliver AI applications that are reliable and easy to scale.
+## Platform Modules
 
+<table>
+<tbody>
+<tr>
+<td><strong>Module</strong></td>
+<td><strong>What it provides</strong></td>
+</tr>
+<tr>
+<td><a href="/articles/AI_fusion/02_agents/README.md">Agent Platform</a></td>
+<td>The declarative agent runtime: agent definitions, tools, skills, sub-agents, planning, reference search, hooks, sessions, the streaming Agent API and LLM connectors.</td>
+</tr>
+<tr>
+<td><a href="/articles/AI_fusion/03_studio/README.md">AI Fusion Studio</a></td>
+<td>The Studio extension for building agents: AI Explorer, Agent Editor, Preview chat with trace, Eval Editor and AI-assisted development.</td>
+</tr>
+<tr>
+<td><a href="/articles/AI_fusion/04_evaluation/README.md">Evaluation</a></td>
+<td>Per-agent regression test suites, LLM-as-a-judge scoring and performance baselines, run from Studio.</td>
+</tr>
+<tr>
+<td><a href="/articles/AI_fusion/05_observation/README.md">Observation</a></td>
+<td>Production monitoring: automatic conversation analysis, per-agent dashboards and conversation review.</td>
+</tr>
+</tbody>
+</table>
+
+Altogether, AI Fusion uses K2view's proven Data Product Platform to turn enterprise data into AI-ready resources, combining real-time data integration, enterprise-grade security and a governed agent lifecycle.
+
+
+
+**Next article:** [What's New in AI Fusion 3](/articles/AI_fusion/02_whats_new_in_v3.md)
