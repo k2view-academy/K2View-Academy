@@ -5,7 +5,7 @@ Release notes of the **aifusion** extension, versions 3.x. The newest version is
 For compatibility with Fabric and with the other AI Fusion extensions, see [AI Fusion Versions](/articles/Product_Versions/AI_Fusion_versions.md).
 
 <ul>
-<li><a href="#v3.0.8">3.0.8</a> — September 29, 2026</li>
+<li><a href="#v3.0.8">3.0.8</a> — October 19, 2026</li>
 <li><a href="#v3.0.7">3.0.7</a> — September 28, 2026</li>
 <li><a href="#v3.0.5">3.0.5</a> — August 24, 2026</li>
 <li><a href="#v3.0.4">3.0.4</a> — August 18, 2026</li>
@@ -17,49 +17,48 @@ For compatibility with Fabric and with the other AI Fusion extensions, see [AI F
 <a id="v3.0.8"></a>
 ## Version 3.0.8
 
-**Released:** September 29, 2026 · **Minimum Fabric version:** 8.4.0 (8.5.2 recommended)
+**Released:** October 19, 2026 · **Minimum Fabric version:** 8.4.0 (8.5.2 recommended)
 
-### New Features
+The `aifusion` extension no longer depends on the AI Fusion Studio and Pipeline extensions; install them separately. The Pipeline extension is needed to run evaluations.
 
-- **Agent delegation.** A new `delegate` tool hands the whole turn to a named sub-agent. The sub-agent's reply goes to the user as the final answer, so a specialist's answer is no longer written twice — once by the specialist and again by its parent. Enable it per agent with `delegate: true`; it is off by default, and existing agents are not affected. `task` is unchanged and remains the right route when the parent needs the result to continue its own work. See [Sub-Agents and Delegation](/articles/AI_fusion/02_agents/06_subagents_and_delegation.md).
-- **Per-sub-agent routing.** Each entry under `sub_agents:` accepts `invoke: both | task | delegate` (default `both`). The sub-agent catalog marks entries that accept only one route, and calling a sub-agent by a route it does not accept fails with a message naming the allowed one. An agent whose enabled sub-agents are all `invoke: task` is not offered the `delegate` tool.
-- **`response_prompt`** — house style for the user-facing reply, as a top-level key, appended under `## Response Guidelines`. It applies to the whole turn: on `delegate` it replaces the sub-agent's own guidelines, and along a chain of delegations the original turn owner's guidelines are forwarded. A `task` sub-agent does not receive it.
-- **`constraints`** — non-negotiable domain rules ("never state an APR without its effective date"). They apply on every route, and on `delegate` the caller's constraints are added to the sub-agent's own, so a delegation can narrow what may be said but never widen it. Rendered last in the system prompt. Accepts a YAML list or a text block. The planner and widget sub-agents inherit the chain.
+### Agents
 
-### Improvements and Fixes
+- **Agent delegation.** A new `delegate` tool lets an agent hand the turn to a sub-agent. The sub-agent's reply goes straight to the user as the final answer, so the parent no longer restates it. To enable it, set `delegate: true` at the top level of the agent; it is off by default. Use the existing `task` tool when the parent needs the sub-agent's result to finish the work itself. See [Sub-Agents and Delegation](/articles/AI_fusion/02_agents/06_subagents_and_delegation.md).
+- **Choose how each sub-agent is called.** Under `sub_agents:`, set `invoke:` to `task`, `delegate` or `both` (default) to control which tools can call that sub-agent.
+- **`response_prompt`.** A new top-level key for the reply's tone and format, so it no longer has to sit inside `system_prompt`. When an agent delegates, the sub-agent answers in the calling agent's style.
+- **`constraints`.** A new top-level key for rules the agent must always follow, for example "show only the last four digits of a card number". Unlike `response_prompt`, constraints are never dropped: when an agent delegates, the sub-agent follows the caller's constraints as well as its own. Put tone and format in `response_prompt` and must-follow rules in `constraints`.
+- **Follow-up turns after a delegation.** The sub-agent's answer is saved in the conversation history, so the next turn sees what was answered. Before this, the agent could ask again or mix up the earlier request with the new one.
+- **Saved test cases, exports and eval transcripts** record the turn's actual final answer, not the agent's in-progress narration.
+- **Planning agents** get the plan-execution rules automatically (work the to-dos in order, resume from the first pending to-do after asking the user). You no longer need to write them into `system_prompt`.
 
-- The terminal `done` event now carries the turn's final answer, so clients no longer have to reconstruct it from the streamed text. Saved test cases, shared chats and eval transcripts contain the reply alone.
-- Every SSE event is tagged with the ID of the agent execution that produced it (`agent_id`), so clients can attribute events to the main agent or to a sub-agent.
-- A delegation is retried only when the sub-agent produced no output, so a partial specialist answer is never repeated.
-- The answer produced by a terminal tool (such as `delegate`) is saved in the history, so the next turn can see it.
-- An agent whose own configuration cannot be read now fails clearly instead of running with partial settings.
+### Observation
+
+- **Per-agent Observation.** The Observation dashboard has an agent selector. Choosing an agent scopes the dashboard and the conversations table to that agent's sessions, and shows the agent's own widgets, defined in `<LU>/AI/Agents/<agent>/Observation/widgets.yaml`. See [Observation Dashboard](/articles/AI_fusion/05_observation/01_observation_dashboard.md).
+- **Per-agent analyzer signals.** The general signals that drive the overall dashboard (`Resolution Status`, `Sentiment`, `Topic`) still apply to every agent. An agent can add its own use-case signals in `<LU>/AI/Agents/<agent>/Observation/signals.yaml`, which its `widgets.yaml` can read, and can redefine the values of `Topic`. The analyzer no longer drops the last signal of a batch. See [Configuring Observation](/articles/AI_fusion/05_observation/03_configuring_observation.md).
+- **Feedback filter.** You can filter the conversations list by user feedback.
+- **Conversation review.** New navigation between conversations and an improved conversations table. The thumbs and note icons show correctly on reviewed messages. Notes open as an overlay when there is no room beside the message, follow it on scroll, and close on an outside click.
+- **Failed chat analysis is reported.** A session whose analysis fails is marked as failed instead of being left in an unclear state.
+
+### Evaluation
+
+- **Starting an agent evaluation** gives clear errors: if the Pipeline extension is not installed, the API returns 503; if the pipeline could not be started, it returns 409.
+
+### Breaking Changes
+
+- `Mtable/chat_signals.csv` is renamed to `Mtable/observation_signals.csv`. If you customized `chat_signals.csv`, move those rows to `observation_signals.csv`, or to an agent's `Observation/signals.yaml` for agent-specific signals.
+- Removed: the `chatSummary` web service, and the `ChatAnalytics`, `SentimentQuery`, `runChatAnalyzePipeline` and `RetrieveBatchMessages` flows.
 
 
 
 <a id="v3.0.7"></a>
 ## Version 3.0.7
 
-**Released:** September 28, 2026 · **Minimum Fabric version:** 8.4.0 · Released together with [AI Fusion Studio 1.0.0](/articles/AI_fusion/release_notes/aifusion_studio.md#v1.0.0)
+**Released:** September 28, 2026 · **Minimum Fabric version:** 8.4.0
 
-### New Features
-
-- **Planning from written procedures.** The planner reads the agent's `References/Procedures` pack (`find_procedures` / `load_procedure`, with a catalog of the available procedures in its prompt) instead of searching the agent's own earlier plans. With no Procedures pack, it plans directly from the agent's capabilities, without an extra round trip. See [References and Planning](/articles/AI_fusion/02_agents/05_references_and_planning.md).
-- **Persisted plans and one live to-do list.** Plans and to-dos are stored with the session; the client shows a single live to-do list per turn.
-- **Skills catalog as the single skill surface.** The `## Available Skills` catalog in the prompt is the allow-list for `load_skill`. Agents with the `query` tool are told to load the relevant schema skills before writing SQL, and to answer cross-domain questions with one JOIN. See [Skills](/articles/AI_fusion/02_agents/04_skills.md).
-- **`testRun` web service** (`POST agent/{luName}/{agentName}/testRun`, Studio only) — runs one question through an agent and returns the session ID and answer. Used by the Studio test auto-generator.
-
-### Fixes
-
-- **`settings.llm_interface` is honored.** Agents ran on the default interface even when `agent.yaml` named another one. The interface is now resolved in this order: the per-turn `interface` input, then `settings.llm_interface`, then `llm://default`. A blank `llm_interface` falls back to the default for sub-agents too.
-- `tool_use_start` is sent before a flow tool runs (not after it), and tool cards left open are closed when the stream ends.
-- A `task` fork of the main agent no longer writes into the client stream or ends the turn early.
-- Resuming a turn paused on `ask_user` is safer when answers arrive concurrently: only one answer resumes the turn, and a failed status read is no longer reported as "already answered".
-- Evaluation: fixed custom dimension names, overlapping results windows and the evaluation status query.
-- Evaluation flows no longer run a soft deploy on the server. Studio triggers the soft deploy of the agent's Data Product before runs and after suite changes, so evaluation also works in environments without Studio.
-- The aifusion deploy creates missing insights tables on every deploy (not only the first), so tables added in new versions reach existing environments, and the column migrations no longer log errors.
-- Importing a shared conversation duplicates its snapshots under the new session.
-- The chat widget calls the agent directly and is isolated in a shadow DOM, so host-page styles do not affect it.
-- Security update of a web-application library.
+- **Planner and to-do list:** plans are saved, with one live to-do list that stays in place.
+- `settings.llm_interface` in the agent's YAML file is honored.
+- The aifusion deploy flow no longer fails on `ALTER TABLE` errors.
+- Resuming after `ask_user` is more reliable.
 
 
 

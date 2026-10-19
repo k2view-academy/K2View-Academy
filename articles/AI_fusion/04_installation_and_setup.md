@@ -28,12 +28,12 @@ AI Fusion 3 is delivered as a set of K2exchange extensions that you install into
 </tr>
 <tr>
 <td><strong>aifusion-studio</strong> (AI Fusion - Studio)</td>
-<td>Yes (dependency of aifusion)</td>
+<td>Yes</td>
 <td>The Studio development experience: AI Explorer, Agent Editor, Preview chat and Trace, Eval Editor, and the Studio AI skills for building agents and diagnosing answers.</td>
 </tr>
 <tr>
 <td><strong>pipeline</strong></td>
-<td>Yes (dependency of aifusion)</td>
+<td>Required for evaluations</td>
 <td>The pipeline framework (<code>PipelineLu</code>, Pipeline web app and services) used to run evaluations and observation analysis pipelines.</td>
 </tr>
 <tr>
@@ -63,7 +63,7 @@ Version notes (see [AI Fusion Versions](/articles/Product_Versions/AI_Fusion_ver
 
 ## Installation Steps
 
-1. In Web Studio, open K2exchange and install the **aifusion** extension. Its dependencies, **aifusion-studio** and **pipeline**, are required — install them as well if they are not installed automatically. See [Install an Extension](/articles/04_fabric_studio/28_web_k2exchange.md#install-an-extension).
+1. In Web Studio, open K2exchange and install the **aifusion**, **aifusion-studio** and **pipeline** extensions. From aifusion 3.0.8 they are separate extensions and are not installed automatically. See [Install an Extension](/articles/04_fabric_studio/28_web_k2exchange.md#install-an-extension).
 2. Install one or more **LLM connector** extensions.
 3. Optionally install **mcp** and **aifusion-demo**.
 4. Configure an LLM interface (below).

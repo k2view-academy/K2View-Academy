@@ -23,7 +23,7 @@ Please consult with us regarding the latest available and compatible Fabric vers
         <tr>
             <td align="left">AI Fusion 3</td>
             <td><a href="/articles/AI_fusion/release_notes/aifusion_3.md#v3.0.8">3.0.8</a></td>
-            <td>Sep 29, 2026</td>
+            <td>Oct 19, 2026</td>
             <td>8.4.0 (8.5.2 recommended)</td>
             <td>Current</td>
             <td><a href="/articles/AI_fusion/README.md">AI Fusion 3</a></td>
@@ -51,7 +51,7 @@ Please consult with us regarding the latest available and compatible Fabric vers
 
 ## Related Modules and Extensions
 
-Extensions that are installed with AI Fusion or extend it.
+Extensions that are used together with AI Fusion. From AI Fusion 3.0.8 they are installed separately.
 
 <table>
     <thead>
@@ -81,8 +81,8 @@ Extensions that are installed with AI Fusion or extend it.
             <td></td>
             <td></td>
             <td></td>
-            <td>3.x (required)</td>
-            <td>Pipeline framework used to run evaluations and observation analysis. Installed as a dependency of AI Fusion.</td>
+            <td>3.x</td>
+            <td>Pipeline framework used to run evaluations and observation analysis pipelines. Required for evaluations.</td>
         </tr>
     </tbody>
 </table>
