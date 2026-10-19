@@ -11,6 +11,13 @@
 	<li><a href="/articles/AI_fusion/05_observation/README.md">Observation</a></li>
 </ul>
 
+<strong>Versions and release notes</strong>
+
+<ul>
+	<li><a href="/articles/Product_Versions/AI_Fusion_versions.md">AI Fusion Versions</a></li>
+	<li><a href="/articles/AI_fusion/release_notes/README.md">Release Notes</a></li>
+</ul>
+
 <strong>Previous versions</strong>
 
 <ul>

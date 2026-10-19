@@ -54,7 +54,7 @@ AI Fusion 3 is delivered as a set of K2exchange extensions that you install into
 </tbody>
 </table>
 
-Version notes:
+Version notes (see [AI Fusion Versions](/articles/Product_Versions/AI_Fusion_versions.md) for the full compatibility table):
 
 - The `xhigh` and `max` thinking levels require recent connector versions (anthropic 3.0.3 or later; aws-bedrock, openai and google-genai 3.0.1 or later). Older connectors treat them as `off`.
 - When a connector is installed alongside `aifusion`, use `aifusion` 3.0.4 or later. From that version the core and the connectors no longer share files, so they can be upgraded independently.
