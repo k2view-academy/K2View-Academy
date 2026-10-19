@@ -16,7 +16,6 @@ Please consult with us regarding the latest available and compatible Fabric vers
             <th>Released Date</th>
             <th>Minimum Fabric Version</th>
             <th>Status</th>
-            <th>Documentation</th>
         </tr>
     </thead>
     <tbody>
@@ -26,7 +25,6 @@ Please consult with us regarding the latest available and compatible Fabric vers
             <td>Oct 19, 2026</td>
             <td>8.4.0 (8.5.2 recommended)</td>
             <td>Current</td>
-            <td><a href="/articles/AI_fusion/README.md">AI Fusion 3</a></td>
         </tr>
         <tr>
             <td align="left">AI Fusion 2</td>
@@ -34,7 +32,6 @@ Please consult with us regarding the latest available and compatible Fabric vers
             <td>Feb 2026</td>
             <td>8.4.0</td>
             <td>Legacy</td>
-            <td><a href="/articles/AI_fusion/legacy_v1_v2/README.md">Legacy documentation</a></td>
         </tr>
         <tr>
             <td align="left">AI Fusion 1</td>
@@ -42,7 +39,6 @@ Please consult with us regarding the latest available and compatible Fabric vers
             <td>Jan 12, 2026</td>
             <td>8.3.0</td>
             <td>Legacy</td>
-            <td><a href="/articles/AI_fusion/legacy_v1_v2/README.md">Legacy documentation</a></td>
         </tr>
     </tbody>
 </table>
