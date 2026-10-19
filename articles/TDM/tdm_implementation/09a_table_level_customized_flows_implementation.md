@@ -22,9 +22,6 @@ The customized flows must be added under the Shared Objects in the Project tree.
 The Catalog Masking Actor is invoked **after** the extract flow execution. 
 
 Setting customized masking logic on tables:
-
-- If you need to set customized logic on specific fields, edit the Catalog and remove the PII property from these fields in the Catalog as a way to prevent double-masking them.
-- Sometimes, the customized masking logic is based on the Catalog masking output, e.g., building the masked email address based on the masked first and last names. If you need to call the Catalog Masking Actor in the extract flow, proceed as follows: 
   - Add the **CatalogMaskingMapper** Actor to the extract flow. 
   - Add customized Masking Actors to the extract flow to be invoked after the CatalogMaskingMapper Actor.
   - Set the **enable_masking** parameter to **false** at the end of the extract flow as a way to prevent double-masking of the table's record by the TDM execution processes.
