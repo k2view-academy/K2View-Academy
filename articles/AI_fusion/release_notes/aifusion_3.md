@@ -35,7 +35,7 @@ For compatibility with Fabric and with the other AI Fusion extensions, see [AI F
 ### New Features
 
 - **`AgentInvoke` actor.** Runs an AI Fusion agent turn from any flow in any Data Product and returns its final answer. Set `agent`, `luName` and `interface` on the actor; link `content`, `sessionId` and `initParams`. Leave `luName` empty for the `aifusion` Data Product and `interface` empty to use the agent's configured interface. The invoked agent runs a full turn — session state, history, hooks, tools and observability persist under `sessionId`, as for an API call. See [Invoking Agents](/articles/AI_fusion/02_agents/09_invoking_agents.md).
-- **New thinking levels `xhigh` and `max`**, in addition to `off`, `low`, `medium` and `high`, for agent `settings.thinking`. Each connector maps the level to its provider's API. `xhigh` is usually the best choice for agentic, tool-using agents on Claude. Requires connector versions that support them (see [LLM Connectors Release Notes](/articles/AI_fusion/release_notes/llm_connectors.md)); older connectors treat the new levels as `off`.
+- **New thinking levels `xhigh` and `max`**, in addition to `off`, `low`, `medium` and `high`, for agent `settings.thinking`. Each connector maps the level to its provider's API. `xhigh` is usually the best choice for agentic, tool-using agents on Claude. Requires connector versions that support them (see [LLM Connectors](/articles/AI_fusion/02_agents/10_llm_connectors.md)); older connectors treat the new levels as `off`.
 - The `thinking` dropdown of the `LLMInvoke`, `LLMAgentInvoke` and `LLMAgent` actors offers the two new levels.
 
 
