@@ -18,9 +18,7 @@ Once an interface is selected, its list of schemas is displayed:
 
 For each schema, Dataplease indicates whether it was already scanned and a Catalog exists for it, or whether it would need to be discovered from the source.
 
-Once a schema is selected, if a Catalog version already exists for that interface/schema combination, Dataplease shows when it was last created:
-
-<img src="../images/dataplease_schema_already_scanned.jpg" style="zoom:75%;" />
+Once a schema is selected, if a Catalog version already exists for that interface/schema combination, Dataplease shows when it was last created.
 
 From here, the user decides how to proceed:
 

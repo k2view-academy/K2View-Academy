@@ -6,10 +6,8 @@ Once the generated data is ready - whether or not it was previewed first - the u
 
 <img src="../images/dataplease_provisioning_progress.jpg" style="zoom:75%;" />
 
-Upon completion, the summary reflects the final status, and the Dataplease Assistant confirms the outcome:
+Upon completion, the summary reflects the final status of each dataset. It the provisioning failed, the exception is displayed in the monitor:
 
 <img src="../images/dataplease_provisioning_completed.jpg" style="zoom:75%;" />
 
 This concludes the end-to-end Dataplease flow: from selecting a data source, through building and refining the Catalog, generating synthetic data, and finally previewing and provisioning it to the target.
-
-*This is the first, high-level pass over the Dataplease app's steps. Further articles will go deeper into each step's behavior and configuration.*

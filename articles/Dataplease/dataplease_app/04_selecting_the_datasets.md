@@ -14,9 +14,7 @@ The screen is split into three areas:
 
 ### Reviewing and Refining
 
-Clicking into a dataset shows its columns, and clicking a column shows its properties, such as **PII**, **Primary Key**, **Sequence Name** and **Nullable**:
-
-<img src="../images/dataplease_dataset_column_properties.jpg" style="zoom:75%;" />
+Clicking into a dataset shows its columns, and clicking a column shows its properties, such as **PII**, **Primary Key**, **Sequence Name** and **Nullable**.
 
 Descriptions and properties - at the schema, dataset and field level - can all be edited directly on this screen, in order to get better results during data generation.
 
