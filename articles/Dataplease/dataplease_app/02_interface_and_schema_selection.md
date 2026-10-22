@@ -2,27 +2,43 @@
 
 ### Overview
 
-The Dataplease flow starts with telling the app **where the data should come from**. The user picks an existing Fabric interface — a database connection (SQL Server, MySQL, PostgreSQL, Salesforce, etc.) or a local file source — or creates a new one on the fly, and then selects the schema to work with under that interface.
+The Dataplease flow starts with the data source. The user selects a Fabric interface, and then a schema under that interface.
 
 <img src="../images/dataplease_interface_list.jpg" style="zoom:75%;" />
 
-The interface list is retrieved using the Fabric `list interfaces` command, applying the same interface-type filter used in the Discovery Monitor UI (protocol-only interfaces such as PubSub, Kafka, etc. are excluded, since they are not relevant for data generation). A **Create Interface** action is also available, for defining a new interface without leaving the flow.
+The **Where would you like your data?** screen shows the available interfaces as cards. Each card shows the interface name and the interface type, for example `SQLite (Db)`, `SqlServer (Db)` or `PostgreSQL (Db)`. The **Total** counter shows the number of interfaces.
 
-Throughout this step - and the entire Dataplease flow - the **Dataplease Assistant** panel on the right reacts to the user's selections, confirms completed steps, and explains what's needed next.
+In the MVP, Dataplease supports only relational databases that have a JDBC driver, for example Oracle, PostgreSQL, IBM Db2 and Microsoft SQL Server.
+
+On this screen, the user can:
+
+* Type in the **Search Interface** box to filter the list.
+* Click **+ Create Interface** to define a new interface without leaving the flow.
+
+The **Dataplease Assistant** panel on the right side of the screen guides the user through the flow. It shows the instruction for the current step, for example *Select an interface or create a new one*. When a step is complete, the Assistant shows a check mark next to it. The indicator on the left side of the screen shows the current step of the flow.
 
 ### Selecting the Schema
 
-Once an interface is selected, its list of schemas is displayed:
+When the user selects an interface, the **Schema List** shows the schemas of that interface:
 
 <img src="../images/dataplease_schema_list.jpg" style="zoom:75%;" />
 
-For each schema, Dataplease indicates whether it was already scanned and a Catalog exists for it, or whether it would need to be discovered from the source.
+The icon of each schema shows its Catalog status:
 
-Once a schema is selected, if a Catalog version already exists for that interface/schema combination, Dataplease shows when it was last created.
+* **Blue icon** - The schema was scanned before, and a Catalog version exists for it.
+* **Grey icon** - The schema was not scanned.
 
-From here, the user decides how to proceed:
+If the schema list is long, click the filter icon above the list. Then type a part of the schema name. The list shows only the schemas that contain this text.
 
-* **Use existing** - continue with the existing Catalog version, skipping the scan.
-* **Re-scan** - trigger a new Discovery run on the source, to build an up-to-date Catalog version.
+<img src="../images/dataplease_schema_filter.jpg" style="zoom:75%;" />
 
-This decision drives the next step of the flow, described in [Scanning](03_scanning.md).
+<img src="../images/dataplease_schema_filter.jpg" style="zoom:75%;" />
+
+When the user selects a schema that has a Catalog version, the Assistant shows the date of the last scan, for example *Mssql_Test / DP_SALES has been scanned on 22-Oct-2026*. Then the Assistant asks how to continue:
+
+* **Use existing metadata** - Use the existing Catalog version and skip the scan.
+* **Re-scan schema** - Start a new Discovery run on the source to create an up-to-date Catalog version.
+
+When the user selects a schema that has no Catalog version, the user clicks **Scan interface schema** to start the Discovery process.
+
+The selected option sets the next step of the flow. Refer to [Scanning](03_scanning.md).
