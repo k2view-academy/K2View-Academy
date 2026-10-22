@@ -32,8 +32,6 @@ If the schema list is long, click the filter icon above the list. Then type a pa
 
 <img src="../images/dataplease_schema_filter.jpg" style="zoom:75%;" />
 
-<img src="../images/dataplease_schema_filter.jpg" style="zoom:75%;" />
-
 When the user selects a schema that has a Catalog version, the Assistant shows the date of the last scan, for example *Mssql_Test / DP_SALES has been scanned on 22-Oct-2026*. Then the Assistant asks how to continue:
 
 * **Use existing metadata** - Use the existing Catalog version and skip the scan.
