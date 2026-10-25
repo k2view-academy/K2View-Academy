@@ -39,7 +39,7 @@ The Assistant shows the number of selected datasets. Then it asks the user to se
 * Generate a small sample (~10 rows per dataset)
 * Generate a medium sample (~100 rows per dataset)
 
-These options are only examples of possible requests. We recommend that the user types the request in the **Type a request** box, in his own words, and describes the necessary data. For example: *Generate 20 customers with 1-2 addresses in Argentina, Chile, Peru or Colombia, 1-2 activities and multiple cases each. All texts should be generated in Spanish. All IDs should start from 1000.*
+These options are only examples of possible requests. We recommend that the user types the request in the **Type a request** box, in their own words, and describes the necessary data. For example: *Generate 20 customers with 1-2 addresses in Argentina, Chile, Peru or Colombia, 1-2 activities and multiple cases each. All texts should be generated in Spanish. All IDs should start from 1000.*
 
 The Dataplease AI Agent converts the request into a **data story**. The data story drives the generation. It keeps the data logically consistent across all the selected tables.
 

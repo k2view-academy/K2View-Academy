@@ -18,6 +18,8 @@ If the provisioning of a dataset fails, the dataset shows the **Failed** status 
 
 <img src="../images/dataplease_provisioning_completed.jpg" style="zoom:75%;" />
 
+<img src="../images/dataplease_provisioning_partial.jpg" style="zoom:75%;" />
+
 For example, the **Insert** load mode fails with a primary key constraint error when the target table already has a row with the same key. To prevent this error, use the **Upsert** or **Truncate & Insert** load mode.
 
 **Notes:**
