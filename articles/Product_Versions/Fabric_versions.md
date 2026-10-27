@@ -17,7 +17,7 @@ Please check the release notes for component version support, such as Kafka, Neo
 		<tr>
             <td align="left">
                 <p><a href="/Release_Notes/V8.5/Fabric_Release_Notes_V8.5.3.pdf">8.5.3</a></p>
-                <p>Oct 13, 2026</p>
+                <p>Oct 27, 2026</p>
             </td>
             <td>
 			</td>
