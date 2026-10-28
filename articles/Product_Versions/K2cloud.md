@@ -73,6 +73,11 @@ docker pull docker.share.cloud.k2view.com/k2view/k2v-agent:[tag]
   </thead>
   <tbody>
     <tr>
+      <td>2.11.3</td>
+      <td>sha256:f111b31dc8f1777a35e4cff3c58e6ca84218874ebb1ab80fbbe7a6f2eecd68e0</td>
+      <td>28 Oct 2026, 12:00 UTC</td>
+    </tr>
+    <tr>
       <td>2.11.2</td>
       <td>sha256:28fc3559264fc35945b85da44177bd52c27f5dbe06ff0d2d75e16a7ea38ead87</td>
       <td>28 Jan 2026, 16:47 UTC</td>
