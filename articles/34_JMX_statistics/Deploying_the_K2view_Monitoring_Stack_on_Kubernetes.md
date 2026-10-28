@@ -190,11 +190,13 @@ mailbox_id = "your-k2view-mailbox-id"
 
 The Prometheus and Loki host URLs and usernames are pre-populated in the module variables with Grafana Cloud defaults. If using a different endpoint, override it in the tfvars file:
 
-> # Only needed if NOT using the Grafana Cloud defaults
-> # externalservices_prometheus_host = "https://<your-prometheus>"
-> # externalservices_prometheus_username = <your-username>
-> # externalservices_loki_host = "https://<your-loki>"
-> # externalservices_loki_username = <your-username>
+```
+# Only needed if NOT using the Grafana Cloud defaults
+# externalservices_prometheus_host = "https://<your-prometheus>"
+# externalservices_prometheus_username = <your-username>
+# externalservices_loki_host = "https://<your-loki>"
+# externalservices_loki_username = <your-username>
+```
 
 ### Step 2 — Initialize and apply
 
