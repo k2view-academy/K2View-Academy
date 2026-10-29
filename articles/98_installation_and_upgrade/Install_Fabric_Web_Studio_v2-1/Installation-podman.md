@@ -174,7 +174,7 @@ https://download.k2view.com/index.php/s/8lgQY4ybu5fNy4u/download
 Alternatively, you can use `wget` as follows:
 
 ```bash
-wget -c -O Studio-Podman-latest.zip 'https://download.k2view.com/index.php/s/8lgQY4ybu5fNy4u/download'
+wget -c -O Studio-Podman-latest.zip 'https://downloads.cloud.k2view.com/s/zpeNPVHKmKnUtnt/download'
 ```
 
 Then, change the directory to the K2view directory. Copy `Studio-Podman-latest.zip` to this directory, and unzip `Studio-Podman-latest.zip` to this directory. Then, rename the `Studio-Podman` directory as `Studio`.
