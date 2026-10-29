@@ -4,10 +4,8 @@
 * Spaces created with an in-cluster PostgreSQL pod now use a non-superuser as the default database user
 * dependencies updated to address security vulnerabilities
 
-
 **Version 1.8.31**
 * Addresses Common Vulnerabilities and Exposures (CVE)
-
   
 **Version 1.8.27**
 * This release incorporates the latest version of the K2cloud Helm charts
