@@ -38,8 +38,6 @@ Environment Owners can execute the following activities in their environment:
 
 - Create, edit or delete [permission sets](10_environment_roles_tab.md) and define permissions per permission set.
 
-- View and download the [TDM reports](TDM_Dashboard_User_Guide.md).
-
 - Attach users to TDM environment's permission sets.
 
   Environment Owners cannot add or delete an environment and cannot add or remove Environment Owners from the environment.
