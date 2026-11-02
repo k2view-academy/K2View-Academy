@@ -29,17 +29,17 @@ The TDM Agent can be used through the following channels:
     <tr>
       <td><strong>REST API</strong></td>
       <td>CI/CD pipelines and test-management tools</td>
-      <td>Submit a user story with its test cases and get back a prepared execution per test case. Available starting from TDM 10.1. See <a href="02_tdm_agent_api.md">Invoking the TDM Agent via API</a>.</td>
+      <td>Submit a user story with its test cases and get back a prepared execution per test case. Available starting from TDM 10.1. See <a href="03_tdm_agent_api.md">Invoking the TDM Agent via API</a>.</td>
     </tr>
     <tr>
       <td><strong>MCP tools</strong></td>
       <td>MCP clients, such as AI assistants and IDEs</td>
-      <td>Read-only TDM lookups: Business Entities, environments, parameters, tasks and execution status. See <a href="03_tdm_agent_mcp_tools.md">TDM MCP Tools</a>.</td>
+      <td>Read-only TDM lookups: Business Entities, environments, parameters, tasks and execution status. See <a href="04_tdm_agent_mcp_tools.md">TDM MCP Tools</a>.</td>
     </tr>
   </tbody>
 </table>
 
-For the TDM Agent's architecture, the data it sends to the LLM and its security controls, see [TDM Agent Architecture and Security](04_tdm_agent_architecture_and_security.md).
+For how the TDM Agent is built, see [TDM Agent Architecture](02_tdm_agent_architecture.md). For the data it sends to the LLM and its security controls, see [TDM Agent Security and Privacy](05_tdm_agent_security_and_privacy.md).
 
 ## Prerequisite
 Install Fabric 8.5.x or later.
@@ -117,4 +117,4 @@ The TDM Agent evaluates permissions based on the identity and Fabric roles of th
 
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_tdm_agent_api.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_tdm_agent_architecture.md)

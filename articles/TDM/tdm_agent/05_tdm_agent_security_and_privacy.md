@@ -1,139 +1,8 @@
-# TDM Agent – Architecture and Security
+# TDM Agent Security and Privacy
 
-The TDM Agent runs entirely inside the customer's K2view Fabric deployment and only prepares TDM task executions — a person always reviews and runs them. This article describes how the TDM Agent is built on top of Fabric and AI Fusion, what data reaches the LLM, and which security controls apply. It is intended for information-security and architecture reviewers.
+The TDM Agent has no privileges of its own: it runs as the calling user, sends the LLM only TDM metadata, value lists and counts, and can only write a draft execution that TDM must still authorize and a person must start. This article describes what data reaches the LLM, the security controls, retention and audit, and the split of responsibility between K2view and the customer. It is intended for information-security and architecture reviewers.
 
-For what the TDM Agent does and how to install it, see [TDM Agent Overview](01_tdm_agent_overview.md).
-
-
-
-## Solution Overview
-
-A tester describes a user story and its test cases, or a specific data need, in plain language. For each case, the agent finds an existing TDM task that can satisfy it, builds the override parameters, and returns a link a person clicks to review and run it.
-
-The TDM Agent can be reached through three channels:
-
-<table>
-<thead>
-<tr>
-<th>Channel</th>
-<th>Used by</th>
-<th>Typical input</th>
-<th>Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Chat in the TDM UI</strong></td>
-<td>Tester or developer, interactively</td>
-<td>Usually one request, such as "I need 6 VIP customers with an address in New York City"</td>
-<td>A plain-English answer and one review/run link. The agent asks when something is ambiguous.</td>
-</tr>
-<tr>
-<td><strong>REST API</strong> (<code>createTask</code>, <code>status/{jobId}</code>). See <a href="02_tdm_agent_api.md">Invoking the TDM Agent via API</a>.</td>
-<td>Test-management tool or CI pipeline</td>
-<td>A user story with its test cases. For example, story: a CRM service shows special offers by customer status and location. Cases: 6 VIP customers in NYC, 6 Regular customers in NYC, 4 VIP customers outside NYC.</td>
-<td>One prepared execution per case, READY or FAILED with the reasoning. The agent never asks questions.</td>
-</tr>
-<tr>
-<td><strong>MCP tools</strong></td>
-<td>An MCP client, such as an AI assistant or IDE</td>
-<td>A lookup, such as "which tasks load customers to UAT?"</td>
-<td>Lookup results only: business entities, environments, parameters, tasks, execution status. Nothing is prepared or started.</td>
-</tr>
-</tbody>
-</table>
-
-In chat and the REST API, the agent works out the Business Entity, the environments and the action, picks an existing task and builds its override. The MCP tools are read-only lookups; they never prepare or start an execution.
-
-### Core Control Principle: It Prepares, It Never Executes
-
-<table>
-<thead>
-<tr>
-<th>The agent will</th>
-<th>The agent will not</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Reuse existing, administrator-defined TDM tasks</td>
-<td>Create new tasks from scratch</td>
-</tr>
-<tr>
-<td>Prepare a task execution with overrides</td>
-<td>Start an execution — a user clicks the link</td>
-</tr>
-<tr>
-<td>Ask when the entity, environment or action is ambiguous</td>
-<td>Guess an environment from its type</td>
-</tr>
-<tr>
-<td>Explain each condition it will select by</td>
-<td>Show raw override JSON or internal IDs</td>
-</tr>
-</tbody>
-</table>
-
-Every data movement therefore still passes through TDM's existing task permissions, environment permissions and execution controls.
-
-
-
-## Architecture
-
-The TDM Agent is a set of AI Fusion agents and Broadway tool flows deployed on the customer's own K2view Fabric, beside TDM. It adds no new external service. The only outbound call is to the LLM provider the customer configures.
-
-![TDM Agent architecture on K2view Fabric](images/tdm_agent_architecture.svg)
-
-Requests enter only through authenticated Fabric web services and MCP. The agents reach TDM only through allow-listed tool flows. Data moves between environments only when a person starts the prepared TDM execution.
-
-<table>
-<thead>
-<tr>
-<th>Layer</th>
-<th>Components</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Clients</strong></td>
-<td>TDM chat UI; CI or test-management tools through the REST API; MCP clients</td>
-</tr>
-<tr>
-<td><strong>Access</strong></td>
-<td>Fabric web services and MCP servers, Fabric authentication and RBAC</td>
-</tr>
-<tr>
-<td><strong>Agents</strong></td>
-<td>Specialized AI Fusion agents for request handling, task search and override building, deployed in the TDM Data Product</td>
-</tr>
-<tr>
-<td><strong>Tools</strong></td>
-<td>A fixed set of tools to search tasks, read task and parameter definitions, check execution status and prepare a draft execution (allow-listed per agent)</td>
-</tr>
-<tr>
-<td><strong>TDM</strong></td>
-<td>Task catalog, environments, draft executions, permissions, execution engine</td>
-</tr>
-<tr>
-<td><strong>Platform</strong></td>
-<td>K2view Fabric: flow engine, background jobs, secret manager, LLM interfaces</td>
-</tr>
-<tr>
-<td><strong>Storage</strong></td>
-<td>Conversation traces, session records, API requests and draft executions, all in the customer's Fabric and TDM databases</td>
-</tr>
-</tbody>
-</table>
-
-
-
-## Agentic Flow
-
-Each chat or REST API request passes through a fixed chain of specialized agents. A trusted hook sets the scope, the LLM works only through allow-listed tools, and the run always ends at a draft that a person must start.
-
-![TDM Agent agentic flow](images/tdm_agent_flow.svg)
-
-In chat, when several good matches exist, they are shown to the user to choose from. Through the REST API, each test case runs as its own audited session and never asks questions. It ends READY with a review link, or FAILED with the agent's reasoning.
+For the components and the request flow, see [TDM Agent Architecture](02_tdm_agent_architecture.md).
 
 
 
@@ -284,7 +153,7 @@ The agent has no privileges of its own. It runs as the calling user, cannot run 
 
 Prompt rules (never execute, never reveal override JSON) are a second layer. The hard boundaries are the tool allow-list, the hooks and TDM's own permissions.
 
-**MCP access.** Fabric exposes each deployed Data Product as an MCP server, and this is enabled by default. MCP clients authenticate with the same Fabric methods as the web services, and Fabric RBAC authorizes them at Data Product and entity-instance level. Permissions cannot be set per tool. The TDM MCP tools are read-only, and task search returns only tasks in groups the user may see. See [TDM MCP Tools](03_tdm_agent_mcp_tools.md) and [Data Product MCP](/articles/46_MCP/README.md).
+**MCP access.** Fabric exposes each deployed Data Product as an MCP server, and this is enabled by default. MCP clients authenticate with the same Fabric methods as the web services, and Fabric RBAC authorizes them at Data Product and entity-instance level. Permissions cannot be set per tool. The TDM MCP tools are read-only, and task search returns only tasks in groups the user may see. See [TDM MCP Tools](04_tdm_agent_mcp_tools.md) and [Data Product MCP](/articles/46_MCP/README.md).
 
 
 
@@ -427,14 +296,14 @@ K2view delivers the agent and its built-in controls. The customer owns the deplo
 ## Related Articles
 
 - [TDM Agent Overview](01_tdm_agent_overview.md)
-- [Invoking the TDM Agent via API](02_tdm_agent_api.md)
-- [TDM MCP Tools](03_tdm_agent_mcp_tools.md)
+- [TDM Agent Architecture](02_tdm_agent_architecture.md)
+- [Invoking the TDM Agent via API](03_tdm_agent_api.md)
+- [TDM MCP Tools](04_tdm_agent_mcp_tools.md)
 - [AI Fusion Security and Privacy](/articles/AI_fusion/02_agents/11_security_and_privacy.md)
-- [AI Fusion Architecture](/articles/AI_fusion/03_architecture.md)
 - [Fabric Security Overview](/articles/26_fabric_security/01_fabric_security_overview.md)
 - [Data Product MCP](/articles/46_MCP/README.md)
 - [TDM Permission Group Mapping](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md)
 
 
 
-[![Previous](/articles/images/Previous.png)](03_tdm_agent_mcp_tools.md)
+[![Previous](/articles/images/Previous.png)](04_tdm_agent_mcp_tools.md)

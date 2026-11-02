@@ -81,8 +81,8 @@ See [Data Product MCP](/articles/46_MCP/README.md) for the MCP server URL patter
 - **Data and LLM** - The tool results are returned to the MCP client and processed by the client's own LLM, not by the LLM interface defined in Fabric. The customer's policy for that AI client applies.
 - **Enabling** - Fabric MCP is enabled by default. It can be turned off with the <code>ENABLE_MCP_SERVLET</code> setting in <code>config.ini</code>. See [MCP Operations](/articles/46_MCP/03_data-product-mcp-operations.md).
 
-For the full security model of the TDM Agent, see [TDM Agent Architecture and Security](04_tdm_agent_architecture_and_security.md).
+For the full security model of the TDM Agent, see [TDM Agent Security and Privacy](05_tdm_agent_security_and_privacy.md).
 
 
 
-[![Previous](/articles/images/Previous.png)](02_tdm_agent_api.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_tdm_agent_architecture_and_security.md)
+[![Previous](/articles/images/Previous.png)](03_tdm_agent_api.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_tdm_agent_security_and_privacy.md)

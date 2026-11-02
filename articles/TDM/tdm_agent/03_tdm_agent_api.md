@@ -210,4 +210,4 @@ The status API reports on the preparation only. It does not report on executions
 
 
 
-[![Previous](/articles/images/Previous.png)](01_tdm_agent_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_tdm_agent_mcp_tools.md)
+[![Previous](/articles/images/Previous.png)](02_tdm_agent_architecture.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_tdm_agent_mcp_tools.md)
