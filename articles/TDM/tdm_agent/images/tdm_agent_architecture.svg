@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 652" width="760" height="652" role="img" aria-label="The TDM Agent runs inside the customer's Fabric" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13">
+  <defs>
+    <marker id="arch-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+  <rect width="760" height="652" fill="#ffffff"/>
+
+  <text x="24" y="30" font-size="15" font-weight="600" fill="#1f2328">The TDM Agent runs inside the customer's Fabric</text>
+  <text x="24" y="50" font-size="11.5" fill="#5b6169">Customer-hosted deployment, LLM provider chosen by the customer</text>
+
+  <g fill="none" stroke="#9aa0a6" stroke-width="1.25">
+    <path d="M136 128V152" marker-end="url(#arch-arrow)"/>
+    <path d="M380 128V152" marker-end="url(#arch-arrow)"/>
+    <path d="M624 128V152" marker-end="url(#arch-arrow)"/>
+    <path d="M414 192V256" marker-end="url(#arch-arrow)"/>
+    <path d="M284 308H268" marker-end="url(#arch-arrow)"/>
+    <path d="M414 360V384" marker-end="url(#arch-arrow)"/>
+    <path d="M544 290H576" marker-start="url(#arch-arrow)" marker-end="url(#arch-arrow)"/>
+    <path d="M292 540V572" stroke-dasharray="4 4" marker-end="url(#arch-arrow)"/>
+  </g>
+
+  <!-- Clients -->
+  <rect x="24" y="72" width="224" height="56" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="36" y="96" font-weight="600" fill="#1f2328">Tester or developer</text>
+  <text x="36" y="114" font-size="11.5" fill="#5b6169">Chat in the TDM UI</text>
+
+  <rect x="268" y="72" width="224" height="56" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="280" y="96" font-weight="600" fill="#1f2328">CI or test-management tool</text>
+  <text x="280" y="114" font-size="11.5" fill="#5b6169">REST API: createTask, job status</text>
+
+  <rect x="512" y="72" width="224" height="56" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="524" y="96" font-weight="600" fill="#1f2328">MCP client</text>
+  <text x="524" y="114" font-size="11.5" fill="#5b6169">Read-only lookups; own LLM</text>
+
+  <!-- Access -->
+  <rect x="24" y="152" width="712" height="40" rx="8" fill="#f0f0ee" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="380" y="176" text-anchor="middle" fill="#1f2328">Fabric web services and MCP: authentication (SSO/OAuth, JWT, API key) and role-based access</text>
+
+  <!-- Fabric platform -->
+  <rect x="24" y="216" width="536" height="324" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25" stroke-dasharray="6 4"/>
+  <text x="36" y="240" font-weight="600" fill="#1f2328">K2view Fabric platform (customer environment)</text>
+
+  <rect x="40" y="256" width="228" height="104" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="52" y="280" font-weight="600" fill="#1f2328">Audit and traces</text>
+  <text x="52" y="296" font-size="11.5" fill="#5b6169">Session trace (aifusion LU)</text>
+  <text x="52" y="312" font-size="11.5" fill="#5b6169">Insights DB: who, when, agent</text>
+  <text x="52" y="328" font-size="11.5" fill="#5b6169">API requests and cases (TDM DB)</text>
+
+  <rect x="284" y="256" width="260" height="104" rx="8" fill="#1f6fd1" fill-opacity="0.12" stroke="#1f6fd1" stroke-width="2"/>
+  <text x="296" y="280" font-weight="600" fill="#1f2328">AI Fusion agent runtime</text>
+  <text x="296" y="296" font-size="11.5" fill="#1f2328">Specialized TDM agents</text>
+  <text x="296" y="312" font-size="11.5" fill="#1f2328">Serve chat and REST API requests</text>
+  <text x="296" y="328" font-size="11.5" fill="#1f2328">Tool allow-list, hooks, limits</text>
+  <text x="296" y="344" font-size="11.5" fill="#1f2328">No SQL or Fabric-command tools</text>
+
+  <text x="422" y="378" font-size="11.5" fill="#5b6169">tool flows</text>
+
+  <rect x="40" y="384" width="504" height="88" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="52" y="408" font-weight="600" fill="#1f2328">K2view TDM</text>
+  <text x="52" y="424" font-size="11.5" fill="#5b6169">Task catalog, business parameters, environments</text>
+  <text x="52" y="440" font-size="11.5" fill="#5b6169">AI-prepared draft executions (never started by the agent)</text>
+  <text x="52" y="456" font-size="11.5" fill="#5b6169">TDM permissions and execution engine</text>
+
+  <rect x="40" y="488" width="504" height="36" rx="8" fill="#f0f0ee" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="292" y="510" text-anchor="middle" font-size="11.5" fill="#1f2328">Fabric core: Broadway flows, background jobs, secret manager, Data Products</text>
+
+  <!-- LLM -->
+  <rect x="576" y="256" width="160" height="136" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="588" y="280" font-weight="600" fill="#1f2328">LLM provider</text>
+  <text x="588" y="296" font-size="11.5" fill="#1f2328">Customer-selected:</text>
+  <text x="588" y="312" font-size="11.5" fill="#1f2328">Bedrock, Azure OpenAI,</text>
+  <text x="588" y="328" font-size="11.5" fill="#1f2328">Anthropic, Google,</text>
+  <text x="588" y="344" font-size="11.5" fill="#1f2328">or self-hosted</text>
+  <text x="588" y="368" font-size="11.5" fill="#5b6169">Gets task metadata,</text>
+  <text x="588" y="384" font-size="11.5" fill="#5b6169">value lists, not rows</text>
+
+  <!-- Environments -->
+  <text x="300" y="560" font-size="11.5" fill="#5b6169">only when a user starts the execution</text>
+  <rect x="24" y="572" width="536" height="56" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="36" y="596" font-weight="600" fill="#1f2328">Source and target environments</text>
+  <text x="36" y="614" font-size="11.5" fill="#5b6169">Production, UAT, QA: data moves only through a TDM execution</text>
+</svg>
