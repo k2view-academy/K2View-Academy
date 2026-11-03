@@ -110,7 +110,9 @@ The agent has no privileges of its own. It runs as the calling user, cannot run 
 </tr>
 <tr>
 <td><strong>TDM permissions</strong></td>
-<td>Task search applies the user's TDM permission group. Starting an execution goes through TDM's normal role and environment checks.</td>
+<td>Task search applies the user's TDM permission group. Starting an execution goes through TDM's normal role and environment checks.
+
+See <a href="/articles/TDM/tdm_gui/02_tdm_gui_user_types.md">Permission Groups (User Types)</a> and <a href="/articles/TDM/tdm_gui/10_environment_roles_tab.md">Environment Permission Sets Tab</a> for more information about the TDM permissions. </td>
 </tr>
 <tr>
 <td><strong>API identity</strong></td>
