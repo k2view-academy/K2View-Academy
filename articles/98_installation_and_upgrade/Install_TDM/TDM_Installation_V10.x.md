@@ -210,7 +210,7 @@ Click [here](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing
 
 The **TDM Agent** is an AI-assisted task search capability available in the **TDM App**. It makes it easier to find and prepare TDM tasks using natural language.
 
-Click [here](/articles/TDM/tdm_gui/14_tdm_agent.md#installation) for installation steps.
+Click [here](/articles/TDM/tdm_agent/01_tdm_agent_overview.md#installation) for installation steps.
 
 ## Git Best Practices
 

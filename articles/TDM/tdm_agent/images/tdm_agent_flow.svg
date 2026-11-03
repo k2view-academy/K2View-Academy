@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 744" width="760" height="744" role="img" aria-label="The agent prepares the execution; a person starts it" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13">
+  <defs>
+    <marker id="flow-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+  <rect width="760" height="744" fill="#ffffff"/>
+
+  <text x="24" y="30" font-size="15" font-weight="600" fill="#1f2328">The agent prepares the execution; a person starts it</text>
+  <text x="24" y="50" font-size="11.5" fill="#5b6169">One request, from chat or a REST API test case. Every step is recorded in the session trace.</text>
+
+  <g fill="none" stroke="#9aa0a6" stroke-width="1.25">
+    <path d="M380 144V168" marker-end="url(#flow-arrow)"/>
+    <path d="M380 240V264" marker-end="url(#flow-arrow)"/>
+    <path d="M380 336V360" marker-end="url(#flow-arrow)"/>
+    <path d="M380 432V456" marker-end="url(#flow-arrow)"/>
+    <path d="M380 528V552" marker-end="url(#flow-arrow)"/>
+    <path d="M380 624V648" marker-end="url(#flow-arrow)"/>
+    <path d="M156 300H180" marker-start="url(#flow-arrow)" marker-end="url(#flow-arrow)"/>
+    <path d="M156 396H180" marker-start="url(#flow-arrow)" marker-end="url(#flow-arrow)"/>
+    <path d="M156 492H180" marker-start="url(#flow-arrow)" marker-end="url(#flow-arrow)"/>
+    <path d="M156 588H180" marker-start="url(#flow-arrow)" marker-end="url(#flow-arrow)"/>
+    <path d="M580 300H604" stroke-dasharray="4 3" marker-end="url(#flow-arrow)"/>
+    <path d="M580 396H604" stroke-dasharray="4 3" marker-end="url(#flow-arrow)"/>
+  </g>
+
+  <!-- LLM -->
+  <rect x="24" y="264" width="132" height="360" rx="8" fill="#f0f0ee" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="36" y="288" font-weight="600" fill="#1f2328">LLM</text>
+  <text x="36" y="306" font-size="11.5" fill="#1f2328">Customer-selected</text>
+  <text x="36" y="322" font-size="11.5" fill="#1f2328">provider</text>
+  <text x="36" y="346" font-size="11.5" fill="#5b6169">Sees metadata,</text>
+  <text x="36" y="362" font-size="11.5" fill="#5b6169">value lists and</text>
+  <text x="36" y="378" font-size="11.5" fill="#5b6169">counts, never</text>
+  <text x="36" y="394" font-size="11.5" fill="#5b6169">source rows</text>
+
+  <!-- Steps -->
+  <rect x="180" y="72" width="400" height="72" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="192" y="96" font-weight="600" fill="#1f2328">1  Request arrives</text>
+  <text x="192" y="114" font-size="11.5" fill="#5b6169">Chat message, or one test case from the REST API</text>
+  <text x="192" y="130" font-size="11.5" fill="#5b6169">Authenticated user; API cases run as the submitter</text>
+
+  <rect x="180" y="168" width="400" height="72" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="192" y="192" font-weight="600" fill="#1f2328">2  Scope and trusted context</text>
+  <text x="192" y="210" font-size="11.5" fill="#5b6169">A hook injects Business Entities, environments and</text>
+  <text x="192" y="226" font-size="11.5" fill="#5b6169">the user's own memories; the model does not choose them</text>
+
+  <rect x="180" y="264" width="400" height="72" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="192" y="288" font-weight="600" fill="#1f2328">3  Resolve the request</text>
+  <text x="192" y="306" font-size="11.5" fill="#5b6169">Business Entity, source and target environment, action</text>
+  <text x="192" y="322" font-size="11.5" fill="#5b6169">Never guesses an environment from its type</text>
+
+  <rect x="180" y="360" width="400" height="72" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="192" y="384" font-weight="600" fill="#1f2328">4  Find candidate tasks</text>
+  <text x="192" y="402" font-size="11.5" fill="#5b6169">Searches only tasks in the user's TDM permission group</text>
+  <text x="192" y="418" font-size="11.5" fill="#5b6169">Ranks them HIGH or MEDIUM; one HIGH match proceeds</text>
+
+  <rect x="180" y="456" width="400" height="72" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="192" y="480" font-weight="600" fill="#1f2328">5  Build the override</text>
+  <text x="192" y="498" font-size="11.5" fill="#5b6169">Edits business-parameter conditions, counts entities</text>
+  <text x="192" y="514" font-size="11.5" fill="#5b6169">A pre-tool hook blocks an incomplete preparation</text>
+
+  <rect x="180" y="552" width="400" height="72" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="192" y="576" font-weight="600" fill="#1f2328">6  Prepare and report</text>
+  <text x="192" y="594" font-size="11.5" fill="#5b6169">Writes one draft execution, then the run stops</text>
+  <text x="192" y="610" font-size="11.5" fill="#5b6169">Plain-English reasoning plus review and run links</text>
+
+  <rect x="180" y="648" width="400" height="72" rx="8" fill="#1f6fd1" fill-opacity="0.12" stroke="#1f6fd1" stroke-width="2"/>
+  <text x="192" y="672" font-weight="600" fill="#1f2328">7  A person reviews and starts the run</text>
+  <text x="192" y="690" font-size="11.5" fill="#1f2328">In TDM, with TDM's role and environment checks</text>
+  <text x="192" y="706" font-size="11.5" fill="#1f2328">The agent never starts an execution</text>
+
+  <!-- Exits -->
+  <rect x="604" y="264" width="132" height="72" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25" stroke-dasharray="4 3"/>
+  <text x="616" y="288" font-weight="600" fill="#1f2328">Ambiguous</text>
+  <text x="616" y="306" font-size="11.5" fill="#5b6169">Chat: ask the user</text>
+  <text x="616" y="322" font-size="11.5" fill="#5b6169">API: case fails</text>
+
+  <rect x="604" y="360" width="132" height="72" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25" stroke-dasharray="4 3"/>
+  <text x="616" y="384" font-weight="600" fill="#1f2328">No usable task</text>
+  <text x="616" y="402" font-size="11.5" fill="#5b6169">Explain what to</text>
+  <text x="616" y="418" font-size="11.5" fill="#5b6169">change, then stop</text>
+</svg>

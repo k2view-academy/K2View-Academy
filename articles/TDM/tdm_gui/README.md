@@ -17,7 +17,7 @@
 <li><a href="13_reserved_entities_window.md">Reserved Entities Window</a></li>  
 <li><a href="14_task_overview.md">TDM Task Overview</a></li>
 <li><a href="14_task_management_window.md">Task Management Window</a></li>
-<li><a href="14_tdm_agent.md">TDM Agent - AI Helper</a></li>    
+<li><a href="/articles/TDM/tdm_agent/README.md">TDM Agent - AI Helper</a></li>    
 <li><a href="14_task_components.md">Task Components</a></li>    
 <li><a href="14a_task_source_component.md">Task - Source Component</a></li>  
 <li><a href="15_task_subset_component.md">Task - Subset Component</a></li>  
