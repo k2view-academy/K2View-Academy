@@ -31,7 +31,7 @@
 
   <rect x="512" y="72" width="224" height="56" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
   <text x="524" y="96" font-weight="600" fill="#1f2328">MCP client</text>
-  <text x="524" y="114" font-size="11.5" fill="#5b6169">Read-only lookups; own LLM</text>
+  <text x="524" y="114" font-size="11.5" fill="#5b6169">Lookups and executions; own LLM</text>
 
   <!-- Access -->
   <rect x="24" y="152" width="712" height="40" rx="8" fill="#f0f0ee" stroke="#9aa0a6" stroke-width="1.25"/>

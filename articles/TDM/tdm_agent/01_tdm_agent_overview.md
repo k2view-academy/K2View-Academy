@@ -34,7 +34,7 @@ The TDM Agent can be used through the following channels:
     <tr>
       <td><strong>MCP tools</strong></td>
       <td>MCP clients, such as AI assistants and IDEs</td>
-      <td>Read-only TDM lookups: Business Entities, environments, parameters, tasks and execution status. See <a href="04_tdm_agent_mcp_tools.md">TDM MCP Tools</a>.</td>
+      <td>TDM lookups (Business Entities, environments, parameters, tasks and execution status), and tools to save an execution draft and start a task execution. See <a href="04_tdm_agent_mcp_tools.md">TDM MCP Tools</a>.</td>
     </tr>
   </tbody>
 </table>

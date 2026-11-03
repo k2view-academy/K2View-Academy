@@ -82,7 +82,7 @@ The LLM sees TDM configuration and selection metadata, plus value lists and coun
 
 With a private endpoint or a self-hosted model, no data leaves the customer's network. K2view does not host or proxy the LLM traffic. See [LLM Connectors](/articles/AI_fusion/02_agents/10_llm_connectors.md).
 
-**MCP tools.** Results returned to an MCP client go to that client's own model, not to the LLM configured in Fabric. They are the same kinds of lookup results listed in the table above. The customer's policy for that AI client applies.
+**MCP tools.** Results returned to an MCP client go to that client's own model, not to the LLM configured in Fabric. They are the same kinds of lookup results listed in the table above, plus draft and execution results. The customer's policy for that AI client applies.
 
 **Reducing exposure further.** Value examples come from business-parameter definitions. If parameter values are sensitive (for example, if they hold personal identifiers), mask them in the parameter definition or exclude them from the parameter list.
 
@@ -155,7 +155,7 @@ See <a href="/articles/TDM/tdm_gui/02_tdm_gui_user_types.md">Permission Groups (
 
 Prompt rules (never execute, never reveal override JSON) are a second layer. The hard boundaries are the tool allow-list, the hooks and TDM's own permissions.
 
-**MCP access.** Fabric exposes each deployed Data Product as an MCP server, and this is enabled by default. MCP clients authenticate with the same Fabric methods as the web services, and Fabric RBAC authorizes them at Data Product and entity-instance level. Permissions cannot be set per tool. The TDM MCP tools are read-only, and task search returns only tasks in groups the user may see. See [TDM MCP Tools](04_tdm_agent_mcp_tools.md) and [Data Product MCP](/articles/46_MCP/README.md).
+**MCP access.** Fabric exposes each deployed Data Product as an MCP server, and this is enabled by default. MCP clients authenticate with the same Fabric methods as the web services, and Fabric RBAC authorizes them at Data Product and entity-instance level. Permissions cannot be set per tool. Most TDM MCP tools are read-only lookups, and task search returns only tasks in groups the user may see. Two tools act: **CreateExecutionDraft** saves an execution draft, and **StartTaskExecution** starts a task execution. A started execution runs with the calling user's identity and passes TDM's permission and execution validations. Because permissions cannot be set per tool, any role with MCP access to the TDM LU can start the executions its TDM permissions allow. See [TDM MCP Tools](04_tdm_agent_mcp_tools.md) and [Data Product MCP](/articles/46_MCP/README.md).
 
 
 
@@ -278,8 +278,8 @@ K2view delivers the agent and its built-in controls. The customer owns the deplo
 </tr>
 <tr>
 <td>Running executions</td>
-<td>Never starts them</td>
-<td>Reviews and starts each execution</td>
+<td>The agent never starts them; the MCP StartTaskExecution tool starts them only on a client's request</td>
+<td>Reviews and starts each execution, and decides which roles and AI clients may start executions through MCP</td>
 </tr>
 </tbody>
 </table>
@@ -289,7 +289,7 @@ K2view delivers the agent and its built-in controls. The customer owns the deplo
 1. Use a private or in-region LLM endpoint (for example Bedrock in the customer's AWS account or Azure OpenAI), or a self-hosted model.
 2. Grant the chat and `test-data-agent/*` web services only to tester and pipeline roles. Limit trace and observation endpoints to operators.
 3. Give each CI pipeline or test-management tool that calls the REST API its own Fabric user or API key, with only the REST API role. Its requests are then traceable to that tool and can be revoked separately.
-4. Turn off Fabric MCP if it is not used. Otherwise, give MCP access to the TDM Data Product only to approved roles and approved AI clients.
+4. Turn off Fabric MCP if it is not used. Otherwise, give MCP access to the TDM Data Product only to approved roles and approved AI clients. MCP access includes the **StartTaskExecution** tool, which runs tasks.
 5. Review which business parameters expose value lists. Mask or remove any that hold personal data.
 6. Set the retention window to match the customer's policy, and turn on the cleanup schedule.
 

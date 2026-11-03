@@ -37,6 +37,8 @@ For the data sent to the LLM and the security controls, see [TDM Agent Security 
 
 Every data movement therefore still passes through TDM's existing task permissions, environment permissions and execution controls.
 
+This principle applies to the TDM Agent in chat and through the REST API. The [TDM MCP tools](04_tdm_agent_mcp_tools.md) are a separate channel: an MCP client can also start a task execution with the **StartTaskExecution** tool, under the same TDM permissions and execution validations.
+
 
 
 ## Components
@@ -45,7 +47,7 @@ The TDM Agent is a set of AI Fusion agents and Broadway tool flows deployed on t
 
 ![TDM Agent architecture on K2view Fabric](images/tdm_agent_architecture.svg)
 
-Requests enter only through authenticated Fabric web services and MCP. The agents reach TDM only through allow-listed tool flows. Data moves between environments only when a person starts the prepared TDM execution.
+Requests enter only through authenticated Fabric web services and MCP. The agents reach TDM only through allow-listed tool flows. Data moves between environments only through a TDM execution: started by a person from the prepared draft, or by an MCP client through the StartTaskExecution tool.
 
 <table>
 <thead>
