@@ -6,7 +6,6 @@
 - [K2cloud Deployment Models](#k2cloud-deployment-models)
 - [Upgrade Workflow](#upgrade-workflow)
 - [At A Glance](#at-a-glance)
-- [Video Walkthrough](#video-walkthrough)
 - [Related Upgrade Procedures](#related-upgrade-procedures)
 
 ## Overview
@@ -80,12 +79,6 @@ The K2cloud upgrade workflow consists of the following steps:
 4. **Validate the upgrade** — Validate the upgraded Space before progressing the release through additional environments.
 5. **Rollback if necessary** — If a prior Fabric Image version remains available, K2cloud supports rollback using the same Space upgrade workflow.
 6. 
-
-## Video Walkthrough
-
-You can get an overview of the K2cloud upgrade capabilities at:
-
-https://download.k2view.com/index.php/s/3rgZczMc6eEOU7t
 
 
 ## Related Upgrade Procedures
