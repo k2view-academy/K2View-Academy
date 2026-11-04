@@ -1,4 +1,4 @@
-# Using the TDM Agent in the TDM App
+# Using the TDM Agent in the TDM Portal App
 
 This article describes how testers use the TDM Agent chat in the TDM App: opening the **AI Helper**, writing a request, reviewing the proposed task, and saving or executing the prepared execution.
 
