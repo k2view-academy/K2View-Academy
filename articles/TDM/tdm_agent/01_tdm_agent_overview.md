@@ -24,7 +24,7 @@ The TDM Agent can be used through the following channels:
     <tr>
       <td><strong>Chat in the TDM App</strong></td>
       <td>Testers and developers</td>
-      <td>Describe a data need in the chat, for example "I need 6 VIP customers with an address in New York City". Described in this article.</td>
+      <td>Describe a data need in the chat, for example "I need 6 VIP customers with an address in New York City". See <a href="06_tdm_agent_ui.md">Using the TDM Agent in the TDM App</a>.</td>
     </tr>
     <tr>
       <td><strong>REST API</strong></td>

@@ -308,4 +308,4 @@ K2view delivers the agent and its built-in controls. The customer owns the deplo
 
 
 
-[![Previous](/articles/images/Previous.png)](04_tdm_agent_mcp_tools.md)
+[![Previous](/articles/images/Previous.png)](04_tdm_agent_mcp_tools.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_tdm_agent_ui.md)
