@@ -94,7 +94,12 @@
 				{
 					"display name": "TDM Configuration",
 					"value": "TDM/tdm_configuration"
+				},
+				{
+					"display name": "TDM Agent",
+					"value": "TDM/tdm_agent"
 				}
+				
 			]
 		},
 		{
