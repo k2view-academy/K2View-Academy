@@ -16,7 +16,7 @@ The table below displays the various TDM versions, each with its compatible Fabr
     </thead>
     <tbody>
         <tr>
-            <td align="left"><a href="/Release_Notes/TDM-V10.1/TDM_Release_Notes_V10_1.pdf">10.1.1</a></td>
+            <td align="left"><a href="/Release_Notes/TDM-V10.1/TDM_Release_Notes_V10_1_1.pdf">10.1.1</a></td>
             <td>Nov 5, 2026</td>
             <td></td>
             <td>8.5.3</td>
