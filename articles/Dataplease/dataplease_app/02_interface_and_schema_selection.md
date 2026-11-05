@@ -6,7 +6,7 @@ The Dataplease flow starts with the data source. The user selects a Fabric inter
 
 <img src="../images/dataplease_interface_list.jpg" style="zoom:75%;" />
 
-The **Where would you like your data?** screen shows the available interfaces as cards. Each card shows the interface name and the interface type, for example `SQLite (Db)`, `SqlServer (Db)` or `PostgreSQL (Db)`. The **Total** counter shows the number of interfaces.
+The **Where would you like your data?** screen shows the available interfaces as cards. Each card shows the interface name and the interface type, for example SQLite (Db), SqlServer (Db) or PostgreSQL (Db). The **Total** counter shows the number of interfaces.
 
 In the MVP, Dataplease supports only relational databases that have a JDBC driver, for example Oracle, PostgreSQL, IBM Db2 and Microsoft SQL Server.
 
