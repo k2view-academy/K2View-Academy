@@ -566,21 +566,25 @@
 			]
 		},
 		{
-			"group display name": "Dataplease",
-			"group icon": "images/dataplease_icon.png",
+			"group display name": "Verify",
+			"group icon": "images/verify-icon.png",
 			"visible in main": true,
 			"topics": [
 				{
-					"display name": "Dataplease Overview",
-					"value": "Dataplease"
+					"display name": "Verify Overview",
+					"value": "k2verify"
 				},
 				{
-					"display name": "Dataplease App",
-					"value": "Dataplease/dataplease_app"
+					"display name": "Verify Configuration",
+					"value": "k2verify/k2verify_01_configurations"
 				},
 				{
-					"display name": "Dataplease Assistant",
-					"value": "Dataplease/dataplease_assistantdataplease_assistant"
+					"display name": "Verify Advanced Customizations",
+					"value": "k2verify/k2verify_02_customized_implementation"
+				},
+				{
+					"display name": "Verify Execution & Results",
+					"value": "k2verify/k2verify_03_execution"
 				}
 			]
 		}
