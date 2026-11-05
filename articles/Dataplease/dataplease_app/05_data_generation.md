@@ -8,8 +8,8 @@ In this step, the [Dataplease AI Agent](../dataplease_assistant/01_dataplease_as
 
 The progress bar at the top of the screen shows three stages:
 
-1. **Building story** - The Agent creates the data story from the user request. Refer to [Selecting the Datasets](04_selecting_the_datasets.md).
-2. **Generating** - The Agent generates the data for each dataset.
+1. **Building story** - The agent creates the data story from the user request. Refer to [Selecting the Datasets](04_selecting_the_datasets.md).
+2. **Generating** - The agent generates the data for each dataset.
 3. **Completed** - The generation is complete.
 
 The table shows one row for each dataset, with these columns:
@@ -20,7 +20,7 @@ The table shows one row for each dataset, with these columns:
 
 The summary panel shows the **Execution status**, **Start time**, **Total datasets**, **Total rows**, **Duration** and **End time**.
 
-The Assistant panel shows the user request and the response of the Agent. The response includes the reasoning steps of the Agent and a summary of the data story.
+The Assistant panel shows the user request and the response of the agent. The response includes the reasoning steps of the agent and a summary of the data story.
 
 To stop the generation, click **Abort generation**.
 

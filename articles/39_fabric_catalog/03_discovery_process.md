@@ -1,4 +1,4 @@
-# E2E Discovery Process
+# End-to-end Discovery Process
 
 The K2view Discovery solution is depicted in the below diagram and it includes the following major steps:
 

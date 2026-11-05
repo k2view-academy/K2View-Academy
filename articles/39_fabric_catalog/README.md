@@ -3,7 +3,7 @@
 <ul>
 	<li><a href="/articles/39_fabric_catalog/01_catalog_overview.md">Fabric Catalog Overview</a></li>
 	<li><a href="/articles/39_fabric_catalog/02_catalog_vocabulary.md">Catalog Vocabulary</a></li>
-	<li><a href="/articles/39_fabric_catalog/03_discovery_process.md">E2E Discovery Process</a></li>
+	<li><a href="/articles/39_fabric_catalog/03_discovery_process.md">End-to-end Discovery Process</a></li>
 	<li><a href="/articles/39_fabric_catalog/04_discovery_pipeline.md">Discovery Pipeline</a></li>
 	<li><a href="/articles/39_fabric_catalog/05_cataloging_of_files.md">File Cataloging</a></li>
 	<li><a href="/articles/39_fabric_catalog/06_open_api_support.md">OpenAPI Support</a></li>

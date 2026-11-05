@@ -40,6 +40,6 @@ The full Discovery job can also fail, for example when Fabric cannot connect to 
 
 <img src="../images/dataplease_discovery_failed.jpg" style="zoom:75%;" />
 
-If an earlier Catalog version exists, click **Use existing** to continue with it. **Continue** is not available, because the scan did not create a new Catalog version.
+If an earlier Catalog version exists, click **Use existing** to continue with it, otherwise click **Re-scan**. 
 
 When a Catalog version is available, the flow continues to [Selecting the Datasets](04_selecting_the_datasets.md).

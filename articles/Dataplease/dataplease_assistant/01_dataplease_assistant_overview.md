@@ -33,7 +33,7 @@ The Dataplease AI Agent is an orchestrator that operates two sub-agents:
 * **Catalog sub-agent** – Answers questions about the Catalog metadata of the selected datasets. It also creates the business summary of the schema, and updates this summary automatically when it is out of date. The data story uses this summary.
 * **Synthetic Data Generation sub-agent** – Generates the synthetic data for the selected datasets. The generation is based on the data story and the Catalog metadata. Dataplease saves the generated data in the staging DB.
 
-### Communicating with the Agent
+### Communicating with the agent
 
 After the agent starts, the user can write requests in natural language. The agent handles two types of requests:
 
