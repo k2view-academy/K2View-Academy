@@ -16,19 +16,13 @@ For compatibility with Fabric and with the other AI Fusion extensions, see [AI V
 <a id="v1.0.2"></a>
 ## Version 1.0.2
 
-**Released:** November 6, 2026 · **Minimum Fabric version:** 8.5.2 · **Requires:** aifusion 3.0.9 for conversation-level evaluation, eval hooks and `additional_context`
+**Released:** November 6, 2026 · **Minimum Fabric version:** 8.5.2 · **Requires:** aifusion 3.0.9
 
-- **Conversation-level evaluation.** An eval case can be judged on the whole conversation, not only step by step. In the eval case editor:
-  - **Evaluate on** chooses Step level, Conversation level or both. New cases — from **New Eval Suite...**, **New Test...** and **Save as test case** — default to Conversation level and start without criteria; add criteria before running them. (Cases created by the Studio AI test generator are evaluated at step level.)
-  - A criteria editor, with **Ask AI**, for the conversation-level criteria. Ask AI proposes criteria, which you approve, modify or deny. A warning appears while the conversation level is on and has no criteria; such a case fails with a note.
-  - Properties are collapsible sections with a toggle per level. The last level that is on cannot be switched off.
-  - The Evaluation tab has a Step level box and a Conversation level box. Each criterion shows met, partial or missed; click it to see the judge's note and the turns it cites, and click a turn to jump to it in the transcript.
-  - Eval CSV files get two new columns, `eval_mode` and `conv_criteria`. Older step-only files open and save unchanged.
-- **Eval hooks.** A **Run hooks** section in the Definition tab runs Broadway flows before and after an eval case (`before_hooks`, `after_hooks` columns). Pick a flow from the drop-down, open it, or drag to reorder. The Evaluation tab shows the overall verdict and a chip per hook; click a chip to see its status, message and output.
-- **Analyze from the Eval Editor** also sends the unmet conversation criteria to Studio AI.
-- **AI Explorer:** an orange bullet now also marks a test case whose conversation criteria were not met, whose after hook failed, or that was not evaluated.
-- **`step_start` hook:** the Hooks card and the new-agent template describe the hook's `additional_context` output, which applies to the current turn only, and its `previous_additional_context` input, which holds the previous turn's value so a flow can keep it by returning it again.
-- **Performance thresholds:** the **Customize** toggle on a performance dimension stays on after save and reload. Turning it off restores the default thresholds. Long dimension names wrap instead of pushing the toggle off the panel.
+- **Conversation-level evaluation.** In the Eval Editor, choose whether a test case is evaluated turn by turn, on the whole conversation, or both. For the conversation level, write the criteria the conversation must meet, or let **Ask AI** suggest them. The Evaluation tab shows which criteria were met, with the judge's explanation and links to the relevant turns.
+- **Run hooks.** Add Broadway flows that run before and after a test case, and see the result of each one in the Evaluation tab.
+- **Analyze** in the Eval Editor and the AI Explorer markers now also cover unmet conversation criteria and failed hooks.
+- The Agent Editor describes the new turn-specific context of `step_start` hooks.
+- Fix: a customized performance threshold is kept after saving.
 
 
 
