@@ -2,7 +2,7 @@
 
 Release notes of the **aifusion** extension, versions 1.x. Documentation for this version is in the [legacy section](/articles/AI_fusion/legacy_v1_v2/README.md).
 
-For compatibility with Fabric and with the other AI Fusion extensions, see [AI Fusion Versions](/articles/Product_Versions/AI_Fusion_versions.md).
+For compatibility with Fabric and with the other AI Fusion extensions, see [AI Versions](/articles/Product_Versions/AI_versions.md).
 
 <ul>
 <li><a href="#v1.0.8">1.0.8</a> — January 12, 2026</li>

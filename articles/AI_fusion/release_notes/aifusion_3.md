@@ -2,15 +2,43 @@
 
 Release notes of the **aifusion** extension, versions 3.x. The newest version is listed first.
 
-For compatibility with Fabric and with the other AI Fusion extensions, see [AI Fusion Versions](/articles/Product_Versions/AI_Fusion_versions.md).
+For compatibility with Fabric and with the other AI Fusion extensions, see [AI Versions](/articles/Product_Versions/AI_versions.md).
 
 <ul>
+<li><a href="#v3.0.9">3.0.9</a> — November 5, 2026</li>
 <li><a href="#v3.0.8">3.0.8</a> — October 19, 2026</li>
 <li><a href="#v3.0.7">3.0.7</a> — September 28, 2026</li>
 <li><a href="#v3.0.5">3.0.5</a> — August 24, 2026</li>
 <li><a href="#v3.0.4">3.0.4</a> — August 18, 2026</li>
 <li><a href="#v3.0.0">3.0.0</a> — August 2026</li>
 </ul>
+
+
+
+<a id="v3.0.9"></a>
+## Version 3.0.9
+
+**Released:** November 5, 2026 · **Minimum Fabric version:** 8.5.0 (8.5.2 required for AI Fusion Studio 1.0.2)
+
+After upgrading, redeploy the `aifusion` Data Product (full deploy) and `k2_ws`. The redeploy adds the storage for the per-turn context of `step_start` hooks and enables the results of evaluation hooks.
+
+### Agents
+
+- **Sub-agent questions resume the same sub-agent.** When a sub-agent asks the user a question (`ask_user`), the answer goes back to that sub-agent, which continues with its own history. Before this, the answer went to the parent, which started a new sub-agent from scratch and could repeat the question or reply about work that never happened. This works on both the `task` and `delegate` routes, at any nesting depth, and for the planner's approval question. A `task` sub-agent's question now pauses the turn instead of coming back as its result. A `task` without a named agent (a copy of the main agent) is no longer offered `ask_user`. See [Sub-Agents and Delegation](/articles/AI_fusion/02_agents/06_subagents_and_delegation.md#when-a-sub-agent-asks-the-user).
+- **`step_start` runs on the answer turn.** When the user answers `ask_user`, each agent in the chain runs its `step_start` hook again, so per-request setup such as loading the customer's instance runs before the agent continues. The hook's `query` is the user's answer, and anything it returns is ignored.
+- **Additional context from `step_start`.** A `step_start` hook can return `additional_context`, which is added to the system prompt for the current turn under an `## Additional Context` heading, without rewriting the user's message. The hook receives the previous turn's value as `previous_additional_context` and keeps it by returning it again. See [Hooks and Agent Inputs](/articles/AI_fusion/02_agents/07_hooks_and_inputs.md#additional-context-for-the-turn).
+- **Streaming from hooks, flow tools and nested agents.** Output that a hook flow or flow tool writes to the chat — for example an `LLMInvoke` actor with streaming on — now reaches the client as regular SSE events attributed to the right agent, instead of raw text in the stream. It is not added to the agent's answer. An agent turn run with `AgentInvoke` inside a streaming request streams into the outer stream without ending it. `LLMInvoke` streams reasoning to the chat only when streaming to the chat is on. See [Invoking Agents](/articles/AI_fusion/02_agents/09_invoking_agents.md#the-event-stream).
+- **Rename a chat.** A new web service, `PUT /api/v1/session-name`, sets a chat's display name and overrides the generated name. See [Invoking Agents](/articles/AI_fusion/02_agents/09_invoking_agents.md#rename-a-chat).
+
+### Evaluation
+
+- **Conversation-level evaluation.** A test case can be judged on the whole conversation as well as turn by turn. In the test case definition, choose what to evaluate (step level, conversation level, or both) and write the criteria the conversation must meet as plain sentences; Ask AI can suggest them. In the results, each criterion is marked met, partial or missed, with the judge's note and links to the supporting turns. The conversation level passes only when every criterion is met. Existing test cases keep running at step level. See [Evaluation](/articles/AI_fusion/04_evaluation/README.md).
+- **Run hooks for test cases.** A test case can run Broadway flows before and after it, for example to prepare data, check what the agent did, or clean up. If a before hook fails, the test case is not evaluated. After hooks always run, and if one fails, the test case fails. Redeploy the `aifusion` Data Product to enable hook results.
+- **Fixes.** A customized threshold of a performance dimension is kept after saving. Evaluation input parameters with quoted names are passed correctly.
+
+### Demo
+
+- The banking demo now ships as the **aifusion-banking-demo** extension (AI Fusion - Banking Demo 1.0.0), which replaces `aifusion-demo`. It contains the `customer_bank` Data Product with the `banking` agent, creates its demo source databases on first deploy, and includes a sanity evaluation suite. See [Installation and Setup](/articles/AI_fusion/04_installation_and_setup.md#extensions).
 
 
 
@@ -107,7 +135,7 @@ The first release of the AI Fusion 3 agent platform: declarative agents (`agent.
 
 ### Packaging
 
-- Demo content ships in the separate **aifusion-demo** extension. The core extension no longer includes the vector ingestion and search pipelines, the vector example flows, the `fileToEmbedding` flow or the domain demos.
+- The core extension no longer includes the vector ingestion and search pipelines, the vector example flows, the `fileToEmbedding` flow or the domain demos. (They first moved to a separate `aifusion-demo` extension; the banking demo now ships in **aifusion-banking-demo** — see [Version 3.0.9](#v3.0.9).)
 - The chunker and its Flexmark dependency were removed from the extension.
 
 ### Deprecations
@@ -117,5 +145,5 @@ The first release of the AI Fusion 3 agent platform: declarative agents (`agent.
 ### Breaking Changes
 
 - The `Chat` actor and the `chat` endpoint are no longer available. Use the `agent` web service or the agent actors.
-- Vector pipelines, the chunker and the domain demos are no longer part of `aifusion`. Install **aifusion-demo** to keep them.
+- Vector pipelines, the chunker and the domain demos are no longer part of `aifusion`.
 - Agents built as Broadway agentic flows in 2.x must be re-implemented as declarative agents. See [Moving from AI Fusion 2.x](/articles/AI_fusion/02_whats_new_in_v3.md#moving-from-ai-fusion-2x).
