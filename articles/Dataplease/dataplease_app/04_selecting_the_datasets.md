@@ -63,4 +63,4 @@ These options are only examples of possible requests. Type the request in the **
 
 The Dataplease AI Agent converts the request into a **data story**. The data story drives the generation. It keeps the data logically consistent across all the selected tables.
 
-The generation starts when the user selects one of the predefined **Generate** options, or asks the agent to generate the data. The flow then continues to [Data Generation](05_data_generation.md).
+The generation starts when the user types the request in the **Type a request** box and presses **Enter**. The flow then continues to [Data Generation](05_data_generation.md).

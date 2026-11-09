@@ -33,8 +33,8 @@ Dataplease is built on the following K2view tools:
   The minimum Fabric version that supports Dataplease is V8.5.2.
 * **Fabric Catalog App** – Dataplease relies on the Catalog App's **discovery** pipeline and APIs to scan the interface's metadata (schema, tables and the relationships between them) and build the Catalog. See the [Fabric Catalog articles](/articles/39_fabric_catalog/README.md) for more on cataloging and discovery.
 * **Dataplease AI Agent** is a dedicated AI agent, composed of multiple skills and sub-agents. It interprets natural-language requests into a data story and drives the synthetic data generation process based on the request and the Catalog metadata. The agent:
-  * Auto-generates a coherent **data story**, with or without user guidance.
-  * Enforces logical consistency across multiple disjoint datasets (tables).
+  * Creates a coherent **data story** from the user request and the Catalog metadata.
+  * Enforces logical consistency across multiple related datasets (tables).
   * Answers questions about the Catalog metadata.
 * **AI Fusion** is the K2view agentic platform on which the Dataplease AI Agent runs.
 
