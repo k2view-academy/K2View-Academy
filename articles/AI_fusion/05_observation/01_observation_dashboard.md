@@ -2,14 +2,13 @@
 
 The Observation dashboard is where you monitor your agents in production. It shows conversation quality, volume and cost for a time window you choose, either across all agents or for one agent, and ends with a filterable conversation table that opens each session in [Conversation Review](/articles/AI_fusion/05_observation/02_conversation_review.md).
 
-<!-- TODO screenshot: Observation dashboard with the agent selector open -->
 
 
 ## Opening the Dashboard
 
 Open the **Observation** tab of the AI Data Fusion web application. The dashboard opens with the scope and time range you used last (the first time: **All Agents** and **Last 7 Days**). Your last scope, time range and table filter are remembered in the browser.
 
-The selected agent is also kept in the page URL as `?agent=<LU>/<agent>`, so you can bookmark or share a link to one agent's dashboard, for example `.../static/aifusion/observation?agent=customer_bank/banking`. See [Opening Observation](/articles/AI_fusion/05_observation/00_intro_to_observation.md#opening-observation) for the full list of deep links.
+The selected agent is also kept in the page URL as `?agent=<LU>/<agent>`, so you can bookmark or share a link to one agent's dashboard, for example `https://<server>[/<space>]/app/aifusion/observation?agent=customer_bank/banking`. See [Opening Observation](/articles/AI_fusion/05_observation/00_intro_to_observation.md#opening-observation) for the URL format and deep links.
 
 
 ## Dashboard Layout
@@ -40,6 +39,8 @@ An agent's `widgets.yaml` can add its own headline items. For example, the banki
 ### Agent selector
 
 The agent selector lists **All Agents** followed by every deployed agent, shown as **<agent> (<LU>)** and sorted by agent name. Selecting an agent:
+
+![Header bar crop with the agent selector open](images/observation_agent_selector.png)
 
 - Replaces the widgets with that agent's own widgets (see [Agent Scope](#agent-scope) below)
 - Limits the conversation table to the agent's conversations, and hides the table's **Agent** column and **Agent** filter
@@ -82,6 +83,8 @@ Time-series charts use 4-hour buckets for **Last 24 Hours** and daily buckets fo
 ## All Agents Widgets
 
 With **All Agents** selected, the dashboard shows the overall widgets defined in the `widgets` MTable of the `aifusion` LU (`widgets.csv`). The shipped set is:
+
+![Same image as in Introduction to Observation](images/observation_dashboard_all_agents.png)
 
 <table>
 <tbody>
@@ -157,16 +160,22 @@ Token and step figures are filled in by the analysis process, so sessions that h
 
 When you select an agent, the dashboard shows **only** the widgets defined in that agent's `Observation/widgets.yaml` — its header summary, number cards and charts. The overall widgets are not shown. An agent without a `widgets.yaml` shows no widgets, just the conversation table.
 
-Agent widgets read the agent's sessions only. If a widget's query is not written to filter on the agent's sessions, its card is marked **Not filtered to this agent** and shows data for all agents. See [Configuring Observation](/articles/AI_fusion/05_observation/03_configuring_observation.md#agent-dashboard-widgets-widgetsyaml) for how to write agent widgets.
+Agent widgets read the agent's sessions only. A widget whose query reads neither the agent's sessions placeholder nor the `ACTVSESSION` table (for example, a query over `INSIGHTS` alone) cannot be limited to the agent: its card is marked **Not filtered to this agent** and shows data for all agents. See [Configuring Observation](/articles/AI_fusion/05_observation/03_configuring_observation.md#agent-dashboard-widgets-widgetsyaml) for how to write agent widgets.
 
-A new agent created in AI Fusion Studio comes with a starter `widgets.yaml` that includes the header summary, the four number cards, **Top Conversation Topics** and **Token Consumption**. The banking sample agent (`customer_bank/AI/Agents/banking`) adds customer-service views such as **Urgency Level**, **Upsell Opportunity** and **Resolution Pathway**.
+A new agent created in AI Fusion Studio comes with a starter `widgets.yaml` that includes the header summary, four number cards (**Avg. Resolution Rate**, **Avg. Tokens/Conversation**, **Avg. Steps/Conversation**, **Avg. Response Time**), **Top Conversation Topics**, **Token Consumption** and an **Escalation Rate** card. The banking sample agent (`customer_bank/AI/Agents/banking`) shows the header summary (adding **Follow-ups** and **At Risk**), the four number cards, **Top Conversation Topics**, **Conversation Volume Over Time**, **Urgency Level**, **Upsell Opportunity**, **Resolution Pathway** and **Token Consumption**.
 
-<!-- TODO screenshot: dashboard scoped to the banking agent, showing its widgets -->
+![Dashboard scoped to banking](images/observation_dashboard_banking.png)
+
+![An agent widget card marked "Not filtered to this agent"](images/observation_not_filtered_badge.png)
 
 
 ## Conversation Details Table
 
-The **Conversation Details** table lists the sessions created in the selected period, newest first, for the current scope and filter. Click a row to open it in [Conversation Review](/articles/AI_fusion/05_observation/02_conversation_review.md).
+The **Conversation Details** table lists the sessions created in the selected period, newest first, for the current scope and filter. It includes sessions that have not been analyzed yet (and sessions whose turn is still running); only sessions whose batch analysis failed are excluded. Click a row to open it in [Conversation Review](/articles/AI_fusion/05_observation/02_conversation_review.md).
+
+> **Why the table and the widgets can show different counts:** the table selects sessions by when they were **created**, while the widgets select sessions by their **last activity** and, for tag-based figures such as **Total**, count only analyzed sessions. A conversation started before the period but continued during it is counted by the widgets but not listed in the table, and a new, not yet analyzed conversation is listed in the table but not counted in **Total**.
+
+![Conversation Details table, All Agents scope](images/observation_conversation_table.png)
 
 ### Columns
 
@@ -249,7 +258,7 @@ Select a filter from the drop-down list next to the table title:
 </tr>
 <tr>
 <td><strong>Agent</strong></td>
-<td>Conversations of a specific agent. Enter the agent name and click <strong>Filter</strong>. Not available when an agent is selected in the header</td>
+<td>Conversations of a specific agent. Enter the agent name and click <strong>Filter</strong>. The filter matches the agent name only, so agents with the same name in different LUs are listed together; to see one of them, select it in the header instead. Not available when an agent is selected in the header</td>
 </tr>
 <tr>
 <td><strong>Feedback</strong></td>
@@ -259,6 +268,10 @@ Select a filter from the drop-down list next to the table title:
 </table>
 
 The **High Risk Conversations** filter relies on the Customer Lifetime Value Risk signal; it returns nothing for agents that do not define it.
+
+The feedback filters read the feedback counters stored by the last analysis. Feedback given after a session was analyzed does not re-open the session, so it is not reflected in the counters or the filters until the session is analyzed again (which happens when the user continues the conversation).
+
+![Two crops side by side](images/observation_table_filters.png)
 
 ### Exporting the list
 

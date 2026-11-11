@@ -60,12 +60,12 @@ The central monitoring table: one row per conversation session.
 <tr>
 <td><code>creation_date</code></td>
 <td>TIMESTAMP</td>
-<td>When the session started.</td>
+<td>When the session started. The dashboard's conversation table selects sessions by this column.</td>
 </tr>
 <tr>
 <td><code>last_modified_date</code></td>
 <td>TIMESTAMP</td>
-<td>The session's last activity. The dashboard widgets, the analysis and the cleanup select sessions by this column.</td>
+<td>The session's last activity: updated by each turn and also when the chat is renamed. The dashboard widgets, the analysis and the cleanup select sessions by this column.</td>
 </tr>
 <tr>
 <td><code>agent_name</code></td>
@@ -80,7 +80,7 @@ The central monitoring table: one row per conversation session.
 <tr>
 <td><code>chat_name</code></td>
 <td>TEXT</td>
-<td>The automatically generated chat title.</td>
+<td>The chat title: generated automatically, or the name the user gave the chat. A rename through the <code>session-name</code> web service (<code>PUT /api/session-name</code> with <code>sessionId</code> and <code>name</code>) overwrites it and updates <code>last_modified_date</code>.</td>
 </tr>
 <tr>
 <td><code>chat_summary</code></td>
@@ -342,7 +342,7 @@ The same database also holds tables used by other AI Fusion processes. You norma
 <tr>
 <td><code>evaluation_chat</code></td>
 <td>Evaluation</td>
-<td>One row per evaluated conversation: <code>sessionid</code>, <code>initParams</code>, <code>createtime</code>, <code>result</code>, <code>threshold</code>, <code>overallrating</code></td>
+<td>One row per evaluated conversation: <code>sessionid</code>, <code>initParams</code>, <code>createtime</code>, <code>result</code>, <code>threshold</code>, <code>overallrating</code>, and since AI Fusion 3.0.9 <code>conv_result</code> and <code>conv_rating</code> (conversation-level evaluation), <code>hooks</code> (results of the test case's before and after hooks) and <code>error</code>. The deploy flow adds the new columns to existing tables.</td>
 </tr>
 <tr>
 <td><code>evaluation_details</code></td>

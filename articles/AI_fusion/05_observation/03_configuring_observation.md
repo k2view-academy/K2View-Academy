@@ -9,7 +9,7 @@ Observation works out of the box: every agent is recorded and analyzed against t
 - **Insights database.** Observation data is stored in the insights database set by the `INSIGHTS_INTERFACE`, `INSIGHTS_INTERFACE_TYPE` and `INSIGHTS_SCHEMA` globals (by default the SQLite `assurance` interface). Use PostgreSQL for QA and production environments. The tables are created by the deploy flow of the `aifusion` LU. See [Installation and Setup](/articles/AI_fusion/04_installation_and_setup.md) and [Insights Database Schema Reference](/articles/AI_fusion/05_observation/04_insights_db_schema.md).
 - **LLM interface.** The analysis uses the environment's default LLM interface. See [LLM Connectors](/articles/AI_fusion/02_agents/10_llm_connectors.md).
 - **Fabric version.** Per-agent configuration (`Observation/signals.yaml` and `Observation/widgets.yaml`) requires Fabric 8.5.2_84 or later.
-- **Observation tab.** The **Observation** tab is enabled in `apps.json` by default. See [Opening Observation](/articles/AI_fusion/05_observation/00_intro_to_observation.md#opening-observation).
+- **Observation tab.** The **Observation** tab appears when the project's `k2_ws/web/apps.json` has the **AI Data Fusion** entry (`appId` `aifusion`) with an `observation` page. Since AI Fusion 3.0.9 the extension no longer installs this file, so add the entry yourself if the tab is missing. See [Opening Observation](/articles/AI_fusion/05_observation/00_intro_to_observation.md#opening-observation).
 
 
 ## Where Observation Configuration Lives
@@ -51,7 +51,14 @@ Observation works out of the box: every agent is recorded and analyzed against t
 
 Both per-agent files are optional. Without `signals.yaml` the agent is analyzed against the core signals only; without `widgets.yaml` the agent's dashboard shows only the conversation table.
 
-A new agent created in AI Fusion Studio comes with both files. They are a starting point: the starter `signals.yaml` has generic placeholder Topic values (marked `TODO`) that you should replace with the agent's own themes, and the starter `widgets.yaml` has a baseline dashboard (header summary, four number cards, **Top Conversation Topics**, **Token Consumption** and an **Escalation Rate** card) that you extend with widgets on the agent's own signals.
+A new agent created in AI Fusion Studio comes with both files. They are a starting point:
+
+- The starter `signals.yaml` defines only **Topic**, with placeholder values (`General Question`, `Account`, `Request`, `Other`, marked `TODO`) that you should replace with the agent's own themes. It has no other agent signals.
+- The starter `widgets.yaml` has a baseline dashboard — header summary, four number cards, **Top Conversation Topics**, **Token Consumption** and an **Escalation Rate** card — that you extend with widgets on the agent's own signals.
+
+The Studio agent-builder skill can also create Observation signals and widgets for an agent. Review what it writes the same way as hand-written files, and dry-run the widgets.
+
+![AI Fusion Studio](images/studio_ai_explorer_observation.png)
 
 > **Deploy to apply changes.** The runtime reads an agent's `Observation/` files from the copy Fabric captures when the LU is deployed — in Studio as well. After you edit `signals.yaml` or `widgets.yaml`, deploy the agent's LU (a soft deploy is enough). The [widget dry run](#testing-widgets-with-a-dry-run) is the only exception: it reads the project folder directly.
 
@@ -122,17 +129,17 @@ signals:
 <tr>
 <td><code>name</code></td>
 <td>Yes</td>
-<td>The signal name. Widgets match it exactly.</td>
+<td>The signal name. Widgets match it exactly. A signal without a name makes the file invalid.</td>
 </tr>
 <tr>
 <td><code>values</code></td>
 <td>Yes</td>
-<td>The allowed values. Widgets match them exactly.</td>
+<td>The allowed values. Widgets match them exactly. For <strong>Topic</strong>, empty values keep the generic core values.</td>
 </tr>
 <tr>
 <td><code>multi_select</code></td>
-<td>Yes</td>
-<td><code>true</code> lets the LLM pick several values; <code>false</code> exactly one.</td>
+<td>No</td>
+<td><code>true</code> lets the LLM pick several values; <code>false</code> (the default) exactly one. Ignored for <strong>Topic</strong>, which is always multi-select.</td>
 </tr>
 <tr>
 <td><code>classification</code></td>
@@ -150,6 +157,45 @@ Rules:
 - **Keep `name`, `values`, `multi_select` and `classification` at the same indentation** within each list entry. Prefer the inline form `values: [A, B, C]`; for a long block list, keep `multi_select` and `classification` at the `values:` level. A file that does not parse breaks the analysis of that agent.
 - **Watch the cost.** Signals are classified three per LLM call, so every additional three signals add one LLM call per analyzed conversation. Three to five agent signals besides Topic is a sensible default; keep only signals that drive a decision or a widget.
 - **Renaming breaks widgets.** If you rename a signal or a value, update every widget that filters on it.
+
+### How the analyzed signal list is built
+
+For each session, the analysis combines the core signals with the signals of the session's agent:
+
+<table>
+<tbody>
+<tr>
+<td><strong>Step</strong></td>
+<td><strong>What happens</strong></td>
+</tr>
+<tr>
+<td>1. Find the agent</td>
+<td>The session's agent and Data Product are read from <code>ACTVSESSION</code>. For older sessions without a Data Product, the LUs in <code>INSTANCES</code> help to choose between agents with the same name. If no deployed agent matches, only the core signals are used.</td>
+</tr>
+<tr>
+<td>2. Start with the core signals</td>
+<td>Resolution Status, Sentiment and Topic from the <code>observation_signals</code> MTable always come first, in this order.</td>
+</tr>
+<tr>
+<td>3. Apply the agent's Topic</td>
+<td>If the agent's <code>signals.yaml</code> defines Topic, its values (and its <code>classification</code>, if given) replace the core ones. The name and multi-select setting stay those of the core signal.</td>
+</tr>
+<tr>
+<td>4. Ignore redefined core signals</td>
+<td>An agent definition of Resolution Status or Sentiment is ignored and a warning is written to the log. Names are compared without surrounding spaces and regardless of case.</td>
+</tr>
+<tr>
+<td>5. Add the agent's own signals</td>
+<td>Every other signal in <code>signals.yaml</code> is appended, in file order.</td>
+</tr>
+<tr>
+<td>6. Classify</td>
+<td>The list is sent to the LLM three signals per call. Each selected value is stored as one <code>INSIGHTS</code> row (<code>tag_name</code>, <code>tag_value</code>).</td>
+</tr>
+</tbody>
+</table>
+
+The analysis reads the deployed copy of `signals.yaml`, so deploy the LU after you change it.
 
 For customer-facing agents, consider the customer-service signals that the banking sample agent (`customer_bank/AI/Agents/banking/Observation/signals.yaml`) uses together with matching widgets: **Follow-up** (`Required`, `Immediate`), **Customer Lifetime Value Risk** (`Low`, `Medium`, `High`) and **Resolution Pathway** (conversation stages such as `issue_understood`, `solution_offered`, `problem_solved`). **Customer Lifetime Value Risk** also feeds the conversation table's **Risk** column and **High Risk Conversations** filter.
 
@@ -253,11 +299,11 @@ widgets:
 </tr>
 <tr>
 <td><code>id</code></td>
-<td>Unique within the file. Reusing an overall widget id is allowed.</td>
+<td>Required and unique within the file. Reusing an overall widget id is allowed. A widget without an <code>id</code> makes the file invalid.</td>
 </tr>
 <tr>
 <td><code>title</code></td>
-<td>The card title.</td>
+<td>The card title. Optional; defaults to the <code>id</code>.</td>
 </tr>
 <tr>
 <td><code>type</code></td>
@@ -360,7 +406,7 @@ Widgets query the insights database only — never the LU's own data. The availa
 </tr>
 <tr>
 <td><code>${sessions}</code></td>
-<td>A derived table of this agent's <code>ACTVSESSION</code> rows (its name and Data Product). Always give it an alias: <code>FROM ${sessions} a</code>.</td>
+<td>A derived table of this agent's <code>ACTVSESSION</code> rows (its name and Data Product; older sessions recorded without a Data Product match on the name). Always give it an alias: <code>FROM ${sessions} a</code>. Without an agent scope it is replaced with <code>${schema}.ACTVSESSION</code>, so the same SQL also works for All Agents.</td>
 </tr>
 <tr>
 <td><code>${days}</code></td>
@@ -381,17 +427,19 @@ Widgets query the insights database only — never the LU's own data. The availa
 </tbody>
 </table>
 
-No other placeholders are substituted.
+Without an agent scope, `${agent}` and `${lu}` are replaced with empty strings. No other placeholders are substituted.
 
 ### Authoring rules
 
-- **Read sessions through `${sessions}`.** It limits the query to the agent's sessions, so you need no agent filter of your own. Reach `INSIGHTS` and `INSTANCES` through a join to it. Do not write `${schema}.ACTVSESSION` in an agent widget: such references are rewritten as a fallback, but the rewrite can fail on unusual SQL. A query that does not read `${sessions}` is not scoped — its card is marked **Not filtered to this agent** and shows every agent's data.
+- **Read sessions through `${sessions}`.** It limits the query to the agent's sessions, so you need no agent filter of your own. Reach `INSIGHTS` and `INSTANCES` through a join to it. Do not write `${schema}.ACTVSESSION` in an agent widget: such references are rewritten as a fallback, but the rewrite can fail on unusual SQL. A query that reads neither `${sessions}` nor `ACTVSESSION` (for example, one that reads only `INSIGHTS` or `INVOKE_OBSERVATION`) cannot be scoped — its card is marked **Not filtered to this agent** and shows every agent's data. The header summary does not show this mark, so make sure the `summary` widget reads `${sessions}`.
 - **Prefix every other table with `${schema}.`** in both dialects (`${schema}.INSIGHTS`, `${schema}.INSTANCES`).
 - **Window on `LAST_MODIFIED_DATE` only.** SQLite: `a.LAST_MODIFIED_DATE >= DATE('now', '-${days} days')`; PostgreSQL: `a.last_modified_date >= (now() - INTERVAL '${days} days')::date`. The shipped widgets and the analysis all use this column; mixing in `CREATION_DATE` makes the header and the charts count different sets of sessions.
 - **Guard every division with `NULLIF(<divisor>, 0)`.** On a period with no analyzed sessions, SQLite returns NULL but PostgreSQL fails the whole query with a division-by-zero error.
 - **Quote the PostgreSQL aliases the widget reads** (`AS "TAG_VALUE"`). PostgreSQL folds unquoted names to lowercase, and the column would no longer match `x_key` or `dataKey`.
 - **Match signal names and values exactly** as defined in `signals.yaml` or the core signals.
 - **Read token usage from `${sessions}`**, not from `INVOKE_OBSERVATION`, which has no agent column and cannot be scoped.
+
+- **Keep the file valid.** A `widgets.yaml` that does not parse, or that has a widget without an `id`, cannot be loaded: the agent's dashboard then shows no widgets, only the conversation table.
 
 The banking sample agent's `customer_bank/AI/Agents/banking/Observation/widgets.yaml` is a complete worked example, with both dialects and aggregate variants.
 
@@ -440,6 +488,10 @@ broadway aifusion.ObservationWidgetDryRun lu='customer_bank' agent='banking'
 
 The result lists, per widget and per query variant, whether it succeeded, the error if any, the SQL exactly as the dashboard runs it (agent filter applied, placeholders filled), the returned columns and sample rows, and warnings — for example an `x_key` or `dataKey` that is not a returned column, or a query that returned no rows and could not be checked. Only the active backend's dialect runs; review the other dialect by hand. Fix and re-run until every widget passes, then deploy the LU.
 
+The dry run executes only read-only queries: a single `SELECT` or `WITH` statement with no data-changing keywords (such as `INSERT`, `UPDATE`, `DELETE`, `CREATE` or `DROP`, also inside a `WITH`). Any other query is refused and reported as failed.
+
+![Optional](images/widget_dry_run_result.png)
+
 
 ## Running the Analysis
 
@@ -483,6 +535,12 @@ Each session has a row in `ACTVSESSION` whose `status` tracks it:
 </table>
 
 When a user continues a conversation that was already analyzed, the session returns to `OPEN` and is analyzed again on the next run, so its summary and tags reflect the whole conversation.
+
+Keep in mind:
+
+- **Only `OPEN` sessions are analyzed.** An `ABORTED` session is not picked up by `RunAnalyze` or the pipelines until the user continues the conversation and the next turn ends.
+- **Feedback does not re-open a session.** Feedback given after the analysis is stored with the conversation, but the session stays `CLOSED`, so the feedback counters in `INSIGHTS` are updated only if the session is analyzed again.
+- **Renaming a chat does not re-open it either.** Renaming a session (the `session-name` web service) only changes its title and its last-activity time.
 
 ### What the analysis does
 
@@ -549,5 +607,6 @@ The cleanup process deletes analyzed (`CLOSED`) sessions whose last activity is 
 - **Retention period.** Set by the `RETENTION_DAYS` global (default 30, allowed range 7–365 days).
 - **Run it on demand** with the `cleanup/start` web service (`POST /api/cleanup/start`, optional `retention_days` parameter) or the `cleanupExecutor` pipeline.
 - **Schedule it** by running the `aifusion.cleanupJob` flow once: it registers a Broadway job (uid `aifusion_cleanup_job`) that runs the cleanup every day at 02:00.
+- **Scope.** Only `CLOSED` sessions are deleted. Sessions that were never analyzed (`OPEN`, `ABORTED`) or whose batch analysis failed (`FAILED`) are kept, however old they are — run the analysis regularly so that sessions reach `CLOSED`. Renaming a chat updates its last-activity time, which postpones its cleanup.
 
 **Next article:** [Insights Database Schema Reference](/articles/AI_fusion/05_observation/04_insights_db_schema.md)

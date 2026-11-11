@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 760" width="780" height="760" role="img" aria-label="One turn of a conversation" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9aa0a6"/></marker></defs>
+  <rect width="780" height="760" fill="#ffffff"/>
+  <text x="24" y="30" font-size="15" font-weight="600" fill="#1f2328">One turn of a conversation</text>
+  <text x="24" y="50" font-size="11.5" fill="#5b6169">From the user&#x27;s message to the streamed answer. Every step is recorded in the session trace.</text>
+  <path d="M390.0 136V170" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M390.0 234V268" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M390.0 332V366" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M390.0 430V464" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M390.0 528V562" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M390.0 626V660" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M174 496H200" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-start="url(#a)" marker-end="url(#a)"/>
+  <path d="M580 496H606" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-start="url(#a)" marker-end="url(#a)"/>
+  <path d="M580 594H606" fill="none" stroke="#9aa0a6" stroke-width="1.25" stroke-dasharray="4 4" marker-end="url(#a)"/>
+  <rect x="200" y="72" width="380" height="64" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="212" y="94" font-weight="600" fill="#1f2328">1 Request arrives</text>
+  <text x="212" y="112" font-size="11.5" fill="#5b6169">agent web service, Studio Preview or AgentInvoke</text>
+  <text x="212" y="128" font-size="11.5" fill="#5b6169">agent, lu, sessionId, content, initParams</text>
+  <rect x="200" y="170" width="380" height="64" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="212" y="192" font-weight="600" fill="#1f2328">2 Open the session</text>
+  <text x="212" y="210" font-size="11.5" fill="#5b6169">Get the aifusion LU instance of sessionId</text>
+  <text x="212" y="226" font-size="11.5" fill="#5b6169">One request at a time per session; a new step</text>
+  <rect x="200" y="268" width="380" height="64" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="212" y="290" font-weight="600" fill="#1f2328">3 Load the agent</text>
+  <text x="212" y="308" font-size="11.5" fill="#5b6169">agent.yaml, skills catalog, sub-agents, hooks</text>
+  <text x="212" y="324" font-size="11.5" fill="#5b6169">Build the system prompt</text>
+  <rect x="200" y="366" width="380" height="64" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="212" y="388" font-weight="600" fill="#1f2328">4 step_start hook</text>
+  <text x="212" y="406" font-size="11.5" fill="#5b6169">Load the customer (FabricGet / GetWithSnap)</text>
+  <text x="212" y="422" font-size="11.5" fill="#5b6169">Optional rewrite and Additional Context</text>
+  <rect x="200" y="464" width="380" height="64" rx="8" fill="#e8eefb" stroke="#2f6fdf" stroke-width="1.75"/>
+  <text x="212" y="486" font-weight="600" fill="#1f2328">5 Reasoning loop</text>
+  <text x="212" y="504" font-size="11.5" fill="#5b6169">LLM answers or calls tools: query, flows,</text>
+  <text x="212" y="520" font-size="11.5" fill="#5b6169">MCP, skills, references, sub-agents</text>
+  <rect x="200" y="562" width="380" height="64" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="212" y="584" font-weight="600" fill="#1f2328">6 Stream the answer</text>
+  <text x="212" y="602" font-size="11.5" fill="#5b6169">text_delta, tool_use, subagent, todo, widget</text>
+  <text x="212" y="618" font-size="11.5" fill="#5b6169">ending with done (the final answer)</text>
+  <rect x="200" y="660" width="380" height="64" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="212" y="682" font-weight="600" fill="#1f2328">7 step_end and record</text>
+  <text x="212" y="700" font-size="11.5" fill="#5b6169">Optional follow-up via step_end</text>
+  <text x="212" y="716" font-size="11.5" fill="#5b6169">Messages, tool calls, tokens persisted</text>
+  <rect x="24" y="424" width="150" height="144" rx="8" fill="#f0f0ee" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="36" y="446" font-weight="600" fill="#1f2328">LLM</text>
+  <text x="36" y="464" font-size="11.5" fill="#5b6169">Through the agent&#x27;s</text>
+  <text x="36" y="480" font-size="11.5" fill="#5b6169">AI interface</text>
+  <text x="36" y="496" font-size="11.5" fill="#5b6169">(settings.llm_interface)</text>
+  <rect x="606" y="424" width="150" height="144" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="618" y="446" font-weight="600" fill="#1f2328">Tools</text>
+  <text x="618" y="464" font-size="11.5" fill="#5b6169">query (micro-DB)</text>
+  <text x="618" y="480" font-size="11.5" fill="#5b6169">Broadway flow tools</text>
+  <text x="618" y="496" font-size="11.5" fill="#5b6169">MCP tools</text>
+  <text x="618" y="512" font-size="11.5" fill="#5b6169">task / delegate</text>
+  <text x="618" y="528" font-size="11.5" fill="#5b6169">ask_user</text>
+  <rect x="606" y="562" width="150" height="64" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25" stroke-dasharray="5 4"/>
+  <text x="618" y="584" font-weight="600" fill="#1f2328">ask_user</text>
+  <text x="618" y="602" font-size="11.5" fill="#5b6169">Turn pauses; the user&#x27;s</text>
+  <text x="618" y="618" font-size="11.5" fill="#5b6169">answer resumes it</text>
+</svg>

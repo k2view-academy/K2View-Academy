@@ -2,7 +2,10 @@
 
 **Observation** gives you production-level visibility into how your agents behave. [Evaluation](/articles/AI_fusion/04_evaluation/00_intro_to_evaluation.md) checks quality before you deploy. Observation shows what happens after the agents go live: it records every conversation, has an LLM classify it, and shows the results on an analytics dashboard that you can view for all agents or for one agent.
 
-<!-- TODO screenshot: Observation dashboard, All Agents scope, with header summary, number cards, charts and the Conversation Details table -->
+> **Note:** The examples and screenshots in this section use the banking demo (`customer_bank` › `banking`). See [About the Examples](/articles/AI_fusion/01_overview.md#about-the-examples-in-this-documentation).
+
+
+![Full dashboard, All Agents scope, Last 7 Days](images/observation_dashboard_all_agents.png)
 
 
 ## Why Observation
@@ -94,7 +97,11 @@ Analysis is **not** triggered automatically at the end of a conversation, and AI
 - **`RunAnalyze`** — a Broadway flow that analyzes the open sessions of the last N days, one at a time. Run it with `broadway aifusion.RunAnalyze day=7`, or call the `run-analytics` web service (`GET /api/run-analytics?day=7`).
 - **`ObservationAnalyzer`** and **`BatchObservationAnalyzer`** — pipelines that analyze sessions in bulk. The batch pipeline submits the work through the LLM provider's batch API, which is cheaper for large volumes.
 
+![From conversations to the dashboard](images/observation_pipeline.svg)
+
 Until a session is analyzed it appears on the dashboard without a summary, topics or resolution status. When a user continues an analyzed conversation, the session is re-opened and is analyzed again on the next run.
+
+Only sessions waiting for analysis (status `OPEN`) are picked up. A session whose turn the user stopped (`ABORTED`) is not analyzed until the user continues the conversation, and feedback given after a session was analyzed does not re-open it.
 
 See [Configuring Observation](/articles/AI_fusion/05_observation/03_configuring_observation.md#running-the-analysis) for the details, and for the cleanup process that removes old sessions.
 
@@ -126,12 +133,30 @@ See [Insights Database Schema Reference](/articles/AI_fusion/05_observation/04_i
 
 ## Opening Observation
 
-Observation is the **Observation** tab of the **AI Data Fusion** web application, registered in `apps.json` of the Web Services LU (`k2_ws/web/apps.json`) and enabled by default. Open it at:
+Observation is the **Observation** tab of the **AI Data Fusion** web application. The tab appears when the project's `k2_ws/web/apps.json` (the Web Services LU) has an **AI Data Fusion** entry with `appId` `aifusion` and an `observation` page:
 
-```text
-https://<server>[/<tenant>]/static/aifusion/observation
+```json
+{
+    "name": "AI Data Fusion",
+    "appId": "aifusion",
+    "apps": [
+        { "displayName": "Agent", "pathName": "agent" },
+        { "displayName": "Evaluation", "pathName": "evaluation" },
+        { "displayName": "Observation", "pathName": "observation" }
+    ]
+}
 ```
 
-The tenant segment is present only on tenant-based deployments. Add `?agent=<lu>/<agent>` to open the dashboard scoped to one agent, for example `.../static/aifusion/observation?agent=customer_bank/banking`.
+Since AI Fusion 3.0.9 the extension no longer installs `k2_ws/web/apps.json`, so that it does not overwrite the project's own file. If the **Observation** tab is missing, add the entry above to the project's `apps.json` and deploy the `k2_ws` LU.
+
+Open it at:
+
+```text
+https://<server>[/<space>]/app/aifusion/observation
+```
+
+The space segment is present only on space-based (cloud) deployments, for example `https://k2rnd-3.cloud.k2view.com/aifusion-3-k2view/app/aifusion/observation`.
+
+Add `?agent=<lu>/<agent>` to open the dashboard scoped to one agent, for example `.../app/aifusion/observation?agent=customer_bank/banking` (the browser may show the slash encoded as `%2F`). If you omit the LU (`?agent=banking`), the first LU that declares an agent by that name is used.
 
 **Next article:** [Observation Dashboard](/articles/AI_fusion/05_observation/01_observation_dashboard.md)

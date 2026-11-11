@@ -99,6 +99,8 @@ skills:
 - **On demand** (default) — the skill appears in the `## Available Skills` catalog of the system prompt. The agent calls `load_skill` when the request needs it. The catalog is also the allow-list: the agent cannot load a skill that is not in it.
 - **Auto-load** — `auto_load: true` injects the skill body under `## Loaded Skills` in the system prompt. Use it for a specialist sub-agent whose single domain schema is always needed.
 
+![Agent Editor Skills card of the credit-card sub-agent](images/04_skills_card.png)
+
 When the `query` tool is enabled and the agent has skills, the prompt tells the agent to load every skill whose description covers the data it is about to query, and to answer a cross-domain question with a single JOIN rather than one query per domain.
 
 
@@ -106,6 +108,8 @@ When the `query` tool is enabled and the agent has skills, the prompt tells the 
 ## Skills and Sub-Agents
 
 A sub-agent sees only the skills it declares itself. Its skill names are resolved in its parent agent's `Skills/` folder first, then among the LU-wide skills. Declare in each sub-agent exactly the skills of its domain.
+
+![Studio Trace drawer of a banking conversation with a "Tool](images/04_load_skill_trace.png)
 
 
 

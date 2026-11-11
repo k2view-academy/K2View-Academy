@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 564" width="780" height="564" role="img" aria-label="How a test case is evaluated" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9aa0a6"/></marker></defs>
+  <rect width="780" height="564" fill="#ffffff"/>
+  <text x="24" y="30" font-size="15" font-weight="600" fill="#1f2328">How a test case is evaluated</text>
+  <text x="24" y="50" font-size="11.5" fill="#5b6169">Everything happens in AI Fusion Studio: define and edit in the Eval Editor, Run Evaluation, read the results.</text>
+  <path d="M390 120V144" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M580 172H600" fill="none" stroke="#9aa0a6" stroke-width="1.25" stroke-dasharray="4 4" marker-end="url(#a)"/>
+  <path d="M390 200V224" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M300 280C300 300 160 300 160 320" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M480 280C480 300 620 300 620 320" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M204 412C204 432 390 432 390 444" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M578 412C578 432 390 432 390 444" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M390 492V508" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <rect x="24" y="72" width="732" height="48" rx="8" fill="#f0f0ee" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="390.0" y="100.0" text-anchor="middle" font-weight="600" fill="#1f2328">Test case (Evals/&lt;suite&gt;.csv): transcript, initParams, snapshots, thresholds, criteria, hooks</text>
+  <rect x="200" y="144" width="380" height="56" rx="8" fill="#e8eefb" stroke="#2f6fdf" stroke-width="1.75"/>
+  <text x="212" y="166" font-weight="600" fill="#1f2328">Before hooks (Broadway flows)</text>
+  <text x="212" y="184" font-size="11.5" fill="#5b6169">Prepare data. A failure skips the evaluation.</text>
+  <rect x="600" y="144" width="156" height="68" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25" stroke-dasharray="5 4"/>
+  <text x="612" y="166" font-weight="600" fill="#1f2328">Failed</text>
+  <text x="612" y="184" font-size="11.5" fill="#5b6169">Not evaluated; after</text>
+  <text x="612" y="200" font-size="11.5" fill="#5b6169">hooks still run</text>
+  <rect x="200" y="224" width="380" height="56" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="212" y="246" font-weight="600" fill="#1f2328">Replay the conversation</text>
+  <text x="212" y="264" font-size="11.5" fill="#5b6169">Each user turn runs through the agent on snapshot data</text>
+  <rect x="24" y="320" width="360" height="92" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="36" y="342" font-weight="600" fill="#1f2328">Step level</text>
+  <text x="36" y="360" font-size="11.5" fill="#5b6169">LLM judge scores each answer 0-5 against the gold</text>
+  <text x="36" y="376" font-size="11.5" fill="#5b6169">answer: Accuracy, Relevance, Clarity, Politeness, custom</text>
+  <text x="36" y="392" font-size="11.5" fill="#5b6169">+ Token Consumption, Response Time vs. baseline</text>
+  <text x="36" y="408" font-size="11.5" fill="#5b6169">Thresholds: Minimum, Average, Maximum</text>
+  <rect x="400" y="320" width="356" height="92" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="412" y="342" font-weight="600" fill="#1f2328">Conversation level</text>
+  <text x="412" y="360" font-size="11.5" fill="#5b6169">LLM judge checks each criterion against</text>
+  <text x="412" y="376" font-size="11.5" fill="#5b6169">the whole conversation:</text>
+  <text x="412" y="392" font-size="11.5" fill="#5b6169">met / partial / missed, with cited turns</text>
+  <text x="412" y="408" font-size="11.5" fill="#5b6169">Passes only when every criterion is met</text>
+  <rect x="200" y="444" width="380" height="48" rx="8" fill="#e8eefb" stroke="#2f6fdf" stroke-width="1.75"/>
+  <text x="212" y="466" font-weight="600" fill="#1f2328">After hooks (always run)</text>
+  <text x="212" y="484" font-size="11.5" fill="#5b6169">Check side effects, clean up. A failure fails the case.</text>
+  <rect x="200" y="508" width="380" height="40" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="390.0" y="532.0" text-anchor="middle" font-weight="600" fill="#1f2328">Verdict and results in Studio: Eval Editor &gt; Evaluation</text>
+</svg>

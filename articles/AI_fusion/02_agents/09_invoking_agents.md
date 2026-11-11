@@ -184,7 +184,9 @@ Notes for client developers:
 - **Read the stream until `done`.** Sub-agents emit `agent_start` and `agent_stop` too, but never `done`.
 - **Use `done.answer` as the answer of record.** The streamed text can include narration ("let me check the balance first…") and a delegated sub-agent's commentary. `done.answer` is exactly the text stored as the turn's answer.
 - **Turn token total.** Sum the main agent's `agent_stop.usage` and every `tool_usage` event.
-- **A paused turn** ends with `ask_user` and then the regular `agent_stop` and `done`. Send the user's answer as the next `content` on the same sessionId.
+- **A paused turn** ends with `ask_user` and then the regular `agent_stop` and `done`. Send the user's answer as the next `content` on the same sessionId. The question may come from a sub-agent; its frames carry the sub-agent's `agent_id`.
+- **The answer turn repeats the paused calls.** When the question came from a sub-agent, the stream of the answer turn starts the paused `task` or `delegate` call again (a new `tool_use_start` for the same call) before the sub-agent continues. Render it as the continuation of the earlier call.
+- **Output from flows.** Hook flows and flow tools can stream too (AI Fusion 3.0.9 and later) — for example an `LLMInvoke` actor with streaming to the chat on, or a custom event written with the `WriteSseEvent` actor. Their events are framed like the agent's own and attributed to the agent that ran the flow. Their text is not part of `done.answer`. A custom event name is ignored by Studio unless you add handling for it in your client.
 
 ### Example: JavaScript Consumer
 
@@ -248,6 +250,12 @@ await runAgent({
 ### Stop a Turn
 
 `POST /api/v1/stop-session?sessionId=<id>` stops the turn that is running for the session. The open stream ends with `done` carrying `"aborted": true`; the partial answer is kept. Returns `{"STATUS":"OK"}`. See [Stopping a Turn](/articles/AI_fusion/02_agents/08_sessions_and_context.md#stopping-a-turn).
+
+### Rename a Chat
+
+`PUT /api/v1/session-name?sessionId=<id>&name=<new name>` sets the chat's display name — the `name` returned by the [chats](#chats-of-the-current-user) endpoint — and moves the chat to the top of the recent-chats list. Both parameters are required (HTTP 400 otherwise). Returns `{"STATUS":"OK"}`. Available from AI Fusion 3.0.9.
+
+An explicit rename overwrites the name, including a generated one. The endpoint does not check that the session belongs to the calling user: any caller with permission to the web service can rename any session. Grant it only to roles that should be able to, or call it from your own backend after checking ownership. See [Security and Privacy](/articles/AI_fusion/02_agents/11_security_and_privacy.md).
 
 ### Session Status
 
@@ -413,7 +421,7 @@ The flow returns the turn's final answer (the actor's `response` output, exposed
 - Link `content`, `sessionId` and `initParams` (a map, for example from `MapCreate`, or a JSON string). Use a `RandomUUID` actor for a new session, or reuse a sessionId to continue a conversation.
 - The output `response` is the final answer.
 
-The invoked agent runs a full turn — session state, history, hooks, tools and observability are recorded under the sessionId exactly as for an API call. If the calling flow runs inside a streaming request, the agent's events go to that request's stream.
+The invoked agent runs a full turn — session state, history, hooks, tools and observability are recorded under the sessionId exactly as for an API call. If the calling flow runs inside a streaming request (for example, a flow tool of another agent), the invoked agent's events go to that request's stream, tagged with the invoked agent's `agent_id`. From AI Fusion 3.0.9 the nested turn never sends `error` or `done` into that stream; only the outer turn ends it.
 
 ### Lower-Level LLM Actors
 

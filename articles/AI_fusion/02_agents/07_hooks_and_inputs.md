@@ -8,6 +8,8 @@ Hook flows also define the agent's **inputs**: the values a client must provide 
 
 ## Hook Points
 
+![Where hooks run in a turn](images/hook_points.svg)
+
 ```yaml
 hooks:
   step_start: Banking_CustomerStory
@@ -29,9 +31,9 @@ Each value is the name of one Broadway flow in the agent's Data Product, or `LU_
 </tr>
 <tr>
 <td><code>step_start</code></td>
-<td>Before the LLM sees the user's message. Not run when a paused turn resumes.</td>
-<td><code>query</code> (the user message), <code>step_id</code>, <code>sessionId</code>, <code>agentName</code></td>
-<td><code>result</code>: a rewritten message for the LLM. Empty leaves the message unchanged. The original text is kept as the turn's user message.</td>
+<td>Before the LLM sees the user's message. Also at the start of a turn that answers a pending <code>ask_user</code> question — see <a href="#step_start-on-an-answer-turn">step_start on an Answer Turn</a>.</td>
+<td><code>query</code> (the user message), <code>step_id</code>, <code>sessionId</code>, <code>agentName</code>, <code>previous_additional_context</code></td>
+<td><code>result</code>: a rewritten message for the LLM. Empty leaves the message unchanged.<br><code>additional_context</code>: context for the model on this turn only, added to the system prompt. See <a href="#additional-context-for-the-turn">Additional Context for the Turn</a>.</td>
 </tr>
 <tr>
 <td><code>step_end</code></td>
@@ -55,18 +57,41 @@ Each value is the name of one Broadway flow in the agent's Data Product, or `LU_
 <td><code>on_error</code></td>
 <td>When the agent run fails (not for tool errors, which are returned to the LLM).</td>
 <td><code>error</code> (<code>message</code>, <code>type</code>, <code>stackTrace</code>), <code>default_error_message</code>, <code>agentName</code>, <code>sessionId</code>, <code>step_id</code>, <code>iteration</code></td>
-<td><code>result</code>: the message shown to the user.</td>
+<td><code>result</code>: the message shown to the user. Empty keeps the default message.</td>
 </tr>
 </tbody>
 </table>
 
 In addition, every hook flow receives the agent inputs as externals.
 
+![Agent Editor Hooks card of the banking agent](images/07_hooks_card.png)
+
 Per-tool `before` and `after` hooks, configured on a single entry of `tools:`, use the `pre_tool_call` and `post_tool_call` contracts. See [Tools](/articles/AI_fusion/02_agents/03_tools.md#per-tool-hooks).
 
 ### Failure Behavior
 
-Hooks fail closed: if a hook flow fails, the turn fails. A failing `pre_tool_call` hook blocks the tool call rather than allowing it. Keep hook flows simple and fast, and handle expected conditions inside the flow.
+Hooks fail closed: if a hook flow fails, the turn fails. A failing `pre_tool_call` hook blocks the tool call rather than allowing it. The exception is `on_error`: if the `on_error` flow itself fails, the failure is logged and the default error message is shown. Keep hook flows simple and fast, and handle expected conditions inside the flow.
+
+### Additional Context for the Turn
+
+From AI Fusion 3.0.9, a `step_start` hook can give the model extra context for the turn without rewriting the user's message. The text the hook returns in `additional_context` is added to the system prompt under an `## Additional Context` heading, before the response guidelines and constraints. It never replaces the prompt.
+
+- The context applies to **this turn only**. On the next turn, the hook receives it back as `previous_additional_context`. To keep it, return it again — for example, compute a customer synopsis only when `previous_additional_context` is empty, and otherwise pass it through.
+- `previous_additional_context` is empty on the first turn, when the previous turn returned none, or when `observability` is off (nothing is stored).
+- When several `step_start` hooks return context, all of it is added under the same heading.
+- The context of each turn is stored with the session. The Studio Trace does not show it.
+
+Prefer `additional_context` over rewriting `result` when you only want to inform the model: the user's message stays as the user wrote it.
+
+### step_start on an Answer Turn
+
+When the user answers a pending `ask_user` question, the turn continues the paused work instead of starting a new request. From AI Fusion 3.0.9, `step_start` still runs at the start of that turn, once for each agent in the paused chain, so per-request setup such as a `FabricGet` runs on every request. On that turn:
+
+- `query` is the user's answer.
+- A rewritten `result` and any `additional_context` are ignored; the turn keeps the context it already had.
+- A failing hook fails the turn.
+
+See [Sub-Agents and Delegation](/articles/AI_fusion/02_agents/06_subagents_and_delegation.md#when-a-sub-agent-asks-the-user).
 
 
 
@@ -84,7 +109,7 @@ Each hook type has a pair of Broadway actors, found under the **agent_hooks** ta
 <tr>
 <td><code>step_start</code></td>
 <td><code>StepStartHookInput</code></td>
-<td><code>StepStartHookOutput</code> — <code>message</code> → external <code>result</code></td>
+<td><code>StepStartHookOutput</code> — <code>message</code> → external <code>result</code>; <code>additional_context</code> → external <code>additional_context</code> (both optional). <code>StepStartHookInput</code> also provides <code>previous_additional_context</code>.</td>
 </tr>
 <tr>
 <td><code>step_end</code></td>
@@ -111,6 +136,8 @@ Each hook type has a pair of Broadway actors, found under the **agent_hooks** ta
 
 Place the input actor first and the output actor last, and map the output actor's ports to the flow's output externals as shown.
 
+![Broadway editor of the Banking_CustomerStory flow](images/07_step_start_flow.png)
+
 
 
 ## Agent Inputs
@@ -122,7 +149,9 @@ There is no input-parameter list in `agent.yaml`. Instead, the **external inputs
 - Clients pass them as the `initParams` JSON object when calling the agent, for example `{"customerId":"1001"}`.
 - They are injected as externals into every hook flow and every tool flow the agent calls, and forwarded to sub-agents.
 
-Do not declare an external with a reserved name — `query`, `step_id`, `sessionId`, `agentName`, `final_answer`, `tool_name`, `arguments`, `tool_call_id`, `iteration`, `result`, `duration_ms`, `error`, `default_error_message`. Such inputs are ignored, with a warning in the log.
+![Studio Preview New chat dialog for the banking agent](images/07_new_chat_inputs.png)
+
+Do not declare an external with a reserved name — `query`, `step_id`, `sessionId`, `agentName`, `final_answer`, `tool_name`, `arguments`, `tool_call_id`, `iteration`, `result`, `duration_ms`, `error`, `default_error_message`, `previous_additional_context`, `additional_context`. Such inputs are ignored, with a warning in the log.
 
 ### Trusted Inputs: the AgentInitParams Actor
 
@@ -139,7 +168,7 @@ Use `AgentInitParams` in any hook or tool flow that needs the customer identity 
 
 The most common hook loads the entity the conversation is about, so the `query` tool works on its data. In the banking demo:
 
-- The main agent's `step_start` flow, `Banking_CustomerStory`, declares the mandatory external `customerId`, loads the customer instance with the `GetWithSnap` actor (which also supports evaluation snapshots), builds a short customer profile, and returns it together with the user's message as `result`.
+- The main agent's `step_start` flow, `Banking_CustomerStory`, declares the mandatory external `customerId`, loads the customer instance with the `GetWithSnap` actor (which also supports evaluation snapshots), builds a short customer profile, and on the first turn returns it together with the user's message as `result`. (A new flow can return such a profile as `additional_context` instead.)
 - Each sub-agent's `step_start` flow, `LoadCustomerScope`, declares the mandatory `customerId` and loads the instance with `FabricGet`.
 
 Because both flows declare `customerId` as mandatory, the client must choose the customer before the first message, and the main agent's sub-agent catalog shows `inputs: customerId` for every specialist.

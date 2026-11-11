@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 700" width="780" height="700" role="img" aria-label="AI Fusion runs inside your Fabric" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9aa0a6"/></marker></defs>
+  <rect width="780" height="700" fill="#ffffff"/>
+  <text x="24" y="30" font-size="15" font-weight="600" fill="#1f2328">AI Fusion runs inside your Fabric</text>
+  <text x="24" y="50" font-size="11.5" fill="#5b6169">Agents are files in your Data Products; the runtime, sessions and analytics live in the aifusion Data Product</text>
+  <path d="M108 128V152" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M292 128V152" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M476 128V152" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M666 128V238H480V256" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M292 192V256" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M508 300H560" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M276 368V392" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M142 544V572" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-start="url(#a)" marker-end="url(#a)"/>
+  <path d="M394 544V572" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-start="url(#a)" marker-end="url(#a)"/>
+  <path d="M642 544V572" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-start="url(#a)" marker-end="url(#a)"/>
+  <rect x="24" y="72" width="168" height="56" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="36" y="94" font-weight="600" fill="#1f2328">AI Fusion Studio</text>
+  <text x="36" y="112" font-size="11.5" fill="#5b6169">Agent Editor, Preview, Evals</text>
+  <rect x="208" y="72" width="168" height="56" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="220" y="94" font-weight="600" fill="#1f2328">Observation app</text>
+  <text x="220" y="112" font-size="11.5" fill="#5b6169">Dashboard, conversation review</text>
+  <rect x="392" y="72" width="168" height="56" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="404" y="94" font-weight="600" fill="#1f2328">Your app or channel</text>
+  <text x="404" y="112" font-size="11.5" fill="#5b6169">agent REST API (SSE)</text>
+  <rect x="576" y="72" width="180" height="56" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="588" y="94" font-weight="600" fill="#1f2328">Broadway flows</text>
+  <text x="588" y="112" font-size="11.5" fill="#5b6169">AgentInvoke actor</text>
+  <rect x="24" y="152" width="536" height="40" rx="8" fill="#f0f0ee" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="292.0" y="176.0" text-anchor="middle" font-weight="600" fill="#1f2328">Fabric web services (k2_ws): authentication and role-based access</text>
+  <rect x="24" y="214" width="732" height="330" rx="10" fill="none" stroke="#9aa0a6" stroke-width="1.25" stroke-dasharray="6 4"/>
+  <text x="38" y="236" font-weight="600" fill="#1f2328">aifusion Data Product</text>
+  <rect x="44" y="256" width="464" height="112" rx="8" fill="#e8eefb" stroke="#2f6fdf" stroke-width="1.75"/>
+  <text x="56" y="278" font-weight="600" fill="#1f2328">Agent runtime (aifusion.Agent)</text>
+  <text x="56" y="296" font-size="11.5" fill="#5b6169">Loads agent.yaml from the agent&#x27;s Data Product at each turn</text>
+  <text x="56" y="312" font-size="11.5" fill="#5b6169">Runs hooks, the LLM reasoning loop, tools and sub-agents</text>
+  <text x="56" y="328" font-size="11.5" fill="#5b6169">Streams text, tool activity, to-dos and widgets as SSE</text>
+  <text x="56" y="344" font-size="11.5" fill="#5b6169">Limits: max_iterations, retries, allow-listed tools</text>
+  <rect x="560" y="256" width="176" height="112" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="572" y="278" font-weight="600" fill="#1f2328">Session (aifusion LU)</text>
+  <text x="572" y="296" font-size="11.5" fill="#5b6169">One instance per session:</text>
+  <text x="572" y="312" font-size="11.5" fill="#5b6169">messages, steps, tool calls,</text>
+  <text x="572" y="328" font-size="11.5" fill="#5b6169">token usage, feedback</text>
+  <rect x="44" y="392" width="340" height="72" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="56" y="414" font-weight="600" fill="#1f2328">Observation analysis</text>
+  <text x="56" y="432" font-size="11.5" fill="#5b6169">RunAnalyze / pipelines: summary + signals</text>
+  <text x="56" y="448" font-size="11.5" fill="#5b6169">per session, into the insights DB</text>
+  <rect x="400" y="392" width="336" height="72" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="412" y="414" font-weight="600" fill="#1f2328">Evaluation runs</text>
+  <text x="412" y="432" font-size="11.5" fill="#5b6169">Started from AI Fusion Studio:</text>
+  <text x="412" y="448" font-size="11.5" fill="#5b6169">replays test cases, LLM judge, thresholds</text>
+  <rect x="44" y="480" width="692" height="44" rx="8" fill="#f0f0ee" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="390.0" y="506.0" text-anchor="middle" font-weight="600" fill="#1f2328">Insights DB (SQLite or PostgreSQL): ACTVSESSION, INSTANCES, INSIGHTS, evaluation results</text>
+  <rect x="24" y="572" width="236" height="104" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="36" y="594" font-weight="600" fill="#1f2328">Business Data Products</text>
+  <text x="36" y="612" font-size="11.5" fill="#5b6169">Your LUs, e.g. customer_bank</text>
+  <text x="36" y="628" font-size="11.5" fill="#5b6169">AI/Agents/&lt;agent&gt;/agent.yaml,</text>
+  <text x="36" y="644" font-size="11.5" fill="#5b6169">skills, references, evals,</text>
+  <text x="36" y="660" font-size="11.5" fill="#5b6169">flow tools, entity micro-DB</text>
+  <rect x="276" y="572" width="236" height="104" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="288" y="594" font-weight="600" fill="#1f2328">LLM provider</text>
+  <text x="288" y="612" font-size="11.5" fill="#5b6169">Through AI interfaces:</text>
+  <text x="288" y="628" font-size="11.5" fill="#5b6169">Anthropic, Bedrock, OpenAI,</text>
+  <text x="288" y="644" font-size="11.5" fill="#5b6169">Google, Ollama, Foundry</text>
+  <rect x="528" y="572" width="228" height="104" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="540" y="594" font-weight="600" fill="#1f2328">MCP servers</text>
+  <text x="540" y="612" font-size="11.5" fill="#5b6169">Optional tools via the</text>
+  <text x="540" y="628" font-size="11.5" fill="#5b6169">Mcp interface (mcp extension)</text>
+</svg>

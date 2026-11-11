@@ -40,6 +40,8 @@ This document outlines the standard procedure for ...
 
 The pack names are free, with one exception: the **`Procedures`** pack is also read by the planner.
 
+![AI Explorer at customer_bank › AI › Agents › banking › References, with the KB pack](images/05_references_tree.png)
+
 
 
 ## Reference Search
@@ -71,13 +73,19 @@ planning:
     ...
 ```
 
+![Plan-then-execute](images/planning_flow.svg)
+
+![Agent Editor Planning card of the banking agent](images/05_planning_card.png)
+
 How it works:
 
 1. The agent decides that the request needs a plan and calls `enter_plan_mode` with a refined statement of the request.
 2. A **planner sub-agent** searches the `References/Procedures` pack, loads the matching procedure, and writes a plan whose steps use the agent's tools and sub-agents. The planner knows the agent's sub-agents, skills and tools.
-3. If approval is required, the planner shows the plan to the user (as an `ask_user` question) and revises it until the user approves.
+3. If approval is required, the planner shows the plan to the user (as an `ask_user` question) and revises it until the user approves. The user's answer goes back to the planner, which continues from where it stopped.
 4. The plan becomes a **to-do list**. The agent executes the items in order — typically calling a specialist sub-agent with `task` for each step — and updates their status with `todo_write`.
 5. The client shows the to-do list live (pending, in progress, done, failed).
+
+![Preview of banking](images/05_plan_todos_in_chat.png)
 
 ### Planning Rules Added Automatically
 

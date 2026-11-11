@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" width="780" height="420" role="img" aria-label="task or delegate" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9aa0a6"/></marker></defs>
+  <rect width="780" height="420" fill="#ffffff"/>
+  <text x="24" y="30" font-size="15" font-weight="600" fill="#1f2328">task or delegate</text>
+  <text x="24" y="50" font-size="11.5" fill="#5b6169">Two ways for an agent to use a sub-agent</text>
+  <path d="M150 156V196" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M254 196V156" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M202 260V292" fill="none" stroke="#9aa0a6" stroke-width="1.25" stroke-dasharray="4 4" marker-end="url(#a)"/>
+  <path d="M578 156V196" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M578 260V292" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <rect x="24" y="64" width="356" height="332" rx="10" fill="none" stroke="#9aa0a6" stroke-width="1.25" stroke-dasharray="6 4"/>
+  <text x="38" y="86" font-weight="600" fill="#1f2328">task — a sub-task with a result</text>
+  <rect x="44" y="100" width="316" height="56" rx="8" fill="#e8eefb" stroke="#2f6fdf" stroke-width="1.75"/>
+  <text x="56" y="122" font-weight="600" fill="#1f2328">Main agent</text>
+  <text x="56" y="140" font-size="11.5" fill="#5b6169">Plans or combines several results</text>
+  <text x="158" y="182" text-anchor="start" font-size="11.5" fill="#5b6169">task(goal, args)</text>
+  <rect x="44" y="196" width="316" height="64" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="56" y="218" font-weight="600" fill="#1f2328">Sub-agent</text>
+  <text x="56" y="236" font-size="11.5" fill="#5b6169">Own loop, tools, skills, constraints</text>
+  <text x="262" y="182" text-anchor="start" font-size="11.5" fill="#5b6169">result</text>
+  <rect x="44" y="292" width="316" height="84" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="56" y="314" font-weight="600" fill="#1f2328">The main agent writes the answer</text>
+  <text x="56" y="332" font-size="11.5" fill="#5b6169">Its response_prompt shapes the reply.</text>
+  <text x="56" y="348" font-size="11.5" fill="#5b6169">The sub-agent&#x27;s result stays raw.</text>
+  <text x="56" y="364" font-size="11.5" fill="#5b6169">Can call several sub-agents in a turn.</text>
+  <rect x="400" y="64" width="356" height="332" rx="10" fill="none" stroke="#9aa0a6" stroke-width="1.25" stroke-dasharray="6 4"/>
+  <text x="414" y="86" font-weight="600" fill="#1f2328">delegate — hand over the whole turn</text>
+  <rect x="420" y="100" width="316" height="56" rx="8" fill="#e8eefb" stroke="#2f6fdf" stroke-width="1.75"/>
+  <text x="432" y="122" font-weight="600" fill="#1f2328">Main agent  (delegate: true)</text>
+  <text x="432" y="140" font-size="11.5" fill="#5b6169">One specialist can finish the request</text>
+  <text x="586" y="182" text-anchor="start" font-size="11.5" fill="#5b6169">delegate(agent, goal, args)</text>
+  <rect x="420" y="196" width="316" height="64" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="432" y="218" font-weight="600" fill="#1f2328">Sub-agent</text>
+  <text x="432" y="236" font-size="11.5" fill="#5b6169">Gets the caller&#x27;s response_prompt</text>
+  <text x="432" y="252" font-size="11.5" fill="#5b6169">+ its own and the caller&#x27;s constraints</text>
+  <rect x="420" y="292" width="316" height="84" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="432" y="314" font-weight="600" fill="#1f2328">The sub-agent answers the user</text>
+  <text x="432" y="332" font-size="11.5" fill="#5b6169">Its reply is the final answer, verbatim.</text>
+  <text x="432" y="348" font-size="11.5" fill="#5b6169">Its ask_user questions reach the user</text>
+  <text x="432" y="364" font-size="11.5" fill="#5b6169">and the answer resumes it.</text>
+</svg>

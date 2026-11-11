@@ -6,15 +6,14 @@
 	<li><a href="/articles/AI_fusion/03_architecture.md">Architecture</a></li>
 	<li><a href="/articles/AI_fusion/04_installation_and_setup.md">Installation and Setup</a></li>
 	<li><a href="/articles/AI_fusion/02_agents/README.md">Agent Platform</a></li>
-	<li><a href="/articles/AI_fusion/03_studio/README.md">AI Fusion Studio</a></li>
-	<li><a href="/articles/AI_fusion/04_evaluation/README.md">Evaluation</a></li>
+	<li><a href="/articles/AI_fusion/03_studio/README.md">AI Fusion Studio</a> (including <a href="/articles/AI_fusion/04_evaluation/README.md">Evaluation</a>)</li>
 	<li><a href="/articles/AI_fusion/05_observation/README.md">Observation</a></li>
 </ul>
 
 <strong>Versions and release notes</strong>
 
 <ul>
-	<li><a href="/articles/Product_Versions/AI_Fusion_versions.md">AI Fusion Versions</a></li>
+	<li><a href="/articles/Product_Versions/AI_versions.md">AI Versions</a></li>
 	<li><a href="/articles/AI_fusion/release_notes/README.md">Release Notes</a></li>
 </ul>
 

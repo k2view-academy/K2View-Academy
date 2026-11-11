@@ -61,6 +61,11 @@ This article lists every key of an agent definition. The same schema is used for
 <td>Offers the <code>delegate</code> tool, which hands the whole turn to a sub-agent. Off by default.</td>
 </tr>
 <tr>
+<td><code>subagent_questions</code></td>
+<td><code>propagate</code> | <code>answer</code> | <code>none</code><br>default: <code>propagate</code></td>
+<td>Who answers when a sub-agent called with <code>task</code> asks a question with <code>ask_user</code>: the user (<code>propagate</code>), this agent itself with the <code>answer_subagent</code> tool (<code>answer</code>), or nobody, so those sub-agents are not offered <code>ask_user</code> (<code>none</code>). Use <code>answer</code> or <code>none</code> for agents called through an API. Any other value fails the agent load. Not inherited by sub-agents. AI Fusion 3.0.10 or later. See <a href="/articles/AI_fusion/02_agents/06_subagents_and_delegation.md#choosing-who-answers-subagent_questions">Choosing Who Answers</a>.</td>
+</tr>
+<tr>
 <td><code>hooks</code></td>
 <td>map</td>
 <td>Broadway flows for <code>step_start</code>, <code>step_end</code>, <code>pre_tool_call</code>, <code>post_tool_call</code> and <code>on_error</code>. See <a href="/articles/AI_fusion/02_agents/07_hooks_and_inputs.md">Hooks and Agent Inputs</a>.</td>
@@ -117,6 +122,10 @@ Platform tools — `task`, `ask_user`, `load_skill`, `search_references`, the pl
 ## Settings
 
 All settings are optional.
+
+![Settings card in the Agent Editor (1)](images/02_settings_card_1.png)
+
+![Settings card in the Agent Editor (2)](images/02_settings_card_2.png)
 
 <table>
 <tbody>
@@ -222,27 +231,36 @@ All settings are optional.
 
 ## Complete Example
 
-Based on the `banking` agent of the aifusion-demo extension:
+The `banking` agent of the aifusion-banking-demo extension (`customer_bank/AI/Agents/banking/agent.yaml`), with the prompts abridged:
+
+![The banking agent in the Agent Editor, Source view](images/02_banking_agent_source_view.png)
 
 ```yaml
-description: "Elite Banking concierge — answers from the customer's data, follows written procedures, routes operations to specialists"
+description: "Elite Banking Assistant — customer-facing concierge for Elite Banking: answers read-only questions from the customer's data, follows the bank's written procedures via planning, and hands operations to specialist sub-agents"
 
 system_prompt: |
   # Elite Banking Assistant
-  You own the conversation with one customer.
-  - Answer read-only data questions yourself with `query`.
-  - For product and policy questions, call `search_references`.
-  - For multi-step operations, follow ## Planning and use `task` for each step.
-  - For a single operation with all inputs known, `delegate` to the specialist.
-  When calling a sub-agent, always pass `customerId` in `args`.
+  ## Role & Objective
+  You are "Elite Banking Assistant" — the customer-facing concierge for Elite Banking. ...
+  ## How to Handle a Request
+  1. **Read-only data question** — answer it yourself with `query`.
+  2. **General bank knowledge or policy** — call `search_references` (KB + procedures).
+  3. **Operation or procedure** — follow `## Planning`.
+  4. **Single operation with all inputs already known** — `delegate` to the specialist.
+  5. If the domain is unclear, ask the customer before acting.
+  ## Delegation
+  When delegating with `task` or `delegate`, always pass `customerId` in `args`. ...
+  # (abridged — the full prompt also has Procedure Documents and Thinking Style sections)
 
 response_prompt: |
   - Be concise. Ask only for missing essentials.
-  - Reply like a banker: summarize rather than echo raw tool output.
+  - Address the customer directly ("you", "your cards"), never in the third person.
+  - Reply like a banker: summarize what the data shows rather than echoing raw tool output.
+  - When you lack necessary information, ask the customer for clarification.
 
-constraints:
-  - Never include internal IDs in a customer-facing reply.
-  - Never state a figure you did not read from a tool result.
+constraints: |
+  Never include internal IDs in a customer-facing reply — use names, descriptions, or the last four digits.
+  Never state a figure or fact you did not read from a tool result. If the data is not there, say so.
 
 delegate: true
 
@@ -250,49 +268,38 @@ tools:
   - query
   - current_datetime
 
-skills:
+skills:                         # LU-wide skills (customer_bank/AI/Skills)
+  - credit-card-schema
+  - crm-schema
   - dda-schema
-  - crm-schema: { auto_load: true }
+  - loan-schema
+  - payroll-schema
+  - tax-schema
+  - microdb-query
+  - microdb-describe
 
-sub_agents:
-  - name: payroll
-    enabled: false              # folder sub-agent, muted
-  - name: credit-card
-    invoke: delegate            # may only receive whole turns
+settings:
+  llm_interface: default
+  max_iterations: 30
+  max_retries: 2
+  logging_level: off
+  observability: true
+  thinking: medium
+  compaction_threshold_fraction: 0.8
+  compaction_context_window_tokens: 200000
+  compaction_keep_recent_messages: 30
 
 hooks:
   step_start: Banking_CustomerStory   # loads the customer; declares the required customerId input
-  on_error: FriendlyError
 
 planning:
   approve: false                # plan-then-execute without asking for approval
 
 search_reference: true
 widget: true
-
-settings:
-  llm_interface: default
-  thinking: medium
-  max_iterations: 30
-  max_retries: 2
-  compaction_threshold_fraction: 0.8
-  compaction_context_window_tokens: 200000
-  compaction_keep_recent_messages: 30
 ```
 
-
-
-## Obsolete Keys
-
-The following keys from pre-3.0 agent files are no longer read. Remove them when migrating:
-
-- `.agent` files — use `agent.yaml`.
-- `tools: {built_in, custom}` (nested form) and `flows:` — use the flat `tools:` list.
-- Top-level `llm_interface`, `memory`, `snap_session_mode` — move under `settings:`.
-- `hooks: {max_iteration, retry_on_failure, custom_hooks, fabric_get}` — use `settings` and flow hooks.
-- `input_params`, `content_flows` — agent inputs are now declared by hook flows.
-- `search_reference.dir` — packs are discovered from `References/`.
-- Built-in tools `answer_user`, `execute_flow`, `list_skills`, `search_old_plans`.
+The six sub-agents (credit-card, crm, dda, loan, payroll, tax) are not listed in the file: they are discovered from the agent's `Subagents/` folder. Add a `sub_agents:` entry only to disable a folder sub-agent, restrict its route (`invoke`), or link an agent from another LU — see [Sub-Agents and Delegation](/articles/AI_fusion/02_agents/06_subagents_and_delegation.md).
 
 
 

@@ -1,4 +1,4 @@
-<strong>Evaluation</strong>
+<strong>Evaluation in AI Fusion Studio</strong>
 
 <ul>
 	<li><a href="/articles/AI_fusion/04_evaluation/00_intro_to_evaluation.md">Introduction to Evaluation</a></li>

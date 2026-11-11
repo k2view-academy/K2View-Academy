@@ -83,7 +83,7 @@ For very long sessions you can enable **automatic compaction**: when the convers
 How it behaves:
 
 - Compaction runs **only when both** `compaction_threshold_fraction` and `compaction_context_window_tokens` are greater than 0. The trigger is `fraction × window` tokens, measured against the input size of the session's previous LLM call.
-- It runs at the start of a turn, before the first LLM call. It does not run on a turn that resumes a paused `ask_user`.
+- It runs at the start of a turn, before the first LLM call. It does not run on a turn that resumes a paused `ask_user` (the `step_start` hook does run on that turn).
 - A tool call and its result are never split: the boundary between summarized and verbatim messages always falls between complete tool exchanges.
 - A checkpoint is stored in the session, so later turns load the compacted view instead of summarizing again.
 - Compaction is fail-open: if the summary call fails, the turn proceeds with the full history.
@@ -123,7 +123,11 @@ After the first assistant reply, the runtime generates a short title for the con
 </tbody>
 </table>
 
-The title call runs after the turn's terminal `done` event, so it adds no latency to the answer. An existing name is never overwritten; if naming fails, the next turn tries again. Turns that pause on `ask_user` and sub-agent runs are not named. A naming failure never fails the turn.
+The title call runs after the turn's terminal `done` event, so it adds no latency to the answer. The automatic title never overwrites an existing name; if naming fails, the next turn tries again. Turns that pause on `ask_user` and sub-agent runs are not named. A naming failure never fails the turn.
+
+A client can rename a chat explicitly with `PUT /api/v1/session-name` (AI Fusion 3.0.9 and later). An explicit rename overwrites the current name, generated or not. See [Invoking Agents](/articles/AI_fusion/02_agents/09_invoking_agents.md#rename-a-chat).
+
+![Studio Preview chat history popup of the banking agent](images/08_chat_history.png)
 
 
 
@@ -168,7 +172,9 @@ Because the pause is stored server-side, a client that reloads can ask whether a
 
 Only one answer is accepted per question. If two answers to the same question arrive at the same time, one proceeds and the other is rejected (for example with `The pending question has already been answered for this session`). Once the question is answered, the session is no longer waiting, and the next message starts a new turn.
 
-A question asked by the planner or by a sub-agent that received the turn through `delegate` pauses the whole turn in the same way. A question from a sub-agent called through `task` is not surfaced to the user.
+A question asked by the planner or by a named sub-agent — called through `task` or `delegate`, at any nesting depth — pauses the whole turn in the same way. From AI Fusion 3.0.9 the answer goes back to the sub-agent that asked, which continues with its own history, and every agent in the chain runs its `step_start` hook again on the answer turn. A copy of the main agent run by `task` without a named agent is not offered `ask_user`. See [When a Sub-Agent Asks the User](/articles/AI_fusion/02_agents/06_subagents_and_delegation.md#when-a-sub-agent-asks-the-user).
+
+![Studio Preview of banking showing an ask_user block](images/08_ask_user_block.png)
 
 
 
@@ -191,6 +197,8 @@ A client can stop a running turn with `POST /api/v1/stop-session?sessionId=...`.
 - The partial answer is kept in the session, followed by the marker `<ABORTED BY USER>`, so the transcript shows what the user saw.
 - Tool calls that were in flight are closed with placeholder results, and the tokens consumed by completed iterations are recorded.
 - The session is released, and the next message starts a new turn normally.
+
+![Studio Preview with a stopped answer showing the partial text and "Stopped."](images/08_stop_turn.png)
 
 
 

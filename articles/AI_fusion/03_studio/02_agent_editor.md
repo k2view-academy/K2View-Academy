@@ -4,7 +4,7 @@ The Agent Editor is the visual editor for agent definitions. It opens automatica
 
 The editor gives you a structured form for every key of the agent schema, so you do not have to remember key names or YAML syntax. It writes back to the same `agent.yaml` file, so the file in Git stays the source of truth, and you can always switch to the raw YAML.
 
-<!-- TODO screenshot: Agent Editor, Editor tab, Form view with all cards collapsed -->
+![Agent Editor of the banking agent, Editor tab, Form view](images/s02_editor_layout.png)
 
 
 ## Editor Layout
@@ -32,10 +32,12 @@ When you open a top-level agent, the editor lands on **Preview**. Click **Editor
 
 On the **Editor** tab, a **Form** / **Source** toggle switches between the two views:
 
-- **Form** — collapsible cards, one per area of the definition. All cards start collapsed and show a short summary (for example, word counts or how many tools are configured), so the form reads as an overview. Use **Expand all** / **Collapse all** to open or close every card.
+- **Form** — collapsible cards, one per area of the definition, under a **Configuration** header that counts the sections and how many are expanded (for example, *Configuration · 12 sections · 0 expanded*). All cards start collapsed and show a one-line hint and a summary badge, so the form reads as an overview — for example *6 sections · 426 words* on **System prompt**, *query fabric current_datetime 0 flow tools 0 MCPs* on **Tools & interfaces**, *1 / 5 set* on **Hooks**, *6 actives* on **Subagents** and *enabled* on a switched-on feature. Use **Expand all** / **Collapse all** to open or close every card.
 - **Source** — the raw YAML in an embedded code editor. Changes made in either view are reflected in the other.
 
-If the file has a YAML syntax error, the editor switches to **Source** and shows a banner (*YAML syntax error — fix it here in Source view*) with the parser message. The form is unavailable until the file parses again.
+If the file has a YAML syntax error, the editor switches to **Source** and shows a banner (*YAML syntax error — fix it here in Source view.*) with the parser message. The form is unavailable until the file parses again.
+
+![Agent Editor Source view with the YAML syntax error banner and the parser message](images/s02_yaml_error_banner.png)
 
 ### How the Editor Writes the File
 
@@ -53,7 +55,7 @@ A short, human-readable summary of the agent. It is also the delegation hint: wh
 
 The agent's main instructions, in Markdown. YAML key: `system_prompt`.
 
-The field is a Markdown editor with syntax highlighting, **edit** and **preview** tabs, a heading **Outline** that jumps to a section, and a word count. The same editor is used for **Response guidelines** and **Constraints**.
+The field is a Markdown editor with syntax highlighting, **edit** and **preview** tabs (it opens on **preview**), a heading **Outline** that jumps to a section, and a word count (*N words · markdown*). The same editor is used for **Response guidelines** and **Constraints**.
 
 
 ## Response Guidelines and Constraints
@@ -83,7 +85,9 @@ Both fields hold Markdown and both affect the final reply, but they behave diffe
 </tbody>
 </table>
 
-Click the **?** on either card to open the **Guidelines and constraints** matrix, which shows what happens to each on every route: when the agent answers itself, when it calls a sub-agent with `task`, and when it hands the turn over with `delegate`.
+Click the **?** on either card to open the **Guidelines and constraints** matrix, which shows what happens to each on every route: when the agent answers itself, when it calls a sub-agent with `task`, and when it hands the turn over with `delegate`. Click **Close** to dismiss it.
+
+![The Guidelines and constraints help](images/s02_guidelines_constraints_help.png)
 
 In a sub-agent file, **Response guidelines** shows a *Not in use yet* note: a sub-agent never owns a turn, so its response guidelines take no effect. Use **Constraints** for rules that must hold whoever calls the sub-agent. See [Sub-Agents and Delegation](/articles/AI_fusion/02_agents/06_subagents_and_delegation.md).
 
@@ -121,17 +125,17 @@ Three built-in tools can be switched on or off:
 </tbody>
 </table>
 
-The core tools — `task`, `ask_user`, the skill tools, the reference-search tools and, for top-level agents, the planning tools — are added automatically and are not listed here.
+Each built-in row shows a *default on* or *default off* tag. The core tools — `task`, `ask_user`, the skill tools, the reference-search tools and, for top-level agents, the planning tools — are added automatically and are not listed here.
 
 ### Flow Tools
 
-Click **+ Add flow tool** to expose a Broadway flow as a tool. The picker lists the flows of the agent's LU and of Shared Objects; table population flows are excluded. Click the flow name's open icon to open the flow itself.
+Click **+ Add flow tool** to expose a Broadway flow as a tool. The picker (*Search Broadway flows…*) lists the flows of the agent's LU and of Shared Objects; table population flows are excluded. Click the flow name's open icon to open the flow itself, or **×** (*Remove tool*) to remove it. With no flow tools, the card reads *No custom tools — the agent can still delegate and ask the user.*
 
 The extension has no wizard for creating tools: a tool is an existing Broadway flow, which you build with the regular Studio flow editor. See [Tools](/articles/AI_fusion/02_agents/03_tools.md).
 
 ### Per-Tool Hooks
 
-Every built-in or flow tool row has a **Before** and an **After** selector. A **Before** flow runs just before that tool is invoked (to mask arguments, validate, or block the call); an **After** flow runs on its result (to audit, redact or cache). These hooks apply to that one tool only; the agent-level `pre_tool_call` / `post_tool_call` hooks still run for every tool. In YAML, a tool with hooks is written as a single-key map:
+Every built-in or flow tool row has a **Before** and an **After** selector. A banner at the top of the card counts the tools that run a custom hook (*X of N tools run a custom hook · M total*). A **Before** flow runs just before that tool is invoked (to mask arguments, validate, or block the call); an **After** flow runs on its result (to audit, redact or cache). These hooks apply to that one tool only; the agent-level `pre_tool_call` / `post_tool_call` hooks still run for every tool. In YAML, a tool with hooks is written as a single-key map:
 
 ```yaml
 tools:
@@ -144,12 +148,14 @@ tools:
 
 ### MCP Interfaces
 
-Type the names of MCP interfaces defined in the project. Their tools become available to the agent. See [Tools](/articles/AI_fusion/02_agents/03_tools.md).
+Type the names of MCP interfaces defined in the project (*Type an MCP interface name…*). Their tools become available to the agent. See [Tools](/articles/AI_fusion/02_agents/03_tools.md).
+
+![Tools & interfaces card of the credit-card sub-agent](images/s02_tools_card.png)
 
 
 ## Hooks
 
-Agent-level lifecycle hooks, each a single Broadway flow. YAML key: `hooks`. Each row shows the flow's inputs and what it may return.
+Agent-level lifecycle hooks, each a single Broadway flow. YAML key: `hooks`. Each row shows **Inputs:** (what the flow receives) and **Returns:** (what it may return), and an icon that opens the selected flow.
 
 <table>
 <tbody>
@@ -161,7 +167,7 @@ Agent-level lifecycle hooks, each a single Broadway flow. YAML key: `hooks`. Eac
 <tr>
 <td><strong>Before the user message</strong></td>
 <td><code>step_start</code></td>
-<td>Inspect or rewrite the turn's user message before the model sees it. This is also where an entity-scoped agent loads its entity instance.</td>
+<td>Inspect or rewrite the turn's user message before the model sees it, and optionally give the model extra context for this turn. This is also where an entity-scoped agent loads its entity instance. <strong>Inputs:</strong> <code>query</code>, <code>step_id</code>, <code>sessionId</code>, <code>agentName</code>, <code>previous_additional_context</code>. <strong>Returns:</strong> <code>result</code> (the rewritten message) and <code>additional_context</code> (added to this turn's system prompt only). See <a href="/articles/AI_fusion/02_agents/07_hooks_and_inputs.md#additional-context-for-the-turn">Additional Context for the Turn</a>.</td>
 </tr>
 <tr>
 <td><strong>After the answer</strong></td>
@@ -188,15 +194,25 @@ Agent-level lifecycle hooks, each a single Broadway flow. YAML key: `hooks`. Eac
 
 The external parameters of the hook flows are the agent's inputs — they are what the Preview **New chat** dialog asks for. See [Hooks and Inputs](/articles/AI_fusion/02_agents/07_hooks_and_inputs.md).
 
+![Hooks card of the banking agent](images/s02_hooks_card.png)
+
 
 ## Subagents
 
 This card is shown for top-level agents only. YAML keys: `sub_agents`, `delegate`.
 
 - **Folder sub-agents** — every file in the agent's `Subagents/` folder is listed automatically and is available by default. Switch one off to hide it from the agent without deleting it.
-- **Linked agents** — click **+ Add subagent**, choose a Data Product (LU) under **DATA PRODUCT**, and pick a top-level agent from that LU. This lets an agent reuse another agent, including one from a different LU.
+- **Linked agents** — click **+ Add subagent**, choose a Data Product (LU) under **DATA PRODUCT** (*Search data products/logical units…*), and pick a top-level agent from that LU (*Search agents in this LU…*). This lets an agent reuse another agent, including one from a different LU. Each row has *Open subagent file* and, for a linked agent, *Remove subagent link* actions.
 - **Allow handing a turn to a subagent** — off by default. When on, the agent gets the `delegate` route: a sub-agent can answer the user directly, and the parent's response guidelines travel with the turn.
 - **Route per sub-agent** — enabled once handing off is allowed: **Both** (the agent decides per request; the recommended default), **Task only** (the sub-agent always returns its result to the parent, which writes the reply), or **Delegate only** (the sub-agent answers the user and ends the turn). YAML key per entry: `invoke`.
+
+- **Questions from subagents** (`subagent_questions`, AI Fusion Studio 1.0.3) — who answers when a sub-agent called with `task` asks a question: **Pass to the user** (the default), **Answer them myself** (the agent answers with `answer_subagent` and the turn keeps going) or **Don't let them ask** (the sub-agents are not given `ask_user` and say what is missing in their result). Choose one of the last two for agents with nobody to ask, such as one called through an API. The **?** on the section header explains each choice and its limits. An invalid value in the file is flagged, and choosing an option replaces it. In a sub-agent file the same choice has a section of its own, **Questions from subagents**, which matters only if that sub-agent calls sub-agents of its own. See [Choosing Who Answers](/articles/AI_fusion/02_agents/06_subagents_and_delegation.md#choosing-who-answers-subagent_questions).
+
+The footer counts the active sub-agents (*X of N active*).
+
+![Subagents card of the banking agent](images/s02_subagents_card.png)
+
+![the + Add subagent popover](images/s02_add_subagent_popover.png)
 
 ### Sub-Agent Validation
 
@@ -218,6 +234,8 @@ Shown for top-level agents only (sub-agents never plan). YAML key: `planning`.
 
 See [References and Planning](/articles/AI_fusion/02_agents/05_references_and_planning.md).
 
+![The Planning, Reference search and Widgets cards of the banking agent](images/s02_planning_refsearch_widgets.png)
+
 
 ## Reference Search
 
@@ -238,10 +256,12 @@ Skills in the agent's own `Skills/` folder are discovered automatically and do n
 
 YAML key: `skills`. See [Skills](/articles/AI_fusion/02_agents/04_skills.md).
 
+![Skills card of the credit-card sub-agent](images/s02_skills_card.png)
+
 
 ## Settings
 
-Every setting is optional. Each row shows the default it falls back to; a changed value shows a reset button, and values equal to the default are not written to the file. In a sub-agent, unset values are **inherited** from the parent agent instead.
+Every setting is optional. Each row shows the default it falls back to; a changed value shows a reset button (*Reset to default*, or *Reset to inherit from parent* in a sub-agent), and values equal to the default are not written to the file. In a sub-agent, unset values are **inherited** from the parent agent instead. The compaction row shows an *active* or *off by default* badge.
 
 <table>
 <tbody>
@@ -346,15 +366,21 @@ Every setting is optional. Each row shows the default it falls back to; a change
 
 Context compaction is off by default and runs only when **both** the threshold fraction and the context window are greater than 0. Note that the **New Agent...** template sets several of these explicitly (for example, `thinking: medium`, `memory: true`, `max_iterations: 30` and compaction at 0.8 of 200000 tokens) — see [AI Fusion Studio Overview](/articles/AI_fusion/03_studio/01_studio_overview.md#what-the-new-agent-template-contains). For details on each setting, see the [agent.yaml Reference](/articles/AI_fusion/02_agents/02_agent_yaml_reference.md) and [Sessions and Context](/articles/AI_fusion/02_agents/08_sessions_and_context.md).
 
+![Settings card in the Agent Editor (1)](/articles/AI_fusion/02_agents/images/02_settings_card_1.png)
+
+![Settings card in the Agent Editor (2)](/articles/AI_fusion/02_agents/images/02_settings_card_2.png)
+
 
 ## Editing Sub-Agents
 
 A file under `Subagents/` opens in the same editor, with these differences:
 
 - There is no **Preview** tab — sub-agents run only through their parent.
-- The **Subagents** and **Planning** cards are hidden (delegation is single-level, and sub-agents never plan).
+- The **Subagents** and **Planning** cards are hidden: the form does not configure a sub-agent's own sub-agents, and sub-agents never plan.
 - **Response guidelines** carries the *Not in use yet* note.
 - **Settings** fall back to the parent agent's effective values, labeled **inherited**.
+
+![Agent Editor of Subagents/credit-card.yaml](images/s02_subagent_form.png)
 
 
 ## After You Edit

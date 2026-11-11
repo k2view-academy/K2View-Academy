@@ -39,11 +39,15 @@ In addition, platform tools such as `task`, `ask_user` and `load_skill` are adde
 </tbody>
 </table>
 
+![Tools & interfaces card of the banking agent](images/03_tools_card_banking.png)
+
 When `tools:` is omitted, `query` and `current_datetime` are enabled. When `tools:` is present, a built-in is enabled only if it is listed — `tools: [getTransactions]` turns `query` off.
 
 > The `query` tool does not enforce read-only SQL. Business changes should go through flow tools that validate their inputs, and the agent's instructions should limit `query` to reading.
 
 
+
+![The query tool card in Preview](images/03_tool_card_in_chat.png)
 
 ## Broadway Flow Tools
 
@@ -79,6 +83,14 @@ tools:
 ```
 
 They use the same contract as the global `pre_tool_call` and `post_tool_call` hooks. Global hooks run first, and a global block wins.
+
+### Streaming from a Flow Tool
+
+From AI Fusion 3.0.9, a flow that the agent runs — a flow tool or a hook flow — can stream to the client. When an `LLMInvoke` actor in the flow has streaming to the chat turned on, or the flow writes an event with the `WriteSseEvent` actor, the output is sent as regular SSE events of the agent's stream and is attributed to the agent that called the flow (a sub-agent, when a sub-agent called it). Streamed flow output is not part of the agent's answer: it is not stored as the turn's answer and does not appear in `done.answer`. See [Invoking Agents](/articles/AI_fusion/02_agents/09_invoking_agents.md#the-event-stream).
+
+A flow called by a `task` sub-agent without a named agent (a copy of the main agent) does not stream; its output is discarded.
+
+`LLMInvoke` streams its reasoning to the chat only when streaming to the chat is on. With streaming off, the reasoning is available only on the actor's `thinking` output.
 
 
 
@@ -119,8 +131,13 @@ The server's tools are offered to the LLM as `MCP__<interface>__<tool>`. Fabric 
 </tr>
 <tr>
 <td><code>ask_user</code></td>
-<td>Always</td>
-<td>Pauses the turn to ask the user 1–4 structured questions, each with 2–4 options (single or multi-select). The user's next message resumes the turn.</td>
+<td>Always, except in a copy of the agent run by <code>task</code></td>
+<td>Pauses the turn to ask the user 1–4 structured questions, each with 2–4 options (single or multi-select). The user's next message resumes the turn. Sub-agents can ask too; the answer goes back to the sub-agent that asked. Not offered to a <code>task</code> run without a named agent (a copy of the main agent). See <a href="/articles/AI_fusion/02_agents/08_sessions_and_context.md#asking-the-user-pause-and-resume">Asking the User</a>.</td>
+</tr>
+<tr>
+<td><code>answer_subagent</code></td>
+<td><code>subagent_questions: answer</code> (3.0.10 or later)</td>
+<td>Answers a question asked by a <code>task</code> sub-agent, so that the same sub-agent continues within the turn. Returns the sub-agent's result or its next question. See <a href="/articles/AI_fusion/02_agents/06_subagents_and_delegation.md#choosing-who-answers-subagent_questions">Choosing Who Answers</a>.</td>
 </tr>
 <tr>
 <td><code>load_skill</code></td>
@@ -159,6 +176,10 @@ Only tools that were offered to the model can be executed; a call to any other t
 With `widget: true`, the agent can call `build_widget` with a goal and, optionally, data. A dedicated widget sub-agent — which can use the agent's flow and MCP tools and the same LLM interface — returns a widget specification, streamed to the client as a `widget` event.
 
 Supported widget types: `table`, `bar`, `stackedbar`, `line`, `area`, `pie`, `link` and `simplelink`. The Studio Preview renders them; your own client receives the specification and can render it with any library.
+
+
+
+![A pie chart widget in Preview](images/03_widget_in_chat.png)
 
 
 

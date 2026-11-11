@@ -33,6 +33,8 @@ Installing the **AI Fusion - Studio** extension from K2exchange adds both skills
 
 Once installed, the skills are listed in the **Skills & Slash Commands** category of Studio AI's configuration.
 
+![Command Palette filtered on "Fabric-aifusion-studio", showing the Import Artifacts command](images/s04_import_artifacts_command.png)
+
 
 ## Building an Agent with Agent Builder
 
@@ -50,6 +52,8 @@ Agent Builder turns a request like "create a support agent over the `Customer` D
 
 After the build, open the agent's **Preview** tab to try it. See [Preview and Trace](/articles/AI_fusion/03_studio/03_preview_and_trace.md).
 
+![Studio AI chat running /agent-builder over the customer_bank Data Product](images/s04_agent_builder_chat.png)
+
 Agent Builder is also the right tool when an existing agent "returns no data" or "doesn't know the customer". The most common cause is a missing or unwired `step_start` hook, and Agent Builder checks for that first. See [Hooks and Inputs](/articles/AI_fusion/02_agents/07_hooks_and_inputs.md).
 
 
@@ -62,11 +66,13 @@ The process:
 1. **Find the agent's inputs.** It reads the agent's `step_start` hook flow to learn which inputs (such as `customerId`) a session needs.
 2. **Check existing coverage.** It reads the agent's existing `Evals/*.csv` suites and skips questions that are already covered.
 3. **Ask you for the details.** It confirms the questions and asks you for **candidate entity IDs** to test with — it never invents an ID. It also asks whether to simulate a specific customer **persona** for the tone of the questions (default: a neutral customer), the **conversation-pairs limit** for multi-turn cases (default 10), and whether closely related questions should be combined into one conversation.
-4. **Run and save.** It groups cases into suites (typically one per domain), runs each question through the agent, saves each case **with a snapshot** of the entity's data, and seeds each case's quality dimensions and thresholds from the agent's evaluation defaults (**Evaluation defaults** setting).
+4. **Run and save.** It groups cases into suites (typically one per domain), runs each question through the agent, saves each case **with a snapshot** of the entity's data, and seeds each case's quality dimensions and thresholds from the agent's evaluation defaults (**Evaluation defaults** setting). The generated cases are evaluated at the **step level** — each answer against its baseline — unlike cases created with **New Test...** or **Save as test case**, which are evaluated at the conversation level.
 5. **Multi-turn conversations.** When a real customer would naturally follow up — the answer needs clarification, invites a next step, or the agent asks a question back — Agent Builder plays the customer, reads each real answer, and decides the next turn, until the goal is met or the pairs limit is reached.
 6. **Verify and report.** It checks every saved row (a non-empty answer, dimensions and thresholds present, snapshot saved), rebuilds any row that fails, and reports the question → case → input → suite mapping.
 
 The generated cases appear under the agent's `Evals/` folder in AI Explorer and can be run like any other case. See [Running Tests and Results](/articles/AI_fusion/04_evaluation/03_running_and_results.md).
+
+![Test generation wizard: proposed business questions per suite, and the customer IDs to run them against](images/s04_test_generator_result.png)
 
 Test generation runs the agent through the Studio, so it needs a Studio development space with the agent's LU deployed.
 
@@ -91,12 +97,14 @@ When the agent gives a wrong, incomplete or unhelpful answer, the **Analyze** bu
 </tr>
 <tr>
 <td>Eval Editor — <strong>Analyze</strong></td>
-<td>The latest evaluation run of a test case, including which quality dimensions fell below their threshold. Available once the case has been run.</td>
+<td>The latest evaluation run of a test case, including which quality dimensions fell below their threshold and which conversation-level criteria were not met. Available once the case has been run.</td>
 </tr>
 </tbody>
 </table>
 
-Clicking **Analyze** opens a new Studio AI chat with the agent's LU and name, the session ID, the step (for a single answer), the session inputs, and your note or the failed dimensions. The Analyze buttons are shown only when Studio AI's Ask AI service is available — Web Studio 8.5.2 or later, with the AI features turned on. On older Studio versions the buttons are hidden.
+Clicking **Analyze** opens a new Studio AI chat with the agent's LU and name, the session ID, the step (for a single answer), the session inputs, and your note, the failed dimensions or the unmet conversation criteria. The Analyze buttons are shown only when Studio AI's Ask AI service is available, that is, when the AI features of Web Studio are turned on.
+
+![Note popup with the Analyze button, and the researcher report it opens](images/s04_analyze_from_note.png)
 
 ### Diagnose
 
@@ -120,6 +128,13 @@ If you ask it to act, the researcher follows a gated workflow:
 5. **Regression test — needs your approval.** If you agree, it saves the verified conversation as an eval test case, so the problem cannot silently return. It makes sure the saved answer contains the decisive value that tells the fixed behavior from the buggy one, and continues the conversation over several turns if the agent only offered to look the value up.
 
 
+## Proposing Conversation Criteria with Ask AI
+
+In the Eval Editor, the **Conversation level** section of a test case has an **Ask AI** entry point. Studio AI reads the case's conversation and proposes the criteria the conversation must meet, written as plain sentences. Review each proposal and approve, modify or deny it; only the criteria you accept are added to the case. See [Evaluation](/articles/AI_fusion/04_evaluation/README.md) for how conversation-level criteria are judged.
+
+![Eval Editor of a banking test case with Studio AI's proposed conversation criteria](images/s04_ask_ai_conversation_criteria.png)
+
+
 ## Approvals and Side Effects
 
 Both skills stop for you at the points that change your project or your environment:
@@ -129,4 +144,4 @@ Both skills stop for you at the points that change your project or your environm
 
 Review the changes Studio AI makes as you would any other change, and commit them to Git when you are satisfied.
 
-<!-- TODO screenshot: Studio AI chat after clicking Analyze on a Preview note, showing the diagnosis report -->
+![The researcher's suggested fix and the approval buttons](images/s04_researcher_report.png)

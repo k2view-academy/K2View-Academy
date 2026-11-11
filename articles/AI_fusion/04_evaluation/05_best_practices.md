@@ -37,9 +37,25 @@ Agent: (compares the two and names the higher one)
 
 Follow-ups with pronouns ("which one", "the second one") are where agents most often lose context.
 
+### Choose the Right Evaluation Level
+
+- **Conversation level** when what matters is the outcome: the user got the information or the action they needed, whatever path the agent took. It tolerates a clarifying question, a different order of turns or a different split of the answer across turns.
+- **Step level** when each answer must contain specific content, and whenever you want to watch token consumption and response time — they are checked only at step level.
+- **Both** for your most important journeys: the conversation level confirms the goal, the step level catches a degraded answer along the way.
+
+### Write Observable Criteria
+
+The conversation judge marks each criterion met, partial or missed, and a met verdict must cite the turns that support it. Write criteria the judge can verify in the transcript:
+
+- **Too vague:** "The agent was helpful." — nothing in the transcript proves or disproves it.
+- **Too broad:** "The agent gave all balances, compared them and suggested a transfer." — one gap makes the whole criterion partial. Split it into three.
+- **Right:** "The agent stated the balance of the checking and savings accounts." and "The agent named the account with the higher balance."
+
+A single partial or missed criterion fails the conversation level, so do not add "nice to have" criteria to a case that must pass. Use **Ask AI** for a first draft, then edit the criteria so that each one is observable and independent. See [Conversation Criteria](/articles/AI_fusion/04_evaluation/02_quality_criteria.md#conversation-criteria).
+
 ### Write Specific Expected Answers — Not Exact Wording
 
-The judge rates the new answer against the expected answer, so the expected answer defines what "correct" means.
+At step level, the judge rates the new answer against the expected answer, so the expected answer defines what "correct" means.
 
 - **Too vague:** "The agent should provide balance information." — anything passes.
 - **Too strict:** "Your checking account number 1234 has a balance of $1,234.56 as of December 3rd, 2024." — written as if wording mattered; harmless rephrasings may lose points.
@@ -65,6 +81,16 @@ Include cases for:
 ### Name and Describe Cases Clearly
 
 "Test 1" and "Banking test" help nobody six months later. Use names like "Balances - compare accounts (cust 1)" and descriptions like "Verify that the agent lists all account balances and identifies the highest one when asked to compare."
+
+
+
+## Using Run Hooks
+
+- **Verify actions, not only words.** If the agent is supposed to change something — open a ticket, update a preference, block a card — add an after hook that checks the change really happened, and fails (for example, with an assert actor) when it did not.
+- **Prepare state in a before hook** when the case needs data in a known state that a snapshot cannot provide. Remember that a failed before hook makes the case **not evaluated**, so keep before hooks simple and reliable.
+- **Clean up in an after hook.** After hooks always run, even when a before hook or the evaluation failed. Write them so that they can run safely in any of these situations, and more than once.
+- **Use the inputs you get.** Every hook receives the run's `sessionid`, the `caseId`, `agentName`, `luName` and the case's initialization parameters, so one hook flow can serve many cases. See [Run Hooks](/articles/AI_fusion/04_evaluation/01_authoring_test_cases.md#run-hooks).
+- **Return useful outputs.** A hook's outputs are shown in the results, so returning what it checked (for example, the ticket ID it found) makes a failure easier to investigate.
 
 
 
@@ -176,7 +202,7 @@ Name suites by content (`Billing`, `Smoke`), not by owner or date. Disable cases
 
 ## Acting on Results
 
-- **Read the verdicts, not just the scores.** The explanation tells you what was wrong.
+- **Read the verdicts, not just the scores.** The explanation of a score, and the note and evidence turns of a criterion, tell you what was wrong. For a failed hook, read its message.
 - **Look for patterns.** One failure can be noise; the same dimension failing across several cases points to a real issue.
 - **Decide honestly whether to fix the agent or the test.** Ask: would this answer be good enough for a real customer? If yes, fix the expected answer or threshold. If no, fix the agent.
 - **Fix the most serious failures first.** Accuracy and guardrail failures before clarity and politeness.

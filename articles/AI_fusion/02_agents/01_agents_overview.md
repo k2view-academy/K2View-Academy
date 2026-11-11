@@ -1,6 +1,9 @@
 # Agents Overview
 
-In AI Fusion 3, an **agent** is a declarative definition — a YAML file and a few folders of Markdown — stored inside the Data Product (LU) whose data it works on. You describe *what* the agent is and *what it may use*; the AI Fusion runtime takes care of *how*: running the reasoning loop with the LLM, calling tools, delegating to sub-agents, streaming the answer and recording every step.
+In AI Fusion 3, an **agent** is a declarative definition - a YAML file and a few folders of Markdown - stored inside the Data Product (LU) whose data it works on. You describe *what* the agent is and *what it may use*; the AI Fusion runtime takes care of *how*: running the reasoning loop with the LLM, calling tools, delegating to sub-agents, streaming the answer and recording every step.
+
+> **Note:** The examples and screenshots in this section use the banking demo (`customer_bank` › `banking`). See [About the Examples](/articles/AI_fusion/01_overview.md#about-the-examples-in-this-documentation).
+
 
 
 
@@ -53,11 +56,11 @@ In AI Fusion 3, an **agent** is a declarative definition — a YAML file and a f
 
 ```text
 <LU>/AI/
-├── Skills/<name>.md              LU-wide skills — available to agents that list them
+├── Skills/<name>.md              LU-wide skills - available to agents that list them
 └── Agents/<agent>/
     ├── agent.yaml                the agent definition
-    ├── Skills/<name>.md          agent-private skills — discovered automatically
-    ├── Subagents/<name>.yaml     sub-agents — discovered automatically, same schema as agent.yaml
+    ├── Skills/<name>.md          agent-private skills - discovered automatically
+    ├── Subagents/<name>.yaml     sub-agents - discovered automatically, same schema as agent.yaml
     ├── References/<pack>/*.md    reference packs, e.g. KB/ and Procedures/
     ├── Evals/<suite>.csv         evaluation suites (authored in Studio)
     └── Observation/              signals.yaml and widgets.yaml for the Observation dashboard
@@ -65,17 +68,21 @@ In AI Fusion 3, an **agent** is a declarative definition — a YAML file and a f
 
 Skills can also be defined under Shared Objects (`SharedObjects/AI/Skills/`) and shared across Data Products.
 
-Agents are always defined in a Data Product, not in Shared Objects. Place an agent in the LU that holds the entity it serves — for example a customer-service agent in the customer LU — so the entity data, the flows it uses as tools and the agent are versioned and deployed together.
+![The banking agent in the AI Explorer](images/01_banking_agent_in_ai_explorer.png)
+
+Agents are always defined in a Data Product, not in Shared Objects. Place an agent in the LU that holds the entity it serves - for example a customer-service agent in the customer LU - so the entity data, the flows it uses as tools and the agent are versioned and deployed together.
 
 
 
 ## How an Agent Works
 
+![Anatomy of an agent](images/agent_anatomy.svg)
+
 When a message arrives, the runtime:
 
 1. Opens the session and records a new turn.
 2. Loads the agent definition from the deployed Data Product.
-3. Runs the `step_start` hook — typically loading the customer's LU instance so the `query` tool can read it.
+3. Runs the `step_start` hook - typically loading the customer's LU instance so the `query` tool can read it. The hook may also add context for this turn to the system prompt.
 4. Builds the system prompt from the agent's `system_prompt`, the catalog of its sub-agents and skills, auto-loaded skills, planning instructions, `response_prompt` and `constraints`.
 5. Runs the reasoning loop: the LLM either answers or calls tools; tool results are returned to the LLM until it produces a final answer or reaches `max_iterations`.
 6. Streams the answer and the activity to the client, runs the `step_end` hook, and records messages, tool calls and token usage.
@@ -109,18 +116,18 @@ settings:
 
 With this file deployed, a client starts a conversation with `initParams` `{"customerId":"1001"}` and asks "What is my savings balance?". The hook loads customer 1001, the skill tells the model which tables exist, and the model answers by running SQL with `query`.
 
-The [banking agent in the aifusion-demo extension](/articles/AI_fusion/04_installation_and_setup.md#extensions) is a complete example with six sub-agents, reference packs, planning and observation configuration.
+The [banking agent in the aifusion-banking-demo extension](/articles/AI_fusion/04_installation_and_setup.md#extensions) is a complete example with six sub-agents, reference packs, planning and observation configuration.
 
 
 
 ## Creating and Changing Agents
 
-- **In Studio** — use the AI Explorer (**New Agent...**) and the form-based Agent Editor. See [AI Fusion Studio](/articles/AI_fusion/03_studio/README.md). Studio AI can also build an agent for you from the Data Product schema.
-- **As files** — the definitions are plain YAML and Markdown, so you can edit them in any editor and keep them in Git with the rest of the project.
+- **In Studio** - use the AI Explorer (**New Agent...**) and the form-based Agent Editor. See [AI Fusion Studio](/articles/AI_fusion/03_studio/README.md). Studio AI can also build an agent for you from the Data Product schema.
+- **As files** - the definitions are plain YAML and Markdown, so you can edit them in any editor and keep them in Git with the rest of the project.
 
 Fabric reads agent definitions from the deployed Data Product. **After changing an agent, deploy its LU** (a soft deploy is enough) for the change to take effect.
 
-
+![The banking agent in the Agent Editor, Form view](images/01_banking_agent_editor_form.png)
 
 ## Design Guidelines
 

@@ -102,14 +102,16 @@ Snapshots referenced by a suite are never removed by the cleanup, so deleting a 
 
 The conversations real users have with your deployed agent show the questions, phrasings and edge cases you did not think of. Turn the problematic ones into test cases so the same problem cannot come back unnoticed.
 
-<!-- TODO screenshot: Observation conversation review with the Export button and the Export Chat dialog -->
+![Observation conversation review with the export button and the Export Chat dialog, Export](images/observation_export_chat.png)
 
 1. **Find the conversation.** In Observation, open the conversation in the conversation review — for example, one with negative feedback or a low signal score. See [Conversation Review](/articles/AI_fusion/05_observation/02_conversation_review.md).
 2. **Export it.** Click the export button, select **Export with snap** to include snapshots of the LU instances the conversation used, and click **Export**. A ZIP file is downloaded.
 3. **Import it in Studio.** Open the agent's Preview chat and click **Import**. Select the ZIP file. The conversation opens as a new chat titled "Imported chat", and its snapshots are stored under a new session.
 4. **Review it.** Read the conversation. Check that the initialization parameters of the imported chat are the ones the agent expects.
-5. **Save it as a test case.** Click **Save as test case**, choose the suite, and save.
-6. **Correct the expected answers.** Open the case in the Eval Editor, click **Edit**, and change any answer that was wrong in production to the answer the agent *should* have given. Click **Upload Artifacts** and save the suite.
+5. **Save it as a test case.** Click **Save as test case**, choose the suite, and save. The case is saved at conversation level with no criteria; open it in the Eval Editor and add criteria that describe what the conversation should have achieved, or turn on the step level to judge it against corrected expected answers (next step). See [Choosing the Evaluation Levels](/articles/AI_fusion/04_evaluation/01_authoring_test_cases.md#choosing-the-evaluation-levels).
+
+![Preview Save as test case dialog](images/preview_save_as_test_case.png)
+6. **Correct the expected answers** (step level). Open the case in the Eval Editor, turn on **Step level evaluation**, click **Edit**, and change any answer that was wrong in production to the answer the agent *should* have given. Click **Upload Artifacts** and save the suite.
 
 The case now fails until the agent is fixed — and protects the fix afterwards.
 

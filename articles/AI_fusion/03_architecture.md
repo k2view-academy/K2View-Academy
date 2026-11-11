@@ -8,29 +8,7 @@ This article describes the components and how a request flows through them.
 
 ## Components
 
-```text
- ┌──────────────────────────┐   ┌──────────────────────────┐   ┌─────────────────────┐
- │ AI Fusion Studio         │   │ Observation web app      │   │ Your application /  │
- │ (Agent Editor, Preview,  │   │ (dashboard, conversation │   │ channel (REST, SSE) │
- │  Eval Editor)            │   │  review)                 │   │                     │
- └────────────┬─────────────┘   └────────────┬─────────────┘   └──────────┬──────────┘
-              └───────────────┬──────────────┴────────────────────────────┘
-                              ▼
-               Fabric web services (k2_ws):  agent (SSE), stop-session, agents,
-               chats, feedback, observation, evaluation, trace-history ...
-                              ▼
- ┌────────────────────────────────────────────────────────────────────────────────────┐
- │ Agent runtime  (aifusion Data Product, flow aifusion.Agent)                         │
- │  session = aifusion LU instance · hooks · tools · sub-agents · skills · references   │
- └───────┬───────────────────┬──────────────────────┬──────────────────────┬──────────┘
-         ▼                   ▼                      ▼                      ▼
-  Agent definitions    Business Data Products   LLM interfaces          MCP servers
-  <LU>/AI/Agents/...   (entity micro-DB, flows) (Anthropic, Bedrock,    (Mcp interface)
-                                                 OpenAI, Google, Ollama)
-         │
-         ▼
-  Persistence: aifusion LU (per-session trace) + insights DB (sessions, signals, evaluation)
-```
+![AI Fusion runs inside your Fabric](images/aifusion_architecture.svg)
 
 <table>
 <tbody>
@@ -48,7 +26,7 @@ This article describes the components and how a request flows through them.
 </tr>
 <tr>
 <td><strong>Web services</strong></td>
-<td>Delivered in the <code>k2_ws</code> LU. They expose the agent API, session management, feedback, observation, evaluation and trace endpoints. See <a href="/articles/AI_fusion/02_agents/09_invoking_agents.md">Invoking Agents</a>.</td>
+<td>Delivered in the <code>k2_ws</code> LU. They expose the agent API, session management (stop, status, rename), feedback, observation, evaluation and trace endpoints. See <a href="/articles/AI_fusion/02_agents/09_invoking_agents.md">Invoking Agents</a>.</td>
 </tr>
 <tr>
 <td><strong>Business Data Products</strong></td>
@@ -64,7 +42,7 @@ This article describes the components and how a request flows through them.
 </tr>
 <tr>
 <td><strong>Pipeline</strong></td>
-<td>The <code>pipeline</code> extension executes evaluation runs and observation analysis pipelines.</td>
+<td>The <code>pipeline</code> extension runs, in the background, the evaluations started from Studio and the Observation analysis.</td>
 </tr>
 <tr>
 <td><strong>AI Fusion Studio</strong></td>
@@ -77,12 +55,14 @@ This article describes the components and how a request flows through them.
 
 ## The Life of a Request
 
+![One turn of a conversation](images/aifusion_request_flow.svg)
+
 1. **A client sends a message.** Studio Preview or your own application calls the `agent` web service with the agent name, its Data Product, a session ID, the user's message and, optionally, the agent inputs (`initParams`, for example `{"customerId":"1001"}`). The response is a Server-Sent Events stream.
 2. **The session is opened.** The runtime gets the aifusion LU instance whose ID is the session ID, and claims the session so that only one request at a time is processed per conversation. A new turn (step) is recorded.
 3. **The agent is loaded.** The runtime reads the agent's `agent.yaml` from the deployed Data Product, resolves its tools, skills, sub-agents and hooks, and builds the system prompt.
-4. **Hooks prepare the context.** The `step_start` hook flow typically loads the customer's instance of the business Data Product, so its micro-database is available to the `query` tool, and may enrich the user message.
+4. **Hooks prepare the context.** The `step_start` hook flow typically loads the customer's instance of the business Data Product, so its micro-database is available to the `query` tool. It may also rewrite the user message, or add context for this turn to the system prompt (`additional_context`).
 5. **The reasoning loop runs.** The runtime calls the LLM through the agent's interface. The model answers or calls tools: SQL queries over the entity data, Broadway flow tools, MCP tools, skills, reference search, planning, widgets, or sub-agents. Each tool result is fed back until the model produces a final answer, or a limit is reached.
-6. **The answer is streamed.** Text, reasoning, tool activity, sub-agent activity, to-do lists, questions to the user and widgets are streamed as SSE events, ending with a `done` event.
+6. **The answer is streamed.** Text, reasoning, tool activity, sub-agent activity, to-do lists, questions to the user and widgets are streamed as SSE events, ending with a `done` event. Output that hook and tool flows write to the chat stream (for example an `LLMInvoke` actor with streaming on) is streamed in the same format.
 7. **Everything is recorded.** Messages, executions, tool calls and token usage are written to the session's aifusion LU instance; session-level metrics are written to the insights database. The `step_end` hook can post-process the answer.
 8. **Later, Observation analyzes the conversation.** An analysis run summarizes the session and classifies it on the configured signals for the dashboard. See [Observation](/articles/AI_fusion/05_observation/README.md).
 
@@ -110,7 +90,7 @@ Each conversation is one instance of the **aifusion** LU; the instance ID is the
 </tr>
 <tr>
 <td><code>executions</code></td>
-<td>Each agent and sub-agent execution within a turn, with its status and inputs.</td>
+<td>Each agent and sub-agent execution within a turn, with its status and inputs, and the additional context that a <code>step_start</code> hook gave the model for the turn. A sub-agent that resumes after asking the user keeps its execution ID and has one row per turn.</td>
 </tr>
 <tr>
 <td><code>messages</code></td>

@@ -95,4 +95,10 @@ Altogether, AI Fusion uses K2view's proven Data Product Platform to turn enterpr
 
 
 
+## About the Examples in This Documentation
+
+The examples, screenshots and some of the diagrams in the AI Fusion 3 articles are taken from the **banking demo** that the **aifusion-banking-demo** extension installs: the `banking` agent in the `customer_bank` Data Product, with its sub-agents (credit-card, crm, dda, loan, payroll, tax), reference packs, hook flows and the `sanity_demo` eval suite. Names such as `customerId`, `LoadCustomerScope` or `credit-card-apr-reduction.md` come from that demo. Your own agents use your own Data Products, sub-agents, tools and suites. Install the demo to follow the articles hands-on — see [Installation and Setup](/articles/AI_fusion/04_installation_and_setup.md).
+
+
+
 **Next article:** [What's New in AI Fusion 3](/articles/AI_fusion/02_whats_new_in_v3.md)

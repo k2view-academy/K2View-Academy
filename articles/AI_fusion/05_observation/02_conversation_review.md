@@ -4,7 +4,7 @@ The **Conversation review** page is a drill-down into a single production sessio
 
 To open it, click a row in the **Conversation Details** table of the [Observation Dashboard](/articles/AI_fusion/05_observation/01_observation_dashboard.md). Each review has its own URL (`.../observation/conversation/<sessionId>`), so you can share a link to a specific conversation.
 
-<!-- TODO screenshot: Conversation review page with header, tags, summary, transcript and trace panel -->
+![Full Conversation review page for a banking session](images/conversation_review_full.png)
 
 
 ## Page Layout
@@ -28,7 +28,9 @@ When you open a conversation from the dashboard, the header shows where you are 
 
 If you open a review from a shared link, the page rebuilds the list from the dashboard settings saved in your browser.
 
-<!-- TODO screenshot: Prev/Next navigation with filter label and preview tooltip -->
+The **Conversation Summary** panel takes its text from the dashboard list. If you open a shared link to a conversation that is not in the list rebuilt from your saved settings, the panel is empty.
+
+![Header crop](images/conversation_review_nav.png)
 
 
 ## Session Information
@@ -59,21 +61,27 @@ Next to it, the transcript renders the full exchange of user and assistant messa
 
 ### User feedback
 
-Where the user rated an answer, the rating is shown on that assistant turn: thumbs up or thumbs down, and a note indicator when the user also wrote a comment. Open the note indicator to read the comment. Feedback is read-only here; see [Collecting Feedback](/articles/AI_fusion/05_observation/06_feedback.md) for how users and applications submit it.
+Where the user rated an answer, the rating is shown on that assistant turn: thumbs up or thumbs down, and a note indicator when the user also wrote a comment. Open the note indicator to read the comment. Feedback is read-only here.
+
+![Transcript turn with a thumbs-down rating and its note overlay open](images/conversation_review_feedback_note.png)
+
+See [Collecting Feedback](/articles/AI_fusion/05_observation/06_feedback.md) for how users and applications submit it.
 
 
 ## Trace Panel
 
-The trace panel shows the execution behind each assistant answer: the agent and sub-agent executions, the LLM calls with their responses and token usage (including cached tokens), and the tool calls with their inputs and outputs. It is the same trace view used by the Studio Preview; see [Preview and Trace](/articles/AI_fusion/03_studio/03_preview_and_trace.md).
+The trace panel shows the execution behind each assistant answer: the agent and sub-agent executions, the LLM calls with their responses and token usage (including cached tokens), and the tool calls with their inputs and outputs. It shows the same information, with the same terms, as the trace in the Studio Preview; see [Preview and Trace](/articles/AI_fusion/03_studio/03_preview_and_trace.md).
 
 Use it to diagnose why an answer was wrong or slow — for example, a tool that returned unexpected data, a sub-agent that was not called, or a step that consumed far more tokens than expected.
 
-<!-- TODO screenshot: trace panel expanded on one assistant turn -->
+![Trace panel expanded on one assistant turn](images/conversation_review_trace.png)
 
 
 ## Exporting a Conversation
 
 Click the export button in the header to open the **Export Chat** dialog, then click **Export** to download the conversation as a ZIP file.
+
+![The "Export Chat" dialog with the "Export with snap" checkbox selected and the Cancel](images/export_chat_dialog.png)
 
 Select **Export with snap** to include the data snapshots of the session's LU instances that were recorded during the session, so the conversation can be replayed against the same data state it originally ran on. Snapshots are recorded only when the agent's `snap_session_mode` setting is not `none` (see [agent.yaml Reference](/articles/AI_fusion/02_agents/02_agent_yaml_reference.md)).
 

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 520" width="780" height="520" role="img" aria-label="Where hooks run in a turn" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9aa0a6"/></marker></defs>
+  <rect width="780" height="520" fill="#ffffff"/>
+  <text x="24" y="30" font-size="15" font-weight="600" fill="#1f2328">Where hooks run in a turn</text>
+  <text x="24" y="50" font-size="11.5" fill="#5b6169">Each hook is a Broadway flow. Hooks fail closed; a failing pre_tool_call blocks the call.</text>
+  <path d="M184 104H214" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M414 104H444" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M600 136V156" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M600 196V212" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M600 244V256" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M460 274H440V116H460" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M600 300V340" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M444 372H414" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <path d="M214 372H184" fill="none" stroke="#9aa0a6" stroke-width="1.25" marker-end="url(#a)"/>
+  <rect x="24" y="72" width="160" height="64" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="36" y="94" font-weight="600" fill="#1f2328">User message</text>
+  <text x="36" y="112" font-size="11.5" fill="#5b6169">or the answer to</text>
+  <text x="36" y="128" font-size="11.5" fill="#5b6169">an ask_user question</text>
+  <rect x="214" y="72" width="200" height="64" rx="8" fill="#e8eefb" stroke="#2f6fdf" stroke-width="1.75"/>
+  <text x="226" y="94" font-weight="600" fill="#1f2328">step_start</text>
+  <text x="226" y="112" font-size="11.5" fill="#5b6169">Load data, rewrite message,</text>
+  <text x="226" y="128" font-size="11.5" fill="#5b6169">add Additional Context</text>
+  <rect x="444" y="64" width="312" height="236" rx="10" fill="none" stroke="#9aa0a6" stroke-width="1.25" stroke-dasharray="6 4"/>
+  <text x="458" y="86" font-weight="600" fill="#1f2328">Reasoning loop</text>
+  <rect x="460" y="96" width="280" height="40" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="600.0" y="120.0" text-anchor="middle" font-weight="600" fill="#1f2328">LLM call</text>
+  <rect x="460" y="156" width="280" height="40" rx="8" fill="#e8eefb" stroke="#2f6fdf" stroke-width="1.75"/>
+  <text x="600.0" y="180.0" text-anchor="middle" font-weight="600" fill="#1f2328">pre_tool_call  /  tool before</text>
+  <text x="612" y="208" text-anchor="start" font-size="11.5" fill="#5b6169">ALLOW / BLOCK</text>
+  <rect x="460" y="212" width="280" height="32" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="600.0" y="232.0" text-anchor="middle" font-weight="600" fill="#1f2328">Tool runs</text>
+  <rect x="460" y="256" width="280" height="36" rx="8" fill="#e8eefb" stroke="#2f6fdf" stroke-width="1.75"/>
+  <text x="600.0" y="278.0" text-anchor="middle" font-weight="600" fill="#1f2328">post_tool_call  /  tool after</text>
+  <text x="436" y="196" text-anchor="end" font-size="11.5" fill="#5b6169">result back to the LLM</text>
+  <rect x="444" y="340" width="312" height="64" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="456" y="362" font-weight="600" fill="#1f2328">Final answer</text>
+  <text x="456" y="380" font-size="11.5" fill="#5b6169">post_tool_call stop: true can end</text>
+  <text x="456" y="396" font-size="11.5" fill="#5b6169">the run early with its own answer</text>
+  <rect x="214" y="340" width="200" height="64" rx="8" fill="#e8eefb" stroke="#2f6fdf" stroke-width="1.75"/>
+  <text x="226" y="362" font-weight="600" fill="#1f2328">step_end</text>
+  <text x="226" y="380" font-size="11.5" fill="#5b6169">Check the answer; return text</text>
+  <text x="226" y="396" font-size="11.5" fill="#5b6169">to send the agent back to work</text>
+  <rect x="24" y="340" width="160" height="64" rx="8" fill="none" stroke="#9aa0a6" stroke-width="1.25"/>
+  <text x="36" y="362" font-weight="600" fill="#1f2328">Answer streamed</text>
+  <text x="36" y="380" font-size="11.5" fill="#5b6169">done event</text>
+  <rect x="24" y="432" width="732" height="64" rx="8" fill="#e8eefb" stroke="#2f6fdf" stroke-width="1.75"/>
+  <text x="36" y="454" font-weight="600" fill="#1f2328">on_error</text>
+  <text x="36" y="472" font-size="11.5" fill="#5b6169">Runs when the agent run fails (not for tool errors, which go back to the LLM).</text>
+  <text x="36" y="488" font-size="11.5" fill="#5b6169">Returns the message shown to the user.</text>
+  <text x="24" y="184" text-anchor="start" font-size="12" font-weight="600" fill="#1f2328">Hook inputs = agent inputs:</text>
+  <text x="24" y="202" text-anchor="start" font-size="11.5" font-weight="400" fill="#5b6169">the hook flows&#x27; external parameters</text>
+  <text x="24" y="218" text-anchor="start" font-size="11.5" font-weight="400" fill="#5b6169">(mandatory ones are required inputs,</text>
+  <text x="24" y="234" text-anchor="start" font-size="11.5" font-weight="400" fill="#5b6169">e.g. customerId)</text>
+</svg>

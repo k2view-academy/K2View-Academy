@@ -16,7 +16,7 @@ The agent and Observation endpoints run with the **caller's permissions**; none 
 
 ### Session-Level Access
 
-Endpoints that take a sessionId — `conversation-history`, `trace-history`, `trace-conversation`, `session-status`, `stop-session` and `feedback` — do not check that the session belongs to the caller. Anyone allowed to call them can read or stop a session whose ID they know. Always use unguessable session IDs (random UUIDs), and do not expose the trace endpoints to end users.
+Endpoints that take a sessionId — `conversation-history`, `trace-history`, `trace-conversation`, `session-status`, `stop-session`, `session-name` and `feedback` — do not check that the session belongs to the caller. Anyone allowed to call them can read, stop or rename a session whose ID they know. Always use unguessable session IDs (random UUIDs), and do not expose the trace endpoints to end users.
 
 `chats` is the exception: it always lists the **authenticated user's** own chats; the user cannot be passed as a parameter.
 
@@ -97,6 +97,8 @@ Design points:
 </table>
 
 Prompt instructions alone are not a security boundary. Put anything that must hold — authorization, data scope, forbidden actions — in hooks and flows, and use `constraints` and `response_prompt` for how the agent speaks. See [Hooks and Agent Inputs](/articles/AI_fusion/02_agents/07_hooks_and_inputs.md).
+
+![Studio Trace: a tool call blocked by a pre_tool_call hook, with the "Tool call blocked by agent policy" result returned to the model](images/11_pre_tool_call_block_trace.png)
 
 
 

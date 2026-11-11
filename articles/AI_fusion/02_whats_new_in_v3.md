@@ -53,7 +53,7 @@ This article summarizes the changes and what they mean if you are moving from AI
 <tr>
 <td>Packaging</td>
 <td>One <code>aifusion</code> extension including demos and vector pipelines.</td>
-<td>Core <code>aifusion</code>, <code>aifusion-studio</code>, separate LLM connector extensions, optional <code>mcp</code> and <code>aifusion-demo</code>.</td>
+<td>Core <code>aifusion</code>, <code>aifusion-studio</code>, separate LLM connector extensions, optional <code>mcp</code> and the <code>aifusion-banking-demo</code> extension.</td>
 </tr>
 </tbody>
 </table>
@@ -78,7 +78,7 @@ This article summarizes the changes and what they mean if you are moving from AI
 ## Removed or Replaced
 
 - The `Chat` actor, the `chat` web service and the actors `ChatPromptBuilder`, `ChatSessionParams`, `SetChatSessionParam`, `WriteToOutputStream`, `PrependParamsToStream` and `SaveState` were removed (deprecated in 3.0.0, deleted in 3.0.4). Use the `agent` web service or the `AgentInvoke` actor instead.
-- The vector ingestion pipelines, the chunker and the domain demos are no longer part of the core extension. The banking demo ships in the `aifusion-demo` extension.
+- The vector ingestion pipelines, the chunker and the domain demos are no longer part of the core extension. The banking demo ships in the separate **aifusion-banking-demo** extension (AI Fusion - Banking Demo).
 - `.agent` files and earlier agent keys (`input_params`, `content_flows`, `hooks.fabric_get`, nested `tools: {built_in, custom}`, `search_reference.dir`) are obsolete. Agent inputs are now inferred from the hook flows.
 - The web Evaluation workspace, `aifusion.evaluatorPipeline` and MTable-based suites are replaced by per-agent eval suites in Studio. AI-assisted "Copilot" and "Autopilot" test generation are replaced by the Studio AI test generator.
 - In the insights (assurance) database, `ACTVSESSION.app_id` was renamed to `agent_name` and `customer_id` was replaced by the `INSTANCES` table. The aifusion deploy migrates existing tables.

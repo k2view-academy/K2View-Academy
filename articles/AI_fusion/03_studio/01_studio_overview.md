@@ -2,6 +2,9 @@
 
 AI Fusion Studio is the development environment for AI Fusion agents inside K2view Web Studio. Because an AI Fusion 3 agent is a set of files inside a Data Product (LU) — an `agent.yaml`, skills, reference documents, sub-agents, evaluation suites and observation configuration — you build it the same way you build the rest of your Fabric project: as files in your project tree. AI Fusion Studio adds the tooling that makes those files easy to create, edit, test and evaluate without leaving Studio.
 
+> **Note:** The examples and screenshots in this section use the banking demo (`customer_bank` › `banking`). See [About the Examples](/articles/AI_fusion/01_overview.md#about-the-examples-in-this-documentation).
+
+
 The tooling is delivered by the **AI Fusion - Studio** extension. It provides:
 
 - **AI Explorer** — a dedicated tree of every agent, skill, reference pack, sub-agent and eval suite in the project, with context-menu actions to create and manage them.
@@ -13,7 +16,7 @@ The tooling is delivered by the **AI Fusion - Studio** extension. It provides:
 
 ## Installing the Extension
 
-The extension is published on K2exchange as **AI Fusion - Studio** (version 1.0.1 at the time of writing) and requires Fabric 8.4.7 or later. Install it from the Extensions view of Web Studio, as described in [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md). The extension contributes no settings of its own — it talks to the Fabric server that hosts your Studio session.
+The extension is published on K2exchange as **AI Fusion - Studio** (version 1.0.2 at the time of writing) and requires Fabric 8.5.2 or later. Install it from the Extensions view of Web Studio, as described in [K2exchange](/articles/04_fabric_studio/28_web_k2exchange.md). The extension contributes no settings of its own — it talks to the Fabric server that hosts your Studio session.
 
 Installing the extension also adds two Studio AI skills to your project, under `.agents/skills/`: `agent-builder` and `researcher`. They power the AI-assisted features described in [AI-Assisted Agent Development](/articles/AI_fusion/03_studio/04_ai_assisted_development.md). Commit them to Git together with the rest of the extension's files.
 
@@ -64,6 +67,8 @@ Open AI Explorer from its icon in the Activity Bar. The view has two roots, whic
 </tbody>
 </table>
 
+![AI Explorer tree](images/s01_ai_explorer_tree.png)
+
 Expanding an agent shows its folder as it is on disk: `agent.yaml`, `Skills/`, `References/<pack>/`, `Subagents/`, `Evals/` and `Observation/`. Clicking a node opens it in the right editor:
 
 - `agent.yaml` and `Subagents/*.yaml` open in the [Agent Editor](/articles/AI_fusion/03_studio/02_agent_editor.md).
@@ -90,7 +95,7 @@ Each test case under an eval suite carries a colored bullet that shows the resul
 </tr>
 <tr>
 <td>Orange</td>
-<td>The last run completed, but one or more quality dimensions scored below their threshold.</td>
+<td>The last run completed, but the case did not pass: one or more quality dimensions scored below their threshold, a conversation-level criterion was not met, an after hook failed, or the case was not evaluated (for example, because a before hook failed or the case has conversation-level evaluation without criteria). See <a href="/articles/AI_fusion/04_evaluation/README.md">Evaluation</a>.</td>
 </tr>
 <tr>
 <td>Red</td>
@@ -101,18 +106,22 @@ Each test case under an eval suite carries a colored bullet that shows the resul
 <td>The test case is disabled.</td>
 </tr>
 <tr>
-<td>No bullet</td>
+<td><code>abc</code> icon (no bullet)</td>
 <td>The case has not been evaluated yet.</td>
 </tr>
 </tbody>
 </table>
 
+![AI Explorer with banking › Evals › sanity_demo expanded, showing test cases with green,](images/s01_test_case_status.png)
+
 An agent whose `agent.yaml` references a missing or invalid sub-agent is decorated in red in the tree, and the problem is listed in the **Problems** panel. See [Agent Editor](/articles/AI_fusion/03_studio/02_agent_editor.md#sub-agent-validation).
+
+![AI Explorer with the nested-delegate-test agent in red, and the Problems panel reporting that sub-agent 'loyalty' does not exist](images/s01_problems_missing_subagent.png)
 
 
 ## Commands
 
-Right-click a node in AI Explorer to see the actions that apply to it. Each **New** command asks for a name (letters, digits, underscore and hyphen; it must start with a letter), creates the file from a built-in template, opens it, and selects it in the tree.
+Right-click a node in AI Explorer to see the actions that apply to it. For example, the context menu of an agent offers **New Skill...**, **New Reference...**, **New Sub-Agent...**, **New Eval Suite...**, **Delete** and **Reveal in Explorer**. Each **New** command asks for a name (letters, digits, underscore and hyphen; it must start with a letter), creates the file from a built-in template, opens it, and selects it in the tree.
 
 <table>
 <tbody>
@@ -144,7 +153,7 @@ Right-click a node in AI Explorer to see the actions that apply to it. Each **Ne
 <tr>
 <td><strong>New Eval Suite...</strong></td>
 <td>An agent, its Evals folder</td>
-<td>Creates <code>Evals/&lt;name&gt;.csv</code> with one empty test case, seeded with the agent's evaluation defaults, and opens it in the Eval Editor.</td>
+<td>Creates <code>Evals/&lt;name&gt;.csv</code> with one empty test case, seeded with the agent's evaluation defaults, and opens it in the Eval Editor. The new case is evaluated at the conversation level and has no criteria yet: add conversation criteria (or switch the case to step level) before you run it. See <a href="/articles/AI_fusion/04_evaluation/README.md">Evaluation</a>.</td>
 </tr>
 <tr>
 <td><strong>New Folder...</strong></td>
@@ -183,7 +192,7 @@ Eval suites and test cases have their own context menus in AI Explorer:
 </tr>
 <tr>
 <td>Eval suite (<code>.csv</code>)</td>
-<td><strong>New Test...</strong>, <strong>Run Evaluation</strong> (runs every enabled case in the suite), <strong>Rename...</strong>, <strong>Enable / Disable</strong> (enables the whole suite if any case is disabled, otherwise disables all cases), <strong>Delete</strong></td>
+<td><strong>New Test...</strong>, <strong>Run Evaluation</strong> (runs every enabled case in the suite), <strong>Rename...</strong>, <strong>Enable / Disable</strong> (enables the whole suite if any case is disabled, otherwise disables all cases), <strong>Delete</strong>, <strong>Reveal in Explorer</strong></td>
 </tr>
 <tr>
 <td>Test case</td>
@@ -191,6 +200,12 @@ Eval suites and test cases have their own context menus in AI Explorer:
 </tr>
 </tbody>
 </table>
+
+**New Test...** creates a case evaluated at the conversation level, with no criteria. Add its criteria in the Eval Editor before you run it.
+
+![AI Explorer, right-click on the banking agent](images/s01_ai_explorer_agent_context_menu.png)
+
+![Eval suite context menu](images/s01_eval_suite_context_menu.png)
 
 These commands edit the suite file and then soft-deploy the agent's LU automatically, so the next evaluation run sees the change. Test case authoring and running are covered in the [Evaluation](/articles/AI_fusion/04_evaluation/README.md) section.
 
@@ -249,8 +264,8 @@ The following walkthrough shows how the pieces fit together when you build a new
 7. **Try it in Preview.** Switch to the **Preview** tab, start a **New chat** (filling in the agent inputs, such as a customer ID), and ask questions.
 8. **Inspect the trace.** Open the **Trace** drawer, or click **Show in Trace** on a tool call, to see each LLM call, tool call, sub-agent run, duration and token count.
 9. **Fix and repeat.** Adjust the prompt, skills or tools, soft-deploy again and start a new chat. Mark answers with **Good response** / **Bad response** and notes as you go, or click **Analyze** to let Studio AI diagnose a bad answer.
-10. **Save test cases.** When a conversation shows the behavior you want to keep, click **Save as test case** and choose a suite.
-11. **Run evaluations.** In AI Explorer, right-click the suite and choose **Run Evaluation**. Watch the bullets turn green or orange, and open a case in the Eval Editor to read the per-dimension verdicts. See [Running Tests and Results](/articles/AI_fusion/04_evaluation/03_running_and_results.md).
+10. **Save test cases.** When a conversation shows the behavior you want to keep, click **Save as test case** and choose a suite. Then open the case in the Eval Editor and add its conversation criteria (or let **Ask AI** propose them).
+11. **Run evaluations.** In AI Explorer, right-click the suite and choose **Run Evaluation**. Watch the bullets turn green or orange, and open a case in the Eval Editor to read the verdicts. See [Running Tests and Results](/articles/AI_fusion/04_evaluation/03_running_and_results.md).
 
 If you prefer to start from a conversation with Studio AI, the `agent-builder` skill can perform steps 1–6 for you and then generate a first eval suite. See [AI-Assisted Agent Development](/articles/AI_fusion/03_studio/04_ai_assisted_development.md).
 

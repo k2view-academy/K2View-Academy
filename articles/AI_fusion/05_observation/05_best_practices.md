@@ -10,7 +10,7 @@ The dashboard only shows tags, summaries and session metrics for analyzed sessio
 - **Schedule it from day one.** Set up a recurring run of `aifusion.RunAnalyze` (or one of the analyzer pipelines) as part of deploying an environment. A dashboard full of **Unknown** resolutions usually means the analysis is not running. See [Configuring Observation](/articles/AI_fusion/05_observation/03_configuring_observation.md#running-the-analysis).
 - **Match the frequency to volume.** Once a day is enough for low-traffic agents. For high-traffic agents run more often, or use `BatchObservationAnalyzer` with a provider that supports batch inference.
 - **Check the run result.** `RunAnalyze` returns `total`, `succeeded` and `failed`. Failed sessions return to `OPEN` and are retried next time; a persistent failure count points at a problem such as an unreachable LLM interface or an invalid `signals.yaml`.
-- **Schedule the cleanup too.** Run `aifusion.cleanupJob` once to register the daily cleanup, and set `RETENTION_DAYS` to your data-retention policy.
+- **Schedule the cleanup too.** Run `aifusion.cleanupJob` once to register the daily cleanup, and set `RETENTION_DAYS` to your data-retention policy. The cleanup removes only analyzed (`CLOSED`) sessions, so a regular analysis run is also what keeps old sessions from piling up.
 
 
 ## Configure Each Agent's Observation
@@ -25,7 +25,7 @@ Every agent ships with a starter `Observation/` folder. Treat it as part of buil
 - **Give every signal a widget.** A signal that no widget or filter reads costs money without being used.
 - **Dry-run the widgets** with `aifusion.ObservationWidgetDryRun` before deploying, and deploy the LU after every change to the `Observation/` files.
 
-For customer-facing agents, start from the banking sample agent's `signals.yaml` and `widgets.yaml`: its **Customer Lifetime Value Risk** signal is what drives the conversation table's **Risk** column and **High Risk Conversations** filter.
+For customer-facing agents, start from the banking sample agent's `signals.yaml` and `widgets.yaml`: its **Customer Lifetime Value Risk** signal is what drives the conversation table's **Risk** column and **High Risk Conversations** filter. The sample defines seven signals besides Topic to show the range of options; trim it to the ones your agent needs.
 
 
 ## Establish a Monitoring Routine
@@ -101,7 +101,52 @@ When you need cross-environment reporting or custom visualizations, use the data
 
 - **Export List** on the dashboard downloads the current conversation list as CSV.
 - **Direct database access** — on PostgreSQL, connect a BI tool (for example Tableau, Power BI or Looker) to the insights database. Pivot `INSIGHTS` into one row per session and join `INSTANCES` for the customers involved. See [Insights Database Schema Reference](/articles/AI_fusion/05_observation/04_insights_db_schema.md) for the tables and example queries.
-- **Web services** — the dashboard's own services (`retrieve-conversations`, `widget-details`, `chat-review`) are available for programmatic access to the same data.
+- **Web services** — the services behind the dashboard are available for programmatic access to the same data:
+
+<table>
+<tbody>
+<tr>
+<td><strong>Service</strong></td>
+<td><strong>Parameters</strong></td>
+<td><strong>Returns or does</strong></td>
+</tr>
+<tr>
+<td><code>GET retrieve-conversations</code></td>
+<td><code>day</code>, <code>filter</code>, <code>filterValue</code>, <code>luName</code> (instance filter), <code>limit</code>, <code>agent</code>, <code>agentLu</code></td>
+<td>The conversation list, as shown in the Conversation Details table</td>
+</tr>
+<tr>
+<td><code>GET widget-list</code></td>
+<td><code>agent</code>, <code>lu</code> (both optional)</td>
+<td>The widgets of a scope: the overall widgets without an agent, otherwise only the agent's own widgets</td>
+</tr>
+<tr>
+<td><code>GET widget-details</code></td>
+<td><code>widgetid</code>, <code>day</code>, <code>aggregateByDay</code>, <code>agent</code>, <code>lu</code></td>
+<td>One widget's data, and whether it could be limited to the agent</td>
+</tr>
+<tr>
+<td><code>GET observation-agents</code></td>
+<td><code>day</code></td>
+<td>Every deployed agent with its LU, description, number of sessions in the period, and whether it has a <code>widgets.yaml</code> and a <code>signals.yaml</code></td>
+</tr>
+<tr>
+<td><code>GET chat-review</code></td>
+<td><code>chatid</code></td>
+<td>One conversation: messages, tags, agent and LU instances</td>
+</tr>
+<tr>
+<td><code>GET run-analytics</code></td>
+<td><code>day</code></td>
+<td>Runs the analysis (see <a href="/articles/AI_fusion/05_observation/03_configuring_observation.md#running-the-analysis">Running the Analysis</a>)</td>
+</tr>
+<tr>
+<td><code>PUT session-name</code></td>
+<td><code>sessionId</code>, <code>name</code></td>
+<td>Renames a chat (<code>ACTVSESSION.chat_name</code>). The session's last-activity time is updated; its analysis status is not changed</td>
+</tr>
+</tbody>
+</table>
 
 
 

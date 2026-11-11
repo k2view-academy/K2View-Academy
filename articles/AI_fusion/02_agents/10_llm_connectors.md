@@ -18,12 +18,12 @@ Each provider is a separate K2exchange extension. Install the ones you need next
 <td><strong>Notes</strong></td>
 </tr>
 <tr>
-<td>Anthropic (<code>anthropic</code>, 3.0.4)</td>
+<td>Anthropic (<code>anthropic</code>, 3.1.1)</td>
 <td><code>Anthropic</code> (LLM)</td>
-<td>Claude models through the Anthropic API. No embedding models.</td>
+<td>Claude models through the Anthropic API or, from 3.1.0, through Microsoft Foundry (Azure). No embedding models.</td>
 </tr>
 <tr>
-<td>AWS Bedrock (<code>aws-bedrock</code>, 3.0.2)</td>
+<td>AWS Bedrock (<code>aws-bedrock</code>, 3.0.3)</td>
 <td><code>AWSBedrockLLM</code> (LLM), <code>AWSBedrockEmbedding</code> (Embedding), <code>AWSBedrockKnowledgeBase</code>, <code>BedrockLambdaLLM</code> (LLM), <code>BedrockLambdaEmbedding</code> (Embedding)</td>
 <td>Foundation models through the Bedrock Converse API, including Bedrock Guardrails. The Knowledge Base type retrieves from an AWS Bedrock Knowledge Base. The BedrockLambda types reach Bedrock through an HTTP endpoint (for example an API gateway) instead of the AWS SDK.</td>
 </tr>
@@ -33,9 +33,9 @@ Each provider is a separate K2exchange extension. Install the ones you need next
 <td>Gemini and embedding models through Vertex AI.</td>
 </tr>
 <tr>
-<td>OpenAI (<code>openai</code>, 3.0.1)</td>
+<td>OpenAI (<code>openai</code>, 3.1.0)</td>
 <td><code>OpenAI</code> (LLM), <code>OpenAIEmbedding</code> (Embedding)</td>
-<td>OpenAI models, and any OpenAI-compatible endpoint (for example Azure OpenAI or a self-hosted inference server) through the <strong>Host</strong> property.</td>
+<td>OpenAI models, Azure OpenAI deployments, and any OpenAI-compatible endpoint (for example a self-hosted inference server or an API gateway). Azure OpenAI, the Chat Completions API and OAuth 2.0 authentication need 3.1.0.</td>
 </tr>
 <tr>
 <td>Ollama (<code>ollama</code>, 3.0.1) — preview</td>
@@ -50,7 +50,7 @@ Each provider is a separate K2exchange extension. Install the ones you need next
 </tbody>
 </table>
 
-The LLM connectors require Fabric 8.4.0 or later. They do not depend on the `aifusion` extension, but when both are installed, `aifusion` must be 3.0.4 or later.
+The LLM connectors require Fabric 8.4.0 or later (the openai connector 3.1.0 requires 8.4.9). They do not depend on the `aifusion` extension, but when both are installed, `aifusion` must be 3.0.4 or later.
 
 Each connector caches one client per interface configuration. Changing any property of an interface creates a new client on the next request; deploying any Data Product (LU) clears the cache.
 
@@ -70,23 +70,31 @@ All AI interface types have a **Tag** property, used to select the interface (se
 </tr>
 <tr>
 <td><strong>Model</strong></td>
-<td>The Claude model ID. Required.</td>
+<td>The Claude model ID or, with Microsoft Foundry, the deployment name. Required.</td>
+</tr>
+<tr>
+<td><strong>Backend</strong></td>
+<td><code>Anthropic</code> (default) — the Anthropic API; <code>Microsoft Foundry (Azure)</code> — Claude deployed on Microsoft Foundry. Interfaces created before anthropic 3.1.0 have no value and use the Anthropic API.</td>
 </tr>
 <tr>
 <td><strong>API Key</strong></td>
-<td>The Anthropic API key. Required.</td>
+<td>The Anthropic API key or, with Microsoft Foundry, the Foundry resource key. Required. From anthropic 3.1.1 the key can be taken from Fabric's secret manager.</td>
 </tr>
 <tr>
 <td><strong>Max Tokens</strong></td>
 <td>Maximum response length. Required; default <code>4096</code>. Reasoning and answer share this budget on Claude 4.6 and later — see <a href="#thinking-levels">Thinking Levels</a>.</td>
 </tr>
 <tr>
-<td><strong>Temperature</strong></td>
+<td><strong>Temperature - deprecated in newer models (4.7+)</strong></td>
 <td>Default <code>-1</code>, which means "do not send". Newer Claude models reject a temperature value; requests with thinking on never send it.</td>
 </tr>
 <tr>
-<td><strong>Host</strong>, <strong>Version (override)</strong></td>
-<td>Optional endpoint and <code>anthropic-version</code> header overrides.</td>
+<td><strong>Host</strong></td>
+<td>Optional endpoint override for the Anthropic backend. Required for Microsoft Foundry: the Foundry endpoint, for example <code>https://&lt;resource&gt;.services.ai.azure.com/anthropic</code>.</td>
+</tr>
+<tr>
+<td><strong>Version (override)</strong></td>
+<td>Optional <code>anthropic-version</code> header override.</td>
 </tr>
 <tr>
 <td><strong>Timeout (MS)</strong></td>
@@ -94,6 +102,9 @@ All AI interface types have a **Tag** property, used to select the interface (se
 </tr>
 </tbody>
 </table>
+
+With Microsoft Foundry, requests, streaming, tool calling and thinking work as on the Anthropic API. Batch inference is not supported on Foundry.
+
 
 ### AWS Bedrock
 
@@ -113,7 +124,7 @@ All AI interface types have a **Tag** property, used to select the interface (se
 </tr>
 <tr>
 <td><strong>MaxTokens</strong>, <strong>Temperature</strong>, <strong>Timeout</strong>, <strong>Host</strong></td>
-<td>Response length, randomness, timeout, and an optional custom endpoint (for example a VPC endpoint).</td>
+<td>Response length, randomness, timeout, and an optional custom endpoint (for example a VPC endpoint). From aws-bedrock 3.0.3, <strong>Temperature</strong> is optional and defaults to <code>-1</code> (not sent), because newer Anthropic models (4.7 and later) reject it. If an existing interface sets it to <code>0</code>, change it to <code>-1</code>.</td>
 </tr>
 <tr>
 <td><strong>GuardrailID</strong>, <strong>GuardrailVersion</strong></td>
@@ -166,19 +177,36 @@ The IAM identity needs `bedrock:InvokeModel` and `bedrock:InvokeModelWithRespons
 <td><strong>Description</strong></td>
 </tr>
 <tr>
-<td><strong>AuthenticationType</strong>, <strong>Token</strong></td>
-<td><code>credentials</code> — the API key in <strong>Token</strong>; <code>default</code> — credentials from Fabric's secret manager or environment variables.</td>
+<td><strong>API Type</strong></td>
+<td><code>OpenAI</code> (default) — OpenAI or an OpenAI-compatible server; <code>Azure OpenAI</code> — an Azure OpenAI resource or a gateway in front of it. With Azure OpenAI, <strong>Model ID</strong> is the deployment name, requests use the deployment-scoped URLs, and an API key is sent in the <code>api-key</code> header. Requires openai 3.1.0.</td>
 </tr>
 <tr>
-<td><strong>Model</strong>, <strong>MaxTokens</strong>, <strong>Temperature</strong>, <strong>Timeout</strong></td>
-<td>The model and generation settings.</td>
+<td><strong>API Version</strong></td>
+<td>Azure OpenAI only: the <code>api-version</code> query parameter. Default <code>2024-10-21</code>.</td>
+</tr>
+<tr>
+<td><strong>API</strong></td>
+<td><code>Responses</code> (default) or <code>Chat Completions</code>. Use Chat Completions for Azure deployments, for gateways that expose only <code>/chat/completions</code>, and for reasoning models called through Fabric's OpenAI-compatible endpoint. Requires openai 3.1.0.</td>
+</tr>
+<tr>
+<td><strong>Authentication Type</strong>, <strong>Token</strong></td>
+<td><code>Credentials</code> (default) — the API key in <strong>Token</strong>; <code>Default</code> — credentials from Fabric's secret manager or environment variables; <code>OAuth 2.0 Client Credentials</code> (openai 3.1.0) — see the next row.</td>
+</tr>
+<tr>
+<td><strong>Tenant ID</strong>, <strong>Access Token URL</strong>, <strong>Client ID</strong>, <strong>Client Secret</strong>, <strong>Scope</strong></td>
+<td>OAuth 2.0 client credentials, for Microsoft Entra ID or another identity provider. With <strong>Tenant ID</strong>, the token is requested from Microsoft Entra ID; <strong>Access Token URL</strong> points to another provider's token endpoint and overrides Tenant ID. An empty <strong>Scope</strong> with a Tenant ID requests the Azure OpenAI scope. The connector caches the token per interface and refreshes it before it expires.</td>
+</tr>
+<tr>
+<td><strong>Model ID</strong>, <strong>Max Tokens</strong>, <strong>Temperature</strong>, <strong>Timeout (ms)</strong></td>
+<td>The model (or Azure deployment) and generation settings.</td>
 </tr>
 <tr>
 <td><strong>Host</strong></td>
-<td>Leave empty for the OpenAI API. Set it to use an OpenAI-compatible service.</td>
+<td>Leave empty for the OpenAI API. Set it to the base URL of an OpenAI-compatible service, or to the Azure OpenAI resource or gateway URL.</td>
 </tr>
 </tbody>
 </table>
+
 
 `OpenAIEmbedding` takes **AuthenticationType**, **Token**, **Model** and **Host**.
 
@@ -245,7 +273,7 @@ settings:
 </tr>
 <tr>
 <td><code>off</code></td>
-<td>thinking explicitly disabled</td>
+<td>thinking turned off, or minimal on models that cannot turn it off (see below)</td>
 <td>no thinking</td>
 <td>no reasoning</td>
 <td>no thinking</td>
@@ -292,9 +320,12 @@ settings:
 - **`xhigh` and `max`** need Anthropic connector 3.0.3 or later, or Bedrock, OpenAI or Google GenAI connector 3.0.1 or later. Older connectors ignore or mis-map them.
 - **`xhigh` is the recommended level for agentic Claude agents** that loop over tools or delegate. `max` costs considerably more for a small gain; `high` suits simple single-domain agents.
 - **Thinking shares the response budget.** On Claude 4.6 and later, reasoning and answer both come out of the max-tokens budget; the connectors raise it to at least 16,000 when thinking is on. A tight budget at a high level can produce a truncated answer.
-- **`off` really is off.** Claude 4.6 and later reason by default, so the connectors send an explicit "disabled" for `off`.
+- **`off` on current Claude models.** Claude 4.6 and later reason by default, so the connectors send an explicit "disabled" for `off`. Some newer models cannot turn thinking off: from anthropic and aws-bedrock 3.0.3, Claude Sonnet 5.5 runs with minimal thinking between tool calls, and models that always think (for example Claude Opus 5.5) run with low-effort thinking. Earlier connector versions failed these requests, including the interface's connection test.
+- **Thinking shown in the chat.** From anthropic and aws-bedrock 3.0.3, the connectors ask for summarized thinking, so the model's reasoning is shown in the chat again on Claude Sonnet 5, Opus 4.7 and later.
 - An unrecognized level (a typo) is logged and treated as `off`.
 - Reasoning is streamed to the client as `thinking_delta` events. The level applies to the main agent's LLM calls.
+
+![Studio Preview of banking](images/10_thinking_in_chat.png)
 
 
 

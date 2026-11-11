@@ -33,7 +33,11 @@ All surfaces read and write the same records, so feedback given in Studio Previe
 
 ## Giving Feedback in Studio Preview
 
-When you test an agent in the Preview of AI Fusion Studio, each reply has **Good response**, **Bad response** and **Note** buttons. The two ratings exclude each other, clicking an active rating removes it, and **Note** opens a box where you can save or remove a note. Developers can use this while testing to mark answers to come back to. See [Preview and Trace](/articles/AI_fusion/03_studio/03_preview_and_trace.md).
+When you test an agent in the Preview of AI Fusion Studio, each reply has **Good response**, **Bad response** and **Note** buttons. The two ratings exclude each other, clicking an active rating removes it, and **Note** opens a box with **Remove** (when a note exists), **Cancel**, **Analyze** and **Save** buttons. **Analyze** asks Studio AI to diagnose the answer, using the note text as the starting point; it does not require you to save the note first, and the draft is kept. Developers can use this while testing to mark answers to come back to.
+
+![Studio Preview](images/studio_preview_feedback.png)
+
+See [Preview and Trace](/articles/AI_fusion/03_studio/03_preview_and_trace.md).
 
 
 ## Reviewing Feedback in Observation
@@ -43,6 +47,10 @@ Observation is where supervisors and QA engineers act on feedback:
 - The conversation list shows positive and negative feedback counts per conversation.
 - The **Feedback** filter narrows the list to **Any feedback**, **No feedback**, **Has positive**, **Has negative**, **Has notes**, **Positive only**, **Negative only**, or **Mixed (positive + negative)**.
 - The conversation review shows each turn's rating, and its note behind the note icon. Feedback cannot be changed there.
+
+The counts and the **Feedback** filter are based on the feedback that existed when the session was last analyzed. Giving feedback does not re-open an analyzed session, so feedback added later is counted only if the session is analyzed again — which happens when the user continues the conversation. The rating and note themselves are shown in the conversation review right away.
+
+![Transcript turn with a thumbs-down rating and its note overlay open](images/conversation_review_feedback_note.png)
 
 See [Observation Dashboard](/articles/AI_fusion/05_observation/01_observation_dashboard.md) and [Conversation Review](/articles/AI_fusion/05_observation/02_conversation_review.md).
 
