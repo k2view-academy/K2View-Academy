@@ -29,9 +29,9 @@ Latest Release and Released Date are the versions published on K2exchange. Click
     <tbody>
         <tr>
             <td align="left">AI Fusion 3</td>
-            <td><a href="/articles/AI_fusion/release_notes/aifusion_3.md#v3.0.9">3.0.9</a></td>
-            <td>Nov 5, 2026</td>
-            <td>8.4.0 (3.0.9 requires 8.5.0; 8.5.2 recommended)</td>
+            <td><a href="/articles/AI_fusion/release_notes/aifusion_3.md#v3.0.10">3.0.10</a></td>
+            <td>Nov 9, 2026</td>
+            <td>8.5.0; 8.5.2 recommended</td>
             <td>Current</td>
         </tr>
         <tr>
@@ -50,6 +50,7 @@ Latest Release and Released Date are the versions published on K2exchange. Click
         </tr>
     </tbody>
 </table>
+
 
 
 
@@ -73,10 +74,10 @@ Extensions that are used together with AI Fusion. From AI Fusion 3.0.8 they are 
         <tr>
             <td align="left">AI Fusion Studio</td>
             <td>aifusion-studio</td>
-            <td><a href="/articles/AI_fusion/release_notes/aifusion_studio.md#v1.0.2">1.0.2</a></td>
-            <td>Nov 6, 2026</td>
+            <td><a href="/articles/AI_fusion/release_notes/aifusion_studio.md#v1.0.3">1.0.3</a></td>
+            <td>Nov 9, 2026</td>
             <td>8.5.2</td>
-            <td>3.x (1.0.1 requires 3.0.8; 1.0.2 requires 3.0.9)</td>
+            <td>3.0.10</td>
             <td>Studio extension that provides the UI for managing AI Fusion agents: AI Explorer, Agent Editor, Preview and Trace, Eval Editor, AI-assisted agent building.</td>
         </tr>
         <tr>
@@ -90,6 +91,7 @@ Extensions that are used together with AI Fusion. From AI Fusion 3.0.8 they are 
         </tr>
     </tbody>
 </table>
+
 
 
 
@@ -162,7 +164,7 @@ LLM and MCP connectors are general Fabric AI extensions. They are not specific t
         </tr>
     </thead>
     <tbody>
-        <tr><td align="left">Anthropic</td><td>anthropic</td><td>3.0.5</td><td>Nov 1, 2026</td><td>8.4.0</td><td>Anthropic</td></tr>
+        <tr><td align="left">Anthropic</td><td>anthropic</td><td>3.1.1</td><td>Nov 10, 2026</td><td>8.4.0</td><td>Anthropic</td></tr>
         <tr><td align="left">AWS Bedrock</td><td>aws-bedrock</td><td>3.0.3</td><td>Nov 1, 2026</td><td>8.4.0</td><td>AWSBedrockLLM, AWSBedrockEmbedding, AWSBedrockKnowledgeBase</td></tr>
         <tr><td align="left">OpenAI</td><td>openai</td><td>3.1.0</td><td>Oct 19, 2026</td><td>8.4.9</td><td>OpenAI (OpenAI or Azure OpenAI), OpenAIEmbedding</td></tr>
         <tr><td align="left">Google GenAI</td><td>google-genai</td><td>3.0.0</td><td>Aug 23, 2026</td><td>8.4.0</td><td>GoogleLLM, GoogleEmbedding</td></tr>
@@ -175,4 +177,4 @@ Connector notes:
 
 - When a 3.x connector is installed alongside AI Fusion, use AI Fusion 3.0.4 or later.
 - The `xhigh` and `max` thinking levels require anthropic 3.0.3 or later, and aws-bedrock, openai and google-genai 3.0.1 or later (google-genai 3.0.1 is not yet on K2exchange).
-- Claude on Microsoft Foundry requires anthropic 3.1.0, which is not yet on K2exchange. Azure OpenAI, the Chat Completions API option and OAuth 2.0 client-credentials authentication require openai 3.1.0.
+- Claude on Microsoft Foundry requires anthropic 3.1.0 or later. Taking the Anthropic API key from Fabric's secret manager requires anthropic 3.1.1. Azure OpenAI, the Chat Completions API option and OAuth 2.0 client-credentials authentication require openai 3.1.0.

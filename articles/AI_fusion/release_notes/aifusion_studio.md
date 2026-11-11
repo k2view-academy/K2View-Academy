@@ -5,11 +5,22 @@ Release notes of the **aifusion-studio** extension (AI Fusion - Studio). The new
 For compatibility with Fabric and with the other AI Fusion extensions, see [AI Versions](/articles/Product_Versions/AI_versions.md).
 
 <ul>
+<li><a href="#v1.0.3">1.0.3</a> — November 9, 2026</li>
 <li><a href="#v1.0.2">1.0.2</a> — November 6, 2026</li>
 <li><a href="#v1.0.1">1.0.1</a> — September 29, 2026</li>
 <li><a href="#v1.0.0">1.0.0</a> — September 28, 2026 (GA)</li>
 <li><a href="#preview">0.0.x</a> — June–September 2026 (preview)</li>
 </ul>
+
+
+
+<a id="v1.0.3"></a>
+## Version 1.0.3
+
+**Released:** November 9, 2026 · **Minimum Fabric version:** 8.5.2 · **Requires:** aifusion 3.0.10
+
+- **Questions from subagents.** A new choice in the Subagents section of the Agent Editor: **Pass to the user** (default), **Answer them myself** or **Don't let them ask**. A **?** explains each choice. Sub-agent files get the same choice in a section of their own. See [Agent Editor](/articles/AI_fusion/03_studio/02_agent_editor.md#subagents).
+- The new-agent template includes the setting, commented out.
 
 
 

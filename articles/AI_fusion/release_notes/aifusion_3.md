@@ -5,6 +5,7 @@ Release notes of the **aifusion** extension, versions 3.x. The newest version is
 For compatibility with Fabric and with the other AI Fusion extensions, see [AI Versions](/articles/Product_Versions/AI_versions.md).
 
 <ul>
+<li><a href="#v3.0.10">3.0.10</a> — November 9, 2026</li>
 <li><a href="#v3.0.9">3.0.9</a> — November 5, 2026</li>
 <li><a href="#v3.0.8">3.0.8</a> — October 19, 2026</li>
 <li><a href="#v3.0.7">3.0.7</a> — September 28, 2026</li>
@@ -12,6 +13,15 @@ For compatibility with Fabric and with the other AI Fusion extensions, see [AI V
 <li><a href="#v3.0.4">3.0.4</a> — August 18, 2026</li>
 <li><a href="#v3.0.0">3.0.0</a> — August 2026</li>
 </ul>
+
+
+
+<a id="v3.0.10"></a>
+## Version 3.0.10
+
+**Released:** November 9, 2026 · **Minimum Fabric version:** 8.5.0
+
+- **Choose who answers sub-agents' questions.** A new agent setting, `subagent_questions`, decides what happens when a sub-agent asks a question: pass it to the user (the default, as before), let the calling agent answer it itself so the turn keeps going, or not let the sub-agents ask at all. Use one of the last two for agents that have nobody to ask, such as agents called through an API — they now get a result instead of a question. See [Choosing Who Answers](/articles/AI_fusion/02_agents/06_subagents_and_delegation.md#choosing-who-answers-subagent_questions).
 
 
 
