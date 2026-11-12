@@ -114,8 +114,8 @@ Studio AI is built into the Fabric Web Studio; from Fabric 8.5.2 its default age
         <tr>
             <td align="left">Studio AI Core Artifacts</td>
             <td>studio-ai-core-artifacts</td>
-            <td>1.5.0</td>
-            <td>Nov 2, 2026</td>
+            <td>1.5.1</td>
+            <td>Nov 11, 2026</td>
             <td>8.4.7</td>
             <td>The core Fabric skills for Studio AI (and for Claude Code, through the <strong>Init Claude Skills</strong> command): Broadway flows and actors, Logical Units, interfaces, web services, project helpers, troubleshooting, report and web app builders, security review and more. Before Fabric 8.5.2 it also adds the <strong>@k2-assistant</strong> and <strong>@k2-worker</strong> agents. Installs Studio AI Fabric Wiki as a dependency.</td>
         </tr>
@@ -165,7 +165,7 @@ LLM and MCP connectors are general Fabric AI extensions. They are not specific t
     </thead>
     <tbody>
         <tr><td align="left">Anthropic</td><td>anthropic</td><td>3.1.1</td><td>Nov 10, 2026</td><td>8.4.0</td><td>Anthropic</td></tr>
-        <tr><td align="left">AWS Bedrock</td><td>aws-bedrock</td><td>3.0.3</td><td>Nov 1, 2026</td><td>8.4.0</td><td>AWSBedrockLLM, AWSBedrockEmbedding, AWSBedrockKnowledgeBase</td></tr>
+        <tr><td align="left">AWS Bedrock</td><td>aws-bedrock</td><td>3.1.0</td><td>Nov 9, 2026</td><td>8.4.0</td><td>AWSBedrockLLM, AWSBedrockEmbedding, AWSBedrockKnowledgeBase</td></tr>
         <tr><td align="left">OpenAI</td><td>openai</td><td>3.1.0</td><td>Oct 19, 2026</td><td>8.4.9</td><td>OpenAI (OpenAI or Azure OpenAI), OpenAIEmbedding</td></tr>
         <tr><td align="left">Google GenAI</td><td>google-genai</td><td>3.0.0</td><td>Aug 23, 2026</td><td>8.4.0</td><td>GoogleLLM, GoogleEmbedding</td></tr>
         <tr><td align="left">Ollama (preview)</td><td>ollama</td><td>Not on K2exchange</td><td></td><td>8.4.0</td><td>OllamaLLM, OllamaEmbedding</td></tr>
