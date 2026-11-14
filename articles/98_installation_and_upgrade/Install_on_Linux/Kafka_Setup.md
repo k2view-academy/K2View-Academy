@@ -21,10 +21,14 @@ This guide targets **Confluent Platform 8.x** (the examples use `8.4.0`).
 2. It is recommended to run Kafka under a dedicated `kafka` user (in the `k2view` group) with its home/installation directory at `/opt/apps/kafka/`:
 
     ~~~bash
+    # as root
     mkdir -p /opt/apps
     groupadd -f k2view
     useradd -m -d /opt/apps/kafka -g k2view -s /bin/bash kafka
     chown -R kafka:k2view /opt/apps/kafka
+    
+    # change to kafka user for remaining steps
+    su - kafka
     ~~~
 
 3. Install the latest version of Java 21 (or 17), either Oracle Java SE or an OpenJDK build (see the [Confluent system requirements](https://docs.confluent.io/platform/current/installation/system-requirements.html)). Download from:
@@ -39,14 +43,13 @@ This guide targets **Confluent Platform 8.x** (the examples use `8.4.0`).
     ~~~
 
     > *Recommended:* Set `JAVA_HOME` and add its `bin` to the `PATH` in the `kafka` user's `.bash_profile` so Kafka can always locate the JVM (point the path at your JDK 21 install location):
-    >
     > ~~~bash
     > echo "export JAVA_HOME=/opt/apps/kafka/jdk-21" >> ~/.bash_profile
     > echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bash_profile
     > source ~/.bash_profile
     > ~~~
 
-### Download and Install on all Nodes
+## Download and Install on All Nodes
 
 1. Log in as the user designated for the Kafka installation (`kafka`).
 
@@ -67,17 +70,18 @@ This guide targets **Confluent Platform 8.x** (the examples use `8.4.0`).
 
     > Using the `confluent` symlink as `CONFLUENT_HOME` keeps all paths version-independent. To upgrade later, extract the new release and repoint the link (`ln -sfn`). Because the configuration and data directories below live outside the release directory, they carry over to the new release unchanged.
 
-    > *Tip:* Persist `CONFLUENT_HOME` and add it to the `PATH` in the `kafka` user's `.bash_profile` so the `kafka-*` commands are always available:
+    > *Tip:* Persist `CONFLUENT_HOME` and add it to the `PATH` in the `kafka` user's `.bash_profile` so the `kafka-*` commands are always available. For start and stop, also set the config file in `KAFKA_CONF`:
     >
     > ~~~bash
     > echo "export CONFLUENT_HOME=/opt/apps/kafka/confluent" >> ~/.bash_profile
     > echo 'export PATH=$CONFLUENT_HOME/bin:$PATH' >> ~/.bash_profile
+    > echo 'export KAFKA_CONF=/opt/apps/kafka/config/server.properties' >> ~/.bash_profile
     > source ~/.bash_profile
     > ~~~
 
 > **Note:** The commands above use `8.4.0` as an example. Substitute the Confluent Platform 8.x release you are deploying in the download URL and paths. Always download from the official Confluent archive and follow the [Confluent Platform documentation](https://docs.confluent.io/platform/current/overview.html) for version-specific details.
 
-### Configure the Kafka Nodes
+## Configure the Kafka Nodes
 
 Each node runs in **combined mode**: it is both a broker (serves Fabric clients) and a KRaft controller (manages cluster metadata). All nodes are controllers and together form the controller quorum.
 
@@ -99,14 +103,34 @@ Each node runs in **combined mode**: it is both a broker (serves Fabric clients)
     cp $CONFLUENT_HOME/etc/kafka/server.properties /opt/apps/kafka/config/server.properties
     ~~~
 
-2. Set the variables that the `sed` commands below reference. Edit the values for this node. The example is for node 1 of a 3-node cluster:
+2. Set the variables that the `sed` commands below reference. Edit the values for this node. Option 1 in this example is for node 1 of a 3-node cluster; use option 2 for a scripted approach. Run the final 2 lines on all nodes:
 
     ~~~bash
     export KAFKA_CONF=/opt/apps/kafka/config/server.properties
 
-    export NODE_IP=10.0.0.1     # this node's IP
-    export NODE_ID=1            # unique per node: 1, 2, 3, ...
+    # option 1: update and run these 3 lines on each node, adjusting NODE_ID and NODE_IP
     export VOTERS="1@10.0.0.1:9094,2@10.0.0.2:9094,3@10.0.0.3:9094"   # all nodes as <node_id>@<ip>:9094; identical on every node
+    export NODE_ID=1            # unique per node: 1, 2, 3, ...
+    export NODE_IP=10.0.0.1     # this node's IP
+
+    # option 2:
+    #   update IPs and then run the short script snippet below
+    #   on each node to generate VOTERS and NODE_ID
+    NODE_IPS=("10.0.0.1" "10.0.0.2" "10.0.0.3")
+    VOTERS=""
+    for i in "${!NODE_IPS[@]}"; do
+        VOTERS+="${VOTERS:+,}$((i + 1))@${NODE_IPS[i]}:9094"
+    done
+    echo "VOTERS=${VOTERS}"
+    export VOTERS
+    NODE_IP=$(hostname -I | head -1 | awk '{print $1}')
+    for i in "${!NODE_IPS[@]}"; do
+        [[ "${NODE_IPS[i]}" == "$NODE_IP" ]] && export NODE_ID=$((i + 1))
+    done
+    echo "NODE_ID=${NODE_ID}"
+    ### end snippet
+
+    # run on all nodes
     export RF=3                 # replication factor
     export MIN_ISR=2            # minimum in-sync replicas: 2 when RF is 3, 1 when RF is 1
     ~~~
@@ -192,22 +216,24 @@ echo 'export KAFKA_HEAP_OPTS="-Xms4g -Xmx4g"' >> ~/.bash_profile
 source ~/.bash_profile
 ~~~
 
-### Format Storage and First Boot
+## Format Storage and First Boot
 
 Kafka does not format blank storage directories or generate a cluster ID on its own. Each node's storage must be formatted once, with the **same cluster ID**, before Kafka first starts.
 
 1. On the **first node only**, generate the cluster ID:
 
     ~~~bash
-    $CONFLUENT_HOME/bin/kafka-storage random-uuid
+    CLUSTER_ID=$($CONFLUENT_HOME/bin/kafka-storage random-uuid)
+    echo $CLUSTER_ID
     ~~~
 
     Copy the output (for example, `q1Sh-9_ISia_zwGINzRvyQ`). You will use it on every node.
 
-2. On **each node**, format the storage with that cluster ID:
+2. On **every node**, format the storage with that cluster ID:
 
     ~~~bash
-    $CONFLUENT_HOME/bin/kafka-storage format -t <cluster_id> -c $KAFKA_CONF
+    CLUSTER_ID=<id from node 1>   # on nodes other than node 1
+    $CONFLUENT_HOME/bin/kafka-storage format -t $CLUSTER_ID -c $KAFKA_CONF
     ~~~
 
     > Format a node only once. Running `format` again on a node that already holds data fails. Do not remove the data directory to work around this, as doing so erases the node's data.
@@ -222,15 +248,24 @@ Kafka does not format blank storage directories or generate a cluster ID on its 
 
 4. To validate that Kafka is running properly on all nodes:
 
-    *See item **"check the cluster's health"** in section **"Kafka Cluster - Start, Shutdown and Monitor"** below*.
+    *See item **"check the cluster's health"** in section **"Kafka Cluster - Start, Shutdown and Monitor"** [below](#check-cluster-health)*.
 
-### Kafka Cluster - Start, Shutdown and Monitor
+## Kafka Cluster - Start, Shutdown and Monitor
 
 * To **stop** Kafka, run the following command on each node:
 
     ~~~bash
     $CONFLUENT_HOME/bin/kafka-server-stop
     ~~~
+
+    `kafka-server-stop` only sends the stop signal and returns immediately. To wait until Kafka has actually exited on the node:
+
+    ~~~bash
+    while ps -eo args | grep -q '[k]afka\.Kafka'; do sleep 5; done
+    echo "Kafka stopped"
+    ~~~
+
+    > **Note (multi-node):** When you stop the whole cluster, the **last** node you stop can take about 5 minutes to exit. This is expected. Before a node stops, it asks the controller quorum to approve its shutdown. Once the other nodes are down, no quorum remains to approve the request, so the last node waits 5 minutes, logs `Timed out waiting for the controller to approve controlled shutdown`, and then shuts down cleanly. Let it finish rather than killing the process; a forced kill (`kill -9`) is an unclean shutdown, and the next start then runs log recovery.
 
 * To **start** Kafka, run the following command on each node, one by one:
 
@@ -241,11 +276,11 @@ Kafka does not format blank storage directories or generate a cluster ID on its 
 * To verify that Kafka is running on a specific node:
 
     ~~~bash
-    ps -ef | grep [k]afka.Kafka
+    ps -ef | grep '[k]afka\.Kafka'
     $CONFLUENT_HOME/bin/kafka-broker-api-versions --bootstrap-server localhost:9093 | head -1
     ~~~
 
-* To **check the cluster's health**, run the following command:
+* <a id="check-cluster-health"></a>To **check the cluster's health**, run the following command:
 
     ~~~bash
     $CONFLUENT_HOME/bin/kafka-metadata-quorum --bootstrap-server localhost:9093 describe --status
