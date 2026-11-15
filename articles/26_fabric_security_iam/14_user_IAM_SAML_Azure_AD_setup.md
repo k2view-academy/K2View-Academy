@@ -83,7 +83,7 @@ You can read more about the guidelines at this link: [Azure AD](https://docs.mic
     1. In Attributes & Claims, select Add a group claim.
     2. Select the groups that should be included in the SAML assertion.
     3. Expand Advanced options and select Customize the name of the group claim.
-    4. Enter groups as the claim name.
+    4. Enter ”group” as the claim name. (Note: do not use “groups” as a claim name)
     5. Click Save.
 
 Verify that the Attributes & Claims list contains a claim named groups and that the groups required for Fabric authorization are included in the SAML assertion.
