@@ -162,7 +162,7 @@ For more information about how to add filters to tables in a task, click [here](
 
 ## Step 4: Optional — Special Handling  
 
-####  Interface Level Special Handling
+###  Interface Level Special Handling
 
 The **TableLevelInterfaces** MTable enables implementors to exclude interfaces from the table-level tasks or define special handling rules for a given interface.
 
@@ -173,7 +173,7 @@ By default, this MTable is populated with the **TDM** and **POSTGRESQL_ADMIN** i
 - **truncate_indicator** — by default, TDM runs a delete on the table in the target environment before loading it. If you have permission to run a truncate on the target table and need to use the truncate instead of delete (e.g., the target DB is Cassandra), set this indicator to **true**.
 - **no_schema** — this indicator is used for interfaces without a DB schema, where the JDBC connector adds a schema for them. For example: CSV files. The **CSV JDBC Connector** extension concatenates the 'main' schema name to the file list. Setting this field to **true** would ignore the concatenated schema when accessing the files. 
 
-#### Tables Implementation — Special Handling
+### Tables Implementation — Special Handling
 
 TDM enables customization of the default task execution logic for a specific **interface type**, **interface**, **schema**, or **table**, including the following capabilities:
 
@@ -183,6 +183,17 @@ TDM enables customization of the default task execution logic for a specific **i
 - Starting with **TDM 9.5**, supporting [concurrent processing of **table partitions**](09b_table_partitions_implementation.md).
 - Starting with **TDM 9.5**, supporting [**in-place masking**](09d_in_place_masking_implementation.md) tasks on tables.
 - Supporting table-level tasks using [Connectors](09c_table_level_connectors.md), for example **MongoDB**.
+
+### Use Scope for Table Search
+
+TABLES_USE_SPLIT_API configuration parameter is defined in the TDM_GENERAL_PARAMETER TDM DB table.
+
+This parameter controls the scope of tables returned when creating table-level tasks:
+
+- **true** (default): Displays only tables belonging to the selected interface and schema, improving performance and usability.
+
+- **false**: Displays tables across all interfaces and schemas, enabling the task creator to search tables across interfaces and schemas. 
+
 
 ## Step 5: Optional — Pre and Post Execution Processes
 
