@@ -103,34 +103,17 @@ Each node runs in **combined mode**: it is both a broker (serves Fabric clients)
     cp $CONFLUENT_HOME/etc/kafka/server.properties /opt/apps/kafka/config/server.properties
     ~~~
 
-2. Set the variables that the `sed` commands below reference. Edit the values for this node. Option 1 in this example is for node 1 of a 3-node cluster; use option 2 for a scripted approach. Run the final 2 lines on all nodes:
+2. Set the variables that the `sed` commands below reference. Edit the values for this node.
 
     ~~~bash
     export KAFKA_CONF=/opt/apps/kafka/config/server.properties
 
-    # option 1: update and run these 3 lines on each node, adjusting NODE_ID and NODE_IP
-    export VOTERS="1@10.0.0.1:9094,2@10.0.0.2:9094,3@10.0.0.3:9094"   # all nodes as <node_id>@<ip>:9094; identical on every node
+    # update and run these 2 lines on each node
     export NODE_ID=1            # unique per node: 1, 2, 3, ...
     export NODE_IP=10.0.0.1     # this node's IP
 
-    # option 2:
-    #   update IPs and then run the short script snippet below
-    #   on each node to generate VOTERS and NODE_ID
-    NODE_IPS=("10.0.0.1" "10.0.0.2" "10.0.0.3")
-    VOTERS=""
-    for i in "${!NODE_IPS[@]}"; do
-        VOTERS+="${VOTERS:+,}$((i + 1))@${NODE_IPS[i]}:9094"
-    done
-    echo "VOTERS=${VOTERS}"
-    export VOTERS
-    NODE_IP=$(hostname -I | head -1 | awk '{print $1}')
-    for i in "${!NODE_IPS[@]}"; do
-        [[ "${NODE_IPS[i]}" == "$NODE_IP" ]] && export NODE_ID=$((i + 1))
-    done
-    echo "NODE_ID=${NODE_ID}"
-    ### end snippet
-
     # run on all nodes
+    export VOTERS="1@10.0.0.1:9094,2@10.0.0.2:9094,3@10.0.0.3:9094"   # all nodes as <node_id>@<ip>:9094; identical on every node
     export RF=3                 # replication factor
     export MIN_ISR=2            # minimum in-sync replicas: 2 when RF is 3, 1 when RF is 1
     ~~~
