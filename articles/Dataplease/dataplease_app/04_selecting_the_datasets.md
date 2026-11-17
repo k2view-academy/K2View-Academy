@@ -46,7 +46,7 @@ When the selection is complete, click **Continue** to move to the data generatio
 
 If the user makes changes (for example, adds a new description or updates a classification), the **Continue** button label changes to **Save & Continue**. This label shows that Dataplease saves these changes as a new Catalog version. In addition, the **Discard changes** button becomes available to cancel all the changes.
 
-At this point, Dataplease locks the dataset selection, and the Dataplease Assistant panel becomes a chat with the [Dataplease AI Agent](../dataplease_assistant/01_dataplease_assistant_overview.md). After the lock, the user cannot change the dataset selection or update the properties. To change the selection, click **Start over**.
+At this point, Dataplease locks the dataset selection, and the Dataplease Assistant panel becomes a chat with the [Dataplease AI Agent](../dataplease_assistant/01_dataplease_assistant_overview.md). After the lock, the user cannot change the dataset selection or update the properties.
 
 <img src="../images/dataplease_generation_special_requests.jpg" style="zoom:100%;" />
 
@@ -64,3 +64,7 @@ These options are only examples of possible requests. Type the request in the **
 The Dataplease AI Agent converts the request into a **data story**. The data story drives the generation. It keeps the data logically consistent across all the selected tables.
 
 The generation starts when the user types the request in the **Type a request** box and presses **Enter**. The flow then continues to [Data Generation](05_data_generation.md).
+
+### Editing the Selection
+
+To change the selection or the properties after the lock, click **Edit selection** below the **Type a request** box. Dataplease unlocks the dataset selection and the properties. Update the selection or the properties, then click **Continue** (or **Save & Continue**) again. Dataplease locks the selection again and restarts the session with the Dataplease AI Agent. The new session uses the updated selection.
