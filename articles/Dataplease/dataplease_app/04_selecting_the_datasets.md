@@ -6,7 +6,7 @@ In this step, the user examines the datasets of the selected schema. Then the us
 
 After the user selects the datasets and clicks **Continue**, the user can also ask the Dataplease AI Agent questions about the Catalog metadata of the selected datasets, for example about fields, data types, PII, classifications and relationships.
 
-<img src="../images/dataplease_dataset_selection.jpg" style="zoom:75%;" />
+<img src="../images/dataplease_dataset_selection.jpg" style="zoom:100%;" />
 
 The header of the **Select your datasets** screen shows the interface, the schema and the schema description from the Catalog. Click the edit icon next to the schema name to edit the schema description. Click **Go to catalog** to open the schema in the Catalog app.
 
