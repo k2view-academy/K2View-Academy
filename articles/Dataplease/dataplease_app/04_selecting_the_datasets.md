@@ -22,19 +22,19 @@ The user can edit the descriptions of the schema, the datasets and the columns, 
 
 * To update the dataset or column description, click the description text (or the description placeholder):
 
-<img src="../images/dataplease_dataset_description.jpg" style="zoom:75%;" />
+<img src="../images/dataplease_dataset_description.jpg" style="zoom:100%;" />
 
 
 
 * To add a property to a column, click the **+** icon in the **Column properties** panel:
 
-<img src="../images/dataplease_dataset_add_prop.jpg" style="zoom:75%;" />
+<img src="../images/dataplease_dataset_add_prop.jpg" style="zoom:100%;" />
 
 
 
 * To update the existing property, click the property and update the value in the Property Details popup:
 
-<img src="../images/dataplease_dataset_upd_prop.jpg" style="zoom:75%;" />
+<img src="../images/dataplease_dataset_upd_prop.jpg" style="zoom:100%;" />
 
 The **Column properties** panel highlights the updates: green shows the added values and red shows the removed values. A small purple dot shows on each dataset and column that has updates.
 
@@ -48,7 +48,7 @@ If the user makes changes (for example, adds a new description or updates a clas
 
 At this point, Dataplease locks the dataset selection, and the Dataplease Assistant panel becomes a chat with the [Dataplease AI Agent](../dataplease_assistant/01_dataplease_assistant_overview.md). After the lock, the user cannot change the dataset selection or update the properties. To change the selection, click **Start over**.
 
-<img src="../images/dataplease_generation_special_requests.jpg" style="zoom:75%;" />
+<img src="../images/dataplease_generation_special_requests.jpg" style="zoom:100%;" />
 
 The agent shows the number of selected datasets. Then it asks the user to select an option or to describe the necessary data. The options are:
 
