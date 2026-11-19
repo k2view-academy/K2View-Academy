@@ -811,9 +811,9 @@ Please check the release notes for component version support, such as Kafka, Neo
 				<p>Sep 2, 2022</p>
 			</td>
 			<td>
-			<p>HF38</p>
-            <p>Sep 3, 2026</p></td>
-            <td>324</td>
+			<p>HF39</p>
+            <p>Nov 19, 2026</p></td>
+            <td>326</td>
             <td></td>
             <td>4.1.10</td>            
         </tr>
