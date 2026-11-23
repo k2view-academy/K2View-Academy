@@ -272,7 +272,7 @@ Ensure the following external services are reachable from the host machine:
       <td>Access Fabric images</td>
     </tr>
     <tr>
-      <td><code>https://download.k2view.com</code></td>
+      <td><code>https://downloads.cloud.k2view.com</code></td>
       <td>Download Studio distributions</td>
     </tr>
     <tr>
