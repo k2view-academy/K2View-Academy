@@ -168,7 +168,7 @@ The recommended approach is to download the latest version of Fabric Web Studio 
 You can download the latest version of Fabric Web Studio for Podman from this location: 
 
 ```bash
-https://download.k2view.com/index.php/s/8lgQY4ybu5fNy4u/download
+https://downloads.cloud.k2view.com/s/zpeNPVHKmKnUtnt/download
 ```
 
 Alternatively, you can use `wget` as follows:
