@@ -22,6 +22,23 @@ If a child class loader tries to load a class:
 
 > **Recommendation:** Use `PACKAGE_NAMES_CLASS_LOADING_FILTER` with caution for preserving the isolation.
 
+### Separate Filters per Component Group
+
+Starting from V8.5.4, each group of isolated components has its own filter in the `[fabric]` section of `config.ini`. Until V8.5.4, `PACKAGE_NAMES_CLASS_LOADING_FILTER` applied to all of them, so changing it for project code, or turning isolation off, also changed the product plugins and interfaces and could make them fail to load. Now each group can be configured, or turned off, without affecting the others:
+
+| Parameter | Applies to | Default |
+|---|---|---|
+| `PACKAGE_NAMES_CLASS_LOADING_FILTER` | Project code (LUs). Existing parameter, unchanged. | `com.k2view.` |
+| `PACKAGE_NAMES_CLASS_LOADING_FILTER_PRODUCT_PLUGINS` | Product plugins: secret managers, key management services (KMS), AWS Keyspaces and the search provider. | `com.k2view.` |
+| `PACKAGE_NAMES_CLASS_LOADING_FILTER_INTERFACES` | Interfaces: dynamic JDBC drivers loaded in isolation and cloud file systems. | `com.k2view.` |
+
+- Each parameter takes a comma-separated list of package names that the group shares with Fabric.
+- Leaving a parameter empty turns isolation off for that group only.
+- Changes take effect without restarting Fabric.
+- Core Java and Fabric packages are always shared.
+
+The two new parameters don't appear in `config.ini` by default. Add them only if you need to change their behavior. Most projects can keep the defaults.
+
 
 
 ## Fabric Class Loaders and Packaging Structure
@@ -39,6 +56,8 @@ Here’s an overview of the different components and how their class loading wor
 
 - Plugins are typically SDK packages used to connect with external services such as AWS S3 / Azure Blob Storage (Managed Storage), KMS and secret management services.
 - Each plugin has its own dedicated class loader, separate from LUs, other plugins and Fabric.
+
+- Starting from V8.5.4, the packages that product plugins share with Fabric are set by `PACKAGE_NAMES_CLASS_LOADING_FILTER_PRODUCT_PLUGINS`.
 - Loaded from:  `fabric/lib/plugins/{plugin-name}`, e.g., `fabric/lib/plugins/masterkey-aws`, `fabric/lib/plugins/search-provider-elastic`.
 - Parent: Fabric (App) class loader.
 
@@ -66,6 +85,7 @@ Here’s an overview of the different components and how their class loading wor
 - JDBC drivers for specific interface types (not included in Fabric by default) may also be added to the project's `lib/` directory (and accordingly under each LU).
 - These interface drivers are packaged under folders named after their interface type. Read [here](/articles/05_DB_interfaces/10_database_types.md#jdbc-drivers-management) for more information.
 - Each interface type gets its own dedicated class loader, even though it is part of the LU JAR.
+- Starting from V8.5.4, a dynamic JDBC driver can also be loaded in full isolation, so that the libraries it bundles never clash with Fabric's own libraries. See [JDBC Drivers Management](/articles/05_DB_interfaces/10_database_types.md#jdbc-drivers-management). The packages that interfaces share with Fabric are set by `PACKAGE_NAMES_CLASS_LOADING_FILTER_INTERFACES`.
 
 
 

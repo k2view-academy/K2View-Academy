@@ -162,6 +162,21 @@ Each database type is kept in a separate folder in order to avoid overlapping or
 
 Note that since Fabric 8.0 the JDBC drivers are part of the [Fabric Deployment](/articles/01_fabric_overview/02_fabric_glossary.md#deployment) process.
 
+#### Loading a JDBC Driver in Isolation
+
+Starting from V8.5.4, a dynamic JDBC driver's jars can be loaded in an isolated class loader. This prevents version conflicts between the libraries a driver bundles and the libraries Fabric uses. For example, a driver that ships its own AWS SDK no longer clashes with Fabric's copy.
+
+To turn it on, add the following element to the driver's definition in `k2DriverConf.xml`:
+
+~~~xml
+<IsolatedClassLoader>true</IsolatedClassLoader>
+~~~
+
+- When the element is missing or set to `false`, the driver is loaded the same way as before, so existing drivers aren't affected.
+- Turn it on only for drivers whose jars are self-contained, since an isolated driver can't use Fabric's other libraries.
+- If a driver is switched between isolated and non-isolated mode, connections that are still open on it may fail and need to reconnect.
+- The packages that an isolated driver shares with Fabric are set by `PACKAGE_NAMES_CLASS_LOADING_FILTER_INTERFACES` in the `[fabric]` section of `config.ini`. See [Fabric and Project Dependencies](/articles/COE/Fabric_Implementation_Best_Practices/best_practice_dependencies.md#separate-filters-per-component-group).
+
 
 [![Previous](/articles/images/Previous.png)](09_fabric_API_for_DB_interfaces.md)
 

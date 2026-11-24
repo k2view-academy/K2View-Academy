@@ -158,6 +158,8 @@ While Fabric might be deployed across several regions, it can use the same KMS k
 
    * Set the following attribute (located at [fabric] section) as following  `PACKAGE_NAMES_CLASS_LOADING_FILTER=com.k2view.,com.fasterxml.`
 
+     Starting from V8.5.4, KMS integrations are loaded with the product plugins filter, so set `PACKAGE_NAMES_CLASS_LOADING_FILTER_PRODUCT_PLUGINS=com.k2view.,com.fasterxml.` instead, and keep `PACKAGE_NAMES_CLASS_LOADING_FILTER` for project code only. See [Fabric and Project Dependencies](/articles/COE/Fabric_Implementation_Best_Practices/best_practice_dependencies.md#separate-filters-per-component-group).
+
    * Set the values for the following parameters at ``[encryption_fortanix_kms]`` section, according to the KMS information
 
      ~~~
