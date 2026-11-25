@@ -4,9 +4,9 @@
 
 The Dataplease flow starts with the data source. The user selects a Fabric interface, and then a schema under that interface.
 
-<img src="../images/dataplease_interface_list.jpg" style="zoom:75%;" />
+<img src="../images/dataplease_interface_list.jpg" style="zoom:100%;" />
 
-The **Where would you like your data?** screen shows the available interfaces as cards. Each card shows the interface name and the interface type, for example SQLite (Db), SqlServer (Db) or PostgreSQL (Db). The **Total** counter shows the number of interfaces.
+The **Where would you like your data?** screen shows the available interfaces as cards. Each card shows the interface name and the interface type, for example SQLite (Db), SQLServer (Db) or PostgreSQL (Db). The **Total** counter shows the number of connected interfaces.
 
 In the MVP, Dataplease supports only relational databases that have a JDBC driver, for example Oracle, PostgreSQL, IBM Db2 and Microsoft SQL Server.
 
@@ -21,7 +21,7 @@ The **Dataplease Assistant** panel on the right side of the screen guides the us
 
 When the user selects an interface, the **Schema List** shows the schemas of that interface:
 
-<img src="../images/dataplease_schema_list.jpg" style="zoom:75%;" />
+<img src="../images/dataplease_schema_list.jpg" style="zoom:100%;" />
 
 The icon of each schema shows its Catalog status:
 
@@ -30,9 +30,11 @@ The icon of each schema shows its Catalog status:
 
 If the schema list is long, click the filter icon above the list. Then type a part of the schema name. The list shows only the schemas that contain this text.
 
-<img src="../images/dataplease_schema_filter.jpg" style="zoom:75%;" />
+<img src="../images/dataplease_schema_filter.jpg" style="zoom:100%;" />
 
-When the user selects a schema that has a Catalog version, the Assistant shows the date of the last scan, for example *Mssql_Test / DP_SALES has been scanned on 22-Oct-2026*. Then the Assistant asks how to continue:
+When the user selects a schema that has a Catalog version, the Assistant shows the date of the last scan, for example: *Mssql_Test / DP_SALES has been scanned on 25-Nov-2026*. 
+
+Then the Assistant asks how to continue:
 
 * **Use existing metadata** - Use the existing Catalog version and skip the scan.
 * **Re-scan schema** - Start a new Discovery run on the source to create an up-to-date Catalog version.
