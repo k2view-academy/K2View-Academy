@@ -1,4 +1,4 @@
-# LLM-Based Profiling
+# Enriching the Catalog with AI-Powered Data
 
 ## Overview
 

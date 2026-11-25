@@ -1,4 +1,4 @@
-# Complex Field Parsing
+# Discovering & Parsing Nested Data Structures
 
 Fabric's Catalog supports parsing of text fields that include complex structures (JSON or XML). The **Complex Field Parser** plugin handles this, using the data snapshot taken from the source. Starting from V8.1, the plugin also supports parsing of BLOB, CLOB and VarBinary fields.
 
