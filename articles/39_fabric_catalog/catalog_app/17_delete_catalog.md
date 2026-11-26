@@ -1,4 +1,4 @@
-# Delete Catalog
+# Removing Obsolete Catalog Data
 
 ### Overview
 

@@ -1,4 +1,4 @@
-# End-to-end Discovery Process
+# How Data Discovery Works
 
 The K2view Discovery solution is depicted in the below diagram and it includes the following major steps:
 

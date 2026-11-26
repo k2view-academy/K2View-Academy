@@ -1,4 +1,4 @@
-# Catalog Application
+# Getting Started with the Catalog Application
 
 ### Overview
 

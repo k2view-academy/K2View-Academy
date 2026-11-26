@@ -1,4 +1,4 @@
-# Discovery Execution Monitor
+# Monitoring Discovery Progress
 
 The Discovery Execution Monitor tracks the progress of the Discovery process, providing valuable insights to follow up on job execution by displaying progress for each step. 
 

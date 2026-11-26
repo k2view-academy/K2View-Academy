@@ -1,4 +1,4 @@
-# Large Schema Navigation
+# Working with Large Schemas
 
 ### Overview
 

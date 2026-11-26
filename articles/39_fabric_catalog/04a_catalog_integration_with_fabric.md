@@ -1,4 +1,4 @@
-# Catalog Integration with Studio
+# Catalog Integration with Fabric Studio
 
 ### Run Discovery
 
