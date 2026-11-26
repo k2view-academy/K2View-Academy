@@ -1,4 +1,4 @@
-# Catalog Search
+# Searching Data Assets in the Catalog
 
 ### Overview
 

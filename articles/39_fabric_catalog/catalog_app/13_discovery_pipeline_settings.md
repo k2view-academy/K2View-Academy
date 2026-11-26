@@ -1,4 +1,4 @@
-# Discovery Pipeline Settings
+# Customizing the Discovery Pipeline
 
 ## Overview
 

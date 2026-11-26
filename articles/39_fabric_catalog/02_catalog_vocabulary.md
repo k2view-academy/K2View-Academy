@@ -1,4 +1,4 @@
-# Catalog Vocabulary
+# Catalog Data Model and Vocabulary
 
 The Fabric Catalog introduces a vocabulary that describes the Catalog entities and the relations between them. The relations indicate the connections between the data source entities and determine their hierarchy.
 

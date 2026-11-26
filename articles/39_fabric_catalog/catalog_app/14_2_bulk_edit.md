@@ -1,4 +1,4 @@
-# Bulk Edit of Catalog Entities
+# Updating Grouped Entities in Bulk
 
 ### Overview
 

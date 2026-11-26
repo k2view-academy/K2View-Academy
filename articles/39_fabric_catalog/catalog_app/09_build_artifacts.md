@@ -1,4 +1,4 @@
-# Catalog Artifacts
+# Building Catalog Artifacts for Masking and Synthetic Data
 
 ### Overview
 

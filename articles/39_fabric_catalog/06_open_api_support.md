@@ -1,4 +1,4 @@
-# OpenAPI Support
+# Discovering REST APIs (OpenAPI)
 
 ## Overview
 

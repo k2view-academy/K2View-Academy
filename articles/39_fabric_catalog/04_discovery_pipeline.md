@@ -1,4 +1,4 @@
-# Discovery Pipeline
+# Discovery Pipeline: Steps and Plugins
 
 ### Overview
 

@@ -1,4 +1,4 @@
-# File Cataloging
+# Discovering and Cataloging Files
 
 ## Overview
 

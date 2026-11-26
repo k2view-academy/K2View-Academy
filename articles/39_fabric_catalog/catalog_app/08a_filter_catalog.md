@@ -1,4 +1,4 @@
-# Catalog Filter
+# Filtering the Catalog by Properties
 
 ### Overview
 

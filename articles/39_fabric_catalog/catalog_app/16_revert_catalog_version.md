@@ -1,4 +1,4 @@
-# Revert Catalog Version
+# Reverting to a Previous Catalog Version
 
 ### Overview
 

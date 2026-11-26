@@ -1,4 +1,4 @@
-# Manual Overrides
+# Refining Discovery Results Manually
 
 ### Overview
 

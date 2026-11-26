@@ -1,4 +1,4 @@
-# Bulk Creation of Catalog Entities 
+# Grouping Entities for Bulk Updates
 
 ### Overview
 
