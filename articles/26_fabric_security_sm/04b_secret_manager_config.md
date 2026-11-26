@@ -65,7 +65,7 @@ Authentication can also be performed by the service account associated with the 
 
 **Authentication** is done by either tokens that can be used directly or using one of HashiCorp's other [auth methods](https://developer.hashicorp.com/vault/docs/concepts/auth), in which case the token is dynamically generated.
 
-Fabric supports 2 authentication methods:
+Fabric supports the following authentication methods:
 
 * Directly - where the AUTH_TOKEN property should be set.
 
@@ -78,6 +78,36 @@ Fabric supports 2 authentication methods:
   * ROLE_ID - the role that Fabric is associated with in the Vault.
   * SECRET_ID - the secret that is used for getting the token.
   * APPROLE_URL
+
+* Identity-based authentication (Kubernetes, AWS, GCP, Azure) - available starting from Fabric V8.5.4.
+
+  Using this method, Fabric authenticates to the Vault with the identity of the pod or server it runs on, so no static token or AppRole secret needs to be stored. Fabric logs in to the Vault auth method URL with its identity to obtain a token dynamically, and then uses that token as authentication credentials to retrieve the secret. For this method, you should specify the following properties:
+
+  * ENGINE - the identity-based auth engine to use. Supported values:
+    * `k8s` - [Kubernetes auth](https://developer.hashicorp.com/vault/docs/auth/kubernetes), using the pod's ServiceAccount token.
+    * `aws` - [AWS auth](https://developer.hashicorp.com/vault/docs/auth/aws), using the IAM role of the pod (IRSA).
+    * `gcp` - [GCP auth](https://developer.hashicorp.com/vault/docs/auth/gcp), using the pod's Workload Identity service account.
+    * `azure` - [Azure auth](https://developer.hashicorp.com/vault/docs/auth/azure), using the Azure Managed Identity.
+  * AUTH_URL - the base URL of the Vault auth method mount, for example `https://<vault_URL>/v1/auth/kubernetes`. Do not add `/login` at the end, Fabric adds it.
+  * ROLE - the Vault role that is bound to Fabric's identity.
+
+  Example of a Kubernetes auth configuration:
+
+  ```ini
+  [encryption_hashicorp_sm]
+  ENABLED=true
+  URL=https://<vault_URL>/v1/secret
+  ENGINE=k8s
+  AUTH_URL=https://<vault_URL>/v1/auth/<k8s_auth_mount>
+  ROLE=<role_name>
+  ```
+
+  For AWS, GCP and Azure, set ENGINE to `aws`, `gcp` or `azure` and set AUTH_URL to the relevant auth method mount.
+
+  **Notes:**
+
+  * The auth method and the role must already be configured in the Vault for Fabric's identity (Kubernetes ServiceAccount, AWS IAM role, GCP service account or Azure Managed Identity).
+  * Fabric selects the authentication method in this order: AUTH_TOKEN, then AppRole (ROLE_ID and SECRET_ID), then ENGINE. To use identity-based authentication, leave AUTH_TOKEN, ROLE_ID and SECRET_ID empty.
 
   
 
